@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\SearchAndRescue.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SearchAndRescue.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\SearchAndRescueEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\SearchAndRescue">
+      <UniqueIdentifier>{C3162853-5F04-3407-ABFA-A9ADF186783E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\SearchAndRescue\SearchAndRescue.Build.cs">
+      <Filter>Source\SearchAndRescue</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\SearchAndRescue\SearchAndRescue.cpp">
+      <Filter>Source\SearchAndRescue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\SearchAndRescue.h">
+      <Filter>Source\SearchAndRescue</Filter>
+    </ClCompile>
+    <Filter Include="Source\SearchAndRescue\Private">
+      <UniqueIdentifier>{AB2CB879-22A7-37FB-BDED-B8BEAF41F410}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Private\DummyClass.cpp">
+      <Filter>Source\SearchAndRescue\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\SearchAndRescue\Public">
+      <UniqueIdentifier>{5D9F62B8-229E-3134-B13A-55FFFE89E6DA}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Public\DummyClass.h">
+      <Filter>Source\SearchAndRescue\Public</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

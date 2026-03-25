@@ -1415,3 +1415,39 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.25-15.31.29:904][  8]LogEOSSDK: LogEOS: SDK Config Data - Watermark: 518340485
 [2026.03.25-15.31.29:904][  8]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 111.618904, Update Interval: 327.215790
 [2026.03.25-15.31.33:623][ 56]LogDerivedDataCache: C:/Users/zohai/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.03.25-15.36.57:352][448]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 439.401978
+[2026.03.25-15.36.58:352][451]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.25-15.36.58:352][451]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 440.068542, Update Interval: 334.133728
+[2026.03.25-15.37.08:484][855]LogSlate: Took 0.005945 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2026.03.25-15.37.24:027][674]Running G:/Unreal/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.03.25-15.37.24:146][674]Using bundled DotNet SDK version: 8.0.300
+[2026.03.25-15.37.24:146][674]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.03.25-15.37.25:251][674]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.03.25-15.37.25:754][674]
+[2026.03.25-15.37.25:754][674]Generating VisualStudio2022 project files:
+[2026.03.25-15.37.25:754][674]Discovering modules, targets and source code for project...
+[2026.03.25-15.37.30:074][674]Binding IntelliSense data...
+[2026.03.25-15.37.50:886][674]Binding IntelliSense data... 50%
+[2026.03.25-15.37.50:886][674]Binding IntelliSense data... 100%
+[2026.03.25-15.37.50:886][674]Writing project files...
+[2026.03.25-15.37.52:496][674]Writing project files... 100%
+[2026.03.25-15.37.52:496][674]
+[2026.03.25-15.37.52:496][674]Generating QueryTargets data for editor...
+[2026.03.25-15.37.52:596][674]Total execution time: 27.89 seconds
+[2026.03.25-15.37.55:348][674]LogSlate: Window 'Message' being destroyed
+[2026.03.25-15.37.55:353][674]Message dialog closed, result: Ok, title: Message, text: Project now includes sources, please close the editor and build from your IDE.
+[2026.03.25-15.37.56:179][674]LogSlate: Window 'Message' being destroyed
+[2026.03.25-15.37.56:184][674]Message dialog closed, result: Yes, title: Message, text: Successfully added class 'DummyClass', however you must recompile the 'SearchAndRescue' module before it will appear in the Content Browser.
+
+Would you like to edit the code now?
+[2026.03.25-15.37.56:327][674]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.03.25-15.37.59:460][685]LogVSAccessor: Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2026.03.25-15.37.59:463][685]LogVSAccessor: Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2026.03.25-15.37.59:469][686]LogVSAccessor: Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2026.03.25-15.37.59:472][686]LogVSAccessor: Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2026.03.25-15.38.55:922][402]LogSlate: Window 'Plugins' being destroyed
+[2026.03.25-15.38.55:927][402]LogSlate: Window 'Plugins' being destroyed
+[2026.03.25-15.38.57:386][540]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_0
+[2026.03.25-15.38.57:459][541]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_1
+[2026.03.25-15.39.07:956][691]Cmd: TRANSACTION UNDO
+[2026.03.25-15.39.07:956][691]LogEditorTransaction: Undo Move Elements

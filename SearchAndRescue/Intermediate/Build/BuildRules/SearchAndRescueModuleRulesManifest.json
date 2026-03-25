@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\SearchAndRescue.Build.cs",
+		"G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue.Target.cs",
+		"G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescueEditor.Target.cs"
+	],
+	"EngineVersion": "5.5.4"
+}

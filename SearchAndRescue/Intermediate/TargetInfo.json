@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "SearchAndRescue",
+			"Path": "..\\Source\\SearchAndRescue.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "SearchAndRescueEditor",
+			"Path": "..\\Source\\SearchAndRescueEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
