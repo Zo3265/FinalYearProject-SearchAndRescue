@@ -23,6 +23,13 @@
 *.a
 *.lib
 
+# Ignores Visual Studio Files
+*.VC.db
+*.VC.db-shm
+*.VC.db-wal
+*.VC.opendb
+.vs/
+
 # Executables
 *.exe
 *.out
@@ -73,3 +80,4 @@ Plugins/**/Intermediate/*
 DerivedDataCache/*
 SearchAndRescue/.vs/SearchAndRescue/v17/Browse.VC.db
 *.ipch
+SearchAndRescue/.vs/SearchAndRescue/v17/Browse.VC.db
