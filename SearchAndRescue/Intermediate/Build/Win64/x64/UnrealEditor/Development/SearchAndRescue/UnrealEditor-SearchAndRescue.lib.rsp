@@ -1,0 +1,14 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-SearchAndRescue.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:\Unreal Projects\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\x64\SearchAndRescueEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.InclOrderUnreal5_3.h.obj"
+"G:\Unreal Projects\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\x64\UnrealEditor\Development\SearchAndRescue\SearchAndRescue.cpp.obj"
+"G:\Unreal Projects\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\x64\UnrealEditor\Development\SearchAndRescue\DummyClass.cpp.obj"
+"G:\Unreal Projects\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\x64\UnrealEditor\Development\SearchAndRescue\PerModuleInline.gen.cpp.obj"
+"G:\Unreal Projects\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\x64\UnrealEditor\Development\SearchAndRescue\Default.rc2.res"
+/OUT:"G:\Unreal Projects\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\x64\UnrealEditor\Development\SearchAndRescue\UnrealEditor-SearchAndRescue.lib"

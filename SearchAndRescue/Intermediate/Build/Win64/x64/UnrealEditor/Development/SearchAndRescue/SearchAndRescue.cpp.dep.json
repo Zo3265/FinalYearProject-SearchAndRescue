@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\searchandrescue.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\x64\\searchandrescueeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\searchandrescue\\definitions.searchandrescue.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\searchandrescue.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
