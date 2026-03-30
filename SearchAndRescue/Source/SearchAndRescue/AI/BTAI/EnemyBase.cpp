@@ -22,7 +22,7 @@ void AEnemyBase::BeginPlay()
 
 	if (ChildActor)
 	{
-		GLog->Log("Has Child Actors");
+		//GLog->Log("Has Child Actors");
 		SphereStore = ChildActor->GetChildActor();
 		SphereStore->SetActorTransform(splineController->getSpline()->GetComponentTransform());
 
@@ -36,22 +36,31 @@ void AEnemyBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//How long the current spline has been going for.
-	float fCurrentSplineTime = (Count - StartTime) / splineController->getTotalPathTimeController();
+	if (SphereStore != NULL)
+	{
+		//How long the current spline has been going for.
+		float CurrentSplineTime = (Count - StartTime) / splineController->getTotalPathTimeController();
 
-	//Find the distance we are along the spline
-	float fDistance = splineController->getSpline()->GetSplineLength();
+		if (CurrentSplineTime <= 0)
+		{
+			Count = StartTime;
+		}
 
-	//Translate that distance into world space. Then move the sphere to it.
-	FVector fvPosition = splineController->getSpline()->GetLocationAtDistanceAlongSpline(fDistance, ESplineCoordinateSpace::World);
-	SphereStore->SetActorLocation(fvPosition);
+		//Find the distance we are along the spline.
+		float Distance = splineController->getSpline()->GetSplineLength() * CurrentSplineTime;
 
-	//Rotate the cube in world space.
-	FVector Direction = splineController->getSpline()->GetDirectionAtDistanceAlongSpline(fDistance, ESplineCoordinateSpace::World);
-	FRotator Rotator = FRotationMatrix::MakeFromX(Direction).Rotator();
-	SphereStore->SetActorRotation(Rotator);
+		//Translate that distance into world space. Then move the cube to it,
+		FVector Position = splineController->getSpline()->GetLocationAtDistanceAlongSpline(Distance, ESplineCoordinateSpace::World);
+		SphereStore->SetActorLocation(Position);
 
-	Count += 1.0f * DeltaTime;
+		//Rotate the cube in world space.
+		FVector Direction = splineController->getSpline()->GetDirectionAtDistanceAlongSpline(Distance, ESplineCoordinateSpace::World);
+		FRotator Rotator = FRotationMatrix::MakeFromX(Direction).Rotator();
+		SphereStore->SetActorRotation(Rotator);
+
+		Count += 1.0f * DeltaTime;
+	}
+	
 }
 
 // Called to bind functionality to input

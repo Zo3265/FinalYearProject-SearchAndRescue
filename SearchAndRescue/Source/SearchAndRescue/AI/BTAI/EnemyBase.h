@@ -36,6 +36,7 @@ public:
 	//Time variables used to determine how far along the spline we are.
 	float StartTime;
 	float Count;
+	float resetTime;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
