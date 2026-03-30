@@ -3304,3 +3304,562 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.30-17.25.26:984][213]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
 	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_48
 	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.58:895][558]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase
+[2026.03.30-17.25.58:896][558]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_66
+[2026.03.30-17.25.58:896][558]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_66'.
+[2026.03.30-17.25.59:126][558]LogStreaming: Display: FlushAsyncLoading(724): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.26.11:885][762]LogSlate: Warning: Unable to rasterize '../../../Engine/Content/Editor/Slate/Starship/AssetIcons/SkeletalMesh_64.svg'. File could not be found
+[2026.03.30-17.26.11:902][763]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_67
+[2026.03.30-17.26.11:902][763]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_67'.
+[2026.03.30-17.26.12:030][764]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_68
+[2026.03.30-17.26.12:030][764]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_68'.
+[2026.03.30-17.26.15:604][815]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_69
+[2026.03.30-17.26.15:604][815]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_69'.
+[2026.03.30-17.26.32:604][ 59]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find Color 'DefaultForeground'.'
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Hips' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine1' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine2' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Head' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftArm' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftHand' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightArm' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightHand' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.03.30-17.26.37:125][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightLeg' 
+[2026.03.30-17.26.37:126][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightFoot' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Hips' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine1' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine2' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Head' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftArm' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftHand' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightArm' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightHand' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightLeg' 
+[2026.03.30-17.26.37:128][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightFoot' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.03.30-17.26.37:129][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.03.30-17.26.37:130][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.03.30-17.26.37:130][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.03.30-17.26.37:130][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.03.30-17.26.37:130][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.03.30-17.26.37:131][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.03.30-17.26.37:131][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.03.30-17.26.37:131][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.03.30-17.26.37:132][123]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_0 /Engine/Transient.World_66:PersistentLevel.BP_EnemyBase_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.03.30-17.26.37:237][123]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2026.03.30-17.26.38:114][135]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-17.26.38:232][135]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/BP_EnemyBase] ([2] browsable assets)...
+[2026.03.30-17.26.38:232][135]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_70
+[2026.03.30-17.26.38:233][135]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_70'.
+[2026.03.30-17.26.38:271][135]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C]
+[2026.03.30-17.26.38:284][135]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase]
+[2026.03.30-17.26.38:284][135]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemyBase]
+[2026.03.30-17.26.38:284][135]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_EnemyBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset" SILENT=true
+[2026.03.30-17.26.38:292][135]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemyBase
+[2026.03.30-17.26.38:293][135]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseB712DCEB44029BD4E90F31BBFF68FF8E.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset'
+[2026.03.30-17.26.38:313][135]LogFileHelpers: InternalPromptForCheckoutAndSave took 199.662 ms (total: 8.89 sec)
+[2026.03.30-17.26.38:375][135]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-17.26.38:375][135]LogContentValidation: Enabled validators:
+[2026.03.30-17.26.38:375][135]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-17.26.38:375][135]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-17.26.38:375][135]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-17.26.38:375][135]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-17.26.38:375][135]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-17.26.38:375][135]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-17.26.38:375][135]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.03.30-17.28.40:756][195]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2026.03.30-17.28.40:763][195]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-17.28.40:827][195]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/EN/8L3NIXSN50OPB6WUE3PY97
+[2026.03.30-17.28.40:828][195]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/8L3NIXSN50OPB6WUE3PY97A35A03D64658B2A124B9BAB56B8B5117.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/EN/8L3NIXSN50OPB6WUE3PY97.uasset'
+[2026.03.30-17.28.40:850][195]LogFileHelpers: InternalPromptForCheckoutAndSave took 86.290 ms (total: 8.98 sec)
+[2026.03.30-17.28.40:903][195]LogContentValidation: Display: Starting to validate 2 assets
+[2026.03.30-17.28.40:903][195]LogContentValidation: Enabled validators:
+[2026.03.30-17.28.40:903][195]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-17.28.40:903][195]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-17.28.40:903][195]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-17.28.40:903][195]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-17.28.40:903][195]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-17.28.40:903][195]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-17.28.40:904][195]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
+[2026.03.30-17.28.41:542][206]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2883.051758
+[2026.03.30-17.28.41:817][211]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-17.28.41:817][211]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2883.264160, Update Interval: 319.208344
+[2026.03.30-17.28.49:558][341]LogUObjectHash: Compacting FUObjectHashTables data took   1.45ms
+[2026.03.30-17.28.50:781][366]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.03.30-17.28.50:792][366]LogContentBundle: [FirstPersonMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.03.30-17.28.50:793][366]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' started...
+[2026.03.30-17.28.50:798][366]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' took 4.394 ms (total: 12.822 ms)
+[2026.03.30-17.28.50:798][366]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.03.30-17.28.50:799][366]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-17.28.50:812][366]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013726s)
+[2026.03.30-17.28.50:812][366]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap to /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap (0.013862s)
+[2026.03.30-17.28.50:842][366]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2026.03.30-17.28.50:843][366]LogChaosDD: Creating Chaos Debug Draw Scene for world FirstPersonMap
+[2026.03.30-17.28.50:845][366]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap'.
+[2026.03.30-17.28.50:846][366]LogWorldPartition: ULevel::OnLevelLoaded(FirstPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.03.30-17.28.50:846][366]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.03.30-17.28.50:846][366]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.03.30-17.28.50:846][366]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.03.30-17.28.50:849][366]LogWorldPartition: Display: WorldPartition initialize took 3.222 ms (total: 309.665 ms)
+[2026.03.30-17.28.50:850][366]LogPlayLevel: PIE: World Init took: (0.006252s)
+[2026.03.30-17.28.50:852][366]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2026.03.30-17.28.50:852][366]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.03.30-17.28.50:852][366]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.03.30-17.28.50:852][366]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.03.30-17.28.50:852][366]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.03.30-17.28.50:852][366]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.03.30-17.28.50:852][366]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.03.30-17.28.50:852][366]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.03.30-17.28.50:852][366]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.03.30-17.28.50:852][366]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.03.30-17.28.50:853][366]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.03.30-17.28.50:853][366]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.03.30-17.28.50:857][366]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.03.30-17.28.50:892][366]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.03.30-17.28.50:893][366]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.03.30-17.28.50:893][366]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.03.30-17.28.50:893][366]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.03.30-17.28.50:893][366]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2026.03.30-17.28.50:894][366]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2026.03.30-17.28.50:898][366]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2026.03.30-17.28.50:898][366]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2026.03.30-17.28.50:898][366]LogInit: FAudioDevice initialized with ID 3.
+[2026.03.30-17.28.50:898][366]LogAudio: Display: Audio Device (ID: 3) registered with world 'FirstPersonMap'.
+[2026.03.30-17.28.50:898][366]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2026.03.30-17.28.50:906][366]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.03.30-17.28.50:910][366]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap up for play (max tick rate 60) at 2026.03.30-18.28.50
+[2026.03.30-17.28.50:911][366]LogWorld: Bringing up level for play took: 0.005330
+[2026.03.30-17.28.50:916][366]LogOnline: OSS: Created online subsystem instance for: :Context_73
+[2026.03.30-17.28.50:922][366]PIE: Server logged in
+[2026.03.30-17.28.50:924][366]PIE: Play in editor total start time 0.131 seconds.
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: ================================================
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Total job queries 283, among them cache hits 84 (29.68%), DDC hits 135 (47.70%), Duplicates 2 (0.71%)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Tracking 197 distinct input hashes that result in 163 distinct outputs (82.74%)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: RAM used: 123.81 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Shaders Compiled: 62
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Jobs assigned 62, completed 62 (100%)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Average time worker was idle: 536.67 s
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Time job spent in pending queue: average 0.31 s, longest 3.51 s
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Job execution time: average 9.97 s, max 26.25 s
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Job life time (pending + execution): average 10.28 s, max 26.44
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Shader code size: average 5.702 KiB, min 464 B, max 15.152 KiB
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 60.04 s
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Jobs were issued in 28 batches (only local compilation was used), average 2.21 jobs/batch
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Average processing rate: 1.03 jobs/sec
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Total thread time: 137.111 s
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Total thread preprocess time: 26.764 s
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Percentage time preprocessing: 19.52%
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Effective parallelization: 2.28 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                                 FDepthOnlyPS (compiled    2 times, average 2.12 sec, max 2.22 sec, min 2.01 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                                  FVelocityPS (compiled    2 times, average 2.01 sec, max 2.17 sec, min 1.86 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   11 times, average 2.00 sec, max 4.91 sec, min 0.63 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                             FDebugViewModePS - 31.84% of total time (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 16.06% of total time (compiled   11 times, average 2.00 sec, max 4.91 sec, min 0.63 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 10.49% of total time (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 10.03% of total time (compiled    9 times, average 1.53 sec, max 2.98 sec, min 0.89 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display:                                             FDebugViewModeVS - 7.03% of total time (compiled    6 times, average 1.61 sec, max 3.64 sec, min 1.04 sec)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: === Material stats ===
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Materials Translated:    149
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Material Total Translate Time: 0.27 s
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Material Translation Only: 0.12 s (44%)
+[2026.03.30-17.28.51:765][382]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2026.03.30-17.28.51:766][382]LogShaderCompilers: Display: Material Cache Hits: 31 (21%)
+[2026.03.30-17.28.51:766][382]LogShaderCompilers: Display: ================================================
+[2026.03.30-17.28.59:172][528]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-17.28.59:172][528]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-17.28.59:172][528]LogWorld: UWorld::CleanupWorld for FirstPersonMap, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.28.59:175][528]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.28.59:175][528]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap
+[2026.03.30-17.28.59:193][528]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.03.30-17.28.59:201][528]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.28.59:234][528]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-17.28.59:234][528]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2026.03.30-17.28.59:235][528]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.03.30-17.28.59:239][528]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.03.30-17.28.59:253][528]LogUObjectHash: Compacting FUObjectHashTables data took   2.00ms
+[2026.03.30-17.28.59:301][529]LogPlayLevel: Display: Destroying online subsystem :Context_73
+[2026.03.30-17.29.34:445][ 63]LogStreaming: Display: FlushAsyncLoading(726): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.29.34:461][ 63]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/BP_EnemyBase.BP_EnemyBase'
+[2026.03.30-17.29.37:306][107]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.03.30-17.29.37:317][107]LogContentBundle: [FirstPersonMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.03.30-17.29.37:317][107]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' started...
+[2026.03.30-17.29.37:321][107]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' took 4.240 ms (total: 17.063 ms)
+[2026.03.30-17.29.37:322][107]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.03.30-17.29.37:352][107]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-17.29.37:360][107]LogPlayLevel: PIE: StaticDuplicateObject took: (0.008436s)
+[2026.03.30-17.29.37:360][107]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap to /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap (0.008724s)
+[2026.03.30-17.29.37:392][107]LogUObjectHash: Compacting FUObjectHashTables data took   1.93ms
+[2026.03.30-17.29.37:398][107]LogChaosDD: Creating Chaos Debug Draw Scene for world FirstPersonMap
+[2026.03.30-17.29.37:400][107]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap'.
+[2026.03.30-17.29.37:400][107]LogWorldPartition: ULevel::OnLevelLoaded(FirstPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.03.30-17.29.37:400][107]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.03.30-17.29.37:400][107]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.03.30-17.29.37:400][107]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.03.30-17.29.37:405][107]LogWorldPartition: Display: WorldPartition initialize took 3.759 ms (total: 313.425 ms)
+[2026.03.30-17.29.37:405][107]LogPlayLevel: PIE: World Init took: (0.006566s)
+[2026.03.30-17.29.37:406][107]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2026.03.30-17.29.37:406][107]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.03.30-17.29.37:406][107]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.03.30-17.29.37:406][107]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.03.30-17.29.37:406][107]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.03.30-17.29.37:406][107]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.03.30-17.29.37:406][107]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.03.30-17.29.37:406][107]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.03.30-17.29.37:406][107]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.03.30-17.29.37:406][107]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.03.30-17.29.37:406][107]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.03.30-17.29.37:406][107]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.03.30-17.29.37:410][107]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.03.30-17.29.37:440][107]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.03.30-17.29.37:440][107]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.03.30-17.29.37:441][107]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.03.30-17.29.37:441][107]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.03.30-17.29.37:441][107]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2026.03.30-17.29.37:441][107]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2026.03.30-17.29.37:446][107]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2026.03.30-17.29.37:446][107]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2026.03.30-17.29.37:446][107]LogInit: FAudioDevice initialized with ID 4.
+[2026.03.30-17.29.37:446][107]LogAudio: Display: Audio Device (ID: 4) registered with world 'FirstPersonMap'.
+[2026.03.30-17.29.37:446][107]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2026.03.30-17.29.37:449][107]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.03.30-17.29.37:455][107]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap up for play (max tick rate 60) at 2026.03.30-18.29.37
+[2026.03.30-17.29.37:455][107]LogWorld: Bringing up level for play took: 0.005163
+[2026.03.30-17.29.37:459][107]LogOnline: OSS: Created online subsystem instance for: :Context_74
+[2026.03.30-17.29.37:465][107]PIE: Server logged in
+[2026.03.30-17.29.37:467][107]PIE: Play in editor total start time 0.149 seconds.
+[2026.03.30-17.29.54:872][468]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-17.29.54:872][468]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-17.29.54:872][468]LogWorld: UWorld::CleanupWorld for FirstPersonMap, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.29.54:874][468]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.29.54:874][468]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap
+[2026.03.30-17.29.54:908][468]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.03.30-17.29.54:918][468]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.29.54:946][468]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-17.29.54:946][468]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2026.03.30-17.29.54:947][468]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2026.03.30-17.29.54:950][468]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2026.03.30-17.29.54:965][468]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
+[2026.03.30-17.29.55:019][469]LogPlayLevel: Display: Destroying online subsystem :Context_74
+[2026.03.30-17.30.30:104][152]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_71
+[2026.03.30-17.30.30:105][152]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_71'.
+[2026.03.30-17.30.30:217][153]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_72
+[2026.03.30-17.30.30:218][153]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_72'.
+[2026.03.30-17.30.30:272][154]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_73
+[2026.03.30-17.30.30:272][154]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_73'.
+[2026.03.30-17.30.31:585][176]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/FirstPerson/Blueprints/BP_FirstPersonCharacter.BP_FirstPersonCharacter
+[2026.03.30-17.30.31:586][176]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_74
+[2026.03.30-17.30.31:588][176]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_74'.
+[2026.03.30-17.31.10:238][756]LogEditorTransaction: Undo Modify Component(s)
+[2026.03.30-17.31.10:698][756]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_60:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.31.10:703][756]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.31.13:167][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Hips' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Spine' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Spine1' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Spine2' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Head' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftArm' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftHand' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightArm' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightHand' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftUpLeg' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftLeg' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftFoot' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightUpLeg' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightLeg' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightFoot' 
+[2026.03.30-17.31.13:168][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Hips' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Spine' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Spine1' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Spine2' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'Head' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftArm' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftHand' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightArm' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightHand' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftUpLeg' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftLeg' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'LeftFoot' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightUpLeg' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightLeg' 
+[2026.03.30-17.31.13:169][791]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_FirstPersonCharacter_C_0 /Engine/Transient.World_74:PersistentLevel.BP_FirstPersonCharacter_C_0.FirstPersonMesh Bone: 'RightFoot' 
+[2026.03.30-17.31.13:280][791]LogUObjectHash: Compacting FUObjectHashTables data took   1.58ms
+[2026.03.30-17.31.16:946][849]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.03.30-17.31.16:957][849]LogContentBundle: [FirstPersonMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.03.30-17.31.16:958][849]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' started...
+[2026.03.30-17.31.16:964][849]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' took 5.642 ms (total: 22.705 ms)
+[2026.03.30-17.31.16:964][849]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.03.30-17.31.16:964][849]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-17.31.16:973][849]LogPlayLevel: PIE: StaticDuplicateObject took: (0.008174s)
+[2026.03.30-17.31.16:973][849]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap to /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap (0.008255s)
+[2026.03.30-17.31.17:007][849]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2026.03.30-17.31.17:011][849]LogChaosDD: Creating Chaos Debug Draw Scene for world FirstPersonMap
+[2026.03.30-17.31.17:012][849]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap'.
+[2026.03.30-17.31.17:013][849]LogWorldPartition: ULevel::OnLevelLoaded(FirstPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.03.30-17.31.17:013][849]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.03.30-17.31.17:013][849]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.03.30-17.31.17:014][849]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.03.30-17.31.17:017][849]LogWorldPartition: Display: WorldPartition initialize took 3.224 ms (total: 316.649 ms)
+[2026.03.30-17.31.17:017][849]LogPlayLevel: PIE: World Init took: (0.006036s)
+[2026.03.30-17.31.17:018][849]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2026.03.30-17.31.17:018][849]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.03.30-17.31.17:018][849]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.03.30-17.31.17:018][849]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.03.30-17.31.17:018][849]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.03.30-17.31.17:018][849]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.03.30-17.31.17:018][849]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.03.30-17.31.17:018][849]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.03.30-17.31.17:018][849]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.03.30-17.31.17:018][849]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.03.30-17.31.17:018][849]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.03.30-17.31.17:018][849]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.03.30-17.31.17:023][849]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.03.30-17.31.17:049][849]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.03.30-17.31.17:049][849]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.03.30-17.31.17:049][849]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.03.30-17.31.17:049][849]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.03.30-17.31.17:050][849]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2026.03.30-17.31.17:050][849]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2026.03.30-17.31.17:054][849]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2026.03.30-17.31.17:054][849]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2026.03.30-17.31.17:054][849]LogInit: FAudioDevice initialized with ID 5.
+[2026.03.30-17.31.17:054][849]LogAudio: Display: Audio Device (ID: 5) registered with world 'FirstPersonMap'.
+[2026.03.30-17.31.17:054][849]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2026.03.30-17.31.17:058][849]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.03.30-17.31.17:063][849]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap up for play (max tick rate 60) at 2026.03.30-18.31.17
+[2026.03.30-17.31.17:064][849]LogWorld: Bringing up level for play took: 0.004852
+[2026.03.30-17.31.17:068][849]LogOnline: OSS: Created online subsystem instance for: :Context_79
+[2026.03.30-17.31.17:072][849]PIE: Server logged in
+[2026.03.30-17.31.17:074][849]PIE: Play in editor total start time 0.116 seconds.
+[2026.03.30-17.31.51:778][588]LogShaderCompilers: Display: ================================================
+[2026.03.30-17.31.51:778][588]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.03.30-17.31.51:778][588]LogShaderCompilers: Display: Total job queries 286, among them cache hits 85 (29.72%), DDC hits 135 (47.20%), Duplicates 2 (0.70%)
+[2026.03.30-17.31.51:778][588]LogShaderCompilers: Display: Tracking 199 distinct input hashes that result in 164 distinct outputs (82.41%)
+[2026.03.30-17.31.51:778][588]LogShaderCompilers: Display: RAM used: 124.07 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Shaders Compiled: 64
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Jobs assigned 64, completed 64 (100%)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Average time worker was idle: 513.19 s
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Time job spent in pending queue: average 0.30 s, longest 3.51 s
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Job execution time: average 9.72 s, max 26.25 s
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Job life time (pending + execution): average 10.02 s, max 26.44
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Shader code size: average 5.679 KiB, min 464 B, max 15.152 KiB
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 62.08 s
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Jobs were issued in 30 batches (only local compilation was used), average 2.13 jobs/batch
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Average processing rate: 1.03 jobs/sec
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Total thread time: 138.82 s
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Total thread preprocess time: 26.837 s
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Percentage time preprocessing: 19.33%
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Effective parallelization: 2.24 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                                 FDepthOnlyPS (compiled    2 times, average 2.12 sec, max 2.22 sec, min 2.01 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                                  FVelocityPS (compiled    2 times, average 2.01 sec, max 2.17 sec, min 1.86 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   12 times, average 1.91 sec, max 4.91 sec, min 0.63 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                             FDebugViewModePS - 31.45% of total time (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 16.53% of total time (compiled   12 times, average 1.91 sec, max 4.91 sec, min 0.63 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 10.46% of total time (compiled   10 times, average 1.45 sec, max 2.98 sec, min 0.77 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 10.36% of total time (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display:                                             FDebugViewModeVS - 6.94% of total time (compiled    6 times, average 1.61 sec, max 3.64 sec, min 1.04 sec)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: === Material stats ===
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Materials Translated:    149
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Material Total Translate Time: 0.27 s
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Material Translation Only: 0.12 s (44%)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: Material Cache Hits: 31 (21%)
+[2026.03.30-17.31.51:779][588]LogShaderCompilers: Display: ================================================
+[2026.03.30-17.32.29:553][369]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-17.32.29:553][369]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-17.32.29:553][369]LogWorld: UWorld::CleanupWorld for FirstPersonMap, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.29:555][369]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.29:555][369]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap
+[2026.03.30-17.32.29:562][369]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.03.30-17.32.29:571][369]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.29:599][369]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.03.30-17.32.29:599][369]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2026.03.30-17.32.29:600][369]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2026.03.30-17.32.29:604][369]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2026.03.30-17.32.29:613][369]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-17.32.29:618][369]LogUObjectHash: Compacting FUObjectHashTables data took   2.57ms
+[2026.03.30-17.32.29:669][370]LogPlayLevel: Display: Destroying online subsystem :Context_79
+[2026.03.30-17.32.34:076][451]LogUObjectHash: Compacting FUObjectHashTables data took   2.28ms
+[2026.03.30-17.32.36:938][451]LogSlate: Window 'Save Content' being destroyed
+[2026.03.30-17.32.38:331][481]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2026.03.30-17.32.40:420][481]LogSlate: Window 'Save Content' being destroyed
+[2026.03.30-17.32.40:496][481]LogStall: Shutdown...
+[2026.03.30-17.32.40:496][481]LogStall: Shutdown complete.
+[2026.03.30-17.32.40:587][481]LogWorld: UWorld::CleanupWorld for World_61, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.40:587][481]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.40:601][481]LogWorld: UWorld::CleanupWorld for World_60, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.40:601][481]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.40:691][481]LogWorld: UWorld::CleanupWorld for World_65, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.40:691][481]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.40:705][481]LogWorld: UWorld::CleanupWorld for World_64, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.40:705][481]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.40:718][481]LogWorld: UWorld::CleanupWorld for World_63, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.40:718][481]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.40:772][481]LogWorld: UWorld::CleanupWorld for World_66, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.40:772][481]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.40:827][481]LogSlate: Window 'BP_FirstPersonCharacter' being destroyed
+[2026.03.30-17.32.40:871][481]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2026.03.30-17.32.40:871][481]LogWorld: UWorld::CleanupWorld for World_74, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.40:871][481]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.40:936][481]LogSlate: Window 'SearchAndRescue - Unreal Editor' being destroyed
+[2026.03.30-17.32.41:129][481]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2026.03.30-17.32.41:163][481]Cmd: QUIT_EDITOR
+[2026.03.30-17.32.41:163][482]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2026.03.30-17.32.41:169][482]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2026.03.30-17.32.41:169][482]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2026.03.30-17.32.41:169][482]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2026.03.30-17.32.41:171][482]LogWorld: UWorld::CleanupWorld for FirstPersonMap, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:172][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:172][482]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap
+[2026.03.30-17.32.41:185][482]LogStylusInput: Shutting down StylusInput subsystem.
+[2026.03.30-17.32.41:186][482]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2026.03.30-17.32.41:198][482]LogWorld: UWorld::CleanupWorld for World_72, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:198][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:205][482]LogWorld: UWorld::CleanupWorld for World_71, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:205][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:209][482]LogWorld: UWorld::CleanupWorld for World_70, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:210][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:214][482]LogWorld: UWorld::CleanupWorld for World_62, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:215][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:219][482]LogWorld: UWorld::CleanupWorld for World_68, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:219][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:225][482]LogWorld: UWorld::CleanupWorld for World_73, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:225][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:232][482]LogWorld: UWorld::CleanupWorld for World_24, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:232][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:239][482]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:239][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:245][482]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:245][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:254][482]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:255][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:266][482]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:266][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:273][482]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:273][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:279][482]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:279][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:283][482]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:283][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:288][482]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:288][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:294][482]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:294][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:299][482]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:299][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:304][482]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:305][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:312][482]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:312][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:321][482]LogWorld: UWorld::CleanupWorld for World_69, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:322][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:327][482]LogWorld: UWorld::CleanupWorld for World_67, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.32.41:327][482]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.32.41:334][482]LogStudioTelemetry: Ended StudioTelemetry Session
+[2026.03.30-17.32.41:337][482]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroying ET Analytics provider
+[2026.03.30-17.32.41:337][482]LogAnalytics: Display: [UEEditor.Rocket.Release] Ended ET Analytics provider session
+[2026.03.30-17.32.41:337][482]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroyed ET Analytics provider
+[2026.03.30-17.32.41:772][482]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2026.03.30-17.32.41:772][482]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2026.03.30-17.32.41:772][482]LogAudio: Display: Audio Device unregistered from world 'FirstPersonMap'.
+[2026.03.30-17.32.41:772][482]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2026.03.30-17.32.41:772][482]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2026.03.30-17.32.41:777][482]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2026.03.30-17.32.41:794][482]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2026.03.30-17.32.41:794][482]LogAudio: Display: Audio Device Manager Shutdown
+[2026.03.30-17.32.42:112][482]LogWindowsTextInputMethodSystem: Activated input method: English (United Kingdom) - (Keyboard).
+[2026.03.30-17.32.42:120][482]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2026.03.30-17.32.42:120][482]LogExit: Preparing to exit.
+[2026.03.30-17.32.42:181][482]LogUObjectHash: Compacting FUObjectHashTables data took   2.46ms
+[2026.03.30-17.32.42:186][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:186][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:188][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_null_above_selected_PY.add_null_above_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_all' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_x' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_y' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_z' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_scale' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_name_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:189][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/set_bone_reference_pose_PY.set_bone_reference_pose' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/ControlRigWorkflows/workflow_fbik_import_ik_rig_PY.import_ik_rig_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:190][482]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.ControlOutputFormat' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2026.03.30-17.32.42:835][482]LogEditorDataStorage: Deinitializing
+[2026.03.30-17.32.43:134][482]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2026.03.30-17.32.43:182][482]LogExit: Editor shut down
+[2026.03.30-17.32.43:195][482]LogExit: Transaction tracking system shut down
+[2026.03.30-17.32.43:602][482]LogExit: Object subsystem successfully closed.
+[2026.03.30-17.32.43:647][482]LogShaderCompilers: Display: Shaders left to compile 0
+[2026.03.30-17.32.44:431][482]LogMemoryProfiler: Shutdown
+[2026.03.30-17.32.44:431][482]LogNetworkingProfiler: Shutdown
+[2026.03.30-17.32.44:431][482]LoadingProfiler: Shutdown
+[2026.03.30-17.32.44:431][482]LogTimingProfiler: Shutdown
+[2026.03.30-17.32.44:905][482]LogChaosDD: Chaos Debug Draw Shutdown
+[2026.03.30-17.32.44:906][482]RenderDocPlugin: plugin has been unloaded.
+[2026.03.30-17.32.44:919][482]LogStudioTelemetry: Display: Shutdown StudioTelemetry Module
+[2026.03.30-17.32.44:919][482]LogNFORDenoise: NFORDenoise function shutting down
+[2026.03.30-17.32.44:933][482]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 2 outstanding Http Requests:
+[2026.03.30-17.32.44:933][482]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B031F8F93-45D9-D18C-A788-7FAE9D4F0DA8%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.5.4-40574608%2B%2B%2BUE5%2BRelease-5.5&UserID=3c53b41a494a7d9fae6f4ea73c314c8e%7Cc1a5e162838d4a29b8c5fa83f2d3c0b2%7Ccfaa9abb-99fa-45e5-958e-08fc082674e3&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[3] status=Processing
+[2026.03.30-17.32.44:933][482]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B031F8F93-45D9-D18C-A788-7FAE9D4F0DA8%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.5.4-40574608%2B%2B%2BUE5%2BRelease-5.5&UserID=3c53b41a494a7d9fae6f4ea73c314c8e%7Cc1a5e162838d4a29b8c5fa83f2d3c0b2%7Ccfaa9abb-99fa-45e5-958e-08fc082674e3&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2026.03.30-17.32.45:491][482]LogEOSSDK: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2026.03.30-17.32.45:494][482]LogXGEController: Cleaning working directory: C:/Users/zohai/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2026.03.30-17.32.45:497][482]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2026.03.30-17.32.45:497][482]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2026.03.30-17.32.45:497][482]LogPakFile: Destroying PakPlatformFile
+[2026.03.30-17.32.45:507][482]LogD3D11RHI: Shutdown
+[2026.03.30-17.32.45:507][482]LogD3D11RHI: CleanupD3DDevice
+[2026.03.30-17.32.45:563][482]LogD3D11RHI: Intel Extensions Framework unloaded
+[2026.03.30-17.32.45:606][482]LogExit: Exiting.
+[2026.03.30-17.32.45:650][482]Log file closed, 03/30/26 18:32:45
