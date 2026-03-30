@@ -40,9 +40,13 @@ void AEnemyBase::Tick(float DeltaTime)
 	{
 		//How long the current spline has been going for.
 		float CurrentSplineTime = (Count - StartTime) / splineController->getTotalPathTimeController();
+		//UE_LOG(LogTemp, Warning, TEXT("Spline Time is: %f"), CurrentSplineTime);
+		//UE_LOG(LogTemp, Warning, TEXT("Count is: %f"), Count);
 
-		if (CurrentSplineTime <= 0)
+		//Need to reset count so that we keep following the loop.
+		if (Count >= splineController->getTotalPathTimeController())
 		{
+			//GLog->Log("Spline is Ended");
 			Count = StartTime;
 		}
 
