@@ -1959,3 +1959,396 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.30-16.45.43:046][893]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/turning_right_45_degrees Validating asset
 [2026.03.30-16.45.43:047][893]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/walking_backwards Validating asset
 [2026.03.30-16.45.43:047][893]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/walking Validating asset
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: ================================================
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Total job queries 176, among them cache hits 19 (10.80%), DDC hits 135 (76.70%), Duplicates 2 (1.14%)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Tracking 155 distinct input hashes that result in 137 distinct outputs (88.39%)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: RAM used: 113.96 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Shaders Compiled: 20
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Jobs assigned 20, completed 20 (100%)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Average time worker was idle: 0.91 s
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Time job spent in pending queue: average 0.11 s, longest 0.19 s
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Job execution time: average 16.58 s, max 26.25 s
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Job life time (pending + execution): average 16.70 s, max 26.44
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Shader code size: average 7.979 KiB, min 4.73 KiB, max 15.152 KiB
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 32.56 s
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Jobs were issued in 6 batches (only local compilation was used), average 3.33 jobs/batch
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Average processing rate: 0.61 jobs/sec
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Total thread time: 71.507 s
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Total thread preprocess time: 24.482 s
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Percentage time preprocessing: 34.24%
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Effective parallelization: 2.20 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    4 times, average 8.13 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    4 times, average 3.16 sec, max 4.91 sec, min 1.69 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    4 times, average 2.83 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                             FDebugViewModeVS (compiled    4 times, average 1.88 sec, max 3.64 sec, min 1.07 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    4 times, average 1.88 sec, max 2.98 sec, min 1.03 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                             FDebugViewModePS - 45.50% of total time (compiled    4 times, average 8.13 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 17.70% of total time (compiled    4 times, average 3.16 sec, max 4.91 sec, min 1.69 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 15.81% of total time (compiled    4 times, average 2.83 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                             FDebugViewModeVS - 10.51% of total time (compiled    4 times, average 1.88 sec, max 3.64 sec, min 1.07 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 10.49% of total time (compiled    4 times, average 1.88 sec, max 2.98 sec, min 1.03 sec)
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: === Material stats ===
+[2026.03.30-16.46.50:144][695]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.03.30-16.46.50:145][695]LogShaderCompilers: Display: Materials Translated:    135
+[2026.03.30-16.46.50:145][695]LogShaderCompilers: Display: Material Total Translate Time: 0.25 s
+[2026.03.30-16.46.50:145][695]LogShaderCompilers: Display: Material Translation Only: 0.11 s (45%)
+[2026.03.30-16.46.50:145][695]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (2%)
+[2026.03.30-16.46.50:145][695]LogShaderCompilers: Display: Material Cache Hits: 31 (23%)
+[2026.03.30-16.46.50:145][695]LogShaderCompilers: Display: ================================================
+[2026.03.30-16.46.52:149][701]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 373.667786
+[2026.03.30-16.46.53:148][704]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-16.46.53:148][704]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 374.335938, Update Interval: 319.836426
+[2026.03.30-16.49.19:219][233]LogStreaming: Display: FlushAsyncLoading(465): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.19:277][233]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx]
+[2026.03.30-16.49.34:903][233]LogSlate: Window 'Import Content' being destroyed
+[2026.03.30-16.49.34:934][233]LogInterchangeEngine: [Pending] Importing
+[2026.03.30-16.49.35:034][234]LogStreaming: Display: FlushAsyncLoading(466): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.35:229][238]LogCore: PNG has complex alpha channel, will not fill RGB in transparent background, due to setting PNGInfill == OnlyOnBinaryTransparency
+[2026.03.30-16.49.35:400][242]LogInterchangeImport: Display: Auto-detected grayscale, image changed to G8
+[2026.03.30-16.49.35:783][249]LogStreaming: Display: FlushAsyncLoading(472): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.36:813][267]LogStreaming: Display: FlushAsyncLoading(473): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.37:052][273]LogStreaming: Display: FlushAsyncLoading(474): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.37:116][274]LogStreaming: Display: FlushAsyncLoading(475): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.37:492][279]LogStreaming: Display: FlushAsyncLoading(476): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.38:446][295]LogStreaming: Display: FlushAsyncLoading(477): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.49.38:484][296]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim.Ch07_nonPBR_Anim (Required Memory Estimate: 0.14 MB)
+[2026.03.30-16.49.38:486][296]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim.Ch07_nonPBR_Anim, at AnimationSequence/03a11c92636da83fd3b6cf83b27d244d508677e9
+[2026.03.30-16.49.38:761][296]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Specular.Ch07_1001_Specular (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1072.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.49.38:761][296]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Glossiness.Ch07_1001_Glossiness (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1072.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.49.38:775][296]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Diffuse.Ch07_1001_Diffuse (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1120.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.49.38:782][296]LogSkeletalMesh: Building Skeletal Mesh Ch07_nonPBR...
+[2026.03.30-16.49.38:841][298]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Hostage/Ch07_1002_Normal.Ch07_1002_Normal (TFO_BC5, 2048x2048 x1x1x1) (Required Memory Estimate: 292.499988 MB), EncodeSpeed: Fast
+[2026.03.30-16.49.38:851][298]LogTexture: Display: Waiting for textures to be ready 0/2 (/Game/ModelsAndAnimations/Hostage/Ch07_1002_Normal) ...
+[2026.03.30-16.49.39:241][298]LogTexture: Display: Waiting for textures to be ready 1/2 (/Game/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse) ...
+[2026.03.30-16.49.39:241][298]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse.Ch07_1002_Diffuse (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 288.999984 MB), EncodeSpeed: Fast
+[2026.03.30-16.49.40:090][298]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.49.40:143][298]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.49.40:179][298]LogTexture: Display: Waiting for textures to be ready 1/4 (/Game/ModelsAndAnimations/Hostage/Ch07_1001_Normal) ...
+[2026.03.30-16.49.40:181][298]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Normal.Ch07_1001_Normal (TFO_BC5, 4096x4096 x1x1x1) (Required Memory Estimate: 1152.999984 MB), EncodeSpeed: Fast
+[2026.03.30-16.49.41:726][311]LogSkeletalMesh: Built Skeletal Mesh [2.94s] /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR.Ch07_nonPBR
+[2026.03.30-16.49.47:120][395]LogSkeletalMesh: Display: Waiting for skinned assets to be ready 0/1 (Ch07_nonPBR) ...
+[2026.03.30-16.49.47:146][395]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_9
+[2026.03.30-16.49.47:147][395]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_9'.
+[2026.03.30-16.49.47:149][395]LogMaterial: Display: Material /Game/ModelsAndAnimations/Hostage/Ch07_body.Ch07_body needed to have new flag set bUsedWithSkeletalMesh !
+[2026.03.30-16.49.47:153][395]LogMaterial: Display: Material /Game/ModelsAndAnimations/Hostage/Ch07_hair.Ch07_hair needed to have new flag set bUsedWithSkeletalMesh !
+[2026.03.30-16.49.47:163][395]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.49.47:164][395]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.49.47:199][396]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2026.03.30-16.49.47:285][396]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...Assets/Hostage/Model/Ch07_nonPBR.fbx]
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [ : '', Texture2D] Ch07_1002_Diffuse is being used as both Color and Scalar which aren't compatible.
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx : 'Ch07_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx : 'Ch07_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh_ncl_1' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx : 'Ch07_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh_ncl_2' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx : 'Ch07_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh_ncl_3' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx : 'Ch07_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh_ncl_4' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx : 'Ch07_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh_ncl_5' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.49.47:285][396]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Model/Ch07_nonPBR.fbx : 'Ch07_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh_ncl_6' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.49.47:309][396]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2026.03.30-16.49.47:309][396]LogInterchangeEngine: [Success] Import Done
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: ================================================
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Total job queries 228, among them cache hits 39 (17.11%), DDC hits 135 (59.21%), Duplicates 2 (0.88%)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Tracking 187 distinct input hashes that result in 142 distinct outputs (75.94%)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: RAM used: 116.26 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Shaders Compiled: 28
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Jobs assigned 52, completed 28 (53.85%)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Average time worker was idle: 108.52 s
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Time job spent in pending queue: average 0.29 s, longest 2.76 s
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Job execution time: average 12.59 s, max 26.25 s
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Job life time (pending + execution): average 12.97 s, max 26.44
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Shader code size: average 6.516 KiB, min 612 B, max 15.152 KiB
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 38.32 s
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Jobs were issued in 18 batches (only local compilation was used), average 2.89 jobs/batch
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Average processing rate: 0.73 jobs/sec
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Total thread time: 85.241 s
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Total thread preprocess time: 25.138 s
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Percentage time preprocessing: 29.49%
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Effective parallelization: 2.22 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    4 times, average 8.13 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    5 times, average 2.89 sec, max 4.91 sec, min 1.69 sec)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    4 times, average 2.83 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                                                 FDepthOnlyPS (compiled    1 times, average 2.22 sec, max 2.22 sec, min 2.22 sec)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                                             FDebugViewModeVS (compiled    4 times, average 1.88 sec, max 3.64 sec, min 1.07 sec)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                                             FDebugViewModePS - 38.17% of total time (compiled    4 times, average 8.13 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 16.94% of total time (compiled    5 times, average 2.89 sec, max 4.91 sec, min 1.69 sec)
+[2026.03.30-16.49.50:177][439]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 13.26% of total time (compiled    4 times, average 2.83 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 10.36% of total time (compiled    5 times, average 1.77 sec, max 2.98 sec, min 1.03 sec)
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display:                                             FDebugViewModeVS - 8.81% of total time (compiled    4 times, average 1.88 sec, max 3.64 sec, min 1.07 sec)
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: === Material stats ===
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: Materials Translated:    139
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: Material Total Translate Time: 0.25 s
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: Material Translation Only: 0.11 s (45%)
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (2%)
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: Material Cache Hits: 31 (22%)
+[2026.03.30-16.49.50:179][439]LogShaderCompilers: Display: ================================================
+[2026.03.30-16.50.01:193][649]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_10
+[2026.03.30-16.50.01:194][649]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_10'.
+[2026.03.30-16.50.01:489][654]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_11
+[2026.03.30-16.50.01:490][654]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_11'.
+[2026.03.30-16.50.13:033][904]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2026.03.30-16.50.13:042][904]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-16.50.13:106][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_PhysicsAsset] ([1] browsable assets)...
+[2026.03.30-16.50.13:132][904]OBJ SavePackage:     Rendered thumbnail for [PhysicsAsset /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_PhysicsAsset.Ch07_nonPBR_PhysicsAsset]
+[2026.03.30-16.50.13:133][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_PhysicsAsset]
+[2026.03.30-16.50.13:138][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_PhysicsAsset
+[2026.03.30-16.50.13:139][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_nonPBR_PhysicsAsset60D98DFD474FDE46589F9CAFF845CFA7.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_nonPBR_PhysicsAsset.uasset'
+[2026.03.30-16.50.13:140][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.50.13:142][904]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Hostage/Ch07_1001_Diffuse.Ch07_1001_Diffuse]
+[2026.03.30-16.50.13:142][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Diffuse]
+[2026.03.30-16.50.13:477][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Diffuse
+[2026.03.30-16.50.13:477][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_1001_DiffuseE9C38A134FED2CA1EC3D95AB3D1C8DDA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_1001_Diffuse.uasset'
+[2026.03.30-16.50.13:479][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Glossiness] ([1] browsable assets)...
+[2026.03.30-16.50.13:480][904]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Hostage/Ch07_1001_Glossiness.Ch07_1001_Glossiness]
+[2026.03.30-16.50.13:480][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Glossiness]
+[2026.03.30-16.50.13:586][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Glossiness
+[2026.03.30-16.50.13:586][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_1001_Glossiness088EB8604EB009211C8906A65F1E33BA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_1001_Glossiness.uasset'
+[2026.03.30-16.50.13:588][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Specular] ([1] browsable assets)...
+[2026.03.30-16.50.13:589][904]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Hostage/Ch07_1001_Specular.Ch07_1001_Specular]
+[2026.03.30-16.50.13:589][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Specular]
+[2026.03.30-16.50.13:611][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Specular
+[2026.03.30-16.50.13:611][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_1001_Specular48F821F74E4C6537699B259C0B69ABA4.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_1001_Specular.uasset'
+[2026.03.30-16.50.13:612][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.50.13:614][904]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse.Ch07_1002_Diffuse]
+[2026.03.30-16.50.13:614][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse]
+[2026.03.30-16.50.13:686][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse
+[2026.03.30-16.50.13:686][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_1002_DiffuseFDF8DE66470645C696FA9DB00022B33D.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse.uasset'
+[2026.03.30-16.50.13:688][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Skeleton] ([1] browsable assets)...
+[2026.03.30-16.50.13:707][904]OBJ SavePackage:     Rendered thumbnail for [Skeleton /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Skeleton.Ch07_nonPBR_Skeleton]
+[2026.03.30-16.50.13:707][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Skeleton]
+[2026.03.30-16.50.13:710][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Skeleton
+[2026.03.30-16.50.13:710][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_nonPBR_Skeleton593DCE614236251C4D5668AA9CDDFB12.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_nonPBR_Skeleton.uasset'
+[2026.03.30-16.50.13:711][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Normal] ([1] browsable assets)...
+[2026.03.30-16.50.13:713][904]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Hostage/Ch07_1001_Normal.Ch07_1001_Normal]
+[2026.03.30-16.50.13:713][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_1001_Normal]
+[2026.03.30-16.50.14:184][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Normal
+[2026.03.30-16.50.14:184][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_1001_NormalF57086D74A075F20B1BA9B8554B8B743.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_1001_Normal.uasset'
+[2026.03.30-16.50.14:186][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_1002_Normal] ([1] browsable assets)...
+[2026.03.30-16.50.14:187][904]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Hostage/Ch07_1002_Normal.Ch07_1002_Normal]
+[2026.03.30-16.50.14:187][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_1002_Normal]
+[2026.03.30-16.50.14:281][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_1002_Normal
+[2026.03.30-16.50.14:281][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_1002_Normal2EA2C2654CDB898734C3DFBAE16F2199.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_1002_Normal.uasset'
+[2026.03.30-16.50.14:283][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_hair] ([1] browsable assets)...
+[2026.03.30-16.50.14:300][904]OBJ SavePackage:     Rendered thumbnail for [Material /Game/ModelsAndAnimations/Hostage/Ch07_hair.Ch07_hair]
+[2026.03.30-16.50.14:300][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_hair]
+[2026.03.30-16.50.14:306][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_hair
+[2026.03.30-16.50.14:306][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_hair0B74C4E64F7918654C88F5A0DF58955E.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_hair.uasset'
+[2026.03.30-16.50.14:307][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_body] ([1] browsable assets)...
+[2026.03.30-16.50.14:323][904]OBJ SavePackage:     Rendered thumbnail for [Material /Game/ModelsAndAnimations/Hostage/Ch07_body.Ch07_body]
+[2026.03.30-16.50.14:323][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_body]
+[2026.03.30-16.50.14:329][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_body
+[2026.03.30-16.50.14:329][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_body76848A094723B6A75651748947906E69.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_body.uasset'
+[2026.03.30-16.50.14:331][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR] ([1] browsable assets)...
+[2026.03.30-16.50.14:350][904]OBJ SavePackage:     Rendered thumbnail for [SkeletalMesh /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR.Ch07_nonPBR]
+[2026.03.30-16.50.14:350][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR]
+[2026.03.30-16.50.14:429][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR
+[2026.03.30-16.50.14:429][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_nonPBRDD45EBE444692B4B113FCE93B9C29673.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_nonPBR.uasset'
+[2026.03.30-16.50.14:431][904]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim] ([1] browsable assets)...
+[2026.03.30-16.50.14:450][904]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim.Ch07_nonPBR_Anim]
+[2026.03.30-16.50.14:450][904]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim]
+[2026.03.30-16.50.14:459][904]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim
+[2026.03.30-16.50.14:459][904]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch07_nonPBR_Anim802C7364453B76844F51BBBB5150404C.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim.uasset'
+[2026.03.30-16.50.14:477][904]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.43 sec (total: 4.62 sec)
+[2026.03.30-16.50.14:534][904]LogContentValidation: Display: Starting to validate 12 assets
+[2026.03.30-16.50.14:534][904]LogContentValidation: Enabled validators:
+[2026.03.30-16.50.14:534][904]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-16.50.14:534][904]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-16.50.14:534][904]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-16.50.14:534][904]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-16.50.14:534][904]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-16.50.14:534][904]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-16.50.14:534][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_PhysicsAsset Validating asset
+[2026.03.30-16.50.14:534][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Diffuse Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Glossiness Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Specular Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_1002_Diffuse Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Skeleton Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_1001_Normal Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_1002_Normal Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_hair Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_body Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR Validating asset
+[2026.03.30-16.50.14:535][904]AssetCheck: /Game/ModelsAndAnimations/Hostage/Ch07_nonPBR_Anim Validating asset
+[2026.03.30-16.50.27:300][127]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.03.30-16.50.27:311][127]LogContentBrowser: Creating deferred item: NewFolder
+[2026.03.30-16.50.27:327][128]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.03.30-16.50.31:424][219]LogContentBrowser: Attempting asset rename: NewFolder -> Animations
+[2026.03.30-16.50.31:425][219]LogContentBrowser: End creating deferred item NewFolder
+[2026.03.30-16.50.42:478][340]LogStreaming: Display: FlushAsyncLoading(478): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.42:531][340]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Animations/Death From The Front.fbx]
+[2026.03.30-16.50.42:622][340]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2026.03.30-16.50.42:651][340]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2026.03.30-16.50.49:265][340]LogSlate: Window 'Import Content' being destroyed
+[2026.03.30-16.50.49:289][340]LogInterchangeEngine: [Pending] Importing
+[2026.03.30-16.50.49:657][343]LogStreaming: Display: FlushAsyncLoading(485): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.49:739][344]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front.Death_From_The_Front (Required Memory Estimate: 1.40 MB)
+[2026.03.30-16.50.49:768][344]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...s/Hostage/Animations/Death From The Front.fbx]
+[2026.03.30-16.50.49:768][344]LogInterchangeEngine: [Pending] Importing -  (6)
+[2026.03.30-16.50.49:769][344]LogInterchangeEngine: [Pending] Importing -  (6)
+[2026.03.30-16.50.49:769][344]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Animations/Kneeling.fbx]
+[2026.03.30-16.50.49:797][345]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front.Death_From_The_Front, at AnimationSequence/59c63927eae33bab87f4590913206e5955b94a70
+[2026.03.30-16.50.50:267][351]LogStreaming: Display: FlushAsyncLoading(486): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.50:298][352]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Kneeling.Kneeling (Required Memory Estimate: 1.86 MB)
+[2026.03.30-16.50.50:332][352]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...s/Hostage/Animations/Kneeling.fbx]
+[2026.03.30-16.50.50:332][352]LogInterchangeEngine: [Pending] Importing -  (5)
+[2026.03.30-16.50.50:332][352]LogInterchangeEngine: [Pending] Importing -  (5)
+[2026.03.30-16.50.50:332][352]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Animations/Left Strafe.fbx]
+[2026.03.30-16.50.50:364][355]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Animations/Kneeling.Kneeling, at AnimationSequence/cc91c40d248f4b82846fb63d55e4473f97ea215f
+[2026.03.30-16.50.50:815][359]LogStreaming: Display: FlushAsyncLoading(487): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.50:844][360]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe.Left_Strafe (Required Memory Estimate: 0.37 MB)
+[2026.03.30-16.50.50:857][360]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe.Left_Strafe (Required Memory Estimate: 0.37 MB)
+[2026.03.30-16.50.50:872][360]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe.Left_Strafe, at AnimationSequence/c3a289c0ea813a42f64727fedce6c84edfeee38a
+[2026.03.30-16.50.50:891][360]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...s/Hostage/Animations/Left Strafe.fbx]
+[2026.03.30-16.50.50:891][360]LogInterchangeEngine: [Pending] Importing -  (4)
+[2026.03.30-16.50.50:891][360]LogInterchangeEngine: [Pending] Importing -  (4)
+[2026.03.30-16.50.50:891][360]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Animations/Right Strafe.fbx]
+[2026.03.30-16.50.51:406][367]LogStreaming: Display: FlushAsyncLoading(488): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.51:432][368]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe.Right_Strafe (Required Memory Estimate: 0.37 MB)
+[2026.03.30-16.50.51:446][368]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe.Right_Strafe (Required Memory Estimate: 0.37 MB)
+[2026.03.30-16.50.51:461][368]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe.Right_Strafe, at AnimationSequence/46d8cbbece8ec1b06f162831909e89725ca8738d
+[2026.03.30-16.50.51:472][368]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...s/Hostage/Animations/Right Strafe.fbx]
+[2026.03.30-16.50.51:473][368]LogInterchangeEngine: [Pending] Importing -  (3)
+[2026.03.30-16.50.51:473][368]LogInterchangeEngine: [Pending] Importing -  (3)
+[2026.03.30-16.50.51:473][368]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Animations/Running.fbx]
+[2026.03.30-16.50.52:024][376]LogStreaming: Display: FlushAsyncLoading(489): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.52:056][377]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Running.Running (Required Memory Estimate: 0.39 MB)
+[2026.03.30-16.50.52:071][377]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Running.Running (Required Memory Estimate: 0.39 MB)
+[2026.03.30-16.50.52:085][377]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Animations/Running.Running, at AnimationSequence/5c78928b8caa87603f3021fa8be00da1faf0d94c
+[2026.03.30-16.50.52:101][377]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...s/Hostage/Animations/Running.fbx]
+[2026.03.30-16.50.52:102][377]LogInterchangeEngine: [Pending] Importing -  (2)
+[2026.03.30-16.50.52:102][377]LogInterchangeEngine: [Pending] Importing -  (2)
+[2026.03.30-16.50.52:102][377]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Animations/Standing Idle.fbx]
+[2026.03.30-16.50.52:620][384]LogStreaming: Display: FlushAsyncLoading(490): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.52:652][385]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Standing_Idle.Standing_Idle (Required Memory Estimate: 2.36 MB)
+[2026.03.30-16.50.52:683][385]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...s/Hostage/Animations/Standing Idle.fbx]
+[2026.03.30-16.50.52:684][385]LogInterchangeEngine: [Pending] Importing -  (1)
+[2026.03.30-16.50.52:684][385]LogInterchangeEngine: [Pending] Importing -  (1)
+[2026.03.30-16.50.52:684][385]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/Hostage/Animations/Standing.fbx]
+[2026.03.30-16.50.52:736][388]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Animations/Standing_Idle.Standing_Idle, at AnimationSequence/d1b5fbdfd1dd1f0765ac3ab5800e69cd2e227155
+[2026.03.30-16.50.53:197][392]LogStreaming: Display: FlushAsyncLoading(491): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.50.53:227][393]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Standing.Standing (Required Memory Estimate: 1.15 MB)
+[2026.03.30-16.50.53:261][393]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...s/Hostage/Animations/Standing.fbx]
+[2026.03.30-16.50.53:263][393]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2026.03.30-16.50.53:263][393]LogInterchangeEngine: [Success] Import Done
+[2026.03.30-16.50.53:288][394]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Hostage/Animations/Standing.Standing, at AnimationSequence/d26f14bac09c41b506f9310feae76bffb21daec2
+[2026.03.30-16.50.59:196][507]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2026.03.30-16.50.59:205][507]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-16.50.59:263][507]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front] ([1] browsable assets)...
+[2026.03.30-16.50.59:293][507]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front.Death_From_The_Front]
+[2026.03.30-16.50.59:293][507]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front]
+[2026.03.30-16.50.59:303][507]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front
+[2026.03.30-16.50.59:303][507]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Death_From_The_Front7A67A9904BEE89F70A55DB8F9A2C4AB2.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front.uasset'
+[2026.03.30-16.50.59:304][507]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Animations/Kneeling] ([1] browsable assets)...
+[2026.03.30-16.50.59:318][507]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Kneeling.Kneeling]
+[2026.03.30-16.50.59:318][507]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Animations/Kneeling]
+[2026.03.30-16.50.59:327][507]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Animations/Kneeling
+[2026.03.30-16.50.59:329][507]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Kneeling1E5607FE4B717A3887F6DF8854B1FCE1.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Animations/Kneeling.uasset'
+[2026.03.30-16.50.59:330][507]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe] ([1] browsable assets)...
+[2026.03.30-16.50.59:344][507]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe.Left_Strafe]
+[2026.03.30-16.50.59:344][507]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe]
+[2026.03.30-16.50.59:359][507]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe
+[2026.03.30-16.50.59:359][507]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Left_Strafe69C752CF43A500BC45A9D8959B3DA5C1.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Animations/Left_Strafe.uasset'
+[2026.03.30-16.50.59:361][507]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe] ([1] browsable assets)...
+[2026.03.30-16.50.59:376][507]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe.Right_Strafe]
+[2026.03.30-16.50.59:376][507]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe]
+[2026.03.30-16.50.59:384][507]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe
+[2026.03.30-16.50.59:384][507]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Right_StrafeD9798A98425BB7D96F5882A32BC96EB4.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Animations/Right_Strafe.uasset'
+[2026.03.30-16.50.59:386][507]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Animations/Running] ([1] browsable assets)...
+[2026.03.30-16.50.59:400][507]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Running.Running]
+[2026.03.30-16.50.59:400][507]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Animations/Running]
+[2026.03.30-16.50.59:409][507]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Animations/Running
+[2026.03.30-16.50.59:409][507]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Running205081FB43A9C70269878BB91F777446.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Animations/Running.uasset'
+[2026.03.30-16.50.59:411][507]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Animations/Standing_Idle] ([1] browsable assets)...
+[2026.03.30-16.50.59:426][507]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Standing_Idle.Standing_Idle]
+[2026.03.30-16.50.59:426][507]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Animations/Standing_Idle]
+[2026.03.30-16.50.59:436][507]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Animations/Standing_Idle
+[2026.03.30-16.50.59:436][507]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Standing_Idle5220A96B4D0F8B2DA8D82F9C869D2CD1.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Animations/Standing_Idle.uasset'
+[2026.03.30-16.50.59:437][507]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Hostage/Animations/Standing] ([1] browsable assets)...
+[2026.03.30-16.50.59:453][507]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Standing.Standing]
+[2026.03.30-16.50.59:453][507]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Hostage/Animations/Standing]
+[2026.03.30-16.50.59:464][507]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Hostage/Animations/Standing
+[2026.03.30-16.50.59:464][507]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Standing517B86FF4E84D8C1804D87B3E153CE09.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Hostage/Animations/Standing.uasset'
+[2026.03.30-16.50.59:481][507]LogFileHelpers: InternalPromptForCheckoutAndSave took 275.994 ms (total: 4.89 sec)
+[2026.03.30-16.50.59:547][507]LogContentValidation: Display: Starting to validate 7 assets
+[2026.03.30-16.50.59:547][507]LogContentValidation: Enabled validators:
+[2026.03.30-16.50.59:547][507]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-16.50.59:547][507]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-16.50.59:548][507]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-16.50.59:548][507]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-16.50.59:548][507]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-16.50.59:548][507]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-16.50.59:548][507]AssetCheck: /Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front Validating asset
+[2026.03.30-16.50.59:548][507]AssetCheck: /Game/ModelsAndAnimations/Hostage/Animations/Kneeling Validating asset
+[2026.03.30-16.50.59:548][507]AssetCheck: /Game/ModelsAndAnimations/Hostage/Animations/Left_Strafe Validating asset
+[2026.03.30-16.50.59:548][507]AssetCheck: /Game/ModelsAndAnimations/Hostage/Animations/Right_Strafe Validating asset
+[2026.03.30-16.50.59:548][507]AssetCheck: /Game/ModelsAndAnimations/Hostage/Animations/Running Validating asset
+[2026.03.30-16.50.59:548][507]AssetCheck: /Game/ModelsAndAnimations/Hostage/Animations/Standing_Idle Validating asset
+[2026.03.30-16.50.59:548][507]AssetCheck: /Game/ModelsAndAnimations/Hostage/Animations/Standing Validating asset
+[2026.03.30-16.51.01:040][536]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Kneeling.Kneeling
+[2026.03.30-16.51.01:085][536]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_12
+[2026.03.30-16.51.01:086][536]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_12'.
+[2026.03.30-16.51.01:130][536]LogStreaming: Display: FlushAsyncLoading(492): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.51.01:152][536]LogStaticMesh: Display: Building static mesh Sphere_inversenormals (Required Memory Estimate: 1.522745 MB)...
+[2026.03.30-16.51.01:176][536]LogStaticMesh: Built static mesh [0.02s] /Engine/EditorMeshes/AssetViewer/Sphere_inversenormals.Sphere_inversenormals
+[2026.03.30-16.51.01:269][536]LogStaticMesh: Display: Building static mesh Floor_Mesh (Required Memory Estimate: 0.022237 MB)...
+[2026.03.30-16.51.01:270][536]LogStaticMesh: Built static mesh [0.00s] /Engine/EditorMeshes/AssetViewer/Floor_Mesh.Floor_Mesh
+[2026.03.30-16.51.01:274][536]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_12:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-16.51.02:037][536]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_13
+[2026.03.30-16.51.02:040][536]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_13'.
+[2026.03.30-16.51.02:587][536]LogSlate: Took 0.013052 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2026.03.30-16.51.02:619][536]LogUObjectGlobals: Warning: Failed to find object 'Class /Script/ApexDestruction.DestructibleMesh'
+[2026.03.30-16.51.02:632][536]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_14
+[2026.03.30-16.51.02:633][536]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_14'.
+[2026.03.30-16.51.02:698][536]LogMeshUtilities: Finished distance field build in 1.4s - 126x126x21 sparse distance field, 0.5Mb total, 0.0Mb always loaded, 80% occupied, 3 triangles, Floor_Mesh
+[2026.03.30-16.51.10:257][617]LogSlate: Window 'Kneeling' being destroyed
+[2026.03.30-16.51.10:295][617]LogSlate: Window 'Kneeling' being destroyed
+[2026.03.30-16.51.10:325][617]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.10:325][617]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.10:335][617]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.10:335][617]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.10:394][617]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.10:394][617]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.10:442][617]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2026.03.30-16.51.11:515][637]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Death_From_The_Front.Death_From_The_Front
+[2026.03.30-16.51.11:516][637]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_15
+[2026.03.30-16.51.11:517][637]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_15'.
+[2026.03.30-16.51.11:567][637]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_15:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-16.51.12:068][637]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_16
+[2026.03.30-16.51.12:068][637]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_16'.
+[2026.03.30-16.51.12:445][637]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_17
+[2026.03.30-16.51.12:446][637]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_17'.
+[2026.03.30-16.51.20:879][742]LogSlate: Window 'Death_From_The_Front' being destroyed
+[2026.03.30-16.51.20:923][742]LogSlate: Window 'Death_From_The_Front' being destroyed
+[2026.03.30-16.51.20:954][742]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.20:954][742]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.20:961][742]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.20:961][742]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.21:027][742]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.21:027][742]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.21:067][742]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2026.03.30-16.51.25:390][819]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Hostage/Animations/Standing.Standing
+[2026.03.30-16.51.25:391][819]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_18
+[2026.03.30-16.51.25:392][819]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_18'.
+[2026.03.30-16.51.25:414][819]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_18:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-16.51.25:904][819]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_19
+[2026.03.30-16.51.25:905][819]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_19'.
+[2026.03.30-16.51.26:270][819]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2026.03.30-16.51.26:271][819]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_20'.
+[2026.03.30-16.51.31:551][881]LogSlate: Window 'Standing' being destroyed
+[2026.03.30-16.51.31:593][881]LogSlate: Window 'Standing' being destroyed
+[2026.03.30-16.51.31:626][881]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.31:626][881]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.31:638][881]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.31:638][881]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.31:699][881]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.51.31:699][881]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.51.31:742][881]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
