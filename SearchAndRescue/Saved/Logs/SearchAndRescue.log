@@ -3121,3 +3121,186 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Strafe Validating asset
 [2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards Validating asset
 [2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run Validating asset
+[2026.03.30-17.17.03:485][806]LogSlate: Window 'Pick Skeleton' being destroyed
+[2026.03.30-17.17.03:501][806]LogContentBrowser: Deferred new asset file creation: NewBlendSpace
+[2026.03.30-17.17.03:506][806]LogContentBrowser: Creating deferred item: NewBlendSpace
+[2026.03.30-17.17.03:534][808]LogContentBrowser: Renaming the item being created (Deferred Item: NewBlendSpace).
+[2026.03.30-17.17.08:200][918]LogContentBrowser: Attempting asset rename: NewBlendSpace -> BS_Enemy
+[2026.03.30-17.17.08:202][918]LogContentBrowser: End creating deferred item NewBlendSpace
+[2026.03.30-17.17.09:757][952]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy.BS_Enemy
+[2026.03.30-17.17.09:757][952]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_60
+[2026.03.30-17.17.09:759][952]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_60'.
+[2026.03.30-17.17.09:826][952]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_60:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.17.10:360][952]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_61
+[2026.03.30-17.17.10:360][952]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_61'.
+[2026.03.30-17.21.46:591][249]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-17.21.46:692][249]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy] ([1] browsable assets)...
+[2026.03.30-17.21.46:724][249]OBJ SavePackage:     Rendered thumbnail for [BlendSpace /Game/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy.BS_Enemy]
+[2026.03.30-17.21.46:724][249]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy]
+[2026.03.30-17.21.46:729][249]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy
+[2026.03.30-17.21.46:729][249]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BS_Enemy6367C0CB44E8A7961DB6B0AEC42DE4CC.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy.uasset'
+[2026.03.30-17.21.46:763][249]LogFileHelpers: InternalPromptForCheckoutAndSave took 172.461 ms (total: 8.44 sec)
+[2026.03.30-17.21.46:821][249]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-17.21.46:822][249]LogContentValidation: Enabled validators:
+[2026.03.30-17.21.46:822][249]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-17.21.46:822][249]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-17.21.46:822][249]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-17.21.46:822][249]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-17.21.46:822][249]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-17.21.46:822][249]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-17.21.46:822][249]AssetCheck: /Game/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy Validating asset
+[2026.03.30-17.21.49:145][276]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2026.03.30-17.22.20:152][867]LogContentBrowser: Attempting asset rename: BlendSpace -> BlendSpace
+[2026.03.30-17.22.38:814][260]LogContentBrowser: Attempting asset rename: BlendSpace -> BlendSpaceAndABP
+[2026.03.30-17.22.39:057][260]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-17.22.39:058][260]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/BS_Enemy] ([1] browsable assets)...
+[2026.03.30-17.22.39:058][260]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/BS_Enemy]
+[2026.03.30-17.22.39:062][260]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/BS_Enemy
+[2026.03.30-17.22.39:062][260]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BS_Enemy718F8043468703D5A59216A1B3B0CE64.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/BlendSpaceAndABP/BS_Enemy.uasset'
+[2026.03.30-17.22.39:074][260]LogFileHelpers: InternalPromptForCheckoutAndSave took 16.266 ms (total: 8.46 sec)
+[2026.03.30-17.22.39:113][260]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2026.03.30-17.22.39:132][260]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2026.03.30-17.22.39:149][260]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2026.03.30-17.22.39:243][260]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-17.22.39:243][260]LogContentValidation: Enabled validators:
+[2026.03.30-17.22.39:243][260]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-17.22.39:243][260]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-17.22.39:243][260]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-17.22.39:243][260]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-17.22.39:243][260]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-17.22.39:243][260]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-17.22.39:243][260]AssetCheck: /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/BS_Enemy Validating asset
+[2026.03.30-17.22.41:156][298]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2522.675049
+[2026.03.30-17.22.41:491][305]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-17.22.41:491][305]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2522.952881, Update Interval: 304.024780
+[2026.03.30-17.22.55:523][466]LogSlate: Window 'Create Animation Blueprint' being destroyed
+[2026.03.30-17.22.55:540][466]LogContentBrowser: Deferred new asset file creation: NewAnimBlueprint
+[2026.03.30-17.22.55:545][466]LogContentBrowser: Creating deferred item: NewAnimBlueprint
+[2026.03.30-17.22.55:557][467]LogContentBrowser: Renaming the item being created (Deferred Item: NewAnimBlueprint).
+[2026.03.30-17.23.01:080][584]LogContentBrowser: Attempting asset rename: NewAnimBlueprint -> ABP_Enemy
+[2026.03.30-17.23.01:110][584]LogContentBrowser: End creating deferred item NewAnimBlueprint
+[2026.03.30-17.23.01:134][584]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_62
+[2026.03.30-17.23.01:134][584]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_62'.
+[2026.03.30-17.23.02:521][608]LogAssetEditorSubsystem: Opening Asset editor for AnimBlueprint /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy
+[2026.03.30-17.23.02:521][608]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_63
+[2026.03.30-17.23.02:522][608]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_63'.
+[2026.03.30-17.23.02:586][608]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_64
+[2026.03.30-17.23.02:587][608]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_64'.
+[2026.03.30-17.23.02:593][608]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.23.02:731][608]LogStreaming: Display: FlushAsyncLoading(533): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.23.03:880][608]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_65
+[2026.03.30-17.23.03:881][608]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_65'.
+[2026.03.30-17.23.04:162][608]LogSlate: Took 0.000281 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2026.03.30-17.23.25:716][757]LogSlate: Took 0.011177 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensedItalic.ttf' (160K)
+[2026.03.30-17.23.49:951][107]LogUObjectHash: Compacting FUObjectHashTables data took   1.86ms
+[2026.03.30-17.24.29:463][673]LogUObjectHash: Compacting FUObjectHashTables data took   1.61ms
+[2026.03.30-17.25.06:313][936]LogStreaming: Display: FlushAsyncLoading(721): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.25.16:215][ 70]LogUObjectHash: Compacting FUObjectHashTables data took   2.01ms
+[2026.03.30-17.25.16:218][ 70]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/FirstPersonMap' took 0.034
+[2026.03.30-17.25.16:221][ 70]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy] ([2] browsable assets)...
+[2026.03.30-17.25.16:257][ 70]OBJ SavePackage:     Rendered thumbnail for [AnimBlueprint /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy]
+[2026.03.30-17.25.16:257][ 70]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy]
+[2026.03.30-17.25.16:303][ 70]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy_Auto2
+[2026.03.30-17.25.16:303][ 70]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/ABP_Enemy_Auto2C01F15714AA7912E2D9211AB38CE22BA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy_Auto2.uasset'
+[2026.03.30-17.25.16:304][ 70]LogFileHelpers: Auto-saving content packages took 0.085
+[2026.03.30-17.25.25:521][197]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2026.03.30-17.25.25:541][197]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_45
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.25:541][197]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_45
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.25:541][197]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_45
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.25:542][197]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.25:542][197]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.25:542][197]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.25:679][198]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_46
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.25:679][198]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_46
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.25:679][198]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_46
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.25:680][198]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.25:680][198]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.25:680][198]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.25:702][199]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.25:702][199]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.25:702][199]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.25:720][200]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.25:721][200]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.25:721][200]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.25:768][201]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.25:768][201]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.25:768][201]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.25:831][202]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_64:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0.ABP_Enemy_C_0
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.26:641][212]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-17.25.26:745][212]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy] ([2] browsable assets)...
+[2026.03.30-17.25.26:746][212]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_47
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.26:746][212]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_47
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.26:746][212]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_47
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
+[2026.03.30-17.25.26:781][212]OBJ SavePackage:     Rendered thumbnail for [AnimBlueprint /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy]
+[2026.03.30-17.25.26:781][212]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy]
+[2026.03.30-17.25.26:824][212]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy
+[2026.03.30-17.25.26:824][212]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/ABP_EnemyEF53E161499E3B790B2B5DBA358A668F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.uasset'
+[2026.03.30-17.25.26:872][212]LogFileHelpers: InternalPromptForCheckoutAndSave took 232.057 ms (total: 8.69 sec)
+[2026.03.30-17.25.26:938][212]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-17.25.26:938][212]LogContentValidation: Enabled validators:
+[2026.03.30-17.25.26:938][212]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-17.25.26:938][212]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-17.25.26:938][212]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-17.25.26:938][212]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-17.25.26:938][212]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-17.25.26:938][212]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-17.25.26:938][212]AssetCheck: /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy Validating asset
+[2026.03.30-17.25.26:984][213]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_48
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0040
+[2026.03.30-17.25.26:984][213]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_48
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:00D0
+[2026.03.30-17.25.26:984][213]LogScript: Warning: Accessed None trying to read property CallFunc_TryGetPawnOwner_ReturnValue
+	ABP_Enemy_C /Engine/Transient.World_62:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Enemy_C_48
+	Function /Game/ModelsAndAnimations/Enemy/BlendSpaceAndABP/ABP_Enemy.ABP_Enemy_C:ExecuteUbergraph_ABP_Enemy:0102
