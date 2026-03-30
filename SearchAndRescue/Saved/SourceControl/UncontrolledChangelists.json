@@ -7,6 +7,10 @@
 			"files": [
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/MySplineController.uasset",
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineController.uasset",
+				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/CE/1QXNREW2XQ4X039UMG71M6.uasset",
+				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset",
+				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineMovementActor.uasset",
+				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/TN/EKFB8RJYXUZ0EZDXT5DA0Z.uasset",
 				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/StarterContent/Architecture/Floor_400x400.uasset"
 			]
 		}

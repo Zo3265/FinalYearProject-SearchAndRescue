@@ -1574,3 +1574,423 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.30-12.25.25:386][498]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
 [2026.03.30-12.25.25:402][498]LogUObjectHash: Compacting FUObjectHashTables data took   3.20ms
 [2026.03.30-12.25.25:538][499]LogPlayLevel: Display: Destroying online subsystem :Context_3
+[2026.03.30-12.26.26:981][833]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.03.30-12.26.26:997][833]LogContentBrowser: Creating deferred item: NewFolder
+[2026.03.30-12.26.27:026][834]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.03.30-12.26.32:001][916]LogContentBrowser: Attempting asset rename: NewFolder -> BTAI
+[2026.03.30-12.26.32:002][916]LogContentBrowser: End creating deferred item NewFolder
+[2026.03.30-12.27.05:963][278]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.03.30-12.27.11:305][356]LogUObjectHash: Compacting FUObjectHashTables data took   2.06ms
+[2026.03.30-12.27.11:314][356]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-12.27.11:384][356]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/CE/1QXNREW2XQ4X039UMG71M6
+[2026.03.30-12.27.11:384][356]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/1QXNREW2XQ4X039UMG71M67DD26FB947926F90020078B229234C29.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/CE/1QXNREW2XQ4X039UMG71M6.uasset'
+[2026.03.30-12.27.11:416][356]LogFileHelpers: InternalPromptForCheckoutAndSave took 101.157 ms (total: 226.072 ms)
+[2026.03.30-12.27.11:493][356]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-12.27.11:493][356]LogContentValidation: Enabled validators:
+[2026.03.30-12.27.11:493][356]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-12.27.11:493][356]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-12.27.11:493][356]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-12.27.11:493][356]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-12.27.11:493][356]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-12.27.11:493][356]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-12.27.11:495][356]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
+[2026.03.30-12.27.57:694][137]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 361.053436
+[2026.03.30-12.27.57:946][142]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-12.27.57:947][143]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 361.261322, Update Interval: 318.576630
+[2026.03.30-12.28.16:994][470]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.03.30-12.28.17:108][470]Using bundled DotNet SDK version: 8.0.300
+[2026.03.30-12.28.17:108][470]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.03.30-12.28.18:324][470]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.03.30-12.28.18:926][470]
+[2026.03.30-12.28.18:926][470]Generating VisualStudio2022 project files:
+[2026.03.30-12.28.18:926][470]Discovering modules, targets and source code for project...
+[2026.03.30-12.28.19:731][470]Available x64 toolchains (3):
+[2026.03.30-12.28.19:731][470] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.03.30-12.28.19:731][470]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.03.30-12.28.19:731][470] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.03.30-12.28.19:731][470]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.03.30-12.28.19:731][470] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.03.30-12.28.19:731][470]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.03.30-12.28.19:731][470]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.03.30-12.28.27:476][470]Binding IntelliSense data...
+[2026.03.30-12.28.53:469][470]Binding IntelliSense data... 50%
+[2026.03.30-12.28.53:469][470]Binding IntelliSense data... 100%
+[2026.03.30-12.28.53:469][470]Writing project files...
+[2026.03.30-12.28.58:118][470]Writing project files... 100%
+[2026.03.30-12.28.58:119][470]
+[2026.03.30-12.28.58:119][470]Generating QueryTargets data for editor...
+[2026.03.30-12.28.58:119][470]Total execution time: 40.88 seconds
+[2026.03.30-12.28.58:544][470]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-12.28.58:772][470]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.03.30-12.29.36:908][585]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.03.30-12.29.36:908][585]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.03.30-12.33.20:613][256]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 683.972168
+[2026.03.30-12.33.21:611][259]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-12.33.21:611][259]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 684.636963, Update Interval: 329.546814
+[2026.03.30-12.33.37:479][399]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-12.33.59:521][793]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_1.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_1.exp
+[2026.03.30-12.33.59:941][795]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.03.30-12.33.59:944][795]LogClass: Could not find existing class EnemyBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.03.30-12.34.00:263][795]LogUObjectHash: Compacting FUObjectHashTables data took   1.70ms
+[2026.03.30-12.34.00:991][796]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 1 class unchanged
+[2026.03.30-12.34.00:991][796]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.03.30-12.34.06:692][878]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.03.30-12.34.27:671][240]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase
+[2026.03.30-12.34.27:672][240]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_2
+[2026.03.30-12.34.27:674][240]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_2'.
+[2026.03.30-12.34.27:968][240]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.03.30-12.35.16:177][642]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
+[2026.03.30-12.35.16:178][642]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/FirstPersonMap' took 0.106
+[2026.03.30-12.35.16:180][642]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_EnemyBase] ([2] browsable assets)...
+[2026.03.30-12.35.16:180][642]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemyBase]
+[2026.03.30-12.35.16:183][642]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.35.16:183][642]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.35.16:184][642]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/AI/BP_EnemyBase_Auto1
+[2026.03.30-12.35.16:184][642]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBase_Auto12EC06AD041FCE0F2D56461A9C6D7D6F7.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/AI/BP_EnemyBase_Auto1.uasset'
+[2026.03.30-12.35.16:185][642]LogFileHelpers: Auto-saving content packages took 0.007
+[2026.03.30-12.35.52:593][765]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-12.35.58:645][853]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.03.30-12.35.58:646][853]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.03.30-12.36.13:776][971]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-12.36.28:873][151]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.exp
+[2026.03.30-12.36.29:242][151]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.03.30-12.36.29:242][151]LogClass: UClass EnemyBase Reload.
+[2026.03.30-12.36.29:242][151]LogClass: Could not find existing class EnemyBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.03.30-12.36.29:263][151]Re-instancing EnemyBase after reload.
+[2026.03.30-12.36.29:758][151]LogUObjectHash: Compacting FUObjectHashTables data took   2.73ms
+[2026.03.30-12.36.30:484][152]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 1 class unchanged
+[2026.03.30-12.36.30:484][152]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.03.30-12.36.40:473][304]LogSceneOutliner: Outliner Column Item Label does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.36.40:474][304]LogSceneOutliner: Outliner Column Type does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.36.46:141][383]LogProperty: Warning: Illegal TEXT reference to a private object in external package (BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D4CC02_1178481233) from referencer (BP_EnemyBase_C /Game/AI/BP_EnemyBase.Default__BP_EnemyBase_C).  Import failed...
+[2026.03.30-12.36.49:445][432]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-12.36.49:445][432]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-12.36.49:446][432]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_0
+[2026.03.30-12.36.49:448][432]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_0
+[2026.03.30-12.36.50:412][446]LogUObjectHash: Compacting FUObjectHashTables data took   2.16ms
+[2026.03.30-12.36.50:420][446]LogEditorActor: Deleted 0 Actors (0.113 secs)
+[2026.03.30-12.36.50:427][446]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-12.36.50:427][446]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-12.36.50:435][446]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D4CC02_1869530234
+[2026.03.30-12.36.50:435][446]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D4CC02_1869530234
+[2026.03.30-12.37.20:740][973]LogSceneOutliner: Outliner Column Item Label does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.37.20:741][973]LogSceneOutliner: Outliner Column Type does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.37.22:487][996]LogProperty: Warning: Illegal TEXT reference to a private object in external package (BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D4CC02_1178481233) from referencer (BP_EnemyBase_C /Game/AI/BP_EnemyBase.Default__BP_EnemyBase_C).  Import failed...
+[2026.03.30-12.37.24:491][ 21]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2026.03.30-12.37.26:009][ 39]LogSceneOutliner: Outliner Column Item Label does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.37.26:010][ 39]LogSceneOutliner: Outliner Column Type does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.37.27:130][ 53]LogProperty: Warning: Illegal TEXT reference to a private object in external package (BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D4CC02_1178481233) from referencer (BP_EnemyBase_C /Game/AI/BP_EnemyBase.Default__BP_EnemyBase_C).  Import failed...
+[2026.03.30-12.37.30:730][102]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2026.03.30-12.37.55:474][279]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-12.38.17:475][653]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_3.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_3.exp
+[2026.03.30-12.38.17:877][655]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.03.30-12.38.17:877][655]LogClass: UClass EnemyBase Reload.
+[2026.03.30-12.38.17:877][655]LogClass: Could not find existing class EnemyBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.03.30-12.38.17:902][655]Re-instancing EnemyBase after reload.
+[2026.03.30-12.38.18:409][655]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
+[2026.03.30-12.38.19:271][656]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 1 class unchanged
+[2026.03.30-12.38.19:271][656]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.03.30-12.38.26:417][776]LogSceneOutliner: Outliner Column Item Label does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.38.26:417][776]LogSceneOutliner: Outliner Column Type does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.38.30:408][844]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.03.30-12.38.30:421][844]LogContentBundle: [FirstPersonMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.03.30-12.38.30:421][844]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' started...
+[2026.03.30-12.38.30:429][844]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' took 8.415 ms (total: 19.794 ms)
+[2026.03.30-12.38.30:436][844]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.03.30-12.38.30:436][844]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-12.38.30:449][844]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012001s)
+[2026.03.30-12.38.30:449][844]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap to /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap (0.012092s)
+[2026.03.30-12.38.30:575][844]LogUObjectHash: Compacting FUObjectHashTables data took   2.72ms
+[2026.03.30-12.38.30:577][844]LogChaosDD: Creating Chaos Debug Draw Scene for world FirstPersonMap
+[2026.03.30-12.38.30:581][844]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap'.
+[2026.03.30-12.38.30:581][844]LogWorldPartition: ULevel::OnLevelLoaded(FirstPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.03.30-12.38.30:581][844]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.03.30-12.38.30:581][844]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.03.30-12.38.30:581][844]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.03.30-12.38.30:585][844]LogWorldPartition: Display: WorldPartition initialize took 3.043 ms (total: 275.686 ms)
+[2026.03.30-12.38.30:585][844]LogPlayLevel: PIE: World Init took: (0.005938s)
+[2026.03.30-12.38.30:585][844]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2026.03.30-12.38.30:586][844]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.03.30-12.38.30:586][844]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.03.30-12.38.30:586][844]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.03.30-12.38.30:586][844]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.03.30-12.38.30:586][844]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.03.30-12.38.30:586][844]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.03.30-12.38.30:586][844]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.03.30-12.38.30:586][844]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.03.30-12.38.30:586][844]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.03.30-12.38.30:586][844]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.03.30-12.38.30:586][844]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.03.30-12.38.30:591][844]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.03.30-12.38.30:626][844]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.03.30-12.38.30:627][844]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.03.30-12.38.30:627][844]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.03.30-12.38.30:627][844]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.03.30-12.38.30:627][844]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2026.03.30-12.38.30:628][844]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2026.03.30-12.38.30:631][844]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2026.03.30-12.38.30:632][844]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2026.03.30-12.38.30:632][844]LogInit: FAudioDevice initialized with ID 3.
+[2026.03.30-12.38.30:632][844]LogAudio: Display: Audio Device (ID: 3) registered with world 'FirstPersonMap'.
+[2026.03.30-12.38.30:632][844]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2026.03.30-12.38.30:636][844]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.03.30-12.38.30:640][844]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap up for play (max tick rate 60) at 2026.03.30-13.38.30
+[2026.03.30-12.38.30:650][844]LogWorld: Bringing up level for play took: 0.013641
+[2026.03.30-12.38.30:655][844]LogOnline: OSS: Created online subsystem instance for: :Context_5
+[2026.03.30-12.38.30:663][844]PIE: Server logged in
+[2026.03.30-12.38.30:664][844]PIE: Play in editor total start time 0.244 seconds.
+[2026.03.30-12.38.32:377][875]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-12.38.32:377][875]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.03.30-12.38.32:380][875]LogWorld: UWorld::CleanupWorld for FirstPersonMap, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-12.38.32:380][875]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-12.38.32:381][875]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap
+[2026.03.30-12.38.32:414][875]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.03.30-12.38.32:422][875]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-12.38.32:455][875]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.03.30-12.38.32:463][875]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2026.03.30-12.38.32:463][875]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.03.30-12.38.32:468][875]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.03.30-12.38.32:477][875]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.03.30-12.38.32:498][875]LogUObjectHash: Compacting FUObjectHashTables data took   3.43ms
+[2026.03.30-12.38.32:700][876]LogPlayLevel: Display: Destroying online subsystem :Context_5
+[2026.03.30-12.38.35:131][912]LogSceneOutliner: Outliner Column Item Label does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.38.35:131][912]LogSceneOutliner: Outliner Column Type does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.03.30-12.38.36:324][970]LogProperty: Warning: Illegal TEXT reference to a private object in external package (BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D4CC02_1178481233) from referencer (BP_EnemyBase_C /Game/AI/BP_EnemyBase.Default__BP_EnemyBase_C).  Import failed...
+[2026.03.30-12.38.38:454][997]LogUObjectHash: Compacting FUObjectHashTables data took   1.19ms
+[2026.03.30-12.38.39:099][  2]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-12.38.39:161][  2]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_EnemyBase] ([2] browsable assets)...
+[2026.03.30-12.38.39:161][  2]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemyBase]
+[2026.03.30-12.38.39:161][  2]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_EnemyBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset" SILENT=true
+[2026.03.30-12.38.39:165][  2]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.38.39:165][  2]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.38.39:166][  2]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemyBase
+[2026.03.30-12.38.39:166][  2]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseE3A941EE4442D12CA9BB17BE94968C22.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset'
+[2026.03.30-12.38.39:190][  2]LogFileHelpers: InternalPromptForCheckoutAndSave took 91.582 ms (total: 317.654 ms)
+[2026.03.30-12.38.39:247][  2]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-12.38.39:247][  2]LogContentValidation: Enabled validators:
+[2026.03.30-12.38.39:247][  2]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-12.38.39:247][  2]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-12.38.39:247][  2]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-12.38.39:247][  2]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-12.38.39:247][  2]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-12.38.39:247][  2]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-12.38.39:247][  2]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.03.30-12.38.47:581][148]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_3
+[2026.03.30-12.38.47:581][148]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_3'.
+[2026.03.30-12.38.47:739][149]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_4
+[2026.03.30-12.38.47:740][149]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_4'.
+[2026.03.30-12.38.52:696][232]Cmd: DELETE
+[2026.03.30-12.38.52:696][232]Cmd: ACTOR DELETE
+[2026.03.30-12.38.52:700][232]LogEditorActor: Deleted Actor: BP_EnemyBase_C
+[2026.03.30-12.38.52:740][232]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2026.03.30-12.38.52:751][232]LogEditorActor: Deleted 1 Actors (0.054 secs)
+[2026.03.30-12.38.57:995][317]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1021.354065
+[2026.03.30-12.38.58:291][322]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-12.38.58:291][323]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1021.580261, Update Interval: 325.424957
+[2026.03.30-12.39.15:283][ 51]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_5
+[2026.03.30-12.39.15:284][ 51]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_5'.
+[2026.03.30-12.39.21:814][143]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2026.03.30-12.39.31:071][281]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-12.39.31:209][281]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2026.03.30-12.39.31:242][281]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2026.03.30-12.39.31:269][281]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2026.03.30-12.39.31:287][281]LogFileHelpers: InternalPromptForCheckoutAndSave took 216.944 ms (total: 534.598 ms)
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: ================================================
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Total job queries 152, among them cache hits 11 (7.24%), DDC hits 136 (89.47%), Duplicates 4 (2.63%)
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Tracking 137 distinct input hashes that result in 130 distinct outputs (94.89%)
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: RAM used: 107.41 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Shaders Compiled: 1
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Jobs assigned 1, completed 1 (100%)
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Time job spent in pending queue: average 0.10 s, longest 0.10 s
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Job execution time: average 2.96 s, max 2.96 s
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Job life time (pending + execution): average 3.06 s, max 3.06
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Shader code size: average 5.004 KiB, min 5.004 KiB, max 5.004 KiB
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 3.06 s
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Jobs were issued in 1 batches (only local compilation was used), average 1.00 jobs/batch
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Average processing rate: 0.33 jobs/sec
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Total thread time: 1.125 s
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Total thread preprocess time: 26.897 s
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Percentage time preprocessing: 2390.66%
+[2026.03.30-12.40.08:430][437]LogShaderCompilers: Display: Effective parallelization: 0.37 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    1 times, average 1.13 sec, max 1.13 sec, min 1.13 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:                    TVoxelizeVolumePS<VMode_Primitive_Sphere> (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:                  TShadowDepthVSVertexShadowDepth_OutputDepth (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:         TShadowDepthPSPixelShadowDepth_NonPerspectiveCorrect (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:            TShadowDepthVSVertexShadowDepth_OnePassPointLight (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 100.00% of total time (compiled    1 times, average 1.13 sec, max 1.13 sec, min 1.13 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:                  TShadowDepthVSVertexShadowDepth_OutputDepth - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:         TShadowDepthPSPixelShadowDepth_NonPerspectiveCorrect - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:                    TVoxelizeVolumePS<VMode_Primitive_Sphere> - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display:            TShadowDepthVSVertexShadowDepth_OnePassPointLight - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: === Material stats ===
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Materials Translated:    133
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Material Total Translate Time: 0.16 s
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Material Translation Only: 0.08 s (51%)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (2%)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: Material Cache Hits: 28 (21%)
+[2026.03.30-12.40.08:431][437]LogShaderCompilers: Display: ================================================
+[2026.03.30-12.40.55:337][615]LogUObjectHash: Compacting FUObjectHashTables data took   1.76ms
+[2026.03.30-12.40.56:764][635]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-12.40.56:828][635]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_EnemyBase] ([2] browsable assets)...
+[2026.03.30-12.40.56:828][635]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemyBase]
+[2026.03.30-12.40.56:828][635]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_EnemyBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset" SILENT=true
+[2026.03.30-12.40.56:833][635]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.40.56:833][635]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.40.56:835][635]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemyBase
+[2026.03.30-12.40.56:836][635]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseF216E84749B2EF31324B51AF1F6D6752.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset'
+[2026.03.30-12.40.56:857][635]LogFileHelpers: InternalPromptForCheckoutAndSave took 93.223 ms (total: 627.821 ms)
+[2026.03.30-12.40.56:925][635]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-12.40.56:925][635]LogContentValidation: Enabled validators:
+[2026.03.30-12.40.56:925][635]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-12.40.56:925][635]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-12.40.56:925][635]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-12.40.56:925][635]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-12.40.56:925][635]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-12.40.56:925][635]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-12.40.56:925][635]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.03.30-12.42.08:922][590]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.03.30-12.42.09:027][590]Using bundled DotNet SDK version: 8.0.300
+[2026.03.30-12.42.09:027][590]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.03.30-12.42.09:731][590]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.03.30-12.42.10:133][590]
+[2026.03.30-12.42.10:133][590]Generating VisualStudio2022 project files:
+[2026.03.30-12.42.10:133][590]Discovering modules, targets and source code for project...
+[2026.03.30-12.42.10:637][590]Available x64 toolchains (3):
+[2026.03.30-12.42.10:637][590] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.03.30-12.42.10:637][590]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.03.30-12.42.10:637][590] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.03.30-12.42.10:637][590]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.03.30-12.42.10:637][590] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.03.30-12.42.10:637][590]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.03.30-12.42.10:637][590]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.03.30-12.42.15:267][590]Binding IntelliSense data...
+[2026.03.30-12.42.20:598][590]Binding IntelliSense data... 100%
+[2026.03.30-12.42.20:599][590]Writing project files...
+[2026.03.30-12.42.24:628][590]Writing project files... 100%
+[2026.03.30-12.42.24:628][590]
+[2026.03.30-12.42.24:628][590]Generating QueryTargets data for editor...
+[2026.03.30-12.42.24:628][590]Total execution time: 15.52 seconds
+[2026.03.30-12.42.25:039][590]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-12.42.25:237][590]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.03.30-12.42.52:135][ 53]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.03.30-12.42.52:136][ 53]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.03.30-12.43.50:059][531]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-12.44.04:153][747]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_4.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_4.exp
+[2026.03.30-12.44.04:585][749]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.03.30-12.44.04:585][749]LogClass: Could not find existing class SplineMovementActor in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.03.30-12.44.04:918][749]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2026.03.30-12.44.05:753][750]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 2 classes unchanged
+[2026.03.30-12.44.05:753][750]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.03.30-12.44.08:406][820]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.03.30-12.44.17:886][ 37]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_SplineMovementActor.BP_SplineMovementActor
+[2026.03.30-12.44.17:887][ 37]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_6
+[2026.03.30-12.44.17:888][ 37]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_6'.
+[2026.03.30-12.44.18:116][ 37]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.03.30-12.44.27:337][279]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_7
+[2026.03.30-12.44.27:337][279]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_7'.
+[2026.03.30-12.44.30:016][313]LogUObjectHash: Compacting FUObjectHashTables data took   2.66ms
+[2026.03.30-12.44.30:864][326]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-12.44.30:925][326]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/BP_SplineMovementActor] ([2] browsable assets)...
+[2026.03.30-12.44.30:960][326]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/BP_SplineMovementActor.BP_SplineMovementActor]
+[2026.03.30-12.44.30:960][326]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_SplineMovementActor]
+[2026.03.30-12.44.30:970][326]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_SplineMovementActor.BP_SplineMovementActor_C' for saving '/Game/AI/BP_SplineMovementActor.BP_SplineMovementActor_C'
+[2026.03.30-12.44.30:970][326]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_SplineMovementActor.BP_SplineMovementActor_C' for saving '/Game/AI/BP_SplineMovementActor.BP_SplineMovementActor_C'
+[2026.03.30-12.44.30:972][326]LogSavePackage: Moving output files for package: /Game/AI/BP_SplineMovementActor
+[2026.03.30-12.44.30:972][326]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SplineMovementActorDAE89DE2482EA9B8168B258BAF06B8FF.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineMovementActor.uasset'
+[2026.03.30-12.44.30:997][326]LogFileHelpers: InternalPromptForCheckoutAndSave took 132.521 ms (total: 760.342 ms)
+[2026.03.30-12.44.31:063][326]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-12.44.31:063][326]LogContentValidation: Enabled validators:
+[2026.03.30-12.44.31:063][326]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-12.44.31:063][326]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-12.44.31:063][326]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-12.44.31:063][326]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-12.44.31:063][326]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-12.44.31:063][326]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-12.44.31:063][326]AssetCheck: /Game/AI/BP_SplineMovementActor Validating asset
+[2026.03.30-12.44.36:409][546]LogStreaming: Display: FlushAsyncLoading(594): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-12.44.36:410][546]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/BP_EnemyBase.BP_EnemyBase'
+[2026.03.30-12.44.37:867][567]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1361.226685
+[2026.03.30-12.44.38:151][571]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-12.44.38:151][571]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1361.440796, Update Interval: 301.842102
+[2026.03.30-12.44.50:294][762]LogStreaming: Display: FlushAsyncLoading(595): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-12.44.50:294][762]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/BP_EnemyBase.BP_EnemyBase'
+[2026.03.30-12.44.53:016][797]LogUObjectHash: Compacting FUObjectHashTables data took   3.32ms
+[2026.03.30-12.44.53:171][798]LogStreaming: Display: FlushAsyncLoading(596): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-12.44.53:171][798]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/BP_EnemyBase.BP_EnemyBase'
+[2026.03.30-12.45.02:213][217]LogStreaming: Display: FlushAsyncLoading(597): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-12.45.02:214][217]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/BP_EnemyBase.BP_EnemyBase'
+[2026.03.30-12.45.02:214][217]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/BP_EnemyBase.BP_EnemyBase'
+[2026.03.30-12.45.08:868][310]LogUObjectHash: Compacting FUObjectHashTables data took   2.11ms
+[2026.03.30-12.45.09:044][311]LogStreaming: Display: FlushAsyncLoading(599): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-12.45.09:044][311]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/BP_EnemyBase.BP_EnemyBase'
+[2026.03.30-12.45.09:852][323]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-12.45.09:922][323]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_EnemyBase] ([2] browsable assets)...
+[2026.03.30-12.45.09:922][323]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemyBase]
+[2026.03.30-12.45.09:922][323]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_EnemyBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset" SILENT=true
+[2026.03.30-12.45.09:927][323]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.45.09:927][323]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_EnemyBase.BP_EnemyBase_C' for saving '/Game/AI/BP_EnemyBase.BP_EnemyBase_C'
+[2026.03.30-12.45.09:930][323]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemyBase
+[2026.03.30-12.45.09:931][323]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseDECB99B64272714A6B9C90905CD07F9B.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset'
+[2026.03.30-12.45.09:948][323]LogFileHelpers: InternalPromptForCheckoutAndSave took 96.709 ms (total: 857.051 ms)
+[2026.03.30-12.45.10:018][323]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-12.45.10:018][323]LogContentValidation: Enabled validators:
+[2026.03.30-12.45.10:018][323]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-12.45.10:018][323]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-12.45.10:018][323]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-12.45.10:018][323]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-12.45.10:019][323]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-12.45.10:019][323]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-12.45.10:019][323]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.03.30-12.45.25:923][450]LogSlate: Window 'BP_SplineMovementActor' being destroyed
+[2026.03.30-12.45.25:960][450]LogSlate: Window 'BP_SplineMovementActor' being destroyed
+[2026.03.30-12.45.25:969][450]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-12.45.25:969][450]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-12.45.26:037][450]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2026.03.30-12.45.26:037][450]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-12.45.26:037][450]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-12.45.26:135][450]LogUObjectHash: Compacting FUObjectHashTables data took   2.33ms
+[2026.03.30-12.50.04:256][295]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1687.618286
+[2026.03.30-12.50.05:256][298]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-12.50.05:257][298]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1688.284546, Update Interval: 349.383209
+[2026.03.30-12.56.30:317][453]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2073.681641
+[2026.03.30-12.56.31:318][456]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-12.56.31:318][456]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2074.348389, Update Interval: 316.071655
+[2026.03.30-13.00.02:503][107]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.03.30-13.01.04:482][188]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_5.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_5.exp
+[2026.03.30-13.01.05:115][191]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.03.30-13.01.05:115][191]LogClass: UClass EnemyBase Reload.
+[2026.03.30-13.01.05:119][191]LogClass: Could not find existing class EnemyBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.03.30-13.01.05:156][191]Re-instancing EnemyBase after reload.
+[2026.03.30-13.01.05:605][191]LogUObjectHash: Compacting FUObjectHashTables data took   2.80ms
+[2026.03.30-13.01.06:395][192]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 2 classes unchanged
+[2026.03.30-13.01.06:395][192]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.03.30-13.01.14:900][361]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-13.01.14:900][361]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-13.01.14:904][361]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_1
+[2026.03.30-13.01.14:907][361]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_1
+[2026.03.30-13.01.15:581][383]LogUObjectHash: Compacting FUObjectHashTables data took   2.69ms
+[2026.03.30-13.01.15:589][383]LogEditorActor: Deleted 0 Actors (0.132 secs)
+[2026.03.30-13.01.15:598][383]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-13.01.15:598][383]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_EnemyBase.BP_EnemyBase_C
+[2026.03.30-13.01.15:608][383]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D6CC02_1187217587
+[2026.03.30-13.01.15:612][383]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase as actor: BP_EnemyBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D6CC02_1187217587
+[2026.03.30-13.01.19:146][486]LogUObjectHash: Compacting FUObjectHashTables data took   1.98ms
+[2026.03.30-13.01.19:159][486]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-13.01.19:219][486]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/TN/EKFB8RJYXUZ0EZDXT5DA0Z
+[2026.03.30-13.01.19:219][486]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/EKFB8RJYXUZ0EZDXT5DA0Z4464D2984B75362547FB9981240382C9.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/TN/EKFB8RJYXUZ0EZDXT5DA0Z.uasset'
+[2026.03.30-13.01.19:250][486]LogFileHelpers: InternalPromptForCheckoutAndSave took 90.734 ms (total: 947.786 ms)
+[2026.03.30-13.01.19:315][486]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-13.01.19:316][486]LogContentValidation: Enabled validators:
+[2026.03.30-13.01.19:316][486]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-13.01.19:316][486]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-13.01.19:316][486]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-13.01.19:316][486]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-13.01.19:316][486]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-13.01.19:316][486]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-13.01.19:316][486]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset

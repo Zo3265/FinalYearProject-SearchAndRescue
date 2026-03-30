@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.vsconfig" />
+    <None Include="..\..\UpgradeLog.htm" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -50,6 +51,21 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\SplineController.h">
       <Filter>Source\SearchAndRescue\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\SplineMovementActor.cpp">
+      <Filter>Source\SearchAndRescue\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\SplineMovementActor.h">
+      <Filter>Source\SearchAndRescue\AI</Filter>
+    </ClCompile>
+    <Filter Include="Source\SearchAndRescue\AI\BTAI">
+      <UniqueIdentifier>{FC7C085F-C136-31D3-8638-646E6BE83061}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\EnemyBase.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\EnemyBase.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
     </ClCompile>
     <Filter Include="Source\SearchAndRescue\Private">
       <UniqueIdentifier>{AB2CB879-22A7-37FB-BDED-B8BEAF41F410}</UniqueIdentifier>
