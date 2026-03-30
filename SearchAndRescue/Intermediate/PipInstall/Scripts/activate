@@ -35,7 +35,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="G:\Unreal Projects\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\PipInstall"
+VIRTUAL_ENV="C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\PipInstall"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

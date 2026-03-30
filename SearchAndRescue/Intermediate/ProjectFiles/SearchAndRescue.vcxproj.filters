@@ -11,6 +11,7 @@
     <None Include="..\..\Source\SearchAndRescueEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -40,6 +41,15 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\SearchAndRescue.h">
       <Filter>Source\SearchAndRescue</Filter>
+    </ClCompile>
+    <Filter Include="Source\SearchAndRescue\AI">
+      <UniqueIdentifier>{6AD15709-F7EA-3AA0-B4FE-4EE413AA50C6}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\SplineController.cpp">
+      <Filter>Source\SearchAndRescue\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\SplineController.h">
+      <Filter>Source\SearchAndRescue\AI</Filter>
     </ClCompile>
     <Filter Include="Source\SearchAndRescue\Private">
       <UniqueIdentifier>{AB2CB879-22A7-37FB-BDED-B8BEAF41F410}</UniqueIdentifier>
