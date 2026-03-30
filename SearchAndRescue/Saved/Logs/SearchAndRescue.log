@@ -1764,3 +1764,100 @@ LogConfig: CVar [[D3D12.Bindless.SamplerDescriptorHeapSize:2048]] deferred - dum
 [2026.03.30-13.16.03:445][813]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2026.03.30-13.16.03:445][813]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2026.03.30-13.16.03:445][813]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.03.30-13.17.35:811][242]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.17.35:811][242]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.17.35:812][242]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_0
+[2026.03.30-13.17.35:812][242]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_0
+[2026.03.30-13.17.36:461][267]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 338.957306
+[2026.03.30-13.17.36:643][278]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-13.17.36:644][279]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 339.124725, Update Interval: 339.200409
+[2026.03.30-13.17.36:742][282]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2026.03.30-13.17.36:744][282]LogEditorActor: Deleted 0 Actors (0.029 secs)
+[2026.03.30-13.17.36:751][282]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.17.36:751][282]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.17.36:754][282]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D7CC02_1094627760
+[2026.03.30-13.17.36:755][282]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D7CC02_1094627760
+[2026.03.30-13.17.46:835][500]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_SplineController.BP_SplineController
+[2026.03.30-13.17.46:835][500]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_7
+[2026.03.30-13.17.46:837][500]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_7'.
+[2026.03.30-13.17.49:210][531]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-13.17.49:210][531]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-13.17.49:249][531]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_SplineController.BP_SplineController
+[2026.03.30-13.17.49:250][531]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_8
+[2026.03.30-13.17.49:251][531]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_8'.
+[2026.03.30-13.17.49:825][531]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2026.03.30-13.17.53:051][585]LogSlate: Window 'BP_SplineController' being destroyed
+[2026.03.30-13.17.53:070][585]LogSlate: Window 'BP_SplineController' being destroyed
+[2026.03.30-13.17.53:078][585]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-13.17.53:078][585]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-13.17.53:140][585]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2026.03.30-13.17.53:141][585]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-13.17.53:141][585]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-13.17.53:200][585]LogActorComponent: UnregisterComponent: (/Engine/Transient.EditorFloorComp) Not registered. Aborting.
+[2026.03.30-13.17.53:200][585]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-13.17.53:200][585]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-13.17.53:288][585]LogUObjectHash: Compacting FUObjectHashTables data took   1.82ms
+[2026.03.30-13.17.54:548][609]LogUObjectHash: Compacting FUObjectHashTables data took   2.44ms
+[2026.03.30-13.17.55:911][609]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-13.17.56:119][609]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/AI/BP_SplineController.BP_SplineController
+	Asset Type: Blueprint
+[2026.03.30-13.17.56:468][609]LogWorldPartition: Actor /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.EnemyBase_UAID_84144D205DD1D6CC02_1927552583 is unreachable without properly detaching object /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/1/O3/E7IBO2KSR4UWPN3O9ZRMZC.PackageMetaData in its package
+[2026.03.30-13.17.56:471][609]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2026.03.30-13.17.56:534][609]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
+[2026.03.30-13.17.56:558][609]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2026.03.30-13.17.56:588][609]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.03.30-13.17.56:622][609]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2026.03.30-13.18.01:432][698]LogEditor: Attempting to add actor of class 'SplineController' to level at 1150.00,470.00,0.00
+[2026.03.30-13.18.02:127][731]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2026.03.30-13.18.02:130][731]LogEditorActor: Deleted 0 Actors (0.031 secs)
+[2026.03.30-13.18.02:136][731]LogEditor: Attempting to add actor of class 'SplineController' to level at 1180.00,810.00,0.00
+[2026.03.30-13.18.03:149][750]Cmd: DELETE
+[2026.03.30-13.18.03:149][750]Cmd: ACTOR DELETE
+[2026.03.30-13.18.03:154][750]LogEditorActor: Deleted Actor: SplineController
+[2026.03.30-13.18.03:196][750]LogUObjectHash: Compacting FUObjectHashTables data took   1.43ms
+[2026.03.30-13.18.03:199][750]LogEditorActor: Deleted 1 Actors (0.049 secs)
+[2026.03.30-13.18.04:585][775]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.03.30-13.18.17:267][ 97]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_SplineController.BP_SplineController
+[2026.03.30-13.18.17:268][ 97]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_9
+[2026.03.30-13.18.17:268][ 97]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_9'.
+[2026.03.30-13.18.17:515][ 97]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.03.30-13.18.19:723][130]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-13.18.19:825][130]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_SplineController] ([2] browsable assets)...
+[2026.03.30-13.18.19:825][130]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_SplineController]
+[2026.03.30-13.18.19:831][130]LogSavePackage: Moving output files for package: /Game/AI/BP_SplineController
+[2026.03.30-13.18.19:831][130]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SplineController6B1D22FA472C8DC7E700C79382AB5717.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineController.uasset'
+[2026.03.30-13.18.19:857][130]LogFileHelpers: InternalPromptForCheckoutAndSave took 135.043 ms (total: 647.860 ms)
+[2026.03.30-13.18.19:921][130]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-13.18.19:921][130]LogContentValidation: Enabled validators:
+[2026.03.30-13.18.19:921][130]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-13.18.19:921][130]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-13.18.19:921][130]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-13.18.19:921][130]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-13.18.19:921][130]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-13.18.19:922][130]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-13.18.19:922][130]AssetCheck: /Game/AI/BP_SplineController Validating asset
+[2026.03.30-13.18.30:238][283]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.18.30:239][283]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.18.30:239][283]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_0
+[2026.03.30-13.18.30:240][283]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_0
+[2026.03.30-13.18.32:084][368]LogUObjectHash: Compacting FUObjectHashTables data took   2.83ms
+[2026.03.30-13.18.32:086][368]LogEditorActor: Deleted 0 Actors (0.049 secs)
+[2026.03.30-13.18.32:095][368]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.18.32:096][368]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_SplineController.BP_SplineController_C
+[2026.03.30-13.18.32:103][368]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D7CC02_1149972762
+[2026.03.30-13.18.32:103][368]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_SplineController.BP_SplineController as actor: BP_SplineController_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SplineController_C_UAID_84144D205DD1D7CC02_1149972762
+[2026.03.30-13.19.21:889][406]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2026.03.30-13.19.21:896][406]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-13.19.21:966][406]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/E/6H/R4PL6JRGEWLK7JC23PB5UB
+[2026.03.30-13.19.21:966][406]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/R4PL6JRGEWLK7JC23PB5UB02AC085E4FA99C82F2B86C91A4653F41.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/E/6H/R4PL6JRGEWLK7JC23PB5UB.uasset'
+[2026.03.30-13.19.22:001][406]LogFileHelpers: InternalPromptForCheckoutAndSave took 104.184 ms (total: 752.044 ms)
+[2026.03.30-13.19.22:063][406]LogContentValidation: Display: Starting to validate 1 assets
+[2026.03.30-13.19.22:063][406]LogContentValidation: Enabled validators:
+[2026.03.30-13.19.22:063][406]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-13.19.22:063][406]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-13.19.22:063][406]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-13.19.22:063][406]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-13.19.22:063][406]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-13.19.22:063][406]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-13.19.22:063][406]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
