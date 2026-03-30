@@ -2352,3 +2352,310 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.30-16.51.31:699][881]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
 [2026.03.30-16.51.31:699][881]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
 [2026.03.30-16.51.31:742][881]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2026.03.30-16.52.15:636][ 56]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 697.155518
+[2026.03.30-16.52.16:637][ 59]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-16.52.16:637][ 59]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 697.823059, Update Interval: 328.600128
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: ================================================
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Total job queries 236, among them cache hits 44 (18.64%), DDC hits 135 (57.20%), Duplicates 2 (0.85%)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Tracking 190 distinct input hashes that result in 157 distinct outputs (82.63%)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: RAM used: 122.16 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Shaders Compiled: 55
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Jobs assigned 55, completed 55 (100%)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Average time worker was idle: 100.36 s
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Time job spent in pending queue: average 0.28 s, longest 2.76 s
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Job execution time: average 10.88 s, max 26.25 s
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Job life time (pending + execution): average 11.15 s, max 26.44
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Shader code size: average 5.98 KiB, min 612 B, max 15.152 KiB
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 54.28 s
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Jobs were issued in 21 batches (only local compilation was used), average 2.62 jobs/batch
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Average processing rate: 1.01 jobs/sec
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Total thread time: 128.061 s
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Total thread preprocess time: 25.858 s
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Percentage time preprocessing: 20.19%
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Effective parallelization: 2.36 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    8 times, average 2.26 sec, max 4.91 sec, min 1.17 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                                 FDepthOnlyPS (compiled    2 times, average 2.12 sec, max 2.22 sec, min 2.01 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                                  FVelocityPS (compiled    2 times, average 2.01 sec, max 2.17 sec, min 1.86 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                             FDebugViewModePS - 34.09% of total time (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 14.11% of total time (compiled    8 times, average 2.26 sec, max 4.91 sec, min 1.17 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 11.23% of total time (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 8.48% of total time (compiled    7 times, average 1.55 sec, max 2.98 sec, min 0.89 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display:                                             FDebugViewModeVS - 7.53% of total time (compiled    6 times, average 1.61 sec, max 3.64 sec, min 1.04 sec)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: === Material stats ===
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Materials Translated:    142
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Material Total Translate Time: 0.26 s
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Material Translation Only: 0.12 s (44%)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (2%)
+[2026.03.30-16.52.50:217][249]LogShaderCompilers: Display: Material Cache Hits: 31 (22%)
+[2026.03.30-16.52.50:219][249]LogShaderCompilers: Display: ================================================
+[2026.03.30-16.53.25:371][868]LogStreaming: Display: FlushAsyncLoading(497): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.25:419][868]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/PlayerAnimations/Ch35_nonPBR.fbx]
+[2026.03.30-16.53.33:174][868]LogSlate: Window 'Import Content' being destroyed
+[2026.03.30-16.53.33:214][868]LogInterchangeEngine: [Pending] Importing
+[2026.03.30-16.53.33:315][869]LogStreaming: Display: FlushAsyncLoading(498): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.34:134][877]LogStreaming: Display: FlushAsyncLoading(508): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.35:322][898]LogStreaming: Display: FlushAsyncLoading(509): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.35:635][904]LogStreaming: Display: FlushAsyncLoading(511): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.36:482][921]LogStreaming: Display: FlushAsyncLoading(512): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.37:054][933]LogStreaming: Display: FlushAsyncLoading(513): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.37:378][935]LogStreaming: Display: FlushAsyncLoading(515): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.38:186][950]LogStreaming: Display: FlushAsyncLoading(516): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-16.53.38:226][951]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim.Ch35_nonPBR_Anim (Required Memory Estimate: 0.14 MB)
+[2026.03.30-16.53.38:227][951]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim.Ch35_nonPBR_Anim, at AnimationSequence/e947ba9d66cd0175d7d6675dacc04e23d77e5bdc
+[2026.03.30-16.53.38:853][951]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness.Ch35_1001_Glossiness (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1072.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.38:867][951]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse.Ch35_1001_Diffuse (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1120.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.38:868][951]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1001_Specular.Ch35_1001_Specular (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1120.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.38:895][951]LogSkeletalMesh: Building Skeletal Mesh Ch35_nonPBR...
+[2026.03.30-16.53.38:980][953]LogTexture: Display: Waiting for textures to be ready 0/4 (/Game/ModelsAndAnimations/Player/Ch35_1001_Normal) ...
+[2026.03.30-16.53.38:989][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1001_Normal.Ch35_1001_Normal (TFO_BC5, 4096x4096 x1x1x1) (Required Memory Estimate: 1152.999984 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.40:043][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.40:471][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.40:475][953]LogSkeletalMesh: Built Skeletal Mesh [1.58s] /Game/ModelsAndAnimations/Player/Ch35_nonPBR.Ch35_nonPBR
+[2026.03.30-16.53.40:895][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.41:043][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1002_Normal.Ch35_1002_Normal (TFO_BC5, 4096x4096 x1x1x1) (Required Memory Estimate: 1152.999984 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.41:043][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1002_Specular.Ch35_1002_Specular (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1120.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.41:165][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.41:181][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness.Ch35_1003_Glossiness (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1072.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.41:192][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness.Ch35_1002_Glossiness (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1072.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.41:202][953]LogTexture: Display: Waiting for textures to be ready 0/4 (/Game/ModelsAndAnimations/Player/Ch35_1002_Normal) ...
+[2026.03.30-16.53.41:208][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse.Ch35_1002_Diffuse (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1120.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.42:248][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.42:317][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.42:862][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.43:096][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1003_Normal.Ch35_1003_Normal (TFO_BC5, 4096x4096 x1x1x1) (Required Memory Estimate: 1152.999984 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.43:155][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.43:186][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1003_Specular.Ch35_1003_Specular (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1120.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.43:190][953]LogTexture: Display: Waiting for textures to be ready 0/4 (/Game/ModelsAndAnimations/Player/Ch35_1003_Normal) ...
+[2026.03.30-16.53.43:197][953]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse.Ch35_1003_Diffuse (TFO_AutoDXT, 4096x4096 x1x1x1) (Required Memory Estimate: 1120.999983 MB), EncodeSpeed: Fast
+[2026.03.30-16.53.44:231][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.44:239][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.44:594][953]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2026.03.30-16.53.44:849][955]LogSkeletalMesh: Display: Waiting for skinned assets to be ready 0/1 (Ch35_nonPBR) ...
+[2026.03.30-16.53.44:863][955]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2026.03.30-16.53.44:864][955]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_21'.
+[2026.03.30-16.53.44:865][955]LogMaterial: Display: Material /Game/ModelsAndAnimations/Player/Ch35_body2.Ch35_body2 needed to have new flag set bUsedWithSkeletalMesh !
+[2026.03.30-16.53.44:869][955]LogMaterial: Display: Material /Game/ModelsAndAnimations/Player/Ch35_body.Ch35_body needed to have new flag set bUsedWithSkeletalMesh !
+[2026.03.30-16.53.44:874][955]LogMaterial: Display: Material /Game/ModelsAndAnimations/Player/Ch35_body1.Ch35_body1 needed to have new flag set bUsedWithSkeletalMesh !
+[2026.03.30-16.53.44:900][955]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-16.53.44:900][955]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-16.53.44:932][956]LogUObjectHash: Compacting FUObjectHashTables data took   1.26ms
+[2026.03.30-16.53.45:136][956]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...ets/PlayerAnimations/Ch35_nonPBR.fbx]
+[2026.03.30-16.53.45:136][956]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/PlayerAnimations/Ch35_nonPBR.fbx : 'Ch35_nonPBR', SkeletalMesh] No smoothing group information was found for this mesh 'Mesh' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.03.30-16.53.45:149][956]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2026.03.30-16.53.45:149][956]LogInterchangeEngine: [Success] Import Done
+[2026.03.30-16.53.45:323][958]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_22
+[2026.03.30-16.53.45:323][958]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_22'.
+[2026.03.30-16.53.45:485][959]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_23
+[2026.03.30-16.53.45:485][959]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_23'.
+[2026.03.30-16.53.48:371][  6]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2026.03.30-16.53.48:373][  6]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/FirstPersonMap' took 0.024
+[2026.03.30-16.53.48:375][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset] ([1] browsable assets)...
+[2026.03.30-16.53.48:415][  6]OBJ SavePackage:     Rendered thumbnail for [PhysicsAsset /Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset.Ch35_nonPBR_PhysicsAsset]
+[2026.03.30-16.53.48:415][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset]
+[2026.03.30-16.53.48:436][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset_Auto1
+[2026.03.30-16.53.48:436][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR_PhysicsAsset_Auto117E219684523D6153B609A83604E32E9.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset_Auto1.uasset'
+[2026.03.30-16.53.48:439][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.53.48:441][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse.Ch35_1001_Diffuse]
+[2026.03.30-16.53.48:441][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse]
+[2026.03.30-16.53.48:556][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse_Auto1
+[2026.03.30-16.53.48:556][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_Diffuse_Auto1289C92C749C69D66C798C58A00FE21BA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse_Auto1.uasset'
+[2026.03.30-16.53.48:557][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness] ([1] browsable assets)...
+[2026.03.30-16.53.48:560][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness.Ch35_1001_Glossiness]
+[2026.03.30-16.53.48:560][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness]
+[2026.03.30-16.53.48:574][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness_Auto1
+[2026.03.30-16.53.48:574][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_Glossiness_Auto102F1AC2D44657E169DE5F5A7054F968B.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness_Auto1.uasset'
+[2026.03.30-16.53.48:576][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Specular] ([1] browsable assets)...
+[2026.03.30-16.53.48:601][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1001_Specular.Ch35_1001_Specular]
+[2026.03.30-16.53.48:601][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Specular]
+[2026.03.30-16.53.48:713][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Specular_Auto1
+[2026.03.30-16.53.48:713][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_Specular_Auto1F91DF4C04DE2AEA1335CD6BB02188BBD.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Specular_Auto1.uasset'
+[2026.03.30-16.53.48:715][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.53.48:716][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse.Ch35_1002_Diffuse]
+[2026.03.30-16.53.48:716][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse]
+[2026.03.30-16.53.48:823][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse_Auto1
+[2026.03.30-16.53.48:823][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_Diffuse_Auto16DD89DDC4EAB64D0381C1C8FFAF782FE.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse_Auto1.uasset'
+[2026.03.30-16.53.48:825][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Normal] ([1] browsable assets)...
+[2026.03.30-16.53.48:826][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1002_Normal.Ch35_1002_Normal]
+[2026.03.30-16.53.48:826][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Normal]
+[2026.03.30-16.53.48:931][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Normal_Auto1
+[2026.03.30-16.53.48:931][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_Normal_Auto1CB8FE7734BC51400A4794AB6DD5AD0B4.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Normal_Auto1.uasset'
+[2026.03.30-16.53.48:932][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Specular] ([1] browsable assets)...
+[2026.03.30-16.53.48:933][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1002_Specular.Ch35_1002_Specular]
+[2026.03.30-16.53.48:934][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Specular]
+[2026.03.30-16.53.49:035][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Specular_Auto1
+[2026.03.30-16.53.49:035][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_Specular_Auto185DF7228472AE136EFC25698EF51F89F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Specular_Auto1.uasset'
+[2026.03.30-16.53.49:037][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness] ([1] browsable assets)...
+[2026.03.30-16.53.49:037][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness.Ch35_1003_Glossiness]
+[2026.03.30-16.53.49:037][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness]
+[2026.03.30-16.53.49:050][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness_Auto1
+[2026.03.30-16.53.49:050][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_Glossiness_Auto107434D014EE9FD0F00212FBBBD93D2F4.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness_Auto1.uasset'
+[2026.03.30-16.53.49:051][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Normal] ([1] browsable assets)...
+[2026.03.30-16.53.49:053][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1003_Normal.Ch35_1003_Normal]
+[2026.03.30-16.53.49:053][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Normal]
+[2026.03.30-16.53.49:158][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Normal_Auto1
+[2026.03.30-16.53.49:158][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_Normal_Auto17AD2F885456EF3994D188898415D68E6.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Normal_Auto1.uasset'
+[2026.03.30-16.53.49:159][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton] ([1] browsable assets)...
+[2026.03.30-16.53.49:181][  6]OBJ SavePackage:     Rendered thumbnail for [Skeleton /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton.Ch35_nonPBR_Skeleton]
+[2026.03.30-16.53.49:181][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton]
+[2026.03.30-16.53.49:183][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton_Auto1
+[2026.03.30-16.53.49:183][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR_Skeleton_Auto185C071D04B17E56071C222A617013541.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton_Auto1.uasset'
+[2026.03.30-16.53.49:184][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Normal] ([1] browsable assets)...
+[2026.03.30-16.53.49:186][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1001_Normal.Ch35_1001_Normal]
+[2026.03.30-16.53.49:186][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Normal]
+[2026.03.30-16.53.49:288][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Normal_Auto1
+[2026.03.30-16.53.49:288][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_Normal_Auto1362898794579028590F9A7889D343A94.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1001_Normal_Auto1.uasset'
+[2026.03.30-16.53.49:289][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness] ([1] browsable assets)...
+[2026.03.30-16.53.49:291][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness.Ch35_1002_Glossiness]
+[2026.03.30-16.53.49:291][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness]
+[2026.03.30-16.53.49:302][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness_Auto1
+[2026.03.30-16.53.49:303][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_Glossiness_Auto13A46916541F1819E37279BA22F5B2BD3.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness_Auto1.uasset'
+[2026.03.30-16.53.49:304][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_body] ([1] browsable assets)...
+[2026.03.30-16.53.49:320][  6]OBJ SavePackage:     Rendered thumbnail for [Material /Game/ModelsAndAnimations/Player/Ch35_body.Ch35_body]
+[2026.03.30-16.53.49:320][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_body]
+[2026.03.30-16.53.49:325][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_body_Auto1
+[2026.03.30-16.53.49:325][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_body_Auto1179C34A743CBEBA97E8E24860CB89F09.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_body_Auto1.uasset'
+[2026.03.30-16.53.49:326][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.53.49:327][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse.Ch35_1003_Diffuse]
+[2026.03.30-16.53.49:327][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse]
+[2026.03.30-16.53.49:432][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse_Auto1
+[2026.03.30-16.53.49:432][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_Diffuse_Auto188C6DCDF4BF3E3A40FA41590779B7EA7.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse_Auto1.uasset'
+[2026.03.30-16.53.49:433][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Specular] ([1] browsable assets)...
+[2026.03.30-16.53.49:434][  6]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Player/Ch35_1003_Specular.Ch35_1003_Specular]
+[2026.03.30-16.53.49:434][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Specular]
+[2026.03.30-16.53.49:532][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Specular_Auto1
+[2026.03.30-16.53.49:532][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_Specular_Auto164A0CFF34892818EF073039D9746D1A5.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_1003_Specular_Auto1.uasset'
+[2026.03.30-16.53.49:534][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_body1] ([1] browsable assets)...
+[2026.03.30-16.53.49:551][  6]OBJ SavePackage:     Rendered thumbnail for [Material /Game/ModelsAndAnimations/Player/Ch35_body1.Ch35_body1]
+[2026.03.30-16.53.49:551][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_body1]
+[2026.03.30-16.53.49:555][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_body1_Auto1
+[2026.03.30-16.53.49:555][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_body1_Auto1728951AA4D69F43478260EB74EC6BEBC.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_body1_Auto1.uasset'
+[2026.03.30-16.53.49:556][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_body2] ([1] browsable assets)...
+[2026.03.30-16.53.49:573][  6]OBJ SavePackage:     Rendered thumbnail for [Material /Game/ModelsAndAnimations/Player/Ch35_body2.Ch35_body2]
+[2026.03.30-16.53.49:573][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_body2]
+[2026.03.30-16.53.49:577][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_body2_Auto1
+[2026.03.30-16.53.49:577][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_body2_Auto160A41043437C93944DDEF89522EE49EE.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_body2_Auto1.uasset'
+[2026.03.30-16.53.49:580][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR] ([1] browsable assets)...
+[2026.03.30-16.53.49:599][  6]OBJ SavePackage:     Rendered thumbnail for [SkeletalMesh /Game/ModelsAndAnimations/Player/Ch35_nonPBR.Ch35_nonPBR]
+[2026.03.30-16.53.49:599][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR]
+[2026.03.30-16.53.49:653][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Auto1
+[2026.03.30-16.53.49:653][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR_Auto10F6B2369464C91384DDB9D83D614836F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Auto1.uasset'
+[2026.03.30-16.53.49:655][  6]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim] ([1] browsable assets)...
+[2026.03.30-16.53.49:674][  6]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim.Ch35_nonPBR_Anim]
+[2026.03.30-16.53.49:674][  6]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim]
+[2026.03.30-16.53.49:683][  6]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim_Auto1
+[2026.03.30-16.53.49:683][  6]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR_Anim_Auto1B5F4FBD74C340B21C052E4A007E37DE3.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim_Auto1.uasset'
+[2026.03.30-16.53.49:683][  6]LogFileHelpers: Auto-saving content packages took 1.311
+[2026.03.30-16.53.52:561][ 52]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2026.03.30-16.53.52:569][ 52]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-16.53.52:621][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset] ([1] browsable assets)...
+[2026.03.30-16.53.52:621][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset]
+[2026.03.30-16.53.52:626][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset
+[2026.03.30-16.53.52:627][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR_PhysicsAsset044BB9B142E0C1C1EDC3BE84A2BA313C.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset.uasset'
+[2026.03.30-16.53.52:628][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.53.52:628][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse]
+[2026.03.30-16.53.52:934][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse
+[2026.03.30-16.53.52:934][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_Diffuse4CA3AB5544F4CF77253C57B10447E45B.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1001_Diffuse.uasset'
+[2026.03.30-16.53.52:936][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness] ([1] browsable assets)...
+[2026.03.30-16.53.52:936][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness]
+[2026.03.30-16.53.53:026][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness
+[2026.03.30-16.53.53:026][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_GlossinessC3732114403D17673FD1D69A54297619.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1001_Glossiness.uasset'
+[2026.03.30-16.53.53:027][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Specular] ([1] browsable assets)...
+[2026.03.30-16.53.53:028][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Specular]
+[2026.03.30-16.53.53:143][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1001_Specular
+[2026.03.30-16.53.53:143][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_SpecularFCC58417404CC6095260D3B3FB5B11C7.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1001_Specular.uasset'
+[2026.03.30-16.53.53:145][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.53.53:145][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse]
+[2026.03.30-16.53.53:401][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse
+[2026.03.30-16.53.53:401][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_DiffuseFC71AB9544E42B0D934954AD95DE9368.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1002_Diffuse.uasset'
+[2026.03.30-16.53.53:403][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Normal] ([1] browsable assets)...
+[2026.03.30-16.53.53:403][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Normal]
+[2026.03.30-16.53.53:842][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1002_Normal
+[2026.03.30-16.53.53:842][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_Normal37EF840749D8D2956EE8028D5CB5C16A.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1002_Normal.uasset'
+[2026.03.30-16.53.53:844][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Specular] ([1] browsable assets)...
+[2026.03.30-16.53.53:844][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Specular]
+[2026.03.30-16.53.53:971][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1002_Specular
+[2026.03.30-16.53.53:972][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_SpecularBE6E47C848D707545B53C781C6FACBFE.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1002_Specular.uasset'
+[2026.03.30-16.53.53:974][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness] ([1] browsable assets)...
+[2026.03.30-16.53.53:974][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness]
+[2026.03.30-16.53.54:059][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness
+[2026.03.30-16.53.54:059][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_GlossinessF36CA84544402A1567EB84BACDEAA553.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1003_Glossiness.uasset'
+[2026.03.30-16.53.54:061][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Normal] ([1] browsable assets)...
+[2026.03.30-16.53.54:061][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Normal]
+[2026.03.30-16.53.54:530][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1003_Normal
+[2026.03.30-16.53.54:530][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_Normal735D93E848E99F86AD26968514E194AF.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1003_Normal.uasset'
+[2026.03.30-16.53.54:531][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton] ([1] browsable assets)...
+[2026.03.30-16.53.54:531][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton]
+[2026.03.30-16.53.54:534][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton
+[2026.03.30-16.53.54:534][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR_Skeleton21E46F5A48D34BE5F78E2190D2040073.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton.uasset'
+[2026.03.30-16.53.54:535][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1001_Normal] ([1] browsable assets)...
+[2026.03.30-16.53.54:535][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1001_Normal]
+[2026.03.30-16.53.54:999][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1001_Normal
+[2026.03.30-16.53.54:999][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1001_NormalAA32DA9C4F611A7F6B3DDEA8A0AB8F52.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1001_Normal.uasset'
+[2026.03.30-16.53.55:000][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness] ([1] browsable assets)...
+[2026.03.30-16.53.55:000][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness]
+[2026.03.30-16.53.55:084][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness
+[2026.03.30-16.53.55:084][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1002_Glossiness0277AEC24337481542E3A1B3055B2715.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1002_Glossiness.uasset'
+[2026.03.30-16.53.55:085][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_body] ([1] browsable assets)...
+[2026.03.30-16.53.55:085][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_body]
+[2026.03.30-16.53.55:091][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_body
+[2026.03.30-16.53.55:091][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_body409614AC4091E68AF9C097BC9E3C5D1A.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_body.uasset'
+[2026.03.30-16.53.55:093][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse] ([1] browsable assets)...
+[2026.03.30-16.53.55:093][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse]
+[2026.03.30-16.53.55:374][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse
+[2026.03.30-16.53.55:374][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_Diffuse7B5195784353E3B1D209E899CBF5BCCE.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1003_Diffuse.uasset'
+[2026.03.30-16.53.55:376][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_1003_Specular] ([1] browsable assets)...
+[2026.03.30-16.53.55:376][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_1003_Specular]
+[2026.03.30-16.53.55:536][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_1003_Specular
+[2026.03.30-16.53.55:536][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_1003_Specular54B9F499429EBE5EBF5702A1F98E662E.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_1003_Specular.uasset'
+[2026.03.30-16.53.55:537][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_body1] ([1] browsable assets)...
+[2026.03.30-16.53.55:537][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_body1]
+[2026.03.30-16.53.55:543][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_body1
+[2026.03.30-16.53.55:544][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_body1625F47164A6352B3FD37F8A0B89C66D0.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_body1.uasset'
+[2026.03.30-16.53.55:545][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_body2] ([1] browsable assets)...
+[2026.03.30-16.53.55:545][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_body2]
+[2026.03.30-16.53.55:551][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_body2
+[2026.03.30-16.53.55:551][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_body2C2AF9E534423E33A4DA201A50ACC77B2.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_body2.uasset'
+[2026.03.30-16.53.55:553][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR] ([1] browsable assets)...
+[2026.03.30-16.53.55:553][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR]
+[2026.03.30-16.53.55:615][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_nonPBR
+[2026.03.30-16.53.55:615][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR7D432BF74D04EB43B2850E854E72EFBC.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_nonPBR.uasset'
+[2026.03.30-16.53.55:616][ 52]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim] ([1] browsable assets)...
+[2026.03.30-16.53.55:617][ 52]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim]
+[2026.03.30-16.53.55:625][ 52]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim
+[2026.03.30-16.53.55:625][ 52]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Ch35_nonPBR_AnimD033539C4DEB31ED96C9EEA97E105DB6.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Player/Ch35_nonPBR_Anim.uasset'
+[2026.03.30-16.53.55:643][ 52]LogFileHelpers: InternalPromptForCheckoutAndSave took 3.07 sec (total: 7.97 sec)
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: Display: Starting to validate 19 assets
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: Enabled validators:
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-16.53.55:700][ 52]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-16.53.55:700][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_nonPBR_PhysicsAsset Validating asset
+[2026.03.30-16.53.55:700][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1001_Diffuse Validating asset
+[2026.03.30-16.53.55:700][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1001_Glossiness Validating asset
+[2026.03.30-16.53.55:700][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1001_Specular Validating asset
+[2026.03.30-16.53.55:700][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1002_Diffuse Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1002_Normal Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1002_Specular Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1003_Glossiness Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1003_Normal Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Skeleton Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1001_Normal Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1002_Glossiness Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_body Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1003_Diffuse Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_1003_Specular Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_body1 Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_body2 Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_nonPBR Validating asset
+[2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim Validating asset
