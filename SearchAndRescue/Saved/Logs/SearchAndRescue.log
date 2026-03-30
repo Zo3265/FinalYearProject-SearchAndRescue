@@ -2659,3 +2659,465 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_body2 Validating asset
 [2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_nonPBR Validating asset
 [2026.03.30-16.53.55:701][ 52]AssetCheck: /Game/ModelsAndAnimations/Player/Ch35_nonPBR_Anim Validating asset
+[2026.03.30-16.57.51:956][172]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1033.475952
+[2026.03.30-16.57.52:244][178]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-16.57.52:244][179]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1033.710083, Update Interval: 316.899323
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: ================================================
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Total job queries 273, among them cache hits 80 (29.30%), DDC hits 135 (49.45%), Duplicates 2 (0.73%)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Tracking 191 distinct input hashes that result in 158 distinct outputs (82.72%)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: RAM used: 122.43 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Shaders Compiled: 56
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Jobs assigned 56, completed 56 (100%)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Average time worker was idle: 117.51 s
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Time job spent in pending queue: average 0.27 s, longest 2.76 s
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Job execution time: average 10.71 s, max 26.25 s
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Job life time (pending + execution): average 10.98 s, max 26.44
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Shader code size: average 5.932 KiB, min 612 B, max 15.152 KiB
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 55.69 s
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Jobs were issued in 22 batches (only local compilation was used), average 2.55 jobs/batch
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Average processing rate: 1.01 jobs/sec
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Total thread time: 128.695 s
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Total thread preprocess time: 26.509 s
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Percentage time preprocessing: 20.60%
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Effective parallelization: 2.31 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                                                 FDepthOnlyPS (compiled    2 times, average 2.12 sec, max 2.22 sec, min 2.01 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    9 times, average 2.08 sec, max 4.91 sec, min 0.63 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                                                  FVelocityPS (compiled    2 times, average 2.01 sec, max 2.17 sec, min 1.86 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                                             FDebugViewModePS - 33.92% of total time (compiled    6 times, average 7.28 sec, max 11.72 sec, min 5.03 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 14.53% of total time (compiled    9 times, average 2.08 sec, max 4.91 sec, min 0.63 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 11.18% of total time (compiled    6 times, average 2.40 sec, max 5.35 sec, min 1.37 sec)
+[2026.03.30-16.58.50:676][ 37]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 8.44% of total time (compiled    7 times, average 1.55 sec, max 2.98 sec, min 0.89 sec)
+[2026.03.30-16.58.50:677][ 37]LogShaderCompilers: Display:                                             FDebugViewModeVS - 7.49% of total time (compiled    6 times, average 1.61 sec, max 3.64 sec, min 1.04 sec)
+[2026.03.30-16.58.50:677][ 37]LogShaderCompilers: Display: === Material stats ===
+[2026.03.30-16.58.50:677][ 37]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.03.30-16.58.50:677][ 37]LogShaderCompilers: Display: Materials Translated:    148
+[2026.03.30-16.58.50:677][ 37]LogShaderCompilers: Display: Material Total Translate Time: 0.27 s
+[2026.03.30-16.58.50:678][ 37]LogShaderCompilers: Display: Material Translation Only: 0.12 s (44%)
+[2026.03.30-16.58.50:678][ 37]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2026.03.30-16.58.50:678][ 37]LogShaderCompilers: Display: Material Cache Hits: 31 (21%)
+[2026.03.30-16.58.50:678][ 37]LogShaderCompilers: Display: ================================================
+[2026.03.30-17.00.02:999][401]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.03.30-17.00.03:008][401]LogContentBrowser: Creating deferred item: NewFolder
+[2026.03.30-17.00.03:022][402]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.03.30-17.00.07:917][518]LogContentBrowser: Attempting asset rename: NewFolder -> BlendSpace
+[2026.03.30-17.00.07:921][518]LogContentBrowser: End creating deferred item NewFolder
+[2026.03.30-17.00.21:141][660]LogSlate: Window 'Pick Skeleton' being destroyed
+[2026.03.30-17.00.21:158][660]LogContentBrowser: Deferred new asset file creation: NewBlendSpace
+[2026.03.30-17.00.21:162][660]LogContentBrowser: Creating deferred item: NewBlendSpace
+[2026.03.30-17.00.21:192][662]LogContentBrowser: Renaming the item being created (Deferred Item: NewBlendSpace).
+[2026.03.30-17.00.27:233][806]LogContentBrowser: Attempting asset rename: NewBlendSpace -> BS_Enemy
+[2026.03.30-17.00.27:238][806]LogContentBrowser: End creating deferred item NewBlendSpace
+[2026.03.30-17.00.27:281][806]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_24
+[2026.03.30-17.00.27:282][806]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_24'.
+[2026.03.30-17.00.28:666][834]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace /Game/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy.BS_Enemy
+[2026.03.30-17.00.28:666][834]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_25
+[2026.03.30-17.00.28:668][834]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_25'.
+[2026.03.30-17.00.28:827][834]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_25:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.00.29:259][834]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_26
+[2026.03.30-17.00.29:261][834]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_26'.
+[2026.03.30-17.03.23:814][717]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1365.337891
+[2026.03.30-17.03.24:156][721]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-17.03.24:156][721]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1365.595215, Update Interval: 322.938324
+[2026.03.30-17.05.14:818][893]LogSlate: Window 'BS_Enemy' being destroyed
+[2026.03.30-17.05.14:833][893]LogSlate: Window 'BS_Enemy' being destroyed
+[2026.03.30-17.05.14:866][893]LogWorld: UWorld::CleanupWorld for World_25, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.05.14:866][893]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.05.14:923][893]LogWorld: UWorld::CleanupWorld for World_26, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.05.14:924][893]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.05.14:967][893]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2026.03.30-17.08.28:151][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2026.03.30-17.08.29:548][572]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.08.29:592][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.52ms
+[2026.03.30-17.08.29:601][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.51ms
+[2026.03.30-17.08.29:613][572]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2026.03.30-17.09.15:151][846]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1716.674683
+[2026.03.30-17.09.16:152][849]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-17.09.16:152][850]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1717.341797, Update Interval: 357.619568
+[2026.03.30-17.10.28:160][ 65]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/rifle_jump.rifle_jump
+[2026.03.30-17.10.28:161][ 65]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_27
+[2026.03.30-17.10.28:162][ 65]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_27'.
+[2026.03.30-17.10.28:166][ 65]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_27:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.10.28:625][ 65]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_28
+[2026.03.30-17.10.28:625][ 65]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_28'.
+[2026.03.30-17.10.29:028][ 65]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_29
+[2026.03.30-17.10.29:028][ 65]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_29'.
+[2026.03.30-17.10.30:420][ 81]LogSlate: Window 'rifle_jump' being destroyed
+[2026.03.30-17.10.30:469][ 81]LogSlate: Window 'rifle_jump' being destroyed
+[2026.03.30-17.10.30:503][ 81]LogWorld: UWorld::CleanupWorld for World_29, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.10.30:503][ 81]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.10.30:513][ 81]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.10.30:513][ 81]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.10.30:590][ 81]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.10.30:590][ 81]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.10.30:639][ 81]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2026.03.30-17.10.42:807][193]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/rifle_run.rifle_run
+[2026.03.30-17.10.42:808][193]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_30
+[2026.03.30-17.10.42:809][193]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_30'.
+[2026.03.30-17.10.42:813][193]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_30:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.10.43:248][193]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_31
+[2026.03.30-17.10.43:249][193]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_31'.
+[2026.03.30-17.10.43:670][193]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_32
+[2026.03.30-17.10.43:670][193]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_32'.
+[2026.03.30-17.10.45:654][216]LogSlate: Window 'rifle_run' being destroyed
+[2026.03.30-17.10.45:707][216]LogSlate: Window 'rifle_run' being destroyed
+[2026.03.30-17.10.45:746][216]LogWorld: UWorld::CleanupWorld for World_32, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.10.45:746][216]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.10.45:758][216]LogWorld: UWorld::CleanupWorld for World_30, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.10.45:759][216]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.10.45:836][216]LogWorld: UWorld::CleanupWorld for World_31, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.10.45:836][216]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.10.45:882][216]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2026.03.30-17.11.16:357][349]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/run_backwards.run_backwards
+[2026.03.30-17.11.16:358][349]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_33
+[2026.03.30-17.11.16:360][349]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_33'.
+[2026.03.30-17.11.16:400][349]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_33:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.11.16:974][349]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_34
+[2026.03.30-17.11.16:975][349]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_34'.
+[2026.03.30-17.11.17:458][349]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_35
+[2026.03.30-17.11.17:459][349]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_35'.
+[2026.03.30-17.11.19:374][371]LogSlate: Window 'run_backwards' being destroyed
+[2026.03.30-17.11.19:430][371]LogSlate: Window 'run_backwards' being destroyed
+[2026.03.30-17.11.19:466][371]LogWorld: UWorld::CleanupWorld for World_35, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.19:466][371]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.19:475][371]LogWorld: UWorld::CleanupWorld for World_33, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.19:475][371]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.19:558][371]LogWorld: UWorld::CleanupWorld for World_34, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.19:558][371]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.19:632][371]LogUObjectHash: Compacting FUObjectHashTables data took   1.17ms
+[2026.03.30-17.11.25:831][402]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/run_backwards.run_backwards
+[2026.03.30-17.11.25:831][402]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_36
+[2026.03.30-17.11.25:832][402]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_36'.
+[2026.03.30-17.11.25:836][402]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_36:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.11.26:290][402]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_37
+[2026.03.30-17.11.26:290][402]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_37'.
+[2026.03.30-17.11.26:707][402]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_38
+[2026.03.30-17.11.26:708][402]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_38'.
+[2026.03.30-17.11.28:838][427]LogSlate: Window 'run_backwards' being destroyed
+[2026.03.30-17.11.28:900][427]LogSlate: Window 'run_backwards' being destroyed
+[2026.03.30-17.11.28:947][427]LogWorld: UWorld::CleanupWorld for World_38, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.28:947][427]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.28:960][427]LogWorld: UWorld::CleanupWorld for World_36, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.28:960][427]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.29:058][427]LogWorld: UWorld::CleanupWorld for World_37, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.29:058][427]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.29:116][427]LogUObjectHash: Compacting FUObjectHashTables data took   1.41ms
+[2026.03.30-17.11.36:529][466]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/run_backwards.run_backwards
+[2026.03.30-17.11.36:530][466]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_39
+[2026.03.30-17.11.36:530][466]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_39'.
+[2026.03.30-17.11.36:533][466]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_39:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.11.36:972][466]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_40
+[2026.03.30-17.11.36:973][466]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_40'.
+[2026.03.30-17.11.37:385][466]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_41
+[2026.03.30-17.11.37:386][466]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_41'.
+[2026.03.30-17.11.38:757][483]LogSlate: Window 'run_backwards' being destroyed
+[2026.03.30-17.11.38:807][483]LogSlate: Window 'run_backwards' being destroyed
+[2026.03.30-17.11.38:844][483]LogWorld: UWorld::CleanupWorld for World_41, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.38:844][483]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.38:853][483]LogWorld: UWorld::CleanupWorld for World_39, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.38:853][483]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.38:935][483]LogWorld: UWorld::CleanupWorld for World_40, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.11.38:935][483]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.11.38:987][483]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2026.03.30-17.12.07:230][740]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.03.30-17.12.08:250][740]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.12.08:284][740]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/rifle_run.rifle_run
+	Asset Type: AnimSequence
+[2026.03.30-17.12.08:629][740]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2026.03.30-17.12.08:646][740]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.03.30-17.12.08:662][740]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2026.03.30-17.12.09:940][769]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2026.03.30-17.12.11:127][769]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.12.11:158][769]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/run_backwards.run_backwards
+	Asset Type: AnimSequence
+[2026.03.30-17.12.11:466][769]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2026.03.30-17.12.11:481][769]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2026.03.30-17.12.11:495][769]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2026.03.30-17.12.13:055][807]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/strafe.strafe
+[2026.03.30-17.12.13:056][807]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_42
+[2026.03.30-17.12.13:057][807]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_42'.
+[2026.03.30-17.12.13:127][807]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_42:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.12.13:684][807]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_43
+[2026.03.30-17.12.13:685][807]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_43'.
+[2026.03.30-17.12.14:109][807]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_44
+[2026.03.30-17.12.14:109][807]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_44'.
+[2026.03.30-17.12.16:234][834]LogSlate: Window 'strafe' being destroyed
+[2026.03.30-17.12.16:252][834]LogSlate: Window 'strafe' being destroyed
+[2026.03.30-17.12.16:288][834]LogWorld: UWorld::CleanupWorld for World_44, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.12.16:289][834]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.12.16:298][834]LogWorld: UWorld::CleanupWorld for World_42, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.12.16:298][834]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.12.16:384][834]LogWorld: UWorld::CleanupWorld for World_43, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.12.16:384][834]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.12.16:438][834]LogUObjectHash: Compacting FUObjectHashTables data took   1.00ms
+[2026.03.30-17.13.13:730][ 37]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2026.03.30-17.13.14:835][ 37]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.13.14:867][ 37]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/strafe.strafe
+	Asset Type: AnimSequence
+[2026.03.30-17.13.15:173][ 37]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2026.03.30-17.13.15:187][ 37]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2026.03.30-17.13.15:203][ 37]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2026.03.30-17.13.17:735][ 99]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2026.03.30-17.13.18:564][ 99]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.13.18:595][ 99]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/strafe__2_.strafe__2_
+	Asset Type: AnimSequence
+[2026.03.30-17.13.18:888][ 99]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2026.03.30-17.13.18:905][ 99]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2026.03.30-17.13.18:920][ 99]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2026.03.30-17.13.28:871][217]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/strafe_right.strafe_right
+[2026.03.30-17.13.28:873][217]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_45
+[2026.03.30-17.13.28:874][217]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_45'.
+[2026.03.30-17.13.28:893][217]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_45:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.13.29:406][217]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_46
+[2026.03.30-17.13.29:407][217]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_46'.
+[2026.03.30-17.13.29:848][217]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_47
+[2026.03.30-17.13.29:848][217]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_47'.
+[2026.03.30-17.13.31:715][239]LogSlate: Window 'strafe_right' being destroyed
+[2026.03.30-17.13.31:763][239]LogSlate: Window 'strafe_right' being destroyed
+[2026.03.30-17.13.31:800][239]LogWorld: UWorld::CleanupWorld for World_47, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.13.31:800][239]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.13.31:812][239]LogWorld: UWorld::CleanupWorld for World_45, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.13.31:812][239]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.13.31:892][239]LogWorld: UWorld::CleanupWorld for World_46, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.13.31:892][239]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.13.31:946][239]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2026.03.30-17.14.22:978][422]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2026.03.30-17.14.23:973][422]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.14.24:007][422]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/strafe_left.strafe_left
+	Asset Type: AnimSequence
+[2026.03.30-17.14.24:308][422]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2026.03.30-17.14.24:325][422]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.03.30-17.14.24:340][422]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2026.03.30-17.14.25:496][449]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2026.03.30-17.14.26:710][449]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.14.26:744][449]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/strafe_right.strafe_right
+	Asset Type: AnimSequence
+[2026.03.30-17.14.27:059][449]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2026.03.30-17.14.27:076][449]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2026.03.30-17.14.27:093][449]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2026.03.30-17.14.32:750][577]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/toss_grenade.toss_grenade
+[2026.03.30-17.14.32:751][577]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_48
+[2026.03.30-17.14.32:752][577]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_48'.
+[2026.03.30-17.14.32:762][577]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_48:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.14.33:338][577]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_49
+[2026.03.30-17.14.33:340][577]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_49'.
+[2026.03.30-17.14.33:768][577]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_50
+[2026.03.30-17.14.33:768][577]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_50'.
+[2026.03.30-17.14.39:950][659]LogSlate: Window 'toss_grenade' being destroyed
+[2026.03.30-17.14.40:013][659]LogSlate: Window 'toss_grenade' being destroyed
+[2026.03.30-17.14.40:048][659]LogWorld: UWorld::CleanupWorld for World_50, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.40:049][659]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.40:060][659]LogWorld: UWorld::CleanupWorld for World_48, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.40:060][659]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.40:142][659]LogWorld: UWorld::CleanupWorld for World_49, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.40:142][659]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.40:198][659]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2026.03.30-17.14.41:658][691]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/turn_left.turn_left
+[2026.03.30-17.14.41:660][691]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_51
+[2026.03.30-17.14.41:662][691]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_51'.
+[2026.03.30-17.14.41:703][691]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_51:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.14.42:282][691]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_52
+[2026.03.30-17.14.42:283][691]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_52'.
+[2026.03.30-17.14.42:722][691]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_53
+[2026.03.30-17.14.42:723][691]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_53'.
+[2026.03.30-17.14.47:750][761]LogSlate: Window 'turn_left' being destroyed
+[2026.03.30-17.14.47:768][761]LogSlate: Window 'turn_left' being destroyed
+[2026.03.30-17.14.47:803][761]LogWorld: UWorld::CleanupWorld for World_53, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.47:803][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.47:812][761]LogWorld: UWorld::CleanupWorld for World_51, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.47:812][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.47:892][761]LogWorld: UWorld::CleanupWorld for World_52, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.47:893][761]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.47:972][761]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2026.03.30-17.14.48:785][782]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/turning_right_45_degrees.turning_right_45_degrees
+[2026.03.30-17.14.48:786][782]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_54
+[2026.03.30-17.14.48:786][782]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_54'.
+[2026.03.30-17.14.48:818][782]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_54:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.14.49:436][782]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_55
+[2026.03.30-17.14.49:437][782]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_55'.
+[2026.03.30-17.14.49:871][782]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_56
+[2026.03.30-17.14.49:872][782]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_56'.
+[2026.03.30-17.14.53:170][826]LogSlate: Window 'turning_right_45_degrees' being destroyed
+[2026.03.30-17.14.53:220][826]LogSlate: Window 'turning_right_45_degrees' being destroyed
+[2026.03.30-17.14.53:254][826]LogWorld: UWorld::CleanupWorld for World_56, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.53:254][826]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.53:266][826]LogWorld: UWorld::CleanupWorld for World_54, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.53:266][826]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.53:341][826]LogWorld: UWorld::CleanupWorld for World_55, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.14.53:342][826]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.14.53:403][826]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2026.03.30-17.15.47:984][273]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2026.03.30-17.15.49:042][273]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.15.49:068][273]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/walking.walking
+	Asset Type: AnimSequence
+[2026.03.30-17.15.49:290][273]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2026.03.30-17.15.49:301][273]LogUObjectHash: Compacting FUObjectHashTables data took   0.56ms
+[2026.03.30-17.15.49:314][273]LogUObjectHash: Compacting FUObjectHashTables data took   0.29ms
+[2026.03.30-17.15.50:315][295]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2026.03.30-17.15.51:246][295]LogSlate: Window 'Delete Assets' being destroyed
+[2026.03.30-17.15.51:272][295]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/ModelsAndAnimations/Enemy/Animations/walking_backwards.walking_backwards
+	Asset Type: AnimSequence
+[2026.03.30-17.15.51:507][295]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2026.03.30-17.15.51:518][295]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2026.03.30-17.15.51:529][295]LogUObjectHash: Compacting FUObjectHashTables data took   0.30ms
+[2026.03.30-17.15.51:960][307]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2113.484863
+[2026.03.30-17.15.52:177][312]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.03.30-17.15.52:177][312]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2113.658447, Update Interval: 358.066345
+[2026.03.30-17.16.01:055][345]LogStreaming: Display: FlushAsyncLoading(517): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.01:107][345]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Walking Backwards.fbx]
+[2026.03.30-17.16.01:194][345]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2026.03.30-17.16.01:217][345]LogInterchangePipeline: Warning: UInterchangeGenericAnimationPipeline: Cannot execute pre-import pipeline because importing animation only requires a valid skeleton.
+[2026.03.30-17.16.11:887][345]LogSlate: Window 'Import Content' being destroyed
+[2026.03.30-17.16.11:915][345]LogInterchangeEngine: [Pending] Importing
+[2026.03.30-17.16.12:249][348]LogStreaming: Display: FlushAsyncLoading(525): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.12:308][349]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards.Walking_Backwards (Required Memory Estimate: 0.65 MB)
+[2026.03.30-17.16.12:327][349]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Walking Backwards.fbx]
+[2026.03.30-17.16.12:328][349]LogInterchangeEngine: [Pending] Importing -  (7)
+[2026.03.30-17.16.12:328][349]LogInterchangeEngine: [Pending] Importing -  (7)
+[2026.03.30-17.16.12:328][349]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Walking.fbx]
+[2026.03.30-17.16.12:328][349]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards.Walking_Backwards, at AnimationSequence/40a0df5ba3c186c5cd5abfde3cb5b2a02482a011
+[2026.03.30-17.16.12:631][354]LogStreaming: Display: FlushAsyncLoading(526): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.12:671][355]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Walking.Walking (Required Memory Estimate: 0.63 MB)
+[2026.03.30-17.16.12:681][355]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Walking.Walking (Required Memory Estimate: 0.63 MB)
+[2026.03.30-17.16.12:692][355]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Walking.Walking, at AnimationSequence/ad3fcb73b7401d84dd953fbd5ab8d72056b1ed97
+[2026.03.30-17.16.12:702][355]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Walking.fbx]
+[2026.03.30-17.16.12:702][355]LogInterchangeEngine: [Pending] Importing -  (6)
+[2026.03.30-17.16.12:702][355]LogInterchangeEngine: [Pending] Importing -  (6)
+[2026.03.30-17.16.12:702][355]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Strafe Right.fbx]
+[2026.03.30-17.16.13:033][362]LogStreaming: Display: FlushAsyncLoading(527): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.13:055][363]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right.Strafe_Right (Required Memory Estimate: 0.66 MB)
+[2026.03.30-17.16.13:080][363]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right.Strafe_Right (Required Memory Estimate: 0.66 MB)
+[2026.03.30-17.16.13:103][363]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Strafe Right.fbx]
+[2026.03.30-17.16.13:103][363]LogInterchangeEngine: [Pending] Importing -  (5)
+[2026.03.30-17.16.13:103][363]LogInterchangeEngine: [Pending] Importing -  (5)
+[2026.03.30-17.16.13:103][363]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Strafe Left.fbx]
+[2026.03.30-17.16.13:111][364]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right.Strafe_Right, at AnimationSequence/0e7883d3a6601d96a4caa4610590f59ec0364892
+[2026.03.30-17.16.13:441][370]LogStreaming: Display: FlushAsyncLoading(528): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.13:465][371]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left.Strafe_Left (Required Memory Estimate: 0.51 MB)
+[2026.03.30-17.16.13:488][371]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left.Strafe_Left (Required Memory Estimate: 0.51 MB)
+[2026.03.30-17.16.13:511][371]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Strafe Left.fbx]
+[2026.03.30-17.16.13:511][371]LogInterchangeEngine: [Pending] Importing -  (4)
+[2026.03.30-17.16.13:511][371]LogInterchangeEngine: [Pending] Importing -  (4)
+[2026.03.30-17.16.13:511][371]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Strafe(1).fbx]
+[2026.03.30-17.16.13:514][372]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left.Strafe_Left, at AnimationSequence/4e9f0a3132e20a9ec2656816e9cec430b5f52eaa
+[2026.03.30-17.16.13:844][378]LogStreaming: Display: FlushAsyncLoading(529): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.13:885][379]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_.Strafe_1_ (Required Memory Estimate: 0.37 MB)
+[2026.03.30-17.16.13:891][379]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_.Strafe_1_ (Required Memory Estimate: 0.37 MB)
+[2026.03.30-17.16.13:896][379]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_.Strafe_1_, at AnimationSequence/c609347a9d5dad12721bf8e9b09fb81a523fc8ae
+[2026.03.30-17.16.13:914][379]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Strafe(1).fbx]
+[2026.03.30-17.16.13:914][379]LogInterchangeEngine: [Pending] Importing -  (3)
+[2026.03.30-17.16.13:914][379]LogInterchangeEngine: [Pending] Importing -  (3)
+[2026.03.30-17.16.13:914][379]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Strafe.fbx]
+[2026.03.30-17.16.14:250][386]LogStreaming: Display: FlushAsyncLoading(530): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.14:271][387]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe.Strafe (Required Memory Estimate: 0.37 MB)
+[2026.03.30-17.16.14:277][387]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe.Strafe (Required Memory Estimate: 0.37 MB)
+[2026.03.30-17.16.14:283][387]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Strafe.Strafe, at AnimationSequence/c2892789dd04569791ace296311c599578e6311d
+[2026.03.30-17.16.14:298][387]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Strafe.fbx]
+[2026.03.30-17.16.14:298][387]LogInterchangeEngine: [Pending] Importing -  (2)
+[2026.03.30-17.16.14:298][387]LogInterchangeEngine: [Pending] Importing -  (2)
+[2026.03.30-17.16.14:298][387]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Crouch Run Backwards.fbx]
+[2026.03.30-17.16.14:672][394]LogStreaming: Display: FlushAsyncLoading(531): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.14:694][395]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards.Crouch_Run_Backwards (Required Memory Estimate: 0.31 MB)
+[2026.03.30-17.16.14:700][395]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards.Crouch_Run_Backwards (Required Memory Estimate: 0.31 MB)
+[2026.03.30-17.16.14:705][395]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards.Crouch_Run_Backwards, at AnimationSequence/bc910e8bcf398d6503278c63ac1b31f0aa782539
+[2026.03.30-17.16.14:721][395]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Crouch Run Backwards.fbx]
+[2026.03.30-17.16.14:721][395]LogInterchangeEngine: [Pending] Importing -  (1)
+[2026.03.30-17.16.14:721][395]LogInterchangeEngine: [Pending] Importing -  (1)
+[2026.03.30-17.16.14:721][395]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Downloads/Rifle Run.fbx]
+[2026.03.30-17.16.15:073][402]LogStreaming: Display: FlushAsyncLoading(532): 1 QueuedPackages, 0 AsyncPackages
+[2026.03.30-17.16.15:096][403]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run.Rifle_Run (Required Memory Estimate: 0.40 MB)
+[2026.03.30-17.16.15:118][403]LogAnimationCompression: Display: Building compressed animation data for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run.Rifle_Run (Required Memory Estimate: 0.40 MB)
+[2026.03.30-17.16.15:138][403]LogAnimationCompression: Display: Storing compressed animation data for /Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run.Rifle_Run, at AnimationSequence/954977d986138da37b2bd4fe9fe60d50f52d87e6
+[2026.03.30-17.16.15:140][403]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Downloads/Rifle Run.fbx]
+[2026.03.30-17.16.15:141][403]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2026.03.30-17.16.15:141][403]LogInterchangeEngine: [Success] Import Done
+[2026.03.30-17.16.16:901][439]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards.Walking_Backwards
+[2026.03.30-17.16.16:902][439]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_57
+[2026.03.30-17.16.16:903][439]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_57'.
+[2026.03.30-17.16.16:958][439]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_57:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.03.30-17.16.17:396][439]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_58
+[2026.03.30-17.16.17:396][439]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_58'.
+[2026.03.30-17.16.17:742][439]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_59
+[2026.03.30-17.16.17:742][439]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_59'.
+[2026.03.30-17.16.22:009][491]LogSlate: Window 'Walking_Backwards' being destroyed
+[2026.03.30-17.16.22:088][491]LogSlate: Window 'Walking_Backwards' being destroyed
+[2026.03.30-17.16.22:116][491]LogWorld: UWorld::CleanupWorld for World_59, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.16.22:116][491]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.16.22:124][491]LogWorld: UWorld::CleanupWorld for World_57, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.16.22:124][491]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.16.22:188][491]LogWorld: UWorld::CleanupWorld for World_58, bSessionEnded=true, bCleanupResources=true
+[2026.03.30-17.16.22:188][491]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.03.30-17.16.22:253][491]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2026.03.30-17.16.24:205][528]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2026.03.30-17.16.24:212][528]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.03.30-17.16.24:274][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards] ([1] browsable assets)...
+[2026.03.30-17.16.24:304][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards.Walking_Backwards]
+[2026.03.30-17.16.24:304][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards]
+[2026.03.30-17.16.24:313][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards
+[2026.03.30-17.16.24:313][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Walking_Backwards28354311405A9815E0CC0EB5A5CE5100.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Walking_Backwards.uasset'
+[2026.03.30-17.16.24:315][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Walking] ([1] browsable assets)...
+[2026.03.30-17.16.24:330][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Walking.Walking]
+[2026.03.30-17.16.24:331][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Walking]
+[2026.03.30-17.16.24:339][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Walking
+[2026.03.30-17.16.24:340][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Walking6FDB9CD340F6B13E1FBF9486AA879CB8.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Walking.uasset'
+[2026.03.30-17.16.24:342][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right] ([1] browsable assets)...
+[2026.03.30-17.16.24:355][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right.Strafe_Right]
+[2026.03.30-17.16.24:355][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right]
+[2026.03.30-17.16.24:365][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right
+[2026.03.30-17.16.24:365][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Strafe_Right24A1EA2547BBDCE0D34BB080DBE2557A.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Strafe_Right.uasset'
+[2026.03.30-17.16.24:367][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left] ([1] browsable assets)...
+[2026.03.30-17.16.24:382][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left.Strafe_Left]
+[2026.03.30-17.16.24:382][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left]
+[2026.03.30-17.16.24:391][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left
+[2026.03.30-17.16.24:391][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Strafe_LeftCCD6AC5D42B574031E3DC183FE1270C4.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Strafe_Left.uasset'
+[2026.03.30-17.16.24:393][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_] ([1] browsable assets)...
+[2026.03.30-17.16.24:407][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_.Strafe_1_]
+[2026.03.30-17.16.24:407][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_]
+[2026.03.30-17.16.24:417][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_
+[2026.03.30-17.16.24:417][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Strafe_1_77884CDA48499DAE6D34BDBDE3B785DC.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Strafe_1_.uasset'
+[2026.03.30-17.16.24:419][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe] ([1] browsable assets)...
+[2026.03.30-17.16.24:434][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Strafe.Strafe]
+[2026.03.30-17.16.24:434][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Strafe]
+[2026.03.30-17.16.24:443][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Strafe
+[2026.03.30-17.16.24:443][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Strafe838E08E84F40105AB09F548E241FC5A2.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Strafe.uasset'
+[2026.03.30-17.16.24:446][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards] ([1] browsable assets)...
+[2026.03.30-17.16.24:461][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards.Crouch_Run_Backwards]
+[2026.03.30-17.16.24:461][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards]
+[2026.03.30-17.16.24:469][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards
+[2026.03.30-17.16.24:470][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Crouch_Run_Backwards6FE9DBA246CEAF586FDA70B7457C970E.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards.uasset'
+[2026.03.30-17.16.24:472][528]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run] ([1] browsable assets)...
+[2026.03.30-17.16.24:487][528]OBJ SavePackage:     Rendered thumbnail for [AnimSequence /Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run.Rifle_Run]
+[2026.03.30-17.16.24:487][528]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run]
+[2026.03.30-17.16.24:497][528]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run
+[2026.03.30-17.16.24:497][528]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Rifle_RunD92E2F624429D19C90164A81B2C6DC29.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/Animations/Rifle_Run.uasset'
+[2026.03.30-17.16.24:514][528]LogFileHelpers: InternalPromptForCheckoutAndSave took 301.244 ms (total: 8.27 sec)
+[2026.03.30-17.16.24:573][528]LogContentValidation: Display: Starting to validate 8 assets
+[2026.03.30-17.16.24:573][528]LogContentValidation: Enabled validators:
+[2026.03.30-17.16.24:573][528]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.03.30-17.16.24:573][528]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.03.30-17.16.24:573][528]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.03.30-17.16.24:573][528]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.03.30-17.16.24:573][528]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.03.30-17.16.24:573][528]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.03.30-17.16.24:573][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Walking_Backwards Validating asset
+[2026.03.30-17.16.24:573][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Walking Validating asset
+[2026.03.30-17.16.24:573][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Right Validating asset
+[2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Strafe_Left Validating asset
+[2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Strafe_1_ Validating asset
+[2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Strafe Validating asset
+[2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Crouch_Run_Backwards Validating asset
+[2026.03.30-17.16.24:574][528]AssetCheck: /Game/ModelsAndAnimations/Enemy/Animations/Rifle_Run Validating asset
