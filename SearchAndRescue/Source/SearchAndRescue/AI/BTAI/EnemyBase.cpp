@@ -36,6 +36,22 @@ void AEnemyBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//How long the current spline has been going for.
+	float fCurrentSplineTime = (Count - StartTime) / splineController->getTotalPathTimeController();
+
+	//Find the distance we are along the spline
+	float fDistance = splineController->getSpline()->GetSplineLength();
+
+	//Translate that distance into world space. Then move the sphere to it.
+	FVector fvPosition = splineController->getSpline()->GetLocationAtDistanceAlongSpline(fDistance, ESplineCoordinateSpace::World);
+	SphereStore->SetActorLocation(fvPosition);
+
+	//Rotate the cube in world space.
+	FVector Direction = splineController->getSpline()->GetDirectionAtDistanceAlongSpline(fDistance, ESplineCoordinateSpace::World);
+	FRotator Rotator = FRotationMatrix::MakeFromX(Direction).Rotator();
+	SphereStore->SetActorRotation(Rotator);
+
+	Count += 1.0f * DeltaTime;
 }
 
 // Called to bind functionality to input

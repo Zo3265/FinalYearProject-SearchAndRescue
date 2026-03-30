@@ -27,6 +27,8 @@ protected:
 	UPROPERTY()
 	AActor* SphereStore; //Stores the sphere of the enemey.
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Variables")
+	float fHealth = 100.0f;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
