@@ -22,7 +22,7 @@ void ABTEnemyAIControllerBase::OnPossess(APawn* InPawn)
 
 		if (ChildActor != nullptr)
 		{
-			//Get the actual child actor..
+			//Get the actual child actor.
 			SphereStore = ChildActor->GetChildActor();
 		}
 	}
@@ -43,5 +43,8 @@ void ABTEnemyAIControllerBase::BeginPlay()
 void ABTEnemyAIControllerBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	//Default behaviour is to patrol
+	GetBlackboardComponent()->SetValueAsObject(TEXT("SplineMovementActor"), SphereStore);
 
 }

@@ -1521,3 +1521,256 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.04.01-11.30.12:419][304]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1292.503662
 [2026.04.01-11.30.13:420][307]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2026.04.01-11.30.13:420][307]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1293.172119, Update Interval: 307.236542
+[2026.04.01-11.33.36:068][195]LogContentBrowser: Deferred new asset file creation: NewBehaviorTree
+[2026.04.01-11.33.36:075][195]LogContentBrowser: Creating deferred item: NewBehaviorTree
+[2026.04.01-11.33.36:094][196]LogContentBrowser: Renaming the item being created (Deferred Item: NewBehaviorTree).
+[2026.04.01-11.33.47:788][467]LogContentBrowser: Attempting asset rename: NewBehaviorTree -> BT_EnemyAIBase
+[2026.04.01-11.33.47:803][467]LogContentBrowser: End creating deferred item NewBehaviorTree
+[2026.04.01-11.33.55:701][633]LogContentBrowser: Deferred new asset file creation: NewBlackboardData
+[2026.04.01-11.33.55:709][633]LogContentBrowser: Creating deferred item: NewBlackboardData
+[2026.04.01-11.33.55:724][634]LogContentBrowser: Renaming the item being created (Deferred Item: NewBlackboardData).
+[2026.04.01-11.34.18:322][179]LogContentBrowser: Attempting asset rename: NewBlackboardData -> BB_Enemy
+[2026.04.01-11.34.18:324][179]LogContentBrowser: End creating deferred item NewBlackboardData
+[2026.04.01-11.34.28:137][400]LogContentBrowser: Attempting asset rename: BT_EnemyAIBase -> BT_EnemyAI
+[2026.04.01-11.34.28:417][400]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.34.28:418][400]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BT_EnemyAI] ([1] browsable assets)...
+[2026.04.01-11.34.28:419][400]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BT_EnemyAI]
+[2026.04.01-11.34.28:420][400]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BT_EnemyAI" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset" SILENT=true
+[2026.04.01-11.34.28:436][400]LogSavePackage: Moving output files for package: /Game/AI/BT_EnemyAI
+[2026.04.01-11.34.28:437][400]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BT_EnemyAIB54468764414E8A9E02C63B451092608.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset'
+[2026.04.01-11.34.28:446][400]LogFileHelpers: InternalPromptForCheckoutAndSave took 29.873 ms
+[2026.04.01-11.34.28:483][400]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2026.04.01-11.34.28:496][400]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2026.04.01-11.34.28:510][400]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2026.04.01-11.34.28:591][400]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.34.28:591][400]LogContentValidation: Enabled validators:
+[2026.04.01-11.34.28:591][400]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.34.28:591][400]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.34.28:591][400]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.34.28:592][400]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.34.28:592][400]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.34.28:592][400]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.34.28:593][400]AssetCheck: /Game/AI/BT_EnemyAI Validating asset
+[2026.04.01-11.34.32:801][492]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2026.04.01-11.34.32:806][492]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.34.32:872][492]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BB_Enemy] ([1] browsable assets)...
+[2026.04.01-11.34.32:872][492]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BB_Enemy]
+[2026.04.01-11.34.32:872][492]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BB_Enemy" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BB_Enemy.uasset" SILENT=true
+[2026.04.01-11.34.32:874][492]LogSavePackage: Moving output files for package: /Game/AI/BB_Enemy
+[2026.04.01-11.34.32:874][492]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BB_Enemy94BD4E094EA57A5162470681FE3B87B0.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BB_Enemy.uasset'
+[2026.04.01-11.34.32:891][492]LogFileHelpers: InternalPromptForCheckoutAndSave took 84.738 ms (total: 114.612 ms)
+[2026.04.01-11.34.32:954][492]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.34.32:954][492]LogContentValidation: Enabled validators:
+[2026.04.01-11.34.32:954][492]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.34.32:954][492]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.34.32:954][492]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.34.32:954][492]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.34.32:954][492]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.34.32:954][492]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.34.32:954][492]AssetCheck: /Game/AI/BB_Enemy Validating asset
+[2026.04.01-11.34.40:198][650]LogAssetEditorSubsystem: Opening Asset editor for BlackboardData /Game/AI/BB_Enemy.BB_Enemy
+[2026.04.01-11.35.50:084][ 24]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1630.168579
+[2026.04.01-11.35.50:372][ 29]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-11.35.50:372][ 29]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1630.408203, Update Interval: 354.048889
+[2026.04.01-11.36.15:249][549]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.36.15:339][549]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BB_Enemy] ([1] browsable assets)...
+[2026.04.01-11.36.15:339][549]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BB_Enemy]
+[2026.04.01-11.36.15:340][549]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BB_Enemy" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BB_Enemy.uasset" SILENT=true
+[2026.04.01-11.36.15:341][549]LogSavePackage: Moving output files for package: /Game/AI/BB_Enemy
+[2026.04.01-11.36.15:343][549]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BB_Enemy7BA02DB640D16A1C7900E79A19648CA6.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BB_Enemy.uasset'
+[2026.04.01-11.36.15:360][549]LogFileHelpers: InternalPromptForCheckoutAndSave took 110.476 ms (total: 225.089 ms)
+[2026.04.01-11.36.15:424][549]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.36.15:424][549]LogContentValidation: Enabled validators:
+[2026.04.01-11.36.15:424][549]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.36.15:424][549]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.36.15:424][549]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.36.15:424][549]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.36.15:424][549]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.36.15:424][549]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.36.15:424][549]AssetCheck: /Game/AI/BB_Enemy Validating asset
+[2026.04.01-11.36.18:297][608]LogAssetEditorSubsystem: Opening Asset editor for BehaviorTree /Game/AI/BT_EnemyAI.BT_EnemyAI
+[2026.04.01-11.37.15:995][754]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.37.16:097][754]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BT_EnemyAI] ([1] browsable assets)...
+[2026.04.01-11.37.16:098][754]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BT_EnemyAI]
+[2026.04.01-11.37.16:098][754]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BT_EnemyAI" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset" SILENT=true
+[2026.04.01-11.37.16:101][754]LogSavePackage: Moving output files for package: /Game/AI/BT_EnemyAI
+[2026.04.01-11.37.16:103][754]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BT_EnemyAIB24EDFB545B8D7B0C698ECB642C7049F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset'
+[2026.04.01-11.37.16:122][754]LogFileHelpers: InternalPromptForCheckoutAndSave took 127.636 ms (total: 352.726 ms)
+[2026.04.01-11.37.16:181][754]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.37.16:181][754]LogContentValidation: Enabled validators:
+[2026.04.01-11.37.16:181][754]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.37.16:181][754]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.37.16:181][754]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.37.16:181][754]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.37.16:181][754]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.37.16:181][754]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.37.16:181][754]AssetCheck: /Game/AI/BT_EnemyAI Validating asset
+[2026.04.01-11.37.58:015][234]LogSlate: Took 0.000266 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2026.04.01-11.38.45:288][857]LogSlate: Window 'Message' being destroyed
+[2026.04.01-11.38.45:302][857]Message dialog closed, result: Yes, title: Message, text: BB_Enemy already exists. Do you want to replace it?
+[2026.04.01-11.38.45:302][857]LogSlate: Window 'Save Asset As' being destroyed
+[2026.04.01-11.38.48:186][857]LogSlate: Window 'Overwrite Existing Object' being destroyed
+[2026.04.01-11.38.51:755][857]LogSlate: Window 'Message' being destroyed
+[2026.04.01-11.38.51:771][857]Message dialog closed, result: Ok, title: Message, text: BlackboardData /Game/AI/BB_Enemy.BB_Enemy is in use.
+
+---
+Running the editor with '-NoLoadStartupPackages' may help if the object is loaded at startup.
+---
+
+
+External referencers of BlackboardData /Game/AI/BB_Enemy.BB_Enemy:
+   BehaviorTree /Game/AI/BT_EnemyAI.BT_EnemyAI (standalone) (1)
+      0) ObjectProperty /Script/AIModule.BehaviorTree:BlackboardAsset
+   BehaviorTreeGraphNode_Root /Game/AI/BT_EnemyAI.BT_EnemyAI:Behavior Tree.BehaviorTreeGraphNode_Root_0 (1)
+      0) ObjectProperty /Script/BehaviorTreeEditor.BehaviorTreeGraphNode_Root:BlackboardAsset
+
+
+[2026.04.01-11.38.53:220][857]LogSlate: Window 'Message' being destroyed
+[2026.04.01-11.38.53:235][857]Message dialog closed, result: Ok, title: Message, text: BB_Enemy wasn't created.
+
+The asset is referenced by other content.
+[2026.04.01-11.38.57:140][947]LogAssetEditorSubsystem: Opening Asset editor for BlackboardData /Game/AI/BB_Enemy.BB_Enemy
+[2026.04.01-11.39.04:962][105]LogSlate: Window 'BT_EnemyAI' being destroyed
+[2026.04.01-11.39.05:047][105]LogSlate: Window 'BT_EnemyAI' being destroyed
+[2026.04.01-11.39.08:114][165]LogUObjectHash: Compacting FUObjectHashTables data took   0.94ms
+[2026.04.01-11.39.11:927][165]LogSlate: Window 'Delete Assets' being destroyed
+[2026.04.01-11.39.11:983][165]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/AI/BB_Enemy.BB_Enemy
+	Asset Type: BlackboardData
+[2026.04.01-11.39.12:150][165]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.04.01-11.39.12:161][165]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2026.04.01-11.39.12:172][165]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2026.04.01-11.39.13:920][208]LogAssetEditorSubsystem: Opening Asset editor for BehaviorTree /Game/AI/BT_EnemyAI.BT_EnemyAI
+[2026.04.01-11.39.14:040][208]LogBehaviorTree: Warning: Can't initialize task: BTTask_MoveTo_0, make sure that behavior tree specifies blackboard asset!
+[2026.04.01-11.39.17:091][265]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2026.04.01-11.39.17:096][265]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.39.17:158][265]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BT_EnemyAI] ([1] browsable assets)...
+[2026.04.01-11.39.17:158][265]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BT_EnemyAI]
+[2026.04.01-11.39.17:158][265]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BT_EnemyAI" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset" SILENT=true
+[2026.04.01-11.39.17:160][265]LogSavePackage: Moving output files for package: /Game/AI/BT_EnemyAI
+[2026.04.01-11.39.17:161][265]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BT_EnemyAIF98B46004ED4B5CA7A3B549E7309C1E4.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset'
+[2026.04.01-11.39.17:176][265]LogFileHelpers: InternalPromptForCheckoutAndSave took 80.244 ms (total: 432.971 ms)
+[2026.04.01-11.39.17:225][265]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.39.17:225][265]LogContentValidation: Enabled validators:
+[2026.04.01-11.39.17:225][265]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.39.17:225][265]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.39.17:225][265]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.39.17:225][265]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.39.17:225][265]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.39.17:225][265]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.39.17:225][265]AssetCheck: /Game/AI/BT_EnemyAI Validating asset
+[2026.04.01-11.39.28:244][278]LogSlate: Window 'Save Asset As' being destroyed
+[2026.04.01-11.39.28:261][278]LogBehaviorTree: Warning: Can't initialize task: BTTask_MoveTo_0, make sure that behavior tree specifies blackboard asset!
+[2026.04.01-11.41.18:104][370]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-11.41.49:720][ 27]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_1.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_1.exp
+[2026.04.01-11.41.50:313][ 29]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2026.04.01-11.41.50:378][ 30]Display: Reload/Re-instancing Complete: 1 package changed, 4 classes unchanged
+[2026.04.01-11.41.50:378][ 30]LogLiveCoding: Display: Live coding succeeded
+[2026.04.01-11.42.04:601][322]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.42.04:702][322]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BT_EnemyAI] ([1] browsable assets)...
+[2026.04.01-11.42.04:702][322]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BT_EnemyAI]
+[2026.04.01-11.42.04:702][322]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BT_EnemyAI" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset" SILENT=true
+[2026.04.01-11.42.04:704][322]LogSavePackage: Moving output files for package: /Game/AI/BT_EnemyAI
+[2026.04.01-11.42.04:706][322]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BT_EnemyAI141660504EF3FCE0D149EAB2C6991112.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset'
+[2026.04.01-11.42.04:723][322]LogFileHelpers: InternalPromptForCheckoutAndSave took 122.336 ms (total: 555.308 ms)
+[2026.04.01-11.42.04:780][322]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.42.04:780][322]LogContentValidation: Enabled validators:
+[2026.04.01-11.42.04:780][322]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.42.04:780][322]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.42.04:780][322]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.42.04:782][322]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.42.04:782][322]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.42.04:782][322]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.42.04:782][322]AssetCheck: /Game/AI/BT_EnemyAI Validating asset
+[2026.04.01-11.42.18:757][607]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2018.840088
+[2026.04.01-11.42.18:984][612]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-11.42.18:984][612]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2019.027466, Update Interval: 308.642853
+[2026.04.01-11.42.42:225][104]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.42.42:313][104]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BT_EnemyAI] ([1] browsable assets)...
+[2026.04.01-11.42.42:313][104]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BT_EnemyAI]
+[2026.04.01-11.42.42:313][104]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BT_EnemyAI" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset" SILENT=true
+[2026.04.01-11.42.42:316][104]LogSavePackage: Moving output files for package: /Game/AI/BT_EnemyAI
+[2026.04.01-11.42.42:318][104]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BT_EnemyAIB03DB8014F2D49E0861B5E954210A74C.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BT_EnemyAI.uasset'
+[2026.04.01-11.42.42:337][104]LogFileHelpers: InternalPromptForCheckoutAndSave took 112.803 ms (total: 668.111 ms)
+[2026.04.01-11.42.42:397][104]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.42.42:397][104]LogContentValidation: Enabled validators:
+[2026.04.01-11.42.42:397][104]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.42.42:397][104]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.42.42:397][104]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.42.42:397][104]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.42.42:397][104]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.42.42:397][104]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.42.42:397][104]AssetCheck: /Game/AI/BT_EnemyAI Validating asset
+[2026.04.01-11.42.49:340][243]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2026.04.01-11.42.49:347][243]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.42.49:412][243]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BB_Enemy] ([1] browsable assets)...
+[2026.04.01-11.42.49:412][243]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BB_Enemy]
+[2026.04.01-11.42.49:412][243]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BB_Enemy" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BB_Enemy.uasset" SILENT=true
+[2026.04.01-11.42.49:413][243]LogSavePackage: Moving output files for package: /Game/AI/BB_Enemy
+[2026.04.01-11.42.49:413][243]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BB_Enemy9CCF7B814210A7EF680CCFA887C31FBC.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BB_Enemy.uasset'
+[2026.04.01-11.42.49:427][243]LogFileHelpers: InternalPromptForCheckoutAndSave took 80.766 ms (total: 748.878 ms)
+[2026.04.01-11.42.49:490][243]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.42.49:490][243]LogContentValidation: Enabled validators:
+[2026.04.01-11.42.49:490][243]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.42.49:490][243]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.42.49:490][243]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.42.49:490][243]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.42.49:490][243]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.42.49:490][243]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.42.49:490][243]AssetCheck: /Game/AI/BB_Enemy Validating asset
+[2026.04.01-11.44.12:191][570]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-11.44.34:535][996]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.exp
+[2026.04.01-11.44.35:077][999]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2026.04.01-11.44.35:156][  0]Display: Reload/Re-instancing Complete: 1 package changed, 4 classes unchanged
+[2026.04.01-11.44.35:156][  0]LogLiveCoding: Display: Live coding succeeded
+[2026.04.01-11.44.42:926][146]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.01-11.45.05:400][567]LogPackageName: SearchForPackageOnDisk took   0.000s, but failed to resolve /Game/AI/BP_BTEnemyAIControllerBase.
+[2026.04.01-11.45.05:417][567]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase
+[2026.04.01-11.45.05:418][567]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_5
+[2026.04.01-11.45.05:419][567]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_5'.
+[2026.04.01-11.45.05:549][567]LogStreaming: Display: FlushAsyncLoading(406): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.01-11.45.08:274][567]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.04.01-11.45.13:998][648]LogUObjectHash: Compacting FUObjectHashTables data took   2.13ms
+[2026.04.01-11.45.14:778][660]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.45.14:892][660]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_BTEnemyAIControllerBase] ([2] browsable assets)...
+[2026.04.01-11.45.14:892][660]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_BTEnemyAIControllerBase]
+[2026.04.01-11.45.14:901][660]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase_C' for saving '/Game/AI/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase_C'
+[2026.04.01-11.45.14:901][660]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase_C' for saving '/Game/AI/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase_C'
+[2026.04.01-11.45.14:903][660]LogSavePackage: Moving output files for package: /Game/AI/BP_BTEnemyAIControllerBase
+[2026.04.01-11.45.14:903][660]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_BTEnemyAIControllerBaseC17D6DDC4C927C4B1200BB9F09BAEF9B.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_BTEnemyAIControllerBase.uasset'
+[2026.04.01-11.45.14:905][660]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/BP_BTEnemyAIControllerBase.
+[2026.04.01-11.45.14:923][660]LogFileHelpers: InternalPromptForCheckoutAndSave took 145.462 ms (total: 894.340 ms)
+[2026.04.01-11.45.14:988][660]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-11.45.14:988][660]LogContentValidation: Enabled validators:
+[2026.04.01-11.45.14:988][660]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.45.14:988][660]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.45.14:988][660]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.45.14:988][660]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.45.14:988][660]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.45.14:988][660]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.45.14:988][660]AssetCheck: /Game/AI/BP_BTEnemyAIControllerBase Validating asset
+[2026.04.01-11.45.34:799][ 13]LogActorFactory: Actor Factory attempting to spawn Class /Script/NavigationSystem.NavMeshBoundsVolume
+[2026.04.01-11.45.34:799][ 13]LogActorFactory: Actor Factory attempting to spawn Class /Script/NavigationSystem.NavMeshBoundsVolume
+[2026.04.01-11.45.34:806][ 13]LogActorFactory: Actor Factory spawned Class /Script/NavigationSystem.NavMeshBoundsVolume as actor: NavMeshBoundsVolume /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.NavMeshBoundsVolume_UAID_84144D205DD172CD02_1942694040
+[2026.04.01-11.45.34:813][ 13]LogActorFactory: Actor Factory spawned Class /Script/NavigationSystem.NavMeshBoundsVolume as actor: NavMeshBoundsVolume /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.NavMeshBoundsVolume_UAID_84144D205DD172CD02_1942694040
+[2026.04.01-11.45.59:366][463]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2026.04.01-11.45.59:372][463]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-11.45.59:440][463]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/O1/41J2IV6BKIXRBCZ7UF2VCM
+[2026.04.01-11.45.59:440][463]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/41J2IV6BKIXRBCZ7UF2VCME91071644EA35FFEC74421A5759FE507.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/O1/41J2IV6BKIXRBCZ7UF2VCM.uasset'
+[2026.04.01-11.45.59:449][463]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/3B/FC5GW9X3LPP9Z3QLQ4L4IY
+[2026.04.01-11.45.59:449][463]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/FC5GW9X3LPP9Z3QLQ4L4IY3B374D3047543922C7CFAE9DD9D126B5.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/3B/FC5GW9X3LPP9Z3QLQ4L4IY.uasset'
+[2026.04.01-11.45.59:481][463]LogFileHelpers: InternalPromptForCheckoutAndSave took 109.296 ms (total: 1.00 sec)
+[2026.04.01-11.45.59:545][463]LogContentValidation: Display: Starting to validate 2 assets
+[2026.04.01-11.45.59:545][463]LogContentValidation: Enabled validators:
+[2026.04.01-11.45.59:545][463]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-11.45.59:545][463]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-11.45.59:545][463]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-11.45.59:545][463]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-11.45.59:545][463]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-11.45.59:545][463]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-11.45.59:545][463]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
+[2026.04.01-11.45.59:565][463]LogNavigation: Warning: ConstructTiledNavMesh: Failed to create navmesh of size 0.
+[2026.04.01-11.46.01:978][507]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_6
+[2026.04.01-11.46.01:978][507]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_6'.
+[2026.04.01-11.46.02:089][508]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_7
+[2026.04.01-11.46.02:089][508]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_7'.
