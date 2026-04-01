@@ -4432,3 +4432,144 @@ Sampler Limit: 16
 [2026.04.01-15.08.00:807][116]LogEditorActor: Deleted Actor: GunTest_C
 [2026.04.01-15.08.00:865][116]LogUObjectHash: Compacting FUObjectHashTables data took   2.53ms
 [2026.04.01-15.08.00:869][116]LogEditorActor: Deleted 1 Actors (0.066 secs)
+[2026.04.01-15.08.25:276][220]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2026.04.01-15.08.25:286][220]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/8C/EAHCBN229IT8APJO305AH5_Auto1
+[2026.04.01-15.08.25:286][220]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/EAHCBN229IT8APJO305AH5_Auto1590AE5D5451ABBEE0867B0A168536C93.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/8C/EAHCBN229IT8APJO305AH5_Auto1.uasset'
+[2026.04.01-15.08.25:288][220]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/FirstPersonMap' took 0.042
+[2026.04.01-15.08.25:288][220]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.042
+[2026.04.01-15.09.55:770][273]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low.sniper_barrel_low
+[2026.04.01-15.09.55:815][273]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_15
+[2026.04.01-15.09.55:817][273]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_15'.
+[2026.04.01-15.10.38:911][721]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-15.10.39:021][721]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low] ([1] browsable assets)...
+[2026.04.01-15.10.39:057][721]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low.sniper_barrel_low]
+[2026.04.01-15.10.39:057][721]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low]
+[2026.04.01-15.10.39:076][721]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low
+[2026.04.01-15.10.39:078][721]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/sniper_barrel_low5CF4BED6492970EB7230D4BD3CBBD8B4.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low.uasset'
+[2026.04.01-15.10.39:101][721]LogFileHelpers: InternalPromptForCheckoutAndSave took 189.889 ms (total: 7.03 sec)
+[2026.04.01-15.10.39:161][721]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-15.10.39:161][721]LogContentValidation: Enabled validators:
+[2026.04.01-15.10.39:161][721]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-15.10.39:161][721]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-15.10.39:161][721]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-15.10.39:161][721]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-15.10.39:161][721]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-15.10.39:161][721]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-15.10.39:161][721]AssetCheck: /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low Validating asset
+[2026.04.01-15.11.55:077][964]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.01-15.11.55:192][964]Using bundled DotNet SDK version: 8.0.300
+[2026.04.01-15.11.55:192][964]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.01-15.11.56:319][964]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.04.01-15.11.56:621][964]
+[2026.04.01-15.11.56:621][964]Generating VisualStudio2022 project files:
+[2026.04.01-15.11.56:621][964]Discovering modules, targets and source code for project...
+[2026.04.01-15.11.57:125][964]Available x64 toolchains (3):
+[2026.04.01-15.11.57:125][964] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.01-15.11.57:125][964]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.11.57:125][964] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.01-15.11.57:125][964]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.11.57:125][964] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.01-15.11.57:125][964]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.11.57:125][964]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.01-15.12.02:055][964]Binding IntelliSense data...
+[2026.04.01-15.12.08:805][964]Binding IntelliSense data... 100%
+[2026.04.01-15.12.08:805][964]Writing project files...
+[2026.04.01-15.12.12:731][964]Writing project files... 100%
+[2026.04.01-15.12.12:831][964]
+[2026.04.01-15.12.12:831][964]Generating QueryTargets data for editor...
+[2026.04.01-15.12.12:831][964]Total execution time: 17.44 seconds
+[2026.04.01-15.12.13:242][964]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.12.14:073][964]LogVSAccessor: Warning: Couldn't goto line number '1' in 'C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/Weapons/SniperRifle.cpp'.
+[2026.04.01-15.12.14:074][964]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.04.01-15.12.14:122][964]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1707.662720
+[2026.04.01-15.12.14:795][967]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-15.12.14:795][967]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1708.003418, Update Interval: 331.795410
+[2026.04.01-15.12.25:468][999]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.01-15.12.25:468][999]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.01-15.12.47:465][162]LogUObjectHash: Compacting FUObjectHashTables data took   2.32ms
+[2026.04.01-15.12.47:473][162]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-15.12.47:580][162]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2026.04.01-15.12.47:611][162]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2026.04.01-15.12.47:645][162]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2026.04.01-15.12.47:650][162]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/8C/EAHCBN229IT8APJO305AH5
+[2026.04.01-15.12.47:651][162]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/EAHCBN229IT8APJO305AH5B471A52047F4094A5018F6AD52F3A9FF.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/5/8C/EAHCBN229IT8APJO305AH5.uasset'
+[2026.04.01-15.12.47:675][162]LogFileHelpers: InternalPromptForCheckoutAndSave took 202.528 ms (total: 7.23 sec)
+[2026.04.01-15.12.47:742][162]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-15.12.47:742][162]LogContentValidation: Enabled validators:
+[2026.04.01-15.12.47:742][162]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-15.12.47:742][162]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-15.12.47:742][162]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-15.12.47:742][162]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-15.12.47:742][162]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-15.12.47:742][162]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-15.12.47:742][162]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
+[2026.04.01-15.12.52:050][249]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.13.07:567][542]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_0.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_0.exp
+[2026.04.01-15.13.08:057][545]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.01-15.13.08:057][545]LogClass: Could not find existing class SniperRifle in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.01-15.13.08:163][545]LogUObjectHash: Compacting FUObjectHashTables data took   2.66ms
+[2026.04.01-15.13.09:011][546]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new
+[2026.04.01-15.13.09:011][546]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.01-15.13.57:305][421]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.01-15.13.57:411][421]Using bundled DotNet SDK version: 8.0.300
+[2026.04.01-15.13.57:411][421]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.01-15.13.58:216][421]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.04.01-15.13.58:417][421]
+[2026.04.01-15.13.58:417][421]Generating VisualStudio2022 project files:
+[2026.04.01-15.13.58:417][421]Discovering modules, targets and source code for project...
+[2026.04.01-15.13.58:820][421]Available x64 toolchains (3):
+[2026.04.01-15.13.58:820][421] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.01-15.13.58:820][421]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.13.58:820][421] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.01-15.13.58:820][421]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.13.58:820][421] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.01-15.13.58:820][421]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.13.58:820][421]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.01-15.14.03:650][421]Binding IntelliSense data...
+[2026.04.01-15.14.09:389][421]Binding IntelliSense data... 100%
+[2026.04.01-15.14.09:389][421]Writing project files...
+[2026.04.01-15.14.13:615][421]Writing project files... 100%
+[2026.04.01-15.14.13:615][421]
+[2026.04.01-15.14.13:615][421]Generating QueryTargets data for editor...
+[2026.04.01-15.14.13:615][421]Total execution time: 16.06 seconds
+[2026.04.01-15.14.14:021][421]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.14.14:265][421]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.04.01-15.14.33:923][650]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.01-15.14.33:923][650]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.01-15.15.01:901][768]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.15.13:679][960]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_1.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_1.exp
+[2026.04.01-15.15.14:054][962]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.01-15.15.14:054][962]LogClass: Could not find existing class WeaponBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.01-15.15.14:571][962]LogUObjectHash: Compacting FUObjectHashTables data took   2.49ms
+[2026.04.01-15.15.15:278][963]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 1 class unchanged
+[2026.04.01-15.15.15:278][963]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.01-15.15.42:522][481]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.01-15.15.42:630][481]Using bundled DotNet SDK version: 8.0.300
+[2026.04.01-15.15.42:630][481]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.01-15.15.43:642][481]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.04.01-15.15.43:947][481]
+[2026.04.01-15.15.43:947][481]Generating VisualStudio2022 project files:
+[2026.04.01-15.15.43:947][481]Discovering modules, targets and source code for project...
+[2026.04.01-15.15.44:448][481]Available x64 toolchains (3):
+[2026.04.01-15.15.44:448][481] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.01-15.15.44:448][481]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.15.44:448][481] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.01-15.15.44:448][481]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.15.44:448][481] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.01-15.15.44:448][481]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.01-15.15.44:448][481]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.01-15.15.49:782][481]Binding IntelliSense data...
+[2026.04.01-15.15.55:952][481]Binding IntelliSense data... 100%
+[2026.04.01-15.15.55:952][481]Writing project files...
+[2026.04.01-15.16.01:154][481]Writing project files... 100%
+[2026.04.01-15.16.01:154][481]
+[2026.04.01-15.16.01:154][481]Generating QueryTargets data for editor...
+[2026.04.01-15.16.01:154][481]Total execution time: 18.41 seconds
+[2026.04.01-15.16.01:663][481]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.16.02:142][481]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.04.01-15.16.18:778][561]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.exp
+[2026.04.01-15.16.19:207][561]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.01-15.16.19:213][561]LogClass: Could not find existing class BulletBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.01-15.16.19:625][561]LogUObjectHash: Compacting FUObjectHashTables data took   2.66ms
+[2026.04.01-15.16.20:293][562]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 2 classes unchanged
+[2026.04.01-15.16.20:293][562]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types

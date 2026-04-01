@@ -85,5 +85,26 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\Public\DummyClass.h">
       <Filter>Source\SearchAndRescue\Public</Filter>
     </ClCompile>
+    <Filter Include="Source\SearchAndRescue\Weapons">
+      <UniqueIdentifier>{5F37DD63-35CE-31B8-8FC1-F48198423E6F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\BulletBase.cpp">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\BulletBase.h">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\SniperRifle.cpp">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\SniperRifle.h">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\WeaponBase.cpp">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\WeaponBase.h">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
