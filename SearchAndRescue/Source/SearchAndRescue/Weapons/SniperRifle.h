@@ -20,12 +20,19 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	FTimerHandle ReloadTimer;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void Reload();
+	bool bReloading = false;
+	bool bCanFire = true;
 private:
-	int iMagCount; //Ammo Count
-	int iMaxAmmo;//Maximum Ammo Allowed
+	int iCurrentMagCount; //Current Ammo in gun
+	int iCurrentAmmoReserve; //Current Ammo Reserve
+	int iMaxMagCount; //Maximum ammo allowed in magazine
+	int iMaxAmmoReserve; //Maximum ammo allowed as reserve
+	float Count;
 
 };

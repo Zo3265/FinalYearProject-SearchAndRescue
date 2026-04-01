@@ -23,8 +23,8 @@ ABulletBase::ABulletBase()
     ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
     //ProjectileMovement->SetUpdatedComponent(Mesh); //This is telling the projectile movement to move the mesh specifically.
 
-    ProjectileMovement->InitialSpeed = 3000.f;
-    ProjectileMovement->MaxSpeed = 3000.f;
+    ProjectileMovement->InitialSpeed = 1000.f;
+    ProjectileMovement->MaxSpeed = 1000.f;
     ProjectileMovement->bRotationFollowsVelocity = true;
     ProjectileMovement->bShouldBounce = false;
     ProjectileMovement->Bounciness = 0.0f;
