@@ -61,6 +61,12 @@
     <Filter Include="Source\SearchAndRescue\AI\BTAI">
       <UniqueIdentifier>{FC7C085F-C136-31D3-8638-646E6BE83061}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\BTEnemyAIControllerBase.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\BTEnemyAIControllerBase.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\EnemyBase.cpp">
       <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
     </ClCompile>
