@@ -30,7 +30,7 @@ protected:
 	TSubclassOf<ABulletBase> BulletClass;
 
 	UPROPERTY()
-	ABulletBase* SniperBullet;
+	ABulletBase* Bullet;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

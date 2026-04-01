@@ -10,9 +10,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeSniperRifle() {}
 
 // Begin Cross Module References
-ENGINE_API UClass* Z_Construct_UClass_AActor();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperRifle();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperRifle_NoRegister();
+SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWeaponBase();
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
 // End Cross Module References
 
@@ -40,7 +40,7 @@ struct Z_Construct_UClass_ASniperRifle_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 UObject* (*const Z_Construct_UClass_ASniperRifle_Statics::DependentSingletons[])() = {
-	(UObject* (*)())Z_Construct_UClass_AActor,
+	(UObject* (*)())Z_Construct_UClass_AWeaponBase,
 	(UObject* (*)())Z_Construct_UPackage__Script_SearchAndRescue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASniperRifle_Statics::DependentSingletons) < 16);
@@ -79,10 +79,10 @@ ASniperRifle::~ASniperRifle() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_SniperRifle_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASniperRifle, ASniperRifle::StaticClass, TEXT("ASniperRifle"), &Z_Registration_Info_UClass_ASniperRifle, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperRifle), 2762015386U) },
+		{ Z_Construct_UClass_ASniperRifle, ASniperRifle::StaticClass, TEXT("ASniperRifle"), &Z_Registration_Info_UClass_ASniperRifle, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperRifle), 1911159119U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_SniperRifle_h_2604740111(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_SniperRifle_h_3580209206(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_SniperRifle_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_SniperRifle_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
