@@ -29,6 +29,10 @@ void AEnemyBase::BeginPlay()
 		StartTime = GetWorld()->GetTimeSeconds();
 		Count = GetWorld()->GetTimeSeconds();
 	}
+
+	//Set the speed of the character proportional to the splines length. Except a little slower so we don't get jittery movement. 
+	float Speed = splineController->getSpline()->GetSplineLength() / splineController->getTotalPathTimeController();
+	GetCharacterMovement()->MaxWalkSpeed = Speed - 20.0f;
 }
 
 // Called every frame
@@ -53,11 +57,11 @@ void AEnemyBase::Tick(float DeltaTime)
 		//Find the distance we are along the spline.
 		float Distance = splineController->getSpline()->GetSplineLength() * CurrentSplineTime;
 
-		//Translate that distance into world space. Then move the cube to it,
+		//Translate that distance into world space. Then move the sphere to it,
 		FVector Position = splineController->getSpline()->GetLocationAtDistanceAlongSpline(Distance, ESplineCoordinateSpace::World);
 		SphereStore->SetActorLocation(Position);
 
-		//Rotate the cube in world space.
+		//Rotate the sphere in world space.
 		FVector Direction = splineController->getSpline()->GetDirectionAtDistanceAlongSpline(Distance, ESplineCoordinateSpace::World);
 		FRotator Rotator = FRotationMatrix::MakeFromX(Direction).Rotator();
 		SphereStore->SetActorRotation(Rotator);

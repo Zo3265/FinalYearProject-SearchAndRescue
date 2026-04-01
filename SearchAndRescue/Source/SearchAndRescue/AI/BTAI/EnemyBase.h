@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "SearchAndRescue/AI/SplineController.h"
 #include "EnemyBase.generated.h"
 
