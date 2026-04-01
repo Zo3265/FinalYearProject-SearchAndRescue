@@ -4573,3 +4573,67 @@ Sampler Limit: 16
 [2026.04.01-15.16.19:625][561]LogUObjectHash: Compacting FUObjectHashTables data took   2.66ms
 [2026.04.01-15.16.20:293][562]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 2 classes unchanged
 [2026.04.01-15.16.20:293][562]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: request failed, libcurl error: 65 (Send failed since rewinding of the data stream failed)
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 0 (Found bundle for host: 0x4577f8407e0 [serially])
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 1 (Re-using existing connection with host datarouter.ol.epicgames.com)
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 2 (We are completely uploaded and fine)
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 3 (TLSv1.3 (IN), TLS alert, close notify (256):)
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 4 (Connection died, retrying a fresh connect (retry count: 1))
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 5 (state.rewindbeforesend = TRUE)
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 6 (Closing connection)
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 7 (TLSv1.3 (OUT), TLS alert, close notify (256):)
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 8 (Issue another request to this URL: 'https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B81A03BDC-486C-3E2C-1AB2-DA85C35F63D1%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.5.4-40574608%2B%2B%2BUE5%2BRelease-5.5&UserID=3c53b41a494a7d9fae6f4ea73c314c8e%7Cc1a5e162838d4a29b8c5fa83f2d3c0b2%7Ccfaa9abb-99fa-45e5-958e-08fc082674e3&AppEnvironment=datacollector-binary&UploadType=eteventstream')
+[2026.04.01-15.17.52:465][977]LogHttp: Warning: 0000045827C90000: libcurl info message cache 9 (  Trying 34.239.39.145:443...)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 10 (Connected to datarouter.ol.epicgames.com (34.239.39.145) port 443)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 11 (ALPN: curl offers http/1.1)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 12 (SSL reusing session ID)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 13 (TLSv1.3 (OUT), TLS handshake, Client hello (1):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 14 (TLSv1.3 (IN), TLS handshake, Server hello (2):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 15 (TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 16 (TLSv1.3 (IN), TLS handshake, Certificate (11):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 17 (TLSv1.3 (IN), TLS handshake, CERT verify (15):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 18 (TLSv1.3 (IN), TLS handshake, Finished (20):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 19 (TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 20 (TLSv1.3 (OUT), TLS handshake, Finished (20):)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 21 (SSL connection using TLSv1.3 / TLS_AES_128_GCM_SHA256)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 22 (ALPN: server accepted http/1.1)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 23 (Server certificate:)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 24 ( subject: CN=datarouter.cfef.live.use1a.on.epicgames.com)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 25 ( start date: Jan  3 00:00:00 2026 GMT)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 26 ( expire date: Feb  1 23:59:59 2027 GMT)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 27 ( subjectAltName: host "datarouter.ol.epicgames.com" matched cert's "datarouter.ol.epicgames.com")
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 28 ( issuer: C=US; O=Amazon; CN=Amazon RSA 2048 M04)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 29 ( SSL certificate verify ok.)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 30 (using HTTP/1.1)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 31 (necessary data rewind wasn't possible)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 32 (Closing connection)
+[2026.04.01-15.17.52:465][978]LogHttp: Warning: 0000045827C90000: libcurl info message cache 33 (TLSv1.3 (OUT), TLS alert, close notify (256):)
+[2026.04.01-15.18.16:802][ 50]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2070.344482
+[2026.04.01-15.18.17:803][ 53]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-15.18.17:803][ 53]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2071.010742, Update Interval: 310.267029
+[2026.04.01-15.23.58:715][473]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2412.260498
+[2026.04.01-15.23.59:717][476]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-15.23.59:717][476]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2412.923584, Update Interval: 348.057495
+[2026.04.01-15.30.04:713][595]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.30.10:959][691]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.01-15.30.10:959][691]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.01-15.30.47:445][859]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2820.993408
+[2026.04.01-15.30.48:445][862]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-15.30.48:445][862]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2821.662598, Update Interval: 357.196564
+[2026.04.01-15.30.51:514][891]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.30.57:020][976]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.01-15.30.57:020][976]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.01-15.31.16:231][111]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.31.41:540][567]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_3.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_3.exp
+[2026.04.01-15.31.42:033][570]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.01-15.31.42:033][570]LogClass: UClass BulletBase Reload.
+[2026.04.01-15.31.42:041][570]LogClass: Could not find existing class BulletBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.01-15.31.42:063][570]Re-instancing BulletBase after reload.
+[2026.04.01-15.31.42:639][570]LogUObjectHash: Compacting FUObjectHashTables data took   2.69ms
+[2026.04.01-15.31.43:395][571]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 2 classes unchanged
+[2026.04.01-15.31.43:395][571]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.01-15.32.52:618][855]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-15.33.03:847][ 26]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_4.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_4.exp
+[2026.04.01-15.33.04:665][ 28]LogUObjectHash: Compacting FUObjectHashTables data took   2.47ms
+[2026.04.01-15.33.05:424][ 29]Display: Reload/Re-instancing Complete: 1 package changed, 3 classes unchanged
+[2026.04.01-15.33.05:424][ 29]LogLiveCoding: Display: Live coding succeeded

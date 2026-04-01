@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/ProjectileMovementComponent.h"
 #include "BulletBase.generated.h"
 
 UCLASS()
@@ -18,6 +19,16 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "default")
+	USceneComponent* Root;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "default")
+	UStaticMeshComponent* Mesh;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
+	UProjectileMovementComponent* ProjectileMovement;
+
 
 public:	
 	// Called every frame
