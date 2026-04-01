@@ -38,8 +38,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAC8AAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-01T11:12:32.891Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T11:12:32.891Z"
             },
             {
               "$type": "Document",
@@ -51,8 +50,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-01T11:12:02.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T11:12:02.792Z"
             },
             {
               "$type": "Document",
@@ -62,7 +60,7 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-30T12:28:16.687Z",
               "EditorCaption": ""
@@ -77,8 +75,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-03-30T12:28:16.416Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-30T12:28:16.416Z"
             }
           ]
         }
