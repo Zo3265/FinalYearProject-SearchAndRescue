@@ -17,16 +17,18 @@ ABulletBase::ABulletBase()
     Mesh->BodyInstance.SetInstanceNotifyRBCollision(true);
     Mesh->AttachToComponent(Root, FAttachmentTransformRules::KeepRelativeTransform);
 
+    Mesh->OnComponentBeginOverlap.AddDynamic(this, &ABulletBase::OnOverLapBegin);
+
     //Projectile Movement Component. Useful for bullets such as this.
     ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
-    ProjectileMovement->SetUpdatedComponent(Mesh);
+    //ProjectileMovement->SetUpdatedComponent(Mesh); //This is telling the projectile movement to move the mesh specifically.
 
     ProjectileMovement->InitialSpeed = 3000.f;
     ProjectileMovement->MaxSpeed = 3000.f;
     ProjectileMovement->bRotationFollowsVelocity = true;
-    ProjectileMovement->bShouldBounce = true;
-    ProjectileMovement->Bounciness = 0.3f;
-    ProjectileMovement->ProjectileGravityScale = 1.0f; // Set this to 0 if you want the bullets to go completely straight.
+    ProjectileMovement->bShouldBounce = false;
+    ProjectileMovement->Bounciness = 0.0f;
+    ProjectileMovement->ProjectileGravityScale = 0.0f; // Set this to 0 if you want the bullets to go completely straight.
 }
 
 // Called when the game starts or when spawned
@@ -40,6 +42,13 @@ void ABulletBase::BeginPlay()
 void ABulletBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+	
+}
+
+void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	//On overlap with anything we delete the bullet.
+    this->Destroy();
 	
 }
 
