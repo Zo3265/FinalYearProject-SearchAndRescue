@@ -21,7 +21,7 @@ ABulletBase::ABulletBase()
 
     //Projectile Movement Component. Useful for bullets such as this.
     ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
-    //ProjectileMovement->SetUpdatedComponent(Mesh); //This is telling the projectile movement to move the mesh specifically.
+    ProjectileMovement->SetUpdatedComponent(Mesh); //This is telling the projectile movement to move the mesh specifically.
 
     ProjectileMovement->InitialSpeed = 1000.f;
     ProjectileMovement->MaxSpeed = 1000.f;

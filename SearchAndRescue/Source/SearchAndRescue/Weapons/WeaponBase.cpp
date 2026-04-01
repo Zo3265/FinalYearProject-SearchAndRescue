@@ -36,14 +36,13 @@ void AWeaponBase::Tick(float DeltaTime)
 
 void AWeaponBase::Fire()
 {
-    FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
-    SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-    Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, FTransform(), SpawnParamaters);
-    
-    if (Bullet != nullptr)
-    {
-        Bullet->AttachToComponent(Mesh, FAttachmentTransformRules::KeepRelativeTransform, TEXT("BulletSpawn"));
-        Bullet->SetOwner(this);
-    }
+    FTransform SpawnTransform = Mesh->GetSocketTransform(TEXT("BulletSpawn"), RTS_World);
+
+    FActorSpawnParameters SpawnParameters;
+    SpawnParameters.Owner = this;
+    SpawnParameters.Instigator = GetInstigator();
+    SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+    Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, SpawnTransform, SpawnParameters);
 }
 

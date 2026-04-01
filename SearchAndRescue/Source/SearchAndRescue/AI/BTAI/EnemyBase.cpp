@@ -22,7 +22,7 @@ void AEnemyBase::BeginPlay()
 
 	if (SniperRifle != nullptr)
 	{
-		SniperRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("GunPoint"));
+		SniperRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("GunPoint"));
 		SniperRifle->SetOwner(this);
 	}
 	
