@@ -5160,3 +5160,179 @@ Sampler Limit: 16
 [2026.04.01-15.45.22:393][536]Display: Reload/Re-instancing Complete: 1 package changed, 3 classes unchanged, 1 function remapped
 [2026.04.01-15.45.22:393][536]LogLiveCoding: Display: Live coding succeeded
 [2026.04.01-15.45.39:662][825]LogDerivedDataCache: C:/Users/zohai/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.04.01-15.48.12:447][982]LogUObjectHash: Compacting FUObjectHashTables data took   1.98ms
+[2026.04.01-15.48.12:453][982]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/P8/0GJ9TLQE2YKOIFZ6YHG33H_Auto3
+[2026.04.01-15.48.12:453][982]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/0GJ9TLQE2YKOIFZ6YHG33H_Auto308080778492A4E580A7F53B4F9DA5BCE.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/P8/0GJ9TLQE2YKOIFZ6YHG33H_Auto3.uasset'
+[2026.04.01-15.48.12:456][982]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/P1/VUZWWW8KRBQMIOXBFJ509Y_Auto3
+[2026.04.01-15.48.12:456][982]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/VUZWWW8KRBQMIOXBFJ509Y_Auto3256B589349C6F031E9B32A9F1B7F2D96.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/P1/VUZWWW8KRBQMIOXBFJ509Y_Auto3.uasset'
+[2026.04.01-15.48.12:457][982]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/FirstPersonMap' took 0.139
+[2026.04.01-15.48.12:458][982]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.139
+[2026.04.01-15.50.20:740][656]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4000.020508
+[2026.04.01-15.50.21:740][659]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-15.50.21:740][659]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4000.691895, Update Interval: 334.150208
+[2026.04.01-15.56.39:224][924]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4378.507324
+[2026.04.01-15.56.40:224][927]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-15.56.40:224][927]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4379.172852, Update Interval: 313.229767
+[2026.04.01-16.01.17:998][778]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-16.01.29:673][813]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.01-16.01.29:674][813]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.01-16.01.50:025][875]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-16.01.55:968][942]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_9.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_9.exp
+[2026.04.01-16.01.56:340][942]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.01-16.01.56:340][942]LogClass: UClass WeaponBase Reload.
+[2026.04.01-16.01.56:340][942]LogClass: Could not find existing class WeaponBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.01-16.01.56:362][942]Re-instancing WeaponBase after reload.
+[2026.04.01-16.01.56:759][942]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2026.04.01-16.01.57:464][943]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 2 classes unchanged, 1 function remapped
+[2026.04.01-16.01.57:464][943]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.01-16.02.15:753][ 52]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-16.02.24:085][186]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4723.375977
+[2026.04.01-16.02.24:389][191]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-16.02.24:389][191]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4723.615723, Update Interval: 325.263824
+[2026.04.01-16.02.38:250][442]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_10.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_10.exp
+[2026.04.01-16.02.39:086][444]LogUObjectHash: Compacting FUObjectHashTables data took   2.51ms
+[2026.04.01-16.02.39:839][445]Display: Reload/Re-instancing Complete: 1 package changed, 3 classes unchanged, 1 function remapped
+[2026.04.01-16.02.39:839][445]LogLiveCoding: Display: Live coding succeeded
+[2026.04.01-16.02.57:290][539]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-16.03.21:116][961]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_11.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_11.exp
+[2026.04.01-16.03.21:559][964]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.01-16.03.21:559][964]LogClass: UClass WeaponBase Reload.
+[2026.04.01-16.03.21:559][964]LogClass: Could not find existing class WeaponBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.01-16.03.21:591][964]Re-instancing WeaponBase after reload.
+[2026.04.01-16.03.22:111][964]LogUObjectHash: Compacting FUObjectHashTables data took   2.94ms
+[2026.04.01-16.03.22:854][965]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 2 classes unchanged, 1 function remapped
+[2026.04.01-16.03.22:854][965]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.01-16.08.25:358][959]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5084.655273
+[2026.04.01-16.08.26:359][962]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-16.08.26:359][963]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5085.322266, Update Interval: 318.510681
+[2026.04.01-16.10.51:112][671]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-16.10.51:343][671]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low] ([1] browsable assets)...
+[2026.04.01-16.10.51:343][671]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low]
+[2026.04.01-16.10.51:362][671]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low
+[2026.04.01-16.10.51:363][671]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/sniper_barrel_low55F3A78B4284B5E5962018AA7AB6016C.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low.uasset'
+[2026.04.01-16.10.51:384][671]LogFileHelpers: InternalPromptForCheckoutAndSave took 273.241 ms (total: 8.27 sec)
+[2026.04.01-16.10.51:452][671]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-16.10.51:452][671]LogContentValidation: Enabled validators:
+[2026.04.01-16.10.51:452][671]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-16.10.51:452][671]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-16.10.51:452][671]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-16.10.51:452][671]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-16.10.51:452][671]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-16.10.51:452][671]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-16.10.51:452][671]AssetCheck: /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low Validating asset
+[2026.04.01-16.11.22:815][936]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-16.11.28:693][955]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_12.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_12.exp
+[2026.04.01-16.11.29:386][955]LogUObjectHash: Compacting FUObjectHashTables data took   1.87ms
+[2026.04.01-16.11.30:151][956]Display: Reload/Re-instancing Complete: 1 package changed, 3 classes unchanged, 1 function remapped
+[2026.04.01-16.11.30:151][956]LogLiveCoding: Display: Live coding succeeded
+[2026.04.01-16.11.42:337][151]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.01-16.11.52:581][341]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/BP_WeaponBase.BP_WeaponBase
+[2026.04.01-16.11.52:582][341]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_19
+[2026.04.01-16.11.52:583][341]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_19'.
+[2026.04.01-16.11.52:832][341]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.04.01-16.12.10:898][588]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2026.04.01-16.12.10:899][588]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_20'.
+[2026.04.01-16.12.13:083][617]LogUObjectHash: Compacting FUObjectHashTables data took   2.33ms
+[2026.04.01-16.12.13:696][626]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-16.12.13:803][626]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/BP_WeaponBase] ([2] browsable assets)...
+[2026.04.01-16.12.13:833][626]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/BP_WeaponBase.BP_WeaponBase]
+[2026.04.01-16.12.13:833][626]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2026.04.01-16.12.13:834][626]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_21'.
+[2026.04.01-16.12.13:856][626]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/BP_WeaponBase.BP_WeaponBase_C]
+[2026.04.01-16.12.13:856][626]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_WeaponBase]
+[2026.04.01-16.12.13:856][626]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_WeaponBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_WeaponBase.uasset" SILENT=true
+[2026.04.01-16.12.13:861][626]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_WeaponBase.BP_WeaponBase_C' for saving '/Game/AI/BP_WeaponBase.BP_WeaponBase_C'
+[2026.04.01-16.12.13:861][626]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_WeaponBase.BP_WeaponBase_C' for saving '/Game/AI/BP_WeaponBase.BP_WeaponBase_C'
+[2026.04.01-16.12.13:862][626]LogSavePackage: Moving output files for package: /Game/AI/BP_WeaponBase
+[2026.04.01-16.12.13:862][626]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_WeaponBase6EC7B2234ED6AD9617DB43BABD630B02.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_WeaponBase.uasset'
+[2026.04.01-16.12.13:890][626]LogFileHelpers: InternalPromptForCheckoutAndSave took 193.379 ms (total: 8.46 sec)
+[2026.04.01-16.12.13:945][626]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-16.12.13:945][626]LogContentValidation: Enabled validators:
+[2026.04.01-16.12.13:945][626]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-16.12.13:945][626]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-16.12.13:945][626]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-16.12.13:945][626]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-16.12.13:945][626]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-16.12.13:945][626]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-16.12.13:945][626]AssetCheck: /Game/AI/BP_WeaponBase Validating asset
+[2026.04.01-16.14.32:191][372]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5451.488281
+[2026.04.01-16.14.33:191][375]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.01-16.14.33:191][375]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5452.154297, Update Interval: 321.248199
+[2026.04.01-16.14.42:682][421]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-16.14.53:457][552]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_13.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_13.exp
+[2026.04.01-16.14.54:352][552]LogUObjectHash: Compacting FUObjectHashTables data took   2.90ms
+[2026.04.01-16.14.55:303][553]Display: Reload/Re-instancing Complete: 1 package changed, 3 classes unchanged, 1 function remapped
+[2026.04.01-16.14.55:303][553]LogLiveCoding: Display: Live coding succeeded
+[2026.04.01-16.15.34:565][113]LogUObjectHash: Compacting FUObjectHashTables data took   2.10ms
+[2026.04.01-16.15.35:135][120]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-16.15.35:262][120]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/BP_WeaponBase] ([2] browsable assets)...
+[2026.04.01-16.15.35:291][120]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/BP_WeaponBase.BP_WeaponBase]
+[2026.04.01-16.15.35:291][120]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_WeaponBase]
+[2026.04.01-16.15.35:291][120]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_WeaponBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_WeaponBase.uasset" SILENT=true
+[2026.04.01-16.15.35:295][120]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_WeaponBase.BP_WeaponBase_C' for saving '/Game/AI/BP_WeaponBase.BP_WeaponBase_C'
+[2026.04.01-16.15.35:295][120]LogWorldPartition: Can't find class descriptor '/Game/AI/BP_WeaponBase.BP_WeaponBase_C' for saving '/Game/AI/BP_WeaponBase.BP_WeaponBase_C'
+[2026.04.01-16.15.35:296][120]LogSavePackage: Moving output files for package: /Game/AI/BP_WeaponBase
+[2026.04.01-16.15.35:298][120]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_WeaponBase38611C074BD2A36438A6768BE5A66E03.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_WeaponBase.uasset'
+[2026.04.01-16.15.35:318][120]LogFileHelpers: InternalPromptForCheckoutAndSave took 182.600 ms (total: 8.64 sec)
+[2026.04.01-16.15.35:378][120]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-16.15.35:378][120]LogContentValidation: Enabled validators:
+[2026.04.01-16.15.35:378][120]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-16.15.35:378][120]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-16.15.35:378][120]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-16.15.35:378][120]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-16.15.35:378][120]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-16.15.35:378][120]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-16.15.35:378][120]AssetCheck: /Game/AI/BP_WeaponBase Validating asset
+[2026.04.01-16.15.47:261][234]Cmd: DELETE
+[2026.04.01-16.15.47:262][234]Cmd: ACTOR DELETE
+[2026.04.01-16.15.47:265][234]LogEditorActor: Deleted Actor: BP_BulletBase_C
+[2026.04.01-16.15.47:357][234]LogUObjectHash: Compacting FUObjectHashTables data took   2.81ms
+[2026.04.01-16.15.47:369][234]LogEditorActor: Deleted 1 Actors (0.107 secs)
+[2026.04.01-16.16.04:190][336]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.01-16.16.16:050][519]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_14.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_14.exp
+[2026.04.01-16.16.16:721][521]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2026.04.01-16.16.17:564][522]Display: Reload/Re-instancing Complete: 1 package changed, 3 classes unchanged, 1 function remapped
+[2026.04.01-16.16.17:564][522]LogLiveCoding: Display: Live coding succeeded
+[2026.04.01-16.16.29:084][695]LogUObjectHash: Compacting FUObjectHashTables data took   2.22ms
+[2026.04.01-16.16.29:097][695]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/FirstPersonMap' took 0.122
+[2026.04.01-16.16.34:932][790]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2026.04.01-16.16.34:940][790]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-16.16.35:034][790]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2026.04.01-16.16.35:063][790]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2026.04.01-16.16.35:092][790]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2026.04.01-16.16.35:100][790]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/P8/0GJ9TLQE2YKOIFZ6YHG33H
+[2026.04.01-16.16.35:100][790]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/0GJ9TLQE2YKOIFZ6YHG33HEE91676949756C67E7E4D782D20954EB.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/C/P8/0GJ9TLQE2YKOIFZ6YHG33H.uasset'
+[2026.04.01-16.16.35:124][790]LogFileHelpers: InternalPromptForCheckoutAndSave took 183.977 ms (total: 8.83 sec)
+[2026.04.01-16.16.35:185][790]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-16.16.35:185][790]LogContentValidation: Enabled validators:
+[2026.04.01-16.16.35:185][790]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-16.16.35:185][790]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-16.16.35:185][790]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-16.16.35:185][790]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-16.16.35:185][790]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-16.16.35:185][790]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-16.16.35:185][790]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
+[2026.04.01-16.16.37:821][831]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_WeaponBase.BP_WeaponBase_C
+[2026.04.01-16.16.37:821][831]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_WeaponBase.BP_WeaponBase_C
+[2026.04.01-16.16.37:822][831]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_WeaponBase.BP_WeaponBase as actor: BP_WeaponBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_WeaponBase_C_0
+[2026.04.01-16.16.37:823][831]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_WeaponBase.BP_WeaponBase as actor: BP_WeaponBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_WeaponBase_C_0
+[2026.04.01-16.16.39:433][857]LogUObjectHash: Compacting FUObjectHashTables data took   1.82ms
+[2026.04.01-16.16.39:435][857]LogEditorActor: Deleted 0 Actors (0.035 secs)
+[2026.04.01-16.16.39:446][857]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_WeaponBase.BP_WeaponBase_C
+[2026.04.01-16.16.39:446][857]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/BP_WeaponBase.BP_WeaponBase_C
+[2026.04.01-16.16.39:450][857]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_WeaponBase.BP_WeaponBase as actor: BP_WeaponBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_WeaponBase_C_UAID_84144D205DD181CD02_2101213686
+[2026.04.01-16.16.39:450][857]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/BP_WeaponBase.BP_WeaponBase as actor: BP_WeaponBase_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_WeaponBase_C_UAID_84144D205DD181CD02_2101213686
+[2026.04.01-16.16.48:340][  2]LogUObjectHash: Compacting FUObjectHashTables data took   1.66ms
+[2026.04.01-16.16.48:348][  2]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.01-16.16.48:404][  2]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/9/62/RMUNBJ9ATJIDWGVYR2XW2M
+[2026.04.01-16.16.48:404][  2]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/RMUNBJ9ATJIDWGVYR2XW2M5BBC326748B101EC3FD0F49B45869B07.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/9/62/RMUNBJ9ATJIDWGVYR2XW2M.uasset'
+[2026.04.01-16.16.48:436][  2]LogFileHelpers: InternalPromptForCheckoutAndSave took 87.912 ms (total: 8.91 sec)
+[2026.04.01-16.16.48:502][  2]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.01-16.16.48:502][  2]LogContentValidation: Enabled validators:
+[2026.04.01-16.16.48:502][  2]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.01-16.16.48:502][  2]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.01-16.16.48:502][  2]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.01-16.16.48:502][  2]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.01-16.16.48:502][  2]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.01-16.16.48:502][  2]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.01-16.16.48:502][  2]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset

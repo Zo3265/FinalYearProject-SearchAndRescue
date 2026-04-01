@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "BulletBase.h"
 #include "WeaponBase.generated.h"
 
 UCLASS()
@@ -19,8 +20,20 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "default")
+	USceneComponent* Root;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "default")
+	UStaticMeshComponent* Mesh;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<ABulletBase> BulletClass;
+
+	UPROPERTY()
+	ABulletBase* SniperBullet;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	void Fire();
 };

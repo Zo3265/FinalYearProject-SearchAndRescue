@@ -10,7 +10,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWeaponBase() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
+ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ABulletBase_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWeaponBase();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWeaponBase_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
@@ -32,13 +36,46 @@ struct Z_Construct_UClass_AWeaponBase_Statics
 		{ "IncludePath", "Weapons/WeaponBase.h" },
 		{ "ModuleRelativePath", "Weapons/WeaponBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Root_MetaData[] = {
+		{ "Category", "default" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Weapons/WeaponBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[] = {
+		{ "Category", "default" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Weapons/WeaponBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BulletClass_MetaData[] = {
+		{ "Category", "WeaponBase" },
+		{ "ModuleRelativePath", "Weapons/WeaponBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SniperBullet_MetaData[] = {
+		{ "ModuleRelativePath", "Weapons/WeaponBase.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Mesh;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_BulletClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SniperBullet;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AWeaponBase>::IsAbstract,
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponBase_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeaponBase, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponBase_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeaponBase, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mesh_MetaData), NewProp_Mesh_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWeaponBase_Statics::NewProp_BulletClass = { "BulletClass", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeaponBase, BulletClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ABulletBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BulletClass_MetaData), NewProp_BulletClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWeaponBase_Statics::NewProp_SniperBullet = { "SniperBullet", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWeaponBase, SniperBullet), Z_Construct_UClass_ABulletBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperBullet_MetaData), NewProp_SniperBullet_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWeaponBase_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponBase_Statics::NewProp_Root,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponBase_Statics::NewProp_Mesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponBase_Statics::NewProp_BulletClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWeaponBase_Statics::NewProp_SniperBullet,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AWeaponBase_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_SearchAndRescue,
@@ -50,11 +87,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AWeaponBase_Statics::Cl
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	nullptr,
-	nullptr,
+	Z_Construct_UClass_AWeaponBase_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	0,
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponBase_Statics::PropPointers),
 	0,
 	0x009000A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_AWeaponBase_Statics::Class_MetaDataParams), Z_Construct_UClass_AWeaponBase_Statics::Class_MetaDataParams)
@@ -79,10 +116,10 @@ AWeaponBase::~AWeaponBase() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_WeaponBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWeaponBase, AWeaponBase::StaticClass, TEXT("AWeaponBase"), &Z_Registration_Info_UClass_AWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWeaponBase), 4117081523U) },
+		{ Z_Construct_UClass_AWeaponBase, AWeaponBase::StaticClass, TEXT("AWeaponBase"), &Z_Registration_Info_UClass_AWeaponBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWeaponBase), 1898576268U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_WeaponBase_h_2951237234(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_WeaponBase_h_3809448075(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_WeaponBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_WeaponBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
