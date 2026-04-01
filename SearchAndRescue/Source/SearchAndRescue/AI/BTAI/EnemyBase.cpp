@@ -32,6 +32,7 @@ void AEnemyBase::BeginPlay()
 
 	//Set the speed of the character proportional to the splines length. Except a little slower so we don't get jittery movement. 
 	float Speed = splineController->getSpline()->GetSplineLength() / splineController->getTotalPathTimeController();
+	UE_LOG(LogTemp, Warning, TEXT("Speed is: %f"), Speed);
 	GetCharacterMovement()->MaxWalkSpeed = Speed - 20.0f;
 }
 
