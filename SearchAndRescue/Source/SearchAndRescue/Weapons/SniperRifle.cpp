@@ -20,7 +20,8 @@ void ASniperRifle::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	Count = GetWorld()->GetTimeSeconds();
+	StartTime = GetWorld()->GetTimeSeconds();
+	Count = StartTime;
 }
 
 // Called every frame
@@ -28,29 +29,35 @@ void ASniperRifle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	
+	SniperFire(DeltaTime);
+}
+
+void ASniperRifle::SniperFire(float DeltaTime)
+{
 	if (iCurrentMagCount != 0 && bCanFire == true)
 	{
 		Fire();
+		bCanFire = false;
 		iCurrentMagCount--;
 	}
 
+	//This acts as a bolt timer for the sniper rifle.
 	else if (bCanFire == false)
 	{
 		Count += 1.0f * DeltaTime;
-
-		if (Count >= 0.5f)
+		//UE_LOG(LogTemp, Warning, TEXT("Count is: %f"), Count);
+		if (Count >= 2.0f)
 		{
 			bCanFire = true;
+			Count = StartTime;
 		}
 	}
 
-	if(iCurrentMagCount <= 0 && bReloading == false)
+	if (iCurrentMagCount <= 0 && bReloading == false)
 	{
 		GetWorldTimerManager().SetTimer(ReloadTimer, this, &ASniperRifle::Reload, 2.0f, false); //2 second reload.
 		bReloading = true; //We are reloading
 	}
-
 }
 
 void ASniperRifle::Reload()

@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "SearchAndRescue/AI/SplineController.h"
+#include "SearchAndRescue/Weapons/SniperRifle.h"
 #include "EnemyBase.generated.h"
 
 UCLASS()
@@ -30,6 +31,12 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Variables")
 	float fHealth = 100.0f;
+
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<ASniperRifle> SniperClass;
+
+	UPROPERTY()
+	ASniperRifle* SniperRifle;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

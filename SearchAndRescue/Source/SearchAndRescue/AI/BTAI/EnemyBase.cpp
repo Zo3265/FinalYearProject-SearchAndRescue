@@ -15,6 +15,16 @@ AEnemyBase::AEnemyBase()
 void AEnemyBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
+	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SniperRifle = GetWorld()->SpawnActor<ASniperRifle>(SniperClass, FTransform(), SpawnParamaters);
+
+	if (SniperRifle != nullptr)
+	{
+		SniperRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::KeepRelativeTransform, TEXT("GunPoint"));
+		SniperRifle->SetOwner(this);
+	}
 	
 	//Get the first child actor attached to this.
 	//Should be the splineMovementActor

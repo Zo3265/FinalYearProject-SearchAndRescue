@@ -26,6 +26,7 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void Reload();
+	void SniperFire(float DeltaTime);
 	bool bReloading = false;
 	bool bCanFire = true;
 private:
@@ -34,5 +35,5 @@ private:
 	int iMaxMagCount; //Maximum ammo allowed in magazine
 	int iMaxAmmoReserve; //Maximum ammo allowed as reserve
 	float Count;
-
+	float StartTime;
 };
