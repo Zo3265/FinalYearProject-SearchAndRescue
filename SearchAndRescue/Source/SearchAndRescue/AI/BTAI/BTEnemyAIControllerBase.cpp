@@ -6,6 +6,26 @@
 #include "BrainComponent.h"
 #include "Kismet/GameplayStatics.h"
 
+ABTEnemyAIControllerBase::ABTEnemyAIControllerBase()
+{
+	AIPerception = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerception"));
+
+	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
+	SightConfig->SightRadius = 1000;
+	SightConfig->LoseSightRadius = 1200;
+	SightConfig->PeripheralVisionAngleDegrees = 70.0f;
+	SightConfig->PointOfViewBackwardOffset = 0.0f;
+	SightConfig->SetMaxAge(30.0f);
+	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+	SightConfig->DetectionByAffiliation.bDetectFriendlies = true;
+	SightConfig->DetectionByAffiliation.bDetectNeutrals = true;
+
+	AIPerception->ConfigureSense(*SightConfig);
+	AIPerception->SetDominantSense(SightConfig->GetSenseImplementation());
+
+	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ABTEnemyAIControllerBase::OnTargetPerceptionUpdated);
+}
+
 void ABTEnemyAIControllerBase::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
@@ -26,22 +46,6 @@ void ABTEnemyAIControllerBase::OnPossess(APawn* InPawn)
 			SphereStore = ChildActor->GetChildActor();
 		}
 	}
-
-	AIPerception = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerception"));
-
-	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
-	SightConfig->SightRadius = 3000;
-	SightConfig->LoseSightRadius = 3500;
-	SightConfig->PeripheralVisionAngleDegrees = 90;
-	SightConfig->SetMaxAge(30.0f);
-	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
-	SightConfig->DetectionByAffiliation.bDetectFriendlies = false;
-	SightConfig->DetectionByAffiliation.bDetectNeutrals = false;
-
-	AIPerception->ConfigureSense(*SightConfig);
-	AIPerception->SetDominantSense(SightConfig->GetSenseImplementation());
-
-	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ABTEnemyAIControllerBase::OnTargetPerceptionUpdated);
 }
 
 void ABTEnemyAIControllerBase::BeginPlay()
@@ -60,8 +64,11 @@ void ABTEnemyAIControllerBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//Default behaviour is to patrol
-	GetBlackboardComponent()->SetValueAsObject(TEXT("SplineMovementActor"), SphereStore);
+	if (AIBehavior != NULL)
+	{
+		//Default behaviour is to patrol
+		GetBlackboardComponent()->SetValueAsObject(TEXT("SplineMovementActor"), SphereStore);
+	}
 
 }
 
@@ -69,6 +76,12 @@ void ABTEnemyAIControllerBase::OnTargetPerceptionUpdated(AActor* Actor, FAIStimu
 {
 	if (Stimulus.WasSuccessfullySensed())
 	{
-		
+		GLog->Log("Sensed player");
+		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), true);
+	}
+
+	else
+	{
+		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), false);
 	}
 }

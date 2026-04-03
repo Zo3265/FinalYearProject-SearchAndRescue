@@ -30,8 +30,6 @@ public: \
 
 
 #define FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTEnemyAIControllerBase_h_19_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ABTEnemyAIControllerBase(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	ABTEnemyAIControllerBase(ABTEnemyAIControllerBase&&); \
@@ -39,7 +37,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ABTEnemyAIControllerBase); \
 	DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ABTEnemyAIControllerBase); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ABTEnemyAIControllerBase) \
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ABTEnemyAIControllerBase) \
 	NO_API virtual ~ABTEnemyAIControllerBase();
 
 

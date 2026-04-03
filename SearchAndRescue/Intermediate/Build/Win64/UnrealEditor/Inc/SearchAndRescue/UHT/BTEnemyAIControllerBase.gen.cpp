@@ -191,7 +191,6 @@ template<> SEARCHANDRESCUE_API UClass* StaticClass<ABTEnemyAIControllerBase>()
 {
 	return ABTEnemyAIControllerBase::StaticClass();
 }
-ABTEnemyAIControllerBase::ABTEnemyAIControllerBase(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitializer) {}
 DEFINE_VTABLE_PTR_HELPER_CTOR(ABTEnemyAIControllerBase);
 ABTEnemyAIControllerBase::~ABTEnemyAIControllerBase() {}
 // End Class ABTEnemyAIControllerBase

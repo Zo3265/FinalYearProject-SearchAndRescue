@@ -18,6 +18,7 @@ class SEARCHANDRESCUE_API ABTEnemyAIControllerBase : public AAIController
 {
 	GENERATED_BODY()
 public:
+	ABTEnemyAIControllerBase();
 protected:
 
 	virtual void OnPossess(APawn* InPawn) override;
@@ -48,4 +49,6 @@ private:
 	class UBehaviorTree* AIBehavior;
 
 	APlayerController* PlayerController; 
+
+	bool bSeePlayer = false;
 };
