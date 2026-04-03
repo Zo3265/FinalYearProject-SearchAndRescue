@@ -16,6 +16,7 @@ AIMODULE_API UClass* Z_Construct_UClass_UAISenseConfig_Sight_NoRegister();
 AIMODULE_API UClass* Z_Construct_UClass_UBehaviorTree_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APawn_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UChildActorComponent_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ABTEnemyAIControllerBase();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ABTEnemyAIControllerBase_NoRegister();
@@ -41,6 +42,12 @@ struct Z_Construct_UClass_ABTEnemyAIControllerBase_Statics
 #endif
 		{ "HideCategories", "Collision Rendering Transformation" },
 		{ "IncludePath", "AI/BTAI/BTEnemyAIControllerBase.h" },
+		{ "ModuleRelativePath", "AI/BTAI/BTEnemyAIControllerBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayerController_MetaData[] = {
+		{ "ModuleRelativePath", "AI/BTAI/BTEnemyAIControllerBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PlayerPawn_MetaData[] = {
 		{ "ModuleRelativePath", "AI/BTAI/BTEnemyAIControllerBase.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ControlledPawn_MetaData[] = {
@@ -70,6 +77,8 @@ struct Z_Construct_UClass_ABTEnemyAIControllerBase_Statics
 		{ "ModuleRelativePath", "AI/BTAI/BTEnemyAIControllerBase.h" },
 	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerController;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PlayerPawn;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ControlledPawn;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ChildActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SphereStore;
@@ -84,6 +93,8 @@ struct Z_Construct_UClass_ABTEnemyAIControllerBase_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_PlayerController = { "PlayerController", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTEnemyAIControllerBase, PlayerController), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerController_MetaData), NewProp_PlayerController_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_PlayerPawn = { "PlayerPawn", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTEnemyAIControllerBase, PlayerPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PlayerPawn_MetaData), NewProp_PlayerPawn_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_ControlledPawn = { "ControlledPawn", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTEnemyAIControllerBase, ControlledPawn), Z_Construct_UClass_APawn_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ControlledPawn_MetaData), NewProp_ControlledPawn_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_ChildActor = { "ChildActor", nullptr, (EPropertyFlags)0x0010000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTEnemyAIControllerBase, ChildActor), Z_Construct_UClass_UChildActorComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChildActor_MetaData), NewProp_ChildActor_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_SphereStore = { "SphereStore", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTEnemyAIControllerBase, SphereStore), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SphereStore_MetaData), NewProp_SphereStore_MetaData) };
@@ -92,6 +103,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAICont
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_SightConfig = { "SightConfig", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTEnemyAIControllerBase, SightConfig), Z_Construct_UClass_UAISenseConfig_Sight_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SightConfig_MetaData), NewProp_SightConfig_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_AIBehavior = { "AIBehavior", nullptr, (EPropertyFlags)0x0040000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTEnemyAIControllerBase, AIBehavior), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AIBehavior_MetaData), NewProp_AIBehavior_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_PlayerController,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_PlayerPawn,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_ControlledPawn,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_ChildActor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABTEnemyAIControllerBase_Statics::NewProp_SphereStore,
@@ -141,10 +154,10 @@ ABTEnemyAIControllerBase::~ABTEnemyAIControllerBase() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTEnemyAIControllerBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABTEnemyAIControllerBase, ABTEnemyAIControllerBase::StaticClass, TEXT("ABTEnemyAIControllerBase"), &Z_Registration_Info_UClass_ABTEnemyAIControllerBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABTEnemyAIControllerBase), 4145686043U) },
+		{ Z_Construct_UClass_ABTEnemyAIControllerBase, ABTEnemyAIControllerBase::StaticClass, TEXT("ABTEnemyAIControllerBase"), &Z_Registration_Info_UClass_ABTEnemyAIControllerBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABTEnemyAIControllerBase), 478438876U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTEnemyAIControllerBase_h_1855559783(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTEnemyAIControllerBase_h_1425529137(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTEnemyAIControllerBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTEnemyAIControllerBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

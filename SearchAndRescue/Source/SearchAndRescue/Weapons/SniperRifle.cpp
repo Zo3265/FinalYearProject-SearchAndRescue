@@ -29,10 +29,12 @@ void ASniperRifle::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	SniperFire(DeltaTime);
+	DT = DeltaTime;
+
+	//SniperFire(DeltaTime);
 }
 
-void ASniperRifle::SniperFire(float DeltaTime)
+void ASniperRifle::SniperFire()
 {
 	if (iCurrentMagCount != 0 && bCanFire == true)
 	{
@@ -44,9 +46,9 @@ void ASniperRifle::SniperFire(float DeltaTime)
 	//This acts as a bolt timer for the sniper rifle.
 	else if (bCanFire == false)
 	{
-		Count += 1.0f * DeltaTime;
+		Count += 1.0f * DT;
 		//UE_LOG(LogTemp, Warning, TEXT("Count is: %f"), Count);
-		if (Count >= 2.0f)
+		if (Count >= 1.0f)
 		{
 			bCanFire = true;
 			Count = StartTime;

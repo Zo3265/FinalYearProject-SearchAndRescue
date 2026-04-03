@@ -21,9 +21,15 @@ void ASniperEnemy::BeginPlay()
 		SniperRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("GunPoint"));
 		SniperRifle->SetOwner(this);
 	}
+
 }
 
 void ASniperEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+}
+
+ASniperRifle* ASniperEnemy::getRifle()
+{
+	return SniperRifle;
 }

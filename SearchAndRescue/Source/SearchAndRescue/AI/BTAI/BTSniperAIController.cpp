@@ -25,6 +25,17 @@ void ABTSniperAIController::BeginPlay()
 void ABTSniperAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if ((GetBlackboardComponent()->GetValueAsBool(TEXT("bHavePlayer")) == true && GetBlackboardComponent()->GetValueAsBool(TEXT("bSeePlayer")) == false))
+	{
+		float distance = FVector::Distance(lastPlayerLocation, ControlledPawn->GetActorLocation());
+		//UE_LOG(LogTemp, Warning, TEXT("Distance is: %f"), distance);
+		if (distance <= 50.0f)
+		{
+			GetBlackboardComponent()->SetValueAsBool(TEXT("bHavePlayer"), false);
+		}
+		
+	}
 }
 
 void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
@@ -32,10 +43,15 @@ void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus
 	if (Stimulus.WasSuccessfullySensed())
 	{
 		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), true);
+		this->SetFocus(PlayerPawn);
+		lastPlayerLocation = PlayerPawn->GetActorLocation();
 	}
 
 	else
 	{
 		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), false);
+		GetBlackboardComponent()->SetValueAsBool(TEXT("bHavePlayer"), true);
+		this->ClearFocus(EAIFocusPriority::Gameplay);
+		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), lastPlayerLocation);
 	}
 }

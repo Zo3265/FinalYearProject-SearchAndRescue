@@ -27,9 +27,17 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY()
+	APlayerController* PlayerController;
+
+	UPROPERTY()
+	APawn* PlayerPawn;
+
+	UPROPERTY()
 	APawn* ControlledPawn;
+
 	UPROPERTY()
 	UChildActorComponent* ChildActor;
+
 	UPROPERTY()
 	AActor* SphereStore;
 
@@ -45,8 +53,6 @@ public:
 private:
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;
-
-	APlayerController* PlayerController; 
 
 	bool bSeePlayer = false;
 };

@@ -41,7 +41,7 @@ void AEnemyBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (SphereStore != NULL)
+	if (SphereStore != nullptr)
 	{
 		//How long the current spline has been going for.
 		float CurrentSplineTime = (Count - StartTime) / splineController->getTotalPathTimeController();

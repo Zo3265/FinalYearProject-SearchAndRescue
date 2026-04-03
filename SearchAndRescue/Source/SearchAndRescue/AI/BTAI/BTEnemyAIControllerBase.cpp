@@ -50,11 +50,12 @@ void ABTEnemyAIControllerBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (AIBehavior != NULL)
+	if (AIBehavior != nullptr)
 	{
 		RunBehaviorTree(AIBehavior);
 
 		PlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+		PlayerPawn = PlayerController->GetPawn();
 	}
 }
 
@@ -62,7 +63,7 @@ void ABTEnemyAIControllerBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (AIBehavior != NULL)
+	if (AIBehavior != nullptr)
 	{
 		//Default behaviour is to patrol
 		GetBlackboardComponent()->SetValueAsObject(TEXT("SplineMovementActor"), SphereStore);
