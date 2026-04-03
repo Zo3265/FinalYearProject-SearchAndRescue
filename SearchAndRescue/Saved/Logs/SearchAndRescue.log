@@ -3875,3 +3875,739 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.04.03-16.15.58:324][308]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=30
 [2026.04.03-16.15.58:347][308]LogUObjectHash: Compacting FUObjectHashTables data took   3.98ms
 [2026.04.03-16.15.58:659][309]LogPlayLevel: Display: Destroying online subsystem :Context_45
+[2026.04.03-16.18.41:424][852]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3542.328125
+[2026.04.03-16.18.42:423][855]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.03-16.18.42:423][855]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3542.993408, Update Interval: 337.125763
+[2026.04.03-16.21.21:785][352]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.21.33:622][388]LogDerivedDataCache: C:/Users/zohai/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.04.03-16.21.48:449][432]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.22.24:468][540]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.23.59:139][824]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.25.07:165][ 28]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.25.09:650][ 35]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3930.554932
+[2026.04.03-16.25.10:650][ 38]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.03-16.25.10:650][ 38]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3931.222412, Update Interval: 311.004974
+[2026.04.03-16.25.53:833][168]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.26.51:168][340]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.31.08:719][112]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4289.628906
+[2026.04.03-16.31.09:719][115]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.03-16.31.09:719][115]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4290.295410, Update Interval: 357.383331
+[2026.04.03-16.33.33:912][548]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.34.17:917][680]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.35.00:593][808]LogD3D11RHI: Timed out while waiting for GPU to catch up. (500 ms)
+[2026.04.03-16.41.52:265][212]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4933.170898
+[2026.04.03-16.41.53:261][215]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.03-16.41.53:261][215]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4933.834961, Update Interval: 355.978882
+[2026.04.03-16.43.21:760][229]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.03-16.43.30:587][399]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.03-16.43.45:951][687]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.03-16.43.46:091][687]Using bundled DotNet SDK version: 8.0.300
+[2026.04.03-16.43.46:091][687]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.03-16.43.47:308][687]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.04.03-16.43.47:917][687]
+[2026.04.03-16.43.47:917][687]Generating VisualStudio2022 project files:
+[2026.04.03-16.43.47:917][687]Discovering modules, targets and source code for project...
+[2026.04.03-16.43.55:057][687]Available x64 toolchains (3):
+[2026.04.03-16.43.55:057][687] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.03-16.43.55:057][687]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.03-16.43.55:057][687] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.03-16.43.55:057][687]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.03-16.43.55:057][687] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.03-16.43.55:057][687]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.03-16.43.55:057][687]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.03-16.44.01:594][687]Binding IntelliSense data...
+[2026.04.03-16.44.46:889][687]Binding IntelliSense data... 50%
+[2026.04.03-16.44.46:890][687]Binding IntelliSense data... 100%
+[2026.04.03-16.44.46:890][687]Writing project files...
+[2026.04.03-16.44.51:015][687]Writing project files... 100%
+[2026.04.03-16.44.51:016][687]
+[2026.04.03-16.44.51:016][687]Generating QueryTargets data for editor...
+[2026.04.03-16.44.51:016][687]Total execution time: 64.68 seconds
+[2026.04.03-16.44.51:422][687]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.03-16.44.52:201][687]LogVSAccessor: Warning: Couldn't goto line number '1' in 'C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/AI/BTAI/SniperEnemy.cpp'.
+[2026.04.03-16.44.52:202][687]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.04.03-16.45.25:979][789]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.03-16.45.25:979][789]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.03-16.45.47:314][853]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.03-16.46.05:140][161]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.03-16.46.05:140][161]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.03-16.46.24:095][268]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.03-16.46.56:403][840]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_12.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_12.exp
+[2026.04.03-16.46.56:889][843]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.03-16.46.56:893][843]LogClass: Could not find existing class SniperEnemy in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.03-16.46.57:209][843]LogUObjectHash: Compacting FUObjectHashTables data took   1.54ms
+[2026.04.03-16.46.57:958][844]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 1 class unchanged, 1 function remapped
+[2026.04.03-16.46.57:958][844]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.03-16.47.04:105][954]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.03-16.47.11:919][ 91]LogStreaming: Display: FlushAsyncLoading(600): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.47.12:102][ 91]LogUObjectHash: Compacting FUObjectHashTables data took   3.04ms
+[2026.04.03-16.47.12:282][ 91]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_16
+[2026.04.03-16.47.12:282][ 91]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_16'.
+[2026.04.03-16.47.14:746][ 91]LogSlate: Window 'Delete Assets' being destroyed
+[2026.04.03-16.47.14:987][ 91]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/AI/GunTest.GunTest
+	Asset Type: Blueprint
+[2026.04.03-16.47.15:475][ 91]LogUObjectHash: Compacting FUObjectHashTables data took   2.05ms
+[2026.04.03-16.47.15:559][ 91]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2026.04.03-16.47.15:582][ 91]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2026.04.03-16.47.15:604][ 91]LogUObjectHash: Compacting FUObjectHashTables data took   0.57ms
+[2026.04.03-16.47.27:894][297]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.03-16.47.27:908][297]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.03-16.47.27:936][298]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.03-16.47.32:734][385]LogContentBrowser: Attempting asset rename: NewFolder -> EnemyBase
+[2026.04.03-16.47.32:735][385]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase_C' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.BP_BTEnemyAIControllerBase:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.SKEL_BP_BTEnemyAIControllerBase_C:UserConstructionScript' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.SKEL_BP_BTEnemyAIControllerBase_C:ReceiveTick' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.SKEL_BP_BTEnemyAIControllerBase_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.37:997][474]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.SKEL_BP_BTEnemyAIControllerBase_C' ref from Metadata '/Game/AI/BP_BTEnemyAIControllerBase.PackageMetaData'
+[2026.04.03-16.47.38:039][474]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.47.38:040][474]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/BP_EnemyBase] ([2] browsable assets)...
+[2026.04.03-16.47.38:068][474]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/BP_EnemyBase.BP_EnemyBase]
+[2026.04.03-16.47.38:068][474]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemyBase]
+[2026.04.03-16.47.38:068][474]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_EnemyBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset" SILENT=true
+[2026.04.03-16.47.38:077][474]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemyBase
+[2026.04.03-16.47.38:078][474]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseAA0FC2B0484D649B881354869567487F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset'
+[2026.04.03-16.47.38:081][474]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase] ([2] browsable assets)...
+[2026.04.03-16.47.38:081][474]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase]
+[2026.04.03-16.47.38:084][474]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_BTEnemyAIControllerBase
+[2026.04.03-16.47.38:084][474]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_BTEnemyAIControllerBaseB39E81734F45E102B51195B5A2C163CA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_BTEnemyAIControllerBase.uasset'
+[2026.04.03-16.47.38:087][474]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/EnemyBase/BP_BTEnemyAIControllerBase.
+[2026.04.03-16.47.38:097][474]LogFileHelpers: InternalPromptForCheckoutAndSave took 57.411 ms (total: 1.82 sec)
+[2026.04.03-16.47.38:169][474]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2026.04.03-16.47.38:205][474]LogUObjectHash: Compacting FUObjectHashTables data took   1.71ms
+[2026.04.03-16.47.38:232][474]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2026.04.03-16.47.38:266][474]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2026.04.03-16.47.38:266][474]LogContentValidation: Display: Starting to validate 2 assets
+[2026.04.03-16.47.38:266][474]LogContentValidation: Enabled validators:
+[2026.04.03-16.47.38:266][474]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.47.38:266][474]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.47.38:266][474]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.47.38:266][474]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.47.38:266][474]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.47.38:266][474]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.47.38:266][474]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.04.03-16.47.38:266][474]AssetCheck: /Game/AI/EnemyBase/BP_BTEnemyAIControllerBase Validating asset
+[2026.04.03-16.47.50:469][674]LogStreaming: Display: FlushAsyncLoading(601): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.47.54:339][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.BP_BulletBase:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:339][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.BP_BulletBase_C' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.BP_BulletBase:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.BP_BulletBase:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.BP_BulletBase:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.SKEL_BP_BulletBase_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.SKEL_BP_BulletBase_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.SKEL_BP_BulletBase_C:ReceiveTick' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.SKEL_BP_BulletBase_C:UserConstructionScript' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:341][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_BulletBase.SKEL_BP_BulletBase_C' ref from Metadata '/Game/AI/BP_BulletBase.PackageMetaData'
+[2026.04.03-16.47.54:379][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.BP_EnemyBase:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:379][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.BP_EnemyBase_C' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:379][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.BP_EnemyBase:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:380][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.BP_EnemyBase:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:380][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.BP_EnemyBase:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:380][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.SKEL_BP_EnemyBase_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:380][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.SKEL_BP_EnemyBase_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:380][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.SKEL_BP_EnemyBase_C:ReceiveTick' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:380][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.SKEL_BP_EnemyBase_C:UserConstructionScript' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:380][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_EnemyBase.SKEL_BP_EnemyBase_C' ref from Metadata '/Game/AI/BP_EnemyBase.PackageMetaData'
+[2026.04.03-16.47.54:412][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.BP_SplineController:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:412][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.BP_SplineController_C' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:412][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.BP_SplineController:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:412][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.BP_SplineController:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:412][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.BP_SplineController:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:412][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.SKEL_BP_SplineController_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:413][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.SKEL_BP_SplineController_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:413][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.SKEL_BP_SplineController_C:ReceiveTick' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:413][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.SKEL_BP_SplineController_C:UserConstructionScript' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:413][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineController.SKEL_BP_SplineController_C' ref from Metadata '/Game/AI/BP_SplineController.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.BP_SplineMovementActor:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.BP_SplineMovementActor_C' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.BP_SplineMovementActor:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.BP_SplineMovementActor:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.BP_SplineMovementActor:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.SKEL_BP_SplineMovementActor_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.SKEL_BP_SplineMovementActor_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.SKEL_BP_SplineMovementActor_C:ReceiveTick' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.SKEL_BP_SplineMovementActor_C:UserConstructionScript' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:442][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_SplineMovementActor.SKEL_BP_SplineMovementActor_C' ref from Metadata '/Game/AI/BP_SplineMovementActor.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.BP_WeaponBase:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.BP_WeaponBase_C' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.BP_WeaponBase:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.BP_WeaponBase:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.BP_WeaponBase:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.SKEL_BP_WeaponBase_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.SKEL_BP_WeaponBase_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:471][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.SKEL_BP_WeaponBase_C:ReceiveTick' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:472][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.SKEL_BP_WeaponBase_C:UserConstructionScript' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:472][733]LogMetaData: Removing '/Game/AI/EnemyBase/BP_WeaponBase.SKEL_BP_WeaponBase_C' ref from Metadata '/Game/AI/BP_WeaponBase.PackageMetaData'
+[2026.04.03-16.47.54:497][733]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.47.54:498][733]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/BP_EnemySniperRifle] ([2] browsable assets)...
+[2026.04.03-16.47.54:528][733]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/BP_EnemySniperRifle.BP_EnemySniperRifle]
+[2026.04.03-16.47.54:528][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemySniperRifle]
+[2026.04.03-16.47.54:536][733]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemySniperRifle
+[2026.04.03-16.47.54:537][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemySniperRifle518FC0BD4D2255991460969329FEFD48.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemySniperRifle.uasset'
+[2026.04.03-16.47.54:540][733]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/EnemyBase/BP_BulletBase] ([2] browsable assets)...
+[2026.04.03-16.47.54:540][733]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_17
+[2026.04.03-16.47.54:541][733]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_17'.
+[2026.04.03-16.47.54:562][733]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/EnemyBase/BP_BulletBase.BP_BulletBase_C]
+[2026.04.03-16.47.54:562][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_BulletBase]
+[2026.04.03-16.47.54:568][733]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_BulletBase
+[2026.04.03-16.47.54:568][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_BulletBase8993CB3242F41EA9A54770993C99B342.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_BulletBase.uasset'
+[2026.04.03-16.47.54:569][733]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/EnemyBase/BP_BulletBase.
+[2026.04.03-16.47.54:578][733]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/EnemyBase/BP_EnemyBase] ([2] browsable assets)...
+[2026.04.03-16.47.54:578][733]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_18
+[2026.04.03-16.47.54:579][733]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_18'.
+[2026.04.03-16.47.54:602][733]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/EnemyBase/BP_EnemyBase.BP_EnemyBase_C]
+[2026.04.03-16.47.54:602][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_EnemyBase]
+[2026.04.03-16.47.54:609][733]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_EnemyBase
+[2026.04.03-16.47.54:609][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseFCB48518400CF91ADDE345A17DAC2A1B.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_EnemyBase.uasset'
+[2026.04.03-16.47.54:610][733]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/EnemyBase/BP_EnemyBase.
+[2026.04.03-16.47.54:618][733]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_EnemyBase] ([5] browsable assets)...
+[2026.04.03-16.47.54:618][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemyBase]
+[2026.04.03-16.47.54:618][733]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/AI/BP_EnemyBase" FILE="../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset" SILENT=true
+[2026.04.03-16.47.54:619][733]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemyBase
+[2026.04.03-16.47.54:621][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseF6E50EA848AFD7C98CE76DB32A7FD9B3.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset'
+[2026.04.03-16.47.54:626][733]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/EnemyBase/BP_SplineController] ([2] browsable assets)...
+[2026.04.03-16.47.54:626][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_SplineController]
+[2026.04.03-16.47.54:631][733]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_SplineController
+[2026.04.03-16.47.54:631][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SplineController67A4995B42A16626DDB468ACF8FB3BCA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_SplineController.uasset'
+[2026.04.03-16.47.54:632][733]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/EnemyBase/BP_SplineController.
+[2026.04.03-16.47.54:640][733]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_SplineController] ([5] browsable assets)...
+[2026.04.03-16.47.54:641][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_SplineController]
+[2026.04.03-16.47.54:642][733]LogSavePackage: Moving output files for package: /Game/AI/BP_SplineController
+[2026.04.03-16.47.54:643][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SplineController0A0B34194B59FB4C9FEFD19F00D739C8.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineController.uasset'
+[2026.04.03-16.47.54:650][733]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/EnemyBase/BP_SplineMovementActor] ([2] browsable assets)...
+[2026.04.03-16.47.54:650][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_SplineMovementActor]
+[2026.04.03-16.47.54:655][733]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_SplineMovementActor
+[2026.04.03-16.47.54:655][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SplineMovementActor6C2B10EE41274669ED6621BFFB6873E3.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_SplineMovementActor.uasset'
+[2026.04.03-16.47.54:656][733]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/EnemyBase/BP_SplineMovementActor.
+[2026.04.03-16.47.54:673][733]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_SplineMovementActor] ([5] browsable assets)...
+[2026.04.03-16.47.54:673][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_SplineMovementActor]
+[2026.04.03-16.47.54:674][733]LogSavePackage: Moving output files for package: /Game/AI/BP_SplineMovementActor
+[2026.04.03-16.47.54:675][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SplineMovementActorD2770EEA41100A0594C3DC96C9FA49B3.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineMovementActor.uasset'
+[2026.04.03-16.47.54:680][733]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/EnemyBase/BP_WeaponBase] ([2] browsable assets)...
+[2026.04.03-16.47.54:680][733]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_WeaponBase]
+[2026.04.03-16.47.54:685][733]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_WeaponBase
+[2026.04.03-16.47.54:685][733]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_WeaponBase016EECFB4C5E581A0AFCB795C0D6AC60.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_WeaponBase.uasset'
+[2026.04.03-16.47.54:686][733]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/EnemyBase/BP_WeaponBase.
+[2026.04.03-16.47.54:693][733]LogFileHelpers: InternalPromptForCheckoutAndSave took 195.665 ms (total: 2.02 sec)
+[2026.04.03-16.47.54:766][733]LogUObjectHash: Compacting FUObjectHashTables data took   1.27ms
+[2026.04.03-16.47.54:796][733]LogUObjectHash: Compacting FUObjectHashTables data took   1.39ms
+[2026.04.03-16.47.54:820][733]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2026.04.03-16.47.54:852][733]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2026.04.03-16.47.54:852][733]LogContentValidation: Display: Starting to validate 15 assets
+[2026.04.03-16.47.54:853][733]LogContentValidation: Enabled validators:
+[2026.04.03-16.47.54:853][733]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.47.54:853][733]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.47.54:853][733]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.47.54:853][733]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.47.54:853][733]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.47.54:853][733]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/BP_EnemySniperRifle Validating asset
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/EnemyBase/BP_BulletBase Validating asset
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/EnemyBase/BP_EnemyBase Validating asset
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/BP_EnemyBase Validating asset
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/EnemyBase/BP_SplineController Validating asset
+[2026.04.03-16.47.54:853][733]AssetCheck: /Game/AI/BP_SplineController Validating asset
+[2026.04.03-16.47.54:854][733]AssetCheck: /Game/AI/BP_SplineController Validating asset
+[2026.04.03-16.47.54:854][733]AssetCheck: /Game/AI/BP_SplineController Validating asset
+[2026.04.03-16.47.54:854][733]AssetCheck: /Game/AI/EnemyBase/BP_SplineMovementActor Validating asset
+[2026.04.03-16.47.54:854][733]AssetCheck: /Game/AI/BP_SplineMovementActor Validating asset
+[2026.04.03-16.47.54:854][733]AssetCheck: /Game/AI/BP_SplineMovementActor Validating asset
+[2026.04.03-16.47.54:854][733]AssetCheck: /Game/AI/BP_SplineMovementActor Validating asset
+[2026.04.03-16.47.54:854][733]AssetCheck: /Game/AI/EnemyBase/BP_WeaponBase Validating asset
+[2026.04.03-16.48.00:671][828]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.03-16.48.00:685][828]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.03-16.48.00:706][829]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.03-16.48.03:566][883]LogContentBrowser: Attempting asset rename: NewFolder -> Weapons
+[2026.04.03-16.48.03:566][883]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.03-16.48.07:336][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.BP_EnemySniperRifle:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:336][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.BP_EnemySniperRifle_C' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:336][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.BP_EnemySniperRifle:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:337][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.BP_EnemySniperRifle:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:337][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.BP_EnemySniperRifle:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:337][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:337][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:337][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:ReceiveTick' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:337][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:UserConstructionScript' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:337][943]LogMetaData: Removing '/Game/AI/Weapons/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C' ref from Metadata '/Game/AI/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.03-16.48.07:367][943]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.48.07:368][943]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/BP_EnemySniperRifle] ([2] browsable assets)...
+[2026.04.03-16.48.07:368][943]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_19
+[2026.04.03-16.48.07:368][943]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_19'.
+[2026.04.03-16.48.07:410][943]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/BP_EnemySniperRifle.BP_EnemySniperRifle_C]
+[2026.04.03-16.48.07:410][943]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/BP_EnemySniperRifle]
+[2026.04.03-16.48.07:417][943]LogSavePackage: Moving output files for package: /Game/AI/Weapons/BP_EnemySniperRifle
+[2026.04.03-16.48.07:417][943]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemySniperRifle26CD8F5046E11471DF6E19AB6CDF5D64.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/BP_EnemySniperRifle.uasset'
+[2026.04.03-16.48.07:418][943]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/Weapons/BP_EnemySniperRifle.
+[2026.04.03-16.48.07:427][943]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/BP_EnemySniperRifle] ([5] browsable assets)...
+[2026.04.03-16.48.07:427][943]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/BP_EnemySniperRifle]
+[2026.04.03-16.48.07:428][943]LogSavePackage: Moving output files for package: /Game/AI/BP_EnemySniperRifle
+[2026.04.03-16.48.07:429][943]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemySniperRifle736E0B714AD2209A0F43BDB7C94D93CA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemySniperRifle.uasset'
+[2026.04.03-16.48.07:434][943]LogFileHelpers: InternalPromptForCheckoutAndSave took 66.381 ms (total: 2.09 sec)
+[2026.04.03-16.48.07:463][943]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2026.04.03-16.48.07:463][943]LogContentValidation: Display: Starting to validate 4 assets
+[2026.04.03-16.48.07:463][943]LogContentValidation: Enabled validators:
+[2026.04.03-16.48.07:463][943]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.48.07:463][943]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.48.07:463][943]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.48.07:463][943]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.48.07:463][943]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.48.07:463][943]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.48.07:463][943]AssetCheck: /Game/AI/Weapons/BP_EnemySniperRifle Validating asset
+[2026.04.03-16.48.07:463][943]AssetCheck: /Game/AI/BP_EnemySniperRifle Validating asset
+[2026.04.03-16.48.07:463][943]AssetCheck: /Game/AI/BP_EnemySniperRifle Validating asset
+[2026.04.03-16.48.07:464][943]AssetCheck: /Game/AI/BP_EnemySniperRifle Validating asset
+[2026.04.03-16.48.20:066][164]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5320.966797
+[2026.04.03-16.48.20:361][169]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.03-16.48.20:361][169]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5321.204590, Update Interval: 306.652435
+[2026.04.03-16.48.21:600][189]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.03-16.48.21:672][189]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.03-16.48.21:694][190]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.03-16.48.25:711][266]LogContentBrowser: Attempting asset rename: NewFolder -> SniperEnemy
+[2026.04.03-16.48.25:712][266]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.03-16.48.30:870][349]LogMetaData: Removing '/Game/AI/SniperEnemy/BT_EnemyAI.BT_EnemyAI:Behavior Tree.BehaviorTreeGraphNode_Root_0' ref from Metadata '/Game/AI/BT_EnemyAI.PackageMetaData'
+[2026.04.03-16.48.30:895][349]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.48.30:895][349]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase] ([2] browsable assets)...
+[2026.04.03-16.48.30:895][349]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_BTEnemyAIControllerBase]
+[2026.04.03-16.48.30:900][349]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_BTEnemyAIControllerBase
+[2026.04.03-16.48.30:901][349]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_BTEnemyAIControllerBase9B0D6B2B4081FCB5AA9C37AEB8364473.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_BTEnemyAIControllerBase.uasset'
+[2026.04.03-16.48.30:903][349]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/SniperEnemy/BB_Enemy] ([1] browsable assets)...
+[2026.04.03-16.48.30:903][349]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/SniperEnemy/BB_Enemy]
+[2026.04.03-16.48.30:904][349]LogSavePackage: Moving output files for package: /Game/AI/SniperEnemy/BB_Enemy
+[2026.04.03-16.48.30:906][349]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BB_Enemy9EA5F8CE466F6653F4C759B47CFB1967.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/SniperEnemy/BB_Enemy.uasset'
+[2026.04.03-16.48.30:907][349]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/SniperEnemy/BT_EnemyAI] ([1] browsable assets)...
+[2026.04.03-16.48.30:907][349]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/SniperEnemy/BT_EnemyAI]
+[2026.04.03-16.48.30:912][349]LogSavePackage: Moving output files for package: /Game/AI/SniperEnemy/BT_EnemyAI
+[2026.04.03-16.48.30:912][349]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BT_EnemyAI117282EF436FCF85A7041B82E8DEE343.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/SniperEnemy/BT_EnemyAI.uasset'
+[2026.04.03-16.48.30:914][349]LogFileHelpers: InternalPromptForCheckoutAndSave took 18.483 ms (total: 2.11 sec)
+[2026.04.03-16.48.31:013][349]LogUObjectHash: Compacting FUObjectHashTables data took   1.32ms
+[2026.04.03-16.48.31:044][349]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2026.04.03-16.48.31:070][349]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2026.04.03-16.48.31:099][349]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2026.04.03-16.48.31:100][349]LogContentValidation: Display: Starting to validate 3 assets
+[2026.04.03-16.48.31:100][349]LogContentValidation: Enabled validators:
+[2026.04.03-16.48.31:100][349]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.48.31:100][349]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.48.31:100][349]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.48.31:100][349]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.48.31:100][349]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.48.31:100][349]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.48.31:100][349]AssetCheck: /Game/AI/EnemyBase/BP_BTEnemyAIControllerBase Validating asset
+[2026.04.03-16.48.31:100][349]AssetCheck: /Game/AI/SniperEnemy/BB_Enemy Validating asset
+[2026.04.03-16.48.31:100][349]AssetCheck: /Game/AI/SniperEnemy/BT_EnemyAI Validating asset
+[2026.04.03-16.48.39:121][492]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.03-16.48.46:540][615]LogPackageName: SearchForPackageOnDisk took   0.000s, but failed to resolve /Game/AI/SniperEnemy/MySniperEnemy.
+[2026.04.03-16.48.46:558][615]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy
+[2026.04.03-16.48.46:559][615]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2026.04.03-16.48.46:560][615]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_20'.
+[2026.04.03-16.48.46:817][615]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.04.03-16.48.51:966][690]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find Color 'DefaultForeground'.'
+[2026.04.03-16.48.57:203][760]LogSlate: Took 0.011360 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2026.04.03-16.48.57:223][760]LogSlate: Warning: Unable to rasterize '../../../Engine/Content/Editor/Slate/Starship/AssetIcons/SkeletalMesh_64.svg'. File could not be found
+[2026.04.03-16.48.57:239][761]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2026.04.03-16.48.57:240][761]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_21'.
+[2026.04.03-16.48.57:434][762]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_22
+[2026.04.03-16.48.57:434][762]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_22'.
+[2026.04.03-16.49.03:259][842]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_23
+[2026.04.03-16.49.03:260][842]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_23'.
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.49.33:802][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.49.33:804][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.49.33:805][269]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.49.33:942][269]LogUObjectHash: Compacting FUObjectHashTables data took   1.83ms
+[2026.04.03-16.49.40:741][356]LogStreaming: Display: FlushAsyncLoading(602): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.49.40:742][356]LogStreaming: Warning: LoadPackage: SkipPackage: /Game/AI/SniperEnemy/MySniperEnemy (0xCAB4DDB3380F2996) - The package to load does not exist on disk or in the loader
+[2026.04.03-16.49.40:742][356]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy'
+[2026.04.03-16.49.43:096][391]LogStreaming: Display: FlushAsyncLoading(603): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.49.52:194][521]LogStreaming: Display: FlushAsyncLoading(604): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.50.02:519][660]LogStreaming: Display: FlushAsyncLoading(605): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.50.08:571][744]LogStreaming: Display: FlushAsyncLoading(607): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.50.19:506][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.50.19:509][899]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.50.19:627][899]LogUObjectHash: Compacting FUObjectHashTables data took   2.71ms
+[2026.04.03-16.50.19:828][900]LogStreaming: Display: FlushAsyncLoading(608): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.03-16.50.20:361][909]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.50.20:486][909]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/SniperEnemy/MySniperEnemy] ([2] browsable assets)...
+[2026.04.03-16.50.20:512][909]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy]
+[2026.04.03-16.50.20:513][909]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_24
+[2026.04.03-16.50.20:514][909]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_24'.
+[2026.04.03-16.50.20:537][909]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy_C]
+[2026.04.03-16.50.20:537][909]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/SniperEnemy/MySniperEnemy]
+[2026.04.03-16.50.20:543][909]LogWorldPartition: Can't find class descriptor '/Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy_C' for saving '/Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy_C'
+[2026.04.03-16.50.20:543][909]LogWorldPartition: Can't find class descriptor '/Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy_C' for saving '/Game/AI/SniperEnemy/MySniperEnemy.MySniperEnemy_C'
+[2026.04.03-16.50.20:545][909]LogSavePackage: Moving output files for package: /Game/AI/SniperEnemy/MySniperEnemy
+[2026.04.03-16.50.20:546][909]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/MySniperEnemy352EDBAC4CE4BA1D8DD15493B96FB596.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/SniperEnemy/MySniperEnemy.uasset'
+[2026.04.03-16.50.20:547][909]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/SniperEnemy/MySniperEnemy.
+[2026.04.03-16.50.20:573][909]LogFileHelpers: InternalPromptForCheckoutAndSave took 212.521 ms (total: 2.32 sec)
+[2026.04.03-16.50.20:635][909]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.03-16.50.20:635][909]LogContentValidation: Enabled validators:
+[2026.04.03-16.50.20:635][909]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.50.20:635][909]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.50.20:635][909]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.50.20:635][909]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.50.20:635][909]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.50.20:635][909]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.50.20:635][909]AssetCheck: /Game/AI/SniperEnemy/MySniperEnemy Validating asset
+[2026.04.03-16.50.42:886][242]LogContentBrowser: Attempting asset rename: MySniperEnemy -> BP_SniperEnemy
+[2026.04.03-16.50.43:078][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.SKEL_BP_SniperEnemy_C' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy_C' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.SKEL_BP_SniperEnemy_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.SKEL_BP_SniperEnemy_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.SKEL_BP_SniperEnemy_C:ReceiveTick' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:079][242]LogMetaData: Removing '/Game/AI/SniperEnemy/BP_SniperEnemy.SKEL_BP_SniperEnemy_C:UserConstructionScript' ref from Metadata '/Game/AI/SniperEnemy/MySniperEnemy.PackageMetaData'
+[2026.04.03-16.50.43:116][242]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.50.43:116][242]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/SniperEnemy/BP_SniperEnemy] ([2] browsable assets)...
+[2026.04.03-16.50.43:117][242]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_25
+[2026.04.03-16.50.43:117][242]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_25'.
+[2026.04.03-16.50.43:155][242]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy_C]
+[2026.04.03-16.50.43:155][242]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/SniperEnemy/BP_SniperEnemy]
+[2026.04.03-16.50.43:162][242]LogSavePackage: Moving output files for package: /Game/AI/SniperEnemy/BP_SniperEnemy
+[2026.04.03-16.50.43:163][242]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SniperEnemyEFCF661745835DDF3C098A83C65D2555.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/SniperEnemy/BP_SniperEnemy.uasset'
+[2026.04.03-16.50.43:164][242]LogPackageName: SearchForPackageOnDisk took   0.000s to resolve /Game/AI/SniperEnemy/BP_SniperEnemy.
+[2026.04.03-16.50.43:173][242]LogFileHelpers: InternalPromptForCheckoutAndSave took 56.833 ms (total: 2.37 sec)
+[2026.04.03-16.50.43:229][242]LogUObjectHash: Compacting FUObjectHashTables data took   1.95ms
+[2026.04.03-16.50.43:269][242]LogUObjectHash: Compacting FUObjectHashTables data took   1.78ms
+[2026.04.03-16.50.43:300][242]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2026.04.03-16.50.43:377][242]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.03-16.50.43:377][242]LogContentValidation: Enabled validators:
+[2026.04.03-16.50.43:377][242]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.50.43:377][242]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.50.43:377][242]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.50.43:377][242]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.50.43:377][242]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.50.43:377][242]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.50.43:377][242]AssetCheck: /Game/AI/SniperEnemy/BP_SniperEnemy Validating asset
+[2026.04.03-16.50.43:391][242]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_26
+[2026.04.03-16.50.43:391][242]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_26'.
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.51.17:754][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.51.17:755][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.51.17:755][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.51.17:755][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.51.17:755][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.51.17:755][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.51.17:755][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.51.17:756][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.51.17:756][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.51.17:756][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.51.17:756][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.51.17:756][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.51.17:756][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.51.17:757][721]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.51.17:851][721]LogUObjectHash: Compacting FUObjectHashTables data took   1.78ms
+[2026.04.03-16.51.18:733][730]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.51.18:891][730]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/SniperEnemy/BP_SniperEnemy] ([2] browsable assets)...
+[2026.04.03-16.51.18:919][730]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy]
+[2026.04.03-16.51.18:919][730]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/SniperEnemy/BP_SniperEnemy]
+[2026.04.03-16.51.18:925][730]LogSavePackage: Moving output files for package: /Game/AI/SniperEnemy/BP_SniperEnemy
+[2026.04.03-16.51.18:926][730]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SniperEnemy14931ADA4014DD7587AEB08D58992D75.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/SniperEnemy/BP_SniperEnemy.uasset'
+[2026.04.03-16.51.18:946][730]LogFileHelpers: InternalPromptForCheckoutAndSave took 213.010 ms (total: 2.59 sec)
+[2026.04.03-16.51.19:007][730]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.03-16.51.19:007][730]LogContentValidation: Enabled validators:
+[2026.04.03-16.51.19:007][730]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.51.19:007][730]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.51.19:007][730]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.51.19:007][730]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.51.19:007][730]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.51.19:007][730]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.51.19:007][730]AssetCheck: /Game/AI/SniperEnemy/BP_SniperEnemy Validating asset
+[2026.04.03-16.51.52:906][942]LogUObjectHash: Compacting FUObjectHashTables data took   1.91ms
+[2026.04.03-16.51.52:909][942]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/FirstPersonMap' took 0.036
+[2026.04.03-16.51.52:910][942]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/EnemyBase/BP_EnemyBase] ([2] browsable assets)...
+[2026.04.03-16.51.52:953][942]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/EnemyBase/BP_EnemyBase.BP_EnemyBase]
+[2026.04.03-16.51.52:953][942]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_EnemyBase]
+[2026.04.03-16.51.52:959][942]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/AI/EnemyBase/BP_EnemyBase_Auto1
+[2026.04.03-16.51.52:960][942]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBase_Auto18EA558A6417B44149265F0A060928BA5.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/Autosaves/Game/AI/EnemyBase/BP_EnemyBase_Auto1.uasset'
+[2026.04.03-16.51.52:961][942]LogFileHelpers: Auto-saving content packages took 0.052
+[2026.04.03-16.54.13:845][365]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5674.747559
+[2026.04.03-16.54.14:845][368]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.03-16.54.14:845][368]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5675.413574, Update Interval: 304.295776
+[2026.04.03-16.55.08:322][551]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.03-16.55.39:044][148]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.03-16.55.39:044][148]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.03-16.56.22:326][378]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.03-16.56.38:577][666]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.03-16.56.38:578][666]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.03-16.56.57:226][935]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.03-16.57.14:709][262]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.03-16.57.14:709][262]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.03-16.57.29:146][335]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.03-16.57.38:508][384]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_13.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_13.exp
+[2026.04.03-16.57.38:872][384]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.03-16.57.38:872][384]LogClass: UClass EnemyBase Reload.
+[2026.04.03-16.57.38:872][384]LogClass: UClass SniperEnemy Reload.
+[2026.04.03-16.57.38:875][384]LogClass: Could not find existing class EnemyBase in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.03-16.57.38:875][384]LogClass: Could not find existing class SniperEnemy in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.03-16.57.38:893][384]Re-instancing EnemyBase after reload.
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.57.38:901][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.57.38:990][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.57.38:990][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.57.38:990][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.57.38:990][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.57.38:990][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.57.38:990][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.57.38:990][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.57.38:991][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_EnemyBase_C_UAID_84144D205DD1D7CC02_1219040763.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.57.39:104][384]Re-instancing SniperEnemy after reload.
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.57.39:209][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.57.39:210][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.57.39:211][384]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.57.39:592][384]LogUObjectHash: Compacting FUObjectHashTables data took   1.48ms
+[2026.04.03-16.57.40:533][385]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes changed, 1 class unchanged, 1 function remapped
+[2026.04.03-16.57.40:534][385]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.03-16.57.53:295][598]LogUObjectHash: Compacting FUObjectHashTables data took   2.14ms
+[2026.04.03-16.57.53:302][598]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.57.53:363][598]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/EN/8L3NIXSN50OPB6WUE3PY97
+[2026.04.03-16.57.53:364][598]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/8L3NIXSN50OPB6WUE3PY97E6333AA242E237C83CB95BA24099B2FD.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/EN/8L3NIXSN50OPB6WUE3PY97.uasset'
+[2026.04.03-16.57.53:367][598]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/EnemyBase/BP_EnemyBase] ([2] browsable assets)...
+[2026.04.03-16.57.53:367][598]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/EnemyBase/BP_EnemyBase]
+[2026.04.03-16.57.53:373][598]LogSavePackage: Moving output files for package: /Game/AI/EnemyBase/BP_EnemyBase
+[2026.04.03-16.57.53:374][598]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemyBaseA27CD74648275555F86F86B8A96E0193.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/EnemyBase/BP_EnemyBase.uasset'
+[2026.04.03-16.57.53:394][598]LogFileHelpers: InternalPromptForCheckoutAndSave took 91.299 ms (total: 2.68 sec)
+[2026.04.03-16.57.53:460][598]LogContentValidation: Display: Starting to validate 2 assets
+[2026.04.03-16.57.53:460][598]LogContentValidation: Enabled validators:
+[2026.04.03-16.57.53:460][598]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.57.53:460][598]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.57.53:460][598]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.57.53:460][598]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.57.53:460][598]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.57.53:460][598]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.57.53:461][598]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
+[2026.04.03-16.57.53:461][598]AssetCheck: /Game/AI/EnemyBase/BP_EnemyBase Validating asset
+[2026.04.03-16.57.58:024][686]Cmd: DELETE
+[2026.04.03-16.57.58:024][686]Cmd: ACTOR DELETE
+[2026.04.03-16.57.58:035][686]LogEditorActor: Deleted Actor: BP_EnemyBase_C
+[2026.04.03-16.57.58:125][686]LogUObjectHash: Compacting FUObjectHashTables data took   2.91ms
+[2026.04.03-16.57.58:139][686]LogEditorActor: Deleted 1 Actors (0.111 secs)
+[2026.04.03-16.57.59:485][709]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy_C
+[2026.04.03-16.57.59:486][709]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy_C
+[2026.04.03-16.57.59:493][709]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy as actor: BP_SniperEnemy_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_0
+[2026.04.03-16.57.59:498][709]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy as actor: BP_SniperEnemy_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_0
+[2026.04.03-16.58.00:431][724]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2026.04.03-16.58.00:445][724]LogEditorActor: Deleted 0 Actors (0.043 secs)
+[2026.04.03-16.58.00:451][724]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy_C
+[2026.04.03-16.58.00:451][724]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy_C
+[2026.04.03-16.58.00:463][724]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy as actor: BP_SniperEnemy_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563
+[2026.04.03-16.58.00:469][724]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy as actor: BP_SniperEnemy_C /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563
+[2026.04.03-16.58.05:753][822]LogSceneOutliner: Outliner Column Item Label does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.04.03-16.58.05:753][822]LogSceneOutliner: Outliner Column Type does not have a localizable name, please specify one to FSceneOutlinerColumnInfo
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.58.31:493][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.58.31:495][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.58.31:496][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.58.31:496][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: MySniperEnemy_C_0 /Engine/Transient.World_20:PersistentLevel.MySniperEnemy_C_0.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.58.31:505][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.58.31:506][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.58.31:631][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Hips' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Spine' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Spine1' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Spine2' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'Head' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftArm' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftHand' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightArm' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightHand' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftUpLeg' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftLeg' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'LeftFoot' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightUpLeg' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightLeg' 
+[2026.04.03-16.58.31:632][240]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563 /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap:PersistentLevel.BP_SniperEnemy_C_UAID_84144D205DD125CE02_1288559563.CharacterMesh0 Bone: 'RightFoot' 
+[2026.04.03-16.58.31:726][240]LogUObjectHash: Compacting FUObjectHashTables data took   2.50ms
+[2026.04.03-16.58.32:927][249]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.58.33:037][249]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/SniperEnemy/BP_SniperEnemy] ([2] browsable assets)...
+[2026.04.03-16.58.33:065][249]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy]
+[2026.04.03-16.58.33:066][249]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/SniperEnemy/BP_SniperEnemy]
+[2026.04.03-16.58.33:072][249]LogSavePackage: Moving output files for package: /Game/AI/SniperEnemy/BP_SniperEnemy
+[2026.04.03-16.58.33:074][249]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SniperEnemy7BE09E4D4DB7B29D7A3B39913018D2FD.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/SniperEnemy/BP_SniperEnemy.uasset'
+[2026.04.03-16.58.33:093][249]LogFileHelpers: InternalPromptForCheckoutAndSave took 165.724 ms (total: 2.84 sec)
+[2026.04.03-16.58.33:155][249]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.03-16.58.33:155][249]LogContentValidation: Enabled validators:
+[2026.04.03-16.58.33:155][249]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.58.33:155][249]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.58.33:155][249]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.58.33:155][249]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.58.33:155][249]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.58.33:155][249]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.58.33:155][249]AssetCheck: /Game/AI/SniperEnemy/BP_SniperEnemy Validating asset
+[2026.04.03-16.58.40:559][368]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2026.04.03-16.58.40:576][368]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.03-16.58.40:665][368]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2026.04.03-16.58.40:696][368]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2026.04.03-16.58.40:724][368]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2026.04.03-16.58.40:731][368]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/5R/72JTFG9D5JNU9PY0O1U367
+[2026.04.03-16.58.40:731][368]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/72JTFG9D5JNU9PY0O1U36704D3185B472C7CE07D96C4BBB6758A2B.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/5R/72JTFG9D5JNU9PY0O1U367.uasset'
+[2026.04.03-16.58.40:755][368]LogFileHelpers: InternalPromptForCheckoutAndSave took 179.172 ms (total: 3.02 sec)
+[2026.04.03-16.58.40:820][368]LogContentValidation: Display: Starting to validate 2 assets
+[2026.04.03-16.58.40:820][368]LogContentValidation: Enabled validators:
+[2026.04.03-16.58.40:820][368]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.03-16.58.40:820][368]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.03-16.58.40:820][368]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.03-16.58.40:820][368]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.03-16.58.40:820][368]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.03-16.58.40:820][368]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.03-16.58.40:820][368]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset

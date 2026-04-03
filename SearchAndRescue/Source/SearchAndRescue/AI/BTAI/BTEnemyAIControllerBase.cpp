@@ -76,7 +76,6 @@ void ABTEnemyAIControllerBase::OnTargetPerceptionUpdated(AActor* Actor, FAIStimu
 {
 	if (Stimulus.WasSuccessfullySensed())
 	{
-		GLog->Log("Sensed player");
 		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), true);
 	}
 

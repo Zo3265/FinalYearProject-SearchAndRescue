@@ -73,6 +73,12 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\EnemyBase.h">
       <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\SniperEnemy.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\SniperEnemy.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
+    </ClCompile>
     <Filter Include="Source\SearchAndRescue\Private">
       <UniqueIdentifier>{AB2CB879-22A7-37FB-BDED-B8BEAF41F410}</UniqueIdentifier>
     </Filter>
