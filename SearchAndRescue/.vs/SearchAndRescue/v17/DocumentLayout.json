@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -15,24 +35,12 @@
       "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\SearchAndRescue.Build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\SearchAndRescue.Build.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\BulletBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\Weapons\\BulletBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\WeaponBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -62,11 +70,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BTSniperAIController.cpp",
+              "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp",
+              "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp",
+              "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp",
+              "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-04-03T17:02:57.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "BTSniperAIController.h",
+              "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h",
+              "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h",
+              "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h",
+              "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-04-03T17:02:57.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "SniperEnemy.cpp",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.cpp",
@@ -74,25 +108,23 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-03T16:43:45.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T16:43:45.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "SniperEnemy.h",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h",
               "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-03T16:43:45.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T16:43:45.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "SearchAndRescue.Build.cs",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\SearchAndRescue.Build.cs",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\SearchAndRescue.Build.cs",
@@ -100,12 +132,11 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\SearchAndRescue.Build.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-03T14:03:25.714Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T14:03:25.714Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "BulletBase.cpp",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\BulletBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\BulletBase.cpp",
@@ -117,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "BulletBase.h",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\BulletBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\BulletBase.h",
@@ -129,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "WeaponBase.cpp",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\WeaponBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\WeaponBase.cpp",
@@ -141,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "WeaponBase.h",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\WeaponBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\WeaponBase.h",
@@ -153,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "SniperRifle.cpp",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\SniperRifle.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\SniperRifle.cpp",
@@ -165,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "SniperRifle.h",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\SniperRifle.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\SniperRifle.h",
@@ -177,50 +208,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "BTEnemyAIControllerBase.cpp",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
               "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAE0AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-01T11:12:32.891Z"
+              "WhenOpened": "2026-04-01T11:12:32.891Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 0,
               "Title": "BTEnemyAIControllerBase.h",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
               "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAADQAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-01T11:12:02.792Z"
+              "WhenOpened": "2026-04-01T11:12:02.792Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "EnemyBase.cpp",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-03-30T12:28:16.687Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "EnemyBase.h",
               "DocumentMoniker": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "ToolTip": "C:\\Users\\zohai\\Documents\\GitHub\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACcAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-03-30T12:28:16.416Z",
               "EditorCaption": ""

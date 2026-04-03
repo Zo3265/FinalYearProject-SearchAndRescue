@@ -22,8 +22,6 @@ ABTEnemyAIControllerBase::ABTEnemyAIControllerBase()
 
 	AIPerception->ConfigureSense(*SightConfig);
 	AIPerception->SetDominantSense(SightConfig->GetSenseImplementation());
-
-	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ABTEnemyAIControllerBase::OnTargetPerceptionUpdated);
 }
 
 void ABTEnemyAIControllerBase::OnPossess(APawn* InPawn)
@@ -72,15 +70,3 @@ void ABTEnemyAIControllerBase::Tick(float DeltaTime)
 
 }
 
-void ABTEnemyAIControllerBase::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
-{
-	if (Stimulus.WasSuccessfullySensed())
-	{
-		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), true);
-	}
-
-	else
-	{
-		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), false);
-	}
-}

@@ -67,6 +67,12 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\BTEnemyAIControllerBase.h">
       <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\BTSniperAIController.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\BTSniperAIController.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\EnemyBase.cpp">
       <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
     </ClCompile>
