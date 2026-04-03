@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "Perception/AIPerceptionComponent.h"
+#include "Perception/AISenseConfig_Sight.h"
 #include "SearchAndRescue/AI/BTAI/EnemyBase.h"
 #include "SearchAndRescue/AI/SplineMovementActor.h"
 #include "BTEnemyAIControllerBase.generated.h"
@@ -32,6 +34,15 @@ public:
 
 	UPROPERTY()
 	AEnemyBase* Enemy;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Perception")
+	UAIPerceptionComponent* AIPerception;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AI Perception")
+	UAISenseConfig_Sight* SightConfig;
+
+	UFUNCTION()
+	void OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus);
 private:
 	UPROPERTY(EditAnywhere)
 	class UBehaviorTree* AIBehavior;

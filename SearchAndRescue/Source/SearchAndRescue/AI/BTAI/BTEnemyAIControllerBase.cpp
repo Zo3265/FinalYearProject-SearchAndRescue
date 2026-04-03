@@ -26,6 +26,22 @@ void ABTEnemyAIControllerBase::OnPossess(APawn* InPawn)
 			SphereStore = ChildActor->GetChildActor();
 		}
 	}
+
+	AIPerception = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerception"));
+
+	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
+	SightConfig->SightRadius = 3000;
+	SightConfig->LoseSightRadius = 3500;
+	SightConfig->PeripheralVisionAngleDegrees = 90;
+	SightConfig->SetMaxAge(30.0f);
+	SightConfig->DetectionByAffiliation.bDetectEnemies = true;
+	SightConfig->DetectionByAffiliation.bDetectFriendlies = false;
+	SightConfig->DetectionByAffiliation.bDetectNeutrals = false;
+
+	AIPerception->ConfigureSense(*SightConfig);
+	AIPerception->SetDominantSense(SightConfig->GetSenseImplementation());
+
+	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ABTEnemyAIControllerBase::OnTargetPerceptionUpdated);
 }
 
 void ABTEnemyAIControllerBase::BeginPlay()
@@ -47,4 +63,12 @@ void ABTEnemyAIControllerBase::Tick(float DeltaTime)
 	//Default behaviour is to patrol
 	GetBlackboardComponent()->SetValueAsObject(TEXT("SplineMovementActor"), SphereStore);
 
+}
+
+void ABTEnemyAIControllerBase::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
+{
+	if (Stimulus.WasSuccessfullySensed())
+	{
+		
+	}
 }
