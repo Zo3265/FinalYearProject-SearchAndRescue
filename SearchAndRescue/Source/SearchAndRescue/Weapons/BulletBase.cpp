@@ -29,6 +29,10 @@ ABulletBase::ABulletBase()
     ProjectileMovement->bShouldBounce = false;
     ProjectileMovement->Bounciness = 0.0f;
     ProjectileMovement->ProjectileGravityScale = 0.0f; // Set this to 0 if you want the bullets to go completely straight.
+
+    //Default variables for a bullet
+    fDamage = 50.0f;
+    iAmount = 1;
 }
 
 // Called when the game starts or when spawned

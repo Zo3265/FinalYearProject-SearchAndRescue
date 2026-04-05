@@ -26,14 +26,20 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "default")
 	UStaticMeshComponent* Mesh;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
-	UProjectileMovementComponent* ProjectileMovement;
-
 	UFUNCTION()
 	void OnOverLapBegin(UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
+	UProjectileMovementComponent* ProjectileMovement;
+
+	UPROPERTY(EditAnywhere, Category = "Bullet Variables")
+	float fDamage;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Bullet Variables")
+	float iAmount;
 
 };
