@@ -37,7 +37,13 @@ public:
 	UProjectileMovementComponent* ProjectileMovement;
 
 	UPROPERTY(EditAnywhere, Category = "Bullet Variables")
-	float fDamage;
+	float fDamage = 50.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Bullet Variables")
+	float finitSpeed = 1000.0f;
+
+	UPROPERTY(EditAnywhere, Category = "Bullet Variables")
+	float fMaxSpeed = 1000.0f;	
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Bullet Variables")
 	float iAmount;
