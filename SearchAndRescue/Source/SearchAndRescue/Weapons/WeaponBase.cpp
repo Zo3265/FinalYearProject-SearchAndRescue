@@ -2,7 +2,7 @@
 
 
 #include "WeaponBase.h"
-
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AWeaponBase::AWeaponBase()
@@ -36,13 +36,23 @@ void AWeaponBase::Tick(float DeltaTime)
 
 void AWeaponBase::Fire()
 {
-    FTransform SpawnTransform = Mesh->GetSocketTransform(TEXT("BulletSpawn"), RTS_World);
+    APawn* PlayerPawn = UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetPawn();
+
+    //Get the location of the bullets spawn point
+    FVector MuzzleLocation = Mesh->GetSocketLocation(TEXT("BulletSpawn"));
+
+    //Get the player location
+    FVector PlayerLocation = PlayerPawn->GetActorLocation();
+
+    //Rotate the bullet to go to the players location.
+    //Currently aims at the players feet. I will need to make it so that it targets the players torso but to that I need to target a socket on the players mesh. Which it currently doesn't have.
+    FRotator FireRotation = (PlayerLocation - MuzzleLocation).Rotation();
 
     FActorSpawnParameters SpawnParameters;
     SpawnParameters.Owner = this;
     SpawnParameters.Instigator = GetInstigator();
     SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-    Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, SpawnTransform, SpawnParameters);
+    Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, MuzzleLocation, FireRotation, SpawnParameters);
 }
 
