@@ -23,11 +23,11 @@ EBTNodeResult::Type USniperShootBTTaskNode::ExecuteTask(UBehaviorTreeComponent& 
 	{
 		ASniperEnemy* Sniper = Cast<ASniperEnemy>(ControlledPawn);
 		ASniperRifle* Rifle = Sniper->getRifle();;
-		if (Sniper != nullptr && Rifle != nullptr)
+		if ((Sniper != nullptr && Rifle != nullptr) && Rifle->getReloading() != true)
 		{
-
-			Rifle->SniperFire();
-			return EBTNodeResult::Succeeded;
+				Rifle->SniperFire();
+				Sniper->PlayAttackAnim();
+				return EBTNodeResult::Succeeded;
 		}
 	}
 

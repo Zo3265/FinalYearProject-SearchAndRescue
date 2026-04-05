@@ -34,6 +34,7 @@ void AEnemyBase::BeginPlay()
 	float Speed = splineController->getSpline()->GetSplineLength() / splineController->getTotalPathTimeController();
 	UE_LOG(LogTemp, Warning, TEXT("Speed is: %f"), Speed);
 	GetCharacterMovement()->MaxWalkSpeed = Speed - 20.0f;
+
 }
 
 // Called every frame

@@ -31,7 +31,15 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Variables")
 	float fHealth = 100.0f;
 
-	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation Montages")
+	UAnimMontage* FiringAnimation;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation Montages")
+	UAnimMontage* ReloadAnimation;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation Montages")
+	UAnimMontage* DeathAnimation;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -40,6 +48,7 @@ public:
 	float StartTime;
 	float Count;
 	float resetTime;
+
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

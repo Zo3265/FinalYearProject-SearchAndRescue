@@ -36,24 +36,25 @@ void ASniperRifle::Tick(float DeltaTime)
 
 void ASniperRifle::SniperFire()
 {
-	if (iCurrentMagCount != 0 && bCanFire == true)
+	if (iCurrentMagCount != 0) //&& bCanFire == true)
 	{
+		GLog->Log("Firing");
 		Fire();
 		bCanFire = false;
 		iCurrentMagCount--;
 	}
 
-	//This acts as a bolt timer for the sniper rifle.
-	else if (bCanFire == false)
-	{
-		Count += 1.0f * DT;
-		//UE_LOG(LogTemp, Warning, TEXT("Count is: %f"), Count);
-		if (Count >= 1.0f)
-		{
-			bCanFire = true;
-			Count = StartTime;
-		}
-	}
+	////This acts as a bolt timer for the sniper rifle.
+	//else if (bCanFire == false)
+	//{
+	//	Count += 1.0f * DT;
+	//	//UE_LOG(LogTemp, Warning, TEXT("Count is: %f"), Count);
+	//	if (Count >= 0.93f)
+	//	{
+	//		bCanFire = true;
+	//		Count = StartTime;
+	//	}
+	//}
 
 	if (iCurrentMagCount <= 0 && bReloading == false)
 	{
@@ -68,5 +69,15 @@ void ASniperRifle::Reload()
 	iCurrentMagCount += iDiff; //Refill the magazine.
 	iCurrentAmmoReserve -= iDiff; //Take the refill away from our reserve ammo.
 	bReloading = false; //We are no longer reloading.
+}
+
+bool ASniperRifle::getCanFire()
+{
+	return bCanFire;
+}
+
+bool ASniperRifle::getReloading()
+{
+	return bReloading;
 }
 

@@ -29,6 +29,9 @@ public:
 	void SniperFire();
 	bool bReloading = false;
 	bool bCanFire = true;
+
+	bool getCanFire();
+	bool getReloading();
 private:
 	int iCurrentMagCount; //Current Ammo in gun
 	int iCurrentAmmoReserve; //Current Ammo Reserve

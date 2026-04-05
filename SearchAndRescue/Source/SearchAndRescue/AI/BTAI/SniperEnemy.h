@@ -25,10 +25,15 @@ protected:
 
 	UPROPERTY()
 	ASniperRifle* SniperRifle;
+
+	UPROPERTY()
+	UAnimInstance* AnimInstance;
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	ASniperRifle* getRifle();
+
+	void PlayAttackAnim();
 private:
 };

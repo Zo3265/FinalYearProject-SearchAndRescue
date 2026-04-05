@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeSniperEnemy() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_UAnimInstance_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AEnemyBase();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperEnemy();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperEnemy_NoRegister();
@@ -45,9 +46,13 @@ struct Z_Construct_UClass_ASniperEnemy_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SniperRifle_MetaData[] = {
 		{ "ModuleRelativePath", "AI/BTAI/SniperEnemy.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AnimInstance_MetaData[] = {
+		{ "ModuleRelativePath", "AI/BTAI/SniperEnemy.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FClassPropertyParams NewProp_SniperClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SniperRifle;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AnimInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -57,9 +62,11 @@ struct Z_Construct_UClass_ASniperEnemy_Statics
 };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_ASniperEnemy_Statics::NewProp_SniperClass = { "SniperClass", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASniperEnemy, SniperClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ASniperRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperClass_MetaData), NewProp_SniperClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASniperEnemy_Statics::NewProp_SniperRifle = { "SniperRifle", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASniperEnemy, SniperRifle), Z_Construct_UClass_ASniperRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperRifle_MetaData), NewProp_SniperRifle_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASniperEnemy_Statics::NewProp_AnimInstance = { "AnimInstance", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASniperEnemy, AnimInstance), Z_Construct_UClass_UAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnimInstance_MetaData), NewProp_AnimInstance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASniperEnemy_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASniperEnemy_Statics::NewProp_SniperClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASniperEnemy_Statics::NewProp_SniperRifle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASniperEnemy_Statics::NewProp_AnimInstance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASniperEnemy_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASniperEnemy_Statics::DependentSingletons[])() = {
@@ -102,10 +109,10 @@ ASniperEnemy::~ASniperEnemy() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASniperEnemy, ASniperEnemy::StaticClass, TEXT("ASniperEnemy"), &Z_Registration_Info_UClass_ASniperEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperEnemy), 292301718U) },
+		{ Z_Construct_UClass_ASniperEnemy, ASniperEnemy::StaticClass, TEXT("ASniperEnemy"), &Z_Registration_Info_UClass_ASniperEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperEnemy), 149388202U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_3433367844(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_2419111715(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

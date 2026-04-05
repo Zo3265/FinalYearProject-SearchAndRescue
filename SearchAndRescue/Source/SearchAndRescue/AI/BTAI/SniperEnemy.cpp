@@ -22,14 +22,45 @@ void ASniperEnemy::BeginPlay()
 		SniperRifle->SetOwner(this);
 	}
 
+	AnimInstance = GetMesh()->GetAnimInstance();
+
 }
 
 void ASniperEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (AnimInstance != nullptr)
+	{
+		/*if (AnimInstance->Montage_IsPlaying(FiringAnimation))
+		{
+			float AttackMontageTimeStore = AnimInstance->Montage_GetPosition(FiringAnimation);
+			UE_LOG(LogTemp, Warning, TEXT("Current Montage Time: %f"), AttackMontageTimeStore);
+			if (AttackMontageTimeStore >= 0.1f )
+			{
+				SniperRifle->SniperFire();
+			}
+		}*/
+
+	}
 }
 
 ASniperRifle* ASniperEnemy::getRifle()
 {
 	return SniperRifle;
+}
+
+void ASniperEnemy::PlayAttackAnim()
+{
+
+	if (AnimInstance != nullptr)
+	{
+		
+		/*if (!AnimInstance->Montage_IsPlaying(FiringAnimation))
+		{*/
+			GLog->Log("Playing Animation");
+			AnimInstance->Montage_Play(FiringAnimation);
+		//}
+		
+	}
 }
