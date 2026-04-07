@@ -45,19 +45,23 @@ struct Z_Construct_UClass_AGrenadeBase_Statics
 		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_fDamage_MetaData[] = {
-		{ "Category", "Variables" },
+		{ "Category", "Grenade Variables" },
 		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_finitSpeed_MetaData[] = {
-		{ "Category", "Variables" },
+		{ "Category", "Grenade Variables" },
 		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_fFuseTime_MetaData[] = {
-		{ "Category", "Variables" },
+		{ "Category", "GrenadeVariables" },
 		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_iAmount_MetaData[] = {
-		{ "Category", "Bullet Variables" },
+		{ "Category", "Grenade Variables" },
+		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bDummy_MetaData[] = {
+		{ "Category", "Grenade Variables" },
 		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
 	};
 #endif // WITH_METADATA
@@ -67,6 +71,8 @@ struct Z_Construct_UClass_AGrenadeBase_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_finitSpeed;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_fFuseTime;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_iAmount;
+	static void NewProp_bDummy_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bDummy;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -80,6 +86,11 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_St
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_finitSpeed = { "finitSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, finitSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_finitSpeed_MetaData), NewProp_finitSpeed_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_fFuseTime = { "fFuseTime", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, fFuseTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_fFuseTime_MetaData), NewProp_fFuseTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_iAmount = { "iAmount", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, iAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_iAmount_MetaData), NewProp_iAmount_MetaData) };
+void Z_Construct_UClass_AGrenadeBase_Statics::NewProp_bDummy_SetBit(void* Obj)
+{
+	((AGrenadeBase*)Obj)->bDummy = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_bDummy = { "bDummy", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AGrenadeBase), &Z_Construct_UClass_AGrenadeBase_Statics::NewProp_bDummy_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bDummy_MetaData), NewProp_bDummy_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGrenadeBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_Mesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_ProjectileMovement,
@@ -87,6 +98,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGrenadeB
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_finitSpeed,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_fFuseTime,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_iAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_bDummy,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AGrenadeBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AGrenadeBase_Statics::DependentSingletons[])() = {
@@ -129,10 +141,10 @@ AGrenadeBase::~AGrenadeBase() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGrenadeBase, AGrenadeBase::StaticClass, TEXT("AGrenadeBase"), &Z_Registration_Info_UClass_AGrenadeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrenadeBase), 230811537U) },
+		{ Z_Construct_UClass_AGrenadeBase, AGrenadeBase::StaticClass, TEXT("AGrenadeBase"), &Z_Registration_Info_UClass_AGrenadeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrenadeBase), 921631326U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_2945041094(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_889458359(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

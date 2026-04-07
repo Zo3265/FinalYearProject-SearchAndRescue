@@ -33,15 +33,18 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
 	UProjectileMovementComponent* ProjectileMovement;
 
-	UPROPERTY(EditAnywhere, Category = "Variables")
+	UPROPERTY(EditAnywhere, Category = "Grenade Variables")
 	float fDamage = 50.0f;
 
-	UPROPERTY(EditAnywhere, Category = "Variables")
+	UPROPERTY(EditAnywhere, Category = "Grenade Variables")
 	float finitSpeed = 1000.0f;
 
-	UPROPERTY(EditAnywhere, Category = "Variables")
+	UPROPERTY(EditAnywhere, Category = "GrenadeVariables")
 	float fFuseTime = 2.0f;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Bullet Variables")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Grenade Variables")
 	float iAmount = 1;
+
+	UPROPERTY(EditAnywhere, Category = "Grenade Variables")
+	bool bDummy = false;
 };

@@ -5,14 +5,22 @@
 
 AExplosiveGrenade::AExplosiveGrenade()
 {
+	ProjectileMovement->Deactivate();
 }
 
 void AExplosiveGrenade::BeginPlay()
 {
 	Super::BeginPlay();
 
-	FTimerHandle ExplodeTimer;
-	GetWorldTimerManager().SetTimer(ExplodeTimer, this, &AExplosiveGrenade::Explode, fFuseTime, false);
+	if (bDummy == false)
+	{
+		GLog->Log("Dummy");
+		FTimerHandle ExplodeTimer;
+		GetWorldTimerManager().SetTimer(ExplodeTimer, this, &AExplosiveGrenade::Explode, fFuseTime, false);
+	}
+
+	ProjectileMovement->Deactivate();
+	
 }
 
 void AExplosiveGrenade::Tick(float DeltaTime)

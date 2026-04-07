@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "SearchAndRescue/AI/SplineController.h"
+#include "SearchAndRescue/Weapons/ExplosiveGrenade.h"
 #include "EnemyBase.generated.h"
 
 UCLASS()
@@ -40,6 +41,14 @@ protected:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation Montages")
 	UAnimMontage* DeathAnimation;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation Montages")
+	UAnimMontage* GrenadeThrowAnimation;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Grenades")
+	TSubclassOf<AExplosiveGrenade> ExplosiveGrenadeClass;
+
+	UPROPERTY()
+	AExplosiveGrenade* ExplosiveGrenade;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

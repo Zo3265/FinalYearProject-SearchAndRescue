@@ -35,5 +35,7 @@ public:
 	ASniperRifle* getRifle();
 
 	void PlayAttackAnim();
+
+	void PlayGrenadeThrowAnim();
 private:
 };

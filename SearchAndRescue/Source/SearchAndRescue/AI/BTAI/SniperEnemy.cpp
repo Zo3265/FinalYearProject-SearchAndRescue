@@ -58,9 +58,17 @@ void ASniperEnemy::PlayAttackAnim()
 		
 		/*if (!AnimInstance->Montage_IsPlaying(FiringAnimation))
 		{*/
-			GLog->Log("Playing Animation");
+			//GLog->Log("Playing Animation");
 			AnimInstance->Montage_Play(FiringAnimation);
 		//}
 		
+	}
+}
+
+void ASniperEnemy::PlayGrenadeThrowAnim()
+{
+	if (AnimInstance != nullptr)
+	{
+		AnimInstance->Montage_Play(GrenadeThrowAnimation);
 	}
 }
