@@ -1547,3 +1547,752 @@ LogConfig: Set CVar [[r.Nanite.Streaming.AsyncCompute:0	; Temporary workaround f
 [2026.04.07-15.22.57:359][905]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
 [2026.04.07-15.22.57:473][906]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed
 [2026.04.07-15.22.57:473][906]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.07-15.26.08:933][524]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 986.590698
+[2026.04.07-15.26.09:932][527]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.07-15.26.09:933][527]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 987.257385, Update Interval: 356.608795
+[2026.04.07-15.27.22:222][892]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.07-15.27.40:971][268]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.07-15.27.41:081][268]Using bundled DotNet SDK version: 8.0.300
+[2026.04.07-15.27.41:081][268]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.07-15.27.41:686][268]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.04.07-15.27.42:088][268]
+[2026.04.07-15.27.42:088][268]Generating VisualStudio2022 project files:
+[2026.04.07-15.27.42:088][268]Discovering modules, targets and source code for project...
+[2026.04.07-15.27.48:829][268]Available x64 toolchains (3):
+[2026.04.07-15.27.48:829][268] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.07-15.27.48:829][268]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.07-15.27.48:829][268] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.07-15.27.48:829][268]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.07-15.27.48:829][268] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.07-15.27.48:829][268]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.07-15.27.48:829][268]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.07-15.27.54:764][268]Binding IntelliSense data...
+[2026.04.07-15.28.30:988][268]Binding IntelliSense data... 50%
+[2026.04.07-15.28.30:989][268]Binding IntelliSense data... 100%
+[2026.04.07-15.28.30:989][268]Writing project files...
+[2026.04.07-15.28.35:014][268]Writing project files... 100%
+[2026.04.07-15.28.35:015][268]
+[2026.04.07-15.28.35:015][268]Generating QueryTargets data for editor...
+[2026.04.07-15.28.35:015][268]Total execution time: 53.87 seconds
+[2026.04.07-15.28.35:426][268]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.07-15.28.35:614][268]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.04.07-15.28.59:235][750]Display: Reload/Re-instancing Complete: No object changes detected
+[2026.04.07-15.28.59:236][750]LogLiveCoding: Error: Live coding failed, please see Live console for more information
+[2026.04.07-15.29.58:716][542]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.07-15.30.18:901][944]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_2.exp
+[2026.04.07-15.30.19:245][946]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.07-15.30.19:246][946]LogClass: Could not find existing class ExplosiveGrenade in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.07-15.30.19:409][946]LogUObjectHash: Compacting FUObjectHashTables data took   0.87ms
+[2026.04.07-15.30.19:451][947]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 1 class unchanged
+[2026.04.07-15.30.19:451][947]LogLiveCoding: Warning: Live coding succeeded, data type changes may cause packaging to fail if assets reference the new or updated data types
+[2026.04.07-15.32.16:887][341]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1354.539673
+[2026.04.07-15.32.17:887][344]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.07-15.32.17:888][344]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1355.206787, Update Interval: 314.086731
+[2026.04.07-15.32.22:551][358]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.07-15.32.44:085][792]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_3.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_3.exp
+[2026.04.07-15.32.44:438][794]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.07-15.32.44:584][794]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2026.04.07-15.32.44:637][795]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes unchanged
+[2026.04.07-15.32.44:637][795]LogLiveCoding: Display: Live coding succeeded
+[2026.04.07-15.34.39:006][223]LogLiveCoding: Display: Starting Live Coding compile.
+[2026.04.07-15.34.48:969][407]LogLiveCoding: Display:    Creating library C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_4.lib and object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue.patch_4.exp
+[2026.04.07-15.34.49:450][409]LogUObjectHash: Compacting FUObjectHashTables data took   0.92ms
+[2026.04.07-15.34.49:508][410]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes unchanged
+[2026.04.07-15.34.49:508][410]LogLiveCoding: Display: Live coding succeeded
+[2026.04.07-15.35.36:608][477]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_1
+[2026.04.07-15.35.36:608][477]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_1'.
+[2026.04.07-15.35.36:668][478]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_2
+[2026.04.07-15.35.36:668][478]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_2'.
+[2026.04.07-15.35.42:012][583]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.07-15.35.42:074][583]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.07-15.35.42:087][584]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.07-15.35.49:460][753]LogContentBrowser: Attempting asset rename: NewFolder -> Grenades
+[2026.04.07-15.35.49:460][753]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.07-15.35.54:247][853]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.07-15.35.54:257][853]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.07-15.35.54:274][854]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.07-15.35.56:630][906]LogContentBrowser: Attempting asset rename: NewFolder -> Sniper
+[2026.04.07-15.35.56:631][906]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.07-15.36.01:351][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle_C' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:351][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:351][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:351][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:352][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:352][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:352][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:352][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:ReceiveTick' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:352][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C:UserConstructionScript' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:352][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_EnemySniperRifle.SKEL_BP_EnemySniperRifle_C' ref from Metadata '/Game/AI/Weapons/BP_EnemySniperRifle.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.BP_SniperBullet:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.BP_SniperBullet_C' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.BP_SniperBullet:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.BP_SniperBullet:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.BP_SniperBullet:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.SKEL_BP_SniperBullet_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.SKEL_BP_SniperBullet_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.SKEL_BP_SniperBullet_C:ReceiveTick' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.SKEL_BP_SniperBullet_C:UserConstructionScript' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:394][995]LogMetaData: Removing '/Game/AI/Weapons/Sniper/BP_SniperBullet.SKEL_BP_SniperBullet_C' ref from Metadata '/Game/AI/Weapons/BP_SniperBullet.PackageMetaData'
+[2026.04.07-15.36.01:421][995]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.07-15.36.01:422][995]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Sniper/BP_EnemySniperRifle] ([2] browsable assets)...
+[2026.04.07-15.36.01:423][995]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_3
+[2026.04.07-15.36.01:424][995]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_3'.
+[2026.04.07-15.36.01:466][995]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle_C]
+[2026.04.07-15.36.01:466][995]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Sniper/BP_EnemySniperRifle]
+[2026.04.07-15.36.01:483][995]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Sniper/BP_EnemySniperRifle
+[2026.04.07-15.36.01:483][995]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemySniperRifle8CD0396E4EB4930160C606B19B8B8C68.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Sniper/BP_EnemySniperRifle.uasset'
+[2026.04.07-15.36.01:501][995]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/Weapons/BP_EnemySniperRifle] ([5] browsable assets)...
+[2026.04.07-15.36.01:501][995]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/BP_EnemySniperRifle]
+[2026.04.07-15.36.01:503][995]LogSavePackage: Moving output files for package: /Game/AI/Weapons/BP_EnemySniperRifle
+[2026.04.07-15.36.01:504][995]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_EnemySniperRifle7B8A3D03412E2DA06E721496CC67A53D.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/BP_EnemySniperRifle.uasset'
+[2026.04.07-15.36.01:509][995]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Sniper/BP_SniperBullet] ([2] browsable assets)...
+[2026.04.07-15.36.01:509][995]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_4
+[2026.04.07-15.36.01:509][995]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_4'.
+[2026.04.07-15.36.01:529][995]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/Sniper/BP_SniperBullet.BP_SniperBullet_C]
+[2026.04.07-15.36.01:529][995]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Sniper/BP_SniperBullet]
+[2026.04.07-15.36.01:534][995]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Sniper/BP_SniperBullet
+[2026.04.07-15.36.01:534][995]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SniperBulletCCBAE62E4360BAD28CD9F59650B2018E.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Sniper/BP_SniperBullet.uasset'
+[2026.04.07-15.36.01:541][995]LogFileHelpers: InternalPromptForCheckoutAndSave took 119.663 ms
+[2026.04.07-15.36.01:583][995]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2026.04.07-15.36.01:597][995]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2026.04.07-15.36.01:610][995]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2026.04.07-15.36.01:640][995]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2026.04.07-15.36.01:640][995]LogContentValidation: Display: Starting to validate 5 assets
+[2026.04.07-15.36.01:640][995]LogContentValidation: Enabled validators:
+[2026.04.07-15.36.01:641][995]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.07-15.36.01:641][995]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.07-15.36.01:641][995]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.07-15.36.01:641][995]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.07-15.36.01:641][995]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.07-15.36.01:641][995]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.07-15.36.01:641][995]AssetCheck: /Game/AI/Weapons/Sniper/BP_EnemySniperRifle Validating asset
+[2026.04.07-15.36.01:641][995]AssetCheck: /Game/AI/Weapons/BP_EnemySniperRifle Validating asset
+[2026.04.07-15.36.01:641][995]AssetCheck: /Game/AI/Weapons/BP_EnemySniperRifle Validating asset
+[2026.04.07-15.36.01:641][995]AssetCheck: /Game/AI/Weapons/BP_EnemySniperRifle Validating asset
+[2026.04.07-15.36.01:641][995]AssetCheck: /Game/AI/Weapons/Sniper/BP_SniperBullet Validating asset
+[2026.04.07-15.36.09:301][159]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.04.07-15.36.17:356][314]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.04.07-15.37.08:405][748]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.07-15.37.08:415][748]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.07-15.37.08:430][749]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.07-15.37.16:693][934]LogContentBrowser: Attempting asset rename: NewFolder -> Grenades
+[2026.04.07-15.37.16:694][934]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.07-15.37.22:047][ 34]LogStreaming: Display: FlushAsyncLoading(405): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.07-15.37.32:093][ 34]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/grenade/source/grenade.fbx]
+[2026.04.07-15.37.33:662][ 34]LogSlate: Window 'Import Content' being destroyed
+[2026.04.07-15.37.33:700][ 34]LogInterchangeEngine: [Pending] Importing
+[2026.04.07-15.37.33:787][ 35]LogStreaming: Display: FlushAsyncLoading(414): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.07-15.37.33:871][ 37]LogStaticMesh: Display: Building static mesh grenade_1 (Required Memory Estimate: 2.048285 MB)...
+[2026.04.07-15.37.33:871][ 37]LogStaticMesh: Display: Building static mesh ring (Required Memory Estimate: 0.5951 MB)...
+[2026.04.07-15.37.33:879][ 37]LogStaticMesh: Adjacency [0.00s], tris: 384, UVs 1
+[2026.04.07-15.37.33:882][ 37]LogStaticMesh: Adjacency [0.00s], tris: 1328, UVs 1
+[2026.04.07-15.37.33:882][ 37]LogStaticMesh: Clustering [0.00s]. Ratio: 1.000000
+[2026.04.07-15.37.33:882][ 37]LogStaticMesh: Leaves [0.00s]
+[2026.04.07-15.37.33:886][ 37]LogStaticMesh: Clustering [0.00s]. Ratio: 1.000000
+[2026.04.07-15.37.33:886][ 37]LogStaticMesh: Leaves [0.00s]
+[2026.04.07-15.37.33:896][ 37]LogStaticMesh: Reduce [0.01s]
+[2026.04.07-15.37.33:900][ 37]LogStaticMesh: Fallback [0.00s], num tris: 374
+[2026.04.07-15.37.33:901][ 37]LogStaticMesh: ConstrainClusters:
+[2026.04.07-15.37.33:901][ 37]LogStaticMesh:   Input: 6 Clusters, 762 Triangles and 510 Vertices
+[2026.04.07-15.37.33:901][ 37]LogStaticMesh:   Output without splits: 6 Clusters, 762 Triangles and 539 Vertices
+[2026.04.07-15.37.33:901][ 37]LogStaticMesh:   Output with splits: 6 Clusters, 762 Triangles and 539 Vertices
+[2026.04.07-15.37.33:901][ 37]LogStaticMesh: Material Stats - Unique Materials: 1, Fast Path Clusters: 6, Slow Path Clusters: 0, 1 Material: 6, 2 Materials: 0, 3 Materials: 0, At Least 4 Materials: 0
+[2026.04.07-15.37.33:901][ 37]LogStaticMesh: WritePages:
+[2026.04.07-15.37.33:902][ 37]LogStaticMesh:   Root: GPU size: 6588 bytes. 1 Pages. 6588.000 bytes per page (20.105% utilization).
+[2026.04.07-15.37.33:902][ 37]LogStaticMesh:   Streaming: 0 bytes.
+[2026.04.07-15.37.33:902][ 37]LogStaticMesh:   Page data disk size: 5428 bytes. Fixup data size: 56 bytes.
+[2026.04.07-15.37.33:902][ 37]LogStaticMesh:   Total GPU size: 6588 bytes, Total disk size: 5484 bytes.
+[2026.04.07-15.37.33:902][ 37]LogStaticMesh: Encode [0.00s]
+[2026.04.07-15.37.33:902][ 37]LogStaticMesh: Nanite build [0.02s]
+
+[2026.04.07-15.37.33:906][ 37]LogStaticMesh: Built static mesh [0.04s] /Game/ModelsAndAnimations/Weapons/Grenades/ring.ring
+[2026.04.07-15.37.33:959][ 38]LogStaticMesh: Reduce [0.07s]
+[2026.04.07-15.37.34:000][ 39]LogStaticMesh: Fallback [0.04s], num tris: 725
+[2026.04.07-15.37.34:002][ 39]LogStaticMesh: ConstrainClusters:
+[2026.04.07-15.37.34:002][ 39]LogStaticMesh:   Input: 23 Clusters, 2839 Triangles and 2531 Vertices
+[2026.04.07-15.37.34:002][ 39]LogStaticMesh:   Output without splits: 23 Clusters, 2839 Triangles and 2548 Vertices
+[2026.04.07-15.37.34:002][ 39]LogStaticMesh:   Output with splits: 23 Clusters, 2839 Triangles and 2548 Vertices
+[2026.04.07-15.37.34:002][ 39]LogStaticMesh: Material Stats - Unique Materials: 1, Fast Path Clusters: 23, Slow Path Clusters: 0, 1 Material: 23, 2 Materials: 0, 3 Materials: 0, At Least 4 Materials: 0
+[2026.04.07-15.37.34:004][ 39]LogStaticMesh: WritePages:
+[2026.04.07-15.37.34:004][ 39]LogStaticMesh:   Root: GPU size: 31352 bytes. 1 Pages. 31352.000 bytes per page (95.679% utilization).
+[2026.04.07-15.37.34:004][ 39]LogStaticMesh:   Streaming: 0 bytes.
+[2026.04.07-15.37.34:004][ 39]LogStaticMesh:   Page data disk size: 25692 bytes. Fixup data size: 88 bytes.
+[2026.04.07-15.37.34:004][ 39]LogStaticMesh:   Total GPU size: 31352 bytes, Total disk size: 25780 bytes.
+[2026.04.07-15.37.34:004][ 39]LogStaticMesh: Encode [0.00s]
+[2026.04.07-15.37.34:004][ 39]LogStaticMesh: Nanite build [0.12s]
+
+[2026.04.07-15.37.34:009][ 39]LogStaticMesh: Built static mesh [0.14s] /Game/ModelsAndAnimations/Weapons/Grenades/grenade_1.grenade_1
+[2026.04.07-15.37.34:079][ 40]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...ssets/grenade/source/grenade.fbx]
+[2026.04.07-15.37.34:079][ 40]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/grenade/source/grenade.fbx : 'grenade_1', StaticMesh] No smoothing group information was found for this mesh 'Mesh' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.04.07-15.37.34:079][ 40]Interchange: Warning: [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/grenade/source/grenade.fbx : 'ring', StaticMesh] No smoothing group information was found for this mesh 'Mesh_ncl_1' in the FBX file. Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter before exporting the file.
+[2026.04.07-15.37.34:101][ 40]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2026.04.07-15.37.34:101][ 40]LogInterchangeEngine: [Success] Import Done
+[2026.04.07-15.37.34:249][ 42]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_5
+[2026.04.07-15.37.34:249][ 42]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_5'.
+[2026.04.07-15.37.45:096][235]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.07-15.37.45:106][235]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.07-15.37.45:119][236]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.07-15.37.50:140][342]LogContentBrowser: Attempting asset rename: NewFolder -> Explosive
+[2026.04.07-15.37.50:141][342]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.07-15.37.55:317][439]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.07-15.37.55:329][439]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.07-15.37.55:361][441]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.07-15.37.57:951][496]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1695.603882
+[2026.04.07-15.37.58:214][502]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.07-15.37.58:214][503]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1695.823120, Update Interval: 334.369934
+[2026.04.07-15.37.58:844][517]LogContentBrowser: Attempting asset rename: NewFolder -> Models
+[2026.04.07-15.37.58:845][517]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.07-15.38.05:211][642]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.04.07-15.38.05:222][642]LogContentBrowser: Creating deferred item: NewFolder
+[2026.04.07-15.38.05:238][643]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.04.07-15.38.09:427][734]LogContentBrowser: Attempting asset rename: NewFolder -> Textures
+[2026.04.07-15.38.09:428][734]LogContentBrowser: End creating deferred item NewFolder
+[2026.04.07-15.38.39:865][306]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.07-15.38.39:865][306]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/grenade_1] ([1] browsable assets)...
+[2026.04.07-15.38.39:893][306]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/grenade_1.grenade_1]
+[2026.04.07-15.38.39:893][306]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/grenade_1]
+[2026.04.07-15.38.39:898][306]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/grenade_1
+[2026.04.07-15.38.39:899][306]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/grenade_171A4412544E669ACA6CB73BD1BB82102.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/grenade_1.uasset'
+[2026.04.07-15.38.39:901][306]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/ring] ([1] browsable assets)...
+[2026.04.07-15.38.39:914][306]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/ring.ring]
+[2026.04.07-15.38.39:914][306]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/ring]
+[2026.04.07-15.38.39:918][306]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/ring
+[2026.04.07-15.38.39:918][306]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/ring4A31C90B428964C0A5A6DC897169B30F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/ring.uasset'
+[2026.04.07-15.38.39:919][306]LogFileHelpers: InternalPromptForCheckoutAndSave took 54.626 ms (total: 174.289 ms)
+[2026.04.07-15.38.39:974][306]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2026.04.07-15.38.39:989][306]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2026.04.07-15.38.40:000][306]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2026.04.07-15.38.40:030][306]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2026.04.07-15.38.40:030][306]LogContentValidation: Display: Starting to validate 2 assets
+[2026.04.07-15.38.40:030][306]LogContentValidation: Enabled validators:
+[2026.04.07-15.38.40:030][306]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.07-15.38.40:030][306]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.07-15.38.40:030][306]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.07-15.38.40:030][306]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.07-15.38.40:030][306]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.07-15.38.40:030][306]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.07-15.38.40:031][306]AssetCheck: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/grenade_1 Validating asset
+[2026.04.07-15.38.40:031][306]AssetCheck: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/ring Validating asset
+[2026.04.07-15.38.53:277][438]LogStreaming: Display: FlushAsyncLoading(416): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.07-15.38.53:286][438]LogInterchangeEngine: [Pending] Importing
+[2026.04.07-15.38.53:286][438]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/grenade/textures/grenadeAo.png]
+[2026.04.07-15.38.53:287][438]LogInterchangeEngine: [Pending] Importing -  (2)
+[2026.04.07-15.38.53:287][438]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/grenade/textures/grenadeColor.png]
+[2026.04.07-15.38.53:288][438]LogInterchangeEngine: [Pending] Importing -  (3)
+[2026.04.07-15.38.53:288][438]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/grenade/textures/grenadeNormal.png]
+[2026.04.07-15.38.53:289][438]LogInterchangeEngine: [Pending] Importing -  (4)
+[2026.04.07-15.38.53:381][440]LogStreaming: Display: FlushAsyncLoading(420): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.07-15.38.53:401][441]LogInterchangeImport: Display: Auto-detected grayscale, image changed to G8
+[2026.04.07-15.38.53:426][441]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeAo.grenadeAo (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 84.083323 MB), EncodeSpeed: Fast
+[2026.04.07-15.38.53:431][441]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeColor.grenadeColor (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 87.083323 MB), EncodeSpeed: Fast
+[2026.04.07-15.38.53:521][441]LogInterchangePipeline: Display: Auto-detected normal map
+[2026.04.07-15.38.53:524][442]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeNormal.grenadeNormal (TFO_BC5, 1024x1024 x1x1x1) (Required Memory Estimate: 124.499988 MB), EncodeSpeed: Fast
+[2026.04.07-15.38.53:569][442]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...ets/grenade/textures/grenadeColor.png]
+[2026.04.07-15.38.53:570][442]LogInterchangeEngine: [Pending] Importing -  (3)
+[2026.04.07-15.38.53:570][442]LogInterchangeEngine: [Pending] Importing -  (3)
+[2026.04.07-15.38.53:570][442]LogInterchangeEngine: Display: Interchange start importing source [C:/Users/zohai/Documents/Unreal Projects/Final Year Project Assets/grenade/textures/grenadeSpecular.png]
+[2026.04.07-15.38.53:570][442]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...ets/grenade/textures/grenadeAo.png]
+[2026.04.07-15.38.53:570][442]LogInterchangeEngine: [Pending] Importing -  (2)
+[2026.04.07-15.38.53:654][443]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...ets/grenade/textures/grenadeNormal.png]
+[2026.04.07-15.38.53:654][443]LogInterchangeEngine: [Pending] Importing -  (1)
+[2026.04.07-15.38.53:790][445]LogStreaming: Display: FlushAsyncLoading(423): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.07-15.38.53:844][447]LogTexture: Display: Building textures: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeSpecular.grenadeSpecular (TFO_AutoDXT, 1024x1024 x1x1x1) (Required Memory Estimate: 87.083323 MB), EncodeSpeed: Fast
+[2026.04.07-15.38.53:959][448]LogInterchangeEngine: Display: Interchange import completed [C:/Users/zohai/Docum...ets/grenade/textures/grenadeSpecular.png]
+[2026.04.07-15.38.53:960][448]LogInterchangeEngine: [Pending] Importing - Operation completed.
+[2026.04.07-15.38.53:960][448]LogInterchangeEngine: [Success] Import Done
+[2026.04.07-15.38.57:691][516]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2026.04.07-15.38.57:698][516]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.07-15.38.57:762][516]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/SniperEnemy/BP_SniperEnemy] ([2] browsable assets)...
+[2026.04.07-15.38.57:763][516]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_6
+[2026.04.07-15.38.57:763][516]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_6'.
+[2026.04.07-15.38.57:809][516]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/SniperEnemy/BP_SniperEnemy.BP_SniperEnemy]
+[2026.04.07-15.38.57:810][516]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/SniperEnemy/BP_SniperEnemy]
+[2026.04.07-15.38.57:817][516]LogSavePackage: Moving output files for package: /Game/AI/SniperEnemy/BP_SniperEnemy
+[2026.04.07-15.38.57:818][516]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_SniperEnemyA70F1BED4E5B018543C7D3AFD03A2ED1.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/SniperEnemy/BP_SniperEnemy.uasset'
+[2026.04.07-15.38.57:821][516]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeColor] ([1] browsable assets)...
+[2026.04.07-15.38.57:823][516]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeColor.grenadeColor]
+[2026.04.07-15.38.57:823][516]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeColor]
+[2026.04.07-15.38.57:845][516]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeColor
+[2026.04.07-15.38.57:845][516]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/grenadeColor0FE3FE8045DB7AEEC4197584079B0B92.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeColor.uasset'
+[2026.04.07-15.38.57:847][516]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeAo] ([1] browsable assets)...
+[2026.04.07-15.38.57:848][516]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeAo.grenadeAo]
+[2026.04.07-15.38.57:848][516]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeAo]
+[2026.04.07-15.38.57:857][516]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeAo
+[2026.04.07-15.38.57:857][516]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/grenadeAoD2EE34F3405B5C54261CC392F7A724E8.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeAo.uasset'
+[2026.04.07-15.38.57:858][516]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeNormal] ([1] browsable assets)...
+[2026.04.07-15.38.57:860][516]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeNormal.grenadeNormal]
+[2026.04.07-15.38.57:860][516]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeNormal]
+[2026.04.07-15.38.57:883][516]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeNormal
+[2026.04.07-15.38.57:883][516]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/grenadeNormal23AC9F76459D94F8C277329608544602.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeNormal.uasset'
+[2026.04.07-15.38.57:884][516]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeSpecular] ([1] browsable assets)...
+[2026.04.07-15.38.57:887][516]OBJ SavePackage:     Rendered thumbnail for [Texture2D /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeSpecular.grenadeSpecular]
+[2026.04.07-15.38.57:888][516]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeSpecular]
+[2026.04.07-15.38.57:908][516]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeSpecular
+[2026.04.07-15.38.57:908][516]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/grenadeSpecularEA0A92C04448A72FD4F30889ED31D484.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeSpecular.uasset'
+[2026.04.07-15.38.57:932][516]LogFileHelpers: InternalPromptForCheckoutAndSave took 234.311 ms (total: 408.600 ms)
+[2026.04.07-15.38.57:996][516]LogContentValidation: Display: Starting to validate 5 assets
+[2026.04.07-15.38.57:996][516]LogContentValidation: Enabled validators:
+[2026.04.07-15.38.57:996][516]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.07-15.38.57:996][516]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.07-15.38.57:997][516]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.07-15.38.57:997][516]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.07-15.38.57:997][516]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.07-15.38.57:997][516]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.07-15.38.57:997][516]AssetCheck: /Game/AI/SniperEnemy/BP_SniperEnemy Validating asset
+[2026.04.07-15.38.57:997][516]AssetCheck: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeColor Validating asset
+[2026.04.07-15.38.57:997][516]AssetCheck: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeAo Validating asset
+[2026.04.07-15.38.57:997][516]AssetCheck: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeNormal Validating asset
+[2026.04.07-15.38.57:997][516]AssetCheck: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/grenadeSpecular Validating asset
+[2026.04.07-15.39.00:444][560]LogContentBrowser: Deferred new asset file creation: NewMaterial
+[2026.04.07-15.39.00:509][560]LogContentBrowser: Creating deferred item: NewMaterial
+[2026.04.07-15.39.00:524][561]LogContentBrowser: Renaming the item being created (Deferred Item: NewMaterial).
+[2026.04.07-15.39.12:053][829]LogContentBrowser: Attempting asset rename: NewMaterial -> ExplosiveGrenadeMaterial
+[2026.04.07-15.39.12:059][829]LogContentBrowser: End creating deferred item NewMaterial
+[2026.04.07-15.39.12:095][829]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_7
+[2026.04.07-15.39.12:095][829]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_7'.
+[2026.04.07-15.39.14:076][870]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/ExplosiveGrenadeMaterial.ExplosiveGrenadeMaterial
+[2026.04.07-15.39.14:091][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/None.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/None.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Bool.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Bool.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float1.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float1.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RPY.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RPY.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_XYZ.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_XYZ.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float2.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float2.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RGB.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RGB.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Texture.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Texture.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float_Any.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float_Any.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float4_RGBA.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float4_RGBA.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_SinglePixel.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_SinglePixel.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeDefaultLit.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeDefaultLit.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftTopRight.png' error.
+[2026.04.07-15.39.14:092][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftTopRight.png
+[2026.04.07-15.39.14:092][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopLeftBottom.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopLeftBottom.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeUnlit.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeUnlit.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftBottomRight.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftBottomRight.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopRightBottom.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopRightBottom.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Remove_16px.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Remove_16px.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Bottom.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Bottom.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Left.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Left.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/WhiteBall.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/WhiteBall.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Top.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Top.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Right.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Right.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/BaseToggle_16x.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/BaseToggle_16x.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaskToggle_16x.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaskToggle_16x.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerAdd.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerAdd.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Duplicate_40x.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Duplicate_40x.png
+[2026.04.07-15.39.14:093][870]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerRemove.png' error.
+[2026.04.07-15.39.14:093][870]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerRemove.png
+[2026.04.07-15.39.14:136][870]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_8
+[2026.04.07-15.39.14:137][870]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_8'.
+[2026.04.07-15.39.14:140][870]LogStreaming: Display: FlushAsyncLoading(424): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.07-15.39.14:751][870]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.39.14:751][870]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.14:751][870]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.39.14:751][870]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.14:909][872]MaterialEditorStats: Base pass vertex shader: 133 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.39.14:910][872]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.39.14:910][872]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.14:910][872]MaterialEditorStats: Shader Count: 1
+[2026.04.07-15.39.14:910][872]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.17:815][923]MaterialEditorStats: Base pass shader: 126 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 1
+Sampler Limit: 16
+
+[2026.04.07-15.39.17:815][923]MaterialEditorStats: Base pass vertex shader: 133 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.39.17:815][923]MaterialEditorStats: Texture samplers: 1/16
+[2026.04.07-15.39.17:815][923]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.17:815][923]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.39.17:815][923]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.32:393][144]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.39.32:393][144]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.32:393][144]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.39.32:393][144]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.32:514][146]MaterialEditorStats: Base pass shader: 126 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 1
+Sampler Limit: 16
+
+[2026.04.07-15.39.32:514][146]MaterialEditorStats: Base pass vertex shader: 133 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.39.32:514][146]MaterialEditorStats: Texture samplers: 1/16
+[2026.04.07-15.39.32:514][146]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.32:514][146]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.39.32:514][146]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.36:199][209]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.39.36:199][209]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.36:199][209]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.39.36:199][209]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.36:298][211]MaterialEditorStats: Base pass shader: 126 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 1
+Sampler Limit: 16
+
+[2026.04.07-15.39.36:299][211]MaterialEditorStats: Base pass vertex shader: 133 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.39.36:299][211]MaterialEditorStats: Texture samplers: 1/16
+[2026.04.07-15.39.36:299][211]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.36:299][211]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.39.36:299][211]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.40:693][289]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.39.40:693][289]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.40:693][289]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.39.40:693][289]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.40:804][291]MaterialEditorStats: Base pass shader: 126 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 1
+Sampler Limit: 16
+
+[2026.04.07-15.39.40:804][291]MaterialEditorStats: Base pass vertex shader: 133 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.39.40:804][291]MaterialEditorStats: Texture samplers: 1/16
+[2026.04.07-15.39.40:804][291]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.40:804][291]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.39.40:804][291]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.42:351][317]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.39.42:351][317]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.42:351][317]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.39.42:351][317]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.42:463][319]MaterialEditorStats: Base pass shader: 126 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 1
+Sampler Limit: 16
+
+[2026.04.07-15.39.42:463][319]MaterialEditorStats: Base pass vertex shader: 133 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.39.42:463][319]MaterialEditorStats: Texture samplers: 1/16
+[2026.04.07-15.39.42:463][319]MaterialEditorStats: Texture Lookups (Est.): VS(0), PS(3)
+[2026.04.07-15.39.42:463][319]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.39.42:463][319]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.47:874][407]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.39.47:874][407]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2026.04.07-15.39.47:874][407]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.39.47:874][407]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.39.47:874][407]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.39.48:005][410]MaterialEditorStats: Base pass shader: 130 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 2
+Sampler Limit: 16
+
+[2026.04.07-15.39.48:006][410]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.39.48:006][410]MaterialEditorStats: Texture samplers: 2/16
+[2026.04.07-15.39.48:006][410]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(1)
+[2026.04.07-15.39.48:006][410]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.39.48:006][410]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.39.48:006][410]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.02:997][644]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.02:997][644]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(2)
+[2026.04.07-15.40.02:997][644]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.02:997][644]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.40.02:997][644]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.03:115][647]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.03:115][647]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.03:115][647]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(2)
+[2026.04.07-15.40.03:115][647]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.03:115][647]MaterialEditorStats: Shader Count: 1
+[2026.04.07-15.40.03:115][647]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.05:001][674]MaterialEditorStats: Base pass shader: 131 instructions
+Stats: Resources Used: 6
+Resource Limit: 64
+Samplers Used: 3
+Sampler Limit: 16
+
+[2026.04.07-15.40.05:001][674]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.05:001][674]MaterialEditorStats: Texture samplers: 3/16
+[2026.04.07-15.40.05:001][674]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(2)
+[2026.04.07-15.40.05:002][674]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.05:002][674]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.40.05:002][674]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.15:087][834]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.15:087][834]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.15:087][834]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.15:087][834]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.40.15:087][834]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.15:168][836]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.15:168][836]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.15:168][836]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.15:168][836]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.15:169][836]MaterialEditorStats: Shader Count: 1
+[2026.04.07-15.40.15:169][836]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.16:317][853]MaterialEditorStats: Base pass shader: 133 instructions
+Stats: Resources Used: 7
+Resource Limit: 64
+Samplers Used: 4
+Sampler Limit: 16
+
+[2026.04.07-15.40.16:317][853]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.16:317][853]MaterialEditorStats: Texture samplers: 4/16
+[2026.04.07-15.40.16:317][853]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.16:317][853]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.16:317][853]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.40.16:317][853]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.28:951][ 56]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.28:951][ 56]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.28:951][ 56]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.28:951][ 56]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.40.28:951][ 56]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.29:018][ 58]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.29:018][ 58]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.29:018][ 58]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.29:018][ 58]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.29:018][ 58]MaterialEditorStats: Shader Count: 1
+[2026.04.07-15.40.29:018][ 58]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.30:121][ 75]MaterialEditorStats: Base pass shader: 133 instructions
+Stats: Resources Used: 7
+Resource Limit: 64
+Samplers Used: 4
+Sampler Limit: 16
+
+[2026.04.07-15.40.30:121][ 75]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.30:121][ 75]MaterialEditorStats: Texture samplers: 4/16
+[2026.04.07-15.40.30:121][ 75]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.30:121][ 75]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.30:121][ 75]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.40.30:121][ 75]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: ================================================
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Total job queries 248, among them cache hits 89 (35.89%), DDC hits 153 (61.69%), Duplicates 2 (0.81%)
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Tracking 157 distinct input hashes that result in 143 distinct outputs (91.08%)
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: RAM used: 111.81 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Shaders Compiled: 4
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Jobs assigned 4, completed 4 (100%)
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Average time worker was idle: 22.82 s
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Time job spent in pending queue: average 0.05 s, longest 0.09 s
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Job execution time: average 1.67 s, max 2.84 s
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Job life time (pending + execution): average 1.72 s, max 2.93
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Shader code size: average 5.187 KiB, min 4.918 KiB, max 5.32 KiB
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 6.87 s
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.01%
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Jobs were issued in 4 batches (only local compilation was used), average 1.00 jobs/batch
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Average processing rate: 0.58 jobs/sec
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Total thread time: 3.823 s
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Total thread preprocess time: 5.844 s
+[2026.04.07-15.40.36:029][168]LogShaderCompilers: Display: Percentage time preprocessing: 152.85%
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Effective parallelization: 0.56 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    4 times, average 0.96 sec, max 0.98 sec, min 0.94 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                          TDepthOnlyVS<false> (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                                 FDepthOnlyPS (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                        FCloudRenderViewPS000 (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                  TShadowDepthVSVertexShadowDepth_OutputDepth (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 100.00% of total time (compiled    4 times, average 0.96 sec, max 0.98 sec, min 0.94 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                                 FDepthOnlyPS - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                        FCloudRenderViewPS000 - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                                          TDepthOnlyVS<false> - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display:                  TShadowDepthVSVertexShadowDepth_OutputDepth - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: === Material stats ===
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Materials Translated:    166
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Material Total Translate Time: 0.15 s
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Material Translation Only: 0.07 s (46%)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (2%)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: Material Cache Hits: 25 (15%)
+[2026.04.07-15.40.36:030][168]LogShaderCompilers: Display: ================================================
+[2026.04.07-15.40.36:787][178]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.36:787][178]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.36:787][178]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.36:787][178]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.40.36:787][178]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.36:853][180]MaterialEditorStats: Base pass shader: 133 instructions
+Stats: Resources Used: 7
+Resource Limit: 64
+Samplers Used: 4
+Sampler Limit: 16
+
+[2026.04.07-15.40.36:853][180]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.36:853][180]MaterialEditorStats: Texture samplers: 4/16
+[2026.04.07-15.40.36:853][180]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2026.04.07-15.40.36:853][180]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.36:853][180]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.40.36:853][180]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.46:005][315]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.46:005][315]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(4)
+[2026.04.07-15.40.46:005][315]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.46:005][315]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.40.46:005][315]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.46:082][317]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.46:082][317]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.46:082][317]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(4)
+[2026.04.07-15.40.46:082][317]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.46:082][317]MaterialEditorStats: Shader Count: 1
+[2026.04.07-15.40.46:082][317]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.47:465][335]MaterialEditorStats: Base pass shader: 139 instructions
+Stats: Resources Used: 8
+Resource Limit: 64
+Samplers Used: 5
+Sampler Limit: 16
+
+[2026.04.07-15.40.47:465][335]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.47:465][335]MaterialEditorStats: Texture samplers: 5/16
+[2026.04.07-15.40.47:465][335]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(4)
+[2026.04.07-15.40.47:465][335]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.47:465][335]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.40.47:465][335]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.54:136][425]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.54:136][425]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(4)
+[2026.04.07-15.40.54:136][425]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.54:136][425]MaterialEditorStats: Shader Count: 0
+[2026.04.07-15.40.54:136][425]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.54:216][427]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.54:216][427]MaterialEditorStats: Texture samplers: 0/16
+[2026.04.07-15.40.54:216][427]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(4)
+[2026.04.07-15.40.54:216][427]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.54:216][427]MaterialEditorStats: Shader Count: 1
+[2026.04.07-15.40.54:217][427]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.40.55:619][446]MaterialEditorStats: Base pass shader: 133 instructions
+Stats: Resources Used: 7
+Resource Limit: 64
+Samplers Used: 4
+Sampler Limit: 16
+
+[2026.04.07-15.40.55:620][446]MaterialEditorStats: Base pass vertex shader: 137 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 16
+
+[2026.04.07-15.40.55:620][446]MaterialEditorStats: Texture samplers: 4/16
+[2026.04.07-15.40.55:620][446]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(4)
+[2026.04.07-15.40.55:620][446]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2026.04.07-15.40.55:620][446]MaterialEditorStats: Shader Count: 2
+[2026.04.07-15.40.55:620][446]MaterialEditorStats: Preshaders: 2  (2 param fetches, 4 ops)
+[2026.04.07-15.41.02:960][551]LogMaterialEditor: Saving and Compiling material ExplosiveGrenadeMaterial
+[2026.04.07-15.41.05:076][551]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2026.04.07-15.41.07:947][551]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2026.04.07-15.41.07:970][551]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.04.07-15.41.08:025][551]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/ExplosiveGrenadeMaterial] ([1] browsable assets)...
+[2026.04.07-15.41.08:056][551]OBJ SavePackage:     Rendered thumbnail for [Material /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/ExplosiveGrenadeMaterial.ExplosiveGrenadeMaterial]
+[2026.04.07-15.41.08:056][551]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/ExplosiveGrenadeMaterial]
+[2026.04.07-15.41.08:059][551]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/ExplosiveGrenadeMaterial
+[2026.04.07-15.41.08:060][551]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/ExplosiveGrenadeMaterial746E474E43F4FF8E7D3E46804F566BAB.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/ExplosiveGrenadeMaterial.uasset'
+[2026.04.07-15.41.08:084][551]LogFileHelpers: InternalPromptForCheckoutAndSave took 113.788 ms (total: 522.389 ms)
+[2026.04.07-15.41.08:143][551]LogContentValidation: Display: Starting to validate 1 assets
+[2026.04.07-15.41.08:143][551]LogContentValidation: Enabled validators:
+[2026.04.07-15.41.08:143][551]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.04.07-15.41.08:143][551]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.04.07-15.41.08:143][551]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.04.07-15.41.08:143][551]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.04.07-15.41.08:143][551]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.04.07-15.41.08:143][551]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.04.07-15.41.08:143][551]AssetCheck: /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Textures/ExplosiveGrenadeMaterial Validating asset
+[2026.04.07-15.41.14:630][656]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/ModelsAndAnimations/Weapons/Grenades/Explosive/Models/grenade_1.grenade_1
+[2026.04.07-15.41.14:705][656]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_9
+[2026.04.07-15.41.14:706][656]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_9'.
+[2026.04.07-15.41.14:988][656]LogStreaming: Display: FlushAsyncLoading(428): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.07-15.41.26:228][756]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2026.04.07-15.41.26:228][756]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.04.07-15.41.26:361][756]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
