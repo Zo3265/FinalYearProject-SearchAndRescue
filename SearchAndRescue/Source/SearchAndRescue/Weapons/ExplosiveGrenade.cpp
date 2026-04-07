@@ -24,5 +24,7 @@ void AExplosiveGrenade::Explode()
 {
 	Super::Explode();
 
+	UGameplayStatics::ApplyRadialDamage(this, fDamage, this->GetActorLocation(), 500.0f, nullptr, TArray<AActor*>(), this);
+
 	Destroy();
 }

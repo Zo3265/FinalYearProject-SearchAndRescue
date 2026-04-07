@@ -9,19 +9,16 @@ AGrenadeBase::AGrenadeBase()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-    //Root Component
-    Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-    SetRootComponent(Root);
-
     //Mesh Component
     Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-    Mesh->AttachToComponent(Root, FAttachmentTransformRules::KeepRelativeTransform);
+    Mesh->SetSimulatePhysics(true);
+    SetRootComponent(Mesh);
 
     ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
     ProjectileMovement->InitialSpeed = finitSpeed;
     ProjectileMovement->bShouldBounce = true;
     ProjectileMovement->Bounciness = 0.5;
-    //ProjectileMovement->ProjectileGravityScale;
+    ProjectileMovement->ProjectileGravityScale = 1.0;
 }
 
 // Called when the game starts or when spawned

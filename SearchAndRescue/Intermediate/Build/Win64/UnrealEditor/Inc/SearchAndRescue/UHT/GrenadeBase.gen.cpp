@@ -12,7 +12,6 @@ void EmptyLinkFunctionForGeneratedCodeGrenadeBase() {}
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_UProjectileMovementComponent_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AGrenadeBase();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AGrenadeBase_NoRegister();
@@ -33,11 +32,6 @@ struct Z_Construct_UClass_AGrenadeBase_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 		{ "IncludePath", "Weapons/GrenadeBase.h" },
-		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Root_MetaData[] = {
-		{ "Category", "default" },
-		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Mesh_MetaData[] = {
@@ -67,7 +61,6 @@ struct Z_Construct_UClass_AGrenadeBase_Statics
 		{ "ModuleRelativePath", "Weapons/GrenadeBase.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Mesh;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_fDamage;
@@ -81,7 +74,6 @@ struct Z_Construct_UClass_AGrenadeBase_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mesh_MetaData), NewProp_Mesh_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileMovement_MetaData), NewProp_ProjectileMovement_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_fDamage = { "fDamage", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, fDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_fDamage_MetaData), NewProp_fDamage_MetaData) };
@@ -89,7 +81,6 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_St
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_fFuseTime = { "fFuseTime", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, fFuseTime), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_fFuseTime_MetaData), NewProp_fFuseTime_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AGrenadeBase_Statics::NewProp_iAmount = { "iAmount", nullptr, (EPropertyFlags)0x0010000000020015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AGrenadeBase, iAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_iAmount_MetaData), NewProp_iAmount_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AGrenadeBase_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_Root,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_Mesh,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_ProjectileMovement,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AGrenadeBase_Statics::NewProp_fDamage,
@@ -138,10 +129,10 @@ AGrenadeBase::~AGrenadeBase() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AGrenadeBase, AGrenadeBase::StaticClass, TEXT("AGrenadeBase"), &Z_Registration_Info_UClass_AGrenadeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrenadeBase), 1549171612U) },
+		{ Z_Construct_UClass_AGrenadeBase, AGrenadeBase::StaticClass, TEXT("AGrenadeBase"), &Z_Registration_Info_UClass_AGrenadeBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AGrenadeBase), 230811537U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_688914739(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_2945041094(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_GrenadeBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
