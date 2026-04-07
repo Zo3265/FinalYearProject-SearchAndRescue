@@ -38,4 +38,6 @@ public:
 
 	void PlayGrenadeThrowAnim();
 private:
+
+	int iCount = 0;
 };

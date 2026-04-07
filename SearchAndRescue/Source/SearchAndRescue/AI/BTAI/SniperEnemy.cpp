@@ -32,15 +32,20 @@ void ASniperEnemy::Tick(float DeltaTime)
 
 	if (AnimInstance != nullptr)
 	{
-		/*if (AnimInstance->Montage_IsPlaying(FiringAnimation))
+		if (AnimInstance->Montage_IsPlaying(GrenadeThrowAnimation))
 		{
-			float AttackMontageTimeStore = AnimInstance->Montage_GetPosition(FiringAnimation);
-			UE_LOG(LogTemp, Warning, TEXT("Current Montage Time: %f"), AttackMontageTimeStore);
-			if (AttackMontageTimeStore >= 0.1f )
+			float GrenadeMontageTimeStore = AnimInstance->Montage_GetPosition(GrenadeThrowAnimation);
+			UE_LOG(LogTemp, Warning, TEXT("Current Montage Time: %f"), GrenadeMontageTimeStore);
+			if (GrenadeMontageTimeStore >= 1.83f && iCount == 0)
 			{
-				SniperRifle->SniperFire();
+				ExplosiveGrenade->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+				ExplosiveGrenade->ProjectileMovement->SetUpdatedComponent(ExplosiveGrenade->GetRootComponent());
+				ExplosiveGrenade->ProjectileMovement->Activate(true);
+				FVector LaunchDirection = GetControlRotation().Vector();
+				ExplosiveGrenade->ProjectileMovement->Velocity = LaunchDirection * 1500.0f;
+				iCount++;
 			}
-		}*/
+		}
 
 	}
 }
@@ -67,8 +72,25 @@ void ASniperEnemy::PlayAttackAnim()
 
 void ASniperEnemy::PlayGrenadeThrowAnim()
 {
-	if (AnimInstance != nullptr)
+	if (AnimInstance != nullptr && iCount == 0)
 	{
 		AnimInstance->Montage_Play(GrenadeThrowAnimation);
+
+		FVector SocketLocation = GetMesh()->GetSocketLocation(TEXT("GrenadeSocket"));
+		FRotator SocketRotation = GetMesh()->GetSocketRotation(TEXT("GrenadeSocket"));
+
+		FActorSpawnParameters GrenadeSpawnParameters;
+		GrenadeSpawnParameters.Owner = this;
+		GrenadeSpawnParameters.Instigator = GetInstigator();
+		GrenadeSpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		ExplosiveGrenade = GetWorld()->SpawnActor<AExplosiveGrenade>(ExplosiveGrenadeClass, SocketLocation,
+			SocketRotation, GrenadeSpawnParameters);
+
+		if (ExplosiveGrenade != nullptr)
+		{
+			ExplosiveGrenade->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("GrenadeSocket"));
+			ExplosiveGrenade->SetOwner(this);
+		}
 	}
 }

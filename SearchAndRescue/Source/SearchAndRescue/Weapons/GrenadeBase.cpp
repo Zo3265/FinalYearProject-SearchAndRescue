@@ -11,11 +11,13 @@ AGrenadeBase::AGrenadeBase()
 
     //Mesh Component
     Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh"));
-    Mesh->SetSimulatePhysics(true);
+    Mesh->SetSimulatePhysics(false);
     SetRootComponent(Mesh);
 
     ProjectileMovement = CreateDefaultSubobject<UProjectileMovementComponent>(TEXT("ProjectileMovement"));
+    ProjectileMovement->SetUpdatedComponent(Mesh);
     ProjectileMovement->InitialSpeed = finitSpeed;
+    ProjectileMovement->bAutoActivate = false;
     ProjectileMovement->bShouldBounce = true;
     ProjectileMovement->Bounciness = 0.5;
     ProjectileMovement->ProjectileGravityScale = 1.0;

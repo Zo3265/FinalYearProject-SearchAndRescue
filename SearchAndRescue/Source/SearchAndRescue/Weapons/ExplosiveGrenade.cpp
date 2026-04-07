@@ -5,7 +5,7 @@
 
 AExplosiveGrenade::AExplosiveGrenade()
 {
-	ProjectileMovement->Deactivate();
+	
 }
 
 void AExplosiveGrenade::BeginPlay()
@@ -14,12 +14,9 @@ void AExplosiveGrenade::BeginPlay()
 
 	if (bDummy == false)
 	{
-		GLog->Log("Dummy");
 		FTimerHandle ExplodeTimer;
 		GetWorldTimerManager().SetTimer(ExplodeTimer, this, &AExplosiveGrenade::Explode, fFuseTime, false);
 	}
-
-	ProjectileMovement->Deactivate();
 	
 }
 
