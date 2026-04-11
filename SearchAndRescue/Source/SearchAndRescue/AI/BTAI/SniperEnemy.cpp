@@ -29,30 +29,6 @@ void ASniperEnemy::BeginPlay()
 void ASniperEnemy::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	if (AnimInstance != nullptr)
-	{
-		if (AnimInstance->Montage_IsPlaying(GrenadeThrowAnimation))
-		{
-			float GrenadeMontageTimeStore = AnimInstance->Montage_GetPosition(GrenadeThrowAnimation);
-			APawn* PlayerPawn = UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetPawn();
-			FVector LaunchVelocity = PlayerPawn->GetActorLocation();
-			//UE_LOG(LogTemp, Warning, TEXT("Current Montage Time: %f"), GrenadeMontageTimeStore);
-			if (GrenadeMontageTimeStore >= 1.83f && iCount == 0)
-			{
-				ExplosiveGrenade->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
-				ExplosiveGrenade->ProjectileMovement->SetUpdatedComponent(ExplosiveGrenade->GetRootComponent());
-				ExplosiveGrenade->ProjectileMovement->Activate(true);
-				//FVector LaunchDirection = GetControlRotation().Vector();
-
-				//UE_LOG(LogTemp, Warning, TEXT("Launch Velocity: %s"), *LaunchVelocity.ToString());
-				//UE_LOG(LogTemp, Warning, TEXT("Launch Velocity: %s"), *LaunchVelocity.ToString());
-				ExplosiveGrenade->ProjectileMovement->Velocity = LaunchVelocity;
-				iCount++;
-			}
-		}
-
-	}
 }
 
 ASniperRifle* ASniperEnemy::getRifle()
@@ -77,9 +53,9 @@ void ASniperEnemy::PlayAttackAnim()
 
 void ASniperEnemy::PlayGrenadeThrowAnim()
 {
-	if (AnimInstance != nullptr && iCount == 0)
+	if (AnimInstance != nullptr)
 	{
-		//SniperRifle->SetActorHiddenInGame(true);
+		SniperRifle->SetActorHiddenInGame(true);
 		AnimInstance->Montage_Play(GrenadeThrowAnimation);
 
 		FVector SocketLocation = GetMesh()->GetSocketLocation(TEXT("GrenadeSocket"));
@@ -99,4 +75,24 @@ void ASniperEnemy::PlayGrenadeThrowAnim()
 			ExplosiveGrenade->SetOwner(this);
 		}
 	}
+}
+
+void ASniperEnemy::OnGrenadeRelease()
+{
+	//GLog->Log("Released Grenade");
+
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetPawn();
+	FVector LaunchVelocity = PlayerPawn->GetActorLocation();
+	
+	ExplosiveGrenade->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	ExplosiveGrenade->ProjectileMovement->SetUpdatedComponent(ExplosiveGrenade->GetRootComponent());
+	ExplosiveGrenade->ProjectileMovement->Activate(true);
+	ExplosiveGrenade->ProjectileMovement->Velocity = LaunchVelocity;
+	iCount++;
+	
+}
+
+void ASniperEnemy::OnGrenadeThrowFinished()
+{
+	SniperRifle->SetActorHiddenInGame(false);
 }

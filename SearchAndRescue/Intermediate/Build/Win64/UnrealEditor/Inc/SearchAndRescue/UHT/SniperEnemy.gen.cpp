@@ -19,9 +19,73 @@ SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperRifle_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
 // End Cross Module References
 
+// Begin Class ASniperEnemy Function OnGrenadeRelease
+struct Z_Construct_UFunction_ASniperEnemy_OnGrenadeRelease_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AI/BTAI/SniperEnemy.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASniperEnemy_OnGrenadeRelease_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASniperEnemy, nullptr, "OnGrenadeRelease", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASniperEnemy_OnGrenadeRelease_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASniperEnemy_OnGrenadeRelease_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ASniperEnemy_OnGrenadeRelease()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASniperEnemy_OnGrenadeRelease_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASniperEnemy::execOnGrenadeRelease)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnGrenadeRelease();
+	P_NATIVE_END;
+}
+// End Class ASniperEnemy Function OnGrenadeRelease
+
+// Begin Class ASniperEnemy Function OnGrenadeThrowFinished
+struct Z_Construct_UFunction_ASniperEnemy_OnGrenadeThrowFinished_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AI/BTAI/SniperEnemy.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ASniperEnemy_OnGrenadeThrowFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ASniperEnemy, nullptr, "OnGrenadeThrowFinished", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ASniperEnemy_OnGrenadeThrowFinished_Statics::Function_MetaDataParams), Z_Construct_UFunction_ASniperEnemy_OnGrenadeThrowFinished_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_ASniperEnemy_OnGrenadeThrowFinished()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ASniperEnemy_OnGrenadeThrowFinished_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ASniperEnemy::execOnGrenadeThrowFinished)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->OnGrenadeThrowFinished();
+	P_NATIVE_END;
+}
+// End Class ASniperEnemy Function OnGrenadeThrowFinished
+
 // Begin Class ASniperEnemy
 void ASniperEnemy::StaticRegisterNativesASniperEnemy()
 {
+	UClass* Class = ASniperEnemy::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "OnGrenadeRelease", &ASniperEnemy::execOnGrenadeRelease },
+		{ "OnGrenadeThrowFinished", &ASniperEnemy::execOnGrenadeThrowFinished },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ASniperEnemy);
 UClass* Z_Construct_UClass_ASniperEnemy_NoRegister()
@@ -55,6 +119,11 @@ struct Z_Construct_UClass_ASniperEnemy_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AnimInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_ASniperEnemy_OnGrenadeRelease, "OnGrenadeRelease" }, // 2731856359
+		{ &Z_Construct_UFunction_ASniperEnemy_OnGrenadeThrowFinished, "OnGrenadeThrowFinished" }, // 394294155
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ASniperEnemy>::IsAbstract,
 	};
@@ -79,11 +148,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ASniperEnemy_Statics::C
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_ASniperEnemy_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_ASniperEnemy_Statics::PropPointers),
 	0,
 	0x009000A4u,
@@ -109,10 +178,10 @@ ASniperEnemy::~ASniperEnemy() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASniperEnemy, ASniperEnemy::StaticClass, TEXT("ASniperEnemy"), &Z_Registration_Info_UClass_ASniperEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperEnemy), 2775740463U) },
+		{ Z_Construct_UClass_ASniperEnemy, ASniperEnemy::StaticClass, TEXT("ASniperEnemy"), &Z_Registration_Info_UClass_ASniperEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperEnemy), 672425694U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_3573058184(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_2773097403(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -37,6 +37,12 @@ public:
 	void PlayAttackAnim();
 
 	void PlayGrenadeThrowAnim();
+
+	UFUNCTION(BlueprintCallable)
+	void OnGrenadeRelease();
+
+	UFUNCTION(BlueprintCallable)
+	void OnGrenadeThrowFinished();
 private:
 
 	int iCount = 0;
