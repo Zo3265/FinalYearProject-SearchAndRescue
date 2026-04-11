@@ -16,6 +16,7 @@ ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ABTEnemyAIControllerBase();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ABTSniperAIController();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ABTSniperAIController_NoRegister();
+SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperEnemy_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
 // End Cross Module References
 
@@ -91,7 +92,12 @@ struct Z_Construct_UClass_ABTSniperAIController_Statics
 		{ "IncludePath", "AI/BTAI/BTSniperAIController.h" },
 		{ "ModuleRelativePath", "AI/BTAI/BTSniperAIController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SniperEnemy_MetaData[] = {
+		{ "ModuleRelativePath", "AI/BTAI/BTSniperAIController.h" },
+	};
 #endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SniperEnemy;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABTSniperAIController_OnTargetPerceptionUpdated, "OnTargetPerceptionUpdated" }, // 2527195300
@@ -102,6 +108,11 @@ struct Z_Construct_UClass_ABTSniperAIController_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABTSniperAIController_Statics::NewProp_SniperEnemy = { "SniperEnemy", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABTSniperAIController, SniperEnemy), Z_Construct_UClass_ASniperEnemy_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperEnemy_MetaData), NewProp_SniperEnemy_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABTSniperAIController_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABTSniperAIController_Statics::NewProp_SniperEnemy,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABTSniperAIController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ABTSniperAIController_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_ABTEnemyAIControllerBase,
 	(UObject* (*)())Z_Construct_UPackage__Script_SearchAndRescue,
@@ -113,11 +124,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ABTSniperAIController_S
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	nullptr,
+	Z_Construct_UClass_ABTSniperAIController_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	0,
+	UE_ARRAY_COUNT(Z_Construct_UClass_ABTSniperAIController_Statics::PropPointers),
 	0,
 	0x009002A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ABTSniperAIController_Statics::Class_MetaDataParams), Z_Construct_UClass_ABTSniperAIController_Statics::Class_MetaDataParams)
@@ -142,10 +153,10 @@ ABTSniperAIController::~ABTSniperAIController() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTSniperAIController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABTSniperAIController, ABTSniperAIController::StaticClass, TEXT("ABTSniperAIController"), &Z_Registration_Info_UClass_ABTSniperAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABTSniperAIController), 1698073383U) },
+		{ Z_Construct_UClass_ABTSniperAIController, ABTSniperAIController::StaticClass, TEXT("ABTSniperAIController"), &Z_Registration_Info_UClass_ABTSniperAIController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABTSniperAIController), 1858872460U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTSniperAIController_h_319382985(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTSniperAIController_h_1576190604(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTSniperAIController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_BTSniperAIController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

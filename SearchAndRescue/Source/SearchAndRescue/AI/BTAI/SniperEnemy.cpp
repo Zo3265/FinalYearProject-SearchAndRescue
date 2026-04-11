@@ -53,6 +53,7 @@ void ASniperEnemy::PlayAttackAnim()
 
 void ASniperEnemy::PlayGrenadeThrowAnim()
 {
+	iExplosiveGrenadeAmount--;
 	if (AnimInstance != nullptr)
 	{
 		SniperRifle->SetActorHiddenInGame(true);
@@ -88,7 +89,7 @@ void ASniperEnemy::OnGrenadeRelease()
 	ExplosiveGrenade->ProjectileMovement->SetUpdatedComponent(ExplosiveGrenade->GetRootComponent());
 	ExplosiveGrenade->ProjectileMovement->Activate(true);
 	ExplosiveGrenade->ProjectileMovement->Velocity = LaunchVelocity;
-	iCount++;
+
 	
 }
 

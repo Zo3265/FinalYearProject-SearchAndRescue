@@ -73,6 +73,16 @@ void AEnemyBase::Tick(float DeltaTime)
 	
 }
 
+int AEnemyBase::getExplosiveGrenadeAmount()
+{
+	return iExplosiveGrenadeAmount;
+}
+
+int AEnemyBase::getFlashGrenadeAmount()
+{
+	return iFlashGrenadeAmount;
+}
+
 // Called to bind functionality to input
 void AEnemyBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {

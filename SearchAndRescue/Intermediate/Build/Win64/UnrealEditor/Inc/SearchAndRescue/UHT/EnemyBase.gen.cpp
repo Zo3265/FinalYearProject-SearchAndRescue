@@ -84,6 +84,14 @@ struct Z_Construct_UClass_AEnemyBase_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ExplosiveGrenade_MetaData[] = {
 		{ "ModuleRelativePath", "AI/BTAI/EnemyBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_iExplosiveGrenadeAmount_MetaData[] = {
+		{ "Category", "Grenades" },
+		{ "ModuleRelativePath", "AI/BTAI/EnemyBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_iFlashGrenadeAmount_MetaData[] = {
+		{ "Category", "Grenades" },
+		{ "ModuleRelativePath", "AI/BTAI/EnemyBase.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_splineController;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SphereStore;
@@ -94,6 +102,8 @@ struct Z_Construct_UClass_AEnemyBase_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GrenadeThrowAnimation;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_ExplosiveGrenadeClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosiveGrenade;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_iExplosiveGrenadeAmount;
+	static const UECodeGen_Private::FIntPropertyParams NewProp_iFlashGrenadeAmount;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -110,6 +120,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyBase_Sta
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_GrenadeThrowAnimation = { "GrenadeThrowAnimation", nullptr, (EPropertyFlags)0x0020080000010015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyBase, GrenadeThrowAnimation), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GrenadeThrowAnimation_MetaData), NewProp_GrenadeThrowAnimation_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_ExplosiveGrenadeClass = { "ExplosiveGrenadeClass", nullptr, (EPropertyFlags)0x0024080000010001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyBase, ExplosiveGrenadeClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AExplosiveGrenade_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosiveGrenadeClass_MetaData), NewProp_ExplosiveGrenadeClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_ExplosiveGrenade = { "ExplosiveGrenade", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyBase, ExplosiveGrenade), Z_Construct_UClass_AExplosiveGrenade_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosiveGrenade_MetaData), NewProp_ExplosiveGrenade_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_iExplosiveGrenadeAmount = { "iExplosiveGrenadeAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyBase, iExplosiveGrenadeAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_iExplosiveGrenadeAmount_MetaData), NewProp_iExplosiveGrenadeAmount_MetaData) };
+const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AEnemyBase_Statics::NewProp_iFlashGrenadeAmount = { "iFlashGrenadeAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyBase, iFlashGrenadeAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_iFlashGrenadeAmount_MetaData), NewProp_iFlashGrenadeAmount_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_splineController,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_SphereStore,
@@ -120,6 +132,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyBas
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_GrenadeThrowAnimation,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_ExplosiveGrenadeClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_ExplosiveGrenade,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_iExplosiveGrenadeAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyBase_Statics::NewProp_iFlashGrenadeAmount,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AEnemyBase_Statics::DependentSingletons[])() = {
@@ -162,10 +176,10 @@ AEnemyBase::~AEnemyBase() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemyBase, AEnemyBase::StaticClass, TEXT("AEnemyBase"), &Z_Registration_Info_UClass_AEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyBase), 1277650343U) },
+		{ Z_Construct_UClass_AEnemyBase, AEnemyBase::StaticClass, TEXT("AEnemyBase"), &Z_Registration_Info_UClass_AEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyBase), 4165002657U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_896052467(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_2042820177(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

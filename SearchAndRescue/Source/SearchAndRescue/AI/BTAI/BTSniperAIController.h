@@ -19,6 +19,9 @@ public:
 	ABTSniperAIController();
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
+
+	UPROPERTY()
+	ASniperEnemy* SniperEnemy;
 public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;

@@ -39,12 +39,11 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Grenade Variables")
 	float finitSpeed = 1000.0f;
 
-	UPROPERTY(EditAnywhere, Category = "GrenadeVariables")
+	UPROPERTY(EditAnywhere, Category = "Grenade Variables")
 	float fFuseTime = 2.0f;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Grenade Variables")
-	float iAmount = 1;
 
 	UPROPERTY(EditAnywhere, Category = "Grenade Variables")
 	bool bDummy = false;
+
+	
 };

@@ -15,6 +15,9 @@ ABTSniperAIController::ABTSniperAIController()
 void ABTSniperAIController::OnPossess(APawn* InPawn)
 {
 	Super::OnPossess(InPawn);
+
+	ControlledPawn = GetPawn();
+	SniperEnemy = Cast<ASniperEnemy>(ControlledPawn);
 }
 
 void ABTSniperAIController::BeginPlay()
@@ -42,6 +45,17 @@ void ABTSniperAIController::Tick(float DeltaTime)
 		}
 		
 	}
+
+	if (SniperEnemy->getExplosiveGrenadeAmount() > 0)
+	{
+		GetBlackboardComponent()->SetValueAsBool(TEXT("bHasExplosive"), true);
+	}
+
+	else
+	{
+		GetBlackboardComponent()->SetValueAsBool(TEXT("bHasExplosive"), false);
+	}
+
 }
 
 void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
