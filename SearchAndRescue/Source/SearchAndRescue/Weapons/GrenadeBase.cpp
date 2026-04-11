@@ -19,7 +19,7 @@ AGrenadeBase::AGrenadeBase()
     ProjectileMovement->InitialSpeed = finitSpeed;
     ProjectileMovement->bAutoActivate = false;
     ProjectileMovement->bShouldBounce = true;
-    ProjectileMovement->Bounciness = 0.5;
+    ProjectileMovement->Bounciness = 0.1;
     ProjectileMovement->ProjectileGravityScale = 1.0;
 }
 

@@ -35,14 +35,19 @@ void ASniperEnemy::Tick(float DeltaTime)
 		if (AnimInstance->Montage_IsPlaying(GrenadeThrowAnimation))
 		{
 			float GrenadeMontageTimeStore = AnimInstance->Montage_GetPosition(GrenadeThrowAnimation);
-			UE_LOG(LogTemp, Warning, TEXT("Current Montage Time: %f"), GrenadeMontageTimeStore);
+			APawn* PlayerPawn = UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetPawn();
+			FVector LaunchVelocity = PlayerPawn->GetActorLocation();
+			//UE_LOG(LogTemp, Warning, TEXT("Current Montage Time: %f"), GrenadeMontageTimeStore);
 			if (GrenadeMontageTimeStore >= 1.83f && iCount == 0)
 			{
 				ExplosiveGrenade->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
 				ExplosiveGrenade->ProjectileMovement->SetUpdatedComponent(ExplosiveGrenade->GetRootComponent());
 				ExplosiveGrenade->ProjectileMovement->Activate(true);
-				FVector LaunchDirection = GetControlRotation().Vector();
-				ExplosiveGrenade->ProjectileMovement->Velocity = LaunchDirection * 1500.0f;
+				//FVector LaunchDirection = GetControlRotation().Vector();
+
+				//UE_LOG(LogTemp, Warning, TEXT("Launch Velocity: %s"), *LaunchVelocity.ToString());
+				//UE_LOG(LogTemp, Warning, TEXT("Launch Velocity: %s"), *LaunchVelocity.ToString());
+				ExplosiveGrenade->ProjectileMovement->Velocity = LaunchVelocity;
 				iCount++;
 			}
 		}
@@ -74,6 +79,7 @@ void ASniperEnemy::PlayGrenadeThrowAnim()
 {
 	if (AnimInstance != nullptr && iCount == 0)
 	{
+		//SniperRifle->SetActorHiddenInGame(true);
 		AnimInstance->Montage_Play(GrenadeThrowAnimation);
 
 		FVector SocketLocation = GetMesh()->GetSocketLocation(TEXT("GrenadeSocket"));
