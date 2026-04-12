@@ -67,6 +67,7 @@ void ABTEnemyAIControllerBase::Tick(float DeltaTime)
 	{
 		//Default behaviour is to patrol
 		GetBlackboardComponent()->SetValueAsObject(TEXT("SplineMovementActor"), SphereStore);
+		Enemy->setSpeed(Enemy->getDefaultSpeed());
 	}
 
 }

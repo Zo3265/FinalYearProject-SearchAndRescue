@@ -178,10 +178,10 @@ ASniperEnemy::~ASniperEnemy() {}
 struct Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASniperEnemy, ASniperEnemy::StaticClass, TEXT("ASniperEnemy"), &Z_Registration_Info_UClass_ASniperEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperEnemy), 88292280U) },
+		{ Z_Construct_UClass_ASniperEnemy, ASniperEnemy::StaticClass, TEXT("ASniperEnemy"), &Z_Registration_Info_UClass_ASniperEnemy, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASniperEnemy), 2261821569U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_707215005(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_3423952730(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_zohai_Documents_GitHub_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_SniperEnemy_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -32,6 +32,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Variables")
 	float fHealth = 100.0f;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Base Variables")
+	float fDefaultSpeed = 600.0f;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Animation Montages")
 	UAnimMontage* FiringAnimation;
 
@@ -66,6 +69,12 @@ public:
 
 	int getExplosiveGrenadeAmount();
 	int getFlashGrenadeAmount();
+	float getHealth();
+
+	void setSpeed(float fSpeedStore);
+	float getDefaultSpeed();
+
+	void takeDamage(float fDamageStore);
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

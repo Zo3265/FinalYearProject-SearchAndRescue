@@ -29,6 +29,13 @@ void ABTSniperAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (SniperEnemy->getHealth() <= 20.0f)
+	{
+		this->ClearFocus(EAIFocusPriority::Gameplay);
+		GetBlackboardComponent()->SetValueAsBool(TEXT("bLowHealth"), true);
+		SniperEnemy->setSpeed(400.0f);
+	}
+
 	if (GetBlackboardComponent()->GetValueAsBool(TEXT("bSeePlayer")) == true)
 	{
 		lastPlayerLocation = PlayerPawn->GetActorLocation();
@@ -39,6 +46,7 @@ void ABTSniperAIController::Tick(float DeltaTime)
 	{
 		float distance = FVector::Distance(lastPlayerLocation, ControlledPawn->GetActorLocation());
 		//UE_LOG(LogTemp, Warning, TEXT("Distance is: %f"), distance);
+		SniperEnemy->setSpeed(400.0f);
 		if (distance <= 50.0f)
 		{
 			GetBlackboardComponent()->SetValueAsBool(TEXT("bHavePlayer"), false);

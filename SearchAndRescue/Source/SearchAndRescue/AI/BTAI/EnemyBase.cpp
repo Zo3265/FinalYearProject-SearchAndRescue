@@ -32,8 +32,9 @@ void AEnemyBase::BeginPlay()
 
 	//Set the speed of the character proportional to the splines length. Except a little slower so we don't get jittery movement. 
 	float Speed = splineController->getSpline()->GetSplineLength() / splineController->getTotalPathTimeController();
-	UE_LOG(LogTemp, Warning, TEXT("Speed is: %f"), Speed);
-	GetCharacterMovement()->MaxWalkSpeed = Speed - 20.0f;
+	//UE_LOG(LogTemp, Warning, TEXT("Speed is: %f"), GetCharacterMovement()->MaxWalkSpeed);
+	fDefaultSpeed = Speed;
+	GetCharacterMovement()->MaxWalkSpeed = fDefaultSpeed - 20.0f;
 
 }
 
@@ -81,6 +82,26 @@ int AEnemyBase::getExplosiveGrenadeAmount()
 int AEnemyBase::getFlashGrenadeAmount()
 {
 	return iFlashGrenadeAmount;
+}
+
+float AEnemyBase::getHealth()
+{
+	return fHealth;
+}
+
+void AEnemyBase::setSpeed(float fSpeedStore)
+{
+	GetCharacterMovement()->MaxWalkSpeed = fSpeedStore;
+}
+
+float AEnemyBase::getDefaultSpeed()
+{
+	return fDefaultSpeed;
+}
+
+void AEnemyBase::takeDamage(float fDamageStore)
+{
+	fHealth -= fDamageStore;
 }
 
 // Called to bind functionality to input
