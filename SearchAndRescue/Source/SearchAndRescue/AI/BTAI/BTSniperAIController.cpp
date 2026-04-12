@@ -62,7 +62,7 @@ void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus
 {
 	if (Stimulus.WasSuccessfullySensed())
 	{
-		GLog->Log("See player");
+		//GLog->Log("See player");
 		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), true);
 		this->SetFocus(PlayerPawn);
 		lastPlayerLocation = PlayerPawn->GetActorLocation();
@@ -71,7 +71,7 @@ void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus
 
 	else
 	{
-		GLog->Log("Lost");
+		//GLog->Log("Lost");
 		lastPlayerLocation = PlayerPawn->GetActorLocation();
 		GetBlackboardComponent()->SetValueAsBool(TEXT("bSeePlayer"), false);
 		GetBlackboardComponent()->SetValueAsBool(TEXT("bHavePlayer"), true);

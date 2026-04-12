@@ -38,7 +38,7 @@ void ASniperRifle::SniperFire()
 {
 	if (iCurrentMagCount != 0) //&& bCanFire == true)
 	{
-		GLog->Log("Firing");
+		//GLog->Log("Firing");
 		Fire();
 		bCanFire = false;
 		iCurrentMagCount--;
