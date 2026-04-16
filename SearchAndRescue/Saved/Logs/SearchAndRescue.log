@@ -1715,3 +1715,461 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2026.04.16-16.01.09:798][362]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2026.04.16-16.01.09:798][362]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2026.04.16-16.01.09:799][362]AssetCheck: /Game/FirstPerson/Maps/FirstPersonMap Validating asset
+[2026.04.16-16.02.35:830][872]LogStreaming: Display: FlushAsyncLoading(597): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.16-16.02.35:877][872]Candidate modules for hot reload:
+[2026.04.16-16.02.35:877][872]  SearchAndRescue
+[2026.04.16-16.02.35:928][872]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,3620 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-16.02.35:971][872]Warning: Starting HotReload took  2.6s.
+[2026.04.16-16.03.24:446][777]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-16.03.24:446][777]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,3620 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (working set of source files changed)
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Available x64 toolchains (3):
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 4 action(s)
+[2026.04.16-16.03.24:447][777]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: ---- Starting trace: 260416_170302 ----
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: ------ Building 4 action(s) started ------
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [1/4] Compile [x64] Module.SearchAndRescue.cpp
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [2/4] Link [x64] UnrealEditor-SearchAndRescue-3620.lib
+[2026.04.16-16.03.24:447][777]CompilerResultsLog: [3/4] Link [x64] UnrealEditor-SearchAndRescue-3620.dll
+[2026.04.16-16.03.24:448][777]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-3620.exp
+[2026.04.16-16.03.24:448][777]CompilerResultsLog: [4/4] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.04.16-16.03.24:448][777]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 4.3kb
+[2026.04.16-16.03.24:448][777]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 21.76 seconds
+[2026.04.16-16.03.24:448][777]CompilerResultsLog: Total execution time: 47.68 seconds
+[2026.04.16-16.03.24:448][777]LogMainFrame: MainFrame: Module compiling took 48.616 seconds
+[2026.04.16-16.03.24:448][777]LogStreaming: Display: FlushAsyncLoading(598): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.16-16.03.24:532][777]LogUObjectHash: Compacting FUObjectHashTables data took   3.21ms
+[2026.04.16-16.03.25:028][777]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2026.04.16-16.03.25:063][777]Display: HotReload took 51.7s.
+[2026.04.16-16.03.25:063][777]Display: Reload/Re-instancing Complete: 1 package changed, 15 classes unchanged, 4 functions remapped
+[2026.04.16-16.03.27:831][822]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.04.16-16.03.27:849][822]LogContentBundle: [FirstPersonMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.04.16-16.03.27:849][822]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' started...
+[2026.04.16-16.03.27:857][822]LogWorldPartition: Display: GenerateStreaming for 'FirstPersonMap' took 8.811 ms (total: 13.452 ms)
+[2026.04.16-16.03.27:860][822]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.04.16-16.03.27:860][822]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.04.16-16.03.27:879][822]LogPlayLevel: PIE: StaticDuplicateObject took: (0.018211s)
+[2026.04.16-16.03.27:880][822]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/FirstPersonMap.FirstPersonMap to /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap (0.018298s)
+[2026.04.16-16.03.28:028][822]LogUObjectHash: Compacting FUObjectHashTables data took   2.38ms
+[2026.04.16-16.03.28:029][822]LogChaosDD: Creating Chaos Debug Draw Scene for world FirstPersonMap
+[2026.04.16-16.03.28:031][822]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap'.
+[2026.04.16-16.03.28:031][822]LogWorldPartition: ULevel::OnLevelLoaded(FirstPersonMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.04.16-16.03.28:031][822]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.04.16-16.03.28:031][822]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.04.16-16.03.28:032][822]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.04.16-16.03.28:035][822]LogWorldPartition: Display: WorldPartition initialize took 3.538 ms (total: 594.125 ms)
+[2026.04.16-16.03.28:035][822]LogPlayLevel: PIE: World Init took: (0.006490s)
+[2026.04.16-16.03.28:037][822]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2026.04.16-16.03.28:037][822]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.04.16-16.03.28:037][822]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.04.16-16.03.28:037][822]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.04.16-16.03.28:037][822]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.04.16-16.03.28:037][822]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.04.16-16.03.28:037][822]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.04.16-16.03.28:037][822]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.04.16-16.03.28:037][822]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.04.16-16.03.28:037][822]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.04.16-16.03.28:037][822]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.04.16-16.03.28:037][822]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.04.16-16.03.28:042][822]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.04.16-16.03.28:080][822]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.04.16-16.03.28:081][822]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.04.16-16.03.28:081][822]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.04.16-16.03.28:081][822]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.04.16-16.03.28:082][822]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2026.04.16-16.03.28:082][822]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2026.04.16-16.03.28:086][822]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2026.04.16-16.03.28:086][822]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2026.04.16-16.03.28:086][822]LogInit: FAudioDevice initialized with ID 3.
+[2026.04.16-16.03.28:086][822]LogAudio: Display: Audio Device (ID: 3) registered with world 'FirstPersonMap'.
+[2026.04.16-16.03.28:086][822]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2026.04.16-16.03.28:091][822]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.04.16-16.03.28:096][822]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap up for play (max tick rate 60) at 2026.04.16-17.03.28
+[2026.04.16-16.03.28:097][822]LogWorld: Bringing up level for play took: 0.005354
+[2026.04.16-16.03.28:102][822]LogOnline: OSS: Created online subsystem instance for: :Context_7
+[2026.04.16-16.03.28:110][822]PIE: Server logged in
+[2026.04.16-16.03.28:112][822]PIE: Play in editor total start time 0.264 seconds.
+[2026.04.16-16.03.33:421][919]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.04.16-16.03.33:421][919]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap
+[2026.04.16-16.03.33:422][919]LogWorld: UWorld::CleanupWorld for FirstPersonMap, bSessionEnded=true, bCleanupResources=true
+[2026.04.16-16.03.33:423][919]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.04.16-16.03.33:423][919]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_FirstPersonMap.FirstPersonMap
+[2026.04.16-16.03.33:452][919]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.04.16-16.03.33:461][919]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.04.16-16.03.33:525][919]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.04.16-16.03.33:525][919]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2026.04.16-16.03.33:525][919]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.04.16-16.03.33:529][919]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.04.16-16.03.33:566][919]LogUObjectHash: Compacting FUObjectHashTables data took   3.06ms
+[2026.04.16-16.03.33:663][920]LogPlayLevel: Display: Destroying online subsystem :Context_7
+[2026.04.16-16.04.43:788][782]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.16-16.04.43:898][782]Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-16.04.43:898][782]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.04.16-16.04.44:704][782]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.04.16-16.04.45:005][782]
+[2026.04.16-16.04.45:005][782]Generating VisualStudio2022 project files:
+[2026.04.16-16.04.45:005][782]Discovering modules, targets and source code for project...
+[2026.04.16-16.04.45:407][782]Available x64 toolchains (3):
+[2026.04.16-16.04.45:407][782] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.16-16.04.45:407][782]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.04.45:407][782] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.04.45:407][782]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.04.45:407][782] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.04.45:407][782]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.04.45:407][782]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.16-16.04.50:839][782]Binding IntelliSense data...
+[2026.04.16-16.05.21:437][782]Binding IntelliSense data... 50%
+[2026.04.16-16.05.21:438][782]Binding IntelliSense data... 100%
+[2026.04.16-16.05.21:438][782]Writing project files...
+[2026.04.16-16.05.25:063][782]Writing project files... 100%
+[2026.04.16-16.05.25:064][782]
+[2026.04.16-16.05.25:064][782]Generating QueryTargets data for editor...
+[2026.04.16-16.05.25:064][782]Total execution time: 41.06 seconds
+[2026.04.16-16.05.25:481][782]Candidate modules for hot reload:
+[2026.04.16-16.05.25:481][782]  SearchAndRescue
+[2026.04.16-16.05.25:487][782]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,2505 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,2505 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Creating makefile for SearchAndRescueEditor (.uproject file is newer)
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Available x64 toolchains (3):
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Total of 3 written
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 17.0662906 seconds
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: EnemyInteractor.cpp
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-16.05.51:726][782]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-16.05.51:726][782]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.04.16-16.05.51:727][782]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: ---- Starting trace: 260416_170545 ----
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: [1/5] Compile [x64] EnemyInteractor.cpp
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source\SearchAndRescue\AI\MLAI\EnemyInteractor.cpp(4): fatal error C1083: Cannot open include file: 'AI/MLAI/EnemyInteractor.h': No such file or directory
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: [2/5] Compile [x64] Module.SearchAndRescue.cpp
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.0kb
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 5.63 seconds
+[2026.04.16-16.05.51:727][782]CompilerResultsLog: Total execution time: 25.94 seconds
+[2026.04.16-16.05.51:727][782]LogMainFrame: MainFrame: Module compiling took 26.252 seconds
+[2026.04.16-16.05.51:727][782]LogStreaming: Display: FlushAsyncLoading(599): 1 QueuedPackages, 0 AsyncPackages
+[2026.04.16-16.05.51:744][782]Warning: HotReload failed, recompile failed
+[2026.04.16-16.05.51:744][782]Warning: RebindPackages failed because compilation failed.
+[2026.04.16-16.05.55:329][782]LogSlate: Window 'Message' being destroyed
+[2026.04.16-16.05.55:346][782]Message dialog closed, result: Yes, title: Message, text: Successfully added class 'EnemyInteractor', however you must recompile the 'SearchAndRescue' module before it will appear in the Content Browser. Failed to automatically hot reload the 'SearchAndRescue' module.
+
+Would you like to open the Output Log to see more details?
+[2026.04.16-16.05.55:346][782]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.04.16-16.05.58:702][815]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 753.281250
+[2026.04.16-16.05.59:702][818]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.05.59:702][818]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 753.948730, Update Interval: 300.258179
+[2026.04.16-16.06.17:169][881]Candidate modules for hot reload:
+[2026.04.16-16.06.17:169][881]  SearchAndRescue
+[2026.04.16-16.06.17:184][881]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,8842 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-16.06.17:200][881]Warning: Starting HotReload took  0.4s.
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,8842 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (working set of source files changed)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Available x64 toolchains (3):
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: EnemyInteractor.cpp, EnemyInteractor.gen.cpp, SearchAndRescue.init.gen.cpp
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 7 action(s)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: ---- Starting trace: 260416_170624 ----
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: ------ Building 7 action(s) started ------
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [1/7] Compile [x64] SearchAndRescue.init.gen.cpp
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [2/7] Compile [x64] EnemyInteractor.cpp
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [3/7] Compile [x64] EnemyInteractor.gen.cpp
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [4/7] Compile [x64] Module.SearchAndRescue.cpp
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [5/7] Link [x64] UnrealEditor-SearchAndRescue-8842.lib
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [6/7] Link [x64] UnrealEditor-SearchAndRescue-8842.dll
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-8842.exp
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: [7/7] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 4.4kb
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 12.34 seconds
+[2026.04.16-16.06.37:630][ 82]CompilerResultsLog: Total execution time: 19.81 seconds
+[2026.04.16-16.06.37:631][ 82]LogMainFrame: MainFrame: Module compiling took 20.483 seconds
+[2026.04.16-16.06.37:667][ 82]LogUObjectHash: Compacting FUObjectHashTables data took   2.09ms
+[2026.04.16-16.06.37:772][ 82]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.16-16.06.37:810][ 82]LogClass: Could not find existing class EnemyInteractor in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.16-16.06.38:077][ 82]LogUObjectHash: Compacting FUObjectHashTables data took   2.06ms
+[2026.04.16-16.06.38:113][ 82]Display: HotReload took 21.4s.
+[2026.04.16-16.06.38:114][ 82]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 15 classes unchanged, 4 functions remapped
+[2026.04.16-16.11.07:012][888]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1061.590210
+[2026.04.16-16.11.08:013][891]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.11.08:013][891]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1062.254517, Update Interval: 326.849579
+[2026.04.16-16.12.29:076][153]Candidate modules for hot reload:
+[2026.04.16-16.12.29:077][153]  SearchAndRescue
+[2026.04.16-16.12.29:088][153]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,4490 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-16.12.29:102][153]Warning: Starting HotReload took  0.1s.
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,4490 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.04.16-16.12.47:178][383]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Total of 0 written
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 6.6920419 seconds
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-16.12.47:178][383]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: EnemyInteractor.cpp, EnemyInteractor.gen.cpp, SearchAndRescue.init.gen.cpp
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-16.12.47:179][383]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.04.16-16.12.47:179][383]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: ---- Starting trace: 260416_171238 ----
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: [1/5] Compile [x64] EnemyInteractor.cpp
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: [2/5] Compile [x64] EnemyInteractor.gen.cpp
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: [3/5] Link [x64] UnrealEditor-SearchAndRescue-4490.lib
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: [4/5] Link [x64] UnrealEditor-SearchAndRescue-4490.dll
+[2026.04.16-16.12.47:179][383]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-4490.exp
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: [5/5] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.8kb
+[2026.04.16-16.12.47:179][383]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 8.27 seconds
+[2026.04.16-16.12.47:180][383]CompilerResultsLog: Total execution time: 17.60 seconds
+[2026.04.16-16.12.47:180][383]LogMainFrame: MainFrame: Module compiling took 18.126 seconds
+[2026.04.16-16.12.47:349][383]LogUObjectHash: Compacting FUObjectHashTables data took   3.17ms
+[2026.04.16-16.12.47:807][383]LogUObjectHash: Compacting FUObjectHashTables data took   2.57ms
+[2026.04.16-16.12.47:865][383]Display: HotReload took 18.8s.
+[2026.04.16-16.12.47:865][383]Display: Reload/Re-instancing Complete: 1 package changed, 16 classes unchanged, 4 functions remapped
+[2026.04.16-16.16.45:374][110]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1399.952271
+[2026.04.16-16.16.46:375][114]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.16.46:375][114]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1400.618530, Update Interval: 348.366943
+[2026.04.16-16.23.00:779][236]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1775.358154
+[2026.04.16-16.23.01:780][239]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.23.01:780][239]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1776.024048, Update Interval: 300.324097
+[2026.04.16-16.28.53:214][339]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2127.790283
+[2026.04.16-16.28.54:215][342]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.28.54:215][343]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2128.457275, Update Interval: 345.755798
+[2026.04.16-16.35.20:637][517]Candidate modules for hot reload:
+[2026.04.16-16.35.20:637][517]  SearchAndRescue
+[2026.04.16-16.35.20:648][517]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,5755 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-16.35.20:659][517]Warning: Starting HotReload took  0.1s.
+[2026.04.16-16.35.34:035][689]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2528.612305
+[2026.04.16-16.35.34:359][693]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.35.34:359][693]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2528.790039, Update Interval: 349.960022
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,5755 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.04.16-16.35.37:597][737]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Total of 0 written
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 6.2273932 seconds
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-16.35.37:597][737]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: EnemyInteractor.cpp, EnemyInteractor.gen.cpp, SearchAndRescue.init.gen.cpp
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-16.35.37:598][737]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.04.16-16.35.37:598][737]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: ---- Starting trace: 260416_173529 ----
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: [1/5] Compile [x64] EnemyInteractor.gen.cpp
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: [2/5] Compile [x64] EnemyInteractor.cpp
+[2026.04.16-16.35.37:598][737]CompilerResultsLog: [3/5] Link [x64] UnrealEditor-SearchAndRescue-5755.lib
+[2026.04.16-16.35.37:599][737]CompilerResultsLog: [4/5] Link [x64] UnrealEditor-SearchAndRescue-5755.dll
+[2026.04.16-16.35.37:599][737]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-5755.exp
+[2026.04.16-16.35.37:599][737]CompilerResultsLog: [5/5] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.04.16-16.35.37:599][737]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.8kb
+[2026.04.16-16.35.37:599][737]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 7.96 seconds
+[2026.04.16-16.35.37:599][737]CompilerResultsLog: Total execution time: 16.55 seconds
+[2026.04.16-16.35.37:599][737]LogMainFrame: MainFrame: Module compiling took 17.001 seconds
+[2026.04.16-16.35.37:774][737]LogUObjectHash: Compacting FUObjectHashTables data took   2.66ms
+[2026.04.16-16.35.38:269][737]LogUObjectHash: Compacting FUObjectHashTables data took   1.55ms
+[2026.04.16-16.35.38:299][737]Display: HotReload took 17.7s.
+[2026.04.16-16.35.38:299][737]Display: Reload/Re-instancing Complete: 1 package changed, 16 classes unchanged, 4 functions remapped
+[2026.04.16-16.42.09:941][990]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2924.519531
+[2026.04.16-16.42.10:940][993]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.42.10:940][993]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2925.185303, Update Interval: 359.948730
+[2026.04.16-16.43.06:936][182]Candidate modules for hot reload:
+[2026.04.16-16.43.06:936][182]  SearchAndRescue
+[2026.04.16-16.43.06:950][182]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,9317 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-16.43.06:964][182]Warning: Starting HotReload took  0.1s.
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,9317 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.04.16-16.43.33:796][650]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Total of 2 written
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 10.8369185 seconds
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-16.43.33:796][650]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [Upgrade]
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: EnemyInteractor.cpp, EnemyInteractor.gen.cpp, SearchAndRescue.init.gen.cpp
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-16.43.33:797][650]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 6 action(s)
+[2026.04.16-16.43.33:797][650]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: ---- Starting trace: 260416_174320 ----
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: ------ Building 6 action(s) started ------
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [1/6] Compile [x64] SearchAndRescue.init.gen.cpp
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [2/6] Compile [x64] EnemyInteractor.gen.cpp
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [3/6] Compile [x64] EnemyInteractor.cpp
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [4/6] Link [x64] UnrealEditor-SearchAndRescue-9317.lib
+[2026.04.16-16.43.33:797][650]CompilerResultsLog: [5/6] Link [x64] UnrealEditor-SearchAndRescue-9317.dll
+[2026.04.16-16.43.33:797][650]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-9317.exp
+[2026.04.16-16.43.33:798][650]CompilerResultsLog: [6/6] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.04.16-16.43.33:798][650]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 4.2kb
+[2026.04.16-16.43.33:798][650]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 12.43 seconds
+[2026.04.16-16.43.33:798][650]CompilerResultsLog: Total execution time: 26.30 seconds
+[2026.04.16-16.43.33:798][650]LogMainFrame: MainFrame: Module compiling took 26.900 seconds
+[2026.04.16-16.43.34:017][650]LogUObjectHash: Compacting FUObjectHashTables data took   3.58ms
+[2026.04.16-16.43.34:092][650]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.04.16-16.43.34:092][650]LogClass: UClass EnemyInteractor Reload.
+[2026.04.16-16.43.34:143][650]LogClass: Could not find existing class EnemyInteractor in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.04.16-16.43.34:189][650]Re-instancing EnemyInteractor after reload.
+[2026.04.16-16.43.34:632][650]LogUObjectHash: Compacting FUObjectHashTables data took   1.89ms
+[2026.04.16-16.43.34:665][650]Display: HotReload took 27.8s.
+[2026.04.16-16.43.34:666][650]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 15 classes unchanged, 4 functions remapped
+[2026.04.16-16.48.45:734][600]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3320.309326
+[2026.04.16-16.48.46:735][603]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.48.46:735][604]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3320.976807, Update Interval: 352.578522
+[2026.04.16-16.55.00:920][726]LogDerivedDataCache: C:/Users/zohai/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.04.16-16.55.17:803][776]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3712.377441
+[2026.04.16-16.55.18:803][779]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-16.55.18:803][780]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3713.044922, Update Interval: 323.410736
+[2026.04.16-17.01.24:523][877]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4079.097412
+[2026.04.16-17.01.25:523][879]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.01.25:523][879]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4079.763428, Update Interval: 357.839294
+[2026.04.16-17.08.12:937][101]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4487.512207
+[2026.04.16-17.08.13:937][104]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.08.13:937][104]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4488.178711, Update Interval: 337.438904
+[2026.04.16-17.14.25:079][244]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4859.654785
+[2026.04.16-17.14.26:083][247]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.14.26:083][247]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4860.323242, Update Interval: 338.343445
+[2026.04.16-17.20.51:828][404]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5246.396973
+[2026.04.16-17.20.52:827][407]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.20.52:827][408]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5247.063965, Update Interval: 358.220154
+[2026.04.16-17.27.35:580][615]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5650.146484
+[2026.04.16-17.27.36:580][618]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.27.36:580][618]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5650.812500, Update Interval: 323.291718
+[2026.04.16-17.32.15:766][473]Candidate modules for hot reload:
+[2026.04.16-17.32.15:766][473]  SearchAndRescue
+[2026.04.16-17.32.15:812][473]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,6360 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-17.32.15:854][473]Warning: Starting HotReload took  0.2s.
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,6360 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Total of 0 written
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 34.1138904 seconds
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [Upgrade]
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [Upgrade]
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: EnemyInteractor.cpp, EnemyInteractor.gen.cpp, SearchAndRescue.init.gen.cpp
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: ---- Starting trace: 260416_183253 ----
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.04.16-17.33.00:462][ 96]CompilerResultsLog: [1/5] Compile [x64] EnemyInteractor.gen.cpp
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog: [2/5] Compile [x64] EnemyInteractor.cpp
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog: [3/5] Link [x64] UnrealEditor-SearchAndRescue-6360.lib
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog: [4/5] Link [x64] UnrealEditor-SearchAndRescue-6360.dll
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-6360.exp
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog: [5/5] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.7kb
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 6.67 seconds
+[2026.04.16-17.33.00:463][ 96]CompilerResultsLog: Total execution time: 44.09 seconds
+[2026.04.16-17.33.00:463][ 96]LogMainFrame: MainFrame: Module compiling took 44.717 seconds
+[2026.04.16-17.33.00:792][ 96]LogUObjectHash: Compacting FUObjectHashTables data took   7.29ms
+[2026.04.16-17.33.01:390][ 96]LogUObjectHash: Compacting FUObjectHashTables data took   3.45ms
+[2026.04.16-17.33.01:456][ 96]Display: HotReload took 45.8s.
+[2026.04.16-17.33.01:456][ 96]Display: Reload/Re-instancing Complete: 1 package changed, 16 classes unchanged, 4 functions remapped
+[2026.04.16-17.33.52:159][247]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6026.725586
+[2026.04.16-17.33.53:158][250]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.33.53:158][250]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6027.390137, Update Interval: 339.149139

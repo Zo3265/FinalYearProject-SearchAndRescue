@@ -100,6 +100,12 @@
     <Filter Include="Source\SearchAndRescue\AI\MLAI">
       <UniqueIdentifier>{3E75C693-7B10-3F1A-93E5-8BC604934D28}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\EnemyInteractor.cpp">
+      <Filter>Source\SearchAndRescue\AI\MLAI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\EnemyInteractor.h">
+      <Filter>Source\SearchAndRescue\AI\MLAI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\EnemyManager.cpp">
       <Filter>Source\SearchAndRescue\AI\MLAI</Filter>
     </ClCompile>
