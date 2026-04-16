@@ -3,11 +3,12 @@
 
 #include "SearchAndRescue/AI/MLAI/EnemyInteractor.h"
 #include "Components/SplineComponent.h"
+#include "GameFramework/Character.h"
 
 //Specifying which observation for the enemies to make
 void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObservationSchemaElement& OutObservationSchemaElement, ULearningAgentsObservationSchema* InObservationSchema)
 {
-	Super::SpecifyAgentObservation_Implementation(OutObservationSchemaElement, InObservationSchema);
+	//Super::SpecifyAgentObservation_Implementation(OutObservationSchemaElement, InObservationSchema);
 
 	//Map to store the observations
 	TMap<FName, FLearningAgentsObservationSchemaElement> ObservationMap;
@@ -26,7 +27,7 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 //Gathering observations that we specified.
 void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObservationObjectElement& OutObservationObjectElement, ULearningAgentsObservationObject* InObservationObject, const int32 AgentId)
 {
-	Super::GatherAgentObservation_Implementation(OutObservationObjectElement, InObservationObject, AgentId);
+	//Super::GatherAgentObservation_Implementation(OutObservationObjectElement, InObservationObject, AgentId);
 
 	//Get the agent that is making the observations.
 	UObject* OBSAgent = GetAgent(AgentId);
@@ -55,4 +56,40 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}
 	
+}
+
+//This where we specify which actions our NPC is able to do.
+void UEnemyInteractor::SpecifyAgentAction_Implementation(FLearningAgentsActionSchemaElement& OutActionSchemaElement, ULearningAgentsActionSchema* InActionSchema)
+{
+	TMap<FName, FLearningAgentsActionSchemaElement> ActionMap;
+
+	//Forward input is a float action with 0.0f to 1.0f.
+	//For the time being the NPC can only run forward.
+	ActionMap.Add(TEXT("ForwardInput"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
+
+	//Turn input is -1.0f to 1.0f; -ve is left +ve is right.
+	ActionMap.Add(TEXT("TurnInput"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
+
+	OutActionSchemaElement = ULearningAgentsActions::SpecifyStructAction(InActionSchema, ActionMap);
+}
+
+void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsActionObject* InActionObject, const FLearningAgentsActionObjectElement& InActionObjectElement, const int32 AgentId)
+{
+	ACharacter* Enemy = Cast<ACharacter>(GetAgent(AgentId));
+
+	if (Enemy)
+	{
+		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
+		float ForwardValue;
+		float TurnValue;
+
+		//We are retrieving the actions that we are able to do and their values.
+		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
+		ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
+		ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
+
+		//Move the character forward and turn them using the character classes regular functions.
+		Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
+		Enemy->AddControllerYawInput(TurnValue);
+	}
 }

@@ -2173,3 +2173,77 @@ Would you like to open the Output Log to see more details?
 [2026.04.16-17.33.52:159][247]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6026.725586
 [2026.04.16-17.33.53:158][250]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2026.04.16-17.33.53:158][250]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6027.390137, Update Interval: 339.149139
+[2026.04.16-17.40.07:140][466]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6401.703613
+[2026.04.16-17.40.08:140][469]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.40.08:140][469]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6402.370605, Update Interval: 342.351746
+[2026.04.16-17.46.47:552][668]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6802.116699
+[2026.04.16-17.46.48:550][670]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.46.48:550][670]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6802.779785, Update Interval: 336.287109
+[2026.04.16-17.53.16:631][834]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 7191.189941
+[2026.04.16-17.53.17:630][837]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.53.17:630][837]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 7191.857422, Update Interval: 303.605469
+[2026.04.16-17.55.00:920][147]LogDerivedDataCache: C:/Users/zohai/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.04.16-17.58.57:385][856]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 7531.941895
+[2026.04.16-17.58.58:385][859]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-17.58.58:385][859]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 7532.608887, Update Interval: 349.205597
+[2026.04.16-18.05.47:471][ 86]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 7942.018066
+[2026.04.16-18.05.48:473][ 89]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-18.05.48:473][ 89]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 7942.686035, Update Interval: 301.823792
+[2026.04.16-18.11.36:525][133]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 8291.071289
+[2026.04.16-18.11.37:525][136]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-18.11.37:525][136]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 8291.738281, Update Interval: 356.932892
+[2026.04.16-18.16.25:389][ 10]Candidate modules for hot reload:
+[2026.04.16-18.16.25:389][ 10]  SearchAndRescue
+[2026.04.16-18.16.25:407][ 10]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,2828 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.04.16-18.16.25:429][ 10]Warning: Starting HotReload took  0.1s.
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,2828 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (working set of source files changed)
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Available x64 toolchains (3):
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Total of 0 written
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 4.4822473 seconds
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: [Upgrade]
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: [Upgrade]
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: EnemyInteractor.cpp
+[2026.04.16-18.16.55:064][115]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.04.16-18.16.55:064][115]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.04.16-18.16.55:065][115]CompilerResultsLog:   Storage capacity 40Gb
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: ---- Starting trace: 260416_191643 ----
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: [1/5] Compile [x64] EnemyInteractor.cpp
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: [2/5] Compile [x64] Module.SearchAndRescue.cpp
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: [3/5] Link [x64] UnrealEditor-SearchAndRescue-2828.lib
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: [4/5] Link [x64] UnrealEditor-SearchAndRescue-2828.dll
+[2026.04.16-18.16.55:065][115]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-2828.exp
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: [5/5] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.9kb
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 10.69 seconds
+[2026.04.16-18.16.55:065][115]CompilerResultsLog: Total execution time: 28.75 seconds
+[2026.04.16-18.16.55:065][115]LogMainFrame: MainFrame: Module compiling took 29.741 seconds
+[2026.04.16-18.16.55:260][115]LogUObjectHash: Compacting FUObjectHashTables data took   3.17ms
+[2026.04.16-18.16.55:851][115]LogUObjectHash: Compacting FUObjectHashTables data took   1.85ms
+[2026.04.16-18.16.55:884][115]Display: HotReload took 30.6s.
+[2026.04.16-18.16.55:884][115]Display: Reload/Re-instancing Complete: 1 package changed, 16 classes unchanged, 4 functions remapped
+[2026.04.16-18.18.12:672][345]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 8687.227539
+[2026.04.16-18.18.13:671][348]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.04.16-18.18.13:671][348]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 8687.898438, Update Interval: 351.602539

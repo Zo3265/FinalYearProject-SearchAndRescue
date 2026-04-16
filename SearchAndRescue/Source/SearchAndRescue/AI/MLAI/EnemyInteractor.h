@@ -21,6 +21,11 @@ protected:
 
 	//Gather the agent observations
 	virtual void GatherAgentObservation_Implementation(FLearningAgentsObservationObjectElement& OutObservationObjectElement, ULearningAgentsObservationObject* InObservationObject, const int32 AgentId) override;
+
+	//Specifying the actions an agent can carry out.
+	virtual void SpecifyAgentAction_Implementation(FLearningAgentsActionSchemaElement& OutActionSchemaElement, ULearningAgentsActionSchema* InActionSchema) override;
+
+	virtual void PerformAgentAction_Implementation(const ULearningAgentsActionObject* InActionObject, const FLearningAgentsActionObjectElement& InActionObjectElement, const int32 AgentId) override;
 public:
 	UPROPERTY(EditAnywhere, Category = "Spline")
 	USplineComponent* InteractorSplineComponent;
