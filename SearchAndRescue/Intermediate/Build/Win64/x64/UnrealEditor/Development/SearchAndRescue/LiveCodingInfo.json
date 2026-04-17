@@ -12,7 +12,6 @@
 			"ExplosiveGrenade.gen.cpp.obj",
 			"GrenadeBase.gen.cpp.obj",
 			"MLEnemyBase.gen.cpp.obj",
-			"SearchAndRescue.init.gen.cpp.obj",
 			"SniperEnemy.gen.cpp.obj",
 			"SniperRifle.gen.cpp.obj",
 			"SniperShootBTTaskNode.gen.cpp.obj",
@@ -27,6 +26,7 @@
 			"SniperEnemy.cpp.obj",
 			"SniperShootBTTaskNode.cpp.obj",
 			"MLEnemyBase.cpp.obj",
+			"EnemyInteractor.cpp.obj",
 			"EnemyManager.cpp.obj",
 			"SplineController.cpp.obj",
 			"SplineMovementActor.cpp.obj",
@@ -37,7 +37,9 @@
 			"GrenadeBase.cpp.obj",
 			"SniperRifle.cpp.obj",
 			"WeaponBase.cpp.obj",
-			"EnemyInteractor.cpp.obj"
+			"EnemyTrainingEnvironment.gen.cpp.obj",
+			"SearchAndRescue.init.gen.cpp.obj",
+			"EnemyTrainingEnvironment.cpp.obj"
 		]
 	}
 }

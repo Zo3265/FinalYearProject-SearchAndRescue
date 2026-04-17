@@ -112,6 +112,12 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\EnemyManager.h">
       <Filter>Source\SearchAndRescue\AI\MLAI</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\EnemyTrainingEnvironment.cpp">
+      <Filter>Source\SearchAndRescue\AI\MLAI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\EnemyTrainingEnvironment.h">
+      <Filter>Source\SearchAndRescue\AI\MLAI</Filter>
+    </ClCompile>
     <Filter Include="Source\SearchAndRescue\AI\MLAI\Enemies">
       <UniqueIdentifier>{3BA6C2B2-0ABD-3B59-AA3C-3706F4EEA361}</UniqueIdentifier>
     </Filter>
