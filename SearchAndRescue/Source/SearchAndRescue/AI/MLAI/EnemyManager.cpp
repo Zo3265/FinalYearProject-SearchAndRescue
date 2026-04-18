@@ -31,7 +31,33 @@ void AEnemyManager::BeginPlay()
 	}
 
 	EnemyInteractorRef = NewObject<UEnemyInteractor>(this);
+	ULearningAgentsInteractor* BaseInteractor = Cast<ULearningAgentsInteractor>(EnemyInteractorRef);
+	ULearningAgentsManager* ManagerComp = this->FindComponentByClass<ULearningAgentsManager>();
+	if (EnemyInteractorRef)
+	{
+		EnemyInteractorRef->SetupInteractor(ManagerComp);
+	}
 	
+	EnemyPolicy = NewObject<ULearningAgentsPolicy>(this);
+	if (EnemyPolicy)
+	{
+		EnemyPolicy->SetupPolicy(ManagerComp, BaseInteractor);
+	}
+
+	EnemyCritic = NewObject<ULearningAgentsCritic>(this);
+	if (EnemyCritic)
+	{
+		EnemyCritic->SetupCritic(ManagerComp, BaseInteractor, EnemyPolicy, CriticNetworkAsset, false);
+	}
+
+	EnemyTraingEnvRef = NewObject<UEnemyTrainingEnvironment>(this);
+	if (EnemyTraingEnvRef)
+	{
+		EnemyTraingEnvRef->SetupTrainingEnvironment(ManagerComp);
+	}
+
+	//FLearningAgentsTrainingSettings TrainingSettings;
+
 }
 
 // Called every frame

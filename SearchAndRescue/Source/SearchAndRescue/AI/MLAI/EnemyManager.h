@@ -8,6 +8,12 @@
 #include "Components/SplineComponent.h"
 #include "Kismet/GameplayStatics.h"
 #include "SearchAndRescue/AI/MLAI/EnemyInteractor.h"
+#include "LearningAgentsPolicy.h"
+#include "LearningAgentsInteractor.h"
+#include "LearningAgentsCritic.h"
+#include "SearchAndRescue/AI/MLAI/EnemyTrainingEnvironment.h"
+#include "LearningAgentsTrainingEnvironment.h"
+#include "LearningAgentsTrainer"
 #include "EnemyManager.generated.h"
 
 UCLASS()
@@ -24,9 +30,20 @@ protected:
 	virtual void BeginPlay() override;
 
 	TMap<int32, USplineComponent*> AgentToSplineMap;
+
+	UPROPERTY()
 	UEnemyInteractor* EnemyInteractorRef;
+	UPROPERTY()
+	ULearningAgentsPolicy* EnemyPolicy;
+	UPROPERTY()
+	ULearningAgentsCritic* EnemyCritic;
+	UPROPERTY()
+	UEnemyTrainingEnvironment* EnemyTraingEnvRef;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	UPROPERTY(EditAnywhere, Category = "Learning Agents")
+	ULearningAgentsNeuralNetwork* CriticNetworkAsset;
 	
 };
