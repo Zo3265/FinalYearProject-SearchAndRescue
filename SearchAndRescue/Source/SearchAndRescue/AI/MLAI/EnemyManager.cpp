@@ -51,13 +51,26 @@ void AEnemyManager::BeginPlay()
 	}
 
 	EnemyTraingEnvRef = NewObject<UEnemyTrainingEnvironment>(this);
+	ULearningAgentsTrainingEnvironment* BaseTrainingEnvironment = Cast<ULearningAgentsTrainingEnvironment>(EnemyTraingEnvRef);
 	if (EnemyTraingEnvRef)
 	{
 		EnemyTraingEnvRef->SetupTrainingEnvironment(ManagerComp);
 	}
 
-	//FLearningAgentsTrainingSettings TrainingSettings;
+	FLearningAgentsTrainerProcessSettings TrainerProcessSettings;
+	FLearningAgentsSharedMemoryCommunicatorSettings SharedMemorySettings;
+	ULearningAgentsCommunicatorLibrary::SpawnSharedMemoryTrainingProcess(TrainerProcessSettings, SharedMemorySettings);
 
+	FLearningAgentsTrainerProcess TrainerProcess;
+	FLearningAgentsCommunicator SharedMemoryCommunicator;
+	SharedMemoryCommunicator = ULearningAgentsCommunicatorLibrary::MakeSharedMemoryCommunicator(TrainerProcess, SharedMemorySettings);
+
+	PPOTrainer = NewObject<ULearningAgentsPPOTrainer>(this);
+	if (PPOTrainer)
+	{
+		FLearningAgentsPPOTrainerSettings PPOTrainerSettings;
+		PPOTrainer->MakePPOTrainer(ManagerComp, BaseInteractor, BaseTrainingEnvironment, EnemyPolicy, EnemyCritic, SharedMemoryCommunicator, ULearningAgentsPPOTrainer::StaticClass());
+	}
 }
 
 // Called every frame

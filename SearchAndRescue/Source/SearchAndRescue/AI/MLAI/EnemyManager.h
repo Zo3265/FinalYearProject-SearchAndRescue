@@ -13,7 +13,8 @@
 #include "LearningAgentsCritic.h"
 #include "SearchAndRescue/AI/MLAI/EnemyTrainingEnvironment.h"
 #include "LearningAgentsTrainingEnvironment.h"
-#include "LearningAgentsTrainer"
+#include "LearningAgentsCommunicator.h"
+#include "LearningAgentsPPOTrainer.h"
 #include "EnemyManager.generated.h"
 
 UCLASS()
@@ -39,6 +40,8 @@ protected:
 	ULearningAgentsCritic* EnemyCritic;
 	UPROPERTY()
 	UEnemyTrainingEnvironment* EnemyTraingEnvRef;
+	UPROPERTY()
+	ULearningAgentsPPOTrainer* PPOTrainer;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

@@ -80,6 +80,12 @@
             "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\experimental\\learningagents\\intermediate\\build\\win64\\unrealeditor\\inc\\learningagents\\uht\\learningagentspolicy.generated.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\experimental\\learningagents\\source\\learningagents\\public\\learningagentscritic.h",
             "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\experimental\\learningagents\\intermediate\\build\\win64\\unrealeditor\\inc\\learningagents\\uht\\learningagentscritic.generated.h",
+            "c:\\users\\zohai\\documents\\github\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\mlai\\enemytrainingenvironment.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\experimental\\learningagents\\source\\learningagentstraining\\public\\learningagentstrainingenvironment.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\experimental\\learningagents\\source\\learningagentstraining\\public\\learningagentscompletions.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\experimental\\learningagents\\intermediate\\build\\win64\\unrealeditor\\inc\\learningagentstraining\\uht\\learningagentscompletions.generated.h",
+            "c:\\program files\\epic games\\ue_5.5\\engine\\plugins\\experimental\\learningagents\\intermediate\\build\\win64\\unrealeditor\\inc\\learningagentstraining\\uht\\learningagentstrainingenvironment.generated.h",
+            "c:\\users\\zohai\\documents\\github\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\enemytrainingenvironment.generated.h",
             "c:\\users\\zohai\\documents\\github\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\enemymanager.generated.h"
         ],
         "ImportedModules": [],
