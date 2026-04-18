@@ -16,6 +16,22 @@ void AEnemyManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	TArray<AActor*> EnemyActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMLEnemyBase::StaticClass(), EnemyActors);
+	for (AActor* Enemy : EnemyActors)
+	{
+		if (Enemy)
+		{
+			this->AddTickPrerequisiteActor(Enemy);
+			
+			AMLEnemyBase* MLEnemyCast = Cast<AMLEnemyBase>(Enemy);
+			AgentToSplineMap.Add(MLEnemyCast->getAgentId(), MLEnemyCast->GetSplineController()->getSpline());
+		}
+
+	}
+
+	EnemyInteractorRef = NewObject<UEnemyInteractor>(this);
+	
 }
 
 // Called every frame

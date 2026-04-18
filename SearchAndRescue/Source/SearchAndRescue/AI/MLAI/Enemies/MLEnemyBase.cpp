@@ -26,6 +26,7 @@ void AMLEnemyBase::BeginPlay()
 		if(tempManager != nullptr)
 		{
 			tempManager->AddAgent(this);
+			AgentId = tempManager->GetAgentId(this);
 			bFoundManager = true;
 		}
 	}
@@ -71,6 +72,40 @@ float AMLEnemyBase::getDefaultSpeed()
 void AMLEnemyBase::takeDamage(float fDamageStore)
 {
 	fHealth -= fDamageStore;
+}
+
+//To improve training for the patrolling behaviour. We need to reset the enemies to a random point on the spline.
+void AMLEnemyBase::ResetToRandomPointOnSpline()
+{
+	if (EnemySpline != nullptr)
+	{
+		//Modified version of the code from the learning agents tutorial.
+		//Get the total spline length and a random distance along that spline.
+		float SplineLength = EnemySpline->getSpline()->GetSplineLength();
+		float RandomDistance = FMath::FRandRange(0.0f, SplineLength);
+
+		//Create a new vector and rotator for the location and rotation of the enemy.
+		FVector NewLocation = EnemySpline->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
+		FRotator NewRotation = EnemySpline->getSpline()->GetRotationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
+
+		//Teleport enemy to said location with an offset of 50.0f on the Z. Idk why this is but the tutorial has it.
+		TeleportTo(NewLocation + FVector(0, 0, 50.f), NewRotation, false, true);
+
+		//Remove all momentum from the character so as to not have any momentum carry over.
+		//Rotate the character to face the correct direction
+		this->GetCharacterMovement()->StopMovementImmediately();
+		this->Controller->SetControlRotation(NewRotation);
+	}
+}
+
+int32 AMLEnemyBase::getAgentId()
+{
+	return AgentId;
+}
+
+ASplineController* AMLEnemyBase::GetSplineController()
+{
+	return EnemySpline;
 }
 
 // Called to bind functionality to input

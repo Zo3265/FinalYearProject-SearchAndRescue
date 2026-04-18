@@ -56,3 +56,13 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	//If none of the conditions are met we keep it running.
 	OutCompletion = ELearningAgentsCompletion::Running;
 }
+
+void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 AgentId)
+{
+	AMLEnemyBase* CharAgent = Cast<AMLEnemyBase>(GetAgent(AgentId));
+
+	if (CharAgent)
+	{
+		CharAgent->ResetToRandomPointOnSpline();
+	}
+}

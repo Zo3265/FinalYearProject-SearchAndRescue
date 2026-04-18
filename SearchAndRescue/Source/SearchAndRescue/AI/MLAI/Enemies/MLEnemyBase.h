@@ -7,6 +7,7 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "LearningAgentsManager.h"
 #include "SearchAndRescue/Weapons/ExplosiveGrenade.h"
+#include "SearchAndRescue/AI/SplineController.h"
 #include "MLEnemyBase.generated.h"
 
 UCLASS()
@@ -53,20 +54,26 @@ protected:
 	int iFlashGrenadeAmount = 1;
 
 	bool bFoundManager = false;
+	int32 AgentId;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, Category = "Spline");
+	ASplineController* EnemySpline;
+
 	int getExplosiveGrenadeAmount();
 	int getFlashGrenadeAmount();
 	float getHealth();
-
 	void setSpeed(float fSpeedStore);
 	float getDefaultSpeed();
-
 	void takeDamage(float fDamageStore);
+	void ResetToRandomPointOnSpline();
+	int32 getAgentId();
+	ASplineController* GetSplineController();
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	
 };

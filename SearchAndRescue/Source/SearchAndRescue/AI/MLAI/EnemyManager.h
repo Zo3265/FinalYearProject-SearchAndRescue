@@ -4,6 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
+#include "Components/SplineComponent.h"
+#include "Kismet/GameplayStatics.h"
+#include "SearchAndRescue/AI/MLAI/EnemyInteractor.h"
 #include "EnemyManager.generated.h"
 
 UCLASS()
@@ -19,8 +23,10 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
+	TMap<int32, USplineComponent*> AgentToSplineMap;
+	UEnemyInteractor* EnemyInteractorRef;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
-
+	
 };
