@@ -299,6 +299,8 @@
 /I "C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\UnrealEditor\Inc\SearchAndRescue\UHT"
 /I "C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source"
 /I "C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source\SearchAndRescue\Public"
+/I "..\Plugins\Experimental\LearningAgents\Intermediate\Build\Win64\UnrealEditor\Inc\LearningTraining\UHT"
+/I "..\Plugins\Experimental\LearningAgents\Source\LearningTraining\Public"
 /external:W0
 /external:I "ThirdParty\GuidelinesSupportLibrary\GSL-1144\include"
 /external:I "ThirdParty\RapidJSON\1.1.0"

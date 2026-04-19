@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "LearningAgentsPPOTrainer.h"
 #include "GameFramework/Actor.h"
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
 #include "Components/SplineComponent.h"
@@ -14,7 +15,6 @@
 #include "SearchAndRescue/AI/MLAI/EnemyTrainingEnvironment.h"
 #include "LearningAgentsTrainingEnvironment.h"
 #include "LearningAgentsCommunicator.h"
-#include "LearningAgentsPPOTrainer.h"
 #include "EnemyManager.generated.h"
 
 UCLASS()
