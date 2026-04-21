@@ -30,6 +30,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	//Super::GatherAgentObservation_Implementation(OutObservationObjectElement, InObservationObject, AgentId);
 
 	//Get the agent that is making the observations.
+	setInteractorAgentID(AgentId);
 	UObject* OBSAgent = GetAgent(AgentId);
 
 	//Get the actual actor
@@ -75,6 +76,7 @@ void UEnemyInteractor::SpecifyAgentAction_Implementation(FLearningAgentsActionSc
 
 void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsActionObject* InActionObject, const FLearningAgentsActionObjectElement& InActionObjectElement, const int32 AgentId)
 {
+	setInteractorAgentID(AgentId);
 	ACharacter* Enemy = Cast<ACharacter>(GetAgent(AgentId));
 
 	if (Enemy)
@@ -92,4 +94,19 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
 		Enemy->AddControllerYawInput(TurnValue);
 	}
+}
+
+void UEnemyInteractor::setInteractorSplineComponent(USplineComponent* tempSpline)
+{
+	InteractorSplineComponent = tempSpline;
+}
+
+void UEnemyInteractor::setInteractorAgentID(int32 AgentIDStore)
+{
+	InteractorAgentID = AgentIDStore;
+}
+
+int32 UEnemyInteractor::getInteractorAgentID()
+{
+	return InteractorAgentID;
 }

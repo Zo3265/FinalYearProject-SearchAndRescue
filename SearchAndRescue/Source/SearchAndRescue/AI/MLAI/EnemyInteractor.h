@@ -26,7 +26,14 @@ protected:
 	virtual void SpecifyAgentAction_Implementation(FLearningAgentsActionSchemaElement& OutActionSchemaElement, ULearningAgentsActionSchema* InActionSchema) override;
 
 	virtual void PerformAgentAction_Implementation(const ULearningAgentsActionObject* InActionObject, const FLearningAgentsActionObjectElement& InActionObjectElement, const int32 AgentId) override;
+
+	int32 InteractorAgentID;
 public:
 	UPROPERTY(EditAnywhere, Category = "Spline")
 	USplineComponent* InteractorSplineComponent;
+
+	void setInteractorSplineComponent(USplineComponent* tempSpline);
+
+	void setInteractorAgentID(int32 AgentIDStore);
+	int32 getInteractorAgentID();
 };

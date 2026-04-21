@@ -24,7 +24,13 @@ protected:
 	virtual void GatherAgentCompletion_Implementation(ELearningAgentsCompletion& OutCompletion, const int32 AgentId) override;
 
 	virtual void ResetAgentEpisode_Implementation(const int32 AgentId) override;
+
+	int32 TrainingEnvAgentID;
 public:
 	UPROPERTY(EditAnywhere, Category = "Spline")
 	USplineComponent* TrainingEnvSplineComponent;
+
+	void setTrainingEnvAgentID(int32 AgentIDStore);
+	int32 getTrainingEnvAgentID();
+	void setTrainingEnvSplineComponent(USplineComponent* tempSpline);
 };

@@ -6,6 +6,7 @@
 //Here we will reward our character for following the path
 void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutReward, const int32 AgentId)
 {
+	TrainingEnvAgentID = AgentId;
 	ACharacter* RewardCharacter = Cast<ACharacter>(GetAgent(AgentId));
 
 	float TotalReward = 0.0f;
@@ -31,6 +32,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 {
 	//We want to check how far the agent is from the spline. Then terminate or truncate the episode based on how far it is.
 	//Will change this later when more advanced behaviour is required.
+	TrainingEnvAgentID = AgentId;
 	ACharacter* RewardCharacter = Cast<ACharacter>(GetAgent(AgentId));
 
 	//Smae logic as before.
@@ -59,10 +61,26 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 
 void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 AgentId)
 {
+	TrainingEnvAgentID = AgentId;
 	AMLEnemyBase* CharAgent = Cast<AMLEnemyBase>(GetAgent(AgentId));
 
 	if (CharAgent)
 	{
 		CharAgent->ResetToRandomPointOnSpline();
 	}
+}
+
+void UEnemyTrainingEnvironment::setTrainingEnvAgentID(int32 AgentIDStore)
+{
+	TrainingEnvAgentID = AgentIDStore;
+}
+
+int32 UEnemyTrainingEnvironment::getTrainingEnvAgentID()
+{
+	return TrainingEnvAgentID;
+}
+
+void UEnemyTrainingEnvironment::setTrainingEnvSplineComponent(USplineComponent* tempSpline)
+{
+	TrainingEnvSplineComponent = tempSpline;
 }

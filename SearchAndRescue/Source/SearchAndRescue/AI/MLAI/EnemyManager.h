@@ -37,16 +37,30 @@ protected:
 	UPROPERTY()
 	ULearningAgentsPolicy* EnemyPolicy;
 	UPROPERTY()
+	FLearningAgentsPolicySettings PolicySettings;
+	UPROPERTY()
 	ULearningAgentsCritic* EnemyCritic;
 	UPROPERTY()
-	UEnemyTrainingEnvironment* EnemyTraingEnvRef;
+	FLearningAgentsCriticSettings CriticSettings;
+	UPROPERTY()
+	UEnemyTrainingEnvironment* EnemyTrainingEnvRef;
 	UPROPERTY()
 	ULearningAgentsPPOTrainer* PPOTrainer;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Neural Network Asset")
+	ULearningAgentsNeuralNetwork* EncoderNeuralNetworkAsset;
+	UPROPERTY(EditDefaultsOnly, Category = "Neural Network Asset")
+	ULearningAgentsNeuralNetwork* PolicyNeuralNetworkAsset;
+	UPROPERTY(EditDefaultsOnly, Category = "Neural Network Asset")
+	ULearningAgentsNeuralNetwork* DecoderNeuralNetworkAsset;
+	UPROPERTY(EditDefaultsOnly, Category = "Neural Network Asset")
+	ULearningAgentsNeuralNetwork* CriticNetworkAsset;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	UPROPERTY(EditAnywhere, Category = "Learning Agents")
-	ULearningAgentsNeuralNetwork* CriticNetworkAsset;
+	
+
+	
 	
 };

@@ -5,6 +5,12 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/MLAI/NeuralNetwrokAssets/DA_CriticAsset.uasset",
+				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/MLAI/NeuralNetwrokAssets/DA_Decoder.uasset",
+				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/MLAI/NeuralNetwrokAssets/DA_Encoder.uasset",
+				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/MLAI/NeuralNetwrokAssets/DA_Policy.uasset",
+				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/MLAI/BP_EnemyManager.uasset",
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineController.uasset",
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_EnemyBase.uasset",
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/BP_SplineMovementActor.uasset",
@@ -224,8 +230,7 @@
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Enemy/BlendSpace/BS_Enemy.uasset",
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/CE/1QXNREW2XQ4X039UMG71M6.uasset",
 				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/TN/EKFB8RJYXUZ0EZDXT5DA0Z.uasset",
-				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/MySplineController.uasset",
-				"G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/MySplineController.uasset"
 			]
 		}
 	]

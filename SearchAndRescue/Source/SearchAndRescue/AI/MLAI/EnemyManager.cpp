@@ -35,26 +35,34 @@ void AEnemyManager::BeginPlay()
 	ULearningAgentsManager* ManagerComp = this->FindComponentByClass<ULearningAgentsManager>();
 	if (EnemyInteractorRef)
 	{
-		EnemyInteractorRef->SetupInteractor(ManagerComp);
+		//EnemyInteractorRef->SetupInteractor(ManagerComp);
+		EnemyInteractorRef->MakeInteractor(ManagerComp, UEnemyInteractor::StaticClass());
+		USplineComponent** temp = AgentToSplineMap.Find(EnemyInteractorRef->getInteractorAgentID());
+		EnemyInteractorRef->setInteractorSplineComponent(*temp);
 	}
 	
 	EnemyPolicy = NewObject<ULearningAgentsPolicy>(this);
 	if (EnemyPolicy)
 	{
-		EnemyPolicy->SetupPolicy(ManagerComp, BaseInteractor);
+		//EnemyPolicy->SetupPolicy(ManagerComp, BaseInteractor);
+		EnemyPolicy->MakePolicy(ManagerComp, BaseInteractor, ULearningAgentsPolicy::StaticClass(), FName("EnemyPolicy"), EncoderNeuralNetworkAsset, PolicyNeuralNetworkAsset, DecoderNeuralNetworkAsset, false, false, false, PolicySettings);
 	}
 
 	EnemyCritic = NewObject<ULearningAgentsCritic>(this);
 	if (EnemyCritic)
 	{
-		EnemyCritic->SetupCritic(ManagerComp, BaseInteractor, EnemyPolicy, CriticNetworkAsset, false);
+		//EnemyCritic->SetupCritic(ManagerComp, BaseInteractor, EnemyPolicy, CriticNetworkAsset, false);
+		EnemyCritic->MakeCritic(ManagerComp, BaseInteractor, EnemyPolicy, ULearningAgentsCritic::StaticClass(), FName("EnemyCritic"), CriticNetworkAsset, false, CriticSettings);
 	}
 
-	EnemyTraingEnvRef = NewObject<UEnemyTrainingEnvironment>(this);
-	ULearningAgentsTrainingEnvironment* BaseTrainingEnvironment = Cast<ULearningAgentsTrainingEnvironment>(EnemyTraingEnvRef);
-	if (EnemyTraingEnvRef)
+	EnemyTrainingEnvRef = NewObject<UEnemyTrainingEnvironment>(this);
+	ULearningAgentsTrainingEnvironment* BaseTrainingEnvironment = Cast<ULearningAgentsTrainingEnvironment>(EnemyTrainingEnvRef);
+	if (EnemyTrainingEnvRef)
 	{
-		EnemyTraingEnvRef->SetupTrainingEnvironment(ManagerComp);
+		//EnemyTrainingEnvRef->SetupTrainingEnvironment(ManagerComp);
+		EnemyTrainingEnvRef->MakeTrainingEnvironment(ManagerComp, UEnemyTrainingEnvironment::StaticClass());
+		USplineComponent** temp = AgentToSplineMap.Find(EnemyTrainingEnvRef->getTrainingEnvAgentID());
+		EnemyTrainingEnvRef->setTrainingEnvSplineComponent(*temp);
 	}
 
 	FLearningAgentsTrainerProcessSettings TrainerProcessSettings;
@@ -78,5 +86,6 @@ void AEnemyManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	PPOTrainer->RunTraining();
 }
 
