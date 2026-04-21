@@ -55,6 +55,9 @@ protected:
 	ULearningAgentsNeuralNetwork* DecoderNeuralNetworkAsset;
 	UPROPERTY(EditDefaultsOnly, Category = "Neural Network Asset")
 	ULearningAgentsNeuralNetwork* CriticNetworkAsset;
+
+	UPROPERTY()
+	USplineComponent* ManagerSpline;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

@@ -13,6 +13,7 @@ void EmptyLinkFunctionForGeneratedCodeEnemyManager() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_AActor();
+ENGINE_API UClass* Z_Construct_UClass_USplineComponent_NoRegister();
 LEARNINGAGENTS_API UClass* Z_Construct_UClass_ULearningAgentsCritic_NoRegister();
 LEARNINGAGENTS_API UClass* Z_Construct_UClass_ULearningAgentsNeuralNetwork_NoRegister();
 LEARNINGAGENTS_API UClass* Z_Construct_UClass_ULearningAgentsPolicy_NoRegister();
@@ -79,6 +80,10 @@ struct Z_Construct_UClass_AEnemyManager_Statics
 		{ "Category", "Neural Network Asset" },
 		{ "ModuleRelativePath", "AI/MLAI/EnemyManager.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ManagerSpline_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "AI/MLAI/EnemyManager.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyInteractorRef;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyPolicy;
@@ -91,6 +96,7 @@ struct Z_Construct_UClass_AEnemyManager_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PolicyNeuralNetworkAsset;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DecoderNeuralNetworkAsset;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CriticNetworkAsset;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ManagerSpline;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -109,6 +115,7 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyManager_
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyManager_Statics::NewProp_PolicyNeuralNetworkAsset = { "PolicyNeuralNetworkAsset", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyManager, PolicyNeuralNetworkAsset), Z_Construct_UClass_ULearningAgentsNeuralNetwork_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PolicyNeuralNetworkAsset_MetaData), NewProp_PolicyNeuralNetworkAsset_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyManager_Statics::NewProp_DecoderNeuralNetworkAsset = { "DecoderNeuralNetworkAsset", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyManager, DecoderNeuralNetworkAsset), Z_Construct_UClass_ULearningAgentsNeuralNetwork_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DecoderNeuralNetworkAsset_MetaData), NewProp_DecoderNeuralNetworkAsset_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyManager_Statics::NewProp_CriticNetworkAsset = { "CriticNetworkAsset", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyManager, CriticNetworkAsset), Z_Construct_UClass_ULearningAgentsNeuralNetwork_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CriticNetworkAsset_MetaData), NewProp_CriticNetworkAsset_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEnemyManager_Statics::NewProp_ManagerSpline = { "ManagerSpline", nullptr, (EPropertyFlags)0x0020080000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEnemyManager, ManagerSpline), Z_Construct_UClass_USplineComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ManagerSpline_MetaData), NewProp_ManagerSpline_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyManager_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyManager_Statics::NewProp_EnemyInteractorRef,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyManager_Statics::NewProp_EnemyPolicy,
@@ -121,6 +128,7 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEnemyMan
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyManager_Statics::NewProp_PolicyNeuralNetworkAsset,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyManager_Statics::NewProp_DecoderNeuralNetworkAsset,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyManager_Statics::NewProp_CriticNetworkAsset,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEnemyManager_Statics::NewProp_ManagerSpline,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AEnemyManager_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AEnemyManager_Statics::DependentSingletons[])() = {
@@ -163,10 +171,10 @@ AEnemyManager::~AEnemyManager() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyManager_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemyManager, AEnemyManager::StaticClass, TEXT("AEnemyManager"), &Z_Registration_Info_UClass_AEnemyManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyManager), 3117183615U) },
+		{ Z_Construct_UClass_AEnemyManager, AEnemyManager::StaticClass, TEXT("AEnemyManager"), &Z_Registration_Info_UClass_AEnemyManager, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyManager), 3009869481U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyManager_h_4048570360(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyManager_h_4224033152(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyManager_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyManager_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
