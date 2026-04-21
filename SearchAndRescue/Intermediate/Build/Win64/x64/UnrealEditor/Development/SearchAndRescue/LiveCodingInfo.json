@@ -25,9 +25,6 @@
 			"EnemyBase.cpp.obj",
 			"SniperEnemy.cpp.obj",
 			"SniperShootBTTaskNode.cpp.obj",
-			"MLEnemyBase.cpp.obj",
-			"EnemyInteractor.cpp.obj",
-			"EnemyTrainingEnvironment.cpp.obj",
 			"SplineController.cpp.obj",
 			"SplineMovementActor.cpp.obj",
 			"DummyClass.cpp.obj",
@@ -39,7 +36,10 @@
 			"WeaponBase.cpp.obj",
 			"EnemyManager.gen.cpp.obj",
 			"SearchAndRescue.init.gen.cpp.obj",
-			"EnemyManager.cpp.obj"
+			"MLEnemyBase.cpp.obj",
+			"EnemyInteractor.cpp.obj",
+			"EnemyManager.cpp.obj",
+			"EnemyTrainingEnvironment.cpp.obj"
 		]
 	}
 }

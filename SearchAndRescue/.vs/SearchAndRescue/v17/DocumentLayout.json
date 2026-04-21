@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -21,22 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -146,63 +142,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "EnemyTrainingEnvironment.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-21T09:09:49.773Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "EnemyInteractor.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACQAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-21T09:08:40.179Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "EnemyInteractor.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
-              "ViewState": "AgIAACEAAAAAAAAAAAAgwE4AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T09:05:27.629Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "MLEnemyBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAgwE8AAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T09:05:05.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "MLEnemyBase.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h",
@@ -215,26 +211,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BTGrenadeTossTaskNode.cpp",
-              "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp",
-              "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp",
-              "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp",
-              "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-21T09:03:22.686Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EnemyManager.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.h",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.h",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwDsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAgwEQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-19T14:44:31.985Z",
               "EditorCaption": ""
@@ -247,27 +230,27 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.cpp",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAAAFoAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAwwF0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-19T14:45:18.354Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "EnemyTrainingEnvironment.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAAD8AAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEoAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T09:04:49.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "EnemyTrainingEnvironment.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
@@ -279,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "EnemyInteractor.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
@@ -291,7 +274,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "EnemyInteractor.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
@@ -303,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "BTGrenadeTossTaskNode.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.cpp",
@@ -315,7 +298,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "BTGrenadeTossTaskNode.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTGrenadeTossTaskNode.h",
@@ -327,7 +310,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "ExplosiveGrenade.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\ExplosiveGrenade.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\ExplosiveGrenade.cpp",
@@ -339,7 +322,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "ExplosiveGrenade.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\ExplosiveGrenade.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\ExplosiveGrenade.h",
@@ -351,7 +334,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "GrenadeBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\GrenadeBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\GrenadeBase.cpp",
@@ -363,7 +346,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "GrenadeBase.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\GrenadeBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\GrenadeBase.h",
@@ -375,7 +358,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "BulletBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\BulletBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\BulletBase.cpp",
@@ -387,7 +370,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "BulletBase.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\BulletBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\BulletBase.h",
@@ -399,7 +382,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "SniperShootBTTaskNode.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperShootBTTaskNode.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\SniperShootBTTaskNode.cpp",
@@ -411,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "SniperShootBTTaskNode.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperShootBTTaskNode.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\SniperShootBTTaskNode.h",
@@ -423,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "BTSniperAIController.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp",
@@ -435,7 +418,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "BTSniperAIController.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h",
@@ -447,7 +430,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "SniperEnemy.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.cpp",
@@ -459,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "SniperEnemy.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h",
@@ -471,7 +454,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "WeaponBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\WeaponBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\WeaponBase.cpp",
@@ -483,7 +466,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "WeaponBase.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\WeaponBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\WeaponBase.h",
@@ -495,7 +478,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "SniperRifle.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\SniperRifle.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\SniperRifle.cpp",
@@ -507,7 +490,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "SniperRifle.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\SniperRifle.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\SniperRifle.h",
@@ -519,7 +502,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "BTEnemyAIControllerBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
@@ -531,7 +514,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "BTEnemyAIControllerBase.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
@@ -543,7 +526,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "EnemyBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
@@ -555,7 +538,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "EnemyBase.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",

@@ -35,6 +35,12 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	TrainingEnvAgentID = AgentId;
 	ACharacter* RewardCharacter = Cast<ACharacter>(GetAgent(AgentId));
 
+	if (RewardCharacter == nullptr || TrainingEnvSplineComponent == nullptr)
+	{
+		OutCompletion = ELearningAgentsCompletion::Running;
+		return;
+	}
+
 	//Smae logic as before.
 	FVector CharLocation = RewardCharacter->GetActorLocation();
 	FVector ClosestSplineLocation = TrainingEnvSplineComponent->FindLocationClosestToWorldLocation(CharLocation, ESplineCoordinateSpace::World);
@@ -47,16 +53,20 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	}
 
 	//Find the current distance between our character and the spline.
-	float CurrentDistance = TrainingEnvSplineComponent->GetDistanceAlongSplineAtSplineInputKey(TrainingEnvSplineComponent->FindInputKeyClosestToWorldLocation(CharLocation));
+	//float CurrentDistance = TrainingEnvSplineComponent->GetDistanceAlongSplineAtSplineInputKey(TrainingEnvSplineComponent->FindInputKeyClosestToWorldLocation(CharLocation));
 
 	//We want to truncate the episode if the agent reaches the end of the spline.
-	if (CurrentDistance >= (TrainingEnvSplineComponent->GetSplineLength() - 100.0f))
+	else if (TrainingEnvSplineComponent->GetDistanceAlongSplineAtSplineInputKey(TrainingEnvSplineComponent->FindInputKeyClosestToWorldLocation(CharLocation)) >= (TrainingEnvSplineComponent->GetSplineLength() - 100.0f))
 	{
 		OutCompletion = ELearningAgentsCompletion::Truncation;
 	}
 
-	//If none of the conditions are met we keep it running.
-	OutCompletion = ELearningAgentsCompletion::Running;
+	else
+	{
+		//If none of the conditions are met we keep it running.
+		OutCompletion = ELearningAgentsCompletion::Running;
+	}
+	
 }
 
 void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 AgentId)

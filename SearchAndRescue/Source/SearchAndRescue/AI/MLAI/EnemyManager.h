@@ -46,6 +46,10 @@ protected:
 	UEnemyTrainingEnvironment* EnemyTrainingEnvRef;
 	UPROPERTY()
 	ULearningAgentsPPOTrainer* PPOTrainer;
+	UPROPERTY()
+	FLearningAgentsPPOTrainingSettings PPOTrainerTrainingSettings;
+	UPROPERTY()
+	FLearningAgentsTrainingGameSettings TrainingGameSettings;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Neural Network Asset")
 	ULearningAgentsNeuralNetwork* EncoderNeuralNetworkAsset;
@@ -62,7 +66,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
+	bool bHasFirstFrameProcessed = false;
 
 	
 	

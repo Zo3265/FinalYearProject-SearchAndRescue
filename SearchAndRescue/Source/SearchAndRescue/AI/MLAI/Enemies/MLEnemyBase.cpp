@@ -14,7 +14,7 @@ AMLEnemyBase::AMLEnemyBase()
 // Called when the game starts or when spawned
 void AMLEnemyBase::BeginPlay()
 {
-	Super::BeginPlay();
+	/*Super::BeginPlay();
 	
 	TArray<AActor*> FoundActor;
 	UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("LearningAgentsManager"), FoundActor);
@@ -34,7 +34,7 @@ void AMLEnemyBase::BeginPlay()
 	if (bFoundManager == false)
 	{
 		GLog->Log("Could not find manager");
-	}
+	}*/
 }
 
 // Called every frame

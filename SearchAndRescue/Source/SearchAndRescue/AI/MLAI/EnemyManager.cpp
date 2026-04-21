@@ -16,6 +16,13 @@ void AEnemyManager::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	ULearningAgentsManager* ManagerComp = this->FindComponentByClass<ULearningAgentsManager>();
+	if (!ManagerComp)
+	{
+		UE_LOG(LogTemp, Error, TEXT("LearningAgentsManager not found on this actor!"));
+		return;
+	}
+
 	TArray<AActor*> EnemyActors;
 	UGameplayStatics::GetAllActorsOfClass(GetWorld(), AMLEnemyBase::StaticClass(), EnemyActors);
 	for (AActor* Enemy : EnemyActors)
@@ -23,17 +30,24 @@ void AEnemyManager::BeginPlay()
 		if (Enemy)
 		{
 			this->AddTickPrerequisiteActor(Enemy);
+
+			ManagerComp->AddAgent(Enemy);
 			
 			AMLEnemyBase* MLEnemyCast = Cast<AMLEnemyBase>(Enemy);
 			//AgentToSplineMap.Add(MLEnemyCast->getAgentId(), MLEnemyCast->GetSplineController()->getSpline());
-			ManagerSpline = MLEnemyCast->GetSplineController()->getSpline();
+
+			if (MLEnemyCast && MLEnemyCast->GetSplineController())
+			{
+				// Now ManagerSpline has a physical reference before the Interactor asks for it!
+				ManagerSpline = MLEnemyCast->GetSplineController()->getSpline();
+			}
 		}
 
 	}
 
+	//Setting up interactor
 	EnemyInteractorRef = NewObject<UEnemyInteractor>(this);
 	ULearningAgentsInteractor* BaseInteractor = Cast<ULearningAgentsInteractor>(EnemyInteractorRef);
-	ULearningAgentsManager* ManagerComp = this->FindComponentByClass<ULearningAgentsManager>();
 	if (EnemyInteractorRef)
 	{
 		EnemyInteractorRef->SetupInteractor(ManagerComp);
@@ -45,14 +59,14 @@ void AEnemyManager::BeginPlay()
 	EnemyPolicy = NewObject<ULearningAgentsPolicy>(this);
 	if (EnemyPolicy)
 	{
-		EnemyPolicy->SetupPolicy(ManagerComp, BaseInteractor);
+		EnemyPolicy->SetupPolicy(ManagerComp, BaseInteractor, EncoderNeuralNetworkAsset, PolicyNeuralNetworkAsset, DecoderNeuralNetworkAsset, true, true, true, PolicySettings, 1234);
 		//EnemyPolicy->MakePolicy(ManagerComp, BaseInteractor, ULearningAgentsPolicy::StaticClass(), FName("EnemyPolicy"), EncoderNeuralNetworkAsset, PolicyNeuralNetworkAsset, DecoderNeuralNetworkAsset, false, false, false, PolicySettings);
 	}
 
 	EnemyCritic = NewObject<ULearningAgentsCritic>(this);
 	if (EnemyCritic)
 	{
-		EnemyCritic->SetupCritic(ManagerComp, BaseInteractor, EnemyPolicy, CriticNetworkAsset, false);
+		EnemyCritic->SetupCritic(ManagerComp, BaseInteractor, EnemyPolicy, CriticNetworkAsset, true, CriticSettings, 1234);
 		//EnemyCritic->MakeCritic(ManagerComp, BaseInteractor, EnemyPolicy, ULearningAgentsCritic::StaticClass(), FName("EnemyCritic"), CriticNetworkAsset, false, CriticSettings);
 	}
 
@@ -78,7 +92,8 @@ void AEnemyManager::BeginPlay()
 	if (PPOTrainer)
 	{
 		FLearningAgentsPPOTrainerSettings PPOTrainerSettings;
-		PPOTrainer->SetupPPOTrainer(ManagerComp, BaseInteractor, BaseTrainingEnvironment, EnemyPolicy, EnemyCritic, SharedMemoryCommunicator);
+		PPOTrainer->SetupPPOTrainer(ManagerComp, BaseInteractor, BaseTrainingEnvironment, EnemyPolicy, EnemyCritic, SharedMemoryCommunicator, PPOTrainerSettings);
+
 		//PPOTrainer->MakePPOTrainer(ManagerComp, BaseInteractor, BaseTrainingEnvironment, EnemyPolicy, EnemyCritic, SharedMemoryCommunicator, ULearningAgentsPPOTrainer::StaticClass());
 	}
 }
@@ -88,6 +103,24 @@ void AEnemyManager::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	//PPOTrainer->RunTraining();
+
+	if (PPOTrainer && PPOTrainer->IsSetup())
+	{
+		if (PPOTrainer->HasTrainingFailed()) 
+		{
+			UE_LOG(LogTemp, Error, TEXT("PPO Trainer communication failed!"));
+			return;
+		}
+
+	/*	if (!bHasFirstFrameProcessed)
+		{
+			bHasFirstFrameProcessed = true;
+			return;
+		}*/
+
+		PPOTrainer->RunTraining(PPOTrainerTrainingSettings, TrainingGameSettings, true, true);
+	}
+
+
 }
 

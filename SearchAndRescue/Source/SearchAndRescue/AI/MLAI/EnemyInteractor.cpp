@@ -37,22 +37,30 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	AActor* OBSActor = Cast<AActor>(OBSAgent);
 
 	//USplineComponent* SplineComp = OBSActor->FindComponentByClass<USplineComponent>();
+	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
 	
 	if(OBSActor)
 	{
-		TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
+		
 		FVector ActorLocation = OBSActor->GetActorLocation();
 		float InputKey = InteractorSplineComponent->FindInputKeyClosestToWorldLocation(ActorLocation);
-		float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
+		//float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
 
 		// Normalise by total length.
-		float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
+		//float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
 
 		FTransform Transform = OBSActor->GetActorTransform();
 
-		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, NormalisedDistance, Transform));
+		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, Transform));
+		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, Transform));
 
-		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, NormalisedDistance, Transform));
+		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
+	}
+
+	else
+	{
+		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
+		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
 
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}
