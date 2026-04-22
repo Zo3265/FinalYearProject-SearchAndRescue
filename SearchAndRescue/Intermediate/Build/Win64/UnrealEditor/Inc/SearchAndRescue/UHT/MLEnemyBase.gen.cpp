@@ -20,9 +20,43 @@ SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASplineController_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
 // End Cross Module References
 
+// Begin Class AMLEnemyBase Function ResetToRandomPointOnSpline
+struct Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMLEnemyBase, nullptr, "ResetToRandomPointOnSpline", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AMLEnemyBase::execResetToRandomPointOnSpline)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->ResetToRandomPointOnSpline();
+	P_NATIVE_END;
+}
+// End Class AMLEnemyBase Function ResetToRandomPointOnSpline
+
 // Begin Class AMLEnemyBase
 void AMLEnemyBase::StaticRegisterNativesAMLEnemyBase()
 {
+	UClass* Class = AMLEnemyBase::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "ResetToRandomPointOnSpline", &AMLEnemyBase::execResetToRandomPointOnSpline },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(AMLEnemyBase);
 UClass* Z_Construct_UClass_AMLEnemyBase_NoRegister()
@@ -94,6 +128,10 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemySpline;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline, "ResetToRandomPointOnSpline" }, // 3245662645
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AMLEnemyBase>::IsAbstract,
 	};
@@ -134,11 +172,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_AMLEnemyBase_Statics::C
 	"Game",
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_AMLEnemyBase_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_AMLEnemyBase_Statics::PropPointers),
 	0,
 	0x009000A4u,
@@ -164,10 +202,10 @@ AMLEnemyBase::~AMLEnemyBase() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 2174256966U) },
+		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 1580829427U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_149975911(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_1491357030(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

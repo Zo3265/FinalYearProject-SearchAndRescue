@@ -32,6 +32,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Spline")
 	USplineComponent* InteractorSplineComponent;
 
+	UFUNCTION(BlueprintCallable, Category = "Spline")
 	void setInteractorSplineComponent(USplineComponent* tempSpline);
 
 	void setInteractorAgentID(int32 AgentIDStore);

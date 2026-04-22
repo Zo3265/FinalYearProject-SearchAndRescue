@@ -68,6 +68,7 @@ public:
 	void setSpeed(float fSpeedStore);
 	float getDefaultSpeed();
 	void takeDamage(float fDamageStore);
+	UFUNCTION(BlueprintCallable)
 	void ResetToRandomPointOnSpline();
 	int32 getAgentId();
 	ASplineController* GetSplineController();

@@ -32,5 +32,6 @@ public:
 
 	void setTrainingEnvAgentID(int32 AgentIDStore);
 	int32 getTrainingEnvAgentID();
+	UFUNCTION(BlueprintCallable, Category = "Spline")
 	void setTrainingEnvSplineComponent(USplineComponent* tempSpline);
 };

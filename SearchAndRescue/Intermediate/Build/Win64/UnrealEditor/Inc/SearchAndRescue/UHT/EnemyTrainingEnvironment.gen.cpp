@@ -17,9 +17,60 @@ SEARCHANDRESCUE_API UClass* Z_Construct_UClass_UEnemyTrainingEnvironment_NoRegis
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
 // End Cross Module References
 
+// Begin Class UEnemyTrainingEnvironment Function setTrainingEnvSplineComponent
+struct Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics
+{
+	struct EnemyTrainingEnvironment_eventsetTrainingEnvSplineComponent_Parms
+	{
+		USplineComponent* tempSpline;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "Category", "Spline" },
+		{ "ModuleRelativePath", "AI/MLAI/EnemyTrainingEnvironment.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_tempSpline_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_tempSpline;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::NewProp_tempSpline = { "tempSpline", nullptr, (EPropertyFlags)0x0010000000080080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(EnemyTrainingEnvironment_eventsetTrainingEnvSplineComponent_Parms, tempSpline), Z_Construct_UClass_USplineComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_tempSpline_MetaData), NewProp_tempSpline_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::NewProp_tempSpline,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UEnemyTrainingEnvironment, nullptr, "setTrainingEnvSplineComponent", nullptr, nullptr, Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::PropPointers), sizeof(Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::EnemyTrainingEnvironment_eventsetTrainingEnvSplineComponent_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::Function_MetaDataParams), Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::EnemyTrainingEnvironment_eventsetTrainingEnvSplineComponent_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(UEnemyTrainingEnvironment::execsetTrainingEnvSplineComponent)
+{
+	P_GET_OBJECT(USplineComponent,Z_Param_tempSpline);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->setTrainingEnvSplineComponent(Z_Param_tempSpline);
+	P_NATIVE_END;
+}
+// End Class UEnemyTrainingEnvironment Function setTrainingEnvSplineComponent
+
 // Begin Class UEnemyTrainingEnvironment
 void UEnemyTrainingEnvironment::StaticRegisterNativesUEnemyTrainingEnvironment()
 {
+	UClass* Class = UEnemyTrainingEnvironment::StaticClass();
+	static const FNameNativePtrPair Funcs[] = {
+		{ "setTrainingEnvSplineComponent", &UEnemyTrainingEnvironment::execsetTrainingEnvSplineComponent },
+	};
+	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
 IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(UEnemyTrainingEnvironment);
 UClass* Z_Construct_UClass_UEnemyTrainingEnvironment_NoRegister()
@@ -45,6 +96,10 @@ struct Z_Construct_UClass_UEnemyTrainingEnvironment_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TrainingEnvSplineComponent;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
+	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_UEnemyTrainingEnvironment_setTrainingEnvSplineComponent, "setTrainingEnvSplineComponent" }, // 2230199519
+	};
+	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UEnemyTrainingEnvironment>::IsAbstract,
 	};
@@ -65,11 +120,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_UEnemyTrainingEnvironme
 	nullptr,
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
-	nullptr,
+	FuncInfo,
 	Z_Construct_UClass_UEnemyTrainingEnvironment_Statics::PropPointers,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
-	0,
+	UE_ARRAY_COUNT(FuncInfo),
 	UE_ARRAY_COUNT(Z_Construct_UClass_UEnemyTrainingEnvironment_Statics::PropPointers),
 	0,
 	0x009000A0u,
@@ -96,10 +151,10 @@ UEnemyTrainingEnvironment::~UEnemyTrainingEnvironment() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyTrainingEnvironment_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UEnemyTrainingEnvironment, UEnemyTrainingEnvironment::StaticClass, TEXT("UEnemyTrainingEnvironment"), &Z_Registration_Info_UClass_UEnemyTrainingEnvironment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEnemyTrainingEnvironment), 1489027283U) },
+		{ Z_Construct_UClass_UEnemyTrainingEnvironment, UEnemyTrainingEnvironment::StaticClass, TEXT("UEnemyTrainingEnvironment"), &Z_Registration_Info_UClass_UEnemyTrainingEnvironment, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UEnemyTrainingEnvironment), 1046047664U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyTrainingEnvironment_h_2653134221(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyTrainingEnvironment_h_748509875(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyTrainingEnvironment_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_EnemyTrainingEnvironment_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

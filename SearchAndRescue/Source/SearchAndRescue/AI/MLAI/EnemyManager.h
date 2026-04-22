@@ -62,12 +62,14 @@ protected:
 
 	UPROPERTY()
 	USplineComponent* ManagerSpline;
+
+	FTimerHandle ReloadTimer;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	bool bHasFirstFrameProcessed = false;
 
-	
+	void DelayPPO();
 	
 };
