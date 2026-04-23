@@ -10,7 +10,7 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 {
 	//Super::SpecifyAgentObservation_Implementation(OutObservationSchemaElement, InObservationSchema);
 
-	UE_LOG(LogTemp, Error, TEXT("Specifying OBS"));
+	//UE_LOG(LogTemp, Error, TEXT("Specifying OBS"));
 	//Map to store the observations
 	TMap<FName, FLearningAgentsObservationSchemaElement> ObservationMap;
 	
@@ -47,7 +47,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		float InputKey = InteractorSplineComponent->FindInputKeyClosestToWorldLocation(ActorLocation);
 		//float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
 
-		UE_LOG(LogTemp, Warning, TEXT("Agent %d - InputKey: %f"), AgentId, InputKey);
+		//UE_LOG(LogTemp, Warning, TEXT("Agent %d - InputKey: %f"), AgentId, InputKey);
 
 		// Normalise by total length.
 		//float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
@@ -73,8 +73,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 //This where we specify which actions our NPC is able to do.
 void UEnemyInteractor::SpecifyAgentAction_Implementation(FLearningAgentsActionSchemaElement& OutActionSchemaElement, ULearningAgentsActionSchema* InActionSchema)
 {
+	UE_LOG(LogTemp, Error, TEXT("Specifying Agent"));
 	TMap<FName, FLearningAgentsActionSchemaElement> ActionMap;
-
 	//Forward input is a float action with 0.0f to 1.0f.
 	//For the time being the NPC can only run forward.
 	ActionMap.Add(TEXT("ForwardInput"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
@@ -97,9 +97,9 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		float TurnValue;
 
 		////We are retrieving the actions that we are able to do and their values.
-		//ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
-		//ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
-		//ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
+		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
+		ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
+		ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
 
 		////Move the character forward and turn them using the character classes regular functions.
 		//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
@@ -110,14 +110,14 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			ULearningAgentsActions::GetFloatAction(ForwardValue, InActionObject, ActionObjectMap[TEXT("ForwardInput")]);
 			ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
 
-			UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
+			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
 
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
 			Enemy->AddControllerYawInput(TurnValue);
 		}
 		else
 		{
-			UE_LOG(LogTemp, Error, TEXT("Agent %d - Actions map missing expected keys!"), AgentId);
+			//UE_LOG(LogTemp, Error, TEXT("Agent %d - Actions map missing expected keys!"), AgentId);
 		}
 	}
 }
