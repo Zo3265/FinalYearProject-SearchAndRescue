@@ -20,6 +20,9 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	//Another will be the direction along the spline.
 	ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::SpecifyDirectionAlongSplineObservation(InObservationSchema));
 
+	//We need a velocity observation to tell the enemy to increase its distance along the spline and reward it for doing so.
+	ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::SpecifyVelocityObservation(InObservationSchema));
+
 	//Combine the data. This function concatenates all these sub-observations into a struct. We can do this as many times as needed.
 	OutObservationSchemaElement = ULearningAgentsObservations::SpecifyStructObservation(InObservationSchema, ObservationMap);
 	
@@ -45,17 +48,18 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		
 		FVector ActorLocation = OBSActor->GetActorLocation();
 		float InputKey = InteractorSplineComponent->FindInputKeyClosestToWorldLocation(ActorLocation);
-		//float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
+		float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
 
 		//UE_LOG(LogTemp, Warning, TEXT("Agent %d - InputKey: %f"), AgentId, InputKey);
 
 		// Normalise by total length.
-		//float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
+		float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
 
 		FTransform Transform = OBSActor->GetActorTransform();
 
-		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, Transform));
+		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, NormalisedDistance, Transform));
 		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, Transform));
+		ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::MakeVelocityObservation(InObservationObject, OBSActor->GetVelocity()));
 
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}
@@ -73,7 +77,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 //This where we specify which actions our NPC is able to do.
 void UEnemyInteractor::SpecifyAgentAction_Implementation(FLearningAgentsActionSchemaElement& OutActionSchemaElement, ULearningAgentsActionSchema* InActionSchema)
 {
-	UE_LOG(LogTemp, Error, TEXT("Specifying Agent"));
+	//UE_LOG(LogTemp, Error, TEXT("Specifying Agent"));
 	TMap<FName, FLearningAgentsActionSchemaElement> ActionMap;
 	//Forward input is a float action with 0.0f to 1.0f.
 	//For the time being the NPC can only run forward.
@@ -95,25 +99,34 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
 		float ForwardValue;
 		float TurnValue;
+		float TurnSensitivity = 10.0f;
+		//FRotator RotationValue;
 
 		////We are retrieving the actions that we are able to do and their values.
 		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
 		ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
 		ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
+		//ULearningAgentsActions::GetRotationAction(RotationValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
 
-		////Move the character forward and turn them using the character classes regular functions.
-		//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
-		//Enemy->AddControllerYawInput(TurnValue);
+		
 
 		if (ActionObjectMap.Contains(TEXT("ForwardInput")) && ActionObjectMap.Contains(TEXT("TurnInput")))
 		{
 			ULearningAgentsActions::GetFloatAction(ForwardValue, InActionObject, ActionObjectMap[TEXT("ForwardInput")]);
 			ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
 
+			float RotationChange = TurnValue * 1080.0f * GetWorld()->GetDeltaSeconds();
+			FRotator CurrentRot = Enemy->GetActorRotation();
+			CurrentRot.Yaw += RotationChange;
 			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
 
+			ForwardValue = FMath::Clamp(ForwardValue, 0.0f, 1.0f);
+			//TurnValue = FMath::Clamp(TurnValue, -1.0f, 1.0f);
+
+			//Move the character forward and turn them using the character classes regular functions.
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
-			Enemy->AddControllerYawInput(TurnValue);
+			//Enemy->AddControllerYawInput(TurnValue);
+			Enemy->SetActorRotation(CurrentRot);
 		}
 		else
 		{

@@ -26,7 +26,6 @@
 #include "G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/AI/BTAI/SniperShootBTTaskNode.cpp"
 #include "G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.cpp"
 #include "G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/AI/MLAI/EnemyManager.cpp"
-#include "G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/AI/MLAI/EnemyTrainingEnvironment.cpp"
 #include "G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/AI/SplineController.cpp"
 #include "G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/AI/SplineMovementActor.cpp"
 #include "G:/Unreal Projects/FinalYearProject-SearchAndRescue/SearchAndRescue/Source/SearchAndRescue/Private/DummyClass.cpp"
