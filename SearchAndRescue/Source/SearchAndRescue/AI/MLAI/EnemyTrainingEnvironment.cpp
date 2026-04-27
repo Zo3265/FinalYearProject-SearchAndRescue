@@ -2,6 +2,7 @@
 
 
 #include "SearchAndRescue/AI/MLAI/EnemyTrainingEnvironment.h"
+#include "Kismet/GameplayStatics.h"
 
 //Here we will reward our character for following the path
 void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutReward, const int32 AgentId)
@@ -10,9 +11,11 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 	ACharacter* RewardCharacter = Cast<ACharacter>(GetAgent(AgentId));
 
 	float TotalReward = 0.0f;
+	
 
 	if (RewardCharacter && TrainingEnvSplineComponent)
 	{
+		//UE_LOG(LogTemp, Warning, TEXT("Test"));
 		//====================================================================================================
 		// 1.Following the spline reward
 		//====================================================================================================
@@ -40,25 +43,95 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		FVector CharForward = RewardCharacter->GetActorForwardVector();
 		float InputKey = TrainingEnvSplineComponent->FindInputKeyClosestToWorldLocation(CharLocation);
 		FVector SplineForwardVec = TrainingEnvSplineComponent->GetDirectionAtSplineInputKey(InputKey, ESplineCoordinateSpace::World);
-
 		//-1.0f to 1.0f
 		float CharAlignment = FVector::DotProduct(CharForward, SplineForwardVec);
 
-		//Following Spline
-		//Reward the character for being close to the spline. I am using a gaussian distribution for the reward as to not give them a harsh punishment if they step off the spline.
-		//Also this will need to change when I want the enemy to be chasing the player.
-		//Max Reward Possible is about 1.0f.
-		TotalReward += 0.7f * FMath::Exp(-0.01f * DistanceToPath);
+		//====================================================================================================
+		// 4.Checking to see if the agent can see the player.
+		//====================================================================================================
+		//APlayerController* PlayerChar = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+		//ACharacter* Player = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+		//APawn* PlayerPawn = PlayerChar->GetPawn();
+		//FVector PlayerLoc = PlayerPawn->GetActorLocation();
+		//FVector PlayerDir = (PlayerLoc - CharLocation).GetSafeNormal();
+		//float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
+		////UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
-		//Facing the correct direction
-		//Max reward possible is 
-		TotalReward += 1.0f * CharAlignment;
+		//if (PlayerAlignment >= 0.7)
+		//{
+		//	//Setting up a raycast so that the agents cant see through walls
+		//	FHitResult HitResult;
+		//	FCollisionQueryParams CollisionParams;
+		//	CollisionParams.AddIgnoredActor(RewardCharacter);
 
-		//Going fast.
-		//Max reward possible is 
-		TotalReward += (0.4f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
+		//	bool bHit = GetWorld()->LineTraceSingleByChannel(
+		//		HitResult,
+		//		CharLocation + FVector(0, 0, 60),
+		//		PlayerLoc,
+		//		ECC_Visibility,
+		//		CollisionParams
+		//	);
 
+		//	if (!bHit || (HitResult.GetActor() == Player))
+		//	{
+		//		bSeePlayer = true;
+		//	}
+
+		//	else
+		//	{
+		//		bSeePlayer = false;
+		//	}
+
+		//	
+		//}
+
+		//if (bSeePlayer == true)
+		//{
+		//	
+		//	CurrentState = EAgentState::SeeingPlayer;
+		//}
+
+		//else
+		//{ 
+		//	CurrentState = EAgentState::Patrolling;
+		//}
+
+		if (CurrentState == EAgentState::Patrolling)
+		{
+			//Following Spline
+			//Reward the character for being close to the spline. I am using a gaussian distribution for the reward as to not give them a harsh punishment if they step off the spline.
+			//Also this will need to change when I want the enemy to be chasing the player.
+			//Max Reward Possible is about 0.7f.
+			TotalReward += 0.7f * FMath::Exp(-0.01f * DistanceToPath);
+
+			//Facing the correct direction
+			//Max reward possible is 1.0f
+			TotalReward += 1.0f * CharAlignment;
+
+			//Going fast.
+			//Max reward possible is 0.4f
+			TotalReward += (0.4f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
+		}
+
+		//else if (CurrentState == EAgentState::SeeingPlayer)
+		//{
+		//	//GLog->Log("Seeing Player");
+		//	//We reward the agents proportionally to how much they are facing the player when they see them.
+		//	//0.0f to 1.0f
+		//	TotalReward += FMath::Max(0.0f, PlayerAlignment);
+
+		//	//Velocity. Punish the enemies for going fast and ignoring the player. The velocity should be 0 when they see the player.
+		//	//I am currently testing this idea. I may want them to move when they see the player later.
+		//	float SpeedPct = RewardCharacter->GetVelocity().Size() / MaxSpeed;
+		//	TotalReward += FMath::Max(0.0f, 1.0f - SpeedPct);
+		//	
+		//}
 		
+	}
+
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Null"));
 	}
 
 	OutReward = TotalReward;
@@ -78,25 +151,10 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		return;
 	}
 
-	//Smae logic as before.
+	//Logic for patrolling behaviour same as the rewards function.
 	FVector CharLocation = RewardCharacter->GetActorLocation();
 	FVector ClosestSplineLocation = TrainingEnvSplineComponent->FindLocationClosestToWorldLocation(CharLocation, ESplineCoordinateSpace::World);
 	float DistanceFromPath = FVector::Dist(CharLocation, ClosestSplineLocation);
-
-	//Terminate the episode if the agent moves further than 0.5m away from the spline.
-	if (DistanceFromPath > 50.0f)
-	{
-		OutCompletion = ELearningAgentsCompletion::Termination;
-	}
-
-	//Find the current distance between our character and the spline.
-	//float CurrentDistance = TrainingEnvSplineComponent->GetDistanceAlongSplineAtSplineInputKey(TrainingEnvSplineComponent->FindInputKeyClosestToWorldLocation(CharLocation));
-
-	//We want to truncate the episode if the agent reaches the end of the spline.
-	/*else if (TrainingEnvSplineComponent->GetDistanceAlongSplineAtSplineInputKey(TrainingEnvSplineComponent->FindInputKeyClosestToWorldLocation(CharLocation)) >= (TrainingEnvSplineComponent->GetSplineLength() - 100.0f))
-	{
-		OutCompletion = ELearningAgentsCompletion::Truncation;
-	}*/
 
 	FVector CharForward = RewardCharacter->GetActorForwardVector();
 	float InputKey = TrainingEnvSplineComponent->FindInputKeyClosestToWorldLocation(CharLocation);
@@ -105,19 +163,97 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	//-1.0f to 1.0f
 	float CharAlignment = FVector::DotProduct(CharForward, SplineForwardVec);
 
-	if (CharAlignment < 0.0f)
+	//Logic for the seeingPlayer state. Same as reward function
+	APlayerController* PlayerChar = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	APawn* PlayerPawn = PlayerChar->GetPawn();
+	FVector PlayerLoc = PlayerPawn->GetActorLocation();
+	FVector PlayerDir = (PlayerLoc - CharLocation).GetSafeNormal();
+	float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
+
+	if (CurrentState == EAgentState::Patrolling)
 	{
-		OutCompletion = ELearningAgentsCompletion::Termination;
+		
+
+		//Terminate the episode if the agent moves further than 0.5m away from the spline.
+		if (DistanceFromPath > 50.0f)
+		{
+			OutCompletion = ELearningAgentsCompletion::Termination;
+		}
+
+
+		if (CharAlignment < 0.0f)
+		{
+			OutCompletion = ELearningAgentsCompletion::Termination;
+		}
+
+		else
+		{
+			//If none of the conditions are met we keep it running.
+			OutCompletion = ELearningAgentsCompletion::Running;
+		}
 	}
+
+	//else if (CurrentState == EAgentState::SeeingPlayer)
+	//{
+	//	bool bFacingPlayer;
+	//	bool bStopped;
+
+	//	//Check if the enemy is facing the player
+	//	if (PlayerAlignment > 0.95f)
+	//	{
+	//		bFacingPlayer = true;
+	//	}
+	//	
+	//	else
+	//	{
+	//		bFacingPlayer = false;
+	//	}
+
+	//	//Check if they have stopped moving
+	//	if (RewardCharacter->GetVelocity().Size() < 10.0f)
+	//	{
+	//		bStopped = true;
+	//	}
+
+	//	else
+	//	{
+	//		bStopped = false;
+	//	}
+
+	//	if (bFacingPlayer && bStopped)
+	//	{
+	//		SuccessTimer += GetWorld()->GetDeltaSeconds();
+
+	//		//If they look at the player and have stopped moving for more than 2 secconds. They have succeded in their episode.
+	//		if (SuccessTimer > 2.0f)
+	//		{
+	//			OutCompletion = ELearningAgentsCompletion::Truncation;
+	//			return;
+	//		}
+	//	}
+
+	//	else
+	//	{
+	//		SuccessTimer = 0.0f;
+	//	}
+
+	//	//If they lose sight of the player they have failed the episode.
+	//	float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
+	//	if (DistanceToPlayer > 2000.0f || bSeePlayer == false)
+	//	{
+	//		OutCompletion = ELearningAgentsCompletion::Termination;
+	//	}
+
+	//	else
+	//	{
+	//		OutCompletion = ELearningAgentsCompletion::Running;
+	//	}
+	//}
 
 	else
 	{
-		//If none of the conditions are met we keep it running.
 		OutCompletion = ELearningAgentsCompletion::Running;
 	}
-
-
-	
 	
 }
 
@@ -125,6 +261,9 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 {
 	TrainingEnvAgentID = AgentId;
 	AMLEnemyBase* CharAgent = Cast<AMLEnemyBase>(GetAgent(AgentId));
+	bSeePlayer = false;
+	SuccessTimer = 0.0f;
+	CurrentState = EAgentState::Patrolling;
 
 	if (CharAgent)
 	{

@@ -3,6 +3,7 @@
 
 #include "SearchAndRescue/AI/MLAI/EnemyInteractor.h"
 #include "Components/SplineComponent.h"
+#include "Kismet/GameplayStatics.h"
 #include "GameFramework/Character.h"
 
 //Specifying which observation for the enemies to make
@@ -23,6 +24,8 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	//We need a velocity observation to tell the enemy to increase its distance along the spline and reward it for doing so.
 	ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::SpecifyVelocityObservation(InObservationSchema));
 
+	ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema));
+
 	//Combine the data. This function concatenates all these sub-observations into a struct. We can do this as many times as needed.
 	OutObservationSchemaElement = ULearningAgentsObservations::SpecifyStructObservation(InObservationSchema, ObservationMap);
 	
@@ -39,6 +42,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 
 	//Get the actual actor
 	AActor* OBSActor = Cast<AActor>(OBSAgent);
+	APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(),0);
+	APawn* PlayerPawn = PC->GetPawn();
 
 	//USplineComponent* SplineComp = OBSActor->FindComponentByClass<USplineComponent>();
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
@@ -60,17 +65,18 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, NormalisedDistance, Transform));
 		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, Transform));
 		ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::MakeVelocityObservation(InObservationObject, OBSActor->GetVelocity()));
+		ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::MakeLocationObservation(InObservationObject,PlayerPawn->GetActorLocation()));
 
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}
 
-	else
-	{
-		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
-		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
+	//else
+	//{
+	//	ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
+	//	ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
 
-		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
-	}
+	//	OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
+	//}
 	
 }
 
@@ -79,6 +85,7 @@ void UEnemyInteractor::SpecifyAgentAction_Implementation(FLearningAgentsActionSc
 {
 	//UE_LOG(LogTemp, Error, TEXT("Specifying Agent"));
 	TMap<FName, FLearningAgentsActionSchemaElement> ActionMap;
+
 	//Forward input is a float action with 0.0f to 1.0f.
 	//For the time being the NPC can only run forward.
 	ActionMap.Add(TEXT("ForwardInput"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
