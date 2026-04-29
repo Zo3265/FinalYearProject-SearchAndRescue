@@ -58,33 +58,39 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
 		//According to Gemini this value means that the agents have a 45 degree fov.
-		//if (PlayerAlignment >= 0.707)
-		//{
-		//	//Setting up a raycast so that the agents cant see through walls
-		//	FHitResult HitResult;
-		//	FCollisionQueryParams CollisionParams;
-		//	CollisionParams.AddIgnoredActor(RewardCharacter);
+		if (PlayerAlignment >= 0.707f)
+		{
+			
+			//Setting up a raycast so that the agents cant see through walls
+			FHitResult HitResult;
+			FCollisionQueryParams CollisionParams;
+			CollisionParams.AddIgnoredActor(RewardCharacter);
 
-		//	bool bHit = GetWorld()->LineTraceSingleByChannel(
-		//		HitResult,
-		//		CharLocation + FVector(0, 0, 60),
-		//		PlayerLoc,
-		//		ECC_Visibility,
-		//		CollisionParams
-		//	);
+			bool bHit = GetWorld()->LineTraceSingleByChannel(
+				HitResult,
+				CharLocation + FVector(0, 0, 60),
+				PlayerLoc,
+				ECC_Visibility,
+				CollisionParams
+			);
 
-		//	if (!bHit || (HitResult.GetActor() == Player))
-		//	{
-		//		bSeePlayer = true;
-		//	}
+			if (!bHit || (HitResult.GetActor() == UGameplayStatics::GetPlayerPawn(GetWorld(), 0)))
+			{
+				bSeePlayer = true;
+				UE_LOG(LogTemp, Warning, TEXT("Agent:%d can see the player with PlayerAlignment: %f"), AgentId, PlayerAlignment);
+			}
 
-		//	else
-		//	{
-		//		bSeePlayer = false;
-		//	}
+			else
+			{
+				bSeePlayer = false;
+			}
 
-		//	
-		//}
+		}
+
+		else
+		{
+			bSeePlayer = false;
+		}
 
 		if (bSeePlayer == true)
 		{
@@ -114,44 +120,53 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			TotalReward += (0.4f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
 		}
 
-		//else if (CurrentState == EAgentState::SeeingPlayer)
-		//{
-		//	TotalReward = 0.0f;
+		else if (CurrentState == EAgentState::SeeingPlayer)
+		{
+			//TotalReward = 0.0f;
+			RewardCharacter->GetMovementComponent()->StopMovementImmediately();
+			//We now need to punish the enemy for following the spline.
+			/*float SplineFollowing = 0.7f * FMath::Exp(-0.01f * DistanceToPath);
+			TotalReward -= SplineFollowing;*/
 
-		//	//We now need to punish the enemy for following the spline.
-		//	float SplineFollowing = 0.7f * FMath::Exp(-0.01f * DistanceToPath);
-		//	TotalReward -= SplineFollowing;
+			float SplineAlignment = 2.0f * CharAlignment;
+			TotalReward -= SplineAlignment;
 
-		//	float SplineAlignment = 1.0f * CharAlignment;
-		//	TotalReward -= SplineAlignment;
+			/*if (NormalizedVelocity > 0.05f)
+			{
+				float SplineVelocity = (4.0f * NormalizedVelocity);
+				TotalReward -= SplineVelocity;
+			}*/
+			
 
-		//	if (NormalizedVelocity > 0.05f)
-		//	{
-		//		float SplineVelocity = (4.0f * NormalizedVelocity);
-		//		TotalReward -= SplineVelocity;
-		//	}
-		//	
+			//We reward the agents proportionally to how much they are facing the player when they see them.
+			if (PlayerAlignment >= 0.95f)
+			{
+				UE_LOG(LogTemp, Error, TEXT("Agent:%d is aligned with the player with PlayerAlignment: %f"), AgentId, PlayerAlignment);
+				TotalReward += FMath::Max(0.0f, PlayerAlignment) * 3.0f;
+			}
+			
+			else
+			{
+				TotalReward -=  FMath::Clamp(0.0f, 1.0f, PlayerAlignment) * 5.0f;
+			}
 
-		//	//We reward the agents proportionally to how much they are facing the player when they see them.
-		//	TotalReward += FMath::Max(0.0f, PlayerAlignment) * 5.0f;
+			//Velocity. Punish the enemies for going fast and ignoring the player. The velocity should be 0 when they see the player.
+			//I am currently testing this idea. I may want them to move when they see the player later.
+			float SpeedPct = RewardCharacter->GetVelocity().Size() / MaxSpeed;
+			if (SpeedPct > 0.01f)
+			{
+				TotalReward -= (SpeedPct * 3.0f);
+			}
 
-		//	//Velocity. Punish the enemies for going fast and ignoring the player. The velocity should be 0 when they see the player.
-		//	//I am currently testing this idea. I may want them to move when they see the player later.
-		//	float SpeedPct = RewardCharacter->GetVelocity().Size() / MaxSpeed;
-		//	if (SpeedPct > 0.01f)
-		//	{
-		//		TotalReward -= (SpeedPct * 3.0f);
-		//	}
-
-		//	else
-		//	{
-		//		
-		//		TotalReward += 5.0f;
-		//		
-		//		
-		//	}
-		//	
-		//}
+			/*else if(SpeedPct <= 0.01f && PlayerAlignment >= 0.95)
+			{
+				
+				TotalReward += 5.0f;
+				
+				
+			}*/
+			
+		}
 		
 	}
 
@@ -219,62 +234,62 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		}
 	}
 
-	//else if (CurrentState == EAgentState::SeeingPlayer)
-	//{
-	//	bool bFacingPlayer;
-	//	bool bStopped;
+	else if (CurrentState == EAgentState::SeeingPlayer)
+	{
+		bool bFacingPlayer;
+		bool bStopped;
 
-	//	//Check if the enemy is facing the player
-	//	if (PlayerAlignment > 0.95f)
-	//	{
-	//		bFacingPlayer = true;
-	//	}
-	//	
-	//	else
-	//	{
-	//		bFacingPlayer = false;
-	//	}
+		//Check if the enemy is facing the player
+		if (PlayerAlignment > 0.95f)
+		{
+			bFacingPlayer = true;
+		}
+		
+		else
+		{
+			bFacingPlayer = false;
+		}
 
-	//	//Check if they have stopped moving
-	//	if (RewardCharacter->GetVelocity().Size() < 10.0f)
-	//	{
-	//		bStopped = true;
-	//	}
+		//Check if they have stopped moving
+		if (RewardCharacter->GetVelocity().Size() < 10.0f)
+		{
+			bStopped = true;
+		}
 
-	//	else
-	//	{
-	//		bStopped = false;
-	//	}
+		else
+		{
+			bStopped = false;
+		}
 
-	//	if (bFacingPlayer && bStopped)
-	//	{
-	//		SuccessTimer += GetWorld()->GetDeltaSeconds();
+		if (bFacingPlayer && bStopped)
+		{
+			SuccessTimer += GetWorld()->GetDeltaSeconds();
 
-	//		//If they look at the player and have stopped moving for more than 2 secconds. They have succeded in their episode.
-	//		if (SuccessTimer > 2.0f)
-	//		{
-	//			OutCompletion = ELearningAgentsCompletion::Truncation;
-	//			return;
-	//		}
-	//	}
+			//If they look at the player and have stopped moving for more than 2 secconds. They have succeded in their episode.
+			if (SuccessTimer > 2.0f)
+			{
+				OutCompletion = ELearningAgentsCompletion::Truncation;
+				return;
+			}
+		}
 
-	//	else
-	//	{
-	//		SuccessTimer = 0.0f;
-	//	}
+		else
+		{
+			SuccessTimer = 0.0f;
+		}
 
-	//	//If they lose sight of the player they have failed the episode.
-	//	float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
-	//	if (DistanceToPlayer > 2000.0f || bSeePlayer == false)
-	//	{
-	//		OutCompletion = ELearningAgentsCompletion::Termination;
-	//	}
+		//If they lose sight of the player they have failed the episode.
+		float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
+		if (DistanceToPlayer > 2000.0f || bSeePlayer == false)
+		{
+			OutCompletion = ELearningAgentsCompletion::Termination;
+		}
 
-	//	else
-	//	{
-	//		OutCompletion = ELearningAgentsCompletion::Running;
-	//	}
-	//}
+		else
+		{
+			OutCompletion = ELearningAgentsCompletion::Running;
+		}
+	}
 
 	else
 	{
@@ -296,18 +311,18 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 		CharAgent->ResetToRandomPointOnSpline();
 	}
 
-	//APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-	//if (PlayerPawn && TrainingEnvSplineComponent)
-	//{
-	//	// Get a random distance along the spline
-	//	float RandomDistance = FMath::FRandRange(0.0f, TrainingEnvSplineComponent->GetSplineLength());
-	//	FVector RandomLocation = TrainingEnvSplineComponent->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	if (PlayerPawn && TrainingEnvSplineComponent)
+	{
+		// Get a random distance along the spline
+		float RandomDistance = FMath::FRandRange(0.0f, TrainingEnvSplineComponent->GetSplineLength());
+		FVector RandomLocation = TrainingEnvSplineComponent->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
 
-	//	// Add a slight offset so the player isn't on the line
-	//	RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
+		// Add a slight offset so the player isn't on the line
+		RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
 
-	//	PlayerPawn->SetActorLocation(RandomLocation);
-	//}
+		PlayerPawn->SetActorLocation(RandomLocation);
+	}
 }
 
 void UEnemyTrainingEnvironment::setTrainingEnvAgentID(int32 AgentIDStore)
