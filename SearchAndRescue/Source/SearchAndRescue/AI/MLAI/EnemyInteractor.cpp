@@ -25,6 +25,7 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::SpecifyVelocityObservation(InObservationSchema));
 
 	ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema));
 
 	//Combine the data. This function concatenates all these sub-observations into a struct. We can do this as many times as needed.
 	OutObservationSchemaElement = ULearningAgentsObservations::SpecifyStructObservation(InObservationSchema, ObservationMap);
@@ -42,8 +43,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 
 	//Get the actual actor
 	AActor* OBSActor = Cast<AActor>(OBSAgent);
-	APlayerController* PC = UGameplayStatics::GetPlayerController(GetWorld(),0);
-	APawn* PlayerPawn = PC->GetPawn();
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
 
 	//USplineComponent* SplineComp = OBSActor->FindComponentByClass<USplineComponent>();
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
@@ -54,6 +54,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		FVector ActorLocation = OBSActor->GetActorLocation();
 		float InputKey = InteractorSplineComponent->FindInputKeyClosestToWorldLocation(ActorLocation);
 		float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
+		FVector PlayerLoc = PlayerPawn->GetActorLocation();
+		FVector PlayerDir = (PlayerLoc - ActorLocation).GetSafeNormal();
 
 		//UE_LOG(LogTemp, Warning, TEXT("Agent %d - InputKey: %f"), AgentId, InputKey);
 
@@ -66,6 +68,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, Transform));
 		ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::MakeVelocityObservation(InObservationObject, OBSActor->GetVelocity()));
 		ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::MakeLocationObservation(InObservationObject,PlayerPawn->GetActorLocation()));
+		ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, PlayerDir));
 
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}

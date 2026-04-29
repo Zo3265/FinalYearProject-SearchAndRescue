@@ -49,15 +49,16 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		//====================================================================================================
 		// 4.Checking to see if the agent can see the player.
 		//====================================================================================================
-		//APlayerController* PlayerChar = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-		//ACharacter* Player = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
-		//APawn* PlayerPawn = PlayerChar->GetPawn();
-		//FVector PlayerLoc = PlayerPawn->GetActorLocation();
-		//FVector PlayerDir = (PlayerLoc - CharLocation).GetSafeNormal();
-		//float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
-		////UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
+		APlayerController* PlayerChar = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+		ACharacter* Player = UGameplayStatics::GetPlayerCharacter(GetWorld(), 0);
+		APawn* PlayerPawn = PlayerChar->GetPawn();
+		FVector PlayerLoc = PlayerPawn->GetActorLocation();
+		FVector PlayerDir = (PlayerLoc - CharLocation).GetSafeNormal();
+		float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
+		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
-		//if (PlayerAlignment >= 0.7)
+		//According to Gemini this value means that the agents have a 45 degree fov.
+		//if (PlayerAlignment >= 0.707)
 		//{
 		//	//Setting up a raycast so that the agents cant see through walls
 		//	FHitResult HitResult;
@@ -85,16 +86,16 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		//	
 		//}
 
-		//if (bSeePlayer == true)
-		//{
-		//	
-		//	CurrentState = EAgentState::SeeingPlayer;
-		//}
+		if (bSeePlayer == true)
+		{
+			
+			CurrentState = EAgentState::SeeingPlayer;
+		}
 
-		//else
-		//{ 
-		//	CurrentState = EAgentState::Patrolling;
-		//}
+		else
+		{ 
+			CurrentState = EAgentState::Patrolling;
+		}
 
 		if (CurrentState == EAgentState::Patrolling)
 		{
@@ -115,15 +116,40 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 		//else if (CurrentState == EAgentState::SeeingPlayer)
 		//{
-		//	//GLog->Log("Seeing Player");
+		//	TotalReward = 0.0f;
+
+		//	//We now need to punish the enemy for following the spline.
+		//	float SplineFollowing = 0.7f * FMath::Exp(-0.01f * DistanceToPath);
+		//	TotalReward -= SplineFollowing;
+
+		//	float SplineAlignment = 1.0f * CharAlignment;
+		//	TotalReward -= SplineAlignment;
+
+		//	if (NormalizedVelocity > 0.05f)
+		//	{
+		//		float SplineVelocity = (4.0f * NormalizedVelocity);
+		//		TotalReward -= SplineVelocity;
+		//	}
+		//	
+
 		//	//We reward the agents proportionally to how much they are facing the player when they see them.
-		//	//0.0f to 1.0f
-		//	TotalReward += FMath::Max(0.0f, PlayerAlignment);
+		//	TotalReward += FMath::Max(0.0f, PlayerAlignment) * 5.0f;
 
 		//	//Velocity. Punish the enemies for going fast and ignoring the player. The velocity should be 0 when they see the player.
 		//	//I am currently testing this idea. I may want them to move when they see the player later.
 		//	float SpeedPct = RewardCharacter->GetVelocity().Size() / MaxSpeed;
-		//	TotalReward += FMath::Max(0.0f, 1.0f - SpeedPct);
+		//	if (SpeedPct > 0.01f)
+		//	{
+		//		TotalReward -= (SpeedPct * 3.0f);
+		//	}
+
+		//	else
+		//	{
+		//		
+		//		TotalReward += 5.0f;
+		//		
+		//		
+		//	}
 		//	
 		//}
 		
@@ -269,6 +295,19 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 	{
 		CharAgent->ResetToRandomPointOnSpline();
 	}
+
+	//APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+	//if (PlayerPawn && TrainingEnvSplineComponent)
+	//{
+	//	// Get a random distance along the spline
+	//	float RandomDistance = FMath::FRandRange(0.0f, TrainingEnvSplineComponent->GetSplineLength());
+	//	FVector RandomLocation = TrainingEnvSplineComponent->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
+
+	//	// Add a slight offset so the player isn't on the line
+	//	RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
+
+	//	PlayerPawn->SetActorLocation(RandomLocation);
+	//}
 }
 
 void UEnemyTrainingEnvironment::setTrainingEnvAgentID(int32 AgentIDStore)
