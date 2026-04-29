@@ -53,7 +53,15 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Grenades")
 	int iFlashGrenadeAmount = 1;
 
+	UPROPERTY()
+	TArray<ASplineController*> SplineControllerStore;
+
+	UPROPERTY(EditAnywhere)
+	AActor* TrainingTarget;
+
 	bool bFoundManager = false;
+	bool bSeePlayer = false;
+	float SuccessTimer;
 	int32 AgentId;
 public:	
 	// Called every frame
@@ -72,6 +80,11 @@ public:
 	void ResetToRandomPointOnSpline();
 	int32 getAgentId();
 	ASplineController* GetSplineController();
+	void setSeePlayer(bool bStore);
+	bool getSeePlayer();
+	void setSuccessTimer(float fStore);
+	float getTimer();
+	AActor* getTrainingTarget();
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

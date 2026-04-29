@@ -7,6 +7,7 @@
 #include "LearningAgentsTrainingEnvironment.h"
 #include "GameFramework/Character.h"
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
+#include "SearchAndRescue/AI/SplineMovementActor.h"
 #include "EnemyTrainingEnvironment.generated.h"
 
 UENUM(BlueprintType)
@@ -32,7 +33,7 @@ protected:
 	virtual void ResetAgentEpisode_Implementation(const int32 AgentId) override;
 
 	int32 TrainingEnvAgentID;
-	float SuccessTimer;
+	
 	bool bSeePlayer = false;
 public:
 	UPROPERTY(EditAnywhere, Category = "Spline")
@@ -45,4 +46,5 @@ public:
 	int32 getTrainingEnvAgentID();
 	UFUNCTION(BlueprintCallable, Category = "Spline")
 	void setTrainingEnvSplineComponent(USplineComponent* tempSpline);
+	bool bTraining = true;
 };

@@ -19,6 +19,22 @@ void AMLEnemyBase::BeginPlay()
 	TArray<AActor*> FoundActor;
 	UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("LearningAgentsManager"), FoundActor);
 
+	TArray<AActor*> SplineActors;
+	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ASplineController::StaticClass(), SplineActors);
+	
+
+	for (AActor* temp : SplineActors)
+	{
+		if (temp != nullptr)
+		{
+			SplineControllerStore.Add(Cast<ASplineController>(temp));
+		}
+
+	}
+	int32 RandomValue = FMath::RandRange(0, SplineControllerStore.Num() - 1);
+	//UE_LOG(LogTemp, Warning, TEXT("SplineNum: %d"), SplineControllerStore.Num());
+	EnemySpline = SplineControllerStore[RandomValue];
+
 	for(AActor* temp : FoundActor)
 	{
 		ULearningAgentsManager* tempManager = temp->FindComponentByClass<ULearningAgentsManager>();
@@ -106,6 +122,31 @@ int32 AMLEnemyBase::getAgentId()
 ASplineController* AMLEnemyBase::GetSplineController()
 {
 	return EnemySpline;
+}
+
+void AMLEnemyBase::setSeePlayer(bool bStore)
+{
+	bSeePlayer = bStore;
+}
+
+bool AMLEnemyBase::getSeePlayer()
+{
+	return bSeePlayer;
+}
+
+void AMLEnemyBase::setSuccessTimer(float fStore)
+{
+	SuccessTimer = fStore;
+}
+
+float AMLEnemyBase::getTimer()
+{
+	return SuccessTimer;
+}
+
+AActor* AMLEnemyBase::getTrainingTarget()
+{
+	return TrainingTarget;
 }
 
 // Called to bind functionality to input

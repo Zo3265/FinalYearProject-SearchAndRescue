@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodeMLEnemyBase() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AExplosiveGrenade_NoRegister();
@@ -110,6 +111,13 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 		{ "Category", "Grenades" },
 		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SplineControllerStore_MetaData[] = {
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TrainingTarget_MetaData[] = {
+		{ "Category", "MLEnemyBase" },
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnemySpline_MetaData[] = {
 		{ "Category", "Spline" },
 		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
@@ -125,6 +133,9 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ExplosiveGrenade;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_iExplosiveGrenadeAmount;
 	static const UECodeGen_Private::FIntPropertyParams NewProp_iFlashGrenadeAmount;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_SplineControllerStore_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_SplineControllerStore;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TrainingTarget;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemySpline;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
@@ -147,6 +158,9 @@ const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMLEnemyBase_St
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_ExplosiveGrenade = { "ExplosiveGrenade", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, ExplosiveGrenade), Z_Construct_UClass_AExplosiveGrenade_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ExplosiveGrenade_MetaData), NewProp_ExplosiveGrenade_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_iExplosiveGrenadeAmount = { "iExplosiveGrenadeAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, iExplosiveGrenadeAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_iExplosiveGrenadeAmount_MetaData), NewProp_iExplosiveGrenadeAmount_MetaData) };
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_iFlashGrenadeAmount = { "iFlashGrenadeAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, iFlashGrenadeAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_iFlashGrenadeAmount_MetaData), NewProp_iFlashGrenadeAmount_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SplineControllerStore_Inner = { "SplineControllerStore", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_ASplineController_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SplineControllerStore = { "SplineControllerStore", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, SplineControllerStore), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SplineControllerStore_MetaData), NewProp_SplineControllerStore_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_TrainingTarget = { "TrainingTarget", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, TrainingTarget), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrainingTarget_MetaData), NewProp_TrainingTarget_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemySpline = { "EnemySpline", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, EnemySpline), Z_Construct_UClass_ASplineController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnemySpline_MetaData), NewProp_EnemySpline_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMLEnemyBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_fHealth,
@@ -159,6 +173,9 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMLEnemyB
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_ExplosiveGrenade,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_iExplosiveGrenadeAmount,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_iFlashGrenadeAmount,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SplineControllerStore_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SplineControllerStore,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_TrainingTarget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemySpline,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMLEnemyBase_Statics::PropPointers) < 2048);
@@ -202,10 +219,10 @@ AMLEnemyBase::~AMLEnemyBase() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 1580829427U) },
+		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 3059418934U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_1491357030(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_3723093001(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
