@@ -20,7 +20,6 @@
 			"SplineController.gen.cpp.obj",
 			"SplineMovementActor.gen.cpp.obj",
 			"WeaponBase.gen.cpp.obj",
-			"PerModuleInline.gen.cpp.obj",
 			"BTEnemyAIControllerBase.cpp.obj",
 			"BTGrenadeTossTaskNode.cpp.obj",
 			"BTSniperAIController.cpp.obj",
@@ -37,6 +36,7 @@
 			"GrenadeBase.cpp.obj",
 			"SniperRifle.cpp.obj",
 			"WeaponBase.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
 			"MLEnemyBase.cpp.obj",
 			"EnemyInteractor.cpp.obj",
 			"EnemyTrainingEnvironment.cpp.obj"

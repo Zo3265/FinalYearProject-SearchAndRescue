@@ -152,7 +152,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
 		float ForwardValue;
 		float TurnValue;
-		float TurnSensitivity = 1080.0f;
+		float TurnSensitivity = 360.0f;
 		//FRotator RotationValue;
 
 		////We are retrieving the actions that we are able to do and their values.
@@ -165,21 +165,22 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		CurrentRot.Yaw += RotationChange;
 		Enemy->SetActorRotation(CurrentRot);
 
-		if (Enemy->getSeePlayer() && FMath::Abs(ForwardValue) < 0.1f)
+
+		/*if (Enemy->getSeePlayer() && FMath::Abs(ForwardValue) < 0.1f)
 		{
 			Enemy->GetMovementComponent()->StopMovementImmediately();
 		}
 		else
-		{
+		{*/
 			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
 
-			ForwardValue = FMath::Clamp(ForwardValue, 0.0f, 1.0f);
+			//ForwardValue = FMath::Clamp(ForwardValue, 0.0f, 1.0f);
 			//TurnValue = FMath::Clamp(TurnValue, -1.0f, 1.0f);
 
 			//Move the character forward and turn them using the character classes regular functions.
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
 			
-		}
+		//}
 	}
 }
 

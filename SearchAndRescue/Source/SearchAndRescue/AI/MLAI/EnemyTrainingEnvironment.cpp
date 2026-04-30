@@ -70,7 +70,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
 		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
-		if (Enemy->getSeePlayer() == true)
+		/*if (Enemy->getSeePlayer() == true)
 		{
 			
 			CurrentState = EAgentState::SeeingPlayer;
@@ -79,7 +79,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		else
 		{ 
 			CurrentState = EAgentState::Patrolling;
-		}
+		}*/
 
 		if (CurrentState == EAgentState::Patrolling)
 		{
@@ -201,7 +201,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		
 
 		//Terminate the episode if the agent moves further than 0.5m away from the spline.
-		if (DistanceFromPath > 50.0f)
+		if (DistanceFromPath > 25.0f)
 		{
 			OutCompletion = ELearningAgentsCompletion::Termination;
 		}

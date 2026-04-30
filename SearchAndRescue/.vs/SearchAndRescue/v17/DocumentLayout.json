@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D75BDC4-E0A8-3A2B-853F-D620F0875790}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -164,7 +164,7 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAGgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-29T15:46:10.221Z",
               "EditorCaption": ""
@@ -177,7 +177,7 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
-              "ViewState": "AgIAABgAAAAAAAAAAAAgwBwAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-29T15:46:10.226Z",
               "EditorCaption": ""
@@ -216,7 +216,7 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-21T09:09:49.773Z",
               "EditorCaption": ""
@@ -229,7 +229,7 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2026-04-21T09:08:40.179Z",
               "EditorCaption": ""
@@ -242,7 +242,7 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
-              "ViewState": "AgIAAI0AAAAAAAAAAAAAAKcAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAH8AAAAAAAAAAAAwwJoAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T09:05:27.629Z",
               "EditorCaption": ""
@@ -255,14 +255,14 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
-              "ViewState": "AgIAAGYAAAAAAAAAAAAgwIUAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T09:05:05.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MLEnemyBase.h",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h",
@@ -301,13 +301,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "EnemyTrainingEnvironment.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
-              "ViewState": "AgIAACABAAAAAAAAAAAAABQBAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAwwMsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T09:04:49.46Z",
               "EditorCaption": ""

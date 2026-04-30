@@ -19,21 +19,21 @@ void AMLEnemyBase::BeginPlay()
 	TArray<AActor*> FoundActor;
 	UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("LearningAgentsManager"), FoundActor);
 
-	TArray<AActor*> SplineActors;
-	UGameplayStatics::GetAllActorsOfClass(GetWorld(), ASplineController::StaticClass(), SplineActors);
-	
+	//TArray<AActor*> SplineActors;
+	//UGameplayStatics::GetAllActorsOfClass(GetWorld(), ASplineController::StaticClass(), SplineActors);
+	//
 
-	for (AActor* temp : SplineActors)
-	{
-		if (temp != nullptr)
-		{
-			SplineControllerStore.Add(Cast<ASplineController>(temp));
-		}
+	//for (AActor* temp : SplineActors)
+	//{
+	//	if (temp != nullptr)
+	//	{
+	//		SplineControllerStore.Add(Cast<ASplineController>(temp));
+	//	}
 
-	}
-	int32 RandomValue = FMath::RandRange(0, SplineControllerStore.Num() - 1);
-	//UE_LOG(LogTemp, Warning, TEXT("SplineNum: %d"), SplineControllerStore.Num());
-	EnemySpline = SplineControllerStore[RandomValue];
+	//}
+	//int32 RandomValue = FMath::RandRange(0, SplineControllerStore.Num() - 1);
+	////UE_LOG(LogTemp, Warning, TEXT("SplineNum: %d"), SplineControllerStore.Num());
+	//EnemySpline = SplineControllerStore[RandomValue];
 
 	for(AActor* temp : FoundActor)
 	{
