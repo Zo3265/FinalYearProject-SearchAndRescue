@@ -80,39 +80,47 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
 		//According to Gemini this value means that the agents have a 45 degree fov.
-		//if (PlayerAlignment >= 0.707f)
-		//{
+		if (PlayerAlignment >= 0.707f)
+		{
+			//UE_LOG(LogTemp, Error, TEXT("Player Aligned"));
+			//Setting up a raycast so that the agents cant see through walls
+			FHitResult HitResult;
+			FCollisionQueryParams CollisionParams;
+			CollisionParams.AddIgnoredActor(OBSActor);
 
-		//	//Setting up a raycast so that the agents cant see through walls
-		//	FHitResult HitResult;
-		//	FCollisionQueryParams CollisionParams;
-		//	CollisionParams.AddIgnoredActor(OBSActor);
+			bool bHit = GetWorld()->LineTraceSingleByChannel(
+				HitResult,
+				ActorLocation + FVector(0, 0, 60),
+				PlayerLoc + FVector(0, 0, 60),
+				ECC_Visibility,
+				CollisionParams
+			);
 
-		//	bool bHit = GetWorld()->LineTraceSingleByChannel(
-		//		HitResult,
-		//		ActorLocation + FVector(0, 0, 60),
-		//		PlayerLoc,
-		//		ECC_Visibility,
-		//		CollisionParams
-		//	);
+			/*UE_LOG(LogTemp, Warning, TEXT("bHit: %s"), bHit ? TEXT("true") : TEXT("false"));
+			bool bCanSee = (!bHit || (HitResult.GetActor() == TargetToFollow));
+			UE_LOG(LogTemp, Error, TEXT("bCanSee: %s"), bCanSee ? TEXT("true") : TEXT("false"));*/
 
-		//	if (!bHit || (HitResult.GetActor() == UGameplayStatics::GetPlayerPawn(GetWorld(), 0)))
-		//	{
-		//		Enemy->setSeePlayer(true);
-		//		//UE_LOG(LogTemp, Warning, TEXT("Agent:%d can see the player with PlayerAlignment: %f"), AgentId, PlayerAlignment);
-		//	}
+			/*if (bHit && HitResult.GetActor()) {
+				UE_LOG(LogTemp, Warning, TEXT("Agent %d hit: %s instead of target!"),
+					AgentId, *HitResult.GetActor()->GetName());
+			}*/
+			if (!bHit || (HitResult.GetActor() == TargetToFollow))
+			{
+				Enemy->setSeePlayer(true);
+				//UE_LOG(LogTemp, Error, TEXT("Agent:%d can see the player with PlayerAlignment: %f"), AgentId, PlayerAlignment);
+			}
 
-		//	else
-		//	{
-		//		Enemy->setSeePlayer(false);
-		//	}
+			else
+			{
+				Enemy->setSeePlayer(false);
+			}
+			//UE_LOG(LogTemp, Warning, TEXT("The value is: %s"), Enemy->getSeePlayer() ? TEXT("true") : TEXT("false"));
+		}
 
-		//}
-
-		//else
-		//{
-		//	Enemy->setSeePlayer(false);
-		//}
+		else
+		{
+			Enemy->setSeePlayer(false);
+		}
 		
 		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, NormalisedDistance, ActorTransform));
 		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, ActorTransform));
@@ -166,21 +174,20 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		Enemy->SetActorRotation(CurrentRot);
 
 
-		/*if (Enemy->getSeePlayer() && FMath::Abs(ForwardValue) < 0.1f)
+		if (Enemy->getSeePlayer() && FMath::Abs(ForwardValue) < 0.1f)
 		{
 			Enemy->GetMovementComponent()->StopMovementImmediately();
 		}
 		else
-		{*/
+		{
 			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
 
 			//ForwardValue = FMath::Clamp(ForwardValue, 0.0f, 1.0f);
-			//TurnValue = FMath::Clamp(TurnValue, -1.0f, 1.0f);
 
 			//Move the character forward and turn them using the character classes regular functions.
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
 			
-		//}
+		}
 	}
 }
 
