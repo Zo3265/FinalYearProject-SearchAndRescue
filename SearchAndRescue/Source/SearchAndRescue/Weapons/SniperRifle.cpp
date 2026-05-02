@@ -13,6 +13,9 @@ ASniperRifle::ASniperRifle()
 	iCurrentAmmoReserve = 36;
 	iMaxMagCount = 6;
 	iMaxAmmoReserve = 36;
+
+	Cooldown = 0.93f;
+	Range = 5000.0f;
 }
 
 // Called when the game starts or when spawned
@@ -58,26 +61,14 @@ void ASniperRifle::SniperFire()
 
 	if (iCurrentMagCount <= 0 && bReloading == false)
 	{
-		GetWorldTimerManager().SetTimer(ReloadTimer, this, &ASniperRifle::Reload, 2.0f, false); //2 second reload.
+		GetWorldTimerManager().SetTimer(ReloadTimer, this, &AWeaponBase::Reload, 2.0f, false); //2 second reload.
 		bReloading = true; //We are reloading
 	}
 }
 
-void ASniperRifle::Reload()
-{
-	int iDiff = iMaxMagCount - iCurrentMagCount; //How much ammo we need.
-	iCurrentMagCount += iDiff; //Refill the magazine.
-	iCurrentAmmoReserve -= iDiff; //Take the refill away from our reserve ammo.
-	bReloading = false; //We are no longer reloading.
-}
 
-bool ASniperRifle::getCanFire()
-{
-	return bCanFire;
-}
 
-bool ASniperRifle::getReloading()
-{
-	return bReloading;
-}
+
+
+
 

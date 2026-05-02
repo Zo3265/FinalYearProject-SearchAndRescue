@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "LearningAgentsInteractor.h"
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
+#include "SearchAndRescue/Weapons/WeaponBase.h"
+#include "SearchAndRescue/Weapons/SniperRifle.h"
 #include "EnemyInteractor.generated.h"
 
 /**
@@ -38,5 +40,5 @@ public:
 
 	void setInteractorAgentID(int32 AgentIDStore);
 	int32 getInteractorAgentID();
-	bool bTraining = false;
+	bool bTraining = true;
 };

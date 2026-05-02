@@ -8,6 +8,8 @@
 #include "LearningAgentsManager.h"
 #include "SearchAndRescue/Weapons/ExplosiveGrenade.h"
 #include "SearchAndRescue/AI/SplineController.h"
+#include "SearchAndRescue/Weapons/WeaponBase.h"
+#include "SearchAndRescue/Weapons/SniperRifle.h"
 #include "MLEnemyBase.generated.h"
 
 UCLASS()
@@ -59,6 +61,14 @@ protected:
 	UPROPERTY(EditAnywhere)
 	AActor* TrainingTarget;
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<ASniperRifle> SniperClass;
+	UPROPERTY()
+	ASniperRifle* SniperRifle;
+
+	UPROPERTY()
+	UAnimInstance* AnimInstance;
+
 	bool bFoundManager = false;
 	bool bSeePlayer = false;
 	float SuccessTimer;
@@ -85,6 +95,9 @@ public:
 	void setSuccessTimer(float fStore);
 	float getTimer();
 	AActor* getTrainingTarget();
+
+	UFUNCTION()
+	AWeaponBase* getWeapon();
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;

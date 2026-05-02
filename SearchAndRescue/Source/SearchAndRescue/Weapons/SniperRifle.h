@@ -25,18 +25,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void Reload();
+	
 	void SniperFire();
-	bool bReloading = false;
-	bool bCanFire = true;
-
-	bool getCanFire();
-	bool getReloading();
+	
 private:
-	int iCurrentMagCount; //Current Ammo in gun
-	int iCurrentAmmoReserve; //Current Ammo Reserve
-	int iMaxMagCount; //Maximum ammo allowed in magazine
-	int iMaxAmmoReserve; //Maximum ammo allowed as reserve
+	
 	float Count;
 	float StartTime;
 	float DT;

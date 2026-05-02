@@ -2,6 +2,20 @@
 	"RemapUnityFiles": 
 	{
 		"Module.SearchAndRescue.cpp.obj": [
+			"BTEnemyAIControllerBase.cpp.obj",
+			"BTGrenadeTossTaskNode.cpp.obj",
+			"BTSniperAIController.cpp.obj",
+			"EnemyBase.cpp.obj",
+			"SniperEnemy.cpp.obj",
+			"SniperShootBTTaskNode.cpp.obj",
+			"EnemyManager.cpp.obj",
+			"SplineController.cpp.obj",
+			"SplineMovementActor.cpp.obj",
+			"DummyClass.cpp.obj",
+			"SearchAndRescue.cpp.obj",
+			"BulletBase.cpp.obj",
+			"ExplosiveGrenade.cpp.obj",
+			"GrenadeBase.cpp.obj",
 			"BTEnemyAIControllerBase.gen.cpp.obj",
 			"BTGrenadeTossTaskNode.gen.cpp.obj",
 			"BTSniperAIController.gen.cpp.obj",
@@ -21,25 +35,11 @@
 			"SplineMovementActor.gen.cpp.obj",
 			"WeaponBase.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
-			"BTEnemyAIControllerBase.cpp.obj",
-			"BTGrenadeTossTaskNode.cpp.obj",
-			"BTSniperAIController.cpp.obj",
-			"EnemyBase.cpp.obj",
-			"SniperEnemy.cpp.obj",
-			"SniperShootBTTaskNode.cpp.obj",
 			"MLEnemyBase.cpp.obj",
 			"EnemyInteractor.cpp.obj",
-			"EnemyManager.cpp.obj",
-			"SplineController.cpp.obj",
-			"SplineMovementActor.cpp.obj",
-			"DummyClass.cpp.obj",
-			"SearchAndRescue.cpp.obj",
-			"BulletBase.cpp.obj",
-			"ExplosiveGrenade.cpp.obj",
-			"GrenadeBase.cpp.obj",
+			"EnemyTrainingEnvironment.cpp.obj",
 			"SniperRifle.cpp.obj",
-			"WeaponBase.cpp.obj",
-			"EnemyTrainingEnvironment.cpp.obj"
+			"WeaponBase.cpp.obj"
 		]
 	}
 }

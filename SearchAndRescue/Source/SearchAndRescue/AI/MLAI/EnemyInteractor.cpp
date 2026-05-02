@@ -24,9 +24,19 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	//We need a velocity observation to tell the enemy to increase its distance along the spline and reward it for doing so.
 	ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::SpecifyVelocityObservation(InObservationSchema));
 
+	//Observations needed to see the player
 	//ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema));
 	ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema));
 	ObservationMap.Add(TEXT("IsPlayerSeen"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema));
+
+	//Observations to help the enemies actually shoot the player
+	ObservationMap.Add(TEXT("WeaponCoolDown"), ULearningAgentsObservations::SpecifyFloatObservation(InObservationSchema)); //The rate of fire for the weapon
+	ObservationMap.Add(TEXT("IsAimedAtTarget"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema)); //If the gun is actually lined up with the player
+	ObservationMap.Add(TEXT("TargetRelativeDirection"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema)); //The direction the player is moving in.
+	ObservationMap.Add(TEXT("TargetRelativeSpeed"), ULearningAgentsObservations::SpecifyFloatObservation(InObservationSchema)); //How fast they are moving in said direction. This and the previous observation are supposed to be one. We cant use a velocity observation here because that is made for the agents velocity.
+	ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::SpecifyFloatObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("DoesNeedToReload"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema));
+	
 
 	//Combine the data. This function concatenates all these sub-observations into a struct. We can do this as many times as needed.
 	OutObservationSchemaElement = ULearningAgentsObservations::SpecifyStructObservation(InObservationSchema, ObservationMap);
@@ -43,15 +53,15 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	UObject* OBSAgent = GetAgent(AgentId);
 
 	//Get the actual actor
-	AActor* OBSActor = Cast<AActor>(OBSAgent);
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(OBSAgent);
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
+	AWeaponBase* Weapon = Enemy->getWeapon();
 
-	//USplineComponent* SplineComp = OBSActor->FindComponentByClass<USplineComponent>();
+	//USplineComponent* SplineComp = Enemy->FindComponentByClass<USplineComponent>();
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
-	AActor* TargetToFollow = nullptr;
 	
-	if(OBSActor)
+	AActor* TargetToFollow = nullptr;
+	if(Enemy)
 	{
 		if (bTraining == true)
 		{
@@ -64,21 +74,24 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		}
 
 
-		FVector ActorLocation = OBSActor->GetActorLocation();
-		FVector ActorForward = OBSActor->GetActorForwardVector();
+		FVector ActorLocation = Enemy->GetActorLocation();
+		FVector ActorForward = Enemy->GetActorForwardVector();
+		FVector ActorVelocity = Enemy->GetVelocity();
 
 		float InputKey = InteractorSplineComponent->FindInputKeyClosestToWorldLocation(ActorLocation);
 		float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
 
 		float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
-		FTransform ActorTransform = OBSActor->GetActorTransform();
+		FTransform ActorTransform = Enemy->GetActorTransform();
 
 		FVector PlayerLoc = TargetToFollow->GetActorLocation();
+		FVector PlayerVelocity = TargetToFollow->GetVelocity();
 		FVector PlayerDir = (PlayerLoc - ActorLocation).GetSafeNormal();
 		FVector RelativeDir = ActorTransform.InverseTransformVectorNoScale(PlayerDir);
 		float PlayerAlignment = FVector::DotProduct(ActorForward, PlayerDir);
 		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
+		//Here we are trying to spot the player
 		//According to Gemini this value means that the agents have a 45 degree fov.
 		if (PlayerAlignment >= 0.707f)
 		{
@@ -86,7 +99,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			//Setting up a raycast so that the agents cant see through walls
 			FHitResult HitResult;
 			FCollisionQueryParams CollisionParams;
-			CollisionParams.AddIgnoredActor(OBSActor);
+			CollisionParams.AddIgnoredActor(Enemy);
 
 			bool bHit = GetWorld()->LineTraceSingleByChannel(
 				HitResult,
@@ -115,19 +128,83 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 				Enemy->setSeePlayer(false);
 			}
 			//UE_LOG(LogTemp, Warning, TEXT("The value is: %s"), Enemy->getSeePlayer() ? TEXT("true") : TEXT("false"));
+
 		}
 
 		else
 		{
 			Enemy->setSeePlayer(false);
 		}
+
+		//We need another line of sight check that we can use to see if the muzzle of our gun is actually pointing at the player.
+		//I am going to use another line trace for this but one with a range that will be decided by the type of weapon.
+		FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation("BulletSpawn");
+		FVector TraceEnd = MuzzleLocation + (ActorForward * Weapon->getRange());
+		//UE_LOG(LogTemp, Warning, TEXT("Weapon Range: %f"), Weapon->getRange());
+
+		FHitResult AimHit;
+		FCollisionQueryParams Params;
+		Params.AddIgnoredActor(Enemy);
+
+		bool bAimHit = GetWorld()->LineTraceSingleByChannel(
+			AimHit,
+			MuzzleLocation,
+			TraceEnd,
+			ECC_Visibility,
+			Params
+		);
+
+		bool bIsAimed;
+		if (bAimHit == true && AimHit.GetActor() == TargetToFollow)
+		{
+			bIsAimed = true;
+		}
+
+		else
+		{
+			bIsAimed = false;
+		}
+
+		//I want the enemies to lead their shots so we need to know the players speed and direction.
+		//Similar math as before but with velocities instead.
+		FVector RelativeWorldVelocity = PlayerVelocity - ActorVelocity; //The velocity of the player relative to the enemy in world space.
+		FVector RelativeLocalVelocity = ActorTransform.InverseTransformVectorNoScale(RelativeWorldVelocity); //Converted to local space in order for the agents to know if the player isleft or right relative to them.
+
+		float RelativeMoveSpeed = RelativeLocalVelocity.Size();
+		FVector RelativeMoveDirection = RelativeLocalVelocity.GetSafeNormal();
+
+		//We need to make the enemy reload for this we need to know the ammo count and if we need to reload.
+		float AmmoPercent = Weapon->getCurrentMagCount() / Weapon->getMaxMagCount();
+		//UE_LOG(LogTemp, Warning, TEXT("Current Mag Count: %i"), Weapon->getCurrentMagCount());
+		//UE_LOG(LogTemp, Warning, TEXT("Max Mag Count: %i"), Weapon->getMaxMagCount());
 		
+		bool bNeedToReload;
+		if (Weapon->getCurrentMagCount() <= 0)
+		{
+			bNeedToReload = true;
+		}
+
+		else
+		{
+			bNeedToReload = false;
+		}
+		
+		//Spline following observations
 		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, NormalisedDistance, ActorTransform));
 		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, ActorTransform));
-		ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::MakeVelocityObservation(InObservationObject, OBSActor->GetVelocity()));
-		//ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::MakeLocationObservation(InObservationObject,PlayerPawn->GetActorLocation()));
+		ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::MakeVelocityObservation(InObservationObject, Enemy->GetVelocity()));
+	
+		//Player seeing observations
 		ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, RelativeDir));
 		ObservationMap.Add(TEXT("IsPlayerSeen"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, Enemy->getSeePlayer()));
+
+		//Firing weapons observations
+		ObservationMap.Add(TEXT("WeaponCooldown"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, Weapon->getCoolDown()));
+		ObservationMap.Add(TEXT("IsAimedAtTarget"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, bIsAimed));
+		ObservationMap.Add(TEXT("TargetRelativeDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, RelativeMoveDirection));
+		ObservationMap.Add(TEXT("TargetRelativeSpeed"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, RelativeMoveSpeed));
+		ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, AmmoPercent));
+		ObservationMap.Add(TEXT("DoesNeedToReload"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, bNeedToReload));
 
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}
@@ -147,6 +224,10 @@ void UEnemyInteractor::SpecifyAgentAction_Implementation(FLearningAgentsActionSc
 	//Turn input is -1.0f to 1.0f; -ve is left +ve is right.
 	ActionMap.Add(TEXT("TurnInput"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
 
+	TArray<float> PriorProbabilities;
+	ActionMap.Add(TEXT("ShootAction"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
+	ActionMap.Add(TEXT("ReloadAction"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
+
 	OutActionSchemaElement = ULearningAgentsActions::SpecifyStructAction(InActionSchema, ActionMap);
 }
 
@@ -154,6 +235,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 {
 	setInteractorAgentID(AgentId);
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(GetAgent(AgentId));
+	AWeaponBase* Weapon = Enemy->getWeapon();
 
 	if (Enemy)
 	{
@@ -161,20 +243,45 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		float ForwardValue;
 		float TurnValue;
 		float TurnSensitivity = 720.0f;
+		float ShootValue;
+		float ReloadValue;
+		bool bShooting = false;
+		bool bReloading = false;
 
+		
 		////We are retrieving the actions that we are able to do and their values.
 		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
 		ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
 		ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
+		ULearningAgentsActions::GetFloatAction(ShootValue, InActionObject, ActionObjectMap[TEXT("ShootAction")]);
+		ULearningAgentsActions::GetFloatAction(ReloadValue, InActionObject, ActionObjectMap[TEXT("ReloadAction")]);
+		
 
 		float RotationChange = TurnValue * TurnSensitivity * GetWorld()->GetDeltaSeconds();
 		FRotator CurrentRot = Enemy->GetActorRotation();
 		FRotator TargetRot = CurrentRot;
 		TargetRot.Yaw += RotationChange;
 		FRotator SmoothedRotation = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 10.0f);
-
-
 		Enemy->SetActorRotation(SmoothedRotation);
+		
+		if (ActionObjectMap.Contains(TEXT("ReloadAction")) && ActionObjectMap.Contains(TEXT("ShootAction")))
+		{
+			if (ShootValue > 0.5f)
+			{
+				bShooting = true;
+			}
+
+			if (ReloadValue > 0.5f)
+			{
+				bReloading = true;
+			}
+		}
+
+		else
+		{
+			UE_LOG(LogTemp, Error, TEXT("Actions dont exist"));
+		}
+		
 
 
 		if (Enemy->getSeePlayer() && FMath::Abs(ForwardValue) < 0.5f)
@@ -182,6 +289,24 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			Enemy->GetMovementComponent()->StopMovementImmediately();
 			Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
 			ForwardValue = 0.0f;
+
+			if (bShooting == true)
+			{
+				if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
+				{
+					Sniper->SniperFire();
+				}
+			}
+
+			if (bReloading == true)
+			{
+				if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
+				{
+					Sniper->SniperFire();
+				}
+			}
+
+			
 		}
 		else
 		{

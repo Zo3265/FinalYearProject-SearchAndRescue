@@ -56,3 +56,56 @@ void AWeaponBase::Fire()
     Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, MuzzleLocation, FireRotation, SpawnParameters);
 }
 
+void AWeaponBase::Reload()
+{
+    int iDiff = iMaxMagCount - iCurrentMagCount; //How much ammo we need.
+    iCurrentMagCount += iDiff; //Refill the magazine.
+    iCurrentAmmoReserve -= iDiff; //Take the refill away from our reserve ammo.
+    bReloading = false; //We are no longer reloading.
+}
+
+bool AWeaponBase::getCanFire()
+{
+    return bCanFire;
+}
+
+bool AWeaponBase::getReloading()
+{
+    return bReloading;
+}
+
+void AWeaponBase::setCoolDown(float fStore)
+{
+    Cooldown = fStore;
+}
+
+float AWeaponBase::getCoolDown()
+{
+    return Cooldown;
+}
+
+void AWeaponBase::setRange(float fStore)
+{
+    Range = fStore;
+}
+
+float AWeaponBase::getRange()
+{
+    return Range;
+}
+
+UStaticMeshComponent* AWeaponBase::getMesh()
+{
+    return Mesh;
+}
+
+int AWeaponBase::getCurrentMagCount()
+{
+    return iCurrentMagCount;
+}
+
+int AWeaponBase::getMaxMagCount()
+{
+    return iMaxMagCount;
+}
+

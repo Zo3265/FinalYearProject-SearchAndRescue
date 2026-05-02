@@ -31,9 +31,35 @@ protected:
 
 	UPROPERTY()
 	ABulletBase* Bullet;
+
+	
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	void Fire();
+	void setCoolDown(float fStore);
+	float getCoolDown();
+
+	void setRange(float fStore);
+	float getRange();
+
+	UStaticMeshComponent* getMesh();
+	int getCurrentMagCount();
+	int getMaxMagCount();
+
+	float Cooldown = 1.0f;
+	float Range = 3000.0f;
+	int iCurrentMagCount; //Current Ammo in gun
+	int iCurrentAmmoReserve; //Current Ammo Reserve
+	int iMaxMagCount; //Maximum ammo allowed in magazine
+	int iMaxAmmoReserve; //Maximum ammo allowed as reserve
+
+	bool bReloading = false;
+	bool bCanFire = true;
+	void Reload();
+
+	bool getCanFire();
+	bool getReloading();
+
 };

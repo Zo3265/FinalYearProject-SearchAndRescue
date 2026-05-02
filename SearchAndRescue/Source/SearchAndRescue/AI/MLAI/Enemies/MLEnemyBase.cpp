@@ -15,25 +15,21 @@ AMLEnemyBase::AMLEnemyBase()
 void AMLEnemyBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
+	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+	SniperRifle = GetWorld()->SpawnActor<ASniperRifle>(SniperClass, FTransform(), SpawnParamaters);
+
+	if (SniperRifle != nullptr)
+	{
+		SniperRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("GunPoint"));
+		SniperRifle->SetOwner(this);
+	}
+
+	AnimInstance = GetMesh()->GetAnimInstance();
 	
 	TArray<AActor*> FoundActor;
 	UGameplayStatics::GetAllActorsWithTag(GetWorld(), FName("LearningAgentsManager"), FoundActor);
-
-	//TArray<AActor*> SplineActors;
-	//UGameplayStatics::GetAllActorsOfClass(GetWorld(), ASplineController::StaticClass(), SplineActors);
-	//
-
-	//for (AActor* temp : SplineActors)
-	//{
-	//	if (temp != nullptr)
-	//	{
-	//		SplineControllerStore.Add(Cast<ASplineController>(temp));
-	//	}
-
-	//}
-	//int32 RandomValue = FMath::RandRange(0, SplineControllerStore.Num() - 1);
-	////UE_LOG(LogTemp, Warning, TEXT("SplineNum: %d"), SplineControllerStore.Num());
-	//EnemySpline = SplineControllerStore[RandomValue];
 
 	for(AActor* temp : FoundActor)
 	{
@@ -147,6 +143,16 @@ float AMLEnemyBase::getTimer()
 AActor* AMLEnemyBase::getTrainingTarget()
 {
 	return TrainingTarget;
+}
+
+AWeaponBase* AMLEnemyBase::getWeapon()
+{
+	if (SniperRifle)
+	{
+		return SniperRifle;
+	}
+
+	return nullptr;
 }
 
 // Called to bind functionality to input
