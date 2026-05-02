@@ -84,7 +84,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 		if (CurrentState == EAgentState::Patrolling)
 		{
-			TotalReward = 0.0f;
+			//TotalReward = 0.0f;
 			//Following Spline
 			//Reward the character for being close to the spline. I am using a gaussian distribution for the reward as to not give them a harsh punishment if they step off the spline.
 			//Also this will need to change when I want the enemy to be chasing the player.
@@ -115,19 +115,19 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			float SpeedPct = RewardCharacter->GetVelocity().Size() / MaxSpeed;
 			if (SpeedPct > 0.01f)
 			{
-				TotalReward -= (SpeedPct * 15.0f);
+				TotalReward -= (SpeedPct * 30.0f);
 			}
 
 			else if (PlayerAlignment >= 0.95f) {
 				//5.0f
 				//TotalReward += 20.0f;
-				TotalReward += 5.0f;
+				TotalReward += 10.0f;
 			}
 
-			if (SpeedPct < 0.01f)
+			/*if (SpeedPct < 0.01f)
 			{
 				TotalReward += 2.0f;
-			}
+			}*/
 
 			ELearningAgentsCompletion AgentCompletion;
 			GatherAgentCompletion_Implementation(AgentCompletion, AgentId);
@@ -314,22 +314,26 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 	if (TargetToFollow && TrainingEnvSplineComponent)
 	{
 		//0.7f
-		float SpawnChance = 0.6f;
+		float SpawnChance = 0.3f;
 		float Roll = FMath::FRand(); // Returns 0.0 to 1.0
 
 		if (Roll <= SpawnChance)
 		{
+
+			FVector EnemyLoc = CharAgent->GetActorLocation();
+			FVector EnemyFwd = CharAgent->GetActorForwardVector();
+			
 			// Get a random distance along the spline
 			float RandomDistance = FMath::FRandRange(0.0f, CharAgent->GetSplineController()->getSpline()->GetSplineLength());
 			FVector RandomLocation = CharAgent->GetSplineController()->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
 
 			// Add a slight offset so the player isn't on the line
-			RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), CharAgent->GetActorLocation().Y, 0.0f);
+			RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
+			RandomLocation.Z = EnemyLoc.Z + 60.0f;
 
 			TargetToFollow->SetActorLocation(RandomLocation);
 
-			//FVector EnemyLoc = CharAgent->GetActorLocation();
-			//FVector EnemyFwd = CharAgent->GetActorForwardVector();
+			
 
 			//// Distance in front (e.g., 3 to 7 meters)
 			//float ForwardDist = FMath::FRandRange(300.0f, 700.0f);

@@ -160,8 +160,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
 		float ForwardValue;
 		float TurnValue;
-		float TurnSensitivity = 360.0f;
-		//FRotator RotationValue;
+		float TurnSensitivity = 720.0f;
 
 		////We are retrieving the actions that we are able to do and their values.
 		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
@@ -170,19 +169,23 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 		float RotationChange = TurnValue * TurnSensitivity * GetWorld()->GetDeltaSeconds();
 		FRotator CurrentRot = Enemy->GetActorRotation();
-		CurrentRot.Yaw += RotationChange;
-		Enemy->SetActorRotation(CurrentRot);
+		FRotator TargetRot = CurrentRot;
+		TargetRot.Yaw += RotationChange;
+		FRotator SmoothedRotation = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 10.0f);
 
 
-		if (Enemy->getSeePlayer() && FMath::Abs(ForwardValue) < 0.1f)
+		Enemy->SetActorRotation(SmoothedRotation);
+
+
+		if (Enemy->getSeePlayer() && FMath::Abs(ForwardValue) < 0.5f)
 		{
 			Enemy->GetMovementComponent()->StopMovementImmediately();
+			Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
+			ForwardValue = 0.0f;
 		}
 		else
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
-
-			//ForwardValue = FMath::Clamp(ForwardValue, 0.0f, 1.0f);
 
 			//Move the character forward and turn them using the character classes regular functions.
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
