@@ -29,6 +29,9 @@ protected:
 	UFUNCTION()
 	void OnOverLapBegin(UPrimitiveComponent* OverlappedComp, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
 
+	UPROPERTY()
+	AActor* TargetActor;
+
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

@@ -26,6 +26,7 @@ void AMLEnemyBase::BeginPlay()
 		SniperRifle->SetOwner(this);
 	}
 
+
 	AnimInstance = GetMesh()->GetAnimInstance();
 	
 	TArray<AActor*> FoundActor;
@@ -144,6 +145,48 @@ AActor* AMLEnemyBase::getTrainingTarget()
 {
 	return TrainingTarget;
 }
+
+void AMLEnemyBase::setIsAimed(bool bStore)
+{
+	bIsAimed = bStore;
+}
+
+bool AMLEnemyBase::getIsAimed()
+{
+	return bIsAimed;
+}
+
+void AMLEnemyBase::setEnemyShootValue(float fStore)
+{
+	EnemyShootValue = fStore;
+}
+
+float AMLEnemyBase::getEnemyShootValue()
+{
+	return EnemyShootValue;
+}
+
+void AMLEnemyBase::setEnemyReloadValue(float fStore)
+{
+	EnemyReloadValue = fStore;
+}
+
+float AMLEnemyBase::getEnemyReloadValue()
+{
+	return EnemyReloadValue;
+}
+
+void AMLEnemyBase::setAmmoPercent(float fStore)
+{
+	AmmoPercent = fStore;
+}
+
+float AMLEnemyBase::getAmmoPercent()
+{
+	return AmmoPercent;
+}
+
+
 
 AWeaponBase* AMLEnemyBase::getWeapon()
 {

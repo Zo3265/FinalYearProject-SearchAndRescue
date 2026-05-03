@@ -50,6 +50,5 @@ void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 {
 	//On overlap with anything we delete the bullet.
     this->Destroy();
-	
 }
 

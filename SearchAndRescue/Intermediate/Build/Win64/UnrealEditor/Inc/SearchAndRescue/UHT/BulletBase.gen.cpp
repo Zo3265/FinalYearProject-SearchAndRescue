@@ -135,6 +135,9 @@ struct Z_Construct_UClass_ABulletBase_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Weapons/BulletBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetActor_MetaData[] = {
+		{ "ModuleRelativePath", "Weapons/BulletBase.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ProjectileMovement_MetaData[] = {
 		{ "Category", "Movement" },
 		{ "EditInline", "true" },
@@ -159,6 +162,7 @@ struct Z_Construct_UClass_ABulletBase_Statics
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Mesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ProjectileMovement;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_fDamage;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_finitSpeed;
@@ -177,6 +181,7 @@ struct Z_Construct_UClass_ABulletBase_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABulletBase_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABulletBase, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABulletBase_Statics::NewProp_Mesh = { "Mesh", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABulletBase, Mesh), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Mesh_MetaData), NewProp_Mesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABulletBase_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABulletBase, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetActor_MetaData), NewProp_TargetActor_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABulletBase_Statics::NewProp_ProjectileMovement = { "ProjectileMovement", nullptr, (EPropertyFlags)0x00100000000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABulletBase, ProjectileMovement), Z_Construct_UClass_UProjectileMovementComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ProjectileMovement_MetaData), NewProp_ProjectileMovement_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABulletBase_Statics::NewProp_fDamage = { "fDamage", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABulletBase, fDamage), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_fDamage_MetaData), NewProp_fDamage_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABulletBase_Statics::NewProp_finitSpeed = { "finitSpeed", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ABulletBase, finitSpeed), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_finitSpeed_MetaData), NewProp_finitSpeed_MetaData) };
@@ -185,6 +190,7 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ABulletBase_Sta
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABulletBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABulletBase_Statics::NewProp_Root,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABulletBase_Statics::NewProp_Mesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABulletBase_Statics::NewProp_TargetActor,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABulletBase_Statics::NewProp_ProjectileMovement,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABulletBase_Statics::NewProp_fDamage,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABulletBase_Statics::NewProp_finitSpeed,
@@ -232,10 +238,10 @@ ABulletBase::~ABulletBase() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_BulletBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ABulletBase, ABulletBase::StaticClass, TEXT("ABulletBase"), &Z_Registration_Info_UClass_ABulletBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABulletBase), 1504007332U) },
+		{ Z_Construct_UClass_ABulletBase, ABulletBase::StaticClass, TEXT("ABulletBase"), &Z_Registration_Info_UClass_ABulletBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABulletBase), 1859167613U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_BulletBase_h_3061460270(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_BulletBase_h_1766839979(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_BulletBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_Weapons_BulletBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

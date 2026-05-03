@@ -154,15 +154,14 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			Params
 		);
 
-		bool bIsAimed;
 		if (bAimHit == true && AimHit.GetActor() == TargetToFollow)
 		{
-			bIsAimed = true;
+			Enemy->setIsAimed(true);
 		}
 
 		else
 		{
-			bIsAimed = false;
+			Enemy->setIsAimed(false);
 		}
 
 		//I want the enemies to lead their shots so we need to know the players speed and direction.
@@ -175,6 +174,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 
 		//We need to make the enemy reload for this we need to know the ammo count and if we need to reload.
 		float AmmoPercent = Weapon->getCurrentMagCount() / Weapon->getMaxMagCount();
+		Enemy->setAmmoPercent(AmmoPercent);
 		//UE_LOG(LogTemp, Warning, TEXT("Current Mag Count: %i"), Weapon->getCurrentMagCount());
 		//UE_LOG(LogTemp, Warning, TEXT("Max Mag Count: %i"), Weapon->getMaxMagCount());
 		
@@ -200,10 +200,10 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 
 		//Firing weapons observations
 		ObservationMap.Add(TEXT("WeaponCooldown"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, Weapon->getCoolDown()));
-		ObservationMap.Add(TEXT("IsAimedAtTarget"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, bIsAimed));
+		ObservationMap.Add(TEXT("IsAimedAtTarget"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, Enemy->getIsAimed()));
 		ObservationMap.Add(TEXT("TargetRelativeDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, RelativeMoveDirection));
 		ObservationMap.Add(TEXT("TargetRelativeSpeed"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, RelativeMoveSpeed));
-		ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, AmmoPercent));
+		ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, Enemy->getAmmoPercent()));
 		ObservationMap.Add(TEXT("DoesNeedToReload"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, bNeedToReload));
 
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
@@ -263,6 +263,8 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		TargetRot.Yaw += RotationChange;
 		FRotator SmoothedRotation = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 10.0f);
 		Enemy->SetActorRotation(SmoothedRotation);
+		Enemy->setEnemyShootValue(ShootValue);
+		Enemy->setEnemyReloadValue(ReloadValue);
 		
 		if (ActionObjectMap.Contains(TEXT("ReloadAction")) && ActionObjectMap.Contains(TEXT("ShootAction")))
 		{
@@ -298,24 +300,26 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				}
 			}
 
-			if (bReloading == true)
+			if (bReloading == true && Weapon->getReloading() == false)
 			{
-				if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
+				/*if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
 				{
 					Sniper->SniperFire();
-				}
+				}*/
+
+				Weapon->Reload();
 			}
 
 			
 		}
-		else
-		{
-			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
+		//else
+		//{
+		//	//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
 
-			//Move the character forward and turn them using the character classes regular functions.
-			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
-			
-		}
+		//	//Move the character forward and turn them using the character classes regular functions.
+		//	Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
+		//	
+		//}
 	}
 }
 

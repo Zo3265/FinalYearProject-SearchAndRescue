@@ -3,6 +3,7 @@
 
 #include "WeaponBase.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 AWeaponBase::AWeaponBase()
@@ -45,8 +46,8 @@ void AWeaponBase::Fire()
     FVector PlayerLocation = PlayerPawn->GetActorLocation();
 
     //Rotate the bullet to go to the players location.
-    //Currently aims at the players feet. I will need to make it so that it targets the players torso but to that I need to target a socket on the players mesh. Which it currently doesn't have.
-    FRotator FireRotation = (PlayerLocation - MuzzleLocation).Rotation();
+    //FVector TargetLocation = PlayerPawn->GetActorLocation() + FVector(0, 0, 90);
+    FRotator FireRotation = Mesh->GetSocketRotation(TEXT("BulletSpawn"));
 
     FActorSpawnParameters SpawnParameters;
     SpawnParameters.Owner = this;
@@ -96,7 +97,11 @@ float AWeaponBase::getRange()
 
 UStaticMeshComponent* AWeaponBase::getMesh()
 {
-    return Mesh;
+    if (Mesh)
+    {
+        return Mesh;
+    }
+    return nullptr;
 }
 
 int AWeaponBase::getCurrentMagCount()

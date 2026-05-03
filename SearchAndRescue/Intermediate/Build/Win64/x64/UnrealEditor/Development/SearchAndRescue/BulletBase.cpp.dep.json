@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\bulletbase.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\x64\\searchandrescueeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.inclorderunreal5_3.h.pch",
+        "Includes": [
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\searchandrescue\\definitions.searchandrescue.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\bulletbase.h",
+            "g:\\unreal\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\projectilemovementcomponent.h",
+            "g:\\unreal\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\movementcomponent.h",
+            "g:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\movementcomponent.generated.h",
+            "g:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\projectilemovementcomponent.generated.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\bulletbase.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

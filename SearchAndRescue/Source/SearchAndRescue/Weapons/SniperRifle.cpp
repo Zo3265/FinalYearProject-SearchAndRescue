@@ -59,11 +59,11 @@ void ASniperRifle::SniperFire()
 	//	}
 	//}
 
-	if (iCurrentMagCount <= 0 && bReloading == false)
-	{
-		GetWorldTimerManager().SetTimer(ReloadTimer, this, &AWeaponBase::Reload, 2.0f, false); //2 second reload.
-		bReloading = true; //We are reloading
-	}
+	//if (iCurrentMagCount <= 0 && bReloading == false)
+	//{
+	//	GetWorldTimerManager().SetTimer(ReloadTimer, this, &AWeaponBase::Reload, 2.0f, false); //2 second reload.
+	//	bReloading = true; //We are reloading
+	//}
 }
 
 

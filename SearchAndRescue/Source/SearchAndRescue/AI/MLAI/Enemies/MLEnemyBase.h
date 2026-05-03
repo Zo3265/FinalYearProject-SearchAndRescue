@@ -71,8 +71,12 @@ protected:
 
 	bool bFoundManager = false;
 	bool bSeePlayer = false;
+	bool bIsAimed = false;
 	float SuccessTimer;
 	int32 AgentId;
+	float EnemyShootValue;
+	float EnemyReloadValue;
+	float AmmoPercent;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -95,6 +99,14 @@ public:
 	void setSuccessTimer(float fStore);
 	float getTimer();
 	AActor* getTrainingTarget();
+	void setIsAimed(bool bStore);
+	bool getIsAimed();
+	void setEnemyShootValue(float fStore);
+	float getEnemyShootValue();
+	void setEnemyReloadValue(float fStore);
+	float getEnemyReloadValue();
+	void setAmmoPercent(float fStore);
+	float getAmmoPercent();
 
 	UFUNCTION()
 	AWeaponBase* getWeapon();
