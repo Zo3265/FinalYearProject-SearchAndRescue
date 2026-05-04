@@ -10,6 +10,7 @@
 #include "SearchAndRescue/AI/SplineController.h"
 #include "SearchAndRescue/Weapons/WeaponBase.h"
 #include "SearchAndRescue/Weapons/SniperRifle.h"
+#include "SearchAndRescue/AI/MLAI/TrainingActor/MyActor.h"
 #include "MLEnemyBase.generated.h"
 
 UCLASS()
@@ -59,7 +60,7 @@ protected:
 	TArray<ASplineController*> SplineControllerStore;
 
 	UPROPERTY(EditAnywhere)
-	AActor* TrainingTarget;
+	AMyActor* TrainingTarget;
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<ASniperRifle> SniperClass;
@@ -98,7 +99,7 @@ public:
 	bool getSeePlayer();
 	void setSuccessTimer(float fStore);
 	float getTimer();
-	AActor* getTrainingTarget();
+	AMyActor* getTrainingTarget();
 	void setIsAimed(bool bStore);
 	bool getIsAimed();
 	void setEnemyShootValue(float fStore);

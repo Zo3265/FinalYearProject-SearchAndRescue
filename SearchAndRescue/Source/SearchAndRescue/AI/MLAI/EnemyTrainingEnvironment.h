@@ -8,6 +8,7 @@
 #include "GameFramework/Character.h"
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
 #include "SearchAndRescue/AI/SplineMovementActor.h"
+#include "SearchAndRescue/AI/MLAI/TrainingActor/MyActor.h"
 #include "EnemyTrainingEnvironment.generated.h"
 
 UENUM(BlueprintType)

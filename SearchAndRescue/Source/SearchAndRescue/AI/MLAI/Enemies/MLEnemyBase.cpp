@@ -141,7 +141,7 @@ float AMLEnemyBase::getTimer()
 	return SuccessTimer;
 }
 
-AActor* AMLEnemyBase::getTrainingTarget()
+AMyActor* AMLEnemyBase::getTrainingTarget()
 {
 	return TrainingTarget;
 }

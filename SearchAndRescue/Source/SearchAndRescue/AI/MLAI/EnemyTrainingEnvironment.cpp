@@ -360,18 +360,66 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 		if (Roll <= SpawnChance)
 		{
 
-			FVector EnemyLoc = CharAgent->GetActorLocation();
-			FVector EnemyFwd = CharAgent->GetActorForwardVector();
+			if (bTraining == true)
+			{
+				AMyActor* TrainingActor = Cast<AMyActor>(TargetToFollow);
+				TrainingActor->setSplineController(CharAgent->GetSplineController());
+				FVector EnemyLoc = CharAgent->GetActorLocation();
+				FVector EnemyFwd = CharAgent->GetActorForwardVector();
+
+				//// Get a random distance along the spline
+				//float RandomDistance = FMath::FRandRange(0.0f, CharAgent->GetSplineController()->getSpline()->GetSplineLength());
+				//TrainingActor->setCurrentDistance(RandomDistance);
+				//FVector RandomLocation = CharAgent->GetSplineController()->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
+
+				//// Add a slight offset so the player isn't on the line
+				//RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
+				//RandomLocation.Z = EnemyLoc.Z + 60.0f;
+
+				//TrainingActor->SetActorLocation(RandomLocation);
+
+				// 1. Calculate the ideal "In-Front" World Position
+				float ForwardDist = FMath::FRandRange(300.0f, 700.0f);
+				float SideDist = FMath::FRandRange(-200.0f, 200.0f);
+
+				FVector DesiredSpawnLoc = EnemyLoc + (EnemyFwd * ForwardDist) + (CharAgent->GetActorRightVector() * SideDist);
+				DesiredSpawnLoc.Z = EnemyLoc.Z + 60.0f; // Eye height
+
+				// 2. Find the closest point ON THE SPLINE to that world position
+				// Assuming TrainingActor has a reference to the SplineComponent it follows
+				if (USplineComponent* TargetSpline = TrainingActor->getSplineController()->getSpline())
+				{
+					// Find the input key (internal coordinate) closest to our desired point
+					float ClosestInputKey = TargetSpline->FindInputKeyClosestToWorldLocation(DesiredSpawnLoc);
+
+					// Convert that key to the actual Distance along the spline
+					float DistanceOnSpline = TargetSpline->GetDistanceAlongSplineAtSplineInputKey(ClosestInputKey);
+
+					// 3. Sync the TrainingActor
+					// This moves the actor to the exact point on the spline closest to your 'In-Front' math
+					TrainingActor->SetActorLocation(TargetSpline->GetLocationAtDistanceAlongSpline(DistanceOnSpline, ESplineCoordinateSpace::World));
+
+					// This ensures the C++ Tick logic starts moving from this spot!
+					TrainingActor->setCurrentDistance(DistanceOnSpline);
+				}
+			}
+
+			else
+			{
+				FVector EnemyLoc = CharAgent->GetActorLocation();
+				FVector EnemyFwd = CharAgent->GetActorForwardVector();
+
+				// Get a random distance along the spline
+				float RandomDistance = FMath::FRandRange(0.0f, CharAgent->GetSplineController()->getSpline()->GetSplineLength());
+				FVector RandomLocation = CharAgent->GetSplineController()->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
+
+				// Add a slight offset so the player isn't on the line
+				RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
+				RandomLocation.Z = EnemyLoc.Z + 60.0f;
+
+				TargetToFollow->SetActorLocation(RandomLocation);
+			}
 			
-			// Get a random distance along the spline
-			float RandomDistance = FMath::FRandRange(0.0f, CharAgent->GetSplineController()->getSpline()->GetSplineLength());
-			FVector RandomLocation = CharAgent->GetSplineController()->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
-
-			// Add a slight offset so the player isn't on the line
-			RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
-			RandomLocation.Z = EnemyLoc.Z + 60.0f;
-
-			TargetToFollow->SetActorLocation(RandomLocation);
 
 			//// Distance in front (e.g., 3 to 7 meters)
 			//float ForwardDist = FMath::FRandRange(300.0f, 700.0f);

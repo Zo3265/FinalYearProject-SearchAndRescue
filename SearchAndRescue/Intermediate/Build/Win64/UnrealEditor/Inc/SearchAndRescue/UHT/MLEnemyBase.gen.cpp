@@ -11,13 +11,13 @@ void EmptyLinkFunctionForGeneratedCodeMLEnemyBase() {}
 
 // Begin Cross Module References
 COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimInstance_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AExplosiveGrenade_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AMLEnemyBase();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AMLEnemyBase_NoRegister();
+SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AMyActor_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperRifle_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASplineController_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWeaponBase_NoRegister();
@@ -219,7 +219,7 @@ const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMLEnemyBase_Stat
 const UECodeGen_Private::FIntPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_iFlashGrenadeAmount = { "iFlashGrenadeAmount", nullptr, (EPropertyFlags)0x0020080000010001, UECodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, iFlashGrenadeAmount), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_iFlashGrenadeAmount_MetaData), NewProp_iFlashGrenadeAmount_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SplineControllerStore_Inner = { "SplineControllerStore", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_ASplineController_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SplineControllerStore = { "SplineControllerStore", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, SplineControllerStore), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SplineControllerStore_MetaData), NewProp_SplineControllerStore_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_TrainingTarget = { "TrainingTarget", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, TrainingTarget), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrainingTarget_MetaData), NewProp_TrainingTarget_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_TrainingTarget = { "TrainingTarget", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, TrainingTarget), Z_Construct_UClass_AMyActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrainingTarget_MetaData), NewProp_TrainingTarget_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SniperClass = { "SniperClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, SniperClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ASniperRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperClass_MetaData), NewProp_SniperClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SniperRifle = { "SniperRifle", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, SniperRifle), Z_Construct_UClass_ASniperRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperRifle_MetaData), NewProp_SniperRifle_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_AnimInstance = { "AnimInstance", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, AnimInstance), Z_Construct_UClass_UAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnimInstance_MetaData), NewProp_AnimInstance_MetaData) };
@@ -284,10 +284,10 @@ AMLEnemyBase::~AMLEnemyBase() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 2141488609U) },
+		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 1275958357U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_1180465063(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_510931653(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

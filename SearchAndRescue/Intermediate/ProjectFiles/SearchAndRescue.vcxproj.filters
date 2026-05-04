@@ -128,6 +128,15 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\Enemies\MLEnemyBase.h">
       <Filter>Source\SearchAndRescue\AI\MLAI\Enemies</Filter>
     </ClCompile>
+    <Filter Include="Source\SearchAndRescue\AI\MLAI\TrainingActor">
+      <UniqueIdentifier>{2C335B81-58B9-3A07-B54F-F83D1A8828F4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\TrainingActor\MyActor.cpp">
+      <Filter>Source\SearchAndRescue\AI\MLAI\TrainingActor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\TrainingActor\MyActor.h">
+      <Filter>Source\SearchAndRescue\AI\MLAI\TrainingActor</Filter>
+    </ClCompile>
     <Filter Include="Source\SearchAndRescue\Private">
       <UniqueIdentifier>{AB2CB879-22A7-37FB-BDED-B8BEAF41F410}</UniqueIdentifier>
     </Filter>

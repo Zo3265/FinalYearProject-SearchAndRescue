@@ -30,6 +30,7 @@ ABulletBase::ABulletBase()
     ProjectileMovement->Bounciness = 0.0f;
     ProjectileMovement->ProjectileGravityScale = 0.0f; // Set this to 0 if you want the bullets to go completely straight.
 
+    InitialLifeSpan = 3.0f;
 }
 
 // Called when the game starts or when spawned
@@ -43,7 +44,8 @@ void ABulletBase::BeginPlay()
 void ABulletBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-	
+
+
 }
 
 void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
