@@ -7,6 +7,8 @@
 #include "GameFramework/ProjectileMovementComponent.h"
 #include "BulletBase.generated.h"
 
+class AMLEnemyBase;
+
 UCLASS()
 class SEARCHANDRESCUE_API ABulletBase : public AActor
 {
@@ -32,6 +34,7 @@ protected:
 	UPROPERTY()
 	AActor* TargetActor;
 
+	bool bTraining = false;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -51,4 +54,5 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Bullet Variables")
 	float iAmount;
 
+	void setTarget(AActor* ActorStore);
 };

@@ -50,7 +50,7 @@ void AWeaponBase::Fire()
     FRotator FireRotation = Mesh->GetSocketRotation(TEXT("BulletSpawn"));
 
     FActorSpawnParameters SpawnParameters;
-    SpawnParameters.Owner = this;
+    SpawnParameters.Owner = GetOwner();
     SpawnParameters.Instigator = GetInstigator();
     SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
@@ -73,6 +73,11 @@ bool AWeaponBase::getCanFire()
 bool AWeaponBase::getReloading()
 {
     return bReloading;
+}
+
+ABulletBase* AWeaponBase::getBullet()
+{
+    return Bullet;
 }
 
 void AWeaponBase::setCoolDown(float fStore)
@@ -112,5 +117,15 @@ int AWeaponBase::getCurrentMagCount()
 int AWeaponBase::getMaxMagCount()
 {
     return iMaxMagCount;
+}
+
+void AWeaponBase::setCurrentAmmoReserve(int iStore)
+{
+    iCurrentAmmoReserve = iStore;
+}
+
+int AWeaponBase::getCurrentAmmoReserve()
+{
+    return iCurrentAmmoReserve;
 }
 

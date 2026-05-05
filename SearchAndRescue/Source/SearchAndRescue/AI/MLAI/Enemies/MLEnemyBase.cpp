@@ -186,7 +186,25 @@ float AMLEnemyBase::getAmmoPercent()
 	return AmmoPercent;
 }
 
+void AMLEnemyBase::setTurnValue(float fStore)
+{
+	TurnValue = fStore;
+}
 
+float AMLEnemyBase::getTurnValue()
+{
+	return TurnValue;
+}
+
+void AMLEnemyBase::setHit(bool bStore)
+{
+	bHit = bStore;
+}
+
+bool AMLEnemyBase::getHit()
+{
+	return bHit;
+}
 
 AWeaponBase* AMLEnemyBase::getWeapon()
 {

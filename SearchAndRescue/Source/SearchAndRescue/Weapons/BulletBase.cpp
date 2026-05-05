@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "BulletBase.h"
+#include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
 
 // Sets default values
 ABulletBase::ABulletBase()
@@ -28,7 +29,7 @@ ABulletBase::ABulletBase()
     ProjectileMovement->bRotationFollowsVelocity = true;
     ProjectileMovement->bShouldBounce = false;
     ProjectileMovement->Bounciness = 0.0f;
-    ProjectileMovement->ProjectileGravityScale = 0.0f; // Set this to 0 if you want the bullets to go completely straight.
+    ProjectileMovement->ProjectileGravityScale = 0.05f; // Set this to 0 if you want the bullets to go completely straight.
 
     InitialLifeSpan = 3.0f;
 }
@@ -37,7 +38,22 @@ ABulletBase::ABulletBase()
 void ABulletBase::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+    AMLEnemyBase* OwnerEnemy = Cast<AMLEnemyBase>(GetOwner());
+
+    if (bTraining == true)
+    {
+        if (OwnerEnemy)
+        {
+            TargetActor = OwnerEnemy->getTrainingTarget();
+        }
+    }
+
+    else
+    {
+        TargetActor = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
+    }
+    
 }
 
 // Called every frame
@@ -48,9 +64,26 @@ void ABulletBase::Tick(float DeltaTime)
 
 }
 
+void ABulletBase::setTarget(AActor* ActorStore)
+{
+    TargetActor = ActorStore;
+}
+
+
 void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	//On overlap with anything we delete the bullet.
+    if (TargetActor && OtherActor == TargetActor)
+    {
+        //UE_LOG(LogTemp, Warning, TEXT("Hit"));
+        AMLEnemyBase* OwnerEnemy = Cast<AMLEnemyBase>(GetOwner());
+
+        if (OwnerEnemy)
+        {
+            OwnerEnemy->setHit(true);
+        }
+    }
+    //UE_LOG(LogTemp, Warning, TEXT("Hit"));
     this->Destroy();
 }
 

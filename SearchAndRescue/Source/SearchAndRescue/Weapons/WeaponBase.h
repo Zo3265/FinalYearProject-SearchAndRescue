@@ -47,6 +47,8 @@ public:
 	UStaticMeshComponent* getMesh();
 	int getCurrentMagCount();
 	int getMaxMagCount();
+	void setCurrentAmmoReserve(int iStore);
+	int getCurrentAmmoReserve();
 
 	float Cooldown = 1.0f;
 	float Range = 3000.0f;
@@ -61,5 +63,6 @@ public:
 
 	bool getCanFire();
 	bool getReloading();
+	ABulletBase* getBullet();
 
 };

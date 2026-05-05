@@ -15,7 +15,17 @@ AMyActor::AMyActor()
 void AMyActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	float Random = FMath::FRand();
+
+	if (Random > 0.5f)
+	{
+		DirectionMultiplier = -1.0f;
+	}
+
+	else
+	{
+		DirectionMultiplier = 1.0f;
+	}
 }
 
 // Called every frame
@@ -25,10 +35,14 @@ void AMyActor::Tick(float DeltaTime)
 
 	if (SplineController)
 	{
-		CurrentDistance = (Speed * GetWorld()->GetDeltaSeconds()) + CurrentDistance;
+		CurrentDistance = (Speed * GetWorld()->GetDeltaSeconds() * DirectionMultiplier) + CurrentDistance;
 		CurrentDistance = FMath::Fmod(CurrentDistance, SplineController->getSpline()->GetSplineLength());
+		if (CurrentDistance < 0.0f)
+		{
+			CurrentDistance += SplineController->getSpline()->GetSplineLength();
+		}
 		Location = SplineController->getSpline()->GetLocationAtDistanceAlongSpline(CurrentDistance, ESplineCoordinateSpace::World);
-		Location.Z += (0, 0, 120);
+		Location.Z += 120;
 		this->SetActorLocation(Location);
 	}
 	
@@ -67,6 +81,11 @@ float AMyActor::getSpeed()
 void AMyActor::setLocation(FVector Store)
 {
 	Location = Store;
+}
+
+void AMyActor::setDirectionMultiplier(float fStore)
+{
+	DirectionMultiplier = fStore;
 }
 
 FVector AMyActor::getLocation()

@@ -25,6 +25,7 @@ protected:
 	float CurrentDistance;
 	float Speed = 300.0f;
 	FVector Location;
+	float DirectionMultiplier;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -36,5 +37,6 @@ public:
 	void setSpeed(float fStore);
 	float getSpeed();
 	void setLocation(FVector Store);
+	void setDirectionMultiplier(float fStore);
 	FVector getLocation();
 };

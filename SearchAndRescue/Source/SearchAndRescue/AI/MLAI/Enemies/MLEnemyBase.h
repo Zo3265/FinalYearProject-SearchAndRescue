@@ -78,6 +78,8 @@ protected:
 	float EnemyShootValue;
 	float EnemyReloadValue;
 	float AmmoPercent;
+	float TurnValue;
+	bool bHit = false;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -108,6 +110,10 @@ public:
 	float getEnemyReloadValue();
 	void setAmmoPercent(float fStore);
 	float getAmmoPercent();
+	void setTurnValue(float fStore);
+	float getTurnValue();
+	void setHit(bool bStore);
+	bool getHit();
 
 	UFUNCTION()
 	AWeaponBase* getWeapon();

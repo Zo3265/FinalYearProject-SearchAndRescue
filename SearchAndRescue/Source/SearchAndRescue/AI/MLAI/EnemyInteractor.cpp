@@ -139,7 +139,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		//We need another line of sight check that we can use to see if the muzzle of our gun is actually pointing at the player.
 		//I am going to use another line trace for this but one with a range that will be decided by the type of weapon.
 		FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation("BulletSpawn");
-		FVector TraceEnd = MuzzleLocation + (ActorForward * Weapon->getRange());
+		FVector MuzzleForward = Weapon->getMesh()->GetSocketRotation("BulletSpawn").Vector();
+		FVector TraceEnd = MuzzleLocation + (MuzzleForward * Weapon->getRange());
 		//UE_LOG(LogTemp, Warning, TEXT("Weapon Range: %f"), Weapon->getRange());
 
 		FHitResult AimHit;
@@ -170,10 +171,11 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		FVector RelativeLocalVelocity = ActorTransform.InverseTransformVectorNoScale(RelativeWorldVelocity); //Converted to local space in order for the agents to know if the player isleft or right relative to them.
 
 		float RelativeMoveSpeed = RelativeLocalVelocity.Size();
+		float NormalizedMoveSpeed = FMath::Clamp(RelativeMoveSpeed / 600.0f, 0.0f, 1.0f);
 		FVector RelativeMoveDirection = RelativeLocalVelocity.GetSafeNormal();
 
 		//We need to make the enemy reload for this we need to know the ammo count and if we need to reload.
-		float AmmoPercent = Weapon->getCurrentMagCount() / Weapon->getMaxMagCount();
+		float AmmoPercent = (float)Weapon->getCurrentMagCount() / (float)Weapon->getMaxMagCount();
 		Enemy->setAmmoPercent(AmmoPercent);
 		//UE_LOG(LogTemp, Warning, TEXT("Current Mag Count: %i"), Weapon->getCurrentMagCount());
 		//UE_LOG(LogTemp, Warning, TEXT("Max Mag Count: %i"), Weapon->getMaxMagCount());
@@ -202,7 +204,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		ObservationMap.Add(TEXT("WeaponCooldown"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, Weapon->getCoolDown()));
 		ObservationMap.Add(TEXT("IsAimedAtTarget"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, Enemy->getIsAimed()));
 		ObservationMap.Add(TEXT("TargetRelativeDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, RelativeMoveDirection));
-		ObservationMap.Add(TEXT("TargetRelativeSpeed"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, RelativeMoveSpeed));
+		ObservationMap.Add(TEXT("TargetRelativeSpeed"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, NormalizedMoveSpeed));
 		ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, Enemy->getAmmoPercent()));
 		ObservationMap.Add(TEXT("DoesNeedToReload"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, bNeedToReload));
 
@@ -256,15 +258,22 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		ULearningAgentsActions::GetFloatAction(ShootValue, InActionObject, ActionObjectMap[TEXT("ShootAction")]);
 		ULearningAgentsActions::GetFloatAction(ReloadValue, InActionObject, ActionObjectMap[TEXT("ReloadAction")]);
 		
-
+		Enemy->setTurnValue(TurnValue);
 		float RotationChange = TurnValue * TurnSensitivity * GetWorld()->GetDeltaSeconds();
 		FRotator CurrentRot = Enemy->GetActorRotation();
 		FRotator TargetRot = CurrentRot;
 		TargetRot.Yaw += RotationChange;
-		FRotator SmoothedRotation = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 10.0f);
-		Enemy->SetActorRotation(SmoothedRotation);
+		TargetRot.Normalize();
+		//FRotator SmoothedRotation = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 15.0f);
+		Enemy->SetActorRotation(TargetRot);
 		Enemy->setEnemyShootValue(ShootValue);
 		Enemy->setEnemyReloadValue(ReloadValue);
+
+		if (Weapon->getCurrentAmmoReserve() <= 0)
+		{
+			// You can even 'teleport' ammo into their inventory here
+			Weapon->setCurrentAmmoReserve(999);
+		}
 		
 		if (ActionObjectMap.Contains(TEXT("ReloadAction")) && ActionObjectMap.Contains(TEXT("ShootAction")))
 		{
