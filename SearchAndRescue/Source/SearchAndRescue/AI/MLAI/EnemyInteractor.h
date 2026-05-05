@@ -40,5 +40,5 @@ public:
 
 	void setInteractorAgentID(int32 AgentIDStore);
 	int32 getInteractorAgentID();
-	bool bTraining = false;
+	bool bTraining = true;
 };

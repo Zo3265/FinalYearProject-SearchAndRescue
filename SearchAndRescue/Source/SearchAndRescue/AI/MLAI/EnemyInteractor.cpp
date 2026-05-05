@@ -23,6 +23,7 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 
 	//We need a velocity observation to tell the enemy to increase its distance along the spline and reward it for doing so.
 	ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::SpecifyVelocityObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("LookAhead"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema));
 
 	//Observations needed to see the player
 	//ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema));
@@ -84,6 +85,11 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
 		FTransform ActorTransform = Enemy->GetActorTransform();
 
+		//Looking 500 units ahead of the agents position to help them make turns.
+		float FutureDistance = FMath::Fmod(RawDistance + 500.0f, InteractorSplineComponent->GetSplineLength());
+		FVector FutureDir = InteractorSplineComponent->GetDirectionAtDistanceAlongSpline(FutureDistance, ESplineCoordinateSpace::World);
+		FVector LocalFutureDir = ActorTransform.InverseTransformVectorNoScale(FutureDir);
+
 		FVector PlayerLoc = TargetToFollow->GetActorLocation();
 		FVector PlayerVelocity = TargetToFollow->GetVelocity();
 		FVector PlayerDir = (PlayerLoc - ActorLocation).GetSafeNormal();
@@ -141,7 +147,6 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation("BulletSpawn");
 		FVector MuzzleForward = Weapon->getMesh()->GetSocketRotation("BulletSpawn").Vector();
 		FVector TraceEnd = MuzzleLocation + (MuzzleForward * Weapon->getRange());
-		//UE_LOG(LogTemp, Warning, TEXT("Weapon Range: %f"), Weapon->getRange());
 
 		FHitResult AimHit;
 		FCollisionQueryParams Params;
@@ -195,6 +200,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, NormalisedDistance, ActorTransform));
 		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, InputKey, ActorTransform));
 		ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::MakeVelocityObservation(InObservationObject, Enemy->GetVelocity()));
+		ObservationMap.Add(TEXT("LookAhead"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, LocalFutureDir));
 	
 		//Player seeing observations
 		ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, RelativeDir));
@@ -311,24 +317,19 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 			if (bReloading == true && Weapon->getReloading() == false)
 			{
-				/*if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
-				{
-					Sniper->SniperFire();
-				}*/
-
 				Weapon->Reload();
 			}
 
 			
 		}
-		//else
-		//{
-		//	//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
+		else
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
 
-		//	//Move the character forward and turn them using the character classes regular functions.
-		//	Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
-		//	
-		//}
+			//Move the character forward and turn them using the character classes regular functions.
+			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
+			
+		}
 	}
 }
 

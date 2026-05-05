@@ -33,7 +33,7 @@ void AMyActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (SplineController)
+	if (SplineController && bHide == false)
 	{
 		CurrentDistance = (Speed * GetWorld()->GetDeltaSeconds() * DirectionMultiplier) + CurrentDistance;
 		CurrentDistance = FMath::Fmod(CurrentDistance, SplineController->getSpline()->GetSplineLength());
@@ -86,6 +86,11 @@ void AMyActor::setLocation(FVector Store)
 void AMyActor::setDirectionMultiplier(float fStore)
 {
 	DirectionMultiplier = fStore;
+}
+
+void AMyActor::setHide(bool bStore)
+{
+	bHide = bStore;
 }
 
 FVector AMyActor::getLocation()

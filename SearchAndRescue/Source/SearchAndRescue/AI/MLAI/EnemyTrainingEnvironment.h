@@ -47,5 +47,5 @@ public:
 	int32 getTrainingEnvAgentID();
 	UFUNCTION(BlueprintCallable, Category = "Spline")
 	void setTrainingEnvSplineComponent(USplineComponent* tempSpline);
-	bool bTraining = false;
+	bool bTraining = true;
 };

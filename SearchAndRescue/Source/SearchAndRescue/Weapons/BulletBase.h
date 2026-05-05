@@ -34,7 +34,7 @@ protected:
 	UPROPERTY()
 	AActor* TargetActor;
 
-	bool bTraining = false;
+	bool bTraining = true;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;

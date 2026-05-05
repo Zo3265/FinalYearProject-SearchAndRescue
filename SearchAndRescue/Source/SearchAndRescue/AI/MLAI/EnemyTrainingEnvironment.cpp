@@ -17,13 +17,11 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 	if (bTraining == true)
 	{
 		TargetToFollow = Enemy->getTrainingTarget();
-		//Enemy->getWeapon()->getBullet()->setTarget(TargetToFollow);
 	}
 
 	else
 	{
 		TargetToFollow = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
-		//Enemy->getWeapon()->getBullet()->setTarget(TargetToFollow);
 	}
 
 	
@@ -98,30 +96,44 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			CurrentState = EAgentState::Patrolling;
 		}
 
-		//if (CurrentState == EAgentState::Patrolling)
-		//{
-		//	//TotalReward = 0.0f;
-		//	//Following Spline
-		//	//Reward the character for being close to the spline. I am using a gaussian distribution for the reward as to not give them a harsh punishment if they step off the spline.
-		//	//Also this will need to change when I want the enemy to be chasing the player.
-		//	//Max Reward Possible is about 0.7f.
-		//	//TotalReward += 0.7f * FMath::Exp(-0.01f * DistanceToPath);
-		//	TotalReward += 0.35f * FMath::Exp(-0.01f * DistanceToPath);
+		if (CurrentState == EAgentState::Patrolling)
+		{
+			//TotalReward = 0.0f;
+			//Following Spline
+			//Reward the character for being close to the spline. I am using a gaussian distribution for the reward as to not give them a harsh punishment if they step off the spline.
+			//Also this will need to change when I want the enemy to be chasing the player.
+			//Max Reward Possible is about 0.7f.
+			TotalReward += 0.7f * FMath::Exp(-0.01f * DistanceToPath);
+			//TotalReward += 0.35f * FMath::Exp(-0.01f * DistanceToPath);
 
-		//	////Facing the correct direction
-		//	////Max reward possible is 1.0f
-		//	//TotalReward += 1.0f * CharAlignment;
-		//	TotalReward += 0.5f * CharAlignment;
+			if (DistanceToPath > 150.0f) // If more than 1 meter off the line
+			{
+				TotalReward -= 20.0f;
+			}
 
-		//	////Going fast.
-		//	////Max reward possible is 0.4f
-		//	//TotalReward += (0.4f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
-		//	TotalReward += (0.2f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
-		//}
+			////Going fast.
+			////Max reward possible is 0.4f
+			float SpeedReward = (NormalizedVelocity * 5.0f) * FMath::Max(0.1f, CharAlignment);
+			TotalReward += SpeedReward;
+			//TotalReward += (0.2f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
+
+			////Facing the correct direction
+			////Max reward possible is 1.0f
+			//TotalReward += 1.0f * CharAlignment;
+			TotalReward += 0.5f * CharAlignment;
+
+
+			if (CharAlignment < 0.85f && NormalizedVelocity > 0.4f)
+			{
+				// Punish specifically for 'Full Throttle' during a turn
+				TotalReward -= (NormalizedVelocity * 1.5f);
+			}
+		}
 
 		//else if (CurrentState == EAgentState::SeeingPlayer)
 		if (CurrentState == EAgentState::SeeingPlayer)
 		{
+			GLog->Log(TEXT("Seeing player"));
 			TotalReward += 1.0f;
 			//UE_LOG(LogTemp, Warning, TEXT("Agent: %d can see the player"), AgentId);
 			//We reward the agents proportionally to how much they are facing the player when they see them.
@@ -267,31 +279,31 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	FVector PlayerDir = (PlayerLoc - CharLocation).GetSafeNormal();
 	float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
 
-	//if (CurrentState == EAgentState::Patrolling)
-	//{
-	//	
+	if (CurrentState == EAgentState::Patrolling)
+	{
+		
 
-	//	//Terminate the episode if the agent moves further than 0.5m away from the spline.
-	//	if (DistanceFromPath > 25.0f)
-	//	{
-	//		OutCompletion = ELearningAgentsCompletion::Termination;
-	//	}
+		//Terminate the episode if the agent moves further than 0.5m away from the spline.
+		if (DistanceFromPath > 25.0f)
+		{
+			OutCompletion = ELearningAgentsCompletion::Termination;
+		}
 
 
-	//	if (CharAlignment < 0.0f)
-	//	{
-	//		OutCompletion = ELearningAgentsCompletion::Termination;
-	//	}
+		if (CharAlignment < 0.0f)
+		{
+			OutCompletion = ELearningAgentsCompletion::Termination;
+		}
 
-	//	else
-	//	{
-	//		//If none of the conditions are met we keep it running.
-	//		OutCompletion = ELearningAgentsCompletion::Running;
-	//	}
-	//}
+		else
+		{
+			//If none of the conditions are met we keep it running.
+			OutCompletion = ELearningAgentsCompletion::Running;
+		}
+	}
 
-	//else if (CurrentState == EAgentState::SeeingPlayer)
-	if (CurrentState == EAgentState::SeeingPlayer)
+	else if (CurrentState == EAgentState::SeeingPlayer)
+	//if (CurrentState == EAgentState::SeeingPlayer)
 	{
 		bool bFacingPlayer;
 		bool bStopped;
@@ -399,6 +411,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 			if (bTraining == true)
 			{
 				AMyActor* TrainingActor = Cast<AMyActor>(TargetToFollow);
+				TrainingActor->setHide(false);
 				TrainingActor->setSplineController(CharAgent->GetSplineController());
 				
 
@@ -507,14 +520,32 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 		}
 		else
 		{
-			AActor* Sphere;
-			Sphere = UGameplayStatics::GetActorOfClass(GetWorld(), ASplineMovementActor::StaticClass());
 
-			if (Sphere != nullptr)
+			if (bTraining == true)
 			{
-				TargetToFollow->SetActorLocation(Sphere->GetActorLocation());
-				//UE_LOG(LogTemp, Log, TEXT("Episode Reset: Player HIDDEN for Agent %d"), AgentId);
+				AMyActor* TrainingActor = Cast<AMyActor>(TargetToFollow);
+				AActor* Sphere = UGameplayStatics::GetActorOfClass(GetWorld(), ASplineMovementActor::StaticClass());
+				if (TrainingActor && Sphere)
+				{
+					TrainingActor->SetActorLocation(Sphere->GetActorLocation());
+					TrainingActor->setHide(true);
+					UE_LOG(LogTemp, Log, TEXT("Episode Reset: Player HIDDEN for Agent %d"), AgentId);
+				}
+				
 			}
+
+			else
+			{
+				AActor* Sphere;
+				Sphere = UGameplayStatics::GetActorOfClass(GetWorld(), ASplineMovementActor::StaticClass());
+
+				if (Sphere != nullptr)
+				{
+					TargetToFollow->SetActorLocation(Sphere->GetActorLocation());
+					//UE_LOG(LogTemp, Log, TEXT("Episode Reset: Player HIDDEN for Agent %d"), AgentId);
+				}
+			}
+			
 		}
 	}
 }
