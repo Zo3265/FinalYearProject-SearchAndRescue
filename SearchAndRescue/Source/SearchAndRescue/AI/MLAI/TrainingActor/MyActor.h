@@ -23,10 +23,11 @@ protected:
 	UPROPERTY()
 	ASplineController* SplineController;
 	float CurrentDistance;
-	float Speed = 300.0f;
+	float Speed = 00.0f;
 	FVector Location;
 	float DirectionMultiplier;
 	bool bHide = false;
+	UStaticMeshComponent* Mesh;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -41,4 +42,5 @@ public:
 	void setDirectionMultiplier(float fStore);
 	void setHide(bool bStore);
 	FVector getLocation();
+	UStaticMeshComponent* getSphereMesh();
 };

@@ -33,6 +33,11 @@ void AWeaponBase::BeginPlay()
 void AWeaponBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+    if (Cooldown > 0.0f)
+    {
+        Cooldown -= DeltaTime;
+    }
 }
 
 void AWeaponBase::Fire()

@@ -79,6 +79,7 @@ protected:
 	float EnemyReloadValue;
 	float AmmoPercent;
 	float TurnValue;
+	float IdleTimer = 0.0f;
 	bool bHit = false;
 public:	
 	// Called every frame
@@ -114,6 +115,8 @@ public:
 	float getTurnValue();
 	void setHit(bool bStore);
 	bool getHit();
+	void setIdleTimer(float fStore);
+	float getIdleTimer();
 
 	UFUNCTION()
 	AWeaponBase* getWeapon();

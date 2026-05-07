@@ -26,6 +26,7 @@ void AMyActor::BeginPlay()
 	{
 		DirectionMultiplier = 1.0f;
 	}
+
 }
 
 // Called every frame
@@ -96,5 +97,10 @@ void AMyActor::setHide(bool bStore)
 FVector AMyActor::getLocation()
 {
 	return Location;
+}
+
+UStaticMeshComponent* AMyActor::getSphereMesh()
+{
+	return Mesh;
 }
 

@@ -29,9 +29,9 @@ ABulletBase::ABulletBase()
     ProjectileMovement->bRotationFollowsVelocity = true;
     ProjectileMovement->bShouldBounce = false;
     ProjectileMovement->Bounciness = 0.0f;
-    ProjectileMovement->ProjectileGravityScale = 0.05f; // Set this to 0 if you want the bullets to go completely straight.
+    ProjectileMovement->ProjectileGravityScale = 0.0f; // Set this to 0 if you want the bullets to go completely straight.
 
-    InitialLifeSpan = 3.0f;
+    InitialLifeSpan = 1.5f;
 }
 
 // Called when the game starts or when spawned
@@ -81,9 +81,10 @@ void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
         if (OwnerEnemy)
         {
             OwnerEnemy->setHit(true);
+            this->Destroy();
         }
     }
     //UE_LOG(LogTemp, Warning, TEXT("Hit"));
-    this->Destroy();
+    
 }
 

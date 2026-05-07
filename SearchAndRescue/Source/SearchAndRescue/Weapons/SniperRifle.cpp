@@ -45,6 +45,7 @@ void ASniperRifle::SniperFire()
 		Fire();
 		bCanFire = false;
 		iCurrentMagCount--;
+		Cooldown = 0.93f;
 	}
 
 	////This acts as a bolt timer for the sniper rifle.
