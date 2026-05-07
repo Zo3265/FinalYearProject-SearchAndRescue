@@ -100,93 +100,149 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
 		//Here we are trying to spot the player
-		//According to Gemini this value means that the agents have a 45 degree fov.
-		if (PlayerAlignment >= 0.707f)
-		{
+		//if (PlayerAlignment >= 0.6f)
+		//{
 			//UE_LOG(LogTemp, Error, TEXT("Player Aligned"));
 			//Setting up a raycast so that the agents cant see through walls
 			FHitResult HitResult;
 			FCollisionQueryParams CollisionParams;
 			CollisionParams.AddIgnoredActor(Enemy);
+			CollisionParams.bTraceComplex = true;
 
-			bool bHit = GetWorld()->LineTraceSingleByChannel(
-				HitResult,
-				ActorLocation + FVector(0, 0, 60),
-				PlayerLoc + FVector(0, 0, 60),
-				ECC_Visibility,
-				CollisionParams
-			);
+			float DistanceToTarget = FVector::Dist(ActorLocation, PlayerLoc);
+			bool bInRange = DistanceToTarget < 6000.0f;
 
-			/*UE_LOG(LogTemp, Warning, TEXT("bHit: %s"), bHit ? TEXT("true") : TEXT("false"));
-			bool bCanSee = (!bHit || (HitResult.GetActor() == TargetToFollow));
-			UE_LOG(LogTemp, Error, TEXT("bCanSee: %s"), bCanSee ? TEXT("true") : TEXT("false"));*/
+			float VisionDot = FVector::DotProduct(Enemy->GetActorForwardVector(), RelativeDir);
+			bool bInVisionCone = VisionDot > 0.707f;
 
-			/*if (bHit && HitResult.GetActor()) {
-				UE_LOG(LogTemp, Warning, TEXT("Agent %d hit: %s instead of target!"),
-					AgentId, *HitResult.GetActor()->GetName());
-			}*/
-			if (!bHit || (HitResult.GetActor() == TargetToFollow))
+			//// Debug Text: Shows the exact math the brain is seeing
+			//if (GEngine) {
+			//	FColor TextColor = bInVisionCone ? FColor::Green : FColor::Red;
+			//	//GEngine->AddOnScreenDebugMessage(-1, 0.01f, TextColor, FString::Printf(TEXT("Vision Dot: %.3f (In Cone: %s)"), VisionDot, bInVisionCone ? TEXT("YES") : TEXT("NO")));
+			//	GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Yellow,
+			//		FString::Printf(TEXT("InRange: %s | InCone: %s"), bInRange ? TEXT("YES") : TEXT("NO"), bInVisionCone ? TEXT("YES") : TEXT("NO")));
+			//}
+
+			// 3. The "Cheat" Prevention
+			bool bHasLineOfSight = false;
+			FColor FinalLineColor = FColor::White; // Default to white (out of range/cone)
+
+			if (bInRange && bInVisionCone)
 			{
-				Enemy->setSeePlayer(true);
-				//UE_LOG(LogTemp, Error, TEXT("Agent:%d can see the player with PlayerAlignment: %f"), AgentId, PlayerAlignment);
+				FHitResult Hit;
+				FCollisionQueryParams Params;
+				Params.AddIgnoredActor(Enemy);
+
+				// Perform Trace
+				bool bBlocked = GetWorld()->LineTraceSingleByChannel(Hit, ActorLocation + FVector(0, 0, 30), PlayerLoc + FVector(0, 0, 30), ECC_Visibility, Params);
+
+				// Initial LOS logic
+				bHasLineOfSight = !bBlocked || (Hit.GetActor() == TargetToFollow);
+
+				// Height Check Override
+				if (PlayerLoc.Z < (ActorLocation.Z - 50.0f) && VisionDot > 0.9f)
+				{
+					bHasLineOfSight = false;
+				}
+
+				// --- DEBUG LOGIC ---
+				// Green = Perfect (In cone, in range, clear shot)
+				// Blue  = Target is under the floor (Height Check caught it)
+				// Red   = Blocked by wall/floor
+				if (bHasLineOfSight) {
+					FinalLineColor = FColor::Green;
+				}
+				else if (PlayerLoc.Z < (ActorLocation.Z - 50.0f)) {
+					FinalLineColor = FColor::Blue;
+				}
+				else {
+					FinalLineColor = FColor::Red;
+				}
+
+				/*DrawDebugLine(
+					GetWorld(),
+					ActorLocation + FVector(0, 0, 50),
+					PlayerLoc + FVector(0, 0, 50),
+					FinalLineColor,
+					false,
+					0.1f,
+					0,
+					2.0f
+				);*/
 			}
 
-			else
-			{
-				Enemy->setSeePlayer(false);
-			}
-			//UE_LOG(LogTemp, Warning, TEXT("The value is: %s"), Enemy->getSeePlayer() ? TEXT("true") : TEXT("false"));
+			Enemy->setSeePlayer(bInRange && bInVisionCone && bHasLineOfSight);
 
-		}
+		//}
 
-		else
-		{
-			Enemy->setSeePlayer(false);
-		}
+		//else
+		//{
+			//Enemy->setSeePlayer(false);
+		//}
 
 
 		//We need another line of sight check that we can use to see if the muzzle of our gun is actually pointing at the player.
 		//I am going to use another line trace for this but one with a range that will be decided by the type of weapon.
 		FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation("BulletSpawn");
 		FVector MuzzleForward = Weapon->getMesh()->GetSocketRotation("BulletSpawn").Vector();
+		FVector MuzzleToTargetDir = (PlayerLoc - MuzzleLocation).GetSafeNormal();
 		FVector TraceEnd = MuzzleLocation + (MuzzleForward * Weapon->getRange());
 
-		//DrawDebugLine(
-		//	GetWorld(),
-		//	MuzzleLocation,
-		//	TraceEnd,
-		//	FColor::Red, // Color of the line
-		//	false,       // Whether the line is persistent (stays forever)
-		//	0.1f,        // Lifetime in seconds (0.1f is good for every-frame updates)
-		//	0,           // Depth priority
-		//	2.0f         // Thickness of the line
-		//);
+		float GunDot = FVector::DotProduct(MuzzleForward, MuzzleToTargetDir);
+		bool bGunAligned = GunDot > 0.99f;
 
+		bool bHasClearShot = false;
 		FHitResult AimHit;
-		FCollisionQueryParams Params;
-		Params.AddIgnoredActor(Enemy);
-		Params.AddIgnoredActor(Weapon);
+		FColor AimLineColor = FColor::White;
 
-		bool bAimHit = GetWorld()->LineTraceSingleByChannel(
-			AimHit,
-			MuzzleLocation,
-			TraceEnd,
-			ECC_Visibility,
-			Params
-		);
-		//UE_LOG(LogTemp, Warning, TEXT("AimHit is: %s"), bAimHit ? TEXT("true") : TEXT("false"));
-		//UE_LOG(LogTemp, Warning, TEXT("AimHit Target is: %s"), AimHit.GetActor()->IsA(AMyActor::StaticClass()) ? TEXT("true") : TEXT("false"));
-
-		/*if (AimHit.GetActor())
+		if (bInRange && bGunAligned) // Only trace if the gun is actually pointing the right way
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Trace hit: %s"), *AimHit.GetActor()->GetName());
+			FCollisionQueryParams Params;
+			Params.AddIgnoredActor(Enemy);
+
+			bool bBlocked = GetWorld()->LineTraceSingleByChannel(AimHit, MuzzleLocation, PlayerLoc, ECC_Visibility, Params);
+
+			// Clear shot if nothing hit or we hit the specific target
+			bHasClearShot = !bBlocked || (AimHit.GetActor() == TargetToFollow);
+
+			if (bHasClearShot) {
+				AimLineColor = FColor::Green;
+				Enemy->setIsAimed(true); // Final Aim Confirmation
+			}
+			else {
+				AimLineColor = FColor::Red;
+				Enemy->setIsAimed(false);
+			}
+
+			DrawDebugLine(GetWorld(), MuzzleLocation, PlayerLoc, AimLineColor, false, 0.1f, 0, 4.0f); // Thicker line for Gun
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Trace hit NOTHING"));
+			Enemy->setIsAimed(false);
+		}
+
+		// Optional: Debug Text for the Gun
+		/*if (GEngine) {
+			GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Orange, FString::Printf(TEXT("Gun Alignment: %.4f"), GunDot));
 		}*/
 
-		if (bAimHit == true && AimHit.GetActor() == TargetToFollow)
+		//FHitResult AimHit;
+		//FCollisionQueryParams Params;
+		//Params.AddIgnoredActor(Enemy);
+		//Params.AddIgnoredActor(Weapon);
+
+		//bool bAimHit = GetWorld()->LineTraceSingleByChannel(
+		//	AimHit,
+		//	MuzzleLocation,
+		//	TraceEnd,
+		//	ECC_Visibility,
+		//	Params
+		//);
+		////UE_LOG(LogTemp, Warning, TEXT("AimHit is: %s"), bAimHit ? TEXT("true") : TEXT("false"));
+		//UE_LOG(LogTemp, Warning, TEXT("AimHit Target is: %s"), AimHit.GetActor()->IsA(AMyActor::StaticClass()) ? TEXT("true") : TEXT("false"));
+
+
+		/*if (bAimHit == true && AimHit.GetActor() == TargetToFollow)
 		{
 			Enemy->setIsAimed(true);
 		}
@@ -194,7 +250,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		else
 		{
 			Enemy->setIsAimed(false);
-		}
+		}*/
 
 		//I want the enemies to lead their shots so we need to know the players speed and direction.
 		//Similar math as before but with velocities instead.
@@ -292,7 +348,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
 		float ForwardValue;
 		float TurnValue;
-		float TurnSensitivity = 720.0f;
+		float TurnSensitivity = 1024.0f;
 		float ShootValue;
 		float ReloadValue;
 		bool bShooting = false;
@@ -356,10 +412,42 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			Enemy->setIdleTimer(CurrentTime + GetWorld()->GetDeltaSeconds());
 		}
 
-
+		//Enemy->setSeePlayer(true);
 		if (Enemy->getSeePlayer())
 		{
-			
+			Enemy->GetMovementComponent()->StopMovementImmediately();
+			Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
+			ForwardValue = 0.0f;
+			//FVector MuzzleLoc = FVector::ZeroVector;
+			//if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
+			//{
+			//	// Replace "Muzzle" with the actual name of the socket on your Gun Mesh
+			//	MuzzleLoc = Sniper->getMesh()->GetSocketLocation(TEXT("Muzzle"));
+			//}
+			//else
+			//{
+			//	// Fallback to eye height if weapon mesh is missing
+			//	MuzzleLoc = Enemy->GetActorLocation() + FVector(0, 0, 60);
+			//}
+
+			//// 2. Get Target Location
+			//FVector TargetLoc = Enemy->getTrainingTarget()->GetActorLocation();
+
+			//// 3. Calculate the Direction the GUN needs to face
+			//FVector AimDir = (TargetLoc - MuzzleLoc).GetSafeNormal();
+			//FRotator AimRot = AimDir.Rotation();
+
+			//// 4. Correct for the Character's Actor Rotation
+			//// Characters rotate their whole body. We need to find the Actor Yaw that 
+			//// puts the Muzzle on a line with the Target.
+			//CurrentRot = Enemy->GetActorRotation();
+
+			//// We only want the YAW (left/right) for the character body
+			//FRotator NewRot = FMath::RInterpTo(CurrentRot, AimRot, GetWorld()->GetDeltaSeconds(), 25.0f);
+			//NewRot.Pitch = 0.0f;
+			//NewRot.Roll = 0.0f;
+
+			//Enemy->SetActorRotation(NewRot);
 
 			if (bShooting == true)
 			{
@@ -380,29 +468,29 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		else
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
-			ForwardValue = FMath::Max(0.0f, 1.0f);
+			//ForwardValue = FMath::Max(0.0f, 1.0f);
 			
-			USplineComponent* Spline = InteractorSplineComponent;
+			//USplineComponent* Spline = InteractorSplineComponent;
 
-			// 2. Find where THIS agent is on the spline right now
-			FVector MyLocation = Enemy->GetActorLocation();
-			float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(MyLocation);
+			//// 2. Find where THIS agent is on the spline right now
+			//FVector MyLocation = Enemy->GetActorLocation();
+			//float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(MyLocation);
 
-			// 3. Get the direction the track is going at THIS specific spot
-			FVector TargetDirection = Spline->GetDirectionAtSplineInputKey(ClosestKey, ESplineCoordinateSpace::World);
+			//// 3. Get the direction the track is going at THIS specific spot
+			//FVector TargetDirection = Spline->GetDirectionAtSplineInputKey(ClosestKey, ESplineCoordinateSpace::World);
 
-			// 4. Convert that direction into a Rotator
-			TargetRot = TargetDirection.Rotation();
+			//// 4. Convert that direction into a Rotator
+			//TargetRot = TargetDirection.Rotation();
 
-			// 5. Apply the rotation smoothly
-			CurrentRot = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 10.0f);
+			//// 5. Apply the rotation smoothly
+			//CurrentRot = Enemy->GetActorRotation();
+			//FRotator NewRot = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 10.0f);
 
-			// Only change the Yaw (don't tilt them up or down)
-			NewRot.Pitch = 0.0f;
-			NewRot.Roll = 0.0f;
+			//// Only change the Yaw (don't tilt them up or down)
+			//NewRot.Pitch = 0.0f;
+			//NewRot.Roll = 0.0f;
 
-			Enemy->SetActorRotation(NewRot);
+			//Enemy->SetActorRotation(NewRot);
 
 			//Move the character forward and turn them using the character classes regular functions.
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);

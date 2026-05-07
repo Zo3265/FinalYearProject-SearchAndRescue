@@ -10,6 +10,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 	TrainingEnvAgentID = AgentId;
 	ACharacter* RewardCharacter = Cast<ACharacter>(GetAgent(AgentId));
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(GetAgent(AgentId));
+	AWeaponBase* Weapon = Enemy->getWeapon();
 
 	float TotalReward = 0.0f;
 	AActor* TargetToFollow = nullptr;
@@ -70,28 +71,20 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
 		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
-		float RawDistance = TrainingEnvSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
-
-		float NormalisedDistance = RawDistance / TrainingEnvSplineComponent->GetSplineLength();
-
-		//Looking 500 units ahead of the agents position to help them make turns.
-		float FutureDistance = FMath::Fmod(RawDistance + 250.0f, TrainingEnvSplineComponent->GetSplineLength());
-		FVector FutureDir = TrainingEnvSplineComponent->GetDirectionAtDistanceAlongSpline(FutureDistance, ESplineCoordinateSpace::World);
-
 		//float RightDot = FVector::DotProduct(Enemy->GetActorRightVector(), PlayerDir);
 		float EnemyTurnValue = Enemy->getTurnValue();
 
 		//The enemy is sometimes turning the long way to see the player. We need to punish that.
-		if ((RelativeDir.Y > 0 && EnemyTurnValue < -0.1f) || (RelativeDir.Y < 0 && EnemyTurnValue > 0.1f))
-		{
-			TotalReward -= 2.0f;
-		}
+		//if ((RelativeDir.Y > 0 && EnemyTurnValue < -0.1f) || (RelativeDir.Y < 0 && EnemyTurnValue > 0.1f))
+		//{
+		//	TotalReward -= 2.0f;
+		//}
 
-		if (FMath::Abs(EnemyTurnValue) > 0.5f && !Enemy->getSeePlayer())
-		{
-			// The faster they spin, the more it hurts.
-			TotalReward -= (FMath::Abs(EnemyTurnValue) * 50.0f);
-		}
+		//if (FMath::Abs(EnemyTurnValue) > 0.5f && !Enemy->getSeePlayer())
+		//{
+		//	// The faster they spin, the more it hurts.
+		//	TotalReward -= (FMath::Abs(EnemyTurnValue) * 5.0f);
+		//}
 		
 		if (Enemy->getSeePlayer() == true)
 		{
@@ -108,31 +101,24 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 		if (CurrentState == EAgentState::Patrolling)
 		{
-			TotalReward += 2.0f;
-			if (FMath::Abs(EnemyTurnValue) > 0.2f)
-			{
-				TotalReward -= 1.0f; // Punish 'wiggly' turning 5
-			}
-
-			if (Enemy->getEnemyShootValue() > 0.1f)
-			{
-				TotalReward -= 10.0f; // Heavy punishment for shooting on patrol 50
-			}
-
-			//float FutureAlignment = FVector::DotProduct(Enemy->GetActorForwardVector(), FutureDir);
-
-			//if (FutureAlignment < 0.98f)
+			//TotalReward += 2.0f;
+			//if (FMath::Abs(EnemyTurnValue) > 0.2f)
 			//{
-			//	// Reward them for starting to rotate toward the upcoming turn
-			//	TotalReward += (1.0f - FutureAlignment) * 50.0f;
+			//	TotalReward -= 1.0f; // Punish 'wiggly' turning 5
 			//}
+
+			//if (Enemy->getEnemyShootValue() > 0.1f)
+			//{
+			//	TotalReward -= 10.0f; // Heavy punishment for shooting on patrol 50
+			//}
+
 
 			//TotalReward = 0.0f;
 			//Following Spline
 			//Reward the character for being close to the spline. I am using a gaussian distribution for the reward as to not give them a harsh punishment if they step off the spline.
 			//Also this will need to change when I want the enemy to be chasing the player.
 			//Max Reward Possible is about 0.7f.
-			TotalReward += 20.0f * FMath::Exp(-0.1f * DistanceToPath);
+			TotalReward += 2.0f * FMath::Exp(-0.1f * DistanceToPath);
 			//TotalReward += 0.175f * FMath::Exp(-0.01f * DistanceToPath);
 
 			if (DistanceToPath > 175.0f) // If more than 225 units off the line
@@ -146,7 +132,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			TotalReward += SpeedReward;*/
 			//TotalReward += (0.2f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
 			float ForwardMotion = FVector::DotProduct(Enemy->GetActorForwardVector(), Enemy->GetVelocity().GetSafeNormal());
-			float SpeedReward = (NormalizedVelocity * 15.0f) * FMath::Max(0.0f, ForwardMotion);
+			float SpeedReward = (NormalizedVelocity * 1.5f) * FMath::Max(0.0f, ForwardMotion);
 			TotalReward += SpeedReward;
 
 			////Facing the correct direction
@@ -155,34 +141,34 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			TotalReward += 2.0f * CharAlignment;
 			//TotalReward += 0.25f * CharAlignment;
 
-			if (CharAlignment < 0.8f) // If they are looking more than ~36 degrees away from the path
-			{
-				// Punish them more the further they look away
-				// A flat penalty (-10.0) combined with a scaling penalty
-				TotalReward -= 5.0f + (1.0f - CharAlignment);
-			}
+			//if (CharAlignment < 0.8f) // If they are looking more than ~36 degrees away from the path
+			//{
+			//	// Punish them more the further they look away
+			//	// A flat penalty (-10.0) combined with a scaling penalty
+			//	TotalReward -= 5.0f + (1.0f - CharAlignment);
+			//}
 
 
-			if (CharAlignment < 0.85f && NormalizedVelocity > 0.4f)
-			{
-				// Punish specifically for 'Full Throttle' during a turn
-				TotalReward -= (NormalizedVelocity * 25.0f);
-				//TotalReward -= 2.0f;
-			}
+			//if (CharAlignment < 0.85f && NormalizedVelocity > 0.4f)
+			//{
+			//	// Punish specifically for 'Full Throttle' during a turn
+			//	TotalReward -= (NormalizedVelocity * 25.0f);
+			//	//TotalReward -= 2.0f;
+			//}
 
-			TotalReward = 0.0f;
+			//TotalReward = 0.0f;
 
-			if (DistanceToPath > 175.0f) // If more than 225 units off the line
-			{
-				TotalReward -= 15.0f; //50
-			}
+			//if (DistanceToPath > 175.0f) // If more than 225 units off the line
+			//{
+			//	TotalReward -= 15.0f; //50
+			//}
 		}
 
 		else if (CurrentState == EAgentState::SeeingPlayer)
 		//if (CurrentState == EAgentState::SeeingPlayer)
 		{
 			//GLog->Log(TEXT("Seeing player"));
-			TotalReward += 1.0f;
+			//TotalReward += 1.0f;
 			//UE_LOG(LogTemp, Warning, TEXT("Agent: %d can see the player"), AgentId);
 			//We reward the agents proportionally to how much they are facing the player when they see them.
 			TotalReward += PlayerAlignment * 1.0f;
@@ -193,12 +179,29 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 				//TotalReward += 10.0f;
 			}
 
+			FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
+			FVector MuzzleForward = Weapon->getMesh()->GetSocketRotation(TEXT("BulletSpawn")).Vector();
+
+			// 2. Get the Direction to the Player
+			FVector TargetLocation = TargetToFollow->GetActorLocation();
+			FVector DirToTarget = (PlayerLoc - MuzzleLocation).GetSafeNormal();
+
+			// 3. Calculate Gun Alignment (Dot Product)
+			// 1.0 = Perfect Aim, 0.0 = 90 degrees off, -1.0 = Facing away
+			float GunAlignment = FVector::DotProduct(MuzzleForward, DirToTarget);
+			GunAlignment = FMath::Clamp(GunAlignment, 0.0f, 1.0f); // We only care about the front 180 degrees
+
+			// 4. Apply the Reward
+			// We use a Power function (square) so the reward gets exponentially 
+			// stronger as they get closer to a perfect shot.
+			TotalReward += FMath::Pow(GunAlignment, 2) * 10.0f;
+
 			if (Enemy->getIsAimed())
 			{
 				// High reward for having the GUN on target. 
 				// This is the only one that should trigger the 'Stillness' bonus.
 				TotalReward += 40.0f;
-				TotalReward += (1.0f - FMath::Abs(EnemyTurnValue)) * 15.0f;
+				TotalReward += (1.0f - FMath::Abs(EnemyTurnValue)) * 1.5f;
 			}
 
 			//Rewards for when the enemy is being precise.
@@ -468,7 +471,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 	if (TargetToFollow && TrainingEnvSplineComponent)
 	{
 		//0.7f
-		float SpawnChance = 0.4f;
+		float SpawnChance = 1.0f;
 		float Roll = FMath::FRand(); // Returns 0.0 to 1.0
 
 		if (Roll <= SpawnChance)
