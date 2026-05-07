@@ -124,5 +124,6 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	
+	float VisionTimer = 0.0f;
+	float VisionRetentionDuration = 0.5f;
 };

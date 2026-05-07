@@ -23,7 +23,7 @@ protected:
 	UPROPERTY()
 	ASplineController* SplineController;
 	float CurrentDistance;
-	float Speed = 00.0f;
+	float Speed = 250.0f;
 	FVector Location;
 	float DirectionMultiplier;
 	bool bHide = false;

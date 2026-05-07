@@ -80,11 +80,12 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		//	TotalReward -= 2.0f;
 		//}
 
-		//if (FMath::Abs(EnemyTurnValue) > 0.5f && !Enemy->getSeePlayer())
-		//{
-		//	// The faster they spin, the more it hurts.
-		//	TotalReward -= (FMath::Abs(EnemyTurnValue) * 5.0f);
-		//}
+		if (FMath::Abs(EnemyTurnValue) > 0.f && !Enemy->getSeePlayer())
+		{
+			// The faster they spin, the more it hurts.
+			//TotalReward -= 50.0f;
+			//UE_LOG(LogTemp, Error, TEXT("360 penalty"));
+		}
 		
 		if (Enemy->getSeePlayer() == true)
 		{
@@ -121,9 +122,10 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			TotalReward += 2.0f * FMath::Exp(-0.1f * DistanceToPath);
 			//TotalReward += 0.175f * FMath::Exp(-0.01f * DistanceToPath);
 
-			if (DistanceToPath > 175.0f) // If more than 225 units off the line
+			if (DistanceToPath > 250.0f) // If more than 225 units off the line
 			{
 				TotalReward -= 15.0f; //50
+				UE_LOG(LogTemp, Error, TEXT("Distance penalty"));
 			}
 
 			////Going fast.
@@ -181,19 +183,11 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 			FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
 			FVector MuzzleForward = Weapon->getMesh()->GetSocketRotation(TEXT("BulletSpawn")).Vector();
-
-			// 2. Get the Direction to the Player
-			FVector TargetLocation = TargetToFollow->GetActorLocation();
 			FVector DirToTarget = (PlayerLoc - MuzzleLocation).GetSafeNormal();
 
-			// 3. Calculate Gun Alignment (Dot Product)
-			// 1.0 = Perfect Aim, 0.0 = 90 degrees off, -1.0 = Facing away
 			float GunAlignment = FVector::DotProduct(MuzzleForward, DirToTarget);
 			GunAlignment = FMath::Clamp(GunAlignment, 0.0f, 1.0f); // We only care about the front 180 degrees
 
-			// 4. Apply the Reward
-			// We use a Power function (square) so the reward gets exponentially 
-			// stronger as they get closer to a perfect shot.
 			TotalReward += FMath::Pow(GunAlignment, 2) * 10.0f;
 
 			if (Enemy->getIsAimed())
@@ -201,22 +195,29 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 				// High reward for having the GUN on target. 
 				// This is the only one that should trigger the 'Stillness' bonus.
 				TotalReward += 40.0f;
-				TotalReward += (1.0f - FMath::Abs(EnemyTurnValue)) * 1.5f;
+				TotalReward += (1.0f - FMath::Abs(EnemyTurnValue)) * 0.5f;
+
+				/*if (FMath::Abs(EnemyTurnValue) > 0.5f)
+				{
+					TotalReward -= 5.0f;
+					UE_LOG(LogTemp, Warning, TEXT("Turning whilst aimed penalty"));
+				}*/
 			}
 
 			//Rewards for when the enemy is being precise.
-			if ((RelativeDir.Y > 0 && EnemyTurnValue > 0.1f) || (RelativeDir.Y < 0 && EnemyTurnValue < -0.1f))
+			if ((RelativeDir.Y > 0 && EnemyTurnValue > 0.01f) || (RelativeDir.Y < 0 && EnemyTurnValue < -0.01f))
 			{
 				// Pay them for moving the joystick the RIGHT way
-				TotalReward += 5.0f;
+				TotalReward += 1.0f;
 			}
 
 			//Velocity. Punish the enemies for going fast and ignoring the player. The velocity should be 0 when they see the player.
 			//I am currently testing this idea. I may want them to move when they see the player later.
 			float SpeedPct = RewardCharacter->GetVelocity().Size() / MaxSpeed;
-			if (SpeedPct > 0.01f)
+			if (SpeedPct > 0.1f)
 			{
-				TotalReward -= (SpeedPct * 60.0f);
+				TotalReward -= (SpeedPct * 20.0f);
+				UE_LOG(LogTemp, Warning, TEXT("Movement seeing player penalty"));
 			}
 
 
@@ -230,7 +231,9 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 				else
 				{
-					TotalReward -= (20.0f * Enemy->getEnemyShootValue());
+					//TotalReward -= (20.0f * Enemy->getEnemyShootValue());
+					TotalReward -= 0.1f;
+					//UE_LOG(LogTemp, Warning, TEXT("Not shooting penalty"));
 				}
 			}
 
@@ -254,7 +257,9 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 				else
 				{
-					TotalReward -= 20.0f;
+					//TotalReward -= 20.0f;
+					TotalReward -= 0.1f;
+					//UE_LOG(LogTemp, Warning, TEXT("Reloading when high"));
 				}
 			}
 			
@@ -263,6 +268,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			if (Enemy->getAmmoPercent() <= 0.0f)
 			{
 				TotalReward -= 30.0f;
+				UE_LOG(LogTemp, Warning, TEXT("Not reloading at all penalty"));
 			}
 
 
@@ -348,7 +354,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		
 
 		//Terminate the episode if the agent moves further than 0.5m away from the spline.
-		if (DistanceFromPath > 225.0f)
+		if (DistanceFromPath > 300.0f)
 		{
 			OutCompletion = ELearningAgentsCompletion::Termination;
 			UE_LOG(LogTemp, Error, TEXT("Agent %d Went to far from the path"), AgentId);
@@ -423,7 +429,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 
 		//If they lose sight of the player they have failed the episode.
 		float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
-		if (DistanceToPlayer > 3000.0f) //|| bSeePlayer == false)
+		if (DistanceToPlayer > 7000.0f) //|| bSeePlayer == false)
 		{
 			OutCompletion = ELearningAgentsCompletion::Termination;
 			UE_LOG(LogTemp, Error, TEXT("Agent %d Lost the player"), AgentId);
@@ -471,7 +477,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 	if (TargetToFollow && TrainingEnvSplineComponent)
 	{
 		//0.7f
-		float SpawnChance = 1.0f;
+		float SpawnChance = 0.5f;
 		float Roll = FMath::FRand(); // Returns 0.0 to 1.0
 
 		if (Roll <= SpawnChance)
@@ -485,55 +491,51 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 				
 
 				// Get a random distance along the spline
-				//float RandomDistance = FMath::FRandRange(0.0f, CharAgent->GetSplineController()->getSpline()->GetSplineLength());
-				//TrainingActor->setCurrentDistance(RandomDistance);
-				//FVector RandomLocation = CharAgent->GetSplineController()->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
+				float RandomDistance = FMath::FRandRange(0.0f, CharAgent->GetSplineController()->getSpline()->GetSplineLength());
+				TrainingActor->setCurrentDistance(RandomDistance);
+				FVector RandomLocation = CharAgent->GetSplineController()->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);
 
-				//// Add a slight offset so the player isn't on the line
-				//RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
-				//RandomLocation.Z = EnemyLoc.Z + 50.0f;
+				// Add a slight offset so the player isn't on the line
+				RandomLocation += FVector(FMath::FRandRange(-200.f, 200.f), FMath::FRandRange(-200.f, 200.f), 0.0f);
+				RandomLocation.Z = EnemyLoc.Z + 50.0f;
 
-				//TrainingActor->SetActorLocation(RandomLocation);
+				TrainingActor->SetActorLocation(RandomLocation);
 
 
 				// Distance in front (e.g., 3 to 7 meters)
-				float ForwardDist = FMath::FRandRange(300.0f, 700.0f);
-				// Slight side-to-side randomness (e.g., 2 meters left or right)
-				float SideDist = FMath::FRandRange(-200.0f, 200.0f);
-				float AngleOffset = FMath::FRandRange(-45.0f, 45.0f);
+				//float ForwardDist = FMath::FRandRange(400.0f, 800.0f); // 4-8 meters ahead
+				//float SideDist = FMath::FRandRange(-300.0f, 300.0f);    // 3 meters left or right
 
-				FVector SpawnLoc = EnemyLoc + (EnemyFwd * ForwardDist) + (EnemyRight * AngleOffset);
+				//// 2. Calculate the World Location
+				//// We take the agent's position, move forward, then move right (or left if SideDist is negative)
+				//FVector SpawnLoc = EnemyLoc + (EnemyFwd * ForwardDist) + (EnemyRight * SideDist);
 
-				// Ensure they aren't spawning inside the floor (match eye height)
-				SpawnLoc.Z = EnemyLoc.Z + 80.0f;
+				//// 3. Match Height
+				//// Ensure they spawn at the same level as the agent (plus height adjustment)
+				//SpawnLoc.Z = EnemyLoc.Z + 20.0f;
 
-				USplineComponent* Spline = CharAgent->GetSplineController()->getSpline();
-				float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(SpawnLoc);
-				float DistanceOnSpline = Spline->GetDistanceAlongSplineAtSplineInputKey(ClosestKey);
+				//// 4. Update the Training Actor
+				//if (TrainingActor)
+				//{
+				//	// Randomize movement direction
+				//	float DirectionMultiplier = (FMath::FRand() > 0.5f) ? 1.0f : -1.0f;
+				//	TrainingActor->setDirectionMultiplier(DirectionMultiplier);
 
-				FVector SplineSpawnLoc = Spline->GetLocationAtDistanceAlongSpline(DistanceOnSpline, ESplineCoordinateSpace::World);
-				SplineSpawnLoc.Z += 120.0f;
+				//	// Set the location
+				//	TrainingActor->SetActorLocation(SpawnLoc);
 
-				float DirectionChance = FMath::FRand();
-				if (DirectionChance > 0.5f)
-				{
-					TrainingActor->setDirectionMultiplier(-1.0f);
-				}
-
-				else
-				{
-					TrainingActor->setDirectionMultiplier(1.0f);
-				}
-
-				TrainingActor->SetActorLocation(SplineSpawnLoc);
-				TrainingActor->setCurrentDistance(DistanceOnSpline);
+				//	// Optional: Rotate the sphere to face the agent so it's ready to be 'seen'
+				//	FRotator LookAtRot = (EnemyLoc - SpawnLoc).Rotation();
+				//	TrainingActor->SetActorRotation(LookAtRot);
+				//}
+				////TrainingActor->setCurrentDistance(DistanceOnSpline);
 
 
 
 
 				//float InFrontSpawnChance = FMath::FRand();
 				//float AngleOffset;
-			
+
 				////Spawns training actor infront pf agent
 				//if (InFrontSpawnChance < 0.7f)
 				//{
@@ -585,21 +587,19 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 				//FVector DesiredLoc = EnemyLoc + (SpawnDir * Dist);
 				////DesiredLoc.Z = EnemyLoc.Z + 60.0f;
 
-				////Snap to Spline
 				//USplineComponent* Spline = CharAgent->GetSplineController()->getSpline();
 				//float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(DesiredLoc);
 				//float DistanceOnSpline = Spline->GetDistanceAlongSplineAtSplineInputKey(ClosestKey);
-				//FVector Location = Spline->GetLocationAtDistanceAlongSpline(DistanceOnSpline, ESplineCoordinateSpace::World);
-				//Location.Z += 120.0f;
+				//FVector FinalSpawnLoc = Spline->GetLocationAtDistanceAlongSpline(DistanceOnSpline, ESplineCoordinateSpace::World);
+				//FinalSpawnLoc.Z = EnemyLoc.Z + 50.0f;
 
-				//TrainingActor->SetActorLocation(Location);
+				//TrainingActor->SetActorLocation(FinalSpawnLoc);
 				//TrainingActor->setCurrentDistance(DistanceOnSpline);
 				
 			}
 
 			else
 			{
-
 				// Get a random distance along the spline
 				float RandomDistance = FMath::FRandRange(0.0f, CharAgent->GetSplineController()->getSpline()->GetSplineLength());
 				FVector RandomLocation = CharAgent->GetSplineController()->getSpline()->GetLocationAtDistanceAlongSpline(RandomDistance, ESplineCoordinateSpace::World);

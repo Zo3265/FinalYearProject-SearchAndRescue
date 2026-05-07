@@ -159,7 +159,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 					FinalLineColor = FColor::Red;
 				}
 
-				/*DrawDebugLine(
+				DrawDebugLine(
 					GetWorld(),
 					ActorLocation + FVector(0, 0, 50),
 					PlayerLoc + FVector(0, 0, 50),
@@ -168,10 +168,28 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 					0.1f,
 					0,
 					2.0f
-				);*/
+				);
 			}
 
-			Enemy->setSeePlayer(bInRange && bInVisionCone && bHasLineOfSight);
+			if (bHasLineOfSight)
+			{
+				// If we see them, reset the timer to max
+				Enemy->VisionTimer = Enemy->VisionRetentionDuration;
+				Enemy->setSeePlayer(true);
+			}
+			else
+			{
+				// If we DON'T see them, count down
+				if (Enemy->VisionTimer > 0.0f)
+				{
+					Enemy->VisionTimer -= GetWorld()->GetDeltaSeconds();
+					Enemy->setSeePlayer(true); // Still "True" because of the buffer!
+				}
+				else
+				{
+					Enemy->setSeePlayer(false); // Finally "False" after 0.5s
+				}
+			}
 
 		//}
 
@@ -221,36 +239,6 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			Enemy->setIsAimed(false);
 		}
 
-		// Optional: Debug Text for the Gun
-		/*if (GEngine) {
-			GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Orange, FString::Printf(TEXT("Gun Alignment: %.4f"), GunDot));
-		}*/
-
-		//FHitResult AimHit;
-		//FCollisionQueryParams Params;
-		//Params.AddIgnoredActor(Enemy);
-		//Params.AddIgnoredActor(Weapon);
-
-		//bool bAimHit = GetWorld()->LineTraceSingleByChannel(
-		//	AimHit,
-		//	MuzzleLocation,
-		//	TraceEnd,
-		//	ECC_Visibility,
-		//	Params
-		//);
-		////UE_LOG(LogTemp, Warning, TEXT("AimHit is: %s"), bAimHit ? TEXT("true") : TEXT("false"));
-		//UE_LOG(LogTemp, Warning, TEXT("AimHit Target is: %s"), AimHit.GetActor()->IsA(AMyActor::StaticClass()) ? TEXT("true") : TEXT("false"));
-
-
-		/*if (bAimHit == true && AimHit.GetActor() == TargetToFollow)
-		{
-			Enemy->setIsAimed(true);
-		}
-
-		else
-		{
-			Enemy->setIsAimed(false);
-		}*/
 
 		//I want the enemies to lead their shots so we need to know the players speed and direction.
 		//Similar math as before but with velocities instead.
@@ -282,6 +270,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		if (Enemy->getSeePlayer())
 		{
 			ObservationDir = RelativeDir;
+			NormalisedDistance = 0.0f;
+			LocalFutureDir = FVector(1, 0, 0);
 		}
 		else
 		{
@@ -363,6 +353,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		ULearningAgentsActions::GetFloatAction(ReloadValue, InActionObject, ActionObjectMap[TEXT("ReloadAction")]);
 		
 		//UE_LOG(LogTemp, Warning, TEXT("Turn value: %f"), TurnValue);
+		//TurnValue = FMath::Clamp(TurnValue, -1.0f, 1.0f);
 		Enemy->setTurnValue(TurnValue);
 		float RotationChange = TurnValue * TurnSensitivity * GetWorld()->GetDeltaSeconds();
 		FRotator CurrentRot = Enemy->GetActorRotation();
@@ -370,7 +361,11 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		TargetRot.Yaw += RotationChange;
 		TargetRot.Normalize();
 		FRotator SmoothedRotation = FMath::RInterpConstantTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), TurnSensitivity);
-		Enemy->SetActorRotation(TargetRot);
+		//Enemy->SetActorRotation(TargetRot);
+
+		ShootValue = FMath::Clamp(ShootValue, 0.0f, 1.0f);
+		ReloadValue = FMath::Clamp(ReloadValue, 0.0f, 1.0f);
+		
 		Enemy->setEnemyShootValue(ShootValue);
 		Enemy->setEnemyReloadValue(ReloadValue);
 
@@ -385,12 +380,12 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		
 		if (ActionObjectMap.Contains(TEXT("ReloadAction")) && ActionObjectMap.Contains(TEXT("ShootAction")))
 		{
-			if (ShootValue > 0.5f)
+			if (ShootValue >= 0.45f)
 			{
 				bShooting = true;
 			}
 
-			if (ReloadValue > 0.5f)
+			if (ReloadValue >= 0.45f)
 			{
 				bReloading = true;
 			}
@@ -400,101 +395,74 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		{
 			UE_LOG(LogTemp, Error, TEXT("Actions dont exist"));
 		}
-		
-		if (Enemy->getSeePlayer() || Enemy->GetVelocity().Size() > 10.0f)
-		{
-			Enemy->setIdleTimer(0.0f);
-		}
-		else
-		{
-			// If they are standing still and see nothing, increase the timer
-			float CurrentTime = Enemy->getIdleTimer();
-			Enemy->setIdleTimer(CurrentTime + GetWorld()->GetDeltaSeconds());
-		}
 
-		//Enemy->setSeePlayer(true);
+		float FinalTurnInput = 0.0f;
+		float FinalForwardInput = ForwardValue; // Keep the brain's forward intent
+
 		if (Enemy->getSeePlayer())
 		{
+			// 1. COMBAT AUTO-PILOT
+			// Force Stop
 			Enemy->GetMovementComponent()->StopMovementImmediately();
 			Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
-			ForwardValue = 0.0f;
-			//FVector MuzzleLoc = FVector::ZeroVector;
-			//if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
-			//{
-			//	// Replace "Muzzle" with the actual name of the socket on your Gun Mesh
-			//	MuzzleLoc = Sniper->getMesh()->GetSocketLocation(TEXT("Muzzle"));
-			//}
-			//else
-			//{
-			//	// Fallback to eye height if weapon mesh is missing
-			//	MuzzleLoc = Enemy->GetActorLocation() + FVector(0, 0, 60);
-			//}
+			FinalForwardInput = 0.0f;
 
-			//// 2. Get Target Location
-			//FVector TargetLoc = Enemy->getTrainingTarget()->GetActorLocation();
+			// Calculate Perfect Aim
+			FVector MuzzleLoc = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
+			FVector TargetLoc = Enemy->getTrainingTarget()->GetActorLocation();
+			FRotator AimRot = (TargetLoc - MuzzleLoc).Rotation();
 
-			//// 3. Calculate the Direction the GUN needs to face
-			//FVector AimDir = (TargetLoc - MuzzleLoc).GetSafeNormal();
-			//FRotator AimRot = AimDir.Rotation();
+			// Smoothly rotate toward target
+			FRotator CurrentRotShoot = Enemy->GetActorRotation();
+			FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, AimRot, GetWorld()->GetDeltaSeconds(), 50.0f);
 
-			//// 4. Correct for the Character's Actor Rotation
-			//// Characters rotate their whole body. We need to find the Actor Yaw that 
-			//// puts the Muzzle on a line with the Target.
-			//CurrentRot = Enemy->GetActorRotation();
+			NewRot.Pitch = 0.0f; // Keep actor upright
+			NewRot.Roll = 0.0f;
+			Enemy->SetActorRotation(NewRot);
 
-			//// We only want the YAW (left/right) for the character body
-			//FRotator NewRot = FMath::RInterpTo(CurrentRot, AimRot, GetWorld()->GetDeltaSeconds(), 25.0f);
-			//NewRot.Pitch = 0.0f;
-			//NewRot.Roll = 0.0f;
-
-			//Enemy->SetActorRotation(NewRot);
-
-			if (bShooting == true)
-			{
-				if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
-				{
-					if(Sniper->getCoolDown() <= 0.0f) { Sniper->SniperFire(); }
-					
-				}
+			// If we are perfectly aimed, force the shoot value to 1.0
+			if (Enemy->getIsAimed()) { 
+				ShootValue = 1.0f; 
 			}
 
-			if (bReloading == true && Weapon->getReloading() == false)
-			{
-				Weapon->Reload();
-			}
-			//UE_LOG(LogTemp, Warning, TEXT("Turn Value: %f"), TurnValue);
 			
 		}
 		else
 		{
-			//UE_LOG(LogTemp, Warning, TEXT("Agent %d - Forward: %f, Turn: %f"), AgentId, ForwardValue, TurnValue);
-			//ForwardValue = FMath::Max(0.0f, 1.0f);
-			
-			//USplineComponent* Spline = InteractorSplineComponent;
+			// 2. PATROL AUTO-PILOT
+			USplineComponent* Spline = InteractorSplineComponent;
+			float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(Enemy->GetActorLocation());
+			FVector PathDir = Spline->GetDirectionAtSplineInputKey(ClosestKey, ESplineCoordinateSpace::World);
+			FRotator IdealRot = PathDir.Rotation();
 
-			//// 2. Find where THIS agent is on the spline right now
-			//FVector MyLocation = Enemy->GetActorLocation();
-			//float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(MyLocation);
+			// Smoothly rotate to follow the track
+			FRotator CurrentRotPatrol = Enemy->GetActorRotation();
+			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
 
-			//// 3. Get the direction the track is going at THIS specific spot
-			//FVector TargetDirection = Spline->GetDirectionAtSplineInputKey(ClosestKey, ESplineCoordinateSpace::World);
+			NewRot.Pitch = 0.0f;
+			NewRot.Roll = 0.0f;
+			Enemy->SetActorRotation(NewRot);
 
-			//// 4. Convert that direction into a Rotator
-			//TargetRot = TargetDirection.Rotation();
+			// Use the brain's forward value (or force 1.0 to get them moving)
+			FinalForwardInput = FMath::Max(0.5f, ForwardValue);
 
-			//// 5. Apply the rotation smoothly
-			//CurrentRot = Enemy->GetActorRotation();
-			//FRotator NewRot = FMath::RInterpTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), 10.0f);
+			// 3. APPLY PHYSICAL MOVEMENT
+			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+		}
 
-			//// Only change the Yaw (don't tilt them up or down)
-			//NewRot.Pitch = 0.0f;
-			//NewRot.Roll = 0.0f;
 
-			//Enemy->SetActorRotation(NewRot);
+		if (ShootValue >= 0.45f)
+		{
+			if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
+			{
+				if (Sniper->getCoolDown() <= 0.0f) { Sniper->SniperFire(); }
 
-			//Move the character forward and turn them using the character classes regular functions.
-			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), ForwardValue);
-			
+			}
+		}
+		
+		if (ReloadValue >= 0.45f && Weapon->getReloading() == false)
+		{
+			Weapon->Reload();
 		}
 	}
 }
