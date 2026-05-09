@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.SearchAndRescue.cpp.obj": [
+			"AssaultRifle.gen.cpp.obj",
 			"BTEnemyAIControllerBase.gen.cpp.obj",
 			"BTGrenadeTossTaskNode.gen.cpp.obj",
 			"BTSniperAIController.gen.cpp.obj",
@@ -36,14 +37,15 @@
 			"SplineMovementActor.cpp.obj",
 			"DummyClass.cpp.obj",
 			"SearchAndRescue.cpp.obj",
+			"AssaultRifle.cpp.obj",
 			"BulletBase.cpp.obj",
 			"ExplosiveGrenade.cpp.obj",
 			"GrenadeBase.cpp.obj",
 			"SniperRifle.cpp.obj",
 			"WeaponBase.cpp.obj",
-			"AssaultRifle.gen.cpp.obj",
 			"SearchAndRescue.init.gen.cpp.obj",
-			"AssaultRifle.cpp.obj"
+			"Shotgun.gen.cpp.obj",
+			"Shotgun.cpp.obj"
 		]
 	}
 }

@@ -15,7 +15,7 @@ AAssaultRifle::AAssaultRifle()
 	iMaxAmmoReserve = 180;
 
 	Cooldown = 0.30f;
-	Range = 2500.0f;
+	Range = 5000.0f;
 }
 
 // Called when the game starts or when spawned

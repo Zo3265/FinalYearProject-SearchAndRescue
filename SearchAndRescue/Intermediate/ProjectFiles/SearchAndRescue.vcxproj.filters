@@ -176,6 +176,12 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\GrenadeBase.h">
       <Filter>Source\SearchAndRescue\Weapons</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\Shotgun.cpp">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\Shotgun.h">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\SniperRifle.cpp">
       <Filter>Source\SearchAndRescue\Weapons</Filter>
     </ClCompile>

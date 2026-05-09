@@ -3284,3 +3284,693 @@ Would you like to open the Output Log to see more details?
 [2026.05.09-16.27.10:047][990]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3237.331787
 [2026.05.09-16.27.10:214][999]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2026.05.09-16.27.10:214][  0]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3237.483643, Update Interval: 343.223358
+[2026.05.09-16.32.03:883][389]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.05.09-16.32.33:007][993]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.05.09-16.32.33:210][993]Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-16.32.33:210][993]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.05.09-16.32.34:257][993]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.05.09-16.32.34:659][993]
+[2026.05.09-16.32.34:659][993]Generating VisualStudio2022 project files:
+[2026.05.09-16.32.34:659][993]Discovering modules, targets and source code for project...
+[2026.05.09-16.32.35:062][993]Available x64 toolchains (3):
+[2026.05.09-16.32.35:062][993] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-16.32.35:062][993]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.32.35:062][993] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.32.35:062][993]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.32.35:062][993] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.32.35:062][993]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.32.35:062][993]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-16.32.40:090][993]Binding IntelliSense data...
+[2026.05.09-16.32.45:440][993]Binding IntelliSense data... 100%
+[2026.05.09-16.32.45:440][993]Writing project files...
+[2026.05.09-16.32.49:778][993]Writing project files... 100%
+[2026.05.09-16.32.49:778][993]
+[2026.05.09-16.32.49:778][993]Generating QueryTargets data for editor...
+[2026.05.09-16.32.49:778][993]Total execution time: 16.48 seconds
+[2026.05.09-16.32.50:186][993]LogVSAccessor: Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2026.05.09-16.32.50:186][993]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2026.05.09-16.32.50:198][993]Candidate modules for hot reload:
+[2026.05.09-16.32.50:198][993]  SearchAndRescue
+[2026.05.09-16.32.50:206][993]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,4333 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,4333 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (source file added)
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Available x64 toolchains (3):
+[2026.05.09-16.33.05:200][993]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-16.33.05:200][993]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.33.05:200][993]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.33.05:200][993]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.33.05:200][993]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.33.05:200][993]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-16.33.05:200][993]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.05.09-16.33.05:201][993]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Total of 3 written
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 4.7763647 seconds
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: Shotgun.cpp
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-16.33.05:201][993]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.05.09-16.33.05:201][993]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: ---- Starting trace: 260509_173259 ----
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [1/5] Compile [x64] Shotgun.cpp
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source\SearchAndRescue\Weapons\Shotgun.cpp(4): fatal error C1083: Cannot open include file: 'Weapons/Shotgun.h': No such file or directory
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: [2/5] Compile [x64] Module.SearchAndRescue.cpp
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source\SearchAndRescue\Weapons\Shotgun.h(6): fatal error C1083: Cannot open include file: 'Weapons/WeaponBase.h': No such file or directory
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.0kb
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 5.53 seconds
+[2026.05.09-16.33.05:201][993]CompilerResultsLog: Total execution time: 14.62 seconds
+[2026.05.09-16.33.05:201][993]LogMainFrame: MainFrame: Module compiling took 15.013 seconds
+[2026.05.09-16.33.05:201][993]Warning: HotReload failed, recompile failed
+[2026.05.09-16.33.05:201][993]Warning: RebindPackages failed because compilation failed.
+[2026.05.09-16.34.47:768][993]LogSlate: Window 'Message' being destroyed
+[2026.05.09-16.34.47:790][993]Message dialog closed, result: No, title: Message, text: Successfully added class 'Shotgun', however you must recompile the 'SearchAndRescue' module before it will appear in the Content Browser. Failed to automatically hot reload the 'SearchAndRescue' module.
+
+Would you like to open the Output Log to see more details?
+[2026.05.09-16.34.47:790][993]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.05.09-16.34.47:835][996]LogRHI: Error: GpuProfiler's scratch buffer is out of space for this frame (current size : 32 kB). Dropping this frame. The size can be increased dynamically with the console variable r.GpuProfilerMaxEventBufferSizeKB
+[2026.05.09-16.34.49:967][ 35]Candidate modules for hot reload:
+[2026.05.09-16.34.49:967][ 35]  SearchAndRescue
+[2026.05.09-16.34.49:979][ 35]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,6939 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-16.34.49:990][ 35]Warning: Starting HotReload took  0.4s.
+[2026.05.09-16.34.59:141][553]LogDerivedDataCache: C:/Users/zohai/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,6939 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (working set of source files changed)
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog: Available x64 toolchains (3):
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-16.35.08:235][ 97]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: Total of 0 written
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 4.3289376 seconds
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.35.08:235][ 98]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: Shotgun.cpp, SearchAndRescue.init.gen.cpp, Shotgun.gen.cpp
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 7 action(s)
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: ---- Starting trace: 260509_173458 ----
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: ------ Building 7 action(s) started ------
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [1/7] Compile [x64] Shotgun.gen.cpp
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source\SearchAndRescue\Weapons\Shotgun.h(6): fatal error C1083: Cannot open include file: 'SeachAndRescue/Weapons/WeaponBase.h': No such file or directory
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [2/7] Compile [x64] Shotgun.cpp
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source\SearchAndRescue\Weapons\Shotgun.h(6): fatal error C1083: Cannot open include file: 'SeachAndRescue/Weapons/WeaponBase.h': No such file or directory
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [3/7] Compile [x64] SearchAndRescue.init.gen.cpp
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: [4/7] Compile [x64] Module.SearchAndRescue.cpp
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.8kb
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 9.04 seconds
+[2026.05.09-16.35.08:236][ 98]CompilerResultsLog: Total execution time: 17.84 seconds
+[2026.05.09-16.35.08:236][ 98]LogMainFrame: MainFrame: Module compiling took 18.289 seconds
+[2026.05.09-16.35.08:236][ 98]Warning: HotReload failed, recompile failed
+[2026.05.09-16.35.20:825][784]Candidate modules for hot reload:
+[2026.05.09-16.35.20:825][784]  SearchAndRescue
+[2026.05.09-16.35.20:835][784]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,2671 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-16.35.20:846][784]Warning: Starting HotReload took  0.1s.
+[2026.05.09-16.35.34:136][104]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-16.35.34:136][104]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,2671 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-16.35.34:136][104]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-16.35.34:136][104]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-16.35.34:136][104]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.05.09-16.35.34:136][104]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.05.09-16.35.34:136][104]CompilerResultsLog: Total of 0 written
+[2026.05.09-16.35.34:136][104]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 5.0877606 seconds
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: Shotgun.cpp, SearchAndRescue.init.gen.cpp, Shotgun.gen.cpp
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-16.35.34:137][104]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.05.09-16.35.34:137][104]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: ---- Starting trace: 260509_173528 ----
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [1/5] Compile [x64] Shotgun.cpp
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [2/5] Compile [x64] Shotgun.gen.cpp
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [3/5] Link [x64] UnrealEditor-SearchAndRescue-2671.lib
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [4/5] Link [x64] UnrealEditor-SearchAndRescue-2671.dll
+[2026.05.09-16.35.34:137][104]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-2671.exp
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: [5/5] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.6kb
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 5.76 seconds
+[2026.05.09-16.35.34:137][104]CompilerResultsLog: Total execution time: 12.96 seconds
+[2026.05.09-16.35.34:137][104]LogMainFrame: MainFrame: Module compiling took 13.370 seconds
+[2026.05.09-16.35.34:177][104]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2026.05.09-16.35.34:287][104]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.05.09-16.35.34:341][104]LogClass: Could not find existing class Shotgun in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.05.09-16.35.34:624][104]LogUObjectHash: Compacting FUObjectHashTables data took   1.59ms
+[2026.05.09-16.35.34:656][104]Display: HotReload took 13.9s.
+[2026.05.09-16.35.34:656][104]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 19 classes unchanged, 1 enum unchanged, 8 functions remapped
+[2026.05.09-16.35.37:703][238]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3745.000488
+[2026.05.09-16.35.37:873][248]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.35.37:873][248]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3745.151611, Update Interval: 356.171143
+[2026.05.09-16.36.00:027][158]Candidate modules for hot reload:
+[2026.05.09-16.36.00:027][158]  SearchAndRescue
+[2026.05.09-16.36.00:038][158]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,1186 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-16.36.00:050][158]Warning: Starting HotReload took  0.1s.
+[2026.05.09-16.36.00:897][170]LogUObjectHash: Compacting FUObjectHashTables data took   2.29ms
+[2026.05.09-16.36.03:738][170]LogSlate: Window 'Save Content' being destroyed
+[2026.05.09-16.36.03:759][170]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.36.03:864][170]LogUObjectHash: Compacting FUObjectHashTables data took   1.97ms
+[2026.05.09-16.36.03:895][170]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2026.05.09-16.36.03:916][170]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2026.05.09-16.36.03:935][170]LogFileHelpers: InternalPromptForCheckoutAndSave took 175.198 ms (total: 3.09 sec)
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,1186 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: Shotgun.cpp, SearchAndRescue.init.gen.cpp, Shotgun.gen.cpp
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-16.36.03:950][170]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 3 action(s)
+[2026.05.09-16.36.03:950][170]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: ---- Starting trace: 260509_173601 ----
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: ------ Building 3 action(s) started ------
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [1/3] Link [x64] UnrealEditor-SearchAndRescue-1186.lib
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [2/3] Link [x64] UnrealEditor-SearchAndRescue-1186.dll
+[2026.05.09-16.36.03:950][170]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-1186.exp
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: [3/3] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 2.9kb
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 1.40 seconds
+[2026.05.09-16.36.03:950][170]CompilerResultsLog: Total execution time: 2.96 seconds
+[2026.05.09-16.36.03:950][170]LogMainFrame: MainFrame: Module compiling took 3.959 seconds
+[2026.05.09-16.36.03:973][170]LogUObjectHash: Compacting FUObjectHashTables data took   0.59ms
+[2026.05.09-16.36.04:202][170]LogUObjectHash: Compacting FUObjectHashTables data took   1.09ms
+[2026.05.09-16.36.04:226][170]Display: HotReload took  4.2s.
+[2026.05.09-16.36.04:227][170]Display: Reload/Re-instancing Complete: 1 package changed, 20 classes unchanged, 1 enum unchanged, 8 functions remapped
+[2026.05.09-16.42.20:599][458]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4147.898438
+[2026.05.09-16.42.20:748][467]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.42.20:748][468]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4148.031250, Update Interval: 320.750153
+[2026.05.09-16.44.28:410][970]Candidate modules for hot reload:
+[2026.05.09-16.44.28:410][970]  SearchAndRescue
+[2026.05.09-16.44.28:422][970]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,9999 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-16.44.28:435][970]Warning: Starting HotReload took  0.1s.
+[2026.05.09-16.45.07:739][741]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-16.45.07:739][741]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,9999 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-16.45.07:739][741]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-16.45.07:739][741]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-16.45.07:739][741]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (working set of source files changed)
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Available x64 toolchains (3):
+[2026.05.09-16.45.07:740][741]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-16.45.07:740][741]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.45.07:740][741]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.45.07:740][741]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.45.07:740][741]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-16.45.07:740][741]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.05.09-16.45.07:740][741]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Total of 3 written
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 8.3314293 seconds
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-16.45.07:740][741]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [Upgrade]
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: AssaultRifle.cpp, Shotgun.cpp, SniperRifle.cpp, SearchAndRescue.init.gen.cpp, Shotgun.gen.cpp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-16.45.07:741][741]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 9 action(s)
+[2026.05.09-16.45.07:741][741]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: ---- Starting trace: 260509_174444 ----
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: ------ Building 9 action(s) started ------
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [1/9] Compile [x64] SearchAndRescue.init.gen.cpp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [2/9] Compile [x64] Shotgun.cpp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [3/9] Compile [x64] AssaultRifle.cpp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [4/9] Compile [x64] Shotgun.gen.cpp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [5/9] Compile [x64] SniperRifle.cpp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [6/9] Compile [x64] Module.SearchAndRescue.cpp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [7/9] Link [x64] UnrealEditor-SearchAndRescue-9999.lib
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [8/9] Link [x64] UnrealEditor-SearchAndRescue-9999.dll
+[2026.05.09-16.45.07:741][741]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-9999.exp
+[2026.05.09-16.45.07:741][741]CompilerResultsLog: [9/9] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.05.09-16.45.07:742][741]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 5.4kb
+[2026.05.09-16.45.07:742][741]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 23.07 seconds
+[2026.05.09-16.45.07:742][741]CompilerResultsLog: Total execution time: 38.63 seconds
+[2026.05.09-16.45.07:742][741]LogMainFrame: MainFrame: Module compiling took 39.360 seconds
+[2026.05.09-16.45.07:944][741]LogUObjectHash: Compacting FUObjectHashTables data took   4.10ms
+[2026.05.09-16.45.08:031][741]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.05.09-16.45.08:453][741]LogUObjectHash: Compacting FUObjectHashTables data took   1.63ms
+[2026.05.09-16.45.08:486][741]Display: HotReload took 40.1s.
+[2026.05.09-16.45.08:486][741]Display: Reload/Re-instancing Complete: 1 package changed, 20 classes unchanged, 1 enum unchanged, 8 functions remapped
+[2026.05.09-16.45.55:867][660]LogUObjectHash: Compacting FUObjectHashTables data took   2.15ms
+[2026.05.09-16.45.57:484][660]LogSlate: Window 'Delete Assets' being destroyed
+[2026.05.09-16.45.57:801][660]LogWorld: UWorld::CleanupWorld for World_33, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.45.57:801][660]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.45.57:877][660]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet
+	Asset Type: Blueprint
+[2026.05.09-16.45.58:362][660]LogUObjectHash: Compacting FUObjectHashTables data took   1.99ms
+[2026.05.09-16.45.58:395][660]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2026.05.09-16.45.58:423][660]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2026.05.09-16.45.58:471][660]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2026.05.09-16.46.02:697][734]LogContentBrowser: Deferred new asset file creation: BP_BuckShot1
+[2026.05.09-16.46.02:762][734]LogContentBrowser: Creating deferred item: BP_BuckShot1
+[2026.05.09-16.46.02:777][735]LogContentBrowser: Renaming the item being created (Deferred Item: BP_BuckShot1).
+[2026.05.09-16.46.10:967][904]LogContentBrowser: Attempting asset rename: BP_BuckShot1 -> BP_ShotgunBullet
+[2026.05.09-16.46.11:023][904]LogUObjectHash: Compacting FUObjectHashTables data took   2.12ms
+[2026.05.09-16.46.11:059][904]LogContentBrowser: End creating deferred item BP_BuckShot1
+[2026.05.09-16.46.13:800][956]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet
+[2026.05.09-16.46.13:801][956]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_34
+[2026.05.09-16.46.13:802][956]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_34'.
+[2026.05.09-16.46.16:252][988]LogWorld: UWorld::CleanupWorld for World_34, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.46.16:252][988]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.46.16:305][988]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet
+[2026.05.09-16.46.16:306][988]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_35
+[2026.05.09-16.46.16:306][988]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_35'.
+[2026.05.09-16.46.17:023][988]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2026.05.09-16.46.41:060][372]LogStreaming: Display: FlushAsyncLoading(854): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.46.41:060][372]LogStreaming: Warning: LoadPackage: SkipPackage: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet (0x69C9D827386C5063) - The package to load does not exist on disk or in the loader
+[2026.05.09-16.46.41:060][372]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.46.43:703][415]LogStreaming: Display: FlushAsyncLoading(855): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.46.59:270][673]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
+[2026.05.09-16.46.59:442][674]LogStreaming: Display: FlushAsyncLoading(856): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.47.00:484][691]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.47.00:600][691]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.47.00:627][691]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet]
+[2026.05.09-16.47.00:643][691]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C]
+[2026.05.09-16.47.00:644][691]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.47.00:649][691]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.47.00:650][691]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBullet5E8AE38342E5B52D912C49A6A2144D31.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.47.00:674][691]LogFileHelpers: InternalPromptForCheckoutAndSave took 190.268 ms (total: 3.28 sec)
+[2026.05.09-16.47.00:733][691]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.47.00:733][691]LogContentValidation: Enabled validators:
+[2026.05.09-16.47.00:733][691]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.47.00:733][691]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.47.00:733][691]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.47.00:733][691]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.47.00:733][691]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.47.00:733][691]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.47.00:733][691]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.47.03:370][735]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.47.03:370][735]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.47.03:372][735]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_0
+[2026.05.09-16.47.03:373][735]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_0
+[2026.05.09-16.47.04:707][759]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2026.05.09-16.47.04:711][759]LogEditorActor: Deleted 0 Actors (0.038 secs)
+[2026.05.09-16.47.04:719][759]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.47.04:719][759]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.47.04:723][759]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD175D902_1476504905
+[2026.05.09-16.47.04:724][759]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD175D902_1476504905
+[2026.05.09-16.47.21:742][ 20]LogStreaming: Display: FlushAsyncLoading(857): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.47.35:823][232]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.35:823][232]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.35:823][232]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.35:823][232]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.35:829][232]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.35:829][232]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.35:829][232]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.35:829][232]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.35:835][232]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.35:835][232]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.35:835][232]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.35:835][232]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.36:154][233]LogStreaming: Display: FlushAsyncLoading(859): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.47.39:060][275]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.39:060][275]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.39:060][275]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.39:060][275]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.39:065][275]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.39:065][275]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.39:065][275]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.39:066][275]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.39:071][275]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.39:072][275]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.39:072][275]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.39:072][275]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.39:394][276]LogStreaming: Display: FlushAsyncLoading(860): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.47.45:181][362]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.45:181][362]Warning: Unable to find function ChildActor2_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.45:181][362]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.45:181][362]Warning: Unable to find function ChildActor2_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.45:188][362]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.45:189][362]Warning: Unable to find function ChildActor2_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.45:189][362]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.45:189][362]Warning: Unable to find function ChildActor2_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.45:198][362]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.47.45:198][362]Warning: Unable to find function ChildActor2_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.45:198][362]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.47.45:198][362]Warning: Unable to find function ChildActor2_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.47.45:565][363]LogStreaming: Display: FlushAsyncLoading(861): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.47.49:314][418]LogUObjectHash: Compacting FUObjectHashTables data took   1.95ms
+[2026.05.09-16.47.49:745][419]LogStreaming: Display: FlushAsyncLoading(862): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.47.50:076][426]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.47.50:196][426]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.47.50:224][426]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet]
+[2026.05.09-16.47.50:224][426]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.47.50:231][426]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.47.50:232][426]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBullet219827A644F6C73BB4D8998A0FBE5465.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.47.50:254][426]LogFileHelpers: InternalPromptForCheckoutAndSave took 177.719 ms (total: 3.46 sec)
+[2026.05.09-16.47.50:309][426]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.47.50:309][426]LogContentValidation: Enabled validators:
+[2026.05.09-16.47.50:309][426]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.47.50:309][426]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.47.50:309][426]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.47.50:309][426]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.47.50:309][426]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.47.50:309][426]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.47.50:310][426]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.48.01:914][634]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.05.09-16.48.01:930][634]LogContentBundle: [BTAITestMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.05.09-16.48.01:930][634]LogWorldPartition: Display: GenerateStreaming for 'BTAITestMap' started...
+[2026.05.09-16.48.01:933][634]LogWorldPartition: Display: GenerateStreaming for 'BTAITestMap' took 3.206 ms (total: 15.664 ms)
+[2026.05.09-16.48.01:937][634]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.09-16.48.01:937][634]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap
+[2026.05.09-16.48.01:948][634]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010008s)
+[2026.05.09-16.48.01:948][634]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap to /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap (0.010098s)
+[2026.05.09-16.48.02:021][634]LogUObjectHash: Compacting FUObjectHashTables data took   2.75ms
+[2026.05.09-16.48.02:033][634]LogChaosDD: Creating Chaos Debug Draw Scene for world BTAITestMap
+[2026.05.09-16.48.02:035][634]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap'.
+[2026.05.09-16.48.02:035][634]LogWorldPartition: ULevel::OnLevelLoaded(BTAITestMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.05.09-16.48.02:035][634]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.05.09-16.48.02:035][634]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.05.09-16.48.02:035][634]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.05.09-16.48.02:039][634]LogWorldPartition: Display: WorldPartition initialize took 2.949 ms (total: 1.65 sec)
+[2026.05.09-16.48.02:039][634]LogPlayLevel: PIE: World Init took: (0.005937s)
+[2026.05.09-16.48.02:041][634]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2026.05.09-16.48.02:041][634]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.09-16.48.02:041][634]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.09-16.48.02:041][634]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.09-16.48.02:041][634]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.09-16.48.02:041][634]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.05.09-16.48.02:041][634]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.09-16.48.02:041][634]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.05.09-16.48.02:041][634]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.09-16.48.02:042][634]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.09-16.48.02:042][634]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.09-16.48.02:042][634]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.09-16.48.02:046][634]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.09-16.48.02:086][634]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.05.09-16.48.02:087][634]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.09-16.48.02:087][634]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.09-16.48.02:087][634]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.09-16.48.02:088][634]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2026.05.09-16.48.02:088][634]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2026.05.09-16.48.02:093][634]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2026.05.09-16.48.02:093][634]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2026.05.09-16.48.02:093][634]LogInit: FAudioDevice initialized with ID 4.
+[2026.05.09-16.48.02:093][634]LogAudio: Display: Audio Device (ID: 4) registered with world 'BTAITestMap'.
+[2026.05.09-16.48.02:093][634]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2026.05.09-16.48.02:101][634]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.05.09-16.48.02:104][634]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap up for play (max tick rate 60) at 2026.05.09-17.48.02
+[2026.05.09-16.48.02:105][634]LogWorld: Bringing up level for play took: 0.003588
+[2026.05.09-16.48.02:110][634]LogOnline: OSS: Created online subsystem instance for: :Context_39
+[2026.05.09-16.48.02:120][634]PIE: Server logged in
+[2026.05.09-16.48.02:121][634]PIE: Play in editor total start time 0.192 seconds.
+[2026.05.09-16.48.07:337][730]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.09-16.48.07:337][730]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap
+[2026.05.09-16.48.07:337][730]LogWorld: UWorld::CleanupWorld for BTAITestMap, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.48.07:339][730]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.48.07:339][730]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap
+[2026.05.09-16.48.07:372][730]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.09-16.48.07:383][730]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.48.07:430][730]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.09-16.48.07:430][730]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2026.05.09-16.48.07:431][730]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2026.05.09-16.48.07:435][730]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2026.05.09-16.48.07:445][730]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.09-16.48.07:451][730]LogUObjectHash: Compacting FUObjectHashTables data took   2.97ms
+[2026.05.09-16.48.07:939][737]LogPlayLevel: Display: Destroying online subsystem :Context_39
+[2026.05.09-16.48.24:032][ 32]Cmd: DELETE
+[2026.05.09-16.48.24:032][ 32]Cmd: ACTOR DELETE
+[2026.05.09-16.48.24:037][ 32]LogEditorActor: Deleted Actor: BP_ShotgunBullet_C
+[2026.05.09-16.48.24:101][ 32]LogUObjectHash: Compacting FUObjectHashTables data took   2.52ms
+[2026.05.09-16.48.24:107][ 32]LogEditorActor: Deleted 1 Actors (0.074 secs)
+[2026.05.09-16.48.33:460][193]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.05.09-16.48.35:525][226]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4522.816895
+[2026.05.09-16.48.35:782][231]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.48.35:782][231]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4523.014160, Update Interval: 356.815704
+[2026.05.09-16.48.54:597][560]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun
+[2026.05.09-16.48.54:597][560]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_36
+[2026.05.09-16.48.54:599][560]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_36'.
+[2026.05.09-16.48.54:921][560]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.05.09-16.49.08:074][730]LogStreaming: Display: FlushAsyncLoading(863): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.49.08:103][730]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_37
+[2026.05.09-16.49.08:103][730]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_37'.
+[2026.05.09-16.49.15:966][849]LogUObjectHash: Compacting FUObjectHashTables data took   1.71ms
+[2026.05.09-16.49.26:368][995]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.49.26:495][995]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_Shotgun] ([2] browsable assets)...
+[2026.05.09-16.49.26:526][995]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun]
+[2026.05.09-16.49.26:526][995]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_38
+[2026.05.09-16.49.26:526][995]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_38'.
+[2026.05.09-16.49.26:550][995]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C]
+[2026.05.09-16.49.26:550][995]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_Shotgun]
+[2026.05.09-16.49.26:554][995]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C' for saving '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C'
+[2026.05.09-16.49.26:554][995]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C' for saving '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C'
+[2026.05.09-16.49.26:555][995]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_Shotgun
+[2026.05.09-16.49.26:555][995]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunB73484FD479D12E491863ABF515C4FB7.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_Shotgun.uasset'
+[2026.05.09-16.49.26:578][995]LogFileHelpers: InternalPromptForCheckoutAndSave took 209.806 ms (total: 3.67 sec)
+[2026.05.09-16.49.26:642][995]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.49.26:642][995]LogContentValidation: Enabled validators:
+[2026.05.09-16.49.26:642][995]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.49.26:642][995]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.49.26:642][995]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.49.26:642][995]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.49.26:642][995]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.49.26:642][995]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.49.26:643][995]AssetCheck: /Game/AI/Weapons/Shotgun/BP_Shotgun Validating asset
+[2026.05.09-16.49.30:127][ 49]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C
+[2026.05.09-16.49.30:127][ 49]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C
+[2026.05.09-16.49.30:129][ 49]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun as actor: BP_Shotgun_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_Shotgun_C_0
+[2026.05.09-16.49.30:130][ 49]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun as actor: BP_Shotgun_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_Shotgun_C_0
+[2026.05.09-16.49.31:602][ 72]LogUObjectHash: Compacting FUObjectHashTables data took   2.34ms
+[2026.05.09-16.49.31:607][ 72]LogEditorActor: Deleted 0 Actors (0.040 secs)
+[2026.05.09-16.49.31:615][ 72]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C
+[2026.05.09-16.49.31:615][ 72]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C
+[2026.05.09-16.49.31:622][ 72]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun as actor: BP_Shotgun_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_Shotgun_C_UAID_84144D205DD175D902_1623402066
+[2026.05.09-16.49.31:623][ 72]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun as actor: BP_Shotgun_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_Shotgun_C_UAID_84144D205DD175D902_1623402066
+[2026.05.09-16.49.37:070][168]Cmd: DELETE
+[2026.05.09-16.49.37:071][168]Cmd: ACTOR DELETE
+[2026.05.09-16.49.37:073][168]LogEditorActor: Deleted Actor: ShotfunTemp_C
+[2026.05.09-16.49.37:142][168]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2026.05.09-16.49.37:145][168]LogEditorActor: Deleted 1 Actors (0.075 secs)
+[2026.05.09-16.49.42:069][250]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2026.05.09-16.49.43:554][250]LogSlate: Window 'Delete Assets' being destroyed
+[2026.05.09-16.49.43:774][250]LogUObjectGlobals: Force Deleting 1 Package(s):
+	Asset Name: /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp
+	Asset Type: Blueprint
+[2026.05.09-16.49.44:085][250]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2026.05.09-16.49.44:149][250]LogUObjectHash: Compacting FUObjectHashTables data took   1.25ms
+[2026.05.09-16.49.44:180][250]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2026.05.09-16.49.44:203][250]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2026.05.09-16.50.06:583][608]LogEditorTransaction: Undo Modify Component(s)
+[2026.05.09-16.50.07:312][608]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.50.07:313][608]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.50.16:919][743]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2026.05.09-16.50.35:399][ 53]LogEditorTransaction: Undo Modify Component(s)
+[2026.05.09-16.50.36:101][ 53]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.50.36:102][ 53]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.50.42:627][147]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2026.05.09-16.51.03:144][544]LogUObjectHash: Compacting FUObjectHashTables data took   1.46ms
+[2026.05.09-16.51.03:157][544]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.51.03:236][544]LogUObjectHash: Compacting FUObjectHashTables data took   1.49ms
+[2026.05.09-16.51.03:270][544]LogUObjectHash: Compacting FUObjectHashTables data took   1.34ms
+[2026.05.09-16.51.03:297][544]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2026.05.09-16.51.03:300][544]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/1/A2/ZSXLLTZJ3I6BZ1XZ1AWR6F
+[2026.05.09-16.51.03:301][544]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/ZSXLLTZJ3I6BZ1XZ1AWR6F4BC1D0BC4D2BE12AC844F286758DB13B.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/BTAITestMap/1/A2/ZSXLLTZJ3I6BZ1XZ1AWR6F.uasset'
+[2026.05.09-16.51.03:305][544]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_Shotgun] ([2] browsable assets)...
+[2026.05.09-16.51.03:334][544]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun]
+[2026.05.09-16.51.03:334][544]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_Shotgun]
+[2026.05.09-16.51.03:339][544]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C' for saving '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C'
+[2026.05.09-16.51.03:339][544]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C' for saving '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C'
+[2026.05.09-16.51.03:340][544]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_Shotgun
+[2026.05.09-16.51.03:341][544]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunB78E37B0489E9EC6C1C21281F2B0E133.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_Shotgun.uasset'
+[2026.05.09-16.51.03:364][544]LogFileHelpers: InternalPromptForCheckoutAndSave took 207.550 ms (total: 3.88 sec)
+[2026.05.09-16.51.03:417][544]LogContentValidation: Display: Starting to validate 2 assets
+[2026.05.09-16.51.03:418][544]LogContentValidation: Enabled validators:
+[2026.05.09-16.51.03:418][544]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.51.03:418][544]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.51.03:418][544]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.51.03:418][544]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.51.03:418][544]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.51.03:418][544]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.51.03:418][544]AssetCheck: /Game/FirstPerson/Maps/BTAITestMap Validating asset
+[2026.05.09-16.51.03:418][544]AssetCheck: /Game/AI/Weapons/Shotgun/BP_Shotgun Validating asset
+[2026.05.09-16.51.15:429][756]LogWorldPartition: Actor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.SkeletalMeshActor_UAID_84144D205DD172D902_1536690714 is unreachable without properly detaching object /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/9/82/AHE86W1E3O35KPMZJP06KH.PackageMetaData in its package
+[2026.05.09-16.51.15:433][756]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2026.05.09-16.51.15:557][756]LogUObjectHash: Compacting FUObjectHashTables data took   1.54ms
+[2026.05.09-16.51.16:031][763]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.51.16:115][763]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_Shotgun] ([2] browsable assets)...
+[2026.05.09-16.51.16:127][763]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun]
+[2026.05.09-16.51.16:127][763]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_Shotgun]
+[2026.05.09-16.51.16:131][763]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C' for saving '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C'
+[2026.05.09-16.51.16:131][763]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C' for saving '/Game/AI/Weapons/Shotgun/BP_Shotgun.BP_Shotgun_C'
+[2026.05.09-16.51.16:131][763]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_Shotgun
+[2026.05.09-16.51.16:133][763]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunC522A3204AEA5ABCB47249827DBE3C92.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_Shotgun.uasset'
+[2026.05.09-16.51.16:150][763]LogFileHelpers: InternalPromptForCheckoutAndSave took 118.940 ms (total: 4.00 sec)
+[2026.05.09-16.51.16:214][763]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.51.16:214][763]LogContentValidation: Enabled validators:
+[2026.05.09-16.51.16:214][763]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.51.16:214][763]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.51.16:214][763]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.51.16:214][763]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.51.16:214][763]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.51.16:214][763]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.51.16:214][763]AssetCheck: /Game/AI/Weapons/Shotgun/BP_Shotgun Validating asset
+[2026.05.09-16.51.18:332][802]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.51.18:332][802]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.51.18:341][802]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_1
+[2026.05.09-16.51.18:350][802]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_1
+[2026.05.09-16.51.20:048][831]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2026.05.09-16.51.20:053][831]LogEditorActor: Deleted 0 Actors (0.049 secs)
+[2026.05.09-16.51.20:059][831]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.51.20:060][831]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.51.20:068][831]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD175D902_1731846067
+[2026.05.09-16.51.20:079][831]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD175D902_1731846067
+[2026.05.09-16.51.39:591][237]LogStreaming: Display: FlushAsyncLoading(864): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.52.03:135][624]LogUObjectHash: Compacting FUObjectHashTables data took   1.53ms
+[2026.05.09-16.52.03:154][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_79.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:154][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_80.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:155][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_78.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:155][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_81.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:159][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_70.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:159][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_71.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:160][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_69.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:160][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_72.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:167][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853294.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:168][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853295.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:168][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853293.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:168][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853296.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:172][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_295.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:173][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_296.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:173][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_294.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:174][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_297.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:182][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_87.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:182][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_88.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:183][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_86.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:183][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_89.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:187][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_78.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:187][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_79.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:187][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_77.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:188][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_80.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:194][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853298.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:194][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853299.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:195][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853297.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:195][624]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853300.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:199][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_303.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:200][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_304.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:200][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_302.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.03:200][624]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_305.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.04:361][644]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.52.04:435][644]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_BuckShot] ([2] browsable assets)...
+[2026.05.09-16.52.04:460][644]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_BuckShot.BP_BuckShot]
+[2026.05.09-16.52.04:460][644]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_BuckShot]
+[2026.05.09-16.52.04:465][644]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_BuckShot
+[2026.05.09-16.52.04:467][644]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_BuckShotCA72C0E84C425308AD277B89DF7F2B04.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_BuckShot.uasset'
+[2026.05.09-16.52.04:485][644]LogFileHelpers: InternalPromptForCheckoutAndSave took 124.339 ms (total: 4.12 sec)
+[2026.05.09-16.52.04:548][644]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.52.04:548][644]LogContentValidation: Enabled validators:
+[2026.05.09-16.52.04:548][644]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.52.04:548][644]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.52.04:548][644]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.52.04:548][644]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.52.04:548][644]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.52.04:548][644]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.52.04:548][644]AssetCheck: /Game/AI/Weapons/Shotgun/BP_BuckShot Validating asset
+[2026.05.09-16.52.37:287][216]LogUObjectHash: Compacting FUObjectHashTables data took   2.26ms
+[2026.05.09-16.52.37:301][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_119.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:301][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_120.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:301][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_118.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:301][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_121.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:305][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_110.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:306][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_111.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:306][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_109.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:306][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_112.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:310][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_335.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:311][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_336.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:311][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_334.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:311][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_337.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:319][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853314.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:319][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853315.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:320][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853313.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:320][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853316.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:329][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_127.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:329][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_128.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:329][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_126.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:330][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_29:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_129.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:333][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_118.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:333][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_119.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:333][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_117.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:335][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_28:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_120.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:338][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_343.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:339][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_344.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:339][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_342.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:339][216]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_35:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_345.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:346][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853318.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:347][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853319.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:347][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853317.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.37:347][216]LogActorComponent: RegisterComponentWithWorld: (/Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.DESTROYED_BP_BuckShot_C_CHILDACTOR_1731853320.Root) Trying to register component with IsValid() == false. Aborting.
+[2026.05.09-16.52.48:195][442]Cmd: DELETE
+[2026.05.09-16.52.48:195][442]Cmd: ACTOR DELETE
+[2026.05.09-16.52.48:202][442]LogEditorActor: Deleted Actor: BP_ShotgunBullet_C
+[2026.05.09-16.52.48:249][442]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
+[2026.05.09-16.52.48:258][442]LogEditorActor: Deleted 1 Actors (0.063 secs)
+[2026.05.09-16.52.50:904][490]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.52.51:076][490]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.52.51:076][490]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.52.51:083][490]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.52.51:085][490]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBulletE001CF3243A12098E75DC485CF41C3D6.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.52.51:101][490]LogFileHelpers: InternalPromptForCheckoutAndSave took 197.274 ms (total: 4.32 sec)
+[2026.05.09-16.52.51:159][490]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.52.51:159][490]LogContentValidation: Enabled validators:
+[2026.05.09-16.52.51:159][490]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.52.51:159][490]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.52.51:159][490]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.52.51:159][490]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.52.51:159][490]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.52.51:159][490]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.52.51:160][490]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.52.55:553][577]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2026.05.09-16.53.21:549][253]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2026.05.09-16.53.21:552][253]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/BTAITestMap' took 0.029

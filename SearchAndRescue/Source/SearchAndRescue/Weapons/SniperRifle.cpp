@@ -15,7 +15,7 @@ ASniperRifle::ASniperRifle()
 	iMaxAmmoReserve = 36;
 
 	Cooldown = 0.93f;
-	Range = 5000.0f;
+	Range = 10000.0f;
 }
 
 // Called when the game starts or when spawned
