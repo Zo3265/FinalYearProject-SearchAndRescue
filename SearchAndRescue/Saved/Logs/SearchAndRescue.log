@@ -2071,3 +2071,1216 @@ Sampler Limit: 16
 [2026.05.09-15.38.25:392][636]LogEditorActor: Deleted 1 Actors (0.066 secs)
 [2026.05.09-15.38.25:413][636]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
 [2026.05.09-15.38.25:413][636]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 312.611633, Update Interval: 317.990662
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: ================================================
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Total job queries 304, among them cache hits 132 (43.42%), DDC hits 152 (50.00%), Duplicates 3 (0.99%)
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Tracking 169 distinct input hashes that result in 150 distinct outputs (88.76%)
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: RAM used: 113.67 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Shaders Compiled: 17
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Jobs assigned 17, completed 17 (100%)
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Average time worker was idle: 57.13 s
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Time job spent in pending queue: average 0.25 s, longest 1.79 s
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Job execution time: average 2.15 s, max 3.95 s
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Job life time (pending + execution): average 2.40 s, max 4.01
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Shader code size: average 6.993 KiB, min 2.562 KiB, max 14.805 KiB
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 15.09 s
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Jobs were issued in 15 batches (only local compilation was used), average 1.13 jobs/batch
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Average processing rate: 1.13 jobs/sec
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Total thread time: 21.363 s
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Total thread preprocess time: 5.662 s
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Percentage time preprocessing: 26.50%
+[2026.05.09-15.39.20:546][776]LogShaderCompilers: Display: Effective parallelization: 1.42 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    4 times, average 2.67 sec, max 2.90 sec, min 2.46 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    4 times, average 0.90 sec, max 0.98 sec, min 0.84 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    7 times, average 0.83 sec, max 0.93 sec, min 0.68 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                             FDebugViewModeVS (compiled    1 times, average 0.65 sec, max 0.65 sec, min 0.65 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    1 times, average 0.63 sec, max 0.63 sec, min 0.63 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                             FDebugViewModePS - 50.00% of total time (compiled    4 times, average 2.67 sec, max 2.90 sec, min 2.46 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 27.10% of total time (compiled    7 times, average 0.83 sec, max 0.93 sec, min 0.68 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 16.88% of total time (compiled    4 times, average 0.90 sec, max 0.98 sec, min 0.84 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                             FDebugViewModeVS - 3.06% of total time (compiled    1 times, average 0.65 sec, max 0.65 sec, min 0.65 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 2.96% of total time (compiled    1 times, average 0.63 sec, max 0.63 sec, min 0.63 sec)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: === Material stats ===
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Materials Translated:    189
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Material Total Translate Time: 0.13 s
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Material Translation Only: 0.05 s (39%)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: Material Cache Hits: 16 (8%)
+[2026.05.09-15.39.20:547][776]LogShaderCompilers: Display: ================================================
+[2026.05.09-15.41.19:869][798]Running C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.05.09-15.41.20:003][798]Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-15.41.20:003][798]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" -game -rocket -progress
+[2026.05.09-15.41.21:021][798]Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2026.05.09-15.41.21:222][798]
+[2026.05.09-15.41.21:222][798]Generating VisualStudio2022 project files:
+[2026.05.09-15.41.21:222][798]Discovering modules, targets and source code for project...
+[2026.05.09-15.41.21:726][798]Available x64 toolchains (3):
+[2026.05.09-15.41.21:726][798] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-15.41.21:726][798]    (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.41.21:726][798] * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.41.21:726][798]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.41.21:726][798] * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.41.21:726][798]    (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.41.21:726][798]Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-15.41.27:260][798]Binding IntelliSense data...
+[2026.05.09-15.41.59:180][798]Binding IntelliSense data... 50%
+[2026.05.09-15.41.59:181][798]Binding IntelliSense data... 100%
+[2026.05.09-15.41.59:181][798]Writing project files...
+[2026.05.09-15.42.02:542][798]Writing project files... 100%
+[2026.05.09-15.42.02:543][798]
+[2026.05.09-15.42.02:543][798]Generating QueryTargets data for editor...
+[2026.05.09-15.42.02:543][798]Total execution time: 42.45 seconds
+[2026.05.09-15.42.02:955][798]LogVSAccessor: Warning: Visual Studio is open but could not be queried - it may be blocked by a modal operation
+[2026.05.09-15.42.02:955][798]LogVSAccessor: Warning: Couldn't access Visual Studio
+[2026.05.09-15.42.02:956][798]LogStreaming: Display: FlushAsyncLoading(626): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-15.42.02:978][798]Candidate modules for hot reload:
+[2026.05.09-15.42.02:978][798]  SearchAndRescue
+[2026.05.09-15.42.02:984][798]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,5971 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-15.42.37:315][798]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-15.42.37:315][798]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,5971 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-15.42.37:315][798]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-15.42.37:315][798]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-15.42.37:315][798]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (source file added)
+[2026.05.09-15.42.37:315][798]CompilerResultsLog: Available x64 toolchains (3):
+[2026.05.09-15.42.37:315][798]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-15.42.37:315][798]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.42.37:316][798]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.42.37:316][798]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.42.37:316][798]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.42.37:316][798]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.05.09-15.42.37:316][798]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Total of 3 written
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 21.0154059 seconds
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [Upgrade]
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [Upgrade]
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: AssaultRifle.cpp
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-15.42.37:316][798]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 5 action(s)
+[2026.05.09-15.42.37:316][798]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: ---- Starting trace: 260509_164227 ----
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: ------ Building 5 action(s) started ------
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [1/5] Compile [x64] AssaultRifle.cpp
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Source\SearchAndRescue\Weapons\AssaultRifle.cpp(4): fatal error C1083: Cannot open include file: 'Weapons/AssaultRifle.h': No such file or directory
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: [2/5] Compile [x64] Module.SearchAndRescue.cpp
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 3.1kb
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 9.58 seconds
+[2026.05.09-15.42.37:316][798]CompilerResultsLog: Total execution time: 34.02 seconds
+[2026.05.09-15.42.37:316][798]LogMainFrame: MainFrame: Module compiling took 34.360 seconds
+[2026.05.09-15.42.37:335][798]Warning: HotReload failed, recompile failed
+[2026.05.09-15.42.37:335][798]Warning: RebindPackages failed because compilation failed.
+[2026.05.09-15.42.40:502][798]LogSlate: Window 'Message' being destroyed
+[2026.05.09-15.42.40:519][798]Message dialog closed, result: No, title: Message, text: Successfully added class 'AssaultRifle', however you must recompile the 'SearchAndRescue' module before it will appear in the Content Browser. Failed to automatically hot reload the 'SearchAndRescue' module.
+
+Would you like to open the Output Log to see more details?
+[2026.05.09-15.42.40:519][798]LogSlate: Window 'Add C++ Class' being destroyed
+[2026.05.09-15.43.46:491][644]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 633.776062
+[2026.05.09-15.43.46:784][650]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-15.43.46:784][650]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 634.020813, Update Interval: 352.816559
+[2026.05.09-15.43.47:684][662]Candidate modules for hot reload:
+[2026.05.09-15.43.47:684][662]  SearchAndRescue
+[2026.05.09-15.43.47:700][662]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,4431 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-15.43.47:717][662]Warning: Starting HotReload took  0.4s.
+[2026.05.09-15.44.29:333][462]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-15.44.29:333][462]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,4431 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-15.44.29:333][462]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (working set of source files changed)
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Available x64 toolchains (3):
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Total of 1 written
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 9.1157089 seconds
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: [Upgrade]
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: [Upgrade]
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: AssaultRifle.cpp, AssaultRifle.gen.cpp, SearchAndRescue.init.gen.cpp
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-15.44.29:334][462]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-15.44.29:334][462]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 7 action(s)
+[2026.05.09-15.44.29:336][462]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: ---- Starting trace: 260509_164405 ----
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: ------ Building 7 action(s) started ------
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: [1/7] Compile [x64] SearchAndRescue.init.gen.cpp
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: [2/7] Compile [x64] AssaultRifle.cpp
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: [3/7] Compile [x64] AssaultRifle.gen.cpp
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: [4/7] Compile [x64] Module.SearchAndRescue.cpp
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: [5/7] Link [x64] UnrealEditor-SearchAndRescue-4431.lib
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: [6/7] Link [x64] UnrealEditor-SearchAndRescue-4431.dll
+[2026.05.09-15.44.29:336][462]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-4431.exp
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: [7/7] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 5.0kb
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 23.02 seconds
+[2026.05.09-15.44.29:336][462]CompilerResultsLog: Total execution time: 40.93 seconds
+[2026.05.09-15.44.29:336][462]LogMainFrame: MainFrame: Module compiling took 41.675 seconds
+[2026.05.09-15.44.29:336][462]LogStreaming: Display: FlushAsyncLoading(628): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-15.44.29:392][462]LogUObjectHash: Compacting FUObjectHashTables data took   1.91ms
+[2026.05.09-15.44.29:498][462]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.05.09-15.44.29:526][462]LogClass: Could not find existing class AssaultRifle in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.05.09-15.44.29:715][462]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2026.05.09-15.44.29:749][462]Display: HotReload took 42.5s.
+[2026.05.09-15.44.29:749][462]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 18 classes unchanged, 1 enum unchanged, 8 functions remapped
+[2026.05.09-15.48.57:934][241]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2026.05.09-15.48.57:935][241]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/BTAITestMap' took 0.016
+[2026.05.09-15.49.46:643][136]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 993.925598
+[2026.05.09-15.49.46:793][145]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-15.49.46:793][145]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 994.058594, Update Interval: 354.239319
+[2026.05.09-15.51.22:175][760]Candidate modules for hot reload:
+[2026.05.09-15.51.22:176][760]  SearchAndRescue
+[2026.05.09-15.51.22:189][760]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=SearchAndRescue,1272 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk]
+[2026.05.09-15.51.22:203][760]Warning: Starting HotReload took  0.1s.
+[2026.05.09-15.51.24:671][867]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2026.05.09-15.51.24:677][867]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-15.51.24:753][867]LogUObjectHash: Compacting FUObjectHashTables data took   0.53ms
+[2026.05.09-15.51.24:769][867]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2026.05.09-15.51.24:783][867]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2026.05.09-15.51.24:799][867]LogFileHelpers: InternalPromptForCheckoutAndSave took 122.689 ms (total: 729.357 ms)
+[2026.05.09-15.51.51:253][696]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2026.05.09-15.51.51:253][696]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=SearchAndRescue,1272 SearchAndRescueEditor Win64 Development -Project="C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject" "C:/Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/SearchAndRescue.uproject"  -IgnoreJunk
+[2026.05.09-15.51.51:253][696]CompilerResultsLog: Log file: C:\Users\zohai\AppData\Local\UnrealBuildTool\Log.txt
+[2026.05.09-15.51.51:253][696]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue).
+[2026.05.09-15.51.51:253][696]CompilerResultsLog: Invalidating makefile for SearchAndRescueEditor (working set of source files changed)
+[2026.05.09-15.51.51:253][696]CompilerResultsLog: Available x64 toolchains (3):
+[2026.05.09-15.51.51:253][696]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717
+[2026.05.09-15.51.51:253][696]CompilerResultsLog:     (Family=14.50.35717, FamilyRank=1, Version=14.50.35723, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.51.51:253][696]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.51.51:253][696]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35225, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.51.51:253][696]CompilerResultsLog:  * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.44.35207
+[2026.05.09-15.51.51:253][696]CompilerResultsLog:     (Family=14.44.35207, FamilyRank=1, Version=14.44.35221, Is64Bit=True, ReleaseChannel=Latest, Architecture=x64)
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Visual Studio 2022 compiler version 14.50.35723 is not a preferred version. Please use the latest preferred version 14.38.33130
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Parsing headers for SearchAndRescueEditor
+[2026.05.09-15.51.51:254][696]CompilerResultsLog:   Running Internal UnrealHeaderTool C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\SearchAndRescue.uproject C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Intermediate\Build\Win64\SearchAndRescueEditor\Development\SearchAndRescueEditor.uhtmanifest -WarningsAsErrors -installed
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Total of 3 written
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Reflection code generated for SearchAndRescueEditor in 6.5354306 seconds
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Building SearchAndRescueEditor...
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Using Visual Studio 2022 14.50.35723 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Warning: Visual Studio 2022 compiler is not a preferred version
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [Upgrade]
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [Upgrade] Using backward-compatible include order. The latest version of UE has changed the order of includes, which may require code changes. The current setting is:
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [Upgrade]     IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_3
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [Upgrade] Suppress this message by setting 'IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_5;' in SearchAndRescueEditor.Target.cs.
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [Upgrade] Alternatively you can set this to 'EngineIncludeOrderVersion.Latest' to always use the latest include order. This will potentially cause compile errors when integrating new versions of the engine.
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [Upgrade]
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [Adaptive Build] Excluded from SearchAndRescue unity file: AssaultRifle.cpp, SniperRifle.cpp, AssaultRifle.gen.cpp, SearchAndRescue.init.gen.cpp
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2026.05.09-15.51.51:254][696]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 8 action(s)
+[2026.05.09-15.51.51:254][696]CompilerResultsLog:   Storage capacity 40Gb
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: ---- Starting trace: 260509_165134 ----
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: ------ Building 8 action(s) started ------
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [1/8] Compile [x64] SearchAndRescue.init.gen.cpp
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [2/8] Compile [x64] AssaultRifle.gen.cpp
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [3/8] Compile [x64] AssaultRifle.cpp
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [4/8] Compile [x64] SniperRifle.cpp
+[2026.05.09-15.51.51:254][696]CompilerResultsLog: [5/8] Compile [x64] Module.SearchAndRescue.cpp
+[2026.05.09-15.51.51:255][696]CompilerResultsLog: [6/8] Link [x64] UnrealEditor-SearchAndRescue-1272.lib
+[2026.05.09-15.51.51:255][696]CompilerResultsLog: [7/8] Link [x64] UnrealEditor-SearchAndRescue-1272.dll
+[2026.05.09-15.51.51:255][696]CompilerResultsLog:    Creating object C:\Users\zohai\Documents\GitHub\FinalYearProject-SearchAndRescue\SearchAndRescue\Binaries\Win64\UnrealEditor-SearchAndRescue-1272.exp
+[2026.05.09-15.51.51:255][696]CompilerResultsLog: [8/8] WriteMetadata SearchAndRescueEditor.target (UBA disabled)
+[2026.05.09-15.51.51:255][696]CompilerResultsLog: Trace file written to C:/Users/zohai/AppData/Local/UnrealBuildTool/Log.uba with size 4.8kb
+[2026.05.09-15.51.51:255][696]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 16.07 seconds
+[2026.05.09-15.51.51:255][696]CompilerResultsLog: Total execution time: 28.48 seconds
+[2026.05.09-15.51.51:255][696]LogMainFrame: MainFrame: Module compiling took 29.129 seconds
+[2026.05.09-15.51.51:276][696]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2026.05.09-15.51.51:375][696]LogClass: UPackage /Script/SearchAndRescue Reload.
+[2026.05.09-15.51.51:375][696]LogClass: UClass AssaultRifle Reload.
+[2026.05.09-15.51.51:401][696]LogClass: Could not find existing class AssaultRifle in package /Script/SearchAndRescue for reload, assuming new or modified class
+[2026.05.09-15.51.51:442][696]Re-instancing AssaultRifle after reload.
+[2026.05.09-15.51.51:589][696]LogUObjectHash: Compacting FUObjectHashTables data took   1.24ms
+[2026.05.09-15.51.51:617][696]Display: HotReload took 29.5s.
+[2026.05.09-15.51.51:617][696]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 18 classes unchanged, 1 enum unchanged, 8 functions remapped
+[2026.05.09-15.52.08:340][981]LogAssetEditorSubsystem: Opening Asset editor for SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553
+[2026.05.09-15.52.08:424][981]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_10
+[2026.05.09-15.52.08:424][981]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_10'.
+[2026.05.09-15.52.08:434][981]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-15.52.08:863][981]LogStreaming: Display: FlushAsyncLoading(629): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-15.52.23:335][110]LogAssetEditorSubsystem: Opening Asset editor for Skeleton /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton.sg553_Skeleton
+[2026.05.09-15.52.23:337][110]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_11
+[2026.05.09-15.52.23:339][110]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_11'.
+[2026.05.09-15.52.23:450][110]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-15.52.24:169][110]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_12
+[2026.05.09-15.52.24:170][110]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_12'.
+[2026.05.09-15.53.30:788][129]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_13
+[2026.05.09-15.53.30:788][129]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_13'.
+[2026.05.09-15.53.37:215][348]LogStreaming: Display: FlushAsyncLoading(630): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-15.53.37:218][348]LogStaticMesh: Display: Building static mesh 5_56 (Required Memory Estimate: 0.795979 MB)...
+[2026.05.09-15.53.37:224][348]LogStaticMesh: Adjacency [0.00s], tris: 512, UVs 1
+[2026.05.09-15.53.37:225][348]LogStaticMesh: Clustering [0.00s]. Ratio: 1.000000
+[2026.05.09-15.53.37:225][348]LogStaticMesh: Leaves [0.00s]
+[2026.05.09-15.53.37:267][348]LogStaticMesh: Reduce [0.04s]
+[2026.05.09-15.53.37:283][348]LogStaticMesh: Fallback [0.02s], num tris: 362
+[2026.05.09-15.53.37:284][348]LogStaticMesh: ConstrainClusters:
+[2026.05.09-15.53.37:284][348]LogStaticMesh:   Input: 7 Clusters, 890 Triangles and 774 Vertices
+[2026.05.09-15.53.37:284][348]LogStaticMesh:   Output without splits: 7 Clusters, 890 Triangles and 780 Vertices
+[2026.05.09-15.53.37:284][348]LogStaticMesh:   Output with splits: 7 Clusters, 890 Triangles and 780 Vertices
+[2026.05.09-15.53.37:284][348]LogStaticMesh: Material Stats - Unique Materials: 1, Fast Path Clusters: 7, Slow Path Clusters: 0, 1 Material: 7, 2 Materials: 0, 3 Materials: 0, At Least 4 Materials: 0
+[2026.05.09-15.53.37:285][348]LogStaticMesh: WritePages:
+[2026.05.09-15.53.37:285][348]LogStaticMesh:   Root: GPU size: 9888 bytes. 1 Pages. 9888.000 bytes per page (30.176% utilization).
+[2026.05.09-15.53.37:285][348]LogStaticMesh:   Streaming: 0 bytes.
+[2026.05.09-15.53.37:285][348]LogStaticMesh:   Page data disk size: 9276 bytes. Fixup data size: 56 bytes.
+[2026.05.09-15.53.37:285][348]LogStaticMesh:   Total GPU size: 9888 bytes, Total disk size: 9332 bytes.
+[2026.05.09-15.53.37:285][348]LogStaticMesh: Encode [0.00s]
+[2026.05.09-15.53.37:285][348]LogStaticMesh: Nanite build [0.06s]
+
+[2026.05.09-15.53.37:291][348]LogStaticMesh: Built static mesh [0.07s] /Game/ModelsAndAnimations/Weapons/BulletPack/Model/5_56.5_56
+[2026.05.09-15.54.16:842][738]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-15.54.16:926][738]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton] ([1] browsable assets)...
+[2026.05.09-15.54.16:926][738]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton]
+[2026.05.09-15.54.16:928][738]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton
+[2026.05.09-15.54.16:929][738]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/sg553_Skeleton06B247854DFAE364E8483480928D2C60.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton.uasset'
+[2026.05.09-15.54.16:947][738]LogFileHelpers: InternalPromptForCheckoutAndSave took 104.979 ms (total: 834.337 ms)
+[2026.05.09-15.54.17:007][738]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-15.54.17:008][738]LogContentValidation: Enabled validators:
+[2026.05.09-15.54.17:008][738]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-15.54.17:008][738]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-15.54.17:008][738]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-15.54.17:008][738]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-15.54.17:008][738]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-15.54.17:008][738]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-15.54.17:008][738]AssetCheck: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton Validating asset
+[2026.05.09-15.54.22:156][807]LogActorFactory: Actor Factory attempting to spawn SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553
+[2026.05.09-15.54.22:157][807]LogActorFactory: Actor Factory attempting to spawn SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553
+[2026.05.09-15.54.22:157][807]LogActorFactory: Actor Factory spawned SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553 as actor: SkeletalMeshActor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.SkeletalMeshActor_3
+[2026.05.09-15.54.22:158][807]LogActorFactory: Actor Factory spawned SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553 as actor: SkeletalMeshActor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.SkeletalMeshActor_3
+[2026.05.09-15.54.23:668][866]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2026.05.09-15.54.23:671][866]LogEditorActor: Deleted 0 Actors (0.052 secs)
+[2026.05.09-15.54.23:679][866]LogActorFactory: Actor Factory attempting to spawn SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553
+[2026.05.09-15.54.23:679][866]LogActorFactory: Actor Factory attempting to spawn SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553
+[2026.05.09-15.54.23:682][866]LogActorFactory: Actor Factory spawned SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553 as actor: SkeletalMeshActor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.SkeletalMeshActor_UAID_84144D205DD172D902_1536690714
+[2026.05.09-15.54.23:683][866]LogActorFactory: Actor Factory spawned SkeletalMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553.sg553 as actor: SkeletalMeshActor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.SkeletalMeshActor_UAID_84144D205DD172D902_1536690714
+[2026.05.09-15.54.26:546][914]Cmd: DELETE
+[2026.05.09-15.54.26:546][914]Cmd: ACTOR DELETE
+[2026.05.09-15.54.26:549][914]LogEditorActor: Deleted Actor: SkeletalMeshActor
+[2026.05.09-15.54.26:567][914]LogUObjectHash: Compacting FUObjectHashTables data took   0.43ms
+[2026.05.09-15.54.26:569][914]LogEditorActor: Deleted 1 Actors (0.022 secs)
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: ================================================
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Total job queries 312, among them cache hits 132 (42.31%), DDC hits 154 (49.36%), Duplicates 3 (0.96%)
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Tracking 177 distinct input hashes that result in 156 distinct outputs (88.14%)
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: RAM used: 115.24 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Shaders Compiled: 23
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Jobs assigned 23, completed 23 (100%)
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Average time worker was idle: 253.19 s
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Time job spent in pending queue: average 0.20 s, longest 1.79 s
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Job execution time: average 2.19 s, max 3.95 s
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Job life time (pending + execution): average 2.39 s, max 4.01
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Shader code size: average 6.057 KiB, min 464 B, max 14.805 KiB
+[2026.05.09-15.54.40:672][ 79]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 19.23 s
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Jobs were issued in 21 batches (only local compilation was used), average 1.10 jobs/batch
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Average processing rate: 1.20 jobs/sec
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Total thread time: 28.245 s
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Total thread preprocess time: 5.929 s
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Percentage time preprocessing: 20.99%
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Effective parallelization: 1.47 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    4 times, average 2.67 sec, max 2.90 sec, min 2.46 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    3 times, average 1.03 sec, max 1.26 sec, min 0.63 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    9 times, average 0.95 sec, max 1.37 sec, min 0.68 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    4 times, average 0.90 sec, max 0.98 sec, min 0.84 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                                  FHitProxyVS (compiled    1 times, average 0.89 sec, max 0.89 sec, min 0.89 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                             FDebugViewModePS - 37.82% of total time (compiled    4 times, average 2.67 sec, max 2.90 sec, min 2.46 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 30.21% of total time (compiled    9 times, average 0.95 sec, max 1.37 sec, min 0.68 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 12.77% of total time (compiled    4 times, average 0.90 sec, max 0.98 sec, min 0.84 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 10.93% of total time (compiled    3 times, average 1.03 sec, max 1.26 sec, min 0.63 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display:                                                  FHitProxyVS - 3.13% of total time (compiled    1 times, average 0.89 sec, max 0.89 sec, min 0.89 sec)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: === Material stats ===
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Materials Translated:    190
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Material Total Translate Time: 0.14 s
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Material Translation Only: 0.05 s (39%)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: Material Cache Hits: 16 (8%)
+[2026.05.09-15.54.40:673][ 79]LogShaderCompilers: Display: ================================================
+[2026.05.09-15.54.51:426][185]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-15.54.51:586][185]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton] ([1] browsable assets)...
+[2026.05.09-15.54.51:586][185]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton]
+[2026.05.09-15.54.51:590][185]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton
+[2026.05.09-15.54.51:591][185]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/sg553_Skeleton07BE40704E58E5AB2BF379B7D8620591.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton.uasset'
+[2026.05.09-15.54.51:609][185]LogFileHelpers: InternalPromptForCheckoutAndSave took 182.800 ms (total: 1.01 sec)
+[2026.05.09-15.54.51:669][185]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-15.54.51:669][185]LogContentValidation: Enabled validators:
+[2026.05.09-15.54.51:669][185]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-15.54.51:669][185]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-15.54.51:669][185]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-15.54.51:669][185]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-15.54.51:669][185]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-15.54.51:669][185]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-15.54.51:670][185]AssetCheck: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/sg553_Skeleton Validating asset
+[2026.05.09-15.55.16:277][525]LogStreaming: Display: FlushAsyncLoading(631): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-15.55.16:284][525]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low.sniper_barrel_low
+[2026.05.09-15.55.16:284][525]LogStaticMesh: Display: Building static mesh sniper_barrel_low (Required Memory Estimate: 18.824156 MB)...
+[2026.05.09-15.55.16:300][525]LogStaticMesh: Display: Waiting for static meshes to be ready 0/1 (/Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low) ...
+[2026.05.09-15.55.16:390][525]LogStaticMesh: Adjacency [0.00s], tris: 12180, UVs 1
+[2026.05.09-15.55.16:425][525]LogStaticMesh: Clustering [0.04s]. Ratio: 1.010417
+[2026.05.09-15.55.16:428][525]LogStaticMesh: Leaves [0.00s]
+[2026.05.09-15.55.16:963][525]LogStaticMesh: Reduce [0.54s]
+[2026.05.09-15.55.17:132][525]LogStaticMesh: Fallback [0.17s], num tris: 2416
+[2026.05.09-15.55.17:145][525]LogStaticMesh: ConstrainClusters:
+[2026.05.09-15.55.17:145][525]LogStaticMesh:   Input: 198 Clusters, 24900 Triangles and 27926 Vertices
+[2026.05.09-15.55.17:145][525]LogStaticMesh:   Output without splits: 198 Clusters, 24900 Triangles and 27938 Vertices
+[2026.05.09-15.55.17:145][525]LogStaticMesh:   Output with splits: 198 Clusters, 24900 Triangles and 27938 Vertices
+[2026.05.09-15.55.17:146][525]LogStaticMesh: Material Stats - Unique Materials: 1, Fast Path Clusters: 198, Slow Path Clusters: 0, 1 Material: 198, 2 Materials: 0, 3 Materials: 0, At Least 4 Materials: 0
+[2026.05.09-15.55.17:153][525]LogStaticMesh: WritePages:
+[2026.05.09-15.55.17:153][525]LogStaticMesh:   Root: GPU size: 32288 bytes. 1 Pages. 32288.000 bytes per page (98.535% utilization).
+[2026.05.09-15.55.17:153][525]LogStaticMesh:   Streaming: GPU size: 280028 bytes. 3 Pages (3 with relative encoding). 93342.664 bytes per page (71.215% utilization).
+[2026.05.09-15.55.17:153][525]LogStaticMesh:   Page data disk size: 265708 bytes. Fixup data size: 1104 bytes.
+[2026.05.09-15.55.17:153][525]LogStaticMesh:   Total GPU size: 312316 bytes, Total disk size: 266812 bytes.
+[2026.05.09-15.55.17:153][525]LogStaticMesh: Encode [0.02s]
+[2026.05.09-15.55.17:153][525]LogStaticMesh: Nanite build [0.77s]
+
+[2026.05.09-15.55.17:166][525]LogStaticMesh: Built static mesh [0.88s] /Game/ModelsAndAnimations/Weapons/SniperRifle/sniper_barrel_low.sniper_barrel_low
+[2026.05.09-15.55.17:290][525]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_14
+[2026.05.09-15.55.17:291][525]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_14'.
+[2026.05.09-15.56.14:716][858]LogSlate: Window 'Choose New StaticMesh Location' being destroyed
+[2026.05.09-15.56.14:747][858]LogConsoleManager: Warning: Console variable 'r.MorphTarget.MaxBlendWeight' used in the render thread. Rendering artifacts could happen. Use ECVF_RenderThreadSafe or don't use in render thread.
+[2026.05.09-15.56.14:779][858]LogStaticMesh: Display: Building static mesh SM_AssualtRifle (Required Memory Estimate: 12.61348 MB)...
+[2026.05.09-15.56.14:794][858]LogStaticMesh: Display: Waiting for static meshes to be ready 0/1 (/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle) ...
+[2026.05.09-15.56.14:880][858]LogStaticMesh: Built static mesh [0.10s] /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle.SM_AssualtRifle
+[2026.05.09-15.56.15:452][858]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1382.736328
+[2026.05.09-15.56.15:872][861]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-15.56.15:874][861]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1383.019165, Update Interval: 354.371155
+[2026.05.09-15.56.17:412][875]LogAssetEditorSubsystem: Opening Asset editor for StaticMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle.SM_AssualtRifle
+[2026.05.09-15.56.17:443][875]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_15
+[2026.05.09-15.56.17:443][875]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_15'.
+[2026.05.09-15.56.22:812][910]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-15.56.22:871][910]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle] ([1] browsable assets)...
+[2026.05.09-15.56.22:905][910]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle.SM_AssualtRifle]
+[2026.05.09-15.56.22:905][910]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle]
+[2026.05.09-15.56.22:918][910]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle
+[2026.05.09-15.56.22:918][910]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/SM_AssualtRifleF3DBB15D4E9A73CD9A2FB99CA3F419A5.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle.uasset'
+[2026.05.09-15.56.22:938][910]LogFileHelpers: InternalPromptForCheckoutAndSave took 127.435 ms (total: 1.14 sec)
+[2026.05.09-15.56.23:004][910]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-15.56.23:004][910]LogContentValidation: Enabled validators:
+[2026.05.09-15.56.23:004][910]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-15.56.23:004][910]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-15.56.23:004][910]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-15.56.23:004][910]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-15.56.23:004][910]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-15.56.23:004][910]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-15.56.23:004][910]AssetCheck: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle Validating asset
+[2026.05.09-15.56.30:868][978]LogStaticMesh: Display: Waiting for static meshes to be ready 0/1 (/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle) ...
+[2026.05.09-15.56.48:072][140]LogSlate: Took 0.000269 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Light.ttf' (167K)
+[2026.05.09-15.56.53:993][393]LogStreaming: Display: FlushAsyncLoading(632): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-15.56.53:995][393]LogStaticMesh: Display: Building static mesh 45acp (Required Memory Estimate: 0.674294 MB)...
+[2026.05.09-15.56.54:000][393]LogStaticMesh: Adjacency [0.00s], tris: 432, UVs 1
+[2026.05.09-15.56.54:000][393]LogStaticMesh: Clustering [0.00s]. Ratio: 1.500000
+[2026.05.09-15.56.54:000][393]LogStaticMesh: Leaves [0.00s]
+[2026.05.09-15.56.54:025][394]LogStaticMesh: Reduce [0.02s]
+[2026.05.09-15.56.54:032][394]LogStaticMesh: Fallback [0.01s], num tris: 334
+[2026.05.09-15.56.54:033][394]LogStaticMesh: ConstrainClusters:
+[2026.05.09-15.56.54:033][394]LogStaticMesh:   Input: 9 Clusters, 810 Triangles and 802 Vertices
+[2026.05.09-15.56.54:033][394]LogStaticMesh:   Output without splits: 9 Clusters, 810 Triangles and 804 Vertices
+[2026.05.09-15.56.54:033][394]LogStaticMesh:   Output with splits: 9 Clusters, 810 Triangles and 804 Vertices
+[2026.05.09-15.56.54:033][394]LogStaticMesh: Material Stats - Unique Materials: 1, Fast Path Clusters: 9, Slow Path Clusters: 0, 1 Material: 9, 2 Materials: 0, 3 Materials: 0, At Least 4 Materials: 0
+[2026.05.09-15.56.54:034][394]LogStaticMesh: WritePages:
+[2026.05.09-15.56.54:034][394]LogStaticMesh:   Root: GPU size: 10096 bytes. 1 Pages. 10096.000 bytes per page (30.811% utilization).
+[2026.05.09-15.56.54:034][394]LogStaticMesh:   Streaming: 0 bytes.
+[2026.05.09-15.56.54:034][394]LogStaticMesh:   Page data disk size: 9308 bytes. Fixup data size: 56 bytes.
+[2026.05.09-15.56.54:034][394]LogStaticMesh:   Total GPU size: 10096 bytes, Total disk size: 9364 bytes.
+[2026.05.09-15.56.54:034][394]LogStaticMesh: Encode [0.00s]
+[2026.05.09-15.56.54:034][394]LogStaticMesh: Nanite build [0.03s]
+
+[2026.05.09-15.56.54:038][394]LogStaticMesh: Built static mesh [0.04s] /Game/ModelsAndAnimations/Weapons/BulletPack/Model/45acp.45acp
+[2026.05.09-15.57.49:260][353]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-15.57.49:332][353]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle] ([1] browsable assets)...
+[2026.05.09-15.57.49:380][353]OBJ SavePackage:     Rendered thumbnail for [StaticMesh /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle.SM_AssualtRifle]
+[2026.05.09-15.57.49:380][353]OBJ SavePackage: Finished generating thumbnails for package [/Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle]
+[2026.05.09-15.57.49:401][353]LogSavePackage: Moving output files for package: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle
+[2026.05.09-15.57.49:403][353]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/SM_AssualtRifleE09FECB245F3B9EEF3F71F9460616479.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle.uasset'
+[2026.05.09-15.57.49:425][353]LogFileHelpers: InternalPromptForCheckoutAndSave took 165.228 ms (total: 1.30 sec)
+[2026.05.09-15.57.49:491][353]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-15.57.49:491][353]LogContentValidation: Enabled validators:
+[2026.05.09-15.57.49:491][353]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-15.57.49:491][353]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-15.57.49:491][353]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-15.57.49:491][353]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-15.57.49:491][353]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-15.57.49:491][353]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-15.57.49:492][353]AssetCheck: /Game/ModelsAndAnimations/Weapons/AssualtRfle/Source/SM_AssualtRifle Validating asset
+[2026.05.09-15.58.03:648][567]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.05.09-15.58.13:050][798]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.05.09-15.58.25:404][ 82]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2026.05.09-15.58.25:412][ 82]LogContentBrowser: Creating deferred item: NewFolder
+[2026.05.09-15.58.25:423][ 83]LogContentBrowser: Renaming the item being created (Deferred Item: NewFolder).
+[2026.05.09-15.58.38:788][404]LogContentBrowser: Attempting asset rename: NewFolder -> AssaultRifle
+[2026.05.09-15.58.38:788][404]LogContentBrowser: End creating deferred item NewFolder
+[2026.05.09-15.58.50:287][631]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2026.05.09-15.59.04:541][994]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle
+[2026.05.09-15.59.04:541][994]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_16
+[2026.05.09-15.59.04:542][994]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_16'.
+[2026.05.09-15.59.04:626][994]LogStreaming: Display: FlushAsyncLoading(633): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-15.59.06:942][994]LogSlate: Window 'Add Blueprint Class' being destroyed
+[2026.05.09-15.59.20:964][547]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_17
+[2026.05.09-15.59.20:964][547]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_17'.
+[2026.05.09-15.59.30:976][687]LogPhysics: Warning: Scale for /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-15.59.30:976][687]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_AssaultRifle_C_0 /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh 
+[2026.05.09-15.59.45:298][906]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2026.05.09-15.59.45:903][916]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-15.59.46:022][916]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle] ([2] browsable assets)...
+[2026.05.09-15.59.46:059][916]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle]
+[2026.05.09-15.59.46:060][916]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_18
+[2026.05.09-15.59.46:060][916]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_18'.
+[2026.05.09-15.59.46:080][916]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C]
+[2026.05.09-15.59.46:080][916]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle]
+[2026.05.09-15.59.46:083][916]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C' for saving '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C'
+[2026.05.09-15.59.46:083][916]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C' for saving '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C'
+[2026.05.09-15.59.46:085][916]LogSavePackage: Moving output files for package: /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle
+[2026.05.09-15.59.46:085][916]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_AssaultRifle886A29124C50EE18950B178B06E814EA.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/AssaultRifle/BP_AssaultRifle.uasset'
+[2026.05.09-15.59.46:107][916]LogFileHelpers: InternalPromptForCheckoutAndSave took 203.947 ms (total: 1.51 sec)
+[2026.05.09-15.59.46:170][916]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-15.59.46:170][916]LogContentValidation: Enabled validators:
+[2026.05.09-15.59.46:170][916]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-15.59.46:171][916]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-15.59.46:171][916]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-15.59.46:171][916]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-15.59.46:171][916]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-15.59.46:171][916]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-15.59.46:171][916]AssetCheck: /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle Validating asset
+[2026.05.09-15.59.48:203][948]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C
+[2026.05.09-15.59.48:203][948]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C
+[2026.05.09-15.59.48:204][948]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle as actor: BP_AssaultRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_0
+[2026.05.09-15.59.48:205][948]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle as actor: BP_AssaultRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_0
+[2026.05.09-15.59.49:390][988]LogUObjectHash: Compacting FUObjectHashTables data took   1.64ms
+[2026.05.09-15.59.49:392][988]LogEditorActor: Deleted 0 Actors (0.036 secs)
+[2026.05.09-15.59.49:399][988]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C
+[2026.05.09-15.59.49:399][988]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C
+[2026.05.09-15.59.49:405][988]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle as actor: BP_AssaultRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715
+[2026.05.09-15.59.49:406][988]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle as actor: BP_AssaultRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715
+[2026.05.09-15.59.54:299][ 74]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_19
+[2026.05.09-15.59.54:299][ 74]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_19'.
+[2026.05.09-15.59.55:161][ 86]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp_C
+[2026.05.09-15.59.55:161][ 86]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp_C
+[2026.05.09-15.59.55:170][ 86]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp as actor: ShotfunTemp_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.ShotfunTemp_C_0
+[2026.05.09-15.59.55:181][ 86]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp as actor: ShotfunTemp_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.ShotfunTemp_C_0
+[2026.05.09-15.59.57:571][146]LogUObjectHash: Compacting FUObjectHashTables data took   1.56ms
+[2026.05.09-15.59.57:573][146]LogEditorActor: Deleted 0 Actors (0.048 secs)
+[2026.05.09-15.59.57:581][146]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp_C
+[2026.05.09-15.59.57:581][146]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp_C
+[2026.05.09-15.59.57:587][146]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp as actor: ShotfunTemp_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.ShotfunTemp_C_UAID_84144D205DD172D902_1870592716
+[2026.05.09-15.59.57:598][146]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/ShotfunTemp.ShotfunTemp as actor: ShotfunTemp_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.ShotfunTemp_C_UAID_84144D205DD172D902_1870592716
+[2026.05.09-16.00.02:433][235]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2026.05.09-16.00.02:433][235]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_20'.
+[2026.05.09-16.00.02:519][236]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2026.05.09-16.00.02:520][236]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_21'.
+[2026.05.09-16.00.03:605][253]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle_C
+[2026.05.09-16.00.03:605][253]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle_C
+[2026.05.09-16.00.03:606][253]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle as actor: BP_EnemySniperRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_EnemySniperRifle_C_0
+[2026.05.09-16.00.03:607][253]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle as actor: BP_EnemySniperRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_EnemySniperRifle_C_0
+[2026.05.09-16.00.05:288][321]LogUObjectHash: Compacting FUObjectHashTables data took   1.65ms
+[2026.05.09-16.00.05:295][321]LogEditorActor: Deleted 0 Actors (0.036 secs)
+[2026.05.09-16.00.05:315][321]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle_C
+[2026.05.09-16.00.05:315][321]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle_C
+[2026.05.09-16.00.05:318][321]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle as actor: BP_EnemySniperRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_EnemySniperRifle_C_UAID_84144D205DD172D902_1878326717
+[2026.05.09-16.00.05:319][321]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle as actor: BP_EnemySniperRifle_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_EnemySniperRifle_C_UAID_84144D205DD172D902_1878326717
+[2026.05.09-16.00.14:393][489]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.05.09-16.00.14:410][489]LogContentBundle: [BTAITestMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.05.09-16.00.14:410][489]LogWorldPartition: Display: GenerateStreaming for 'BTAITestMap' started...
+[2026.05.09-16.00.14:419][489]LogWorldPartition: Display: GenerateStreaming for 'BTAITestMap' took 8.639 ms
+[2026.05.09-16.00.14:421][489]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.09-16.00.14:431][489]LogOnline: OSS: Created online subsystem instance for: NULL
+[2026.05.09-16.00.14:431][489]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for type [NULL]
+[2026.05.09-16.00.14:431][489]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap
+[2026.05.09-16.00.14:440][489]LogPlayLevel: PIE: StaticDuplicateObject took: (0.009657s)
+[2026.05.09-16.00.14:440][489]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap to /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap (0.009782s)
+[2026.05.09-16.00.14:469][489]LogUObjectHash: Compacting FUObjectHashTables data took   2.38ms
+[2026.05.09-16.00.14:473][489]LogChaosDD: Creating Chaos Debug Draw Scene for world BTAITestMap
+[2026.05.09-16.00.14:475][489]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap'.
+[2026.05.09-16.00.14:476][489]LogWorldPartition: ULevel::OnLevelLoaded(BTAITestMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.05.09-16.00.14:476][489]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.05.09-16.00.14:476][489]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.05.09-16.00.14:476][489]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.05.09-16.00.14:478][489]LogWorldPartition: Display: WorldPartition initialize took 2.675 ms (total: 1.64 sec)
+[2026.05.09-16.00.14:479][489]LogPlayLevel: PIE: World Init took: (0.005443s)
+[2026.05.09-16.00.14:480][489]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2026.05.09-16.00.14:480][489]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.09-16.00.14:480][489]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.09-16.00.14:480][489]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.09-16.00.14:480][489]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.09-16.00.14:480][489]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.05.09-16.00.14:480][489]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.09-16.00.14:480][489]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.05.09-16.00.14:480][489]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.09-16.00.14:480][489]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.09-16.00.14:480][489]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.09-16.00.14:480][489]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.09-16.00.14:484][489]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.09-16.00.14:518][489]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.05.09-16.00.14:519][489]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.09-16.00.14:519][489]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.09-16.00.14:519][489]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.09-16.00.14:519][489]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=2
+[2026.05.09-16.00.14:519][489]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=2
+[2026.05.09-16.00.14:525][489]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=2
+[2026.05.09-16.00.14:525][489]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=2
+[2026.05.09-16.00.14:525][489]LogInit: FAudioDevice initialized with ID 2.
+[2026.05.09-16.00.14:525][489]LogAudio: Display: Audio Device (ID: 2) registered with world 'BTAITestMap'.
+[2026.05.09-16.00.14:525][489]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 2
+[2026.05.09-16.00.14:528][489]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.05.09-16.00.14:532][489]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap up for play (max tick rate 60) at 2026.05.09-17.00.14
+[2026.05.09-16.00.14:532][489]LogWorld: Bringing up level for play took: 0.003629
+[2026.05.09-16.00.14:538][489]LogOnline: OSS: Created online subsystem instance for: :Context_23
+[2026.05.09-16.00.14:549][489]PIE: Server logged in
+[2026.05.09-16.00.14:551][489]PIE: Play in editor total start time 0.141 seconds.
+[2026.05.09-16.00.21:487][620]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.09-16.00.21:487][620]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap
+[2026.05.09-16.00.21:487][620]LogWorld: UWorld::CleanupWorld for BTAITestMap, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.00.21:488][620]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.00.21:489][620]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap
+[2026.05.09-16.00.21:511][620]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.09-16.00.21:520][620]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.00.21:560][620]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.09-16.00.21:561][620]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 2
+[2026.05.09-16.00.21:561][620]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2026.05.09-16.00.21:566][620]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=2
+[2026.05.09-16.00.21:583][620]LogUObjectHash: Compacting FUObjectHashTables data took   2.63ms
+[2026.05.09-16.00.22:123][627]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2026.05.09-16.00.35:654][865]LogPhysics: Warning: Scale for /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.00.35:654][865]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_AssaultRifle_C_0 /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh 
+[2026.05.09-16.00.35:655][865]LogPhysics: Warning: Scale for /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.00.35:655][865]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715 /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh 
+[2026.05.09-16.00.35:715][866]LogNavigation: Warning: FNavigationOctree::AddNode: Empty bounds, ignoring StaticMeshComponent /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh.
+[2026.05.09-16.00.36:372][877]LogPhysics: Warning: Scale for /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.00.36:372][877]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_AssaultRifle_C_0 /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh 
+[2026.05.09-16.00.36:372][877]LogPhysics: Warning: Scale for /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.00.36:372][877]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715 /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh 
+[2026.05.09-16.00.36:429][878]LogNavigation: Warning: FNavigationOctree::AddNode: Empty bounds, ignoring StaticMeshComponent /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh.
+[2026.05.09-16.00.39:800][931]LogPhysics: Warning: Scale for /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.00.39:800][931]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_AssaultRifle_C_0 /Engine/Transient.World_16:PersistentLevel.BP_AssaultRifle_C_0.Mesh 
+[2026.05.09-16.00.39:800][931]LogPhysics: Warning: Scale for /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.00.39:800][931]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715 /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh 
+[2026.05.09-16.00.39:860][932]LogNavigation: Warning: FNavigationOctree::AddNode: Empty bounds, ignoring StaticMeshComponent /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_AssaultRifle_C_UAID_84144D205DD172D902_1862410715.Mesh.
+[2026.05.09-16.00.42:397][970]LogUObjectHash: Compacting FUObjectHashTables data took   2.07ms
+[2026.05.09-16.01.02:993][258]LogUObjectHash: Compacting FUObjectHashTables data took   2.12ms
+[2026.05.09-16.01.36:943][853]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2026.05.09-16.01.37:438][859]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.01.37:538][859]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle] ([2] browsable assets)...
+[2026.05.09-16.01.37:560][859]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle]
+[2026.05.09-16.01.37:560][859]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle]
+[2026.05.09-16.01.37:564][859]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C' for saving '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C'
+[2026.05.09-16.01.37:564][859]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C' for saving '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C'
+[2026.05.09-16.01.37:564][859]LogSavePackage: Moving output files for package: /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle
+[2026.05.09-16.01.37:567][859]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_AssaultRifleE92C8F6440B6E728A56D1989353AE504.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/AssaultRifle/BP_AssaultRifle.uasset'
+[2026.05.09-16.01.37:584][859]LogFileHelpers: InternalPromptForCheckoutAndSave took 146.368 ms (total: 1.66 sec)
+[2026.05.09-16.01.37:651][859]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.01.37:651][859]LogContentValidation: Enabled validators:
+[2026.05.09-16.01.37:651][859]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.01.37:651][859]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.01.37:651][859]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.01.37:651][859]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.01.37:651][859]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.01.37:651][859]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.01.37:652][859]AssetCheck: /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle Validating asset
+[2026.05.09-16.01.48:681][ 67]LogUObjectHash: Compacting FUObjectHashTables data took   1.42ms
+[2026.05.09-16.01.48:690][ 67]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.01.48:754][ 67]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/7/O8/QEZR83KZ876TRD0JZBNJ2V
+[2026.05.09-16.01.48:754][ 67]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/QEZR83KZ876TRD0JZBNJ2VCBD06C4B47B48A30FF7FABB2B3F55903.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/BTAITestMap/7/O8/QEZR83KZ876TRD0JZBNJ2V.uasset'
+[2026.05.09-16.01.48:760][ 67]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/4/OR/LDQG3J3T1Q2YSK714R09H0
+[2026.05.09-16.01.48:760][ 67]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/LDQG3J3T1Q2YSK714R09H0FE0F970D458AB1AB791572AB4B48B2A9.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/BTAITestMap/4/OR/LDQG3J3T1Q2YSK714R09H0.uasset'
+[2026.05.09-16.01.48:764][ 67]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/4/PC/KE9QXWSVFVQ8INR65Q0C5F
+[2026.05.09-16.01.48:764][ 67]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/KE9QXWSVFVQ8INR65Q0C5F0E709B234736D0FFD50D509B15E4F84D.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/BTAITestMap/4/PC/KE9QXWSVFVQ8INR65Q0C5F.uasset'
+[2026.05.09-16.01.48:794][ 67]LogFileHelpers: InternalPromptForCheckoutAndSave took 105.235 ms (total: 1.76 sec)
+[2026.05.09-16.01.48:849][ 67]LogContentValidation: Display: Starting to validate 3 assets
+[2026.05.09-16.01.48:850][ 67]LogContentValidation: Enabled validators:
+[2026.05.09-16.01.48:850][ 67]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.01.48:850][ 67]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.01.48:850][ 67]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.01.48:850][ 67]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.01.48:850][ 67]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.01.48:850][ 67]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.01.48:850][ 67]AssetCheck: /Game/FirstPerson/Maps/BTAITestMap Validating asset
+[2026.05.09-16.01.50:773][106]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2026.05.09-16.01.50:789][106]LogContentBundle: [BTAITestMap(Standalone)] Generating Streaming for 0 Content Bundles.
+[2026.05.09-16.01.50:789][106]LogWorldPartition: Display: GenerateStreaming for 'BTAITestMap' started...
+[2026.05.09-16.01.50:792][106]LogWorldPartition: Display: GenerateStreaming for 'BTAITestMap' took 3.817 ms (total: 12.457 ms)
+[2026.05.09-16.01.50:793][106]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2026.05.09-16.01.50:793][106]LogPlayLevel: Creating play world package: /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap
+[2026.05.09-16.01.50:800][106]LogPlayLevel: PIE: StaticDuplicateObject took: (0.007674s)
+[2026.05.09-16.01.50:800][106]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap to /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap (0.007775s)
+[2026.05.09-16.01.50:835][106]LogUObjectHash: Compacting FUObjectHashTables data took   2.42ms
+[2026.05.09-16.01.50:840][106]LogChaosDD: Creating Chaos Debug Draw Scene for world BTAITestMap
+[2026.05.09-16.01.50:843][106]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap'.
+[2026.05.09-16.01.50:843][106]LogWorldPartition: ULevel::OnLevelLoaded(BTAITestMap)(bIsOwningWorldGameWorld=1, bIsOwningWorldPartitioned=1, InitializeForMainWorld=1, InitializeForEditor=0, InitializeForGame=1)
+[2026.05.09-16.01.50:844][106]LogWorldPartition: Display: WorldPartition initialize started...
+[2026.05.09-16.01.50:844][106]LogWorldPartition: UWorldPartition::Initialize : World = /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap, World Type = PIE, IsMainWorldPartition = 1, Location = V(0), Rotation = R(0), IsEditor = 0, IsGame = 0, IsPIEWorldTravel = 0, IsCooking = 0
+[2026.05.09-16.01.50:844][106]LogWorldPartition: UWorldPartition::Initialize Context : World NetMode = Standalone, IsServer = 0, IsDedicatedServer = 0, IsServerStreamingEnabled = 0, IsServerStreamingOutEnabled = 0, IsUsingMakingVisibleTransaction = 0, IsUsingMakingInvisibleTransaction = 0
+[2026.05.09-16.01.50:847][106]LogWorldPartition: Display: WorldPartition initialize took 2.601 ms (total: 1.65 sec)
+[2026.05.09-16.01.50:847][106]LogPlayLevel: PIE: World Init took: (0.005759s)
+[2026.05.09-16.01.50:848][106]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2026.05.09-16.01.50:848][106]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2026.05.09-16.01.50:849][106]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2026.05.09-16.01.50:849][106]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2026.05.09-16.01.50:849][106]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2026.05.09-16.01.50:849][106]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2026.05.09-16.01.50:849][106]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2026.05.09-16.01.50:849][106]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2026.05.09-16.01.50:849][106]LogAudio: Display: AudioDevice MaxSources: 32
+[2026.05.09-16.01.50:849][106]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2026.05.09-16.01.50:849][106]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2026.05.09-16.01.50:849][106]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2026.05.09-16.01.50:853][106]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2026.05.09-16.01.50:885][106]LogAudioMixer: Display: Using Audio Hardware Device Speakers (Realtek(R) Audio)
+[2026.05.09-16.01.50:885][106]LogAudioMixer: Display: Initializing Sound Submixes...
+[2026.05.09-16.01.50:885][106]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2026.05.09-16.01.50:885][106]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2026.05.09-16.01.50:886][106]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2026.05.09-16.01.50:886][106]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2026.05.09-16.01.50:891][106]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2026.05.09-16.01.50:891][106]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2026.05.09-16.01.50:891][106]LogInit: FAudioDevice initialized with ID 3.
+[2026.05.09-16.01.50:891][106]LogAudio: Display: Audio Device (ID: 3) registered with world 'BTAITestMap'.
+[2026.05.09-16.01.50:891][106]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2026.05.09-16.01.50:895][106]LogLoad: Game class is 'BP_FirstPersonGameMode_C'
+[2026.05.09-16.01.50:898][106]LogWorld: Bringing World /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap up for play (max tick rate 60) at 2026.05.09-17.01.50
+[2026.05.09-16.01.50:899][106]LogWorld: Bringing up level for play took: 0.002905
+[2026.05.09-16.01.50:902][106]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2026.05.09-16.01.50:909][106]PIE: Server logged in
+[2026.05.09-16.01.50:911][106]PIE: Play in editor total start time 0.122 seconds.
+[2026.05.09-16.02.01:727][350]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.09-16.02.01:727][350]LogWorld: BeginTearingDown for /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap
+[2026.05.09-16.02.01:727][350]LogWorld: UWorld::CleanupWorld for BTAITestMap, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.02.01:728][350]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.02.01:728][350]LogWorldPartition: UWorldPartition::Uninitialize : World = /Game/FirstPerson/Maps/UEDPIE_0_BTAITestMap.BTAITestMap
+[2026.05.09-16.02.01:754][350]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2026.05.09-16.02.01:764][350]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.02.01:802][350]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2026.05.09-16.02.01:802][350]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2026.05.09-16.02.01:802][350]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.05.09-16.02.01:807][350]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2026.05.09-16.02.01:819][350]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2026.05.09-16.02.01:826][350]LogUObjectHash: Compacting FUObjectHashTables data took   3.22ms
+[2026.05.09-16.02.02:120][357]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2026.05.09-16.02.26:922][910]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1754.205566
+[2026.05.09-16.02.27:130][915]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.02.27:130][916]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1754.370605, Update Interval: 319.303558
+[2026.05.09-16.04.56:683][281]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/Sniper/BP_EnemySniperRifle.BP_EnemySniperRifle
+[2026.05.09-16.04.56:684][281]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_22
+[2026.05.09-16.04.56:684][281]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_22'.
+[2026.05.09-16.05.48:074][333]LogUObjectHash: Compacting FUObjectHashTables data took   2.30ms
+[2026.05.09-16.05.55:738][477]LogContentBrowser: Attempting asset rename: BP_SniperBullet -> BP_SniperBullet
+[2026.05.09-16.06.05:249][685]LogContentBrowser: Attempting asset rename: BP_SniperBullet -> BP_RifleBullet
+[2026.05.09-16.06.05:442][685]LogMetaData: Removing '/Game/AI/Weapons/AssaultRifle/BP_RifleBullet.SKEL_BP_RifleBullet_C' ref from Metadata '/Game/AI/Weapons/AssaultRifle/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.06.05:442][685]LogMetaData: Removing '/Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet_C' ref from Metadata '/Game/AI/Weapons/AssaultRifle/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.06.05:442][685]LogMetaData: Removing '/Game/AI/Weapons/AssaultRifle/BP_RifleBullet.SKEL_BP_RifleBullet_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/Weapons/AssaultRifle/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.06.05:442][685]LogMetaData: Removing '/Game/AI/Weapons/AssaultRifle/BP_RifleBullet.SKEL_BP_RifleBullet_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/Weapons/AssaultRifle/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.06.05:442][685]LogMetaData: Removing '/Game/AI/Weapons/AssaultRifle/BP_RifleBullet.SKEL_BP_RifleBullet_C:ReceiveTick' ref from Metadata '/Game/AI/Weapons/AssaultRifle/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.06.05:442][685]LogMetaData: Removing '/Game/AI/Weapons/AssaultRifle/BP_RifleBullet.SKEL_BP_RifleBullet_C:UserConstructionScript' ref from Metadata '/Game/AI/Weapons/AssaultRifle/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.06.05:443][685]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.06.05:443][685]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/Weapons/AssaultRifle/BP_RifleBullet] ([2] browsable assets)...
+[2026.05.09-16.06.05:443][685]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_23
+[2026.05.09-16.06.05:445][685]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_23'.
+[2026.05.09-16.06.05:493][685]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet_C]
+[2026.05.09-16.06.05:494][685]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_24
+[2026.05.09-16.06.05:494][685]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_24'.
+[2026.05.09-16.06.05:516][685]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet]
+[2026.05.09-16.06.05:516][685]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/AssaultRifle/BP_RifleBullet]
+[2026.05.09-16.06.05:522][685]LogSavePackage: Moving output files for package: /Game/AI/Weapons/AssaultRifle/BP_RifleBullet
+[2026.05.09-16.06.05:522][685]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_RifleBulletF4DAA1564A0D3E4B39BC5A9521862853.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/AssaultRifle/BP_RifleBullet.uasset'
+[2026.05.09-16.06.05:531][685]LogFileHelpers: InternalPromptForCheckoutAndSave took 88.275 ms (total: 1.85 sec)
+[2026.05.09-16.06.05:583][685]LogUObjectHash: Compacting FUObjectHashTables data took   2.06ms
+[2026.05.09-16.06.05:619][685]LogUObjectHash: Compacting FUObjectHashTables data took   1.73ms
+[2026.05.09-16.06.05:646][685]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2026.05.09-16.06.05:729][685]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.06.05:729][685]LogContentValidation: Enabled validators:
+[2026.05.09-16.06.05:729][685]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.06.05:729][685]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.06.05:729][685]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.06.05:729][685]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.06.05:729][685]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.06.05:729][685]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.06.05:729][685]AssetCheck: /Game/AI/Weapons/AssaultRifle/BP_RifleBullet Validating asset
+[2026.05.09-16.06.07:097][718]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet
+[2026.05.09-16.06.07:097][718]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_25
+[2026.05.09-16.06.07:098][718]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_25'.
+[2026.05.09-16.06.24:863][ 29]LogWorld: UWorld::CleanupWorld for World_25, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.06.24:863][ 29]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.06.24:920][ 29]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet
+[2026.05.09-16.06.24:920][ 29]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_26
+[2026.05.09-16.06.24:921][ 29]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_26'.
+[2026.05.09-16.06.25:525][ 29]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2026.05.09-16.06.46:182][400]LogWorld: UWorld::CleanupWorld for World_22, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.06.46:182][400]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.06.46:288][400]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2026.05.09-16.08.01:395][152]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2026.05.09-16.08.02:180][163]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.08.02:279][163]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle] ([2] browsable assets)...
+[2026.05.09-16.08.02:308][163]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle]
+[2026.05.09-16.08.02:308][163]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle]
+[2026.05.09-16.08.02:313][163]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C' for saving '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C'
+[2026.05.09-16.08.02:313][163]LogWorldPartition: Can't find class descriptor '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C' for saving '/Game/AI/Weapons/AssaultRifle/BP_AssaultRifle.BP_AssaultRifle_C'
+[2026.05.09-16.08.02:313][163]LogSavePackage: Moving output files for package: /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle
+[2026.05.09-16.08.02:315][163]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_AssaultRifle116069714F77D9F860523E8ED557637F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/AssaultRifle/BP_AssaultRifle.uasset'
+[2026.05.09-16.08.02:335][163]LogFileHelpers: InternalPromptForCheckoutAndSave took 155.940 ms (total: 2.00 sec)
+[2026.05.09-16.08.02:394][163]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.08.02:394][163]LogContentValidation: Enabled validators:
+[2026.05.09-16.08.02:394][163]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.08.02:394][163]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.08.02:394][163]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.08.02:394][163]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.08.02:394][163]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.08.02:394][163]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.08.02:394][163]AssetCheck: /Game/AI/Weapons/AssaultRifle/BP_AssaultRifle Validating asset
+[2026.05.09-16.08.42:377][831]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2129.663330
+[2026.05.09-16.08.42:658][835]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.08.42:659][835]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2129.842773, Update Interval: 322.817474
+[2026.05.09-16.09.10:829][308]LogUObjectHash: Compacting FUObjectHashTables data took   1.99ms
+[2026.05.09-16.13.39:454][638]LogUObjectHash: Compacting FUObjectHashTables data took   1.13ms
+[2026.05.09-16.13.39:458][638]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/FirstPerson/Maps/BTAITestMap' took 0.055
+[2026.05.09-16.14.50:177][239]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2497.469238
+[2026.05.09-16.14.50:396][244]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.14.50:396][244]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2497.645020, Update Interval: 310.766937
+[2026.05.09-16.15.40:845][352]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Sphere.Sphere
+[2026.05.09-16.15.40:845][352]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Engine/BasicShapes/Sphere.Sphere
+[2026.05.09-16.15.40:850][352]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Sphere.Sphere as actor: StaticMeshActor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.StaticMeshActor_UAID_84144D205DD173D902_1740114894
+[2026.05.09-16.15.40:851][352]LogActorFactory: Actor Factory spawned StaticMesh /Engine/BasicShapes/Sphere.Sphere as actor: StaticMeshActor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.StaticMeshActor_UAID_84144D205DD173D902_1740114894
+[2026.05.09-16.16.13:112][903]LogStreaming: Display: FlushAsyncLoading(823): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.16.22:909][ 64]LogStreaming: Display: FlushAsyncLoading(824): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.16.32:441][220]LogUObjectHash: Compacting FUObjectHashTables data took   1.99ms
+[2026.05.09-16.16.32:453][220]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.16.32:514][220]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/8/QE/MQ5INEJN0FHIDO4JS6G6WG
+[2026.05.09-16.16.32:514][220]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/MQ5INEJN0FHIDO4JS6G6WG1D4F7B904AFB39AC23876EBE188BBACE.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/BTAITestMap/8/QE/MQ5INEJN0FHIDO4JS6G6WG.uasset'
+[2026.05.09-16.16.32:546][220]LogFileHelpers: InternalPromptForCheckoutAndSave took 93.829 ms (total: 2.10 sec)
+[2026.05.09-16.16.32:613][220]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.16.32:613][220]LogContentValidation: Enabled validators:
+[2026.05.09-16.16.32:613][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.16.32:613][220]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.16.32:613][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.16.32:613][220]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.16.32:613][220]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.16.32:613][220]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.16.32:613][220]AssetCheck: /Game/FirstPerson/Maps/BTAITestMap Validating asset
+[2026.05.09-16.16.45:305][447]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2026.05.09-16.16.47:108][480]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/Shotgun/BP_SniperBullet.BP_SniperBullet
+[2026.05.09-16.16.47:108][480]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_27
+[2026.05.09-16.16.47:109][480]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_27'.
+[2026.05.09-16.17.14:703][979]LogContentBrowser: Attempting asset rename: BP_SniperBullet -> BP_ShotgunBullet
+[2026.05.09-16.17.14:908][979]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.SKEL_BP_ShotgunBullet_C' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.17.14:908][979]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.17.14:908][979]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.SKEL_BP_ShotgunBullet_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.17.14:908][979]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.SKEL_BP_ShotgunBullet_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.17.14:908][979]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.SKEL_BP_ShotgunBullet_C:ReceiveTick' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.17.14:909][979]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.SKEL_BP_ShotgunBullet_C:UserConstructionScript' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_SniperBullet.PackageMetaData'
+[2026.05.09-16.17.14:964][979]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.17.14:965][979]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.17.14:965][979]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_28
+[2026.05.09-16.17.14:965][979]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_28'.
+[2026.05.09-16.17.15:010][979]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C]
+[2026.05.09-16.17.15:010][979]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_29
+[2026.05.09-16.17.15:010][979]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_29'.
+[2026.05.09-16.17.15:050][979]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet]
+[2026.05.09-16.17.15:050][979]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.17.15:059][979]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.17.15:059][979]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBullet3CA2917A401A5D070BFEE9A969D02195.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.17.15:071][979]LogFileHelpers: InternalPromptForCheckoutAndSave took 105.553 ms (total: 2.20 sec)
+[2026.05.09-16.17.15:179][979]LogUObjectHash: Compacting FUObjectHashTables data took   1.97ms
+[2026.05.09-16.17.15:214][979]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2026.05.09-16.17.15:242][979]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2026.05.09-16.17.15:323][979]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.17.15:323][979]LogContentValidation: Enabled validators:
+[2026.05.09-16.17.15:323][979]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.17.15:323][979]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.17.15:323][979]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.17.15:323][979]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.17.15:323][979]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.17.15:323][979]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.17.15:323][979]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.17.18:730][ 38]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2026.05.09-16.17.18:730][ 38]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2026.05.09-16.17.18:783][ 38]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet
+[2026.05.09-16.17.18:783][ 38]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_30
+[2026.05.09-16.17.18:784][ 38]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_30'.
+[2026.05.09-16.17.19:405][ 38]LogUObjectHash: Compacting FUObjectHashTables data took   1.34ms
+[2026.05.09-16.17.37:864][315]LogStreaming: Display: FlushAsyncLoading(825): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.17.37:870][315]LogStaticMesh: Display: Building static mesh Shape_Sphere (Required Memory Estimate: 1.522745 MB)...
+[2026.05.09-16.17.37:881][315]LogStaticMesh: Built static mesh [0.01s] /Game/StarterContent/Shapes/Shape_Sphere.Shape_Sphere
+[2026.05.09-16.17.48:254][460]LogStreaming: Display: FlushAsyncLoading(826): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.17.55:684][568]LogPhysics: Warning: Scale for /Engine/Transient.World_30:PersistentLevel.BP_ShotgunBullet_C_0.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.17.55:686][568]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_ShotgunBullet_C_0 /Engine/Transient.World_30:PersistentLevel.BP_ShotgunBullet_C_0.Mesh 
+[2026.05.09-16.18.01:661][662]LogEditorTransaction: Undo Modify Component(s)
+[2026.05.09-16.18.01:727][662]LogPhysics: Warning: Scale for /Engine/Transient.World_30:PersistentLevel.BP_ShotgunBullet_C_0.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.18.01:727][662]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_ShotgunBullet_C_0 /Engine/Transient.World_30:PersistentLevel.BP_ShotgunBullet_C_0.Mesh 
+[2026.05.09-16.18.02:505][662]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.02:511][662]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.02:793][662]LogPhysics: Warning: Scale for /Engine/Transient.World_30:PersistentLevel.BP_ShotgunBullet_C_0.Mesh has a component set to zero, which will result in a bad body instance. Scale:X=0.000 Y=0.000 Z=0.000
+[2026.05.09-16.18.02:793][662]LogPhysics: Warning: Initialising Body : Scale3D is (nearly) zero: BP_ShotgunBullet_C_0 /Engine/Transient.World_30:PersistentLevel.BP_ShotgunBullet_C_0.Mesh 
+[2026.05.09-16.18.03:237][669]LogEditorTransaction: Undo Modify Component(s)
+[2026.05.09-16.18.04:005][669]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.04:006][669]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.04:079][669]LogEditorTransaction: Undo Replace component used material
+[2026.05.09-16.18.04:786][669]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.04:787][669]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.05:363][670]LogEditorTransaction: Undo Edit Static Mesh
+[2026.05.09-16.18.05:989][670]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.05:989][670]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.18.40:984][217]LogShaderCompilers: Display: ================================================
+[2026.05.09-16.18.40:984][217]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2026.05.09-16.18.40:984][217]LogShaderCompilers: Display: Total job queries 336, among them cache hits 141 (41.96%), DDC hits 160 (47.62%), Duplicates 3 (0.89%)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Tracking 192 distinct input hashes that result in 165 distinct outputs (85.94%)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: RAM used: 118.13 KiB of 1.60 GiB budget. Usage: 0.01%
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Shaders Compiled: 32
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Jobs assigned 32, completed 32 (100%)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Average time worker was idle: 279.27 s
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Time job spent in pending queue: average 0.16 s, longest 1.79 s
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Job execution time: average 2.04 s, max 3.95 s
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Job life time (pending + execution): average 2.19 s, max 4.01
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Shader code size: average 5.886 KiB, min 464 B, max 14.805 KiB
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 28.36 s
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Jobs were issued in 30 batches (only local compilation was used), average 1.07 jobs/batch
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Average processing rate: 1.13 jobs/sec
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Total thread time: 37.527 s
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Total thread preprocess time: 6.596 s
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Percentage time preprocessing: 17.58%
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Effective parallelization: 1.32 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    4 times, average 2.67 sec, max 2.90 sec, min 2.46 sec)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled   14 times, average 1.02 sec, max 1.37 sec, min 0.68 sec)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    7 times, average 0.94 sec, max 1.26 sec, min 0.63 sec)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    4 times, average 0.90 sec, max 0.98 sec, min 0.84 sec)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display:                                                  FHitProxyVS (compiled    1 times, average 0.89 sec, max 0.89 sec, min 0.89 sec)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 38.11% of total time (compiled   14 times, average 1.02 sec, max 1.37 sec, min 0.68 sec)
+[2026.05.09-16.18.40:986][217]LogShaderCompilers: Display:                                             FDebugViewModePS - 28.46% of total time (compiled    4 times, average 2.67 sec, max 2.90 sec, min 2.46 sec)
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 17.59% of total time (compiled    7 times, average 0.94 sec, max 1.26 sec, min 0.63 sec)
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 9.61% of total time (compiled    4 times, average 0.90 sec, max 0.98 sec, min 0.84 sec)
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display:                                                  FHitProxyVS - 2.36% of total time (compiled    1 times, average 0.89 sec, max 0.89 sec, min 0.89 sec)
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: === Material stats ===
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: Materials Cooked:        0
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: Materials Translated:    195
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: Material Total Translate Time: 0.14 s
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: Material Translation Only: 0.06 s (39%)
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: Material Cache Hits: 16 (8%)
+[2026.05.09-16.18.40:987][217]LogShaderCompilers: Display: ================================================
+[2026.05.09-16.19.33:628][128]LogUObjectHash: Compacting FUObjectHashTables data took   2.13ms
+[2026.05.09-16.19.37:388][199]Cmd: DELETE
+[2026.05.09-16.19.37:388][199]Cmd: ACTOR DELETE
+[2026.05.09-16.19.37:391][199]LogEditorActor: Deleted Actor: StaticMeshActor
+[2026.05.09-16.19.37:442][199]LogUObjectHash: Compacting FUObjectHashTables data took   1.90ms
+[2026.05.09-16.19.37:448][199]LogEditorActor: Deleted 1 Actors (0.060 secs)
+[2026.05.09-16.19.42:025][278]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.19.42:025][278]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.19.42:025][278]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_0
+[2026.05.09-16.19.42:027][278]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_0
+[2026.05.09-16.19.47:023][365]LogUObjectHash: Compacting FUObjectHashTables data took   0.88ms
+[2026.05.09-16.19.47:027][365]LogEditorActor: Deleted 0 Actors (0.037 secs)
+[2026.05.09-16.19.47:033][365]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.19.47:033][365]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.19.47:040][365]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD173D902_1986302895
+[2026.05.09-16.19.47:041][365]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD173D902_1986302895
+[2026.05.09-16.19.55:103][530]Cmd: DELETE
+[2026.05.09-16.19.55:105][530]Cmd: ACTOR DELETE
+[2026.05.09-16.19.55:107][530]LogEditorActor: Deleted Actor: BP_ShotgunBullet_C
+[2026.05.09-16.19.55:147][530]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2026.05.09-16.19.55:150][530]LogEditorActor: Deleted 1 Actors (0.046 secs)
+[2026.05.09-16.20.03:458][701]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet_C
+[2026.05.09-16.20.03:459][701]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet_C
+[2026.05.09-16.20.03:460][701]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet as actor: BP_RifleBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_RifleBullet_C_0
+[2026.05.09-16.20.03:461][701]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet as actor: BP_RifleBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_RifleBullet_C_0
+[2026.05.09-16.20.07:945][782]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2026.05.09-16.20.07:948][782]LogEditorActor: Deleted 0 Actors (0.028 secs)
+[2026.05.09-16.20.07:953][782]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet_C
+[2026.05.09-16.20.07:953][782]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet_C
+[2026.05.09-16.20.07:958][782]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet as actor: BP_RifleBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_RifleBullet_C_UAID_84144D205DD173D902_2007222896
+[2026.05.09-16.20.07:959][782]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/AssaultRifle/BP_RifleBullet.BP_RifleBullet as actor: BP_RifleBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_RifleBullet_C_UAID_84144D205DD173D902_2007222896
+[2026.05.09-16.20.23:366][106]Cmd: DELETE
+[2026.05.09-16.20.23:366][106]Cmd: ACTOR DELETE
+[2026.05.09-16.20.23:368][106]LogEditorActor: Deleted Actor: BP_RifleBullet_C
+[2026.05.09-16.20.23:404][106]LogUObjectHash: Compacting FUObjectHashTables data took   1.12ms
+[2026.05.09-16.20.23:408][106]LogEditorActor: Deleted 1 Actors (0.042 secs)
+[2026.05.09-16.20.34:203][298]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.20.34:325][298]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.20.34:349][298]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet]
+[2026.05.09-16.20.34:349][298]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.20.34:353][298]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.20.34:355][298]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBullet03B7925C44008E944B6A2AB32EE20D4D.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.20.34:375][298]LogFileHelpers: InternalPromptForCheckoutAndSave took 172.761 ms (total: 2.38 sec)
+[2026.05.09-16.20.34:439][298]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.20.34:439][298]LogContentValidation: Enabled validators:
+[2026.05.09-16.20.34:439][298]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.20.34:439][298]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.20.34:439][298]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.20.34:439][298]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.20.34:440][298]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.20.34:440][298]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.20.34:440][298]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.20.58:036][646]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2865.320801
+[2026.05.09-16.20.58:313][651]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.20.58:313][652]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2865.544189, Update Interval: 334.406555
+[2026.05.09-16.21.02:661][704]LogSlate: Window 'Pick Parent Class' being destroyed
+[2026.05.09-16.21.02:679][704]LogContentBrowser: Deferred new asset file creation: NewBlueprint
+[2026.05.09-16.21.02:685][704]LogContentBrowser: Creating deferred item: NewBlueprint
+[2026.05.09-16.21.02:699][705]LogContentBrowser: Renaming the item being created (Deferred Item: NewBlueprint).
+[2026.05.09-16.21.15:495][943]LogContentBrowser: Attempting asset rename: NewBlueprint -> BP_ShotgunBullet1
+[2026.05.09-16.21.15:509][943]LogContentBrowser: End creating deferred item NewBlueprint
+[2026.05.09-16.21.26:137][126]LogContentBrowser: Attempting asset rename: BP_ShotgunBullet -> BP_BuckShot
+[2026.05.09-16.21.26:333][126]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_BuckShot.BP_BuckShot_C' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.PackageMetaData'
+[2026.05.09-16.21.26:333][126]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_BuckShot.SKEL_BP_BuckShot_C' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.PackageMetaData'
+[2026.05.09-16.21.26:333][126]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_BuckShot.SKEL_BP_BuckShot_C:ReceiveBeginPlay' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.PackageMetaData'
+[2026.05.09-16.21.26:333][126]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_BuckShot.SKEL_BP_BuckShot_C:ReceiveActorBeginOverlap' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.PackageMetaData'
+[2026.05.09-16.21.26:333][126]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_BuckShot.SKEL_BP_BuckShot_C:ReceiveTick' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.PackageMetaData'
+[2026.05.09-16.21.26:333][126]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_BuckShot.SKEL_BP_BuckShot_C:UserConstructionScript' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.PackageMetaData'
+[2026.05.09-16.21.26:383][126]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.21.26:383][126]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_BuckShot] ([2] browsable assets)...
+[2026.05.09-16.21.26:383][126]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_31
+[2026.05.09-16.21.26:384][126]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_31'.
+[2026.05.09-16.21.26:433][126]OBJ SavePackage:     Rendered thumbnail for [BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_BuckShot.BP_BuckShot_C]
+[2026.05.09-16.21.26:433][126]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_BuckShot]
+[2026.05.09-16.21.26:439][126]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_BuckShot
+[2026.05.09-16.21.26:440][126]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_BuckShot4D964D0842D6A3612477CA97EC62F9EC.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_BuckShot.uasset'
+[2026.05.09-16.21.26:453][126]LogFileHelpers: InternalPromptForCheckoutAndSave took 70.172 ms (total: 2.45 sec)
+[2026.05.09-16.21.26:502][126]LogWorldPartition: Actor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.ShotfunTemp_C_UAID_84144D205DD170D902_1372521360 is unreachable without properly detaching object /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/0/I7/QC1YRFLOTES6B2BGD0QV1S.PackageMetaData in its package
+[2026.05.09-16.21.26:506][126]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2026.05.09-16.21.26:545][126]LogUObjectHash: Compacting FUObjectHashTables data took   1.72ms
+[2026.05.09-16.21.26:575][126]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2026.05.09-16.21.26:649][126]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.21.26:649][126]LogContentValidation: Enabled validators:
+[2026.05.09-16.21.26:649][126]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.21.26:649][126]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.21.26:649][126]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.21.26:649][126]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.21.26:649][126]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.21.26:649][126]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.21.26:649][126]AssetCheck: /Game/AI/Weapons/Shotgun/BP_BuckShot Validating asset
+[2026.05.09-16.21.26:661][126]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_32
+[2026.05.09-16.21.26:662][126]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_32'.
+[2026.05.09-16.21.26:695][126]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2026.05.09-16.21.32:391][218]LogContentBrowser: Attempting asset rename: BP_ShotgunBullet1 -> BP_ShotgunBullet1
+[2026.05.09-16.21.39:962][347]LogContentBrowser: Attempting asset rename: BP_ShotgunBullet1 -> BP_ShotgunBullet
+[2026.05.09-16.21.40:169][347]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet:UserConstructionScript.K2Node_FunctionEntry_0' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet1.PackageMetaData'
+[2026.05.09-16.21.40:169][347]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.SKEL_BP_ShotgunBullet_C:UserConstructionScript' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet1.PackageMetaData'
+[2026.05.09-16.21.40:169][347]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.SKEL_BP_ShotgunBullet_C' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet1.PackageMetaData'
+[2026.05.09-16.21.40:169][347]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet1.PackageMetaData'
+[2026.05.09-16.21.40:169][347]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet:EventGraph.K2Node_Event_0' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet1.PackageMetaData'
+[2026.05.09-16.21.40:169][347]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet:EventGraph.K2Node_Event_1' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet1.PackageMetaData'
+[2026.05.09-16.21.40:169][347]LogMetaData: Removing '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet:EventGraph.K2Node_Event_2' ref from Metadata '/Game/AI/Weapons/Shotgun/BP_ShotgunBullet1.PackageMetaData'
+[2026.05.09-16.21.40:169][347]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.21.40:169][347]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.21.40:169][347]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.21.40:175][347]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.21.40:175][347]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBullet3204D22E4EACC4C59A8239A90081997F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.21.40:187][347]LogFileHelpers: InternalPromptForCheckoutAndSave took 18.178 ms (total: 2.47 sec)
+[2026.05.09-16.21.40:295][347]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2026.05.09-16.21.40:332][347]LogUObjectHash: Compacting FUObjectHashTables data took   1.74ms
+[2026.05.09-16.21.40:360][347]LogUObjectHash: Compacting FUObjectHashTables data took   0.91ms
+[2026.05.09-16.21.40:452][347]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.21.40:452][347]LogContentValidation: Enabled validators:
+[2026.05.09-16.21.40:452][347]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.21.40:452][347]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.21.40:452][347]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.21.40:452][347]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.21.40:452][347]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.21.40:452][347]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.21.40:452][347]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.21.41:701][370]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet
+[2026.05.09-16.21.41:702][370]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_33
+[2026.05.09-16.21.41:702][370]LogRenderer: SceneCulling instance hierarchy is disabled as UseNanite(PCD3D_SM5) returned false, for scene: 'World /Engine/Transient.World_33'.
+[2026.05.09-16.21.47:698][444]LogStreaming: Display: FlushAsyncLoading(827): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.21.47:699][444]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.21.51:603][501]LogStreaming: Display: FlushAsyncLoading(828): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.21.51:603][501]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.01:971][645]LogStreaming: Display: FlushAsyncLoading(829): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.22.01:971][645]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.01:971][645]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.29:064][ 59]LogStreaming: Display: FlushAsyncLoading(831): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.22.29:064][ 59]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.30:343][ 76]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.30:343][ 76]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.30:343][ 76]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.30:343][ 76]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.30:348][ 76]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.30:348][ 76]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.30:348][ 76]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.30:348][ 76]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.30:353][ 76]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.30:353][ 76]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.30:355][ 76]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.30:355][ 76]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.30:513][ 77]LogStreaming: Display: FlushAsyncLoading(832): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.22.30:513][ 77]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.39:206][204]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.39:206][204]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.39:206][204]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.39:206][204]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.39:213][204]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.39:213][204]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.39:213][204]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.39:213][204]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.39:219][204]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.39:219][204]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.39:219][204]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.39:219][204]Warning: Unable to find function ChildActor1_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.39:415][205]LogStreaming: Display: FlushAsyncLoading(833): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.22.39:416][205]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.49:779][361]LogStreaming: Display: FlushAsyncLoading(834): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.22.49:779][361]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.57:029][472]LogStreaming: Display: FlushAsyncLoading(835): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.22.57:029][472]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.22.57:869][483]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.57:869][483]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.57:869][483]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.57:869][483]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.57:874][483]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.57:874][483]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.57:875][483]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.57:875][483]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.57:879][483]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.22.57:879][483]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.57:879][483]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.22.57:879][483]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.22.58:055][484]LogStreaming: Display: FlushAsyncLoading(836): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.22.58:055][484]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.15:964][764]LogEditorTransaction: Undo Modify Component(s)
+[2026.05.09-16.23.16:802][764]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.23.16:803][764]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.23.17:271][765]LogStreaming: Display: FlushAsyncLoading(837): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.17:272][765]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.17:990][778]LogEditorTransaction: Undo Modify Component(s)
+[2026.05.09-16.23.18:724][778]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_10:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.23.18:725][778]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_11:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2026.05.09-16.23.19:084][779]LogStreaming: Display: FlushAsyncLoading(838): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.19:084][779]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.25:067][862]LogStreaming: Display: FlushAsyncLoading(839): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.25:067][862]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.30:266][937]LogStreaming: Display: FlushAsyncLoading(840): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.30:266][937]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.32:847][977]LogStreaming: Display: FlushAsyncLoading(841): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.32:847][977]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.33:588][987]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.23.33:588][987]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.23.33:588][987]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.23.33:588][987]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.23.33:593][987]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.23.33:593][987]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.23.33:593][987]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.23.33:593][987]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.23.33:598][987]Warning: While importing text for property 'OnComponentBeginOverlap' in 'StaticMeshComponent':
+[2026.05.09-16.23.33:598][987]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.OnOverLapBegin in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.23.33:599][987]Warning: While importing text for property 'PhysicsVolumeChangedDelegate' in 'StaticMeshComponent':
+[2026.05.09-16.23.33:599][987]Warning: Unable to find function ChildActor_GEN_VARIABLE:ChildActor_GEN_VARIABLE_BP_BuckShot_C_CAT.ProjectileMovement.PhysicsVolumeChanged in object /Engine/Transient for delegate (found class: Package)
+[2026.05.09-16.23.33:789][988]LogStreaming: Display: FlushAsyncLoading(842): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.33:789][988]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.40:006][ 80]LogStreaming: Display: FlushAsyncLoading(843): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.40:006][ 80]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.41:108][ 96]LogStreaming: Display: FlushAsyncLoading(844): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.41:108][ 96]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.46:606][175]LogStreaming: Display: FlushAsyncLoading(845): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.46:606][175]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.23.50:478][233]LogStreaming: Display: FlushAsyncLoading(846): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.23.50:478][233]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.24.06:026][462]LogUObjectHash: Compacting FUObjectHashTables data took   1.77ms
+[2026.05.09-16.24.06:260][463]LogStreaming: Display: FlushAsyncLoading(847): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.24.06:260][463]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.24.06:680][471]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.24.06:823][471]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.24.06:824][471]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.24.06:830][471]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.24.06:832][471]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBullet6FEABC3E4B8CF250E1DF6D96527B251E.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.24.06:850][471]LogFileHelpers: InternalPromptForCheckoutAndSave took 170.411 ms (total: 2.64 sec)
+[2026.05.09-16.24.06:904][471]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.24.06:904][471]LogContentValidation: Enabled validators:
+[2026.05.09-16.24.06:904][471]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.24.06:904][471]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.24.06:904][471]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.24.06:904][471]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.24.06:904][471]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.24.06:904][471]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.24.06:904][471]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.24.14:109][586]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.24.14:109][586]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.24.14:120][586]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_0
+[2026.05.09-16.24.14:130][586]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_0
+[2026.05.09-16.24.16:148][614]LogUObjectHash: Compacting FUObjectHashTables data took   1.51ms
+[2026.05.09-16.24.16:171][614]LogEditorActor: Deleted 0 Actors (0.077 secs)
+[2026.05.09-16.24.16:179][614]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.24.16:179][614]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet_C
+[2026.05.09-16.24.16:187][614]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD174D902_1181707073
+[2026.05.09-16.24.16:201][614]LogActorFactory: Actor Factory spawned Blueprint /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet as actor: BP_ShotgunBullet_C /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD174D902_1181707073
+[2026.05.09-16.24.57:056][268]LogStreaming: Display: FlushAsyncLoading(848): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.24.57:057][268]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.25.00:063][306]LogStreaming: Display: FlushAsyncLoading(849): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.25.00:063][306]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.25.01:281][320]LogStreaming: Display: FlushAsyncLoading(850): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.25.01:281][320]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.25.05:296][378]LogStreaming: Display: FlushAsyncLoading(851): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.25.05:296][378]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.25.08:863][430]LogStreaming: Display: FlushAsyncLoading(852): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.25.08:863][430]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.25.12:500][482]LogUObjectHash: Compacting FUObjectHashTables data took   2.09ms
+[2026.05.09-16.25.12:815][483]LogStreaming: Display: FlushAsyncLoading(853): 1 QueuedPackages, 0 AsyncPackages
+[2026.05.09-16.25.12:815][483]LogUObjectGlobals: Warning: Failed to find object 'Class /Game/AI/Weapons/Shotgun/BP_ShotgunBullet.BP_ShotgunBullet'
+[2026.05.09-16.25.13:130][489]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.25.13:215][489]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet] ([2] browsable assets)...
+[2026.05.09-16.25.13:216][489]OBJ SavePackage: Finished generating thumbnails for package [/Game/AI/Weapons/Shotgun/BP_ShotgunBullet]
+[2026.05.09-16.25.13:222][489]LogSavePackage: Moving output files for package: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet
+[2026.05.09-16.25.13:223][489]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/BP_ShotgunBullet96C8479449B2823D08D80FA592666439.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/AI/Weapons/Shotgun/BP_ShotgunBullet.uasset'
+[2026.05.09-16.25.13:239][489]LogFileHelpers: InternalPromptForCheckoutAndSave took 109.360 ms (total: 2.74 sec)
+[2026.05.09-16.25.13:298][489]LogContentValidation: Display: Starting to validate 1 assets
+[2026.05.09-16.25.13:298][489]LogContentValidation: Enabled validators:
+[2026.05.09-16.25.13:298][489]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.25.13:298][489]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.25.13:298][489]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.25.13:298][489]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.25.13:298][489]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.25.13:298][489]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.25.13:298][489]AssetCheck: /Game/AI/Weapons/Shotgun/BP_ShotgunBullet Validating asset
+[2026.05.09-16.25.25:042][690]LogUObjectHash: Compacting FUObjectHashTables data took   1.68ms
+[2026.05.09-16.25.25:052][690]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2026.05.09-16.25.25:140][690]LogWorldPartition: Actor /Game/FirstPerson/Maps/BTAITestMap.BTAITestMap:PersistentLevel.BP_ShotgunBullet_C_UAID_84144D205DD173D902_1986302895 is unreachable without properly detaching object /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/4/LJ/67V39T8FM2D51VCGVLP22N.PackageMetaData in its package
+[2026.05.09-16.25.25:142][690]LogUObjectHash: Compacting FUObjectHashTables data took   2.04ms
+[2026.05.09-16.25.25:171][690]LogUObjectHash: Compacting FUObjectHashTables data took   1.62ms
+[2026.05.09-16.25.25:195][690]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2026.05.09-16.25.25:202][690]LogSavePackage: Moving output files for package: /Game/__ExternalActors__/FirstPerson/Maps/BTAITestMap/A/XI/EZQI8YLN7J2FQXJWDU3REL
+[2026.05.09-16.25.25:202][690]LogSavePackage: Moving '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Saved/EZQI8YLN7J2FQXJWDU3RELD5C833C14836C255126EACA51A0DDC0F.tmp' to '../../../../../../Users/zohai/Documents/GitHub/FinalYearProject-SearchAndRescue/SearchAndRescue/Content/__ExternalActors__/FirstPerson/Maps/BTAITestMap/A/XI/EZQI8YLN7J2FQXJWDU3REL.uasset'
+[2026.05.09-16.25.25:226][690]LogFileHelpers: InternalPromptForCheckoutAndSave took 172.822 ms (total: 2.92 sec)
+[2026.05.09-16.25.25:293][690]LogContentValidation: Display: Starting to validate 2 assets
+[2026.05.09-16.25.25:293][690]LogContentValidation: Enabled validators:
+[2026.05.09-16.25.25:293][690]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2026.05.09-16.25.25:293][690]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2026.05.09-16.25.25:293][690]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2026.05.09-16.25.25:293][690]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2026.05.09-16.25.25:293][690]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2026.05.09-16.25.25:295][690]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2026.05.09-16.25.25:295][690]AssetCheck: /Game/FirstPerson/Maps/BTAITestMap Validating asset
+[2026.05.09-16.25.25:337][690]LogUObjectHash: Compacting FUObjectHashTables data took   1.31ms
+[2026.05.09-16.25.29:813][774]Cmd: DELETE
+[2026.05.09-16.25.29:813][774]Cmd: ACTOR DELETE
+[2026.05.09-16.25.29:816][774]LogEditorActor: Deleted Actor: BP_ShotgunBullet_C
+[2026.05.09-16.25.29:887][774]LogUObjectHash: Compacting FUObjectHashTables data took   1.35ms
+[2026.05.09-16.25.29:891][774]LogEditorActor: Deleted 1 Actors (0.079 secs)
+[2026.05.09-16.27.10:047][990]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3237.331787
+[2026.05.09-16.27.10:214][999]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2026.05.09-16.27.10:214][  0]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3237.483643, Update Interval: 343.223358

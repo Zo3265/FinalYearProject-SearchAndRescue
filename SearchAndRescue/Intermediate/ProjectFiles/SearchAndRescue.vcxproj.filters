@@ -152,6 +152,12 @@
     <Filter Include="Source\SearchAndRescue\Weapons">
       <UniqueIdentifier>{5F37DD63-35CE-31B8-8FC1-F48198423E6F}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\AssaultRifle.cpp">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\AssaultRifle.h">
+      <Filter>Source\SearchAndRescue\Weapons</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\Weapons\BulletBase.cpp">
       <Filter>Source\SearchAndRescue\Weapons</Filter>
     </ClCompile>

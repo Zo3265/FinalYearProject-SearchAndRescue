@@ -30,6 +30,7 @@ public:
 	
 private:
 	
+	//Variables for testing
 	float Count;
 	float StartTime;
 	float DT;

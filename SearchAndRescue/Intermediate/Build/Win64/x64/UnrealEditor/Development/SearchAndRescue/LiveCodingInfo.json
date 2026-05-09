@@ -14,13 +14,13 @@
 			"GrenadeBase.gen.cpp.obj",
 			"MLEnemyBase.gen.cpp.obj",
 			"MyActor.gen.cpp.obj",
-			"SearchAndRescue.init.gen.cpp.obj",
 			"SniperEnemy.gen.cpp.obj",
 			"SniperRifle.gen.cpp.obj",
 			"SniperShootBTTaskNode.gen.cpp.obj",
 			"SplineController.gen.cpp.obj",
 			"SplineMovementActor.gen.cpp.obj",
 			"WeaponBase.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
 			"BTEnemyAIControllerBase.cpp.obj",
 			"BTGrenadeTossTaskNode.cpp.obj",
 			"BTSniperAIController.cpp.obj",
@@ -39,9 +39,11 @@
 			"BulletBase.cpp.obj",
 			"ExplosiveGrenade.cpp.obj",
 			"GrenadeBase.cpp.obj",
-			"SniperRifle.cpp.obj",
 			"WeaponBase.cpp.obj",
-			"PerModuleInline.gen.cpp.obj"
+			"AssaultRifle.gen.cpp.obj",
+			"SearchAndRescue.init.gen.cpp.obj",
+			"AssaultRifle.cpp.obj",
+			"SniperRifle.cpp.obj"
 		]
 	}
 }
