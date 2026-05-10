@@ -137,6 +137,15 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\MLAI\TrainingActor\MyActor.h">
       <Filter>Source\SearchAndRescue\AI\MLAI\TrainingActor</Filter>
     </ClCompile>
+    <Filter Include="Source\SearchAndRescue\MainCharacter">
+      <UniqueIdentifier>{F92FA3C5-0010-3A7C-A540-EAC6C3D84D46}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\MainCharacter\MainCharacter.cpp">
+      <Filter>Source\SearchAndRescue\MainCharacter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\MainCharacter\MainCharacter.h">
+      <Filter>Source\SearchAndRescue\MainCharacter</Filter>
+    </ClCompile>
     <Filter Include="Source\SearchAndRescue\Private">
       <UniqueIdentifier>{AB2CB879-22A7-37FB-BDED-B8BEAF41F410}</UniqueIdentifier>
     </Filter>
