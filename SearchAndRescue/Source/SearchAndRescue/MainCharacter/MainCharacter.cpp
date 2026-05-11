@@ -2,6 +2,7 @@
 
 
 #include "SearchAndRescue/MainCharacter/MainCharacter.h"
+#include "SearchAndRescue/AI/BTAI/HostageChar.h"
 #include "Kismet/GameplayStatics.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
@@ -94,6 +95,8 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 		EnhancedInputComponent->BindAction(SwapAssault, ETriggerEvent::Triggered, this, &AMainCharacter::SwapWeapons, 0);
 		EnhancedInputComponent->BindAction(SwapShotgun, ETriggerEvent::Triggered, this, &AMainCharacter::SwapWeapons, 1);
 		EnhancedInputComponent->BindAction(SwapSniper, ETriggerEvent::Triggered, this, &AMainCharacter::SwapWeapons, 2);
+		//Interacting with the hostage
+		EnhancedInputComponent->BindAction(Interact, ETriggerEvent::Triggered, this, &AMainCharacter::Interaction);
 
 	}
 }
@@ -199,6 +202,19 @@ void AMainCharacter::SwapWeapons(int32 WeaponIndex)
 		SniperRifle->SetActorHiddenInGame(false);
 		CurrentWeapon = SniperRifle;
 		break;
+	}
+}
+
+void AMainCharacter::Interaction()
+{
+	AHostageChar* Hostage = Cast<AHostageChar>(UGameplayStatics::GetActorOfClass(GetWorld(), AHostageChar::StaticClass()));
+	float Distance = FVector::Distance(Hostage->GetActorLocation(), UGameplayStatics::GetPlayerPawn(GetWorld(),0)->GetActorLocation());
+	//UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Distance);
+
+	if (Hostage && Distance <= 90.0f)
+	{
+		//GLog->Log("Playing");
+		Hostage->playActivationMontage();
 	}
 }
 

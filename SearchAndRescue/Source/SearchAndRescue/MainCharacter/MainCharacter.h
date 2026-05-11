@@ -78,10 +78,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	class UInputAction* SwapSniper;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+	class UInputAction* Interact;
+
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void Jumping();
 	void Shoot();
 	void Reload();
 	void SwapWeapons(int32 WeaponIndex);
+	void Interaction();
 };
