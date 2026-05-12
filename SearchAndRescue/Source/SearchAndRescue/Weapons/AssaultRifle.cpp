@@ -14,7 +14,7 @@ AAssaultRifle::AAssaultRifle()
 	iMaxMagCount = 30;
 	iMaxAmmoReserve = 180;
 
-	Cooldown = 0.30f;
+	Cooldown = 0.05f;
 	Range = 5000.0f;
 }
 
@@ -34,13 +34,13 @@ void AAssaultRifle::Tick(float DeltaTime)
 
 void AAssaultRifle::AssualtFire()
 {
-	if (iCurrentMagCount > 0)
+	if (iCurrentMagCount > 0 && Cooldown <= 0.0f)
 	{
 			//GLog->Log("Firing");
 			Fire();
 			//bCanFire = false;
 			iCurrentMagCount--;
-			Cooldown = 0.30f;
+			Cooldown = 0.05f;
 	}
 }
 

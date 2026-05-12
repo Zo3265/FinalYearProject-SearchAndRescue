@@ -20,6 +20,7 @@ EBTNodeResult::Type UBTGrenadeTossTaskNode::ExecuteTask(UBehaviorTreeComponent& 
 	//Plays attack animation using the BT.
 	if (ControlledPawn != nullptr)
 	{
+		//AEnemyBase* Sniper = Cast<AEnemyBase>(ControlledPawn);
 		ASniperEnemy* Sniper = Cast<ASniperEnemy>(ControlledPawn);
 		if (Sniper != nullptr)
 		{

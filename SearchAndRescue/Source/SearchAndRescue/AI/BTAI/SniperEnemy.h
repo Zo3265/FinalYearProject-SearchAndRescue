@@ -20,14 +20,13 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	UPROPERTY(EditDefaultsOnly)
+	UPROPERTY(EditDefaultsOnly, Category = "Weapons")
 	TSubclassOf<ASniperRifle> SniperClass;
 
 	UPROPERTY()
 	ASniperRifle* SniperRifle;
 
-	UPROPERTY()
-	UAnimInstance* AnimInstance;
+	
 
 public:
 	// Called every frame
@@ -35,15 +34,6 @@ public:
 
 	ASniperRifle* getRifle();
 
-	void PlayAttackAnim();
-
-	void PlayGrenadeThrowAnim();
-
-	UFUNCTION(BlueprintCallable)
-	void OnGrenadeRelease();
-
-	UFUNCTION(BlueprintCallable)
-	void OnGrenadeThrowFinished();
 private:
 
 	int iCount = 0;

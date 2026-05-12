@@ -110,6 +110,27 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\SniperShootBTTaskNode.h">
       <Filter>Source\SearchAndRescue\AI\BTAI</Filter>
     </ClCompile>
+    <Filter Include="Source\SearchAndRescue\AI\BTAI\AssaultEnemy">
+      <UniqueIdentifier>{BA0F1EC1-C96E-31E8-87F6-EAAEA73002E4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\AssaultEnemy\AssaultEnemy.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI\AssaultEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\AssaultEnemy\AssaultEnemy.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI\AssaultEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\AssaultEnemy\AssaultShootBTTaskNode.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI\AssaultEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\AssaultEnemy\AssaultShootBTTaskNode.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI\AssaultEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\AssaultEnemy\BTAssaultAIController.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI\AssaultEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\AssaultEnemy\BTAssaultAIController.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI\AssaultEnemy</Filter>
+    </ClCompile>
     <Filter Include="Source\SearchAndRescue\AI\MLAI">
       <UniqueIdentifier>{3E75C693-7B10-3F1A-93E5-8BC604934D28}</UniqueIdentifier>
     </Filter>

@@ -66,6 +66,7 @@ void ABTSniperAIController::Tick(float DeltaTime)
 
 }
 
+
 void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
 	if (Stimulus.WasSuccessfullySensed())

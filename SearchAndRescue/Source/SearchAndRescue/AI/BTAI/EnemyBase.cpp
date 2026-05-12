@@ -104,10 +104,73 @@ void AEnemyBase::takeDamage(float fDamageStore)
 	fHealth -= fDamageStore;
 }
 
+
 // Called to bind functionality to input
 void AEnemyBase::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+}
+
+void AEnemyBase::PlayAttackAnim()
+{
+
+	if (AnimInstance != nullptr)
+	{
+
+		/*if (!AnimInstance->Montage_IsPlaying(FiringAnimation))
+		{*/
+		//GLog->Log("Playing Animation");
+		AnimInstance->Montage_Play(FiringAnimation);
+		//}
+
+	}
+}
+
+void AEnemyBase::PlayGrenadeThrowAnim()
+{
+	iExplosiveGrenadeAmount--;
+	if (AnimInstance != nullptr)
+	{
+		this->SetActorHiddenInGame(true);
+		AnimInstance->Montage_Play(GrenadeThrowAnimation);
+
+		FVector SocketLocation = GetMesh()->GetSocketLocation(TEXT("GrenadeSocket"));
+		FRotator SocketRotation = GetMesh()->GetSocketRotation(TEXT("GrenadeSocket"));
+
+		FActorSpawnParameters GrenadeSpawnParameters;
+		GrenadeSpawnParameters.Owner = this;
+		GrenadeSpawnParameters.Instigator = GetInstigator();
+		GrenadeSpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+
+		ExplosiveGrenade = GetWorld()->SpawnActor<AExplosiveGrenade>(ExplosiveGrenadeClass, SocketLocation,
+			SocketRotation, GrenadeSpawnParameters);
+
+		if (ExplosiveGrenade != nullptr)
+		{
+			ExplosiveGrenade->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("GrenadeSocket"));
+			ExplosiveGrenade->SetOwner(this);
+		}
+	}
+}
+
+void AEnemyBase::OnGrenadeRelease()
+{
+	//GLog->Log("Released Grenade");
+
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetPawn();
+	FVector LaunchVelocity = PlayerPawn->GetActorLocation();
+
+	ExplosiveGrenade->DetachFromActor(FDetachmentTransformRules::KeepWorldTransform);
+	ExplosiveGrenade->ProjectileMovement->SetUpdatedComponent(ExplosiveGrenade->GetRootComponent());
+	ExplosiveGrenade->ProjectileMovement->Activate(true);
+	ExplosiveGrenade->ProjectileMovement->Velocity = LaunchVelocity;
+
+
+}
+
+void AEnemyBase::OnGrenadeThrowFinished()
+{
+	this->SetActorHiddenInGame(false);
 }
 

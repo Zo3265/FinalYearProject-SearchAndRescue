@@ -58,6 +58,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Grenades")
 	int iFlashGrenadeAmount = 1;
+
+	UPROPERTY()
+	UAnimInstance* AnimInstance;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -79,4 +82,14 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+
+	void PlayAttackAnim();
+
+	void PlayGrenadeThrowAnim();
+
+	UFUNCTION(BlueprintCallable)
+	void OnGrenadeRelease();
+
+	UFUNCTION(BlueprintCallable)
+	void OnGrenadeThrowFinished();
 };
