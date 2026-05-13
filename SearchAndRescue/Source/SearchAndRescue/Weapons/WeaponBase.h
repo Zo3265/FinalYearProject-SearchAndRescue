@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "GameFramework/Character.h"
 #include "BulletBase.h"
 #include "WeaponBase.generated.h"
 
@@ -62,6 +63,8 @@ public:
 	void Reload();
 
 	bool getCanFire();
+	UFUNCTION(BlueprintCallable)
+	void setReloading(bool bStore);
 	bool getReloading();
 	ABulletBase* getBullet();
 

@@ -61,7 +61,7 @@ void AMainCharacter::BeginPlay()
 	{
 		AssaultRifle->AttachToComponent(WeaponAttachmentPoint, FAttachmentTransformRules::SnapToTargetIncludingScale);
 		AssaultRifle->SetOwner(this);
-		AssaultRifle->SetActorLocation(FVector(AssaultRifle->GetActorLocation().X, AssaultRifle->GetActorLocation().Y, AssaultRifle->GetActorLocation().Z + 10));
+		AssaultRifle->SetActorLocation(FVector(AssaultRifle->GetActorLocation().X, AssaultRifle->GetActorLocation().Y, AssaultRifle->GetActorLocation().Z));
 		//AssaultRifle->SetActorHiddenInGame(true);
 		CurrentWeapon = AssaultRifle;
 	}

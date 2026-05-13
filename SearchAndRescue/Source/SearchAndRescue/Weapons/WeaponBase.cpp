@@ -42,24 +42,28 @@ void AWeaponBase::Tick(float DeltaTime)
 
 void AWeaponBase::Fire()
 {
-    APawn* PlayerPawn = UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetPawn();
+    ACharacter* EnemyChar = Cast<ACharacter>(GetOwner());
+    USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
+
+    FVector FaceLocation = EnemyMesh->GetSocketLocation(TEXT("FaceShoot"));
+    FVector AimDirection = EnemyChar->GetControlRotation().Vector();
+    FVector TargetAimPoint = FaceLocation + (AimDirection * 10000.0f);
 
     //Get the location of the bullets spawn point
     FVector MuzzleLocation = Mesh->GetSocketLocation(TEXT("BulletSpawn"));
-
-    //Get the player location
-    FVector PlayerLocation = PlayerPawn->GetActorLocation();
+    FRotator BulletRotation = (TargetAimPoint - MuzzleLocation).Rotation();
 
     //Rotate the bullet to go to the players location.
-    //FVector TargetLocation = PlayerPawn->GetActorLocation() + FVector(0, 0, 90);
-    FRotator FireRotation = Mesh->GetSocketRotation(TEXT("BulletSpawn"));
+    //FRotator FireRotation = Mesh->GetSocketRotation(TEXT("BulletSpawn"));
+    
+
 
     FActorSpawnParameters SpawnParameters;
     SpawnParameters.Owner = GetOwner();
     SpawnParameters.Instigator = GetInstigator();
     SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-    Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, MuzzleLocation, FireRotation, SpawnParameters);
+    Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, MuzzleLocation, BulletRotation, SpawnParameters);
 }
 
 void AWeaponBase::Reload()
@@ -67,12 +71,17 @@ void AWeaponBase::Reload()
     int iDiff = iMaxMagCount - iCurrentMagCount; //How much ammo we need.
     iCurrentMagCount += iDiff; //Refill the magazine.
     iCurrentAmmoReserve -= iDiff; //Take the refill away from our reserve ammo.
-    bReloading = false; //We are no longer reloading.
+    //bReloading = false; //We are no longer reloading.
 }
 
 bool AWeaponBase::getCanFire()
 {
     return bCanFire;
+}
+
+void AWeaponBase::setReloading(bool bStore)
+{
+    bReloading = bStore;
 }
 
 bool AWeaponBase::getReloading()

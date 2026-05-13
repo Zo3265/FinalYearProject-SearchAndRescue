@@ -127,6 +127,14 @@ void AEnemyBase::PlayAttackAnim()
 	}
 }
 
+void AEnemyBase::PlayReloadAnim()
+{
+	if (AnimInstance != nullptr)
+	{
+		AnimInstance->Montage_Play(ReloadAnimation);
+	}
+}
+
 void AEnemyBase::PlayGrenadeThrowAnim()
 {
 	iExplosiveGrenadeAmount--;
@@ -172,5 +180,10 @@ void AEnemyBase::OnGrenadeRelease()
 void AEnemyBase::OnGrenadeThrowFinished()
 {
 	this->SetActorHiddenInGame(false);
+}
+
+AWeaponBase* AEnemyBase::getWeaponBase()
+{
+	return Weapon;
 }
 

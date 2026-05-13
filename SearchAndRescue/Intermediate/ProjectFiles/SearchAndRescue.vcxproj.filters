@@ -131,6 +131,27 @@
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\AssaultEnemy\BTAssaultAIController.h">
       <Filter>Source\SearchAndRescue\AI\BTAI\AssaultEnemy</Filter>
     </ClCompile>
+    <Filter Include="Source\SearchAndRescue\AI\BTAI\ShotgunEnemy">
+      <UniqueIdentifier>{F4A47AAF-12B4-3EC4-8115-C6F7DB1A360B}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\ShotgunEnemy\BTShotgunAIController.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI\ShotgunEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\ShotgunEnemy\BTShotgunAIController.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI\ShotgunEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\ShotgunEnemy\ShotgunEnemy.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI\ShotgunEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\ShotgunEnemy\ShotgunEnemy.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI\ShotgunEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\ShotgunEnemy\ShotgunShootBTTaskNode.cpp">
+      <Filter>Source\SearchAndRescue\AI\BTAI\ShotgunEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BTAI\ShotgunEnemy\ShotgunShootBTTaskNode.h">
+      <Filter>Source\SearchAndRescue\AI\BTAI\ShotgunEnemy</Filter>
+    </ClCompile>
     <Filter Include="Source\SearchAndRescue\AI\MLAI">
       <UniqueIdentifier>{3E75C693-7B10-3F1A-93E5-8BC604934D28}</UniqueIdentifier>
     </Filter>

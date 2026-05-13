@@ -55,6 +55,10 @@
             "g:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gameplaystatics.generated.h",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\grenadebase.generated.h",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\explosivegrenade.generated.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\weaponbase.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\bulletbase.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\bulletbase.generated.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\weaponbase.generated.h",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\enemybase.generated.h"
         ],
         "ImportedModules": [],

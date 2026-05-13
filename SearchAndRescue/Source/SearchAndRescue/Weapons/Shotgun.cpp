@@ -28,7 +28,7 @@ void AShotgun::Tick(float DeltaTime)
 
 void AShotgun::ShotgunFire()
 {
-	if (iCurrentMagCount > 0)
+	if (iCurrentMagCount > 0 && Cooldown <= 0.0f)
 	{
 		Fire();
 		iCurrentMagCount--;

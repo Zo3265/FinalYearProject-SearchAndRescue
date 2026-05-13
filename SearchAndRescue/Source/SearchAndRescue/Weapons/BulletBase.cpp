@@ -31,7 +31,7 @@ ABulletBase::ABulletBase()
     ProjectileMovement->Bounciness = 0.0f;
     ProjectileMovement->ProjectileGravityScale = 0.0f; // Set this to 0 if you want the bullets to go completely straight.
 
-    InitialLifeSpan = 1.5f;
+    InitialLifeSpan = 8.0f;
 }
 
 // Called when the game starts or when spawned

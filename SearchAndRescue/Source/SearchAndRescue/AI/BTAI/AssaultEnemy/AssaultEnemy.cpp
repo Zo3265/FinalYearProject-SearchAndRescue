@@ -19,6 +19,7 @@ void AAssaultEnemy::BeginPlay()
 	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
 	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 	AssaultRifle = GetWorld()->SpawnActor<AAssaultRifle>(AssaultClass, FTransform(), SpawnParamaters);
+	Weapon = AssaultRifle;
 
 	if (AssaultRifle != nullptr)
 	{

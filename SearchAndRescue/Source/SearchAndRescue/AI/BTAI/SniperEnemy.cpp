@@ -15,6 +15,7 @@ void ASniperEnemy::BeginPlay()
 	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
 	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 	SniperRifle = GetWorld()->SpawnActor<ASniperRifle>(SniperClass, FTransform(), SpawnParamaters);
+	Weapon = SniperRifle;
 
 	if (SniperRifle != nullptr)
 	{

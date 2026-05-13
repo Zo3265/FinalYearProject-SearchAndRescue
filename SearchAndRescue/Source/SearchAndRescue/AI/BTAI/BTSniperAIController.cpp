@@ -50,6 +50,7 @@ void ABTSniperAIController::Tick(float DeltaTime)
 		if (distance <= 50.0f)
 		{
 			GetBlackboardComponent()->SetValueAsBool(TEXT("bHavePlayer"), false);
+			GetAIPerceptionComponent()->ForgetAll();
 		}
 		
 	}
@@ -69,6 +70,10 @@ void ABTSniperAIController::Tick(float DeltaTime)
 
 void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus Stimulus)
 {
+	if (!Actor || Actor != GetWorld()->GetFirstPlayerController()->GetPawn())
+	{
+		return;
+	}
 	if (Stimulus.WasSuccessfullySensed())
 	{
 		//GLog->Log("See player");

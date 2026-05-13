@@ -39,7 +39,7 @@ void ASniperRifle::Tick(float DeltaTime)
 
 void ASniperRifle::SniperFire()
 {
-	if (iCurrentMagCount != 0) //&& bCanFire == true)
+	if (iCurrentMagCount != 0 && Cooldown <= 0.0f)
 	{
 		//GLog->Log("Firing");
 		Fire();
