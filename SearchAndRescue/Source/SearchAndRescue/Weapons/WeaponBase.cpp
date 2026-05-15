@@ -53,11 +53,6 @@ void AWeaponBase::Fire()
     FVector MuzzleLocation = Mesh->GetSocketLocation(TEXT("BulletSpawn"));
     FRotator BulletRotation = (TargetAimPoint - MuzzleLocation).Rotation();
 
-    //Rotate the bullet to go to the players location.
-    //FRotator FireRotation = Mesh->GetSocketRotation(TEXT("BulletSpawn"));
-    
-
-
     FActorSpawnParameters SpawnParameters;
     SpawnParameters.Owner = GetOwner();
     SpawnParameters.Instigator = GetInstigator();

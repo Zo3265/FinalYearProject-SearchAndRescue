@@ -52,3 +52,8 @@ USplineComponent* ASplineController::getSpline()
 	return Spline;
 }
 
+bool ASplineController::getSphereVisible()
+{
+	return bIsSphereVisible;
+}
+

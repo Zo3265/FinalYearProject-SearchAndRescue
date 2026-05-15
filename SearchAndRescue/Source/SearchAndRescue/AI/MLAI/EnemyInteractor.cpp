@@ -53,11 +53,13 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	//Get the agent that is making the observations.
 	setInteractorAgentID(AgentId);
 	UObject* OBSAgent = GetAgent(AgentId);
+	
 
 	//Get the actual actor
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(OBSAgent);
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
 	AWeaponBase* Weapon = Enemy->getWeapon();
+	InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
 
 	//USplineComponent* SplineComp = Enemy->FindComponentByClass<USplineComponent>();
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
@@ -99,145 +101,149 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		float PlayerAlignment = FVector::DotProduct(ActorForward, PlayerDir);
 		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
 
-		//Here we are trying to spot the player
-		//if (PlayerAlignment >= 0.6f)
-		//{
-			//UE_LOG(LogTemp, Error, TEXT("Player Aligned"));
-			//Setting up a raycast so that the agents cant see through walls
-			FHitResult HitResult;
-			FCollisionQueryParams CollisionParams;
-			CollisionParams.AddIgnoredActor(Enemy);
-			CollisionParams.bTraceComplex = true;
+		//Setting up a raycast so that the agents cant see through walls
+		FHitResult HitResult;
+		FCollisionQueryParams CollisionParams;
+		CollisionParams.AddIgnoredActor(Enemy);
+		CollisionParams.bTraceComplex = true;
 
-			float DistanceToTarget = FVector::Dist(ActorLocation, PlayerLoc);
-			bool bInRange = DistanceToTarget < 6000.0f;
+		float DistanceToTarget = FVector::Dist(ActorLocation, PlayerLoc);
+		bool bInRange = DistanceToTarget < 6000.0f;
 
-			float VisionDot = FVector::DotProduct(Enemy->GetActorForwardVector(), RelativeDir);
-			bool bInVisionCone = VisionDot > 0.707f;
+		float VisionDot = FVector::DotProduct(Enemy->GetActorForwardVector(), RelativeDir);
+		bool bInVisionCone = VisionDot > 0.707f;
 
-			//// Debug Text: Shows the exact math the brain is seeing
-			//if (GEngine) {
-			//	FColor TextColor = bInVisionCone ? FColor::Green : FColor::Red;
-			//	//GEngine->AddOnScreenDebugMessage(-1, 0.01f, TextColor, FString::Printf(TEXT("Vision Dot: %.3f (In Cone: %s)"), VisionDot, bInVisionCone ? TEXT("YES") : TEXT("NO")));
-			//	GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Yellow,
-			//		FString::Printf(TEXT("InRange: %s | InCone: %s"), bInRange ? TEXT("YES") : TEXT("NO"), bInVisionCone ? TEXT("YES") : TEXT("NO")));
-			//}
-
-			// 3. The "Cheat" Prevention
-			bool bHasLineOfSight = false;
-			FColor FinalLineColor = FColor::White; // Default to white (out of range/cone)
-
-			if (bInRange && bInVisionCone)
-			{
-				FHitResult Hit;
-				FCollisionQueryParams Params;
-				Params.AddIgnoredActor(Enemy);
-
-				// Perform Trace
-				bool bBlocked = GetWorld()->LineTraceSingleByChannel(Hit, ActorLocation + FVector(0, 0, 30), PlayerLoc + FVector(0, 0, 30), ECC_Visibility, Params);
-
-				// Initial LOS logic
-				bHasLineOfSight = !bBlocked || (Hit.GetActor() == TargetToFollow);
-
-				// Height Check Override
-				if (PlayerLoc.Z < (ActorLocation.Z - 50.0f) && VisionDot > 0.9f)
-				{
-					bHasLineOfSight = false;
-				}
-
-				// --- DEBUG LOGIC ---
-				// Green = Perfect (In cone, in range, clear shot)
-				// Blue  = Target is under the floor (Height Check caught it)
-				// Red   = Blocked by wall/floor
-				if (bHasLineOfSight) {
-					FinalLineColor = FColor::Green;
-				}
-				else if (PlayerLoc.Z < (ActorLocation.Z - 50.0f)) {
-					FinalLineColor = FColor::Blue;
-				}
-				else {
-					FinalLineColor = FColor::Red;
-				}
-
-				DrawDebugLine(
-					GetWorld(),
-					ActorLocation + FVector(0, 0, 50),
-					PlayerLoc + FVector(0, 0, 50),
-					FinalLineColor,
-					false,
-					0.1f,
-					0,
-					2.0f
-				);
-			}
-
-			if (bHasLineOfSight)
-			{
-				// If we see them, reset the timer to max
-				Enemy->VisionTimer = Enemy->VisionRetentionDuration;
-				Enemy->setSeePlayer(true);
-			}
-			else
-			{
-				// If we DON'T see them, count down
-				if (Enemy->VisionTimer > 0.0f)
-				{
-					Enemy->VisionTimer -= GetWorld()->GetDeltaSeconds();
-					Enemy->setSeePlayer(true); // Still "True" because of the buffer!
-				}
-				else
-				{
-					Enemy->setSeePlayer(false); // Finally "False" after 0.5s
-				}
-			}
-
+		//// Debug Text: Shows the exact math the brain is seeing
+		//if (GEngine) {
+		//	FColor TextColor = bInVisionCone ? FColor::Green : FColor::Red;
+		//	//GEngine->AddOnScreenDebugMessage(-1, 0.01f, TextColor, FString::Printf(TEXT("Vision Dot: %.3f (In Cone: %s)"), VisionDot, bInVisionCone ? TEXT("YES") : TEXT("NO")));
+		//	GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Yellow,
+		//		FString::Printf(TEXT("InRange: %s | InCone: %s"), bInRange ? TEXT("YES") : TEXT("NO"), bInVisionCone ? TEXT("YES") : TEXT("NO")));
 		//}
 
-		//else
-		//{
-			//Enemy->setSeePlayer(false);
-		//}
+		bool bHasLineOfSight = false;
+		FColor FinalLineColor = FColor::White; // Default to white (out of range/cone)
 
-
-		//We need another line of sight check that we can use to see if the muzzle of our gun is actually pointing at the player.
-		//I am going to use another line trace for this but one with a range that will be decided by the type of weapon.
-		FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation("BulletSpawn");
-		FVector MuzzleForward = Weapon->getMesh()->GetSocketRotation("BulletSpawn").Vector();
-		FVector MuzzleToTargetDir = (PlayerLoc - MuzzleLocation).GetSafeNormal();
-		FVector TraceEnd = MuzzleLocation + (MuzzleForward * Weapon->getRange());
-
-		float GunDot = FVector::DotProduct(MuzzleForward, MuzzleToTargetDir);
-		bool bGunAligned = GunDot > 0.99f;
-
-		bool bHasClearShot = false;
-		FHitResult AimHit;
-		FColor AimLineColor = FColor::White;
-
-		if (bInRange && bGunAligned) // Only trace if the gun is actually pointing the right way
+		if (bInRange && bInVisionCone)
 		{
+			FHitResult Hit;
 			FCollisionQueryParams Params;
 			Params.AddIgnoredActor(Enemy);
 
-			bool bBlocked = GetWorld()->LineTraceSingleByChannel(AimHit, MuzzleLocation, PlayerLoc, ECC_Visibility, Params);
+			// Perform Trace
+			bool bBlocked = GetWorld()->LineTraceSingleByChannel(Hit, ActorLocation + FVector(0, 0, 30), PlayerLoc + FVector(0, 0, 30), ECC_Visibility, Params);
 
-			// Clear shot if nothing hit or we hit the specific target
-			bHasClearShot = !bBlocked || (AimHit.GetActor() == TargetToFollow);
+			// Initial LOS logic
+			bHasLineOfSight = !bBlocked || (Hit.GetActor() == TargetToFollow);
 
-			if (bHasClearShot) {
-				AimLineColor = FColor::Green;
-				Enemy->setIsAimed(true); // Final Aim Confirmation
+			// Height Check Override
+			if (PlayerLoc.Z < (ActorLocation.Z - 50.0f) && VisionDot > 0.9f)
+			{
+				bHasLineOfSight = false;
+			}
+
+			//DEBUG LOGIC
+			// Green = Perfect (In cone, in range, clear shot)
+			// Blue = Target is under the floor (Height Check caught it)
+			// Red  = Blocked by wall/floor
+			if (bHasLineOfSight) {
+				FinalLineColor = FColor::Green;
+			}
+			else if (PlayerLoc.Z < (ActorLocation.Z - 50.0f)) {
+				FinalLineColor = FColor::Blue;
 			}
 			else {
-				AimLineColor = FColor::Red;
-				Enemy->setIsAimed(false);
+				FinalLineColor = FColor::Red;
 			}
 
-			DrawDebugLine(GetWorld(), MuzzleLocation, PlayerLoc, AimLineColor, false, 0.1f, 0, 4.0f); // Thicker line for Gun
+			DrawDebugLine(
+				GetWorld(),
+				ActorLocation + FVector(0, 0, 50),
+				PlayerLoc + FVector(0, 0, 50),
+				FinalLineColor,
+				false,
+				0.1f,
+				0,
+				2.0f
+			);
+		}
+
+		if (bHasLineOfSight)
+		{
+			// If we see them, reset the timer to max
+			Enemy->VisionTimer = Enemy->VisionRetentionDuration;
+			Enemy->setSeePlayer(true);
 		}
 		else
 		{
-			Enemy->setIsAimed(false);
+			// If we DON'T see them, count down
+			if (Enemy->VisionTimer > 0.0f)
+			{
+				Enemy->VisionTimer -= GetWorld()->GetDeltaSeconds();
+				Enemy->setSeePlayer(true); // Still "True" because of the buffer!
+			}
+			else
+			{
+				Enemy->setSeePlayer(false); // Finally "False" after 0.5s
+			}
 		}
+
+		ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
+		USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
+
+		if (EnemyMesh)
+		{
+			//Same code as the one from my weapon base class. We are just checking to make sure the socket that spawns the bullets is aligned with the player.
+			FVector FaceLocation = EnemyMesh->GetSocketLocation(TEXT("FaceShoot"));
+			FVector AimDirection = EnemyChar->GetControlRotation().Vector();
+			FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
+
+			FVector TargetLocation = TargetToFollow->GetActorLocation();
+			FVector PointToTargetDir = (TargetLocation - FaceLocation).GetSafeNormal();
+
+			//The actual alignment check
+			float GunDot = FVector::DotProduct(AimDirection, PointToTargetDir);
+			bool bGunAligned = false;
+
+			if (GunDot > 0.99f)
+			{
+				bGunAligned = true;
+			}
+
+
+			bool bHasClearShot = false;
+			FHitResult AimHit;
+			FColor AimLineColour = FColor::White;
+
+			if (bInRange && bGunAligned)
+			{
+				FCollisionQueryParams Params;
+				Params.AddIgnoredActor(Enemy);
+
+				bool bBlocked = GetWorld()->LineTraceSingleByChannel(AimHit, MuzzleLocation, TargetLocation, ECC_Visibility, Params);
+				bHasClearShot = !bBlocked || (AimHit.GetActor() == TargetToFollow);
+
+				if (bHasClearShot)
+				{
+					AimLineColour = FColor::Green;
+					Enemy->setIsAimed(true);
+				}
+				else
+				{
+					AimLineColour = FColor::Red;
+					Enemy->setIsAimed(false);
+				}
+
+				// Draw the line from the MUZZLE to the TARGET to visualize the actual bullet trajectory
+				DrawDebugLine(GetWorld(), MuzzleLocation, TargetLocation, AimLineColour, false, 0.1f, 0, 4.0f);
+			}
+
+			else
+			{
+				Enemy->setIsAimed(false);
+			}
+		}
+		
 
 
 		//I want the enemies to lead their shots so we need to know the players speed and direction.
@@ -331,7 +337,9 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 {
 	setInteractorAgentID(AgentId);
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(GetAgent(AgentId));
+	InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
 	AWeaponBase* Weapon = Enemy->getWeapon();
+	float DeltaTime = GetWorld()->GetDeltaSeconds();
 
 	if (Enemy)
 	{
@@ -371,7 +379,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 		if (Weapon->getCurrentAmmoReserve() <= 0)
 		{
-			// You can even 'teleport' ammo into their inventory here
 			Weapon->setCurrentAmmoReserve(999);
 		}
 
@@ -413,49 +420,83 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			FRotator AimRot = (TargetLoc - MuzzleLoc).Rotation();
 
 			// Smoothly rotate toward target
-			FRotator CurrentRotShoot = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, AimRot, GetWorld()->GetDeltaSeconds(), 50.0f);
+			//FRotator CurrentRotShoot = Enemy->GetActorRotation();
+			//FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, AimRot, GetWorld()->GetDeltaSeconds(), 50.0f);
 
-			NewRot.Pitch = 0.0f; // Keep actor upright
+			//NewRot.Pitch = 0.0f; // Keep actor upright
+			//NewRot.Roll = 0.0f;
+			//Enemy->SetActorRotation(NewRot);
+
+			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
+			FRotator BrainTargetRot = Enemy->GetActorRotation();
+			BrainTargetRot.Yaw += BrainYawChange;
+
+			// WEANING MIXTURE: Blend the rotations 50/50
+			// 0.0 = Pure Brain, 1.0 = Pure Auto-Pilot math
+			FRotator BlendedRot = FMath::Lerp(BrainTargetRot, AimRot, 0.5f);
+
+			// Apply via Interp to keep it clean, but much slower (strength reduced to 4.0f)
+			FRotator CurrentRotShoot = Enemy->GetActorRotation();
+			FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, BlendedRot, DeltaTime, 4.0f);
+
+			NewRot.Pitch = 0.0f;
 			NewRot.Roll = 0.0f;
 			Enemy->SetActorRotation(NewRot);
 
 			// If we are perfectly aimed, force the shoot value to 1.0
-			if (Enemy->getIsAimed()) { 
+			/*if (Enemy->getIsAimed()) { 
 				ShootValue = 1.0f; 
-			}
-
+			}*/
 			
 		}
 		else
 		{
-			// 2. PATROL AUTO-PILOT
+			//// 2. PATROL AUTO-PILOT
 			USplineComponent* Spline = InteractorSplineComponent;
 			float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(Enemy->GetActorLocation());
 			FVector PathDir = Spline->GetDirectionAtSplineInputKey(ClosestKey, ESplineCoordinateSpace::World);
 			FRotator IdealRot = PathDir.Rotation();
 
 			// Smoothly rotate to follow the track
+			//FRotator CurrentRotPatrol = Enemy->GetActorRotation();
+			//FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
+
+			//NewRot.Pitch = 0.0f;
+			//NewRot.Roll = 0.0f;
+			//Enemy->SetActorRotation(NewRot);
+
+			//// Use the brain's forward value (or force 1.0 to get them moving)
+			//FinalForwardInput = FMath::Max(0.5f, ForwardValue);
+
+			//// 3. APPLY PHYSICAL MOVEMENT
+			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+
+			// Calculate what the BRAIN wants to do on the path
+			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
+			FRotator BrainTargetRot = Enemy->GetActorRotation();
+			BrainTargetRot.Yaw += BrainYawChange;
+
+			// WEANING MIXTURE: 50% Brain target, 50% Spline target
+			FRotator BlendedRot = FMath::Lerp(BrainTargetRot, IdealRot, 0.5f);
+
 			FRotator CurrentRotPatrol = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
+			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, BlendedRot, DeltaTime, 2.0f); // Softened to 2.0f
 
 			NewRot.Pitch = 0.0f;
 			NewRot.Roll = 0.0f;
 			Enemy->SetActorRotation(NewRot);
 
-			// Use the brain's forward value (or force 1.0 to get them moving)
-			FinalForwardInput = FMath::Max(0.5f, ForwardValue);
-
-			// 3. APPLY PHYSICAL MOVEMENT
+			// Forward movement weaning: Let the brain control the gas fully now
+			FinalForwardInput = ForwardValue;
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 		}
 
 
-		if (ShootValue >= 0.45f)
+		if (ShootValue >= 0.45f && Enemy->getIsAimed())
 		{
 			if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))
 			{
-				if (Sniper->getCoolDown() <= 0.0f) { Sniper->SniperFire(); }
+				Sniper->SniperFire();
 
 			}
 		}

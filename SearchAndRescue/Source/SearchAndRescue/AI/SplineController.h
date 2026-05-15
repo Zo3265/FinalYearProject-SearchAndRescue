@@ -38,4 +38,9 @@ public:
 	float getTotalPathTimeController();
 
 	USplineComponent* getSpline();
+
+	UPROPERTY(EditAnywhere, Category = "SplineController")
+	bool bIsSphereVisible = false;
+
+	bool getSphereVisible();
 };

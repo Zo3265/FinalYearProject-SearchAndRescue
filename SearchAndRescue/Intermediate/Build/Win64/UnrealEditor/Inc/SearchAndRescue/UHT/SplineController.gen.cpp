@@ -54,10 +54,16 @@ struct Z_Construct_UClass_ASplineController_Statics
 		{ "ToolTip", "Controls the speed that an actor takes the spline. Lower values = faster. Larger = slower." },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsSphereVisible_MetaData[] = {
+		{ "Category", "SplineController" },
+		{ "ModuleRelativePath", "AI/SplineController.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Spline;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_TotalPathTimeController;
+	static void NewProp_bIsSphereVisible_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_bIsSphereVisible;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -68,10 +74,16 @@ struct Z_Construct_UClass_ASplineController_Statics
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASplineController_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASplineController, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ASplineController_Statics::NewProp_Spline = { "Spline", nullptr, (EPropertyFlags)0x00200800000a000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASplineController, Spline), Z_Construct_UClass_USplineComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Spline_MetaData), NewProp_Spline_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_ASplineController_Statics::NewProp_TotalPathTimeController = { "TotalPathTimeController", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ASplineController, TotalPathTimeController), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TotalPathTimeController_MetaData), NewProp_TotalPathTimeController_MetaData) };
+void Z_Construct_UClass_ASplineController_Statics::NewProp_bIsSphereVisible_SetBit(void* Obj)
+{
+	((ASplineController*)Obj)->bIsSphereVisible = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_ASplineController_Statics::NewProp_bIsSphereVisible = { "bIsSphereVisible", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(ASplineController), &Z_Construct_UClass_ASplineController_Statics::NewProp_bIsSphereVisible_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bIsSphereVisible_MetaData), NewProp_bIsSphereVisible_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ASplineController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASplineController_Statics::NewProp_Root,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASplineController_Statics::NewProp_Spline,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASplineController_Statics::NewProp_TotalPathTimeController,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ASplineController_Statics::NewProp_bIsSphereVisible,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ASplineController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ASplineController_Statics::DependentSingletons[])() = {
@@ -114,10 +126,10 @@ ASplineController::~ASplineController() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASplineController, ASplineController::StaticClass, TEXT("ASplineController"), &Z_Registration_Info_UClass_ASplineController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASplineController), 3507052790U) },
+		{ Z_Construct_UClass_ASplineController, ASplineController::StaticClass, TEXT("ASplineController"), &Z_Registration_Info_UClass_ASplineController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASplineController), 3033718560U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_3064835089(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_1984313975(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

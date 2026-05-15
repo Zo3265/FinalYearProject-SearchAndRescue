@@ -11,6 +11,8 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 	ACharacter* RewardCharacter = Cast<ACharacter>(GetAgent(AgentId));
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(GetAgent(AgentId));
 	AWeaponBase* Weapon = Enemy->getWeapon();
+	USkeletalMeshComponent* RewardCharMesh = RewardCharacter->GetMesh();
+	TrainingEnvSplineComponent = Enemy->GetSplineController()->getSpline();
 
 	float TotalReward = 0.0f;
 	AActor* TargetToFollow = nullptr;
@@ -75,16 +77,26 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		float EnemyTurnValue = Enemy->getTurnValue();
 
 		//The enemy is sometimes turning the long way to see the player. We need to punish that.
-		//if ((RelativeDir.Y > 0 && EnemyTurnValue < -0.1f) || (RelativeDir.Y < 0 && EnemyTurnValue > 0.1f))
+		/*if ((RelativeDir.Y > 0 && EnemyTurnValue < -0.1f) || (RelativeDir.Y < 0 && EnemyTurnValue > 0.1f))
+		{
+			TotalReward -= 2.0f;
+			UE_LOG(LogTemp, Error, TEXT("Long way turn penalty"));
+		}*/
+
+		//if (FMath::Abs(EnemyTurnValue) > 0.6f && !Enemy->getSeePlayer())
 		//{
-		//	TotalReward -= 2.0f;
+		//	// The faster they spin, the more it hurts.
+		//	TotalReward -= 10.0f;
+		//	UE_LOG(LogTemp, Error, TEXT("360 penalty"));
 		//}
 
-		if (FMath::Abs(EnemyTurnValue) > 0.f && !Enemy->getSeePlayer())
+		//Hitting the player logic
+		if (Enemy->getHit() == true)
 		{
-			// The faster they spin, the more it hurts.
-			//TotalReward -= 50.0f;
-			//UE_LOG(LogTemp, Error, TEXT("360 penalty"));
+			// A massive one-time bonus
+			TotalReward += 150.0f;
+
+			Enemy->setHit(false);
 		}
 		
 		if (Enemy->getSeePlayer() == true)
@@ -102,15 +114,17 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 		if (CurrentState == EAgentState::Patrolling)
 		{
-			//TotalReward += 2.0f;
+			TotalReward += 2.0f;
 			//if (FMath::Abs(EnemyTurnValue) > 0.2f)
 			//{
 			//	TotalReward -= 1.0f; // Punish 'wiggly' turning 5
+			//	UE_LOG(LogTemp, Error, TEXT("Distance penalty"));
 			//}
 
 			//if (Enemy->getEnemyShootValue() > 0.1f)
 			//{
 			//	TotalReward -= 10.0f; // Heavy punishment for shooting on patrol 50
+			//	UE_LOG(LogTemp, Error, TEXT("Shot on patrol"));
 			//}
 
 
@@ -134,7 +148,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			TotalReward += SpeedReward;*/
 			//TotalReward += (0.2f * NormalizedVelocity) * FMath::Max(0.0f, CharAlignment);
 			float ForwardMotion = FVector::DotProduct(Enemy->GetActorForwardVector(), Enemy->GetVelocity().GetSafeNormal());
-			float SpeedReward = (NormalizedVelocity * 1.5f) * FMath::Max(0.0f, ForwardMotion);
+			float SpeedReward = (NormalizedVelocity * 10.0f) * FMath::Max(0.0f, ForwardMotion); //1.5f
 			TotalReward += SpeedReward;
 
 			////Facing the correct direction
@@ -147,16 +161,18 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			//{
 			//	// Punish them more the further they look away
 			//	// A flat penalty (-10.0) combined with a scaling penalty
-			//	TotalReward -= 5.0f + (1.0f - CharAlignment);
+			//	TotalReward -= 1.0f + (1.0f - CharAlignment);
+			//	UE_LOG(LogTemp, Error, TEXT("Looking away from spline penalty"));
 			//}
 
 
-			//if (CharAlignment < 0.85f && NormalizedVelocity > 0.4f)
-			//{
-			//	// Punish specifically for 'Full Throttle' during a turn
-			//	TotalReward -= (NormalizedVelocity * 25.0f);
-			//	//TotalReward -= 2.0f;
-			//}
+			if (CharAlignment < 0.85f && NormalizedVelocity > 0.4f)
+			{
+				// Punish specifically for 'Full Throttle' during a turn
+				TotalReward -= (NormalizedVelocity * 25.0f);
+				UE_LOG(LogTemp, Error, TEXT("Full speed turn penalty"));
+				//TotalReward -= 2.0f;
+			}
 
 			//TotalReward = 0.0f;
 
@@ -181,11 +197,15 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 				//TotalReward += 10.0f;
 			}
 
+			FVector FaceLocation = RewardCharMesh->GetSocketLocation(TEXT("FaceShoot"));
+			FVector AimDirection = RewardCharacter->GetControlRotation().Vector();
 			FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
-			FVector MuzzleForward = Weapon->getMesh()->GetSocketRotation(TEXT("BulletSpawn")).Vector();
-			FVector DirToTarget = (PlayerLoc - MuzzleLocation).GetSafeNormal();
 
-			float GunAlignment = FVector::DotProduct(MuzzleForward, DirToTarget);
+			FVector TargetLocation = PlayerLoc;
+			FVector PointToTargetDir = (TargetLocation - FaceLocation).GetSafeNormal();
+
+
+			float GunAlignment = FVector::DotProduct(AimDirection, PointToTargetDir);
 			GunAlignment = FMath::Clamp(GunAlignment, 0.0f, 1.0f); // We only care about the front 180 degrees
 
 			TotalReward += FMath::Pow(GunAlignment, 2) * 10.0f;
@@ -235,17 +255,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 					TotalReward -= 0.1f;
 					//UE_LOG(LogTemp, Warning, TEXT("Not shooting penalty"));
 				}
-			}
-
-			//Hitting the player logic
-			if (Enemy->getHit() == true)
-			{
-				// A massive one-time bonus
-				TotalReward += 150.0f;
-
-				Enemy->setHit(false);
-			}
-			
+			}			
 			
 			//Reloading logic
 			if (Enemy->getEnemyReloadValue() > 0.5f)
@@ -303,6 +313,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	//Will change this later when more advanced behaviour is required.
 	TrainingEnvAgentID = AgentId;
 	AMLEnemyBase* RewardCharacter = Cast<AMLEnemyBase>(GetAgent(AgentId));
+	TrainingEnvSplineComponent = RewardCharacter->GetSplineController()->getSpline();
 	OutCompletion = ELearningAgentsCompletion::Running;
 
 	if (RewardCharacter == nullptr || TrainingEnvSplineComponent == nullptr)
@@ -349,6 +360,13 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		return;
 	}
 
+	if (RewardCharacter->getHit() == true)
+	{
+		OutCompletion = ELearningAgentsCompletion::Truncation;
+		UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! It hit!"), AgentId);
+		return;
+	}
+
 	if (CurrentState == EAgentState::Patrolling)
 	{
 		
@@ -379,13 +397,6 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	{
 		bool bFacingPlayer;
 		bool bStopped;
-
-		if (RewardCharacter->getHit() == true)
-		{
-			OutCompletion = ELearningAgentsCompletion::Truncation;
-			UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! It hit!"), AgentId);
-			return;
-		}
 
 		//Check if the enemy is facing the player
 		if (PlayerAlignment > 0.95f)
@@ -451,6 +462,8 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 	bSeePlayer = false;
 	CharAgent->setSuccessTimer(0.0f);
 	CharAgent->setHit(false);
+	TrainingEnvSplineComponent = CharAgent->GetSplineController()->getSpline();
+	bool bIsSphereVisible = CharAgent->GetSplineController()->getSphereVisible();
 	CurrentState = EAgentState::Patrolling;
 
 	AActor* TargetToFollow = nullptr;
@@ -477,10 +490,10 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 	if (TargetToFollow && TrainingEnvSplineComponent)
 	{
 		//0.7f
-		float SpawnChance = 0.5f;
+		float SpawnChance = 1.1f;
 		float Roll = FMath::FRand(); // Returns 0.0 to 1.0
 
-		if (Roll <= SpawnChance)
+		if ((Roll <= SpawnChance) && bIsSphereVisible)
 		{
 
 			if (bTraining == true)
