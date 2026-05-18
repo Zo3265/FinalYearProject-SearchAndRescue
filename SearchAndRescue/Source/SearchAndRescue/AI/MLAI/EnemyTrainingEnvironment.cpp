@@ -102,17 +102,19 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		if (Enemy->getSeePlayer() == true)
 		{
 			
-			CurrentState = EAgentState::SeeingPlayer;
+			//CurrentState = EAgentState::SeeingPlayer;
+			Enemy->setCurrentState(EAgentState::SeeingPlayer);
 		}
 
 		else
 		{ 
-			CurrentState = EAgentState::Patrolling;
+			//CurrentState = EAgentState::Patrolling;
+			Enemy->setCurrentState(EAgentState::Patrolling);
 		}
 
 
 
-		if (CurrentState == EAgentState::Patrolling)
+		if (Enemy->getCurrentState() == EAgentState::Patrolling)
 		{
 			TotalReward += 2.0f;
 			//if (FMath::Abs(EnemyTurnValue) > 0.2f)
@@ -182,7 +184,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			//}
 		}
 
-		else if (CurrentState == EAgentState::SeeingPlayer)
+		else if (Enemy->getCurrentState() == EAgentState::SeeingPlayer)
 		//if (CurrentState == EAgentState::SeeingPlayer)
 		{
 			//GLog->Log(TEXT("Seeing player"));
@@ -284,7 +286,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 			ELearningAgentsCompletion AgentCompletion;
 			GatherAgentCompletion_Implementation(AgentCompletion, AgentId);
-			if (AgentCompletion == ELearningAgentsCompletion::Truncation && CurrentState == EAgentState::SeeingPlayer)
+			if (AgentCompletion == ELearningAgentsCompletion::Truncation && Enemy->getCurrentState() == EAgentState::SeeingPlayer)
 			{
 				// A one-time massive reward for successfully holding the focus for 2 seconds
 				//20.0f
@@ -367,7 +369,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		return;
 	}
 
-	if (CurrentState == EAgentState::Patrolling)
+	if (RewardCharacter->getCurrentState() == EAgentState::Patrolling)
 	{
 		
 
@@ -392,7 +394,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		}
 	}
 
-	else if (CurrentState == EAgentState::SeeingPlayer)
+	else if (RewardCharacter->getCurrentState() == EAgentState::SeeingPlayer)
 	//if (CurrentState == EAgentState::SeeingPlayer)
 	{
 		bool bFacingPlayer;
@@ -464,7 +466,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 	CharAgent->setHit(false);
 	TrainingEnvSplineComponent = CharAgent->GetSplineController()->getSpline();
 	bool bIsSphereVisible = CharAgent->GetSplineController()->getSphereVisible();
-	CurrentState = EAgentState::Patrolling;
+	CharAgent->setCurrentState(EAgentState::Patrolling);
 
 	AActor* TargetToFollow = nullptr;
 	FVector EnemyLoc = CharAgent->GetActorLocation();

@@ -11,12 +11,7 @@
 #include "SearchAndRescue/AI/MLAI/TrainingActor/MyActor.h"
 #include "EnemyTrainingEnvironment.generated.h"
 
-UENUM(BlueprintType)
-enum class EAgentState : uint8
-{
-	Patrolling	UMETA(DisplayName = "Patrolling"),
-	SeeingPlayer UMETA(DisplayName = "SeePlayer")
-};
+
 /**
  * 
  */
@@ -40,8 +35,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Spline")
 	USplineComponent* TrainingEnvSplineComponent;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
-	EAgentState CurrentState = EAgentState::Patrolling;
+	
 
 	void setTrainingEnvAgentID(int32 AgentIDStore);
 	int32 getTrainingEnvAgentID();

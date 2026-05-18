@@ -218,6 +218,16 @@ float AMLEnemyBase::getIdleTimer()
 	return IdleTimer;
 }
 
+void AMLEnemyBase::setCurrentState(EAgentState StateStore)
+{
+	CurrentState = StateStore;
+}
+
+EAgentState AMLEnemyBase::getCurrentState()
+{
+	return CurrentState;
+}
+
 AWeaponBase* AMLEnemyBase::getWeapon()
 {
 	if (SniperRifle)

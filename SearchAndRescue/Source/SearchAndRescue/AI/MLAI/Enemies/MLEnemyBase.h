@@ -13,6 +13,12 @@
 #include "SearchAndRescue/AI/MLAI/TrainingActor/MyActor.h"
 #include "MLEnemyBase.generated.h"
 
+UENUM(BlueprintType)
+enum class EAgentState : uint8
+{
+	Patrolling	UMETA(DisplayName = "Patrolling"),
+	SeeingPlayer UMETA(DisplayName = "SeePlayer")
+};
 UCLASS()
 class SEARCHANDRESCUE_API AMLEnemyBase : public ACharacter
 {
@@ -81,6 +87,9 @@ protected:
 	float TurnValue;
 	float IdleTimer = 0.0f;
 	bool bHit = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
+	EAgentState CurrentState = EAgentState::Patrolling;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -117,6 +126,8 @@ public:
 	bool getHit();
 	void setIdleTimer(float fStore);
 	float getIdleTimer();
+	void setCurrentState(EAgentState StateStore);
+	EAgentState getCurrentState();
 
 	UFUNCTION()
 	AWeaponBase* getWeapon();
