@@ -17,7 +17,8 @@ UENUM(BlueprintType)
 enum class EAgentState : uint8
 {
 	Patrolling	UMETA(DisplayName = "Patrolling"),
-	SeeingPlayer UMETA(DisplayName = "SeePlayer")
+	SeeingPlayer UMETA(DisplayName = "SeePlayer"),
+	Chasing UMETA(DisplayName = "Chasing")
 };
 UCLASS()
 class SEARCHANDRESCUE_API AMLEnemyBase : public ACharacter
@@ -79,6 +80,7 @@ protected:
 	bool bFoundManager = false;
 	bool bSeePlayer = false;
 	bool bIsAimed = false;
+	bool bSawPlayer = false;
 	float SuccessTimer;
 	int32 AgentId;
 	float EnemyShootValue;
@@ -109,6 +111,8 @@ public:
 	ASplineController* GetSplineController();
 	void setSeePlayer(bool bStore);
 	bool getSeePlayer();
+	void setSawPlayer(bool bStore);
+	bool getSawPlayer();
 	void setSuccessTimer(float fStore);
 	float getTimer();
 	AMyActor* getTrainingTarget();
@@ -137,4 +141,7 @@ public:
 
 	float VisionTimer = 0.0f;
 	float VisionRetentionDuration = 0.5f;
+	FVector PlayerLastKnownLocation = FVector::Zero();
+	float LastKnownLocDist = 0.0f;
+	bool FindingTrack = false;
 };

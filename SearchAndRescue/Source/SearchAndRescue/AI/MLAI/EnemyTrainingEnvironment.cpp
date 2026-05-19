@@ -138,10 +138,10 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			TotalReward += 2.0f * FMath::Exp(-0.1f * DistanceToPath);
 			//TotalReward += 0.175f * FMath::Exp(-0.01f * DistanceToPath);
 
-			if (DistanceToPath > 250.0f) // If more than 225 units off the line
+			if (DistanceToPath > 250.0f && Enemy->FindingTrack == false) // If more than 225 units off the line
 			{
 				TotalReward -= 15.0f; //50
-				UE_LOG(LogTemp, Error, TEXT("Distance penalty"));
+				//UE_LOG(LogTemp, Error, TEXT("Distance penalty"));
 			}
 
 			////Going fast.
@@ -168,11 +168,11 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			//}
 
 
-			if (CharAlignment < 0.85f && NormalizedVelocity > 0.4f)
+			if ((CharAlignment < 0.85f && NormalizedVelocity > 0.4f) && Enemy->FindingTrack == false)
 			{
 				// Punish specifically for 'Full Throttle' during a turn
 				TotalReward -= (NormalizedVelocity * 25.0f);
-				UE_LOG(LogTemp, Error, TEXT("Full speed turn penalty"));
+				//UE_LOG(LogTemp, Error, TEXT("Full speed turn penalty"));
 				//TotalReward -= 2.0f;
 			}
 
@@ -218,12 +218,6 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 				// This is the only one that should trigger the 'Stillness' bonus.
 				TotalReward += 40.0f;
 				TotalReward += (1.0f - FMath::Abs(EnemyTurnValue)) * 0.5f;
-
-				/*if (FMath::Abs(EnemyTurnValue) > 0.5f)
-				{
-					TotalReward -= 5.0f;
-					UE_LOG(LogTemp, Warning, TEXT("Turning whilst aimed penalty"));
-				}*/
 			}
 
 			//Rewards for when the enemy is being precise.
@@ -297,6 +291,19 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 			
 		}
+
+		else if (Enemy->getCurrentState() == EAgentState::Chasing)
+		{
+			TotalReward += 1.0f; //Base reward for hunting
+
+			TotalReward += 15.0f * FMath::Exp(-0.005f * Enemy->LastKnownLocDist);
+
+			if (Enemy->LastKnownLocDist <= 160.0f)
+			{
+				TotalReward += 50.0f;
+				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
+			}
+		}
 		
 	}
 
@@ -355,13 +362,6 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	FVector PlayerDir = (PlayerLoc - CharLocation).GetSafeNormal();
 	float PlayerAlignment = FVector::DotProduct(CharForward, PlayerDir);
 
-	if (RewardCharacter->getIdleTimer() > 10.0f)
-	{
-		OutCompletion = ELearningAgentsCompletion::Termination;
-		UE_LOG(LogTemp, Warning, TEXT("Agent %d Terminated: Idle too long"), AgentId);
-		return;
-	}
-
 	if (RewardCharacter->getHit() == true)
 	{
 		OutCompletion = ELearningAgentsCompletion::Truncation;
@@ -374,7 +374,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		
 
 		//Terminate the episode if the agent moves further than 0.5m away from the spline.
-		if (DistanceFromPath > 300.0f)
+		if (DistanceFromPath > 300.0f && RewardCharacter->FindingTrack == false)
 		{
 			OutCompletion = ELearningAgentsCompletion::Termination;
 			UE_LOG(LogTemp, Error, TEXT("Agent %d Went to far from the path"), AgentId);
@@ -395,7 +395,6 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 	}
 
 	else if (RewardCharacter->getCurrentState() == EAgentState::SeeingPlayer)
-	//if (CurrentState == EAgentState::SeeingPlayer)
 	{
 		bool bFacingPlayer;
 		bool bStopped;
@@ -441,14 +440,24 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		}
 
 		//If they lose sight of the player they have failed the episode.
-		float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
-		if (DistanceToPlayer > 7000.0f) //|| bSeePlayer == false)
-		{
-			OutCompletion = ELearningAgentsCompletion::Termination;
-			UE_LOG(LogTemp, Error, TEXT("Agent %d Lost the player"), AgentId);
-		}
+		//float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
+		//if (DistanceToPlayer > 7000.0f) //|| bSeePlayer == false)
+		//{
+		//	OutCompletion = ELearningAgentsCompletion::Termination;
+		//	UE_LOG(LogTemp, Error, TEXT("Agent %d Lost the player"), AgentId);
+		//}
 
 	}
+
+	/*else if (RewardCharacter->getCurrentState() == EAgentState::Chasing)
+	{
+		if (RewardCharacter->LastKnownLocDist <= 150.0f)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Agent %d Made it to the players last known location and won the episode"), AgentId);
+			OutCompletion = ELearningAgentsCompletion::Truncation;
+			return;
+		}
+	}*/
 
 	else
 	{

@@ -45,6 +45,17 @@ void AMyActor::Tick(float DeltaTime)
 		Location = SplineController->getSpline()->GetLocationAtDistanceAlongSpline(CurrentDistance, ESplineCoordinateSpace::World);
 		Location.Z += 120;
 		this->SetActorLocation(Location);
+
+		if (GetWorld()->GetDeltaSeconds() >= 5.0f)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("5f passed. Training actor hidden"));
+			this->SetActorHiddenInGame(true);
+		}
+
+		else
+		{
+			this->SetActorHiddenInGame(false);
+		}
 	}
 	
 }

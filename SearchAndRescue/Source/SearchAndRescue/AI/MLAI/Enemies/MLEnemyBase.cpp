@@ -133,6 +133,16 @@ bool AMLEnemyBase::getSeePlayer()
 	return bSeePlayer;
 }
 
+void AMLEnemyBase::setSawPlayer(bool bStore)
+{
+	bSawPlayer = bStore;
+}
+
+bool AMLEnemyBase::getSawPlayer()
+{
+	return bSawPlayer;
+}
+
 void AMLEnemyBase::setSuccessTimer(float fStore)
 {
 	SuccessTimer = fStore;

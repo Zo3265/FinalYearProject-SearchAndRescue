@@ -16,6 +16,7 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	TMap<FName, FLearningAgentsObservationSchemaElement> ObservationMap;
 	
 	ObservationMap.Add(TEXT("IsPlayerSeen"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("SawPlayer"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema));
 	//One observation will be the location along the spline which will be used to make the enemy patrol.
 	ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::SpecifyLocationAlongSplineObservation(InObservationSchema));
 
@@ -27,7 +28,7 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	ObservationMap.Add(TEXT("LookAhead"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema));
 
 	//Observations needed to see the player
-	//ObservationMap.Add(TEXT("PlayerLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("PlayerLastKnownLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema));
 	ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema));
 	
 
@@ -173,6 +174,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			// If we see them, reset the timer to max
 			Enemy->VisionTimer = Enemy->VisionRetentionDuration;
 			Enemy->setSeePlayer(true);
+			Enemy->setSawPlayer(true);
+			Enemy->PlayerLastKnownLocation = PlayerLoc;
 		}
 		else
 		{
@@ -181,10 +184,28 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			{
 				Enemy->VisionTimer -= GetWorld()->GetDeltaSeconds();
 				Enemy->setSeePlayer(true); // Still "True" because of the buffer!
+				//PlayerLastKnownLocation = PlayerLoc;
 			}
 			else
 			{
 				Enemy->setSeePlayer(false); // Finally "False" after 0.5s
+			}
+		}
+
+		//Chasing the player when losing line of sight logic
+		if (Enemy->getSeePlayer() == false && Enemy->getSawPlayer() == true)
+		{
+			Enemy->setCurrentState(EAgentState::Chasing);
+			Enemy->LastKnownLocDist = FVector::Dist(ActorLocation, Enemy->PlayerLastKnownLocation);
+			//UE_LOG(LogTemp, Error, TEXT("Last Known location: %s"), *Enemy->PlayerLastKnownLocation.ToString());
+			//UE_LOG(LogTemp, Error, TEXT("Last Known location distance: %f"), Enemy->LastKnownLocDist);
+
+			if (Enemy->LastKnownLocDist <= 100.0f)
+			{
+				UE_LOG(LogTemp, Error, TEXT("Agend %d: Couldn't find the player again"), AgentId);
+				Enemy->setSawPlayer(false);
+				Enemy->FindingTrack = true;
+				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
 		}
 
@@ -297,8 +318,10 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		ObservationMap.Add(TEXT("LookAhead"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, LocalFutureDir));
 	
 		//Player seeing observations
+		ObservationMap.Add(TEXT("PlayerLastKnownLocation"), ULearningAgentsObservations::MakeLocationObservation(InObservationObject, Enemy->PlayerLastKnownLocation));
 		ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, ObservationDir));
 		ObservationMap.Add(TEXT("IsPlayerSeen"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, Enemy->getSeePlayer()));
+		ObservationMap.Add(TEXT("SawPlayer"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, Enemy->getSawPlayer()));
 
 		//Firing weapons observations
 		ObservationMap.Add(TEXT("WeaponCooldown"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, Weapon->getCoolDown()));
@@ -408,6 +431,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 		if (Enemy->getSeePlayer())
 		{
+			//UE_LOG(LogTemp, Warning, TEXT("Seeing player"));
 			// 1. COMBAT AUTO-PILOT
 			// Force Stop
 			Enemy->GetMovementComponent()->StopMovementImmediately();
@@ -446,20 +470,96 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			// If we are perfectly aimed, force the shoot value to 1.0
 			/*if (Enemy->getIsAimed()) { 
 				ShootValue = 1.0f; 
-			}*/
-			
+			}
+			*/
 		}
+
+		else if (Enemy->getCurrentState() == EAgentState::Chasing)
+		{
+			//UE_LOG(LogTemp, Warning, TEXT("Chasing player"));
+			FVector SearchTarget = Enemy->PlayerLastKnownLocation;
+			FVector CurrentLoc = Enemy->GetActorLocation();
+
+			// 2. Proximity and Direction Calculation
+			float DistanceToTarget = FVector::Dist(CurrentLoc, SearchTarget);
+			FVector MoveDirection = (SearchTarget - CurrentLoc).GetSafeNormal();
+			FRotator FaceTargetRot = MoveDirection.Rotation();
+
+			// 3. FULL OVERRIDE ROTATION (No Weaning / No Brain Input)
+			// We use a high Interp speed (25.0f) to snap their heading directly to the memory vector
+			//CurrentRot = Enemy->GetActorRotation();
+			//FRotator NewRot = FMath::RInterpTo(CurrentRot, FaceTargetRot, GetWorld()->GetDeltaSeconds(), 25.0f);
+
+			//NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
+			//NewRot.Roll = 0.0f;
+			//Enemy->SetActorRotation(NewRot);
+
+			//// 4. FULL OVERRIDE THROTTLE
+			//// Smooth deceleration as they get close so they don't slide past the finish line
+			//float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
+
+			//// Force them to sprint (1.0f) when far, scaling down smoothly down to 0.0f at the target
+			//FinalForwardInput = 1.0f * ArrivalBrake;
+
+			//// Apply the physical forward movement input
+			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+
+
+
+
+			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
+			FRotator BrainTargetRot = Enemy->GetActorRotation();
+			BrainTargetRot.Yaw += BrainYawChange;
+
+			// Mix the targets 50/50: 0.5 = Brain, 0.5 = Perfect Auto-Pilot math
+			FRotator BlendedRot = FMath::Lerp(BrainTargetRot, FaceTargetRot, 0.5f);
+
+			// Apply via Interp but drop the strength from 25.0f to 4.0f so it is a "gentle guide"
+			CurrentRot = Enemy->GetActorRotation();
+			FRotator NewRot = FMath::RInterpTo(CurrentRot, BlendedRot, DeltaTime, 4.0f);
+
+			NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
+			NewRot.Roll = 0.0f;
+			Enemy->SetActorRotation(NewRot);
+
+			// --- 4. BLENDED THROTTLE WEANING ---
+			// Smooth deceleration curve remains to protect from physics overshooting
+			float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
+
+			// Instead of forcing 1.0f, we now let the brain press the gas (ForwardValue) 
+			// but scale it by the ArrivalBrake so they still slow down at the finish line.
+			// We clamp it to Max(0.0f) to prevent them from throwing it into reverse during a hunt.
+			FinalForwardInput = FMath::Max(0.0f, ForwardValue) * ArrivalBrake;
+
+			// If they are far away and completely stop moving, we give a tiny nudge to keep them practicing
+			if (DistanceToTarget > 150.0f)
+			{
+				FinalForwardInput = FMath::Max(0.5f, FinalForwardInput);
+			}
+
+			// Apply the physical forward movement input
+			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+		}
+
 		else
 		{
+			//UE_LOG(LogTemp, Warning, TEXT("Following path"));
 			//// 2. PATROL AUTO-PILOT
 			USplineComponent* Spline = InteractorSplineComponent;
 			float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(Enemy->GetActorLocation());
+			FVector ClosestSplineLocation = Spline->FindLocationClosestToWorldLocation(Enemy->GetActorLocation(), ESplineCoordinateSpace::World);
 			FVector PathDir = Spline->GetDirectionAtSplineInputKey(ClosestKey, ESplineCoordinateSpace::World);
 			FRotator IdealRot = PathDir.Rotation();
+			float DistanceToPath = FVector::Dist(Enemy->GetActorLocation(), ClosestSplineLocation);
+
+			if (DistanceToPath <= 100.0f)
+			{
+				Enemy->FindingTrack = false;
+			}
 
 			// Smoothly rotate to follow the track
-			//FRotator CurrentRotPatrol = Enemy->GetActorRotation();
-			//FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
+			FRotator CurrentRotPatrol = Enemy->GetActorRotation();
+			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
 
 			//NewRot.Pitch = 0.0f;
 			//NewRot.Roll = 0.0f;
