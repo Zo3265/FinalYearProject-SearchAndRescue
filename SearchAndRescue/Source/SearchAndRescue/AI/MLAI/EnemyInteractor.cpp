@@ -176,6 +176,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			Enemy->setSeePlayer(true);
 			Enemy->setSawPlayer(true);
 			Enemy->PlayerLastKnownLocation = PlayerLoc;
+			Enemy->setCurrentState(EAgentState::SeeingPlayer);
 		}
 		else
 		{
@@ -207,6 +208,11 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 				Enemy->FindingTrack = true;
 				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
+		}
+
+		else
+		{
+			Enemy->setCurrentState(EAgentState::Patrolling);
 		}
 
 		ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
@@ -558,8 +564,8 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			}
 
 			// Smoothly rotate to follow the track
-			FRotator CurrentRotPatrol = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
+		/*	FRotator CurrentRotPatrol = Enemy->GetActorRotation();
+			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);*/
 
 			//NewRot.Pitch = 0.0f;
 			//NewRot.Roll = 0.0f;
@@ -587,7 +593,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			Enemy->SetActorRotation(NewRot);
 
 			// Forward movement weaning: Let the brain control the gas fully now
-			FinalForwardInput = ForwardValue;
+			FinalForwardInput = FMath::Max(0.0f, ForwardValue);
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 		}
 

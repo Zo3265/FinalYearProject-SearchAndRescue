@@ -99,18 +99,18 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			Enemy->setHit(false);
 		}
 		
-		if (Enemy->getSeePlayer() == true)
-		{
-			
-			//CurrentState = EAgentState::SeeingPlayer;
-			Enemy->setCurrentState(EAgentState::SeeingPlayer);
-		}
+		//if (Enemy->getSeePlayer() == true)
+		//{
+		//	
+		//	//CurrentState = EAgentState::SeeingPlayer;
+		//	Enemy->setCurrentState(EAgentState::SeeingPlayer);
+		//}
 
-		else
-		{ 
-			//CurrentState = EAgentState::Patrolling;
-			Enemy->setCurrentState(EAgentState::Patrolling);
-		}
+		//else
+		//{ 
+		//	//CurrentState = EAgentState::Patrolling;
+		//	Enemy->setCurrentState(EAgentState::Patrolling);
+		//}
 
 
 
@@ -168,13 +168,13 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			//}
 
 
-			if ((CharAlignment < 0.85f && NormalizedVelocity > 0.4f) && Enemy->FindingTrack == false)
-			{
-				// Punish specifically for 'Full Throttle' during a turn
-				TotalReward -= (NormalizedVelocity * 25.0f);
-				//UE_LOG(LogTemp, Error, TEXT("Full speed turn penalty"));
-				//TotalReward -= 2.0f;
-			}
+			//if ((CharAlignment < 0.85f && NormalizedVelocity > 0.4f) && Enemy->FindingTrack == false)
+			//{
+			//	// Punish specifically for 'Full Throttle' during a turn
+			//	TotalReward -= (NormalizedVelocity * 25.0f);
+			//	//UE_LOG(LogTemp, Error, TEXT("Full speed turn penalty"));
+			//	//TotalReward -= 2.0f;
+			//}
 
 			//TotalReward = 0.0f;
 
@@ -298,7 +298,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 			TotalReward += 15.0f * FMath::Exp(-0.005f * Enemy->LastKnownLocDist);
 
-			if (Enemy->LastKnownLocDist <= 160.0f)
+			if (Enemy->LastKnownLocDist <= 102.0f)
 			{
 				TotalReward += 50.0f;
 				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
@@ -394,60 +394,60 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		}
 	}
 
-	else if (RewardCharacter->getCurrentState() == EAgentState::SeeingPlayer)
-	{
-		bool bFacingPlayer;
-		bool bStopped;
+	//else if (RewardCharacter->getCurrentState() == EAgentState::SeeingPlayer)
+	//{
+	//	bool bFacingPlayer;
+	//	bool bStopped;
 
-		//Check if the enemy is facing the player
-		if (PlayerAlignment > 0.95f)
-		{
-			bFacingPlayer = true;
-		}
-		
-		else
-		{
-			bFacingPlayer = false;
-		}
+	//	//Check if the enemy is facing the player
+	//	if (PlayerAlignment > 0.95f)
+	//	{
+	//		bFacingPlayer = true;
+	//	}
+	//	
+	//	else
+	//	{
+	//		bFacingPlayer = false;
+	//	}
 
-		//Check if they have stopped moving
-		if (RewardCharacter->GetVelocity().Size() < 5.0f)
-		{
-			bStopped = true;
-		}
+	//	//Check if they have stopped moving
+	//	if (RewardCharacter->GetVelocity().Size() < 5.0f)
+	//	{
+	//		bStopped = true;
+	//	}
 
-		else
-		{
-			bStopped = false;
-		}
+	//	else
+	//	{
+	//		bStopped = false;
+	//	}
 
-		if (bFacingPlayer && bStopped)
-		{
-			RewardCharacter->setSuccessTimer(RewardCharacter->getTimer() + GetWorld()->GetDeltaSeconds());
+	//	if (bFacingPlayer && bStopped)
+	//	{
+	//		RewardCharacter->setSuccessTimer(RewardCharacter->getTimer() + GetWorld()->GetDeltaSeconds());
 
-			//If they look at the player and have stopped moving for more than 2 secconds. They have succeded in their episode.
-			if (RewardCharacter->getTimer() > 10.0f)
-			{
-				OutCompletion = ELearningAgentsCompletion::Truncation;
-				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! Timer"), AgentId);
-				return;
-			}
-		}
+	//		//If they look at the player and have stopped moving for more than 2 secconds. They have succeded in their episode.
+	//		if (RewardCharacter->getTimer() > 10.0f)
+	//		{
+	//			OutCompletion = ELearningAgentsCompletion::Truncation;
+	//			UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! Timer"), AgentId);
+	//			return;
+	//		}
+	//	}
 
-		else
-		{
-			RewardCharacter->setSuccessTimer(0.0f);
-		}
+	//	else
+	//	{
+	//		RewardCharacter->setSuccessTimer(0.0f);
+	//	}
 
-		//If they lose sight of the player they have failed the episode.
-		//float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
-		//if (DistanceToPlayer > 7000.0f) //|| bSeePlayer == false)
-		//{
-		//	OutCompletion = ELearningAgentsCompletion::Termination;
-		//	UE_LOG(LogTemp, Error, TEXT("Agent %d Lost the player"), AgentId);
-		//}
+	//	//If they lose sight of the player they have failed the episode.
+	//	//float DistanceToPlayer = FVector::Dist(CharLocation, PlayerLoc);
+	//	//if (DistanceToPlayer > 7000.0f) //|| bSeePlayer == false)
+	//	//{
+	//	//	OutCompletion = ELearningAgentsCompletion::Termination;
+	//	//	UE_LOG(LogTemp, Error, TEXT("Agent %d Lost the player"), AgentId);
+	//	//}
 
-	}
+	//}
 
 	/*else if (RewardCharacter->getCurrentState() == EAgentState::Chasing)
 	{
