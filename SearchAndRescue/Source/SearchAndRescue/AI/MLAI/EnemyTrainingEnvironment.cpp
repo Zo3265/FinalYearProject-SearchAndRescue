@@ -374,7 +374,7 @@ void UEnemyTrainingEnvironment::GatherAgentCompletion_Implementation(ELearningAg
 		
 
 		//Terminate the episode if the agent moves further than 0.5m away from the spline.
-		if (DistanceFromPath > 300.0f && RewardCharacter->FindingTrack == false)
+		if (DistanceFromPath > 1000.0f && RewardCharacter->FindingTrack == false)
 		{
 			OutCompletion = ELearningAgentsCompletion::Termination;
 			UE_LOG(LogTemp, Error, TEXT("Agent %d Went to far from the path"), AgentId);
