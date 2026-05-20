@@ -83,12 +83,12 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			UE_LOG(LogTemp, Error, TEXT("Long way turn penalty"));
 		}*/
 
-		//if (FMath::Abs(EnemyTurnValue) > 0.6f && !Enemy->getSeePlayer())
-		//{
-		//	// The faster they spin, the more it hurts.
-		//	TotalReward -= 10.0f;
-		//	UE_LOG(LogTemp, Error, TEXT("360 penalty"));
-		//}
+		if (FMath::Abs(EnemyTurnValue) > 0.6f && !Enemy->getSeePlayer())
+		{
+			// The faster they spin, the more it hurts.
+			TotalReward -= 10.0f;
+			//UE_LOG(LogTemp, Error, TEXT("360 penalty"));
+		}
 
 		//Hitting the player logic
 		if (Enemy->getHit() == true)
@@ -511,6 +511,8 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 			{
 				AMyActor* TrainingActor = Cast<AMyActor>(TargetToFollow);
 				TrainingActor->setHide(false);
+				TrainingActor->SetActorHiddenInGame(false);
+				TrainingActor->AgeTimer = 0.0f;
 				TrainingActor->setSplineController(CharAgent->GetSplineController());
 				
 

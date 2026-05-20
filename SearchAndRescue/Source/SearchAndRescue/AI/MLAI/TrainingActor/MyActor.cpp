@@ -46,15 +46,12 @@ void AMyActor::Tick(float DeltaTime)
 		Location.Z += 120;
 		this->SetActorLocation(Location);
 
-		if (GetWorld()->GetDeltaSeconds() >= 5.0f)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("5f passed. Training actor hidden"));
-			this->SetActorHiddenInGame(true);
-		}
+		AgeTimer += DeltaTime;
 
-		else
+		if (AgeTimer >= MaxLife)
 		{
-			this->SetActorHiddenInGame(false);
+			SetActorHiddenInGame(true);
+			SetActorEnableCollision(false);
 		}
 	}
 	

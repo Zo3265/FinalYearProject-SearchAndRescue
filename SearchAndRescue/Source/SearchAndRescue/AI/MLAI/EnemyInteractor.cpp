@@ -61,6 +61,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
 	AWeaponBase* Weapon = Enemy->getWeapon();
 	InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
+	ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
+	USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
 
 	//USplineComponent* SplineComp = Enemy->FindComponentByClass<USplineComponent>();
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
@@ -99,28 +101,11 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		FVector PlayerDir = (PlayerLoc - ActorLocation).GetSafeNormal();
 		FVector RelativeDir = ActorTransform.InverseTransformVectorNoScale(PlayerDir);
 
-		float PlayerAlignment = FVector::DotProduct(ActorForward, PlayerDir);
-		//UE_LOG(LogTemp, Warning, TEXT("PlayerAlignment: %f"), PlayerAlignment);
-
-		//Setting up a raycast so that the agents cant see through walls
-		FHitResult HitResult;
-		FCollisionQueryParams CollisionParams;
-		CollisionParams.AddIgnoredActor(Enemy);
-		CollisionParams.bTraceComplex = true;
-
 		float DistanceToTarget = FVector::Dist(ActorLocation, PlayerLoc);
-		bool bInRange = DistanceToTarget < 6000.0f;
+		bool bInRange = DistanceToTarget < 1500.0f;
 
-		float VisionDot = FVector::DotProduct(Enemy->GetActorForwardVector(), RelativeDir);
+		float VisionDot = FVector::DotProduct(ActorForward, PlayerDir);
 		bool bInVisionCone = VisionDot > 0.707f;
-
-		//// Debug Text: Shows the exact math the brain is seeing
-		//if (GEngine) {
-		//	FColor TextColor = bInVisionCone ? FColor::Green : FColor::Red;
-		//	//GEngine->AddOnScreenDebugMessage(-1, 0.01f, TextColor, FString::Printf(TEXT("Vision Dot: %.3f (In Cone: %s)"), VisionDot, bInVisionCone ? TEXT("YES") : TEXT("NO")));
-		//	GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Yellow,
-		//		FString::Printf(TEXT("InRange: %s | InCone: %s"), bInRange ? TEXT("YES") : TEXT("NO"), bInVisionCone ? TEXT("YES") : TEXT("NO")));
-		//}
 
 		bool bHasLineOfSight = false;
 		FColor FinalLineColor = FColor::White; // Default to white (out of range/cone)
@@ -130,16 +115,25 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			FHitResult Hit;
 			FCollisionQueryParams Params;
 			Params.AddIgnoredActor(Enemy);
+			Params.AddIgnoredActor(Weapon);
+
+			TArray<UPrimitiveComponent*> AttachedComponents;
+			Enemy->GetComponents(AttachedComponents);
+			for (UPrimitiveComponent* Comp : AttachedComponents)
+			{
+				Params.AddIgnoredComponent(Comp);
+			}
 
 			// Perform Trace
-			bool bBlocked = GetWorld()->LineTraceSingleByChannel(Hit, ActorLocation + FVector(0, 0, 30), PlayerLoc + FVector(0, 0, 30), ECC_Visibility, Params);
+			bool bBlocked = GetWorld()->LineTraceSingleByChannel(Hit, ActorLocation + FVector(0, 0, 60), PlayerLoc, ECC_Visibility, Params);
 
 			// Initial LOS logic
-			bHasLineOfSight = !bBlocked || (Hit.GetActor() == TargetToFollow);
+			bHasLineOfSight = !TargetToFollow->IsHidden() && (!bBlocked || (Hit.GetActor() == TargetToFollow));
 
 			// Height Check Override
 			if (PlayerLoc.Z < (ActorLocation.Z - 50.0f) && VisionDot > 0.9f)
 			{
+				GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Red, FString::Printf(TEXT("Height override.")));
 				bHasLineOfSight = false;
 			}
 
@@ -147,26 +141,9 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			// Green = Perfect (In cone, in range, clear shot)
 			// Blue = Target is under the floor (Height Check caught it)
 			// Red  = Blocked by wall/floor
-			if (bHasLineOfSight) {
-				FinalLineColor = FColor::Green;
-			}
-			else if (PlayerLoc.Z < (ActorLocation.Z - 50.0f)) {
-				FinalLineColor = FColor::Blue;
-			}
-			else {
-				FinalLineColor = FColor::Red;
-			}
+			
 
-			DrawDebugLine(
-				GetWorld(),
-				ActorLocation + FVector(0, 0, 50),
-				PlayerLoc + FVector(0, 0, 50),
-				FinalLineColor,
-				false,
-				0.1f,
-				0,
-				2.0f
-			);
+			
 		}
 
 		if (bHasLineOfSight)
@@ -185,38 +162,64 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			{
 				Enemy->VisionTimer -= GetWorld()->GetDeltaSeconds();
 				Enemy->setSeePlayer(true); // Still "True" because of the buffer!
-				//PlayerLastKnownLocation = PlayerLoc;
+				Enemy->setCurrentState(EAgentState::SeeingPlayer);
 			}
 			else
 			{
 				Enemy->setSeePlayer(false); // Finally "False" after 0.5s
-			}
-		}
-
-		//Chasing the player when losing line of sight logic
-		if (Enemy->getSeePlayer() == false && Enemy->getSawPlayer() == true)
-		{
-			Enemy->setCurrentState(EAgentState::Chasing);
-			Enemy->LastKnownLocDist = FVector::Dist(ActorLocation, Enemy->PlayerLastKnownLocation);
-			//UE_LOG(LogTemp, Error, TEXT("Last Known location: %s"), *Enemy->PlayerLastKnownLocation.ToString());
-			//UE_LOG(LogTemp, Error, TEXT("Last Known location distance: %f"), Enemy->LastKnownLocDist);
-
-			if (Enemy->LastKnownLocDist <= 100.0f)
-			{
-				UE_LOG(LogTemp, Error, TEXT("Agend %d: Couldn't find the player again"), AgentId);
-				Enemy->setSawPlayer(false);
-				Enemy->FindingTrack = true;
 				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
 		}
 
-		else
-		{
-			Enemy->setCurrentState(EAgentState::Patrolling);
-		}
 
-		ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
-		USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
+		//if (bHasLineOfSight) {
+		//	FinalLineColor = FColor::Green;
+		//}
+		//else if (PlayerLoc.Z < (ActorLocation.Z - 50.0f)) {
+		//	FinalLineColor = FColor::Blue;
+		//}
+		//else {
+		//	FinalLineColor = FColor::Red;
+		//}
+
+		//DrawDebugLine(
+		//	GetWorld(),
+		//	ActorLocation + FVector(0, 0, 60),
+		//	PlayerLoc,
+		//	FinalLineColor,
+		//	false,
+		//	0.1f,
+		//	0,
+		//	2.0f
+		//);
+
+		//Chasing the player when losing line of sight logic
+		if (Enemy->getCurrentState() != EAgentState::SeeingPlayer)
+		{
+			if (Enemy->getSeePlayer() == false && Enemy->getSawPlayer() == true && Enemy->FindingTrack == false)
+			{
+				//UE_LOG(LogTemp, Error, TEXT("Agend %d: Chasing Player"), AgentId);
+				Enemy->setCurrentState(EAgentState::Chasing);
+				//Enemy->LastKnownLocDist = FVector::Dist(ActorLocation, Enemy->PlayerLastKnownLocation);
+				//UE_LOG(LogTemp, Error, TEXT("Last Known location: %s"), *Enemy->PlayerLastKnownLocation.ToString());
+				//UE_LOG(LogTemp, Error, TEXT("Last Known location distance: %f"), Enemy->LastKnownLocDist);
+
+				/*if (Enemy->LastKnownLocDist <= 100.0f)
+				{
+					UE_LOG(LogTemp, Error, TEXT("Agend %d: Couldn't find the player again"), AgentId);
+					Enemy->FindingTrack = true;
+					Enemy->setCurrentState(EAgentState::Patrolling);
+				}*/
+			}
+
+			else
+			{
+				Enemy->setCurrentState(EAgentState::Patrolling);
+			}
+		}
+		
+
+		
 
 		if (EnemyMesh)
 		{
@@ -246,9 +249,10 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			{
 				FCollisionQueryParams Params;
 				Params.AddIgnoredActor(Enemy);
+				Params.AddIgnoredActor(Weapon);
 
 				bool bBlocked = GetWorld()->LineTraceSingleByChannel(AimHit, MuzzleLocation, TargetLocation, ECC_Visibility, Params);
-				bHasClearShot = !bBlocked || (AimHit.GetActor() == TargetToFollow);
+				bHasClearShot = !TargetToFollow->IsHidden() && (!bBlocked || (AimHit.GetActor() == TargetToFollow));
 
 				if (bHasClearShot)
 				{
@@ -262,13 +266,15 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 				}
 
 				// Draw the line from the MUZZLE to the TARGET to visualize the actual bullet trajectory
-				DrawDebugLine(GetWorld(), MuzzleLocation, TargetLocation, AimLineColour, false, 0.1f, 0, 4.0f);
+				
 			}
 
 			else
 			{
 				Enemy->setIsAimed(false);
 			}
+
+			DrawDebugLine(GetWorld(), MuzzleLocation, TargetLocation, AimLineColour, false, 0.1f, 0, 4.0f);
 		}
 		
 
@@ -276,7 +282,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		//I want the enemies to lead their shots so we need to know the players speed and direction.
 		//Similar math as before but with velocities instead.
 		FVector RelativeWorldVelocity = PlayerVelocity - ActorVelocity; //The velocity of the player relative to the enemy in world space.
-		FVector RelativeLocalVelocity = ActorTransform.InverseTransformVectorNoScale(RelativeWorldVelocity); //Converted to local space in order for the agents to know if the player isleft or right relative to them.
+		FVector RelativeLocalVelocity = ActorTransform.InverseTransformVectorNoScale(RelativeWorldVelocity); //Converted to local space in order for the agents to know if the player is left or right relative to them.
 
 		float RelativeMoveSpeed = RelativeLocalVelocity.Size();
 		float NormalizedMoveSpeed = FMath::Clamp(RelativeMoveSpeed / 600.0f, 0.0f, 1.0f);
@@ -368,6 +374,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(GetAgent(AgentId));
 	InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
 	AWeaponBase* Weapon = Enemy->getWeapon();
+	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	float DeltaTime = GetWorld()->GetDeltaSeconds();
 
 	if (Enemy)
@@ -381,7 +388,21 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		bool bShooting = false;
 		bool bReloading = false;
 
-		
+		/*if (Enemy->getCurrentState() == EAgentState::Patrolling)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Patrolling"));
+		}
+
+		else if (Enemy->getCurrentState() == EAgentState::SeeingPlayer)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("SeeingPlayer"));
+		}
+
+		else if (Enemy->getCurrentState() == EAgentState::Chasing)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Chasing"));
+		}*/
+
 		////We are retrieving the actions that we are able to do and their values.
 		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
 		ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
@@ -432,10 +453,10 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			UE_LOG(LogTemp, Error, TEXT("Actions dont exist"));
 		}
 
-		float FinalTurnInput = 0.0f;
+		float FinalTurnInput = TurnValue;
 		float FinalForwardInput = ForwardValue; // Keep the brain's forward intent
 
-		if (Enemy->getSeePlayer())
+		if (Enemy->getCurrentState() == EAgentState::SeeingPlayer)
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("Seeing player"));
 			// 1. COMBAT AUTO-PILOT
@@ -444,11 +465,22 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
 			FinalForwardInput = 0.0f;
 
+			//100% AUTO PILOT
 			// Calculate Perfect Aim
 			FVector MuzzleLoc = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
-			FVector TargetLoc = Enemy->getTrainingTarget()->GetActorLocation();
+			FVector TargetLoc; 
+			if (bTraining)
+			{
+				TargetLoc = Enemy->getTrainingTarget()->GetActorLocation();
+			} 
+
+			else
+			{
+				TargetLoc = PlayerPawn->GetActorLocation();
+			}
 			FRotator AimRot = (TargetLoc - MuzzleLoc).Rotation();
 
+			
 			// Smoothly rotate toward target
 			//FRotator CurrentRotShoot = Enemy->GetActorRotation();
 			//FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, AimRot, GetWorld()->GetDeltaSeconds(), 50.0f);
@@ -457,9 +489,15 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			//NewRot.Roll = 0.0f;
 			//Enemy->SetActorRotation(NewRot);
 
+
+
 			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
 			FRotator BrainTargetRot = Enemy->GetActorRotation();
 			BrainTargetRot.Yaw += BrainYawChange;
+
+
+
+
 
 			// WEANING MIXTURE: Blend the rotations 50/50
 			// 0.0 = Pure Brain, 1.0 = Pure Auto-Pilot math
@@ -467,7 +505,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 			// Apply via Interp to keep it clean, but much slower (strength reduced to 4.0f)
 			FRotator CurrentRotShoot = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, BlendedRot, DeltaTime, 4.0f);
+			FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, BlendedRot, DeltaTime, 40.0f);
 
 			NewRot.Pitch = 0.0f;
 			NewRot.Roll = 0.0f;
@@ -478,6 +516,12 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				ShootValue = 1.0f; 
 			}
 			*/
+
+			//NO ASISTANCE
+			/*float BrainYawChange = FinalTurnInput * TurnSensitivity * DeltaTime;
+			CurrentRot = Enemy->GetActorRotation();
+			CurrentRot.Yaw = FRotator::NormalizeAxis(CurrentRot.Yaw + BrainYawChange);
+			Enemy->SetActorRotation(CurrentRot);*/
 		}
 
 		else if (Enemy->getCurrentState() == EAgentState::Chasing)
@@ -490,6 +534,9 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			float DistanceToTarget = FVector::Dist(CurrentLoc, SearchTarget);
 			FVector MoveDirection = (SearchTarget - CurrentLoc).GetSafeNormal();
 			FRotator FaceTargetRot = MoveDirection.Rotation();
+
+
+
 
 			// 3. FULL OVERRIDE ROTATION (No Weaning / No Brain Input)
 			// We use a high Interp speed (25.0f) to snap their heading directly to the memory vector
@@ -509,8 +556,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 			//// Apply the physical forward movement input
 			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
-
-
 
 
 			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
@@ -537,17 +582,34 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			// We clamp it to Max(0.0f) to prevent them from throwing it into reverse during a hunt.
 			FinalForwardInput = FMath::Max(0.0f, ForwardValue) * ArrivalBrake;
 
-			// If they are far away and completely stop moving, we give a tiny nudge to keep them practicing
-			if (DistanceToTarget > 150.0f)
-			{
-				FinalForwardInput = FMath::Max(0.5f, FinalForwardInput);
-			}
-
 			// Apply the physical forward movement input
 			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+
+			if (DistanceToTarget <= 100.0f)
+			{
+				Enemy->GetMovementComponent()->StopMovementImmediately();
+				Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
+				Enemy->FindingTrack = true;
+				Enemy->setCurrentState(EAgentState::Patrolling);
+			}
+
+			//NO ASSISSTANCE
+			//FVector SearchTarget = Enemy->PlayerLastKnownLocation;
+			//float DistanceToTarget = FVector::Dist(Enemy->GetActorLocation(), SearchTarget);
+			//float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
+
+			//// Turn control is 100% driven by the brain
+			//float BrainYawChange = FinalTurnInput * TurnSensitivity * DeltaTime;
+			//CurrentRot = Enemy->GetActorRotation();
+			//CurrentRot.Yaw = FRotator::NormalizeAxis(CurrentRot.Yaw + BrainYawChange);
+			//Enemy->SetActorRotation(CurrentRot);
+
+			//// Gas control is 100% driven by the brain, scaled only by the physical arrival brake
+			//FinalForwardInput = FMath::Max(0.0f, FinalForwardInput) * ArrivalBrake;
+			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 		}
 
-		else
+		else if(Enemy->getCurrentState() == EAgentState::Patrolling)
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("Following path"));
 			//// 2. PATROL AUTO-PILOT
@@ -558,43 +620,88 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			FRotator IdealRot = PathDir.Rotation();
 			float DistanceToPath = FVector::Dist(Enemy->GetActorLocation(), ClosestSplineLocation);
 
-			if (DistanceToPath <= 100.0f)
-			{
-				Enemy->FindingTrack = false;
-			}
 
-			// Smoothly rotate to follow the track
-		/*	FRotator CurrentRotPatrol = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);*/
+			if (Enemy->FindingTrack == true)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Agent %d: Returning to path"), AgentId);
+				FVector ReturnDir = (ClosestSplineLocation - Enemy->GetActorLocation()).GetSafeNormal();
+				FRotator ReturnRot = ReturnDir.Rotation();
+
+				CurrentRot = Enemy->GetActorRotation();
+				FRotator NewRot = FMath::RInterpTo(CurrentRot, ReturnRot, DeltaTime, 15.0f); // High strength to snap back
+				NewRot.Pitch = 0.0f;
+				NewRot.Roll = 0.0f;
+				Enemy->SetActorRotation(NewRot);
+				
+
+				// Force a stable forward speed to get them home quickly
+				FinalForwardInput = 1.0f;
+				Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+
+				if (DistanceToPath <= 100.0f)
+				{
+					UE_LOG(LogTemp, Warning, TEXT("Agent %d: Made it back to the path"), AgentId);
+					Enemy->FindingTrack = false;
+					Enemy->setSawPlayer(false);
+				}
+			}
+			
+
+
+			///*AUTO PILOT
+			//Smoothly rotate to follow the track
+			//FRotator CurrentRotPatrol = Enemy->GetActorRotation();
+			//FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
 
 			//NewRot.Pitch = 0.0f;
 			//NewRot.Roll = 0.0f;
 			//Enemy->SetActorRotation(NewRot);
 
-			//// Use the brain's forward value (or force 1.0 to get them moving)
+			// Use the brain's forward value (or force 1.0 to get them moving)
 			//FinalForwardInput = FMath::Max(0.5f, ForwardValue);
 
-			//// 3. APPLY PHYSICAL MOVEMENT
+			// 3. APPLY PHYSICAL MOVEMENT
+			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);*/
+
+
+
+			////50/50 TRAINING
+			//// Calculate what the BRAIN wants to do on the path
+			//float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
+			//FRotator BrainTargetRot = Enemy->GetActorRotation();
+			//BrainTargetRot.Yaw += BrainYawChange;
+
+			//// WEANING MIXTURE: 50% Brain target, 50% Spline target
+			//FRotator BlendedRot = FMath::Lerp(BrainTargetRot, IdealRot, 0.5f);
+
+			//FRotator CurrentRotPatrol = Enemy->GetActorRotation();
+			//FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, BlendedRot, DeltaTime, 2.0f); // Softened to 2.0f
+
+			//NewRot.Pitch = 0.0f;
+			//NewRot.Roll = 0.0f;
+			//Enemy->SetActorRotation(NewRot);
+
+			//// Forward movement weaning: Let the brain control the gas fully now
+			//FinalForwardInput = FMath::Max(0.0f, ForwardValue);
 			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 
-			// Calculate what the BRAIN wants to do on the path
-			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
-			FRotator BrainTargetRot = Enemy->GetActorRotation();
-			BrainTargetRot.Yaw += BrainYawChange;
+			else
+			{
+				//NO ASSISSTANCE
+				//UE_LOG(LogTemp, Warning, TEXT("Agent %d: Standard patrolling"), AgentId);
 
-			// WEANING MIXTURE: 50% Brain target, 50% Spline target
-			FRotator BlendedRot = FMath::Lerp(BrainTargetRot, IdealRot, 0.5f);
+				FRotator CurrentRotPatrol = Enemy->GetActorRotation();
+				FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
 
-			FRotator CurrentRotPatrol = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, BlendedRot, DeltaTime, 2.0f); // Softened to 2.0f
+				NewRot.Pitch = 0.0f;
+				NewRot.Roll = 0.0f;
+				Enemy->SetActorRotation(NewRot);
 
-			NewRot.Pitch = 0.0f;
-			NewRot.Roll = 0.0f;
-			Enemy->SetActorRotation(NewRot);
-
-			// Forward movement weaning: Let the brain control the gas fully now
-			FinalForwardInput = FMath::Max(0.0f, ForwardValue);
-			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+				// Gas control is 100% driven by the brain. Forward-only clamp remains to block reverse exploits.
+				FinalForwardInput = FMath::Max(0.0f, FinalForwardInput);
+				Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+			}
+			
 		}
 
 

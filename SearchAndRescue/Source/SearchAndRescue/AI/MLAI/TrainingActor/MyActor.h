@@ -24,6 +24,8 @@ protected:
 	ASplineController* SplineController;
 	float CurrentDistance;
 	float Speed = 250.0f;
+	
+	float MaxLife = 5.0f;
 	FVector Location;
 	float DirectionMultiplier;
 	bool bHide = false;
@@ -43,4 +45,6 @@ public:
 	void setHide(bool bStore);
 	FVector getLocation();
 	UStaticMeshComponent* getSphereMesh();
+	float AgeTimer;
+	bool IsHidden = false;
 };
