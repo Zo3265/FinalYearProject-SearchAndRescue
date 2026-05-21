@@ -83,12 +83,12 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			UE_LOG(LogTemp, Error, TEXT("Long way turn penalty"));
 		}*/
 
-		if (FMath::Abs(EnemyTurnValue) > 0.6f && !Enemy->getSeePlayer())
-		{
-			// The faster they spin, the more it hurts.
-			TotalReward -= 10.0f;
-			//UE_LOG(LogTemp, Error, TEXT("360 penalty"));
-		}
+		//if (FMath::Abs(EnemyTurnValue) > 0.6f && !Enemy->getSeePlayer())
+		//{
+		//	// The faster they spin, the more it hurts.
+		//	TotalReward -= 10.0f;
+		//	//UE_LOG(LogTemp, Error, TEXT("360 penalty"));
+		//}
 
 		//Hitting the player logic
 		if (Enemy->getHit() == true)
@@ -117,6 +117,13 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 		if (Enemy->getCurrentState() == EAgentState::Patrolling)
 		{
 			TotalReward += 2.0f;
+
+			if (DistanceToPath > 100.0f && Enemy->FindingTrack == true)
+			{
+				TotalReward += 50.0f;
+				//UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
+			}
+
 			//if (FMath::Abs(EnemyTurnValue) > 0.2f)
 			//{
 			//	TotalReward -= 1.0f; // Punish 'wiggly' turning 5
@@ -141,7 +148,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			if (DistanceToPath > 250.0f && Enemy->FindingTrack == false) // If more than 225 units off the line
 			{
 				TotalReward -= 15.0f; //50
-				//UE_LOG(LogTemp, Error, TEXT("Distance penalty"));
+				UE_LOG(LogTemp, Error, TEXT("Distance penalty"));
 			}
 
 			////Going fast.
@@ -238,19 +245,19 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 
 			//Shooting Logic
-			if(Enemy->getEnemyShootValue() > 0.1f)
+			if(Enemy->getEnemyShootValue() > 0.45f)
 			{
 				if (Enemy->getIsAimed() == true && Enemy->getAmmoPercent() > 0.0f)
 				{
-					TotalReward += (30.0f * Enemy->getEnemyShootValue());
+					TotalReward += (1.0f * Enemy->getEnemyShootValue()); //30.0f
 				}
 
-				else
-				{
-					//TotalReward -= (20.0f * Enemy->getEnemyShootValue());
-					TotalReward -= 0.1f;
-					//UE_LOG(LogTemp, Warning, TEXT("Not shooting penalty"));
-				}
+				//else
+				//{
+				//	//TotalReward -= (20.0f * Enemy->getEnemyShootValue());
+				//	TotalReward -= 0.1f;
+				//	//UE_LOG(LogTemp, Warning, TEXT("Not shooting penalty"));
+				//}
 			}			
 			
 			//Reloading logic
@@ -261,12 +268,12 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 					TotalReward += 15.0f;
 				}
 
-				else
-				{
-					//TotalReward -= 20.0f;
-					TotalReward -= 0.1f;
-					//UE_LOG(LogTemp, Warning, TEXT("Reloading when high"));
-				}
+				//else
+				//{
+				//	//TotalReward -= 20.0f;
+				//	TotalReward -= 0.1f;
+				//	UE_LOG(LogTemp, Warning, TEXT("Reloading when high"));
+				//}
 			}
 			
 
@@ -278,16 +285,16 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			}
 
 
-			ELearningAgentsCompletion AgentCompletion;
-			GatherAgentCompletion_Implementation(AgentCompletion, AgentId);
-			if (AgentCompletion == ELearningAgentsCompletion::Truncation && Enemy->getCurrentState() == EAgentState::SeeingPlayer)
-			{
-				// A one-time massive reward for successfully holding the focus for 2 seconds
-				//20.0f
-				TotalReward += 100.0f;
-				//TotalReward += 50.0f;
-				//UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +20 Reward"), AgentId);
-			}
+			//ELearningAgentsCompletion AgentCompletion;
+			//GatherAgentCompletion_Implementation(AgentCompletion, AgentId);
+			//if (AgentCompletion == ELearningAgentsCompletion::Truncation && Enemy->getCurrentState() == EAgentState::SeeingPlayer)
+			//{
+			//	// A one-time massive reward for successfully holding the focus for 2 seconds
+			//	//20.0f
+			//	TotalReward += 100.0f;
+			//	//TotalReward += 50.0f;
+			//	//UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +20 Reward"), AgentId);
+			//}
 
 			
 		}
@@ -298,11 +305,10 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 			TotalReward += 15.0f * FMath::Exp(-0.005f * Enemy->LastKnownLocDist);
 
-			if (Enemy->LastKnownLocDist <= 102.0f)
-			{
-				TotalReward += 50.0f;
-				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
-			}
+			float ForwardMotion = FVector::DotProduct(Enemy->GetActorForwardVector(), Enemy->GetVelocity().GetSafeNormal());
+			float SpeedReward = (NormalizedVelocity * 10.0f) * FMath::Max(0.0f, ForwardMotion);
+			TotalReward += SpeedReward;
+
 		}
 		
 	}
@@ -503,6 +509,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 		//0.7f
 		float SpawnChance = 1.1f;
 		float Roll = FMath::FRand(); // Returns 0.0 to 1.0
+		float RandAge = FMath::FRandRange(5.0f, 20.0f);
 
 		if ((Roll <= SpawnChance) && bIsSphereVisible)
 		{
@@ -513,6 +520,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 				TrainingActor->setHide(false);
 				TrainingActor->SetActorHiddenInGame(false);
 				TrainingActor->AgeTimer = 0.0f;
+				TrainingActor->MaxLife = RandAge;
 				TrainingActor->setSplineController(CharAgent->GetSplineController());
 				
 
