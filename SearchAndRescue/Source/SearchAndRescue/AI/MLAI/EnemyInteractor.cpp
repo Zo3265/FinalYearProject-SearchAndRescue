@@ -540,12 +540,12 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 			// 3. FULL OVERRIDE ROTATION (No Weaning / No Brain Input)
 			// We use a high Interp speed (25.0f) to snap their heading directly to the memory vector
-			//CurrentRot = Enemy->GetActorRotation();
-			//FRotator NewRot = FMath::RInterpTo(CurrentRot, FaceTargetRot, GetWorld()->GetDeltaSeconds(), 25.0f);
+			CurrentRot = Enemy->GetActorRotation();
+			FRotator NewRot = FMath::RInterpTo(CurrentRot, FaceTargetRot, GetWorld()->GetDeltaSeconds(), 25.0f);
 
-			//NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
-			//NewRot.Roll = 0.0f;
-			//Enemy->SetActorRotation(NewRot);
+			NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
+			NewRot.Roll = 0.0f;
+			Enemy->SetActorRotation(NewRot);
 
 			//// 4. FULL OVERRIDE THROTTLE
 			//// Smooth deceleration as they get close so they don't slide past the finish line
@@ -558,32 +558,32 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 
 
-			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
-			FRotator BrainTargetRot = Enemy->GetActorRotation();
-			BrainTargetRot.Yaw += BrainYawChange;
+			//float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
+			//FRotator BrainTargetRot = Enemy->GetActorRotation();
+			//BrainTargetRot.Yaw += BrainYawChange;
 
-			// Mix the targets 50/50: 0.5 = Brain, 0.5 = Perfect Auto-Pilot math
-			FRotator BlendedRot = FMath::Lerp(BrainTargetRot, FaceTargetRot, 0.5f);
+			//// Mix the targets 50/50: 0.5 = Brain, 0.5 = Perfect Auto-Pilot math
+			//FRotator BlendedRot = FMath::Lerp(BrainTargetRot, FaceTargetRot, 0.5f);
 
-			// Apply via Interp but drop the strength from 25.0f to 4.0f so it is a "gentle guide"
-			CurrentRot = Enemy->GetActorRotation();
-			FRotator NewRot = FMath::RInterpTo(CurrentRot, BlendedRot, DeltaTime, 4.0f);
+			//// Apply via Interp but drop the strength from 25.0f to 4.0f so it is a "gentle guide"
+			//CurrentRot = Enemy->GetActorRotation();
+			//FRotator NewRot = FMath::RInterpTo(CurrentRot, BlendedRot, DeltaTime, 4.0f);
 
-			NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
-			NewRot.Roll = 0.0f;
-			Enemy->SetActorRotation(NewRot);
+			//NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
+			//NewRot.Roll = 0.0f;
+			//Enemy->SetActorRotation(NewRot);
 
-			// --- 4. BLENDED THROTTLE WEANING ---
-			// Smooth deceleration curve remains to protect from physics overshooting
-			float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
+			//// --- 4. BLENDED THROTTLE WEANING ---
+			//// Smooth deceleration curve remains to protect from physics overshooting
+			//float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
 
-			// Instead of forcing 1.0f, we now let the brain press the gas (ForwardValue) 
-			// but scale it by the ArrivalBrake so they still slow down at the finish line.
-			// We clamp it to Max(0.0f) to prevent them from throwing it into reverse during a hunt.
-			FinalForwardInput = FMath::Max(0.0f, ForwardValue) * ArrivalBrake;
+			//// Instead of forcing 1.0f, we now let the brain press the gas (ForwardValue) 
+			//// but scale it by the ArrivalBrake so they still slow down at the finish line.
+			//// We clamp it to Max(0.0f) to prevent them from throwing it into reverse during a hunt.
+			//FinalForwardInput = FMath::Max(0.0f, ForwardValue) * ArrivalBrake;
 
-			// Apply the physical forward movement input
-			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+			//// Apply the physical forward movement input
+			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 
 			if (DistanceToTarget <= 100.0f)
 			{
@@ -593,20 +593,24 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
 
+			else if (DistanceToTarget >= 2500.0f)
+			{
+				Enemy->FindingTrack = true;
+				Enemy->setCurrentState(EAgentState::Patrolling);
+			}
+
 			//NO ASSISSTANCE
-			//FVector SearchTarget = Enemy->PlayerLastKnownLocation;
-			//float DistanceToTarget = FVector::Dist(Enemy->GetActorLocation(), SearchTarget);
-			//float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
+			float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
 
-			//// Turn control is 100% driven by the brain
-			//float BrainYawChange = FinalTurnInput * TurnSensitivity * DeltaTime;
-			//CurrentRot = Enemy->GetActorRotation();
-			//CurrentRot.Yaw = FRotator::NormalizeAxis(CurrentRot.Yaw + BrainYawChange);
-			//Enemy->SetActorRotation(CurrentRot);
+			// Turn control is 100% driven by the brain
+			/*float BrainYawChange = FinalTurnInput * TurnSensitivity * DeltaTime;
+			CurrentRot = Enemy->GetActorRotation();
+			CurrentRot.Yaw = FRotator::NormalizeAxis(CurrentRot.Yaw + BrainYawChange);
+			Enemy->SetActorRotation(CurrentRot);*/
 
-			//// Gas control is 100% driven by the brain, scaled only by the physical arrival brake
-			//FinalForwardInput = FMath::Max(0.0f, FinalForwardInput) * ArrivalBrake;
-			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
+			// Gas control is 100% driven by the brain, scaled only by the physical arrival brake
+			FinalForwardInput = FMath::Max(0.0f, FinalForwardInput) * ArrivalBrake;
+			Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 		}
 
 		else if(Enemy->getCurrentState() == EAgentState::Patrolling)

@@ -25,7 +25,7 @@ protected:
 	float CurrentDistance;
 	float Speed = 250.0f;
 	
-	float MaxLife = 5.0f;
+	
 	FVector Location;
 	float DirectionMultiplier;
 	bool bHide = false;
@@ -46,5 +46,6 @@ public:
 	FVector getLocation();
 	UStaticMeshComponent* getSphereMesh();
 	float AgeTimer;
+	float MaxLife = 5.0f;
 	bool IsHidden = false;
 };

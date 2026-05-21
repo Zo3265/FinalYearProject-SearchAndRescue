@@ -131,8 +131,8 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 			if (DistanceToPath > 100 && Enemy->FindingTrack == true)
 			{
-				TotalReward += 50.0f;
-				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
+				TotalReward += 25.0f;
+				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +25 Reward"), AgentId);
 			}
 
 			//TotalReward = 0.0f;
@@ -290,7 +290,13 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			TotalReward += 1.0f; //Base reward for hunting
 
 			TotalReward += 15.0f * FMath::Exp(-0.005f * Enemy->LastKnownLocDist);
+			float DistanceToTarget = FVector::Dist(CharLocation, Enemy->PlayerLastKnownLocation);
 
+			/*if (DistanceToTarget <= 100.0f) 
+			{
+				TotalReward += 50.0f;
+				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
+			}*/
 		}
 		
 	}
@@ -491,6 +497,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 		//0.7f
 		float SpawnChance = 1.1f;
 		float Roll = FMath::FRand(); // Returns 0.0 to 1.0
+		float RandLife = FMath::FRandRange(5.0f, 10.0f);
 
 		if ((Roll <= SpawnChance) && bIsSphereVisible)
 		{
@@ -501,6 +508,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 				TrainingActor->setHide(false);
 				TrainingActor->SetActorHiddenInGame(false);
 				TrainingActor->AgeTimer = 0.0f;
+				TrainingActor->MaxLife = RandLife;
 				TrainingActor->setSplineController(CharAgent->GetSplineController());
 				
 
