@@ -51,7 +51,7 @@ void AMyActor::Tick(float DeltaTime)
 		if (AgeTimer >= MaxLife)
 		{
 			SetActorHiddenInGame(true);
-			SetActorEnableCollision(false);
+			//SetActorEnableCollision(false);
 		}
 	}
 	

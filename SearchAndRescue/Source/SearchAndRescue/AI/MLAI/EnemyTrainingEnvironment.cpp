@@ -129,6 +129,11 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			//	UE_LOG(LogTemp, Error, TEXT("Shot on patrol"));
 			//}
 
+			if (DistanceToPath > 100 && Enemy->FindingTrack == true)
+			{
+				TotalReward += 50.0f;
+				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
+			}
 
 			//TotalReward = 0.0f;
 			//Following Spline
@@ -216,7 +221,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			{
 				// High reward for having the GUN on target. 
 				// This is the only one that should trigger the 'Stillness' bonus.
-				TotalReward += 40.0f;
+				TotalReward += 1.0f;
 				TotalReward += (1.0f - FMath::Abs(EnemyTurnValue)) * 0.5f;
 			}
 
@@ -277,18 +282,6 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 				UE_LOG(LogTemp, Warning, TEXT("Not reloading at all penalty"));
 			}
 
-
-			ELearningAgentsCompletion AgentCompletion;
-			GatherAgentCompletion_Implementation(AgentCompletion, AgentId);
-			if (AgentCompletion == ELearningAgentsCompletion::Truncation && Enemy->getCurrentState() == EAgentState::SeeingPlayer)
-			{
-				// A one-time massive reward for successfully holding the focus for 2 seconds
-				//20.0f
-				TotalReward += 100.0f;
-				//TotalReward += 50.0f;
-				//UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +20 Reward"), AgentId);
-			}
-
 			
 		}
 
@@ -298,11 +291,6 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 
 			TotalReward += 15.0f * FMath::Exp(-0.005f * Enemy->LastKnownLocDist);
 
-			if (Enemy->LastKnownLocDist <= 102.0f)
-			{
-				TotalReward += 50.0f;
-				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +50 Reward"), AgentId);
-			}
 		}
 		
 	}
