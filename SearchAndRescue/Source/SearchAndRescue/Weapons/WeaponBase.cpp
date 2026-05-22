@@ -20,6 +20,13 @@ AWeaponBase::AWeaponBase()
     Mesh->BodyInstance.SetInstanceNotifyRBCollision(true);
     Mesh->AttachToComponent(Root, FAttachmentTransformRules::KeepRelativeTransform);
 
+    iCurrentMagCount = 30;
+    iCurrentAmmoReserve = 180;
+    iMaxMagCount = 30;
+    iMaxAmmoReserve = 180;
+
+    Cooldown = 0.05f;
+    Range = 5000.0f;
 }
 
 // Called when the game starts or when spawned
@@ -42,46 +49,67 @@ void AWeaponBase::Tick(float DeltaTime)
 
 void AWeaponBase::Fire()
 {
-    ACharacter* EnemyChar = Cast<ACharacter>(GetOwner());
-    USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
+    if (this)
+    {
+        ACharacter* EnemyChar = Cast<ACharacter>(GetOwner());
+        USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
 
-    FVector FaceLocation = EnemyMesh->GetSocketLocation(TEXT("FaceShoot"));
-    FVector AimDirection = EnemyChar->GetControlRotation().Vector();
-    FVector TargetAimPoint = FaceLocation + (AimDirection * 10000.0f);
+        FVector FaceLocation = EnemyMesh->GetSocketLocation(TEXT("FaceShoot"));
+        FVector AimDirection = EnemyChar->GetControlRotation().Vector();
+        FVector TargetAimPoint = FaceLocation + (AimDirection * 10000.0f);
 
-    //Get the location of the bullets spawn point
-    FVector MuzzleLocation = Mesh->GetSocketLocation(TEXT("BulletSpawn"));
-    FRotator BulletRotation = (TargetAimPoint - MuzzleLocation).Rotation();
+        //Get the location of the bullets spawn point
+        FVector MuzzleLocation = Mesh->GetSocketLocation(TEXT("BulletSpawn"));
+        FRotator BulletRotation = (TargetAimPoint - MuzzleLocation).Rotation();
 
-    FActorSpawnParameters SpawnParameters;
-    SpawnParameters.Owner = GetOwner();
-    SpawnParameters.Instigator = GetInstigator();
-    SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
+        FActorSpawnParameters SpawnParameters;
+        SpawnParameters.Owner = GetOwner();
+        SpawnParameters.Instigator = GetInstigator();
+        SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
-    Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, MuzzleLocation, BulletRotation, SpawnParameters);
+        Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, MuzzleLocation, BulletRotation, SpawnParameters);
+    }
+    
 }
 
 void AWeaponBase::Reload()
 {
-    int iDiff = iMaxMagCount - iCurrentMagCount; //How much ammo we need.
-    iCurrentMagCount += iDiff; //Refill the magazine.
-    iCurrentAmmoReserve -= iDiff; //Take the refill away from our reserve ammo.
-    //bReloading = false; //We are no longer reloading.
+    if (this)
+    {
+        int iDiff = iMaxMagCount - iCurrentMagCount; //How much ammo we need.
+        iCurrentMagCount += iDiff; //Refill the magazine.
+        iCurrentAmmoReserve -= iDiff; //Take the refill away from our reserve ammo.
+        //bReloading = false; //We are no longer reloading.
+    }
+    
 }
 
 bool AWeaponBase::getCanFire()
 {
-    return bCanFire;
+    if (this)
+    {
+        return bCanFire;
+    }
+    
+    return false;
 }
 
 void AWeaponBase::setReloading(bool bStore)
 {
-    bReloading = bStore;
+    if (this)
+    {
+        bReloading = bStore;
+    }
+    
 }
 
 bool AWeaponBase::getReloading()
 {
-    return bReloading;
+    if (this)
+    {
+        return bReloading;
+    }
+    return false;
 }
 
 ABulletBase* AWeaponBase::getBullet()
@@ -91,27 +119,43 @@ ABulletBase* AWeaponBase::getBullet()
 
 void AWeaponBase::setCoolDown(float fStore)
 {
-    Cooldown = fStore;
+    if (this)
+    {
+        Cooldown = fStore;
+    }
+    
 }
 
 float AWeaponBase::getCoolDown()
 {
-    return Cooldown;
+    if (this)
+    {
+        return Cooldown;
+    }
+    return 0;
 }
 
 void AWeaponBase::setRange(float fStore)
 {
-    Range = fStore;
+    if (this)
+    {
+        Range = fStore;
+    }
+   
 }
 
 float AWeaponBase::getRange()
 {
-    return Range;
+    if (this)
+    {
+        return Range;
+    }
+    return 0;
 }
 
 UStaticMeshComponent* AWeaponBase::getMesh()
 {
-    if (Mesh)
+    if (this && Mesh)
     {
         return Mesh;
     }
@@ -120,21 +164,37 @@ UStaticMeshComponent* AWeaponBase::getMesh()
 
 int AWeaponBase::getCurrentMagCount()
 {
-    return iCurrentMagCount;
-}
+    if (this)
+    {
+        return iCurrentMagCount;
+    }
+    return 0;
+} 
 
 int AWeaponBase::getMaxMagCount()
 {
-    return iMaxMagCount;
+    if (this)
+    {
+        return iMaxMagCount;
+    }
+    return 0;
 }
 
 void AWeaponBase::setCurrentAmmoReserve(int iStore)
 {
-    iCurrentAmmoReserve = iStore;
+    if (this)
+    {
+        iCurrentAmmoReserve = iStore;
+    }
+    
 }
 
 int AWeaponBase::getCurrentAmmoReserve()
 {
-    return iCurrentAmmoReserve;
+    if (this)
+    {
+        return iCurrentAmmoReserve;
+    }
+    return 0;
 }
 

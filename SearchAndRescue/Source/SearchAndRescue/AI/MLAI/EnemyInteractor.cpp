@@ -60,9 +60,20 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(OBSAgent);
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
 	AWeaponBase* Weapon = Enemy->getWeapon();
+
+	/*if (Weapon)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Found Weapon"));
+	}
+
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Couldn't find weapon"));
+	}*/
 	InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
 	ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
 	USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
+	UStaticMeshComponent* WeaponMesh = Weapon->getMesh();
 
 	//USplineComponent* SplineComp = Enemy->FindComponentByClass<USplineComponent>();
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
@@ -221,12 +232,13 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 
 		
 
-		if (EnemyMesh)
+		if (EnemyMesh && Weapon)
 		{
 			//Same code as the one from my weapon base class. We are just checking to make sure the socket that spawns the bullets is aligned with the player.
 			FVector FaceLocation = EnemyMesh->GetSocketLocation(TEXT("FaceShoot"));
 			FVector AimDirection = EnemyChar->GetControlRotation().Vector();
-			FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
+			//FVector MuzzleLocation = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
+			FVector MuzzleLocation = Weapon->getMesh() ? Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn")) : ActorLocation;
 
 			FVector TargetLocation = TargetToFollow->GetActorLocation();
 			FVector PointToTargetDir = (TargetLocation - FaceLocation).GetSafeNormal();
@@ -287,23 +299,28 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		float RelativeMoveSpeed = RelativeLocalVelocity.Size();
 		float NormalizedMoveSpeed = FMath::Clamp(RelativeMoveSpeed / 600.0f, 0.0f, 1.0f);
 		FVector RelativeMoveDirection = RelativeLocalVelocity.GetSafeNormal();
-
-		//We need to make the enemy reload for this we need to know the ammo count and if we need to reload.
-		float AmmoPercent = (float)Weapon->getCurrentMagCount() / (float)Weapon->getMaxMagCount();
-		Enemy->setAmmoPercent(AmmoPercent);
-		//UE_LOG(LogTemp, Warning, TEXT("Current Mag Count: %i"), Weapon->getCurrentMagCount());
-		//UE_LOG(LogTemp, Warning, TEXT("Max Mag Count: %i"), Weapon->getMaxMagCount());
 		
-		bool bNeedToReload;
-		if (Weapon->getCurrentMagCount() <= 0)
+		bool bNeedToReload = false;
+		if (Weapon)
 		{
-			bNeedToReload = true;
-		}
+			//We need to make the enemy reload for this we need to know the ammo count and if we need to reload.
+			float AmmoPercent = (float)Weapon->getCurrentMagCount() / (float)Weapon->getMaxMagCount();
+			Enemy->setAmmoPercent(AmmoPercent);
+			//UE_LOG(LogTemp, Warning, TEXT("Current Mag Count: %i"), Weapon->getCurrentMagCount());
+			//UE_LOG(LogTemp, Warning, TEXT("Max Mag Count: %i"), Weapon->getMaxMagCount());
 
-		else
-		{
-			bNeedToReload = false;
+
+			if (Weapon->getCurrentMagCount() <= 0)
+			{
+				bNeedToReload = true;
+			}
+
+			else
+			{
+				bNeedToReload = false;
+			}
 		}
+		
 
 		FVector ObservationDir;
 		if (Enemy->getSeePlayer())
@@ -456,7 +473,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		float FinalTurnInput = TurnValue;
 		float FinalForwardInput = ForwardValue; // Keep the brain's forward intent
 
-		if (Enemy->getCurrentState() == EAgentState::SeeingPlayer)
+		if (Enemy->getCurrentState() == EAgentState::SeeingPlayer && Weapon)
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("Seeing player"));
 			// 1. COMBAT AUTO-PILOT
@@ -716,6 +733,17 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				Sniper->SniperFire();
 
 			}
+
+			else if (AShotgun* Shotgun = Cast<AShotgun>(Weapon))
+			{
+				Shotgun->ShotgunFire();
+			}
+
+			else if (AAssaultRifle* AssaultRifle = Cast<AAssaultRifle>(Weapon))
+			{
+				AssaultRifle->AssualtFire();
+			}
+
 		}
 		
 		if (ReloadValue >= 0.45f && Weapon->getReloading() == false)

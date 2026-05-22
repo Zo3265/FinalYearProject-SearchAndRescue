@@ -14,10 +14,12 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimInstance_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AAssaultRifle_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AExplosiveGrenade_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AMLEnemyBase();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AMLEnemyBase_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AMyActor_NoRegister();
+SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AShotgun_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASniperRifle_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_ASplineController_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWeaponBase_NoRegister();
@@ -228,6 +230,20 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SniperRifle_MetaData[] = {
 		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ShotgunClass_MetaData[] = {
+		{ "Category", "MLEnemyBase" },
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Shotgun_MetaData[] = {
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AssaultRifleClass_MetaData[] = {
+		{ "Category", "MLEnemyBase" },
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AssaultRifle_MetaData[] = {
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_AnimInstance_MetaData[] = {
 		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
 	};
@@ -255,6 +271,10 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_TrainingTarget;
 	static const UECodeGen_Private::FClassPropertyParams NewProp_SniperClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SniperRifle;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_ShotgunClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Shotgun;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_AssaultRifleClass;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_AssaultRifle;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_AnimInstance;
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentState_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_CurrentState;
@@ -286,6 +306,10 @@ const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AMLEnemyBase_St
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_TrainingTarget = { "TrainingTarget", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, TrainingTarget), Z_Construct_UClass_AMyActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TrainingTarget_MetaData), NewProp_TrainingTarget_MetaData) };
 const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SniperClass = { "SniperClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, SniperClass), Z_Construct_UClass_UClass, Z_Construct_UClass_ASniperRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperClass_MetaData), NewProp_SniperClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SniperRifle = { "SniperRifle", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, SniperRifle), Z_Construct_UClass_ASniperRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SniperRifle_MetaData), NewProp_SniperRifle_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_ShotgunClass = { "ShotgunClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, ShotgunClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AShotgun_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ShotgunClass_MetaData), NewProp_ShotgunClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_Shotgun = { "Shotgun", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, Shotgun), Z_Construct_UClass_AShotgun_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Shotgun_MetaData), NewProp_Shotgun_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_AssaultRifleClass = { "AssaultRifleClass", nullptr, (EPropertyFlags)0x0024080000000001, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, AssaultRifleClass), Z_Construct_UClass_UClass, Z_Construct_UClass_AAssaultRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AssaultRifleClass_MetaData), NewProp_AssaultRifleClass_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_AssaultRifle = { "AssaultRifle", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, AssaultRifle), Z_Construct_UClass_AAssaultRifle_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AssaultRifle_MetaData), NewProp_AssaultRifle_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_AnimInstance = { "AnimInstance", nullptr, (EPropertyFlags)0x0020080000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, AnimInstance), Z_Construct_UClass_UAnimInstance_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_AnimInstance_MetaData), NewProp_AnimInstance_MetaData) };
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState = { "CurrentState", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, CurrentState), Z_Construct_UEnum_SearchAndRescue_EAgentState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentState_MetaData), NewProp_CurrentState_MetaData) }; // 4168159340
@@ -306,6 +330,10 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMLEnemyB
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_TrainingTarget,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SniperClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_SniperRifle,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_ShotgunClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_Shotgun,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_AssaultRifleClass,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_AssaultRifle,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_AnimInstance,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState,
@@ -355,10 +383,10 @@ struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescu
 		{ EAgentState_StaticEnum, TEXT("EAgentState"), &Z_Registration_Info_UEnum_EAgentState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4168159340U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 645819568U) },
+		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 4262628058U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_2735200519(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_2972082572(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::EnumInfo));

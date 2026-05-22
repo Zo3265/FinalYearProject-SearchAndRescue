@@ -7,6 +7,8 @@
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
 #include "SearchAndRescue/Weapons/WeaponBase.h"
 #include "SearchAndRescue/Weapons/SniperRifle.h"
+#include "SearchAndRescue/Weapons/AssaultRifle.h"
+#include "SearchAndRescue/Weapons/Shotgun.h"
 #include "EnemyInteractor.generated.h"
 
 /**

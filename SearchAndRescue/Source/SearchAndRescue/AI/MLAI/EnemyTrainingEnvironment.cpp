@@ -83,12 +83,12 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			UE_LOG(LogTemp, Error, TEXT("Long way turn penalty"));
 		}*/
 
-		if (FMath::Abs(EnemyTurnValue) > 0.6f && !Enemy->getSeePlayer())
-		{
-			// The faster they spin, the more it hurts.
-			TotalReward -= 10.0f;
-			//UE_LOG(LogTemp, Error, TEXT("360 penalty"));
-		}
+		//if (FMath::Abs(EnemyTurnValue) > 0.6f && !Enemy->getSeePlayer())
+		//{
+		//	// The faster they spin, the more it hurts.
+		//	TotalReward -= 10.0f;
+		//	//UE_LOG(LogTemp, Error, TEXT("360 penalty"));
+		//}
 
 		//Hitting the player logic
 		if (Enemy->getHit() == true)
@@ -250,12 +250,12 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 					TotalReward += (30.0f * Enemy->getEnemyShootValue());
 				}
 
-				else
-				{
-					//TotalReward -= (20.0f * Enemy->getEnemyShootValue());
-					TotalReward -= 0.1f;
-					//UE_LOG(LogTemp, Warning, TEXT("Not shooting penalty"));
-				}
+				//else
+				//{
+				//	//TotalReward -= (20.0f * Enemy->getEnemyShootValue());
+				//	TotalReward -= 0.1f;
+				//	//UE_LOG(LogTemp, Warning, TEXT("Not shooting penalty"));
+				//}
 			}			
 			
 			//Reloading logic
@@ -266,12 +266,12 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 					TotalReward += 15.0f;
 				}
 
-				else
-				{
-					//TotalReward -= 20.0f;
-					TotalReward -= 0.1f;
-					//UE_LOG(LogTemp, Warning, TEXT("Reloading when high"));
-				}
+				//else
+				//{
+				//	//TotalReward -= 20.0f;
+				//	TotalReward -= 0.1f;
+				//	//UE_LOG(LogTemp, Warning, TEXT("Reloading when high"));
+				//}
 			}
 			
 

@@ -10,6 +10,9 @@
 #include "SearchAndRescue/AI/SplineController.h"
 #include "SearchAndRescue/Weapons/WeaponBase.h"
 #include "SearchAndRescue/Weapons/SniperRifle.h"
+#include "SearchAndRescue/Weapons/SniperRifle.h"
+#include "SearchAndRescue/Weapons/AssaultRifle.h"
+#include "SearchAndRescue/Weapons/Shotgun.h"
 #include "SearchAndRescue/AI/MLAI/TrainingActor/MyActor.h"
 #include "MLEnemyBase.generated.h"
 
@@ -73,6 +76,16 @@ protected:
 	TSubclassOf<ASniperRifle> SniperClass;
 	UPROPERTY()
 	ASniperRifle* SniperRifle;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AShotgun> ShotgunClass;
+	UPROPERTY()
+	AShotgun* Shotgun;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AAssaultRifle> AssaultRifleClass;
+	UPROPERTY()
+	AAssaultRifle* AssaultRifle;
 
 	UPROPERTY()
 	UAnimInstance* AnimInstance;

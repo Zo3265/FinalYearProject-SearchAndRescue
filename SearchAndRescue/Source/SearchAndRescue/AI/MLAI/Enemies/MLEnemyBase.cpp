@@ -20,12 +20,27 @@ void AMLEnemyBase::BeginPlay()
 
 	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
 	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-	SniperRifle = GetWorld()->SpawnActor<ASniperRifle>(SniperClass, FTransform(), SpawnParamaters);
 
-	if (SniperRifle != nullptr)
+	if (SniperClass != nullptr)
 	{
-		SniperRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("GunPoint"));
-		SniperRifle->SetOwner(this);
+		SniperRifle = GetWorld()->SpawnActor<ASniperRifle>(SniperClass, FTransform(), SpawnParamaters);
+
+		if (SniperRifle != nullptr)
+		{
+			SniperRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("GunPoint"));
+			SniperRifle->SetOwner(this);
+		}
+	}
+	
+	else if (ShotgunClass != nullptr)
+	{
+		Shotgun = GetWorld()->SpawnActor<AShotgun>(ShotgunClass, FTransform(), SpawnParamaters);
+
+		if (Shotgun != nullptr)
+		{
+			Shotgun->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("ShotgunSocket"));
+			Shotgun->SetOwner(this);
+		}
 	}
 
 
@@ -243,6 +258,16 @@ AWeaponBase* AMLEnemyBase::getWeapon()
 	if (SniperRifle)
 	{
 		return SniperRifle;
+	}
+
+	else if (Shotgun)
+	{
+		return Shotgun;
+	}
+
+	else if (AssaultRifle)
+	{
+		return AssaultRifle;
 	}
 
 	return nullptr;
