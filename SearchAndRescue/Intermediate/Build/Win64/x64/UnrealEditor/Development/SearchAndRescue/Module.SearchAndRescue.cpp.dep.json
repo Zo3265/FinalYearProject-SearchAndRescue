@@ -209,7 +209,9 @@
             "g:\\unreal\\ue_5.5\\engine\\plugins\\enhancedinput\\source\\enhancedinput\\public\\inputactionvalue.h",
             "g:\\unreal\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\inputactionvalue.generated.h",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\maincharacter.generated.h",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\mlenemybase.gen.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\myactor.gen.cpp",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\searchandrescue.init.gen.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\shotgun.gen.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\shotgunenemy.gen.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\intermediate\\build\\win64\\unrealeditor\\inc\\searchandrescue\\uht\\shotgunshootbttasknode.gen.cpp",
@@ -248,6 +250,7 @@
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\btai\\sniperenemy.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\btai\\snipershootbttasknode.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\mlai\\enemymanager.cpp",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\mlai\\enemytrainingenvironment.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\mlai\\trainingactor\\myactor.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\splinecontroller.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\ai\\splinemovementactor.cpp",
@@ -283,7 +286,11 @@
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\explosivegrenade.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\grenadebase.cpp",
             "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\shotgun.cpp",
-            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\sniperrifle.cpp"
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\sniperrifle.cpp",
+            "g:\\unreal projects\\finalyearproject-searchandrescue\\searchandrescue\\source\\searchandrescue\\weapons\\weaponbase.cpp",
+            "g:\\unreal\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.h",
+            "g:\\unreal\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetmathlibrary.generated.h",
+            "g:\\unreal\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetmathlibrary.inl"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

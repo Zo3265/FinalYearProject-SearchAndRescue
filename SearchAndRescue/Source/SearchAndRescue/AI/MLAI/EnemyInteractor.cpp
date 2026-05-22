@@ -286,7 +286,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 				Enemy->setIsAimed(false);
 			}
 
-			DrawDebugLine(GetWorld(), MuzzleLocation, TargetLocation, AimLineColour, false, 0.1f, 0, 4.0f);
+			//DrawDebugLine(GetWorld(), MuzzleLocation, TargetLocation, AimLineColour, false, 0.1f, 0, 4.0f);
 		}
 		
 

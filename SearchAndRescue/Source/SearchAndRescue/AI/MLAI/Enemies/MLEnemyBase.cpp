@@ -43,6 +43,17 @@ void AMLEnemyBase::BeginPlay()
 		}
 	}
 
+	else if (AssaultRifleClass != nullptr)
+	{
+		AssaultRifle = GetWorld()->SpawnActor<AAssaultRifle>(AssaultRifleClass, FTransform(), SpawnParamaters);
+
+		if (AssaultRifle != nullptr)
+		{
+			AssaultRifle->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, TEXT("AssaultRifleSocket"));
+			AssaultRifle->SetOwner(this);
+		}
+	}
+
 
 	AnimInstance = GetMesh()->GetAnimInstance();
 	

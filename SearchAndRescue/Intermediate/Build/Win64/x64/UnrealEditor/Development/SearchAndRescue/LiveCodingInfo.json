@@ -20,7 +20,9 @@
 			"HostageAIController.gen.cpp.obj",
 			"HostageChar.gen.cpp.obj",
 			"MainCharacter.gen.cpp.obj",
+			"MLEnemyBase.gen.cpp.obj",
 			"MyActor.gen.cpp.obj",
+			"SearchAndRescue.init.gen.cpp.obj",
 			"Shotgun.gen.cpp.obj",
 			"ShotgunEnemy.gen.cpp.obj",
 			"ShotgunShootBTTaskNode.gen.cpp.obj",
@@ -46,6 +48,7 @@
 			"SniperEnemy.cpp.obj",
 			"SniperShootBTTaskNode.cpp.obj",
 			"EnemyManager.cpp.obj",
+			"EnemyTrainingEnvironment.cpp.obj",
 			"MyActor.cpp.obj",
 			"SplineController.cpp.obj",
 			"SplineMovementActor.cpp.obj",
@@ -58,12 +61,9 @@
 			"GrenadeBase.cpp.obj",
 			"Shotgun.cpp.obj",
 			"SniperRifle.cpp.obj",
-			"MLEnemyBase.gen.cpp.obj",
-			"SearchAndRescue.init.gen.cpp.obj",
+			"WeaponBase.cpp.obj",
 			"MLEnemyBase.cpp.obj",
-			"EnemyInteractor.cpp.obj",
-			"EnemyTrainingEnvironment.cpp.obj",
-			"WeaponBase.cpp.obj"
+			"EnemyInteractor.cpp.obj"
 		]
 	}
 }
