@@ -129,7 +129,7 @@ void UEnemyTrainingEnvironment::GatherAgentReward_Implementation(float& OutRewar
 			//	UE_LOG(LogTemp, Error, TEXT("Shot on patrol"));
 			//}
 
-			if (DistanceToPath > 100 && Enemy->FindingTrack == true)
+			if (DistanceToPath <= 100 && Enemy->FindingTrack == true)
 			{
 				TotalReward += 25.0f;
 				UE_LOG(LogTemp, Warning, TEXT("Agent %d WON the episode! +25 Reward"), AgentId);
@@ -497,7 +497,7 @@ void UEnemyTrainingEnvironment::ResetAgentEpisode_Implementation(const int32 Age
 		//0.7f
 		float SpawnChance = 1.1f;
 		float Roll = FMath::FRand(); // Returns 0.0 to 1.0
-		float RandLife = FMath::FRandRange(5.0f, 10.0f);
+		float RandLife = FMath::FRandRange(5.0f, 6.0f);
 
 		if ((Roll <= SpawnChance) && bIsSphereVisible)
 		{
