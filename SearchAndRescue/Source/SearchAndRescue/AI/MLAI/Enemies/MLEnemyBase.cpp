@@ -112,6 +112,7 @@ float AMLEnemyBase::getDefaultSpeed()
 
 void AMLEnemyBase::takeDamage(float fDamageStore)
 {
+	//UE_LOG(LogTemp, Warning, TEXT("Damaging enemy for: %f"), fDamageStore);
 	fHealth -= fDamageStore;
 }
 

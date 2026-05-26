@@ -75,7 +75,6 @@ void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 	//On overlap with anything we delete the bullet.
     if (TargetActor && OtherActor == TargetActor)
     {
-        
         AMLEnemyBase* OwnerEnemy = Cast<AMLEnemyBase>(GetOwner());
 
         if (OwnerEnemy)
@@ -85,6 +84,12 @@ void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
             this->Destroy();
         }
     }
+
+   else if (bPlayerBullet == true)
+   {
+        AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(OtherActor);
+        Enemy->takeDamage(fDamage);
+   }
     //UE_LOG(LogTemp, Warning, TEXT("Hit"));
     
 }

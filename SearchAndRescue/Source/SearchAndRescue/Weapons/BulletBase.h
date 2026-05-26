@@ -34,7 +34,7 @@ protected:
 	UPROPERTY()
 	AActor* TargetActor;
 
-	bool bTraining = true;
+	bool bTraining = false;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -53,6 +53,9 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Bullet Variables")
 	float iAmount;
+
+	UPROPERTY(EditAnywhere, Category = "Bullet Variables")
+	bool bPlayerBullet = false;
 
 	void setTarget(AActor* ActorStore);
 };
