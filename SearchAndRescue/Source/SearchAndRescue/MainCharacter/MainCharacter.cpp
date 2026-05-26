@@ -208,13 +208,18 @@ void AMainCharacter::SwapWeapons(int32 WeaponIndex)
 void AMainCharacter::Interaction()
 {
 	AHostageChar* Hostage = Cast<AHostageChar>(UGameplayStatics::GetActorOfClass(GetWorld(), AHostageChar::StaticClass()));
-	float Distance = FVector::Distance(Hostage->GetActorLocation(), UGameplayStatics::GetPlayerPawn(GetWorld(),0)->GetActorLocation());
-	//UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Distance);
 
-	if (Hostage && Distance <= 90.0f)
+	if (Hostage)
 	{
-		//GLog->Log("Playing");
-		Hostage->playActivationMontage();
+		float Distance = FVector::Distance(Hostage->GetActorLocation(), UGameplayStatics::GetPlayerPawn(GetWorld(), 0)->GetActorLocation());
+		//UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Distance);
+
+		if (Distance <= 90.0f)
+		{
+			//GLog->Log("Playing");
+			Hostage->playActivationMontage();
+		}
 	}
+	
 }
 
