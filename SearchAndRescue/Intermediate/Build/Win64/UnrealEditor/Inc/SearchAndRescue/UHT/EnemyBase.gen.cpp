@@ -23,6 +23,81 @@ SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWeaponBase_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
 // End Cross Module References
 
+// Begin Class AEnemyBase Function DestroyActor
+struct Z_Construct_UFunction_AEnemyBase_DestroyActor_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AI/BTAI/EnemyBase.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemyBase_DestroyActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemyBase, nullptr, "DestroyActor", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyBase_DestroyActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEnemyBase_DestroyActor_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEnemyBase_DestroyActor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEnemyBase_DestroyActor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEnemyBase::execDestroyActor)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyActor();
+	P_NATIVE_END;
+}
+// End Class AEnemyBase Function DestroyActor
+
+// Begin Class AEnemyBase Function getIsDead
+struct Z_Construct_UFunction_AEnemyBase_getIsDead_Statics
+{
+	struct EnemyBase_eventgetIsDead_Parms
+	{
+		bool ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AI/BTAI/EnemyBase.h" },
+	};
+#endif // WITH_METADATA
+	static void NewProp_ReturnValue_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+void Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::NewProp_ReturnValue_SetBit(void* Obj)
+{
+	((EnemyBase_eventgetIsDead_Parms*)Obj)->ReturnValue = 1;
+}
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(EnemyBase_eventgetIsDead_Parms), &Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::NewProp_ReturnValue_SetBit, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEnemyBase, nullptr, "getIsDead", nullptr, nullptr, Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::PropPointers), sizeof(Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::EnemyBase_eventgetIsDead_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::EnemyBase_eventgetIsDead_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AEnemyBase_getIsDead()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEnemyBase_getIsDead_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEnemyBase::execgetIsDead)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(bool*)Z_Param__Result=P_THIS->getIsDead();
+	P_NATIVE_END;
+}
+// End Class AEnemyBase Function getIsDead
+
 // Begin Class AEnemyBase Function getWeaponBase
 struct Z_Construct_UFunction_AEnemyBase_getWeaponBase_Statics
 {
@@ -127,6 +202,8 @@ void AEnemyBase::StaticRegisterNativesAEnemyBase()
 {
 	UClass* Class = AEnemyBase::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "DestroyActor", &AEnemyBase::execDestroyActor },
+		{ "getIsDead", &AEnemyBase::execgetIsDead },
 		{ "getWeaponBase", &AEnemyBase::execgetWeaponBase },
 		{ "OnGrenadeRelease", &AEnemyBase::execOnGrenadeRelease },
 		{ "OnGrenadeThrowFinished", &AEnemyBase::execOnGrenadeThrowFinished },
@@ -228,6 +305,8 @@ struct Z_Construct_UClass_AEnemyBase_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEnemyBase_DestroyActor, "DestroyActor" }, // 3744503956
+		{ &Z_Construct_UFunction_AEnemyBase_getIsDead, "getIsDead" }, // 2780490393
 		{ &Z_Construct_UFunction_AEnemyBase_getWeaponBase, "getWeaponBase" }, // 2380987714
 		{ &Z_Construct_UFunction_AEnemyBase_OnGrenadeRelease, "OnGrenadeRelease" }, // 1342661997
 		{ &Z_Construct_UFunction_AEnemyBase_OnGrenadeThrowFinished, "OnGrenadeThrowFinished" }, // 2944269651
@@ -309,10 +388,10 @@ AEnemyBase::~AEnemyBase() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEnemyBase, AEnemyBase::StaticClass, TEXT("AEnemyBase"), &Z_Registration_Info_UClass_AEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyBase), 2604768670U) },
+		{ Z_Construct_UClass_AEnemyBase, AEnemyBase::StaticClass, TEXT("AEnemyBase"), &Z_Registration_Info_UClass_AEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEnemyBase), 1648604285U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_3089300162(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_3125243805(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BTAI_EnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

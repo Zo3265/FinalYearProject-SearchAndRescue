@@ -35,6 +35,7 @@ void AEnemyBase::BeginPlay()
 	//UE_LOG(LogTemp, Warning, TEXT("Speed is: %f"), GetCharacterMovement()->MaxWalkSpeed);
 	fDefaultSpeed = Speed;
 	GetCharacterMovement()->MaxWalkSpeed = fDefaultSpeed - 20.0f;
+	AnimIsDead = Cast<UBoolAnimInstance>(GetMesh()->GetAnimInstance());
 
 }
 
@@ -43,7 +44,17 @@ void AEnemyBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (SphereStore != nullptr)
+	if (fHealth <= 0.0f)
+	{
+		bDead = true;
+		if (iDeathCount == 0)
+		{
+			PlayBTDeathMontage();
+		}
+		
+	}
+
+	if (SphereStore != nullptr && bDead == false)
 	{
 		//How long the current spline has been going for.
 		float CurrentSplineTime = (Count - StartTime) / splineController->getTotalPathTimeController();
@@ -162,6 +173,23 @@ void AEnemyBase::PlayGrenadeThrowAnim()
 	}
 }
 
+void AEnemyBase::PlayBTDeathMontage()
+{
+	if (AnimInstance != nullptr)
+	{
+		AnimIsDead->setIsDeadBool(true);
+		AnimInstance->Montage_Play(DeathAnimation);
+		iDeathCount += 1;
+	}
+}
+
+void AEnemyBase::DestroyActor()
+{
+	this->SetActorHiddenInGame(true);
+	this->SetActorEnableCollision(false);
+	this->Destroy();
+}
+
 void AEnemyBase::OnGrenadeRelease()
 {
 	//GLog->Log("Released Grenade");
@@ -185,5 +213,10 @@ void AEnemyBase::OnGrenadeThrowFinished()
 AWeaponBase* AEnemyBase::getWeaponBase()
 {
 	return Weapon;
+}
+
+bool AEnemyBase::getIsDead()
+{
+	return bDead;
 }
 

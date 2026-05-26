@@ -8,6 +8,7 @@
 #include "SearchAndRescue/AI/SplineController.h"
 #include "SearchAndRescue/Weapons/ExplosiveGrenade.h"
 #include "SearchAndRescue/Weapons/WeaponBase.h"
+#include "SearchAndRescue/AI/BoolAnimInstance.h"
 #include "EnemyBase.generated.h"
 
 UCLASS()
@@ -65,6 +66,8 @@ protected:
 
 	UPROPERTY()
 	AWeaponBase* Weapon;
+
+	int iDeathCount = 0;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -90,6 +93,7 @@ public:
 	void PlayAttackAnim();
 	void PlayReloadAnim();
 	void PlayGrenadeThrowAnim();
+	void PlayBTDeathMontage();
 
 	UFUNCTION(BlueprintCallable)
 	void OnGrenadeRelease();
@@ -99,4 +103,13 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	AWeaponBase* getWeaponBase();
+
+	UFUNCTION(BlueprintCallable)
+	bool getIsDead();
+
+	UFUNCTION(BlueprintCallable)
+	void DestroyActor();
+
+	bool bDead = false;
+	UBoolAnimInstance* AnimIsDead;
 };

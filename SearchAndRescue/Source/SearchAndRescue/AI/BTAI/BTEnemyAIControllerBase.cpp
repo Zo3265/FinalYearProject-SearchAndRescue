@@ -63,11 +63,16 @@ void ABTEnemyAIControllerBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (AIBehavior != nullptr)
+	if (AIBehavior != nullptr && Enemy->bDead == false)
 	{
 		//Default behaviour is to patrol
 		GetBlackboardComponent()->SetValueAsObject(TEXT("SplineMovementActor"), SphereStore);
 		Enemy->setSpeed(Enemy->getDefaultSpeed());
+	}
+
+	else if(AIBehavior != nullptr)
+	{
+		this->GetBrainComponent()->StopLogic(TEXT("Death shutdown"));
 	}
 
 }

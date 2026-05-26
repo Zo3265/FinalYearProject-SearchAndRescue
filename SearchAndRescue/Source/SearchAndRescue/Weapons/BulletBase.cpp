@@ -2,6 +2,7 @@
 
 #include "BulletBase.h"
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
+#include "SearchAndRescue/AI/BTAI/EnemyBase.h"
 
 // Sets default values
 ABulletBase::ABulletBase()
@@ -72,28 +73,43 @@ void ABulletBase::setTarget(AActor* ActorStore)
 
 void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	//On overlap with anything we delete the bullet.
-    if (TargetActor && OtherActor == TargetActor)
+	//Enemy bullets overlapping with the player.
+    if ((TargetActor && OtherActor == TargetActor) && bPlayerBullet == false)
     {
         AMLEnemyBase* OwnerEnemy = Cast<AMLEnemyBase>(GetOwner());
-
         if (OwnerEnemy)
         {
-            //UE_LOG(LogTemp, Warning, TEXT("Hit"));
+            UE_LOG(LogTemp, Warning, TEXT("MLEnemy Hit player"));
             OwnerEnemy->setHit(true);
+            this->Destroy();
+        }
+
+        else
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Hit something"));
             this->Destroy();
         }
     }
 
+    //Player bullets overlapping with the enemies
    else if (bPlayerBullet == true)
    {
         if (OtherActor == nullptr) { return; }
         if (!IsValid(OtherActor)) { return; }
-        AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(OtherActor);
-
-        if (Enemy)
+        AMLEnemyBase* MLEnemy = Cast<AMLEnemyBase>(OtherActor);
+        AEnemyBase* BTEnemy = Cast<AEnemyBase>(OtherActor);
+        if (MLEnemy)
         {
-            Enemy->takeDamage(fDamage);
+            UE_LOG(LogTemp, Warning, TEXT("Hit MLEnemy"));
+            MLEnemy->takeDamage(fDamage);
+            this->Destroy();
+        }
+
+        else if (BTEnemy)
+        {
+            UE_LOG(LogTemp, Warning, TEXT("Hit BTEnemy"));
+            BTEnemy->takeDamage(fDamage);
+            this->Destroy();
         }
        
    }

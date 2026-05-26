@@ -47,6 +47,12 @@
     <Filter Include="Source\SearchAndRescue\AI">
       <UniqueIdentifier>{6AD15709-F7EA-3AA0-B4FE-4EE413AA50C6}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BoolAnimInstance.cpp">
+      <Filter>Source\SearchAndRescue\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\SearchAndRescue\AI\BoolAnimInstance.h">
+      <Filter>Source\SearchAndRescue\AI</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\SearchAndRescue\AI\SplineController.cpp">
       <Filter>Source\SearchAndRescue\AI</Filter>
     </ClCompile>
