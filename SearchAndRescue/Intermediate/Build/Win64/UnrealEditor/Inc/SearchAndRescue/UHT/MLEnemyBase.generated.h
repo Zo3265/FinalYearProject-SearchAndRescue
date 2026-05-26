@@ -16,6 +16,7 @@ class AWeaponBase;
 #define SEARCHANDRESCUE_MLEnemyBase_generated_h
 
 #define FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDestroyActor); \
 	DECLARE_FUNCTION(execgetWeapon); \
 	DECLARE_FUNCTION(execResetToRandomPointOnSpline);
 

@@ -10,6 +10,7 @@
 			"BTGrenadeTossTaskNode.gen.cpp.obj",
 			"BTShotgunAIController.gen.cpp.obj",
 			"BTSniperAIController.gen.cpp.obj",
+			"BulletBase.gen.cpp.obj",
 			"EnemyBase.gen.cpp.obj",
 			"EnemyInteractor.gen.cpp.obj",
 			"EnemyManager.gen.cpp.obj",
@@ -19,7 +20,6 @@
 			"HostageAIController.gen.cpp.obj",
 			"HostageChar.gen.cpp.obj",
 			"MainCharacter.gen.cpp.obj",
-			"MLEnemyBase.gen.cpp.obj",
 			"MyActor.gen.cpp.obj",
 			"Shotgun.gen.cpp.obj",
 			"ShotgunEnemy.gen.cpp.obj",
@@ -45,8 +45,6 @@
 			"ShotgunShootBTTaskNode.cpp.obj",
 			"SniperEnemy.cpp.obj",
 			"SniperShootBTTaskNode.cpp.obj",
-			"MLEnemyBase.cpp.obj",
-			"EnemyInteractor.cpp.obj",
 			"EnemyManager.cpp.obj",
 			"EnemyTrainingEnvironment.cpp.obj",
 			"MyActor.cpp.obj",
@@ -56,14 +54,16 @@
 			"DummyClass.cpp.obj",
 			"SearchAndRescue.cpp.obj",
 			"AssaultRifle.cpp.obj",
+			"BulletBase.cpp.obj",
 			"ExplosiveGrenade.cpp.obj",
 			"GrenadeBase.cpp.obj",
 			"Shotgun.cpp.obj",
 			"SniperRifle.cpp.obj",
 			"WeaponBase.cpp.obj",
-			"BulletBase.gen.cpp.obj",
+			"MLEnemyBase.gen.cpp.obj",
 			"SearchAndRescue.init.gen.cpp.obj",
-			"BulletBase.cpp.obj"
+			"MLEnemyBase.cpp.obj",
+			"EnemyInteractor.cpp.obj"
 		]
 	}
 }

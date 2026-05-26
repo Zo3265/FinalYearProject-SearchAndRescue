@@ -79,7 +79,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
 	
 	AActor* TargetToFollow = nullptr;
-	if(Enemy)
+	if(Enemy && Enemy->bDead == false)
 	{
 		if (bTraining == true)
 		{
@@ -362,6 +362,30 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}
+
+	else
+	{
+		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
+		ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::MakeDirectionAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
+		ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::MakeVelocityObservation(InObservationObject, FVector::ZeroVector));
+		ObservationMap.Add(TEXT("LookAhead"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, FVector::ForwardVector));
+
+		//Player seeing observations
+		ObservationMap.Add(TEXT("PlayerLastKnownLocation"), ULearningAgentsObservations::MakeLocationObservation(InObservationObject, FVector::ZeroVector));
+		ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, FVector::ForwardVector));
+		ObservationMap.Add(TEXT("IsPlayerSeen"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, false));
+		ObservationMap.Add(TEXT("SawPlayer"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, false));
+
+		//Firing weapons observations
+		ObservationMap.Add(TEXT("WeaponCooldown"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, 0.0f));
+		ObservationMap.Add(TEXT("IsAimedAtTarget"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, false));
+		ObservationMap.Add(TEXT("TargetRelativeDirection"), ULearningAgentsObservations::MakeDirectionObservation(InObservationObject, FVector::ForwardVector));
+		ObservationMap.Add(TEXT("TargetRelativeSpeed"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, 0.0f));
+		ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::MakeFloatObservation(InObservationObject, 0.0f));
+		ObservationMap.Add(TEXT("DoesNeedToReload"), ULearningAgentsObservations::MakeBoolObservation(InObservationObject, false));
+
+		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
+	}
 	
 }
 
@@ -394,7 +418,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	float DeltaTime = GetWorld()->GetDeltaSeconds();
 
-	if (Enemy)
+	if (Enemy && Enemy->bDead == false)
 	{
 		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
 		float ForwardValue;

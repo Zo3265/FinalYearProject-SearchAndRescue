@@ -87,8 +87,15 @@ void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
 
    else if (bPlayerBullet == true)
    {
+        if (OtherActor == nullptr) { return; }
+        if (!IsValid(OtherActor)) { return; }
         AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(OtherActor);
-        Enemy->takeDamage(fDamage);
+
+        if (Enemy)
+        {
+            Enemy->takeDamage(fDamage);
+        }
+       
    }
     //UE_LOG(LogTemp, Warning, TEXT("Hit"));
     

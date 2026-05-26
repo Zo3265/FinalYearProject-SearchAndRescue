@@ -83,6 +83,16 @@ void AMLEnemyBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (fHealth <= 0.0f)
+	{
+		//UE_LOG(LogTemp, Warning, TEXT("Enemy is dead"));
+		bDead = true;
+		
+		if (iDeathCount == 0)
+		{
+			PlayDeathMontage();
+		}
+	}
 }
 
 int AMLEnemyBase::getExplosiveGrenadeAmount()
@@ -265,6 +275,16 @@ EAgentState AMLEnemyBase::getCurrentState()
 	return CurrentState;
 }
 
+void AMLEnemyBase::PlayDeathMontage()
+{
+	if (AnimInstance != nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Playing animation"));
+		AnimInstance->Montage_Play(DeathAnimation);
+		iDeathCount += 1;
+	}
+}
+
 AWeaponBase* AMLEnemyBase::getWeapon()
 {
 	if (SniperRifle)
@@ -283,6 +303,14 @@ AWeaponBase* AMLEnemyBase::getWeapon()
 	}
 
 	return nullptr;
+}
+
+void AMLEnemyBase::DestroyActor()
+{
+	this->SetActorHiddenInGame(true);
+	this->SetActorEnableCollision(false);
+	this->Destroy();
+	
 }
 
 // Called to bind functionality to input

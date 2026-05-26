@@ -102,6 +102,7 @@ protected:
 	float TurnValue;
 	float IdleTimer = 0.0f;
 	bool bHit = false;
+	int iDeathCount = 0;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
 	EAgentState CurrentState = EAgentState::Patrolling;
@@ -146,8 +147,14 @@ public:
 	void setCurrentState(EAgentState StateStore);
 	EAgentState getCurrentState();
 
+	void PlayDeathMontage();
+
 	UFUNCTION()
 	AWeaponBase* getWeapon();
+	
+	UFUNCTION(BlueprintCallable)
+	void DestroyActor();
+	
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
@@ -157,4 +164,5 @@ public:
 	FVector PlayerLastKnownLocation = FVector::Zero();
 	float LastKnownLocDist = 0.0f;
 	bool FindingTrack = false;
+	bool bDead = false;
 };

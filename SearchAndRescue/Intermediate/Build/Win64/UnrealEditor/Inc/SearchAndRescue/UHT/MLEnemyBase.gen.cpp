@@ -84,6 +84,35 @@ UEnum* Z_Construct_UEnum_SearchAndRescue_EAgentState()
 }
 // End Enum EAgentState
 
+// Begin Class AMLEnemyBase Function DestroyActor
+struct Z_Construct_UFunction_AMLEnemyBase_DestroyActor_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AMLEnemyBase_DestroyActor_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AMLEnemyBase, nullptr, "DestroyActor", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AMLEnemyBase_DestroyActor_Statics::Function_MetaDataParams), Z_Construct_UFunction_AMLEnemyBase_DestroyActor_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AMLEnemyBase_DestroyActor()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AMLEnemyBase_DestroyActor_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AMLEnemyBase::execDestroyActor)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->DestroyActor();
+	P_NATIVE_END;
+}
+// End Class AMLEnemyBase Function DestroyActor
+
 // Begin Class AMLEnemyBase Function getWeapon
 struct Z_Construct_UFunction_AMLEnemyBase_getWeapon_Statics
 {
@@ -159,6 +188,7 @@ void AMLEnemyBase::StaticRegisterNativesAMLEnemyBase()
 {
 	UClass* Class = AMLEnemyBase::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "DestroyActor", &AMLEnemyBase::execDestroyActor },
 		{ "getWeapon", &AMLEnemyBase::execgetWeapon },
 		{ "ResetToRandomPointOnSpline", &AMLEnemyBase::execResetToRandomPointOnSpline },
 	};
@@ -282,6 +312,7 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AMLEnemyBase_DestroyActor, "DestroyActor" }, // 1659066496
 		{ &Z_Construct_UFunction_AMLEnemyBase_getWeapon, "getWeapon" }, // 2054629662
 		{ &Z_Construct_UFunction_AMLEnemyBase_ResetToRandomPointOnSpline, "ResetToRandomPointOnSpline" }, // 3245662645
 	};
@@ -383,10 +414,10 @@ struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescu
 		{ EAgentState_StaticEnum, TEXT("EAgentState"), &Z_Registration_Info_UEnum_EAgentState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4168159340U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 4262628058U) },
+		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 1505328745U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_2972082572(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_4055854626(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::EnumInfo));
