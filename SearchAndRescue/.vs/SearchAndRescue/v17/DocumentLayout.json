@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|solutionrelative:Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{046DDBB9-41A3-3483-A63A-5AEC1C2098FA}|Intermediate\\ProjectFiles\\SearchAndRescue.vcxproj|G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\MainCharacter\\MainCharacter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -242,7 +242,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 31,
+          "SelectedChildIndex": 52,
           "Children": [
             {
               "$type": "Document",
@@ -254,8 +254,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\WinActor.cpp",
               "ViewState": "AgIAABUAAAAAAAAAAAAAAD4AAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-26T19:03:19.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T19:03:19.722Z"
             },
             {
               "$type": "Document",
@@ -267,8 +266,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\WinActor.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-26T19:03:19.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T19:03:19.268Z"
             },
             {
               "$type": "Document",
@@ -280,21 +278,19 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyManager.h",
               "ViewState": "AgIAABIAAAAAAAAAAAAgwEgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-22T15:57:14.518Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T15:57:14.518Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MLEnemyBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.cpp",
-              "ViewState": "AgIAABQBAAAAAAAAAAAswDcBAAADAAAAAAAAAA==",
+              "ViewState": "AgIAAHUAAAAAAAAAAAAswJkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-18T14:41:02.17Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T14:41:02.17Z"
             },
             {
               "$type": "Document",
@@ -306,8 +302,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\Enemies\\MLEnemyBase.h",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAD8AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-18T14:39:36.524Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-18T14:39:36.524Z"
             },
             {
               "$type": "Document",
@@ -319,8 +314,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\SplineController.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-15T18:59:20.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T18:59:20.608Z"
             },
             {
               "$type": "Document",
@@ -332,8 +326,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\SplineController.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-15T18:59:20.257Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-15T18:59:20.257Z"
             },
             {
               "$type": "Document",
@@ -345,8 +338,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\Shotgun.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-13T18:17:50.97Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T18:17:50.97Z"
             },
             {
               "$type": "Document",
@@ -358,8 +350,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\Shotgun.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-13T18:17:50.729Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T18:17:50.729Z"
             },
             {
               "$type": "Document",
@@ -371,8 +362,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\MainCharacter\\MainCharacter.cpp",
               "ViewState": "AgIAADcAAAAAAAAAAAAUwGUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-13T15:36:46.871Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T15:36:46.871Z"
             },
             {
               "$type": "Document",
@@ -384,8 +374,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\MainCharacter\\MainCharacter.h",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAGIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-13T15:36:46.65Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T15:36:46.65Z"
             },
             {
               "$type": "Document",
@@ -397,8 +386,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\ShotgunEnemy\\ShotgunShootBTTaskNode.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-13T15:21:34.075Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T15:21:34.075Z"
             },
             {
               "$type": "Document",
@@ -410,8 +398,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\ShotgunEnemy\\ShotgunShootBTTaskNode.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-13T15:21:33.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T15:21:33.855Z"
             },
             {
               "$type": "Document",
@@ -423,8 +410,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\AssaultEnemy\\AssaultShootBTTaskNode.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-12T17:14:24.517Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:14:24.517Z"
             },
             {
               "$type": "Document",
@@ -436,8 +422,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\AssaultEnemy\\AssaultShootBTTaskNode.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-12T17:14:24.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:14:24.299Z"
             },
             {
               "$type": "Document",
@@ -449,8 +434,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\ShotgunEnemy\\BTShotgunAIController.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-13T15:07:49.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T15:07:49.843Z"
             },
             {
               "$type": "Document",
@@ -462,8 +446,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\ShotgunEnemy\\BTShotgunAIController.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-13T15:07:49.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T15:07:49.6Z"
             },
             {
               "$type": "Document",
@@ -475,8 +458,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\AssaultEnemy\\BTAssaultAIController.cpp",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAFgAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-12T16:56:26.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T16:56:26.324Z"
             },
             {
               "$type": "Document",
@@ -488,8 +470,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\AssaultEnemy\\BTAssaultAIController.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-12T16:56:25.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T16:56:25.865Z"
             },
             {
               "$type": "Document",
@@ -501,8 +482,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\ShotgunEnemy\\ShotgunEnemy.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-13T14:55:26.586Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T14:55:26.586Z"
             },
             {
               "$type": "Document",
@@ -514,8 +494,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\ShotgunEnemy\\ShotgunEnemy.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-13T14:55:26.153Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T14:55:26.153Z"
             },
             {
               "$type": "Document",
@@ -527,8 +506,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\AssaultRifle.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-12T17:20:29.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:20:29.549Z"
             },
             {
               "$type": "Document",
@@ -540,8 +518,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\AssaultRifle.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-12T17:18:07.264Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:18:07.264Z"
             },
             {
               "$type": "Document",
@@ -553,8 +530,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\SniperShootBTTaskNode.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-12T17:13:44.055Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:13:44.055Z"
             },
             {
               "$type": "Document",
@@ -566,8 +542,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\SniperShootBTTaskNode.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-12T17:13:43.856Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T17:13:43.856Z"
             },
             {
               "$type": "Document",
@@ -579,8 +554,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.cpp",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAAEsAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-06T14:14:49.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-06T14:14:49.897Z"
             },
             {
               "$type": "Document",
@@ -592,8 +566,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTSniperAIController.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-06T14:14:49.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-06T14:14:49.774Z"
             },
             {
               "$type": "Document",
@@ -605,8 +578,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\AssaultEnemy\\AssaultEnemy.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-12T15:46:01.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T15:46:01.614Z"
             },
             {
               "$type": "Document",
@@ -618,8 +590,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\AssaultEnemy\\AssaultEnemy.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-12T15:46:01.127Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T15:46:01.127Z"
             },
             {
               "$type": "Document",
@@ -631,8 +602,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.cpp",
               "ViewState": "AgIAADsAAAAAAAAAAADwvyMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-03T16:43:45.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T16:43:45.775Z"
             },
             {
               "$type": "Document",
@@ -644,12 +614,11 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\SniperEnemy.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-03T16:43:45.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-03T16:43:45.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EnemyBase.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
@@ -657,8 +626,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.cpp",
               "ViewState": "AgIAAKIAAAAAAAAAAAAAAL0AAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-05T15:45:35.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T15:45:35.83Z"
             },
             {
               "$type": "Document",
@@ -670,8 +638,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\EnemyBase.h",
               "ViewState": "AgIAAEsAAAAAAAAAAAAAAHIAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-05T15:45:35.608Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T15:45:35.608Z"
             },
             {
               "$type": "Document",
@@ -683,8 +650,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.cpp",
               "ViewState": "AgIAAB4AAAAAAAAAAAAAAEoAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-05T16:55:47.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T16:55:47.774Z"
             },
             {
               "$type": "Document",
@@ -696,8 +662,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\BTAI\\BTEnemyAIControllerBase.h",
               "ViewState": "AgIAABIAAAAAAAAAAAAAADUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-05T16:55:47.492Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T16:55:47.492Z"
             },
             {
               "$type": "Document",
@@ -709,8 +674,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\TrainingActor\\MyActor.cpp",
               "ViewState": "AgIAAAQAAAAAAAAAAAAiwDUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-04T09:08:47.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T09:08:47.741Z"
             },
             {
               "$type": "Document",
@@ -722,8 +686,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\TrainingActor\\MyActor.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-04T09:08:47.278Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T09:08:47.278Z"
             },
             {
               "$type": "Document",
@@ -735,8 +698,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADwBAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-03T14:42:50.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-03T14:42:50.209Z"
             },
             {
               "$type": "Document",
@@ -748,8 +710,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\BulletBase.cpp",
               "ViewState": "AgIAAD8AAAAAAAAAAAAAAGEAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-05-03T14:40:16.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-03T14:40:16.261Z"
             },
             {
               "$type": "Document",
@@ -761,8 +722,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\BulletBase.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-03T14:40:16.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-03T14:40:16.141Z"
             },
             {
               "$type": "Document",
@@ -906,18 +866,17 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyTrainingEnvironment.h",
               "ViewState": "AgIAAAEAAAAAAAAAAAAAACsAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-05-22T15:52:47.923Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-22T15:52:47.923Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "EnemyInteractor.cpp",
               "DocumentMoniker": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.cpp",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGwAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAGwAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2026-04-21T09:05:27.629Z",
               "EditorCaption": ""
@@ -932,8 +891,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\AI\\MLAI\\EnemyInteractor.h",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-16T16:04:43.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T16:04:43.145Z"
             },
             {
               "$type": "Document",
@@ -945,8 +903,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\WeaponBase.cpp",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-01T15:13:57.096Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T15:13:57.096Z"
             },
             {
               "$type": "Document",
@@ -956,10 +913,9 @@
               "RelativeDocumentMoniker": "Source\\SearchAndRescue\\Weapons\\WeaponBase.h",
               "ToolTip": "G:\\Unreal Projects\\FinalYearProject-SearchAndRescue\\SearchAndRescue\\Source\\SearchAndRescue\\Weapons\\WeaponBase.h",
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\WeaponBase.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-01T15:13:56.735Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T15:13:56.735Z"
             },
             {
               "$type": "Document",
@@ -971,8 +927,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\SniperRifle.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2026-04-01T15:12:13.369Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T15:12:13.369Z"
             },
             {
               "$type": "Document",
@@ -984,8 +939,7 @@
               "RelativeToolTip": "Source\\SearchAndRescue\\Weapons\\SniperRifle.h",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAACEAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2026-04-01T15:11:54.295Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-01T15:11:54.295Z"
             }
           ]
         }
