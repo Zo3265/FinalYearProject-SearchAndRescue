@@ -8,7 +8,7 @@ public class SearchAndRescue : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "AIModule", "LearningAgents", "LearningAgentsTraining", "LearningTraining", "EnhancedInput" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "AIModule", "LearningAgents", "LearningAgentsTraining", "LearningTraining", "EnhancedInput", "UMG", "Slate", "SlateCore" });
 
 
 

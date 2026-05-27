@@ -21,7 +21,12 @@ AWinActor::AWinActor()
 void AWinActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+
+	if (MenuWidgetClass)
+	{
+		MenuWidgetInstance = CreateWidget<UUserWidget>(PC, MenuWidgetClass);
+	}
 }
 
 // Called every frame
@@ -37,10 +42,25 @@ void AWinActor::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, class AActor
 	//UE_LOG(LogTemp, Warning, TEXT("Overlapping."))
 	if (Hostage)
 	{
-		PC = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+		
 		if (PC)
 		{
 			PC->SetPause(true);
+			if (MenuWidgetInstance)
+			{
+				// 3. Render the menu onto the player's screen
+				MenuWidgetInstance->AddToViewport();
+
+				// 4. Setup Input Mode to focus on UI elements
+				FInputModeUIOnly InputModeData;
+				InputModeData.SetWidgetToFocus(MenuWidgetInstance->TakeWidget());
+				InputModeData.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+
+				PC->SetInputMode(InputModeData);
+
+				// 5. Explicitly display the hardware mouse cursor
+				PC->bShowMouseCursor = true;
+			}
 		}
 		
 	}

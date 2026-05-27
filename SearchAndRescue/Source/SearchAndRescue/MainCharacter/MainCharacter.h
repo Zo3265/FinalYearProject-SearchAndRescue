@@ -8,6 +8,7 @@
 #include "SearchAndRescue/Weapons/AssaultRifle.h"
 #include "SearchAndRescue/Weapons/SniperRifle.h"
 #include "SearchAndRescue/Weapons/Shotgun.h"
+#include "Blueprint/UserWidget.h"
 #include "MainCharacter.generated.h"
 
 UCLASS()
@@ -43,6 +44,10 @@ protected:
 
 	UPROPERTY();
 	AWeaponBase* CurrentWeapon;
+
+	float fHealth = 250.0f;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Menu")
+	TSubclassOf<UUserWidget> MenuWidgetClass;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -88,4 +93,8 @@ public:
 	void Reload();
 	void SwapWeapons(int32 WeaponIndex);
 	void Interaction();
+	void takeDamage(float fDamageStore);
+private:
+	UPROPERTY()
+	UUserWidget* MenuWidgetInstance;
 };

@@ -178,6 +178,7 @@ void AEnemyBase::PlayBTDeathMontage()
 	if (AnimInstance != nullptr)
 	{
 		AnimIsDead->setIsDeadBool(true);
+		this->SetActorEnableCollision(false);
 		AnimInstance->Montage_Play(DeathAnimation);
 		iDeathCount += 1;
 	}
@@ -186,7 +187,7 @@ void AEnemyBase::PlayBTDeathMontage()
 void AEnemyBase::DestroyActor()
 {
 	this->SetActorHiddenInGame(true);
-	this->SetActorEnableCollision(false);
+	//this->SetActorEnableCollision(false);
 	this->Destroy();
 }
 

@@ -3,6 +3,7 @@
 #include "BulletBase.h"
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
 #include "SearchAndRescue/AI/BTAI/EnemyBase.h"
+#include "SearchAndRescue/MainCharacter/MainCharacter.h"
 
 // Sets default values
 ABulletBase::ABulletBase()
@@ -54,6 +55,7 @@ void ABulletBase::BeginPlay()
     {
         TargetActor = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     }
+    PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
     
 }
 
@@ -79,14 +81,22 @@ void ABulletBase::OnOverLapBegin(UPrimitiveComponent* OverlappedComp, AActor* Ot
         AMLEnemyBase* OwnerEnemy = Cast<AMLEnemyBase>(GetOwner());
         if (OwnerEnemy)
         {
-            UE_LOG(LogTemp, Warning, TEXT("MLEnemy Hit player"));
+            //UE_LOG(LogTemp, Warning, TEXT("MLEnemy Hit player"));
             OwnerEnemy->setHit(true);
+            if (AMainCharacter* MC = Cast<AMainCharacter>(OtherActor))
+            {
+                MC->takeDamage(fDamage);
+            }
             this->Destroy();
         }
 
         else
         {
-            UE_LOG(LogTemp, Warning, TEXT("Hit something"));
+            //UE_LOG(LogTemp, Warning, TEXT("Hit something"));
+            if (AMainCharacter* MC = Cast<AMainCharacter>(OtherActor))
+            {
+                MC->takeDamage(fDamage);
+            }
             this->Destroy();
         }
     }

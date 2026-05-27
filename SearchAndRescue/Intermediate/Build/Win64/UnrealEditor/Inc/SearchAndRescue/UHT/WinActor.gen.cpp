@@ -11,6 +11,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeWinActor() {}
 
 // Begin Cross Module References
+COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_APlayerController_NoRegister();
@@ -19,6 +20,7 @@ ENGINE_API UClass* Z_Construct_UClass_UPrimitiveComponent_NoRegister();
 ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWinActor();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AWinActor_NoRegister();
+UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 UPackage* Z_Construct_UPackage__Script_SearchAndRescue();
 // End Cross Module References
 
@@ -129,12 +131,22 @@ struct Z_Construct_UClass_AWinActor_Statics
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "AI/WinActor.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MenuWidgetClass_MetaData[] = {
+		{ "Category", "Menu" },
+		{ "ModuleRelativePath", "AI/WinActor.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PC_MetaData[] = {
+		{ "ModuleRelativePath", "AI/WinActor.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MenuWidgetInstance_MetaData[] = {
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "AI/WinActor.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_CollisionBox;
+	static const UECodeGen_Private::FClassPropertyParams NewProp_MenuWidgetClass;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_PC;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MenuWidgetInstance;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -147,10 +159,14 @@ struct Z_Construct_UClass_AWinActor_Statics
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWinActor_Statics::NewProp_CollisionBox = { "CollisionBox", nullptr, (EPropertyFlags)0x00200800000a001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWinActor, CollisionBox), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CollisionBox_MetaData), NewProp_CollisionBox_MetaData) };
+const UECodeGen_Private::FClassPropertyParams Z_Construct_UClass_AWinActor_Statics::NewProp_MenuWidgetClass = { "MenuWidgetClass", nullptr, (EPropertyFlags)0x0024080000000015, UECodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWinActor, MenuWidgetClass), Z_Construct_UClass_UClass, Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MenuWidgetClass_MetaData), NewProp_MenuWidgetClass_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWinActor_Statics::NewProp_PC = { "PC", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWinActor, PC), Z_Construct_UClass_APlayerController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PC_MetaData), NewProp_PC_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AWinActor_Statics::NewProp_MenuWidgetInstance = { "MenuWidgetInstance", nullptr, (EPropertyFlags)0x0040000000080008, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AWinActor, MenuWidgetInstance), Z_Construct_UClass_UUserWidget_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MenuWidgetInstance_MetaData), NewProp_MenuWidgetInstance_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AWinActor_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWinActor_Statics::NewProp_CollisionBox,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWinActor_Statics::NewProp_MenuWidgetClass,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWinActor_Statics::NewProp_PC,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AWinActor_Statics::NewProp_MenuWidgetInstance,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AWinActor_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AWinActor_Statics::DependentSingletons[])() = {
@@ -193,10 +209,10 @@ AWinActor::~AWinActor() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_WinActor_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AWinActor, AWinActor::StaticClass, TEXT("AWinActor"), &Z_Registration_Info_UClass_AWinActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWinActor), 1122623554U) },
+		{ Z_Construct_UClass_AWinActor, AWinActor::StaticClass, TEXT("AWinActor"), &Z_Registration_Info_UClass_AWinActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AWinActor), 4061616191U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_WinActor_h_722659462(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_WinActor_h_2087400293(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_WinActor_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_WinActor_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

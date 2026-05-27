@@ -8,6 +8,7 @@
 #include "BulletBase.generated.h"
 
 class AMLEnemyBase;
+class AMainCharacter;
 
 UCLASS()
 class SEARCHANDRESCUE_API ABulletBase : public AActor
@@ -58,4 +59,5 @@ public:
 	bool bPlayerBullet = false;
 
 	void setTarget(AActor* ActorStore);
+	APawn* PlayerPawn;
 };

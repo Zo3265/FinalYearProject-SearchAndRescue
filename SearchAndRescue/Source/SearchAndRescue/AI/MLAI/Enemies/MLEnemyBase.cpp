@@ -91,6 +91,7 @@ void AMLEnemyBase::Tick(float DeltaTime)
 		if (iDeathCount == 0)
 		{
 			PlayDeathMontage();
+			this->SetActorEnableCollision(false);
 		}
 	}
 }
@@ -308,7 +309,7 @@ AWeaponBase* AMLEnemyBase::getWeapon()
 void AMLEnemyBase::DestroyActor()
 {
 	this->SetActorHiddenInGame(true);
-	this->SetActorEnableCollision(false);
+	//this->SetActorEnableCollision(false);
 	this->Destroy();
 	
 }

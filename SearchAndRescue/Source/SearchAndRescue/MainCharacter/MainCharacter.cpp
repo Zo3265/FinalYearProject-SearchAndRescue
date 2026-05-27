@@ -31,7 +31,14 @@ void AMainCharacter::BeginPlay()
 		{
 			Subsystem->AddMappingContext(DefaultMappingContext, 0);
 		}
+
+		if (MenuWidgetClass)
+		{
+			MenuWidgetInstance = CreateWidget<UUserWidget>(PlayerController, MenuWidgetClass);
+		}
 	}
+
+	
 	UCameraComponent* PlayerCamera = FindComponentByClass<UCameraComponent>();
 	WeaponAttachmentPoint->AttachToComponent(PlayerCamera, FAttachmentTransformRules::KeepRelativeTransform);
 
@@ -72,6 +79,30 @@ void AMainCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	if (fHealth <= 0.0f)
+	{
+		APlayerController* PlayerController = Cast<APlayerController>(Controller);
+
+		if (PlayerController)
+		{
+			PlayerController->SetPause(true);
+			if (MenuWidgetInstance)
+			{
+				// 3. Render the menu onto the player's screen
+				MenuWidgetInstance->AddToViewport();
+
+				// 4. Setup Input Mode to focus on UI elements
+				FInputModeUIOnly InputModeData;
+				InputModeData.SetWidgetToFocus(MenuWidgetInstance->TakeWidget());
+				InputModeData.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
+
+				PlayerController->SetInputMode(InputModeData);
+
+				// 5. Explicitly display the hardware mouse cursor
+				PlayerController->bShowMouseCursor = true;
+			}
+		}
+	}
 }
 
 // Called to bind functionality to input
@@ -221,5 +252,10 @@ void AMainCharacter::Interaction()
 		}
 	}
 	
+}
+
+void AMainCharacter::takeDamage(float fDamageStore)
+{
+	fHealth -= fDamageStore;
 }
 

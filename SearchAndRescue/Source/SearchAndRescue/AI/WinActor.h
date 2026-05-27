@@ -7,6 +7,7 @@
 #include "Components/BoxComponent.h"
 #include "SearchAndRescue/AI/BTAI/HostageChar.h"
 #include "Kismet/GameplayStatics.h"
+#include "Blueprint/UserWidget.h"
 #include "WinActor.generated.h"
 
 UCLASS()
@@ -25,7 +26,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Collision")
 	UBoxComponent* CollisionBox;
 
-	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Menu")
+	TSubclassOf<UUserWidget> MenuWidgetClass;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -35,4 +37,7 @@ public:
 
 	UPROPERTY()
 	APlayerController* PC;
+private: 
+	UPROPERTY()
+	UUserWidget* MenuWidgetInstance;
 };

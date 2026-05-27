@@ -106,7 +106,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		FVector RelativeDir = ActorTransform.InverseTransformVectorNoScale(PlayerDir);
 
 		float DistanceToTarget = FVector::Dist(ActorLocation, PlayerLoc);
-		bool bInRange = DistanceToTarget < 1500.0f;
+		bool bInRange = DistanceToTarget < 3000.0f;
 
 		float VisionDot = FVector::DotProduct(ActorForward, PlayerDir);
 		bool bInVisionCone = VisionDot > 0.707f;
