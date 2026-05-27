@@ -23,7 +23,6 @@
 			"MainCharacter.gen.cpp.obj",
 			"MLEnemyBase.gen.cpp.obj",
 			"MyActor.gen.cpp.obj",
-			"SearchAndRescue.init.gen.cpp.obj",
 			"Shotgun.gen.cpp.obj",
 			"ShotgunEnemy.gen.cpp.obj",
 			"ShotgunShootBTTaskNode.gen.cpp.obj",
@@ -33,7 +32,6 @@
 			"SplineController.gen.cpp.obj",
 			"SplineMovementActor.gen.cpp.obj",
 			"WeaponBase.gen.cpp.obj",
-			"WinActor.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"BoolAnimInstance.cpp.obj",
 			"AssaultEnemy.cpp.obj",
@@ -66,6 +64,8 @@
 			"Shotgun.cpp.obj",
 			"SniperRifle.cpp.obj",
 			"WeaponBase.cpp.obj",
+			"SearchAndRescue.init.gen.cpp.obj",
+			"WinActor.gen.cpp.obj",
 			"WinActor.cpp.obj",
 			"MainCharacter.cpp.obj"
 		]

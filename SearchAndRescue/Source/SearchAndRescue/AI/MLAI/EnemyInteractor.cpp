@@ -55,32 +55,25 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 	setInteractorAgentID(AgentId);
 	UObject* OBSAgent = GetAgent(AgentId);
 	
-
 	//Get the actual actor
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(OBSAgent);
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(),0);
-	AWeaponBase* Weapon = Enemy->getWeapon();
+	
 
-	/*if (Weapon)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Found Weapon"));
-	}
+	
+	
 
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("Couldn't find weapon"));
-	}*/
-	InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
-	ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
-	USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
-	UStaticMeshComponent* WeaponMesh = Weapon->getMesh();
-
-	//USplineComponent* SplineComp = Enemy->FindComponentByClass<USplineComponent>();
 	TMap<FName, FLearningAgentsObservationObjectElement> ObservationMap;
 	
 	AActor* TargetToFollow = nullptr;
 	if(Enemy && Enemy->bDead == false)
 	{
+		AWeaponBase* Weapon = Enemy->getWeapon();
+		UStaticMeshComponent* WeaponMesh = Weapon->getMesh();
+
+		InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
+		ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
+		USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
 		if (bTraining == true)
 		{
 			TargetToFollow = Enemy->getTrainingTarget();
@@ -413,13 +406,13 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 {
 	setInteractorAgentID(AgentId);
 	AMLEnemyBase* Enemy = Cast<AMLEnemyBase>(GetAgent(AgentId));
-	InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
-	AWeaponBase* Weapon = Enemy->getWeapon();
 	APawn* PlayerPawn = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 	float DeltaTime = GetWorld()->GetDeltaSeconds();
 
 	if (Enemy && Enemy->bDead == false)
 	{
+		InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
+		AWeaponBase* Weapon = Enemy->getWeapon();
 		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
 		float ForwardValue;
 		float TurnValue;
@@ -649,7 +642,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		else if(Enemy->getCurrentState() == EAgentState::Patrolling)
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("Following path"));
-			//// 2. PATROL AUTO-PILOT
 			USplineComponent* Spline = InteractorSplineComponent;
 			float ClosestKey = Spline->FindInputKeyClosestToWorldLocation(Enemy->GetActorLocation());
 			FVector ClosestSplineLocation = Spline->FindLocationClosestToWorldLocation(Enemy->GetActorLocation(), ESplineCoordinateSpace::World);
