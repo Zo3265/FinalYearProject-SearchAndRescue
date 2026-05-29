@@ -14,6 +14,7 @@ COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 ENGINE_API UClass* Z_Construct_UClass_UAnimInstance_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AAssaultRifle_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AExplosiveGrenade_NoRegister();
 SEARCHANDRESCUE_API UClass* Z_Construct_UClass_AMLEnemyBase();
@@ -285,6 +286,14 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 		{ "Category", "Spline" },
 		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnemyHitSound_MetaData[] = {
+		{ "Category", "Audio" },
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_EnemyDeathSound_MetaData[] = {
+		{ "Category", "Audio" },
+		{ "ModuleRelativePath", "AI/MLAI/Enemies/MLEnemyBase.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_fHealth;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_fDefaultSpeed;
@@ -309,6 +318,8 @@ struct Z_Construct_UClass_AMLEnemyBase_Statics
 	static const UECodeGen_Private::FBytePropertyParams NewProp_CurrentState_Underlying;
 	static const UECodeGen_Private::FEnumPropertyParams NewProp_CurrentState;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemySpline;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyHitSound;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_EnemyDeathSound;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
@@ -345,6 +356,8 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_S
 const UECodeGen_Private::FBytePropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, nullptr, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FEnumPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState = { "CurrentState", nullptr, (EPropertyFlags)0x0020080000000005, UECodeGen_Private::EPropertyGenFlags::Enum, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, CurrentState), Z_Construct_UEnum_SearchAndRescue_EAgentState, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_CurrentState_MetaData), NewProp_CurrentState_MetaData) }; // 4168159340
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemySpline = { "EnemySpline", nullptr, (EPropertyFlags)0x0010000000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, EnemySpline), Z_Construct_UClass_ASplineController_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnemySpline_MetaData), NewProp_EnemySpline_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemyHitSound = { "EnemyHitSound", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, EnemyHitSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnemyHitSound_MetaData), NewProp_EnemyHitSound_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemyDeathSound = { "EnemyDeathSound", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AMLEnemyBase, EnemyDeathSound), Z_Construct_UClass_USoundBase_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_EnemyDeathSound_MetaData), NewProp_EnemyDeathSound_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMLEnemyBase_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_fHealth,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_fDefaultSpeed,
@@ -369,6 +382,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AMLEnemyB
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState_Underlying,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_CurrentState,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemySpline,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemyHitSound,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AMLEnemyBase_Statics::NewProp_EnemyDeathSound,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AMLEnemyBase_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AMLEnemyBase_Statics::DependentSingletons[])() = {
@@ -414,10 +429,10 @@ struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescu
 		{ EAgentState_StaticEnum, TEXT("EAgentState"), &Z_Registration_Info_UEnum_EAgentState, CONSTRUCT_RELOAD_VERSION_INFO(FEnumReloadVersionInfo, 4168159340U) },
 	};
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 1505328745U) },
+		{ Z_Construct_UClass_AMLEnemyBase, AMLEnemyBase::StaticClass, TEXT("AMLEnemyBase"), &Z_Registration_Info_UClass_AMLEnemyBase, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AMLEnemyBase), 2517358126U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_4055854626(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_1774435860(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::ClassInfo),
 	nullptr, 0,
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::EnumInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_MLAI_Enemies_MLEnemyBase_h_Statics::EnumInfo));

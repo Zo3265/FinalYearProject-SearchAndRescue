@@ -8,6 +8,7 @@
 #include "SearchAndRescue/Weapons/AssaultRifle.h"
 #include "SearchAndRescue/Weapons/SniperRifle.h"
 #include "SearchAndRescue/Weapons/Shotgun.h"
+#include "Components/AudioComponent.h"
 #include "Blueprint/UserWidget.h"
 #include "MainCharacter.generated.h"
 
@@ -45,9 +46,11 @@ protected:
 	UPROPERTY();
 	AWeaponBase* CurrentWeapon;
 
-	float fHealth = 250.0f;
+	float fHealth = 500.0f;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Menu")
 	TSubclassOf<UUserWidget> MenuWidgetClass;
+
+	bool bCheat = false;
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -86,6 +89,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
 	class UInputAction* Interact;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Input")
+	class UInputAction* Cheat;
+
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 	void Jumping();
@@ -93,7 +99,13 @@ public:
 	void Reload();
 	void SwapWeapons(int32 WeaponIndex);
 	void Interaction();
+	void InfHealth();
 	void takeDamage(float fDamageStore);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* PlayerHurtSound;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* PlayerDeathSound;
 private:
 	UPROPERTY()
 	UUserWidget* MenuWidgetInstance;

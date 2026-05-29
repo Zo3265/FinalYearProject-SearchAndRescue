@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "GameFramework/Character.h"
+#include "Components/AudioComponent.h"
 #include "BulletBase.h"
 #include "WeaponBase.generated.h"
 
@@ -67,5 +68,10 @@ public:
 	void setReloading(bool bStore);
 	bool getReloading();
 	ABulletBase* getBullet();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* ShootSound;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* ReloadSound;
 
 };

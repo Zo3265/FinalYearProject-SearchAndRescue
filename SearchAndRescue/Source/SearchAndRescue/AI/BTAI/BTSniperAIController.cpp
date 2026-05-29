@@ -6,8 +6,8 @@
 
 ABTSniperAIController::ABTSniperAIController()
 {
-	SightConfig->SightRadius = 1500.0f;
-	SightConfig->LoseSightRadius = 1600.0f;
+	SightConfig->SightRadius = 2000.0f;
+	SightConfig->LoseSightRadius = 2100.0f;
 	SightConfig->PeripheralVisionAngleDegrees = 60.0f;
 	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ABTSniperAIController::OnTargetPerceptionUpdated);
 }

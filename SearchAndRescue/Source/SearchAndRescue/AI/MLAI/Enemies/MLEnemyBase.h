@@ -14,6 +14,7 @@
 #include "SearchAndRescue/Weapons/AssaultRifle.h"
 #include "SearchAndRescue/Weapons/Shotgun.h"
 #include "SearchAndRescue/AI/MLAI/TrainingActor/MyActor.h"
+#include "Components/AudioComponent.h"
 #include "MLEnemyBase.generated.h"
 
 UENUM(BlueprintType)
@@ -164,5 +165,11 @@ public:
 	FVector PlayerLastKnownLocation = FVector::Zero();
 	float LastKnownLocDist = 0.0f;
 	bool FindingTrack = false;
+	bool bReturnedFromChase = false;
 	bool bDead = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* EnemyHitSound;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* EnemyDeathSound;
 };

@@ -9,6 +9,7 @@
 #include "SearchAndRescue/Weapons/ExplosiveGrenade.h"
 #include "SearchAndRescue/Weapons/WeaponBase.h"
 #include "SearchAndRescue/AI/BoolAnimInstance.h"
+#include "Components/AudioComponent.h"
 #include "EnemyBase.generated.h"
 
 UCLASS()
@@ -112,4 +113,9 @@ public:
 
 	bool bDead = false;
 	UBoolAnimInstance* AnimIsDead;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* EnemyHitSound;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio")
+	USoundBase* EnemyDeathSound;
 };

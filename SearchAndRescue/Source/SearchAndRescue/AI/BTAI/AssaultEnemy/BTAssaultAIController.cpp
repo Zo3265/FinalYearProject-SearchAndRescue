@@ -6,8 +6,8 @@
 
 ABTAssaultAIController::ABTAssaultAIController()
 {
-	SightConfig->SightRadius = 1200.0f;
-	SightConfig->LoseSightRadius = 1300.0f;
+	SightConfig->SightRadius = 1700.0f;
+	SightConfig->LoseSightRadius = 1800.0f;
 	SightConfig->PeripheralVisionAngleDegrees = 80.0f;
 	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ABTAssaultAIController::OnTargetPerceptionUpdated);
 }

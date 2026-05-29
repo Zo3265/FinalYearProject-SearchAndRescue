@@ -113,6 +113,11 @@ float AEnemyBase::getDefaultSpeed()
 void AEnemyBase::takeDamage(float fDamageStore)
 {
 	fHealth -= fDamageStore;
+	if (EnemyHitSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), EnemyHitSound, GetActorLocation());
+	}
+	
 }
 
 
@@ -178,6 +183,10 @@ void AEnemyBase::PlayBTDeathMontage()
 	if (AnimInstance != nullptr)
 	{
 		AnimIsDead->setIsDeadBool(true);
+		if (EnemyDeathSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), EnemyDeathSound, this->GetActorLocation());
+		}
 		this->SetActorEnableCollision(false);
 		AnimInstance->Montage_Play(DeathAnimation);
 		iDeathCount += 1;

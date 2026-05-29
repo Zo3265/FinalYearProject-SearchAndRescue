@@ -68,6 +68,10 @@ void AWeaponBase::Fire()
         SpawnParameters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
         Bullet = GetWorld()->SpawnActor<ABulletBase>(BulletClass, MuzzleLocation, BulletRotation, SpawnParameters);
+        if (ShootSound)
+        {
+            UGameplayStatics::PlaySoundAtLocation(GetWorld(), ShootSound, this->GetActorLocation());
+        }
     }
     
 }
@@ -80,6 +84,10 @@ void AWeaponBase::Reload()
         iCurrentMagCount += iDiff; //Refill the magazine.
         iCurrentAmmoReserve -= iDiff; //Take the refill away from our reserve ammo.
         //bReloading = false; //We are no longer reloading.
+        if (ReloadSound)
+        {
+            UGameplayStatics::PlaySoundAtLocation(GetWorld(), ReloadSound, this->GetActorLocation());
+        }
     }
     
 }

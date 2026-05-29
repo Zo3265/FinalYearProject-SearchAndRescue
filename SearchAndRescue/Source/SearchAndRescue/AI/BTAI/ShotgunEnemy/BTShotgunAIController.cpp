@@ -6,8 +6,8 @@
 
 ABTShotgunAIController::ABTShotgunAIController()
 {
-	SightConfig->SightRadius = 1000.0f;
-	SightConfig->LoseSightRadius = 1100.0f;
+	SightConfig->SightRadius = 1700.0f;
+	SightConfig->LoseSightRadius = 1800.0f;
 	SightConfig->PeripheralVisionAngleDegrees = 90.0f;
 	AIPerception->OnTargetPerceptionUpdated.AddDynamic(this, &ABTShotgunAIController::OnTargetPerceptionUpdated);
 }

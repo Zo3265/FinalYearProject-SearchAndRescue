@@ -79,13 +79,18 @@ void AMainCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (fHealth <= 0.0f)
+	if (fHealth <= 0.0f && bCheat == false)
 	{
 		APlayerController* PlayerController = Cast<APlayerController>(Controller);
 
 		if (PlayerController)
 		{
 			PlayerController->SetPause(true);
+			if (PlayerDeathSound)
+			{
+				UGameplayStatics::PlaySoundAtLocation(GetWorld(), PlayerDeathSound, GetActorLocation());
+			}
+			
 			if (MenuWidgetInstance)
 			{
 				// 3. Render the menu onto the player's screen
@@ -102,6 +107,11 @@ void AMainCharacter::Tick(float DeltaTime)
 				PlayerController->bShowMouseCursor = true;
 			}
 		}
+	}
+
+	if (bCheat == true)
+	{
+		fHealth = 1000000000000.0f;
 	}
 }
 
@@ -128,7 +138,8 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 		EnhancedInputComponent->BindAction(SwapSniper, ETriggerEvent::Triggered, this, &AMainCharacter::SwapWeapons, 2);
 		//Interacting with the hostage
 		EnhancedInputComponent->BindAction(Interact, ETriggerEvent::Triggered, this, &AMainCharacter::Interaction);
-
+		//Infinite health cheat code for demonstration purposes.
+		EnhancedInputComponent->BindAction(Cheat, ETriggerEvent::Triggered, this, &AMainCharacter::InfHealth);
 	}
 }
 
@@ -172,19 +183,19 @@ void AMainCharacter::Shoot()
 {
 	if (Cast<ASniperRifle>(CurrentWeapon))
 	{
-		GLog->Log("Firing Sniper");
+		//GLog->Log("Firing Sniper");
 		SniperRifle->SniperFire();
 	}
 
 	else if (Cast<AShotgun>(CurrentWeapon))
 	{
-		GLog->Log("Shotgun Firing");
+		//GLog->Log("Shotgun Firing");
 		Shotgun->ShotgunFire();
 	}
 
 	else if (Cast<AAssaultRifle>(CurrentWeapon))
 	{
-		GLog->Log("AssaultRifle Firing");
+		//GLog->Log("AssaultRifle Firing");
 		AssaultRifle->AssualtFire();
 	}
 	
@@ -194,19 +205,19 @@ void AMainCharacter::Reload()
 {
 	if (Cast<ASniperRifle>(CurrentWeapon))
 	{
-		GLog->Log("Reloading Sniper");
+		//GLog->Log("Reloading Sniper");
 		SniperRifle->Reload();
 	}
 
 	else if (Cast<AShotgun>(CurrentWeapon))
 	{
-		GLog->Log("Reloading Shotgun");
+		//GLog->Log("Reloading Shotgun");
 		Shotgun->Reload();
 	}
 
 	else if (Cast<AAssaultRifle>(CurrentWeapon))
 	{
-		GLog->Log("AssaultRifle Reloading");
+		//GLog->Log("AssaultRifle Reloading");
 		AssaultRifle->Reload();
 	}
 }
@@ -254,8 +265,17 @@ void AMainCharacter::Interaction()
 	
 }
 
+void AMainCharacter::InfHealth()
+{
+	bCheat = true;
+}
+
 void AMainCharacter::takeDamage(float fDamageStore)
 {
+	if (PlayerHurtSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), PlayerHurtSound, GetActorLocation());
+	}
 	fHealth -= fDamageStore;
 }
 

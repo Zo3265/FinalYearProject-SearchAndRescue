@@ -422,21 +422,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		bool bShooting = false;
 		bool bReloading = false;
 
-		/*if (Enemy->getCurrentState() == EAgentState::Patrolling)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Patrolling"));
-		}
-
-		else if (Enemy->getCurrentState() == EAgentState::SeeingPlayer)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("SeeingPlayer"));
-		}
-
-		else if (Enemy->getCurrentState() == EAgentState::Chasing)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Chasing"));
-		}*/
-
 		////We are retrieving the actions that we are able to do and their values.
 		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
 		ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
@@ -445,7 +430,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		ULearningAgentsActions::GetFloatAction(ReloadValue, InActionObject, ActionObjectMap[TEXT("ReloadAction")]);
 		
 		//UE_LOG(LogTemp, Warning, TEXT("Turn value: %f"), TurnValue);
-		//TurnValue = FMath::Clamp(TurnValue, -1.0f, 1.0f);
 		Enemy->setTurnValue(TurnValue);
 		float RotationChange = TurnValue * TurnSensitivity * GetWorld()->GetDeltaSeconds();
 		FRotator CurrentRot = Enemy->GetActorRotation();
@@ -453,7 +437,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		TargetRot.Yaw += RotationChange;
 		TargetRot.Normalize();
 		FRotator SmoothedRotation = FMath::RInterpConstantTo(CurrentRot, TargetRot, GetWorld()->GetDeltaSeconds(), TurnSensitivity);
-		//Enemy->SetActorRotation(TargetRot);
 
 		ShootValue = FMath::Clamp(ShootValue, 0.0f, 1.0f);
 		ReloadValue = FMath::Clamp(ReloadValue, 0.0f, 1.0f);
@@ -493,8 +476,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		if (Enemy->getCurrentState() == EAgentState::SeeingPlayer && Weapon)
 		{
 			//UE_LOG(LogTemp, Warning, TEXT("Seeing player"));
-			// 1. COMBAT AUTO-PILOT
-			// Force Stop
 			Enemy->GetMovementComponent()->StopMovementImmediately();
 			Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
 			FinalForwardInput = 0.0f;
@@ -514,26 +495,11 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			}
 			FRotator AimRot = (TargetLoc - MuzzleLoc).Rotation();
 
-			
-			// Smoothly rotate toward target
-			//FRotator CurrentRotShoot = Enemy->GetActorRotation();
-			//FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, AimRot, GetWorld()->GetDeltaSeconds(), 50.0f);
-
-			//NewRot.Pitch = 0.0f; // Keep actor upright
-			//NewRot.Roll = 0.0f;
-			//Enemy->SetActorRotation(NewRot);
-
-
-
 			float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
 			FRotator BrainTargetRot = Enemy->GetActorRotation();
 			BrainTargetRot.Yaw += BrainYawChange;
 
-
-
-
-
-			// WEANING MIXTURE: Blend the rotations 50/50
+			//Blend the rotations 50/50
 			// 0.0 = Pure Brain, 1.0 = Pure Auto-Pilot math
 			FRotator BlendedRot = FMath::Lerp(BrainTargetRot, AimRot, 0.5f);
 
@@ -544,12 +510,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			NewRot.Pitch = 0.0f;
 			NewRot.Roll = 0.0f;
 			Enemy->SetActorRotation(NewRot);
-
-			// If we are perfectly aimed, force the shoot value to 1.0
-			/*if (Enemy->getIsAimed()) { 
-				ShootValue = 1.0f; 
-			}
-			*/
 
 			//NO ASISTANCE
 			/*float BrainYawChange = FinalTurnInput * TurnSensitivity * DeltaTime;
@@ -569,9 +529,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			FVector MoveDirection = (SearchTarget - CurrentLoc).GetSafeNormal();
 			FRotator FaceTargetRot = MoveDirection.Rotation();
 
-
-			// 3. FULL OVERRIDE ROTATION (No Weaning / No Brain Input)
-			// We use a high Interp speed (25.0f) to snap their heading directly to the memory vector
 			CurrentRot = Enemy->GetActorRotation();
 			FRotator NewRot = FMath::RInterpTo(CurrentRot, FaceTargetRot, GetWorld()->GetDeltaSeconds(), 25.0f);
 
@@ -579,43 +536,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			NewRot.Roll = 0.0f;
 			Enemy->SetActorRotation(NewRot);
 
-			//// 4. FULL OVERRIDE THROTTLE
-			// Smooth deceleration as they get close so they don't slide past the finish line
-			//float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
-
-			//// Force them to sprint (1.0f) when far, scaling down smoothly down to 0.0f at the target
-			//FinalForwardInput = 1.0f * ArrivalBrake;
-
-			//// Apply the physical forward movement input
-			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
-
-
-			//float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
-			//FRotator BrainTargetRot = Enemy->GetActorRotation();
-			//BrainTargetRot.Yaw += BrainYawChange;
-
-			//// Mix the targets 50/50: 0.5 = Brain, 0.5 = Perfect Auto-Pilot math
-			//FRotator BlendedRot = FMath::Lerp(BrainTargetRot, FaceTargetRot, 0.5f);
-
-			//// Apply via Interp but drop the strength from 25.0f to 4.0f so it is a "gentle guide"
-			//CurrentRot = Enemy->GetActorRotation();
-			//FRotator NewRot = FMath::RInterpTo(CurrentRot, BlendedRot, DeltaTime, 4.0f);
-
-			//NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
-			//NewRot.Roll = 0.0f;
-			//Enemy->SetActorRotation(NewRot);
-
-			//// --- 4. BLENDED THROTTLE WEANING ---
-			// Smooth deceleration curve remains to protect from physics overshooting
-			//float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
-
-			//// Instead of forcing 1.0f, we now let the brain press the gas (ForwardValue) 
-			//// but scale it by the ArrivalBrake so they still slow down at the finish line.
-			//// We clamp it to Max(0.0f) to prevent them from throwing it into reverse during a hunt.
-			//FinalForwardInput = FMath::Max(0.0f, ForwardValue) * ArrivalBrake;
-
-			//// Apply the physical forward movement input
-			//Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 
 			if (DistanceToTarget <= 100.0f)
 			{
@@ -631,7 +551,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
 
-			//NO ASSISSTANCE
 			float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
 
 			// Gas control is 100% driven by the brain, scaled only by the physical arrival brake
@@ -652,7 +571,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 			if (Enemy->FindingTrack == true)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Agent %d: Returning to path"), AgentId);
+				//UE_LOG(LogTemp, Warning, TEXT("Agent %d: Returning to path"), AgentId);
 				FVector ReturnDir = (ClosestSplineLocation - Enemy->GetActorLocation()).GetSafeNormal();
 				FRotator ReturnRot = ReturnDir.Rotation();
 
@@ -669,63 +588,15 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 
 				if (DistanceToPath <= 100.0f)
 				{
-					UE_LOG(LogTemp, Warning, TEXT("Agent %d: Made it back to the path"), AgentId);
+					//UE_LOG(LogTemp, Warning, TEXT("Agent %d: Made it back to the path"), AgentId);
 					Enemy->FindingTrack = false;
 					Enemy->setSawPlayer(false);
+					Enemy->bReturnedFromChase = true;
 				}
 			}
-			
-
-
-			///*AUTO PILOT
-			//Smoothly rotate to follow the track
-			//else
-			//{
-			//	FRotator CurrentRotPatrol = Enemy->GetActorRotation();
-			//	FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
-
-			//	NewRot.Pitch = 0.0f;
-			//	NewRot.Roll = 0.0f;
-			//	Enemy->SetActorRotation(NewRot);
-
-			//	//Use the brain's forward value (or force 1.0 to get them moving)
-			//	FinalForwardInput = FMath::Max(0.5f, ForwardValue);
-
-			//	//3. APPLY PHYSICAL MOVEMENT
-			//	Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
-			//}
-		
-
-
-
-			//50/50 TRAINING
-			// Calculate what the BRAIN wants to do on the path
-			//else
-			//{
-			//	float BrainYawChange = TurnValue * TurnSensitivity * DeltaTime;
-			//	FRotator BrainTargetRot = Enemy->GetActorRotation();
-			//	BrainTargetRot.Yaw += BrainYawChange;
-
-			//	// WEANING MIXTURE: 50% Brain target, 50% Spline target
-			//	FRotator BlendedRot = FMath::Lerp(BrainTargetRot, IdealRot, 0.5f);
-
-			//	FRotator CurrentRotPatrol = Enemy->GetActorRotation();
-			//	FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, BlendedRot, DeltaTime, 2.0f); // Softened to 2.0f
-
-			//	NewRot.Pitch = 0.0f;
-			//	NewRot.Roll = 0.0f;
-			//	Enemy->SetActorRotation(NewRot);
-
-			//	// Forward movement weaning: Let the brain control the gas fully now
-			//	FinalForwardInput = FMath::Max(0.0f, ForwardValue);
-			//	Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
-			//}
-			
 
 			else
 			{
-				//NO ASSISSTANCE
-				//UE_LOG(LogTemp, Warning, TEXT("Agent %d: Standard patrolling"), AgentId);
 
 				FRotator CurrentRotPatrol = Enemy->GetActorRotation();
 				FRotator NewRot = FMath::RInterpTo(CurrentRotPatrol, IdealRot, GetWorld()->GetDeltaSeconds(), 10.0f);
@@ -735,7 +606,15 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				Enemy->SetActorRotation(NewRot);
 
 				// Gas control is 100% driven by the brain. Forward-only clamp remains to block reverse exploits.
-				FinalForwardInput = FMath::Max(0.0f, FinalForwardInput);
+				if (Enemy->bReturnedFromChase == true)
+				{
+					FinalForwardInput = FMath::Max(0.5f, FinalForwardInput);
+				}
+
+				else
+				{
+					FinalForwardInput = FMath::Max(0.0f, FinalForwardInput);
+				}
 				Enemy->AddMovementInput(Enemy->GetActorForwardVector(), FinalForwardInput);
 			}
 			

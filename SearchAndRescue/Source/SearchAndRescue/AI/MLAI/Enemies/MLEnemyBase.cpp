@@ -2,6 +2,7 @@
 
 
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 AMLEnemyBase::AMLEnemyBase()
@@ -125,6 +126,12 @@ void AMLEnemyBase::takeDamage(float fDamageStore)
 {
 	//UE_LOG(LogTemp, Warning, TEXT("Damaging enemy for: %f"), fDamageStore);
 	fHealth -= fDamageStore;
+
+	if (EnemyHitSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), EnemyHitSound, GetActorLocation());
+	}
+	
 }
 
 //To improve training for the patrolling behaviour. We need to reset the enemies to a random point on the spline.
@@ -281,6 +288,11 @@ void AMLEnemyBase::PlayDeathMontage()
 	if (AnimInstance != nullptr)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Playing animation"));
+		if (EnemyDeathSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), EnemyDeathSound, GetActorLocation());
+		}
+		
 		AnimInstance->Montage_Play(DeathAnimation);
 		iDeathCount += 1;
 	}

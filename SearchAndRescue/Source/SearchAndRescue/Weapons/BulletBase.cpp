@@ -3,6 +3,7 @@
 #include "BulletBase.h"
 #include "SearchAndRescue/AI/MLAI/Enemies/MLEnemyBase.h"
 #include "SearchAndRescue/AI/BTAI/EnemyBase.h"
+#include "Kismet/GameplayStatics.h"
 #include "SearchAndRescue/MainCharacter/MainCharacter.h"
 
 // Sets default values
