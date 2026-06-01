@@ -7,7 +7,7 @@
 #include "BoolAnimInstance.generated.h"
 
 /**
- * 
+ * Custom Aniamtion instance that is used to swap the animations between an alive enemy and a dead one.
  */
 UCLASS()
 class SEARCHANDRESCUE_API UBoolAnimInstance : public UAnimInstance

@@ -21,6 +21,7 @@ EBTNodeResult::Type USniperShootBTTaskNode::ExecuteTask(UBehaviorTreeComponent& 
 	//Plays attack animation using the BT.
 	if (ControlledPawn != nullptr)
 	{
+		//Fire the sniper rifle and play the shooting animation assigned to the character.
 		ASniperEnemy* Sniper = Cast<ASniperEnemy>(ControlledPawn);
 		ASniperRifle* Rifle = Sniper->getRifle();;
 		if ((Sniper != nullptr && Rifle != nullptr) && Rifle->getCurrentMagCount() > 0 && Rifle->getReloading() != true)

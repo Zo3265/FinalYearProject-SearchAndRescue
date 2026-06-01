@@ -28,6 +28,7 @@ void ABTAssaultAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//Retreat
 	if (AssaultEnemy->getHealth() <= 45.0f)
 	{
 		this->ClearFocus(EAIFocusPriority::Gameplay);
@@ -35,6 +36,7 @@ void ABTAssaultAIController::Tick(float DeltaTime)
 		AssaultEnemy->setSpeed(400.0f);
 	}
 
+	//Save the players location
 	if (GetBlackboardComponent()->GetValueAsBool(TEXT("bSeePlayer")) == true)
 	{
 		//UE_LOG(LogTemp, Warning, TEXT("Storing the players location as we see them:"));
@@ -42,6 +44,7 @@ void ABTAssaultAIController::Tick(float DeltaTime)
 		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), lastPlayerLocation);
 	}
 
+	//Chase the player
 	if ((GetBlackboardComponent()->GetValueAsBool(TEXT("bHavePlayer")) == true && GetBlackboardComponent()->GetValueAsBool(TEXT("bSeePlayer")) == false))
 	{
 		//UE_LOG(LogTemp, Warning, TEXT("Lost the player so are chasing:"));
@@ -74,6 +77,7 @@ void ABTAssaultAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulu
 	{
 		return;
 	}
+	//Sight logic
 	if (Stimulus.WasSuccessfullySensed() && Actor->ActorHasTag(TEXT("Player")))
 	{
 		//UE_LOG(LogTemp, Warning, TEXT("See the player:"));

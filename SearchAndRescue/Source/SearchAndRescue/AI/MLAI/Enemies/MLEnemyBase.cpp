@@ -22,6 +22,7 @@ void AMLEnemyBase::BeginPlay()
 	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
 	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
+	//Spawning logic for all of the enemies.
 	if (SniperClass != nullptr)
 	{
 		SniperRifle = GetWorld()->SpawnActor<ASniperRifle>(SniperClass, FTransform(), SpawnParamaters);

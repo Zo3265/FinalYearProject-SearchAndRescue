@@ -12,6 +12,7 @@ void ASniperEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//Spawning logic for the sniper rifle.
 	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
 	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 	SniperRifle = GetWorld()->SpawnActor<ASniperRifle>(SniperClass, FTransform(), SpawnParamaters);

@@ -31,6 +31,7 @@ void AHostageAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//Once the hostage is activated they always follow the player.
 	GetBlackboardComponent()->SetValueAsObject(FName("PlayerActor"), PlayerPawn);
 	GetBlackboardComponent()->SetValueAsBool(FName("bActivated"), Hostage->getActivated());
 }

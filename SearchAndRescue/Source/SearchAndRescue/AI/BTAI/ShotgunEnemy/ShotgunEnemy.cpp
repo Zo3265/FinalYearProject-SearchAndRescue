@@ -16,6 +16,7 @@ void AShotgunEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//Shotgun spawning logic
 	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
 	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 	Shotgun = GetWorld()->SpawnActor<AShotgun>(ShotgunClass, FTransform(), SpawnParamaters);

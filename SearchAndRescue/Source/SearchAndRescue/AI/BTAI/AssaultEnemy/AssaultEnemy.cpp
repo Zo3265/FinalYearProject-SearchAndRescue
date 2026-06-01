@@ -16,6 +16,7 @@ void AAssaultEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//Spawning Logic for the Assault Rifle
 	FActorSpawnParameters SpawnParamaters = FActorSpawnParameters();
 	SpawnParamaters.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 	AssaultRifle = GetWorld()->SpawnActor<AAssaultRifle>(AssaultClass, FTransform(), SpawnParamaters);

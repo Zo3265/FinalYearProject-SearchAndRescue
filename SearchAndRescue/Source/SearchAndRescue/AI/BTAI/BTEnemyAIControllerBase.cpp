@@ -10,6 +10,7 @@ ABTEnemyAIControllerBase::ABTEnemyAIControllerBase()
 {
 	AIPerception = CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("AIPerception"));
 
+	//Default values for the AI sight. Here in case I forget to set them in the child AI controllers.
 	SightConfig = CreateDefaultSubobject<UAISenseConfig_Sight>(TEXT("SightConfig"));
 	SightConfig->SightRadius = 1000;
 	SightConfig->LoseSightRadius = 1200;

@@ -84,11 +84,14 @@ struct Z_Construct_UClass_UBoolAnimInstance_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "/**\n * \n */" },
+		{ "Comment", "/**\n * Custom Aniamtion instance that is used to swap the animations between an alive enemy and a dead one.\n */" },
 #endif
 		{ "HideCategories", "AnimInstance" },
 		{ "IncludePath", "AI/BoolAnimInstance.h" },
 		{ "ModuleRelativePath", "AI/BoolAnimInstance.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Custom Aniamtion instance that is used to swap the animations between an alive enemy and a dead one." },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bAnimIsDead_MetaData[] = {
 		{ "Category", "Animation Bools" },
@@ -164,10 +167,10 @@ UBoolAnimInstance::~UBoolAnimInstance() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BoolAnimInstance_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UBoolAnimInstance, UBoolAnimInstance::StaticClass, TEXT("UBoolAnimInstance"), &Z_Registration_Info_UClass_UBoolAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBoolAnimInstance), 2114795452U) },
+		{ Z_Construct_UClass_UBoolAnimInstance, UBoolAnimInstance::StaticClass, TEXT("UBoolAnimInstance"), &Z_Registration_Info_UClass_UBoolAnimInstance, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UBoolAnimInstance), 3320547308U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BoolAnimInstance_h_534672870(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BoolAnimInstance_h_4113952596(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BoolAnimInstance_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_BoolAnimInstance_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -56,7 +56,13 @@ struct Z_Construct_UClass_ASplineController_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bIsSphereVisible_MetaData[] = {
 		{ "Category", "SplineController" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//Hides the sphere from the agents. Useful for training the chasing behaviour\n" },
+#endif
 		{ "ModuleRelativePath", "AI/SplineController.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "Hides the sphere from the agents. Useful for training the chasing behaviour" },
+#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
@@ -126,10 +132,10 @@ ASplineController::~ASplineController() {}
 struct Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ASplineController, ASplineController::StaticClass, TEXT("ASplineController"), &Z_Registration_Info_UClass_ASplineController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASplineController), 3033718560U) },
+		{ Z_Construct_UClass_ASplineController, ASplineController::StaticClass, TEXT("ASplineController"), &Z_Registration_Info_UClass_ASplineController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ASplineController), 3244348628U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_1984313975(TEXT("/Script/SearchAndRescue"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_3706735821(TEXT("/Script/SearchAndRescue"),
 	Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Unreal_Projects_FinalYearProject_SearchAndRescue_SearchAndRescue_Source_SearchAndRescue_AI_SplineController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

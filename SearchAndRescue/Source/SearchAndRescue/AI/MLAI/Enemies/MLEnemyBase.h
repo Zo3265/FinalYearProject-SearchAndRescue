@@ -16,7 +16,10 @@
 #include "SearchAndRescue/AI/MLAI/TrainingActor/MyActor.h"
 #include "Components/AudioComponent.h"
 #include "MLEnemyBase.generated.h"
-
+/*
+* This class is essentially a mailbox for values the interactor and the training environment make use of.
+* It also allows communication between the two.
+*/
 UENUM(BlueprintType)
 enum class EAgentState : uint8
 {
@@ -114,6 +117,7 @@ public:
 	UPROPERTY(EditAnywhere, Category = "Spline");
 	ASplineController* EnemySpline;
 
+	//Setters and getters.
 	int getExplosiveGrenadeAmount();
 	int getFlashGrenadeAmount();
 	float getHealth();

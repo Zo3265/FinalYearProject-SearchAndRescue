@@ -6,6 +6,7 @@
 
 ABTSniperAIController::ABTSniperAIController()
 {
+	//Greater sight range for a sniper.
 	SightConfig->SightRadius = 2000.0f;
 	SightConfig->LoseSightRadius = 2100.0f;
 	SightConfig->PeripheralVisionAngleDegrees = 60.0f;
@@ -29,6 +30,7 @@ void ABTSniperAIController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	//Retreating
 	if (SniperEnemy->getHealth() <= 20.0f)
 	{
 		this->ClearFocus(EAIFocusPriority::Gameplay);
@@ -36,12 +38,14 @@ void ABTSniperAIController::Tick(float DeltaTime)
 		SniperEnemy->setSpeed(400.0f);
 	}
 
+	//Saving the players location as long as we see them.
 	if (GetBlackboardComponent()->GetValueAsBool(TEXT("bSeePlayer")) == true)
 	{
 		lastPlayerLocation = PlayerPawn->GetActorLocation();
 		GetBlackboardComponent()->SetValueAsVector(TEXT("PlayerLocation"), lastPlayerLocation);
 	}
 
+	//Chasing the player.
 	if ((GetBlackboardComponent()->GetValueAsBool(TEXT("bHavePlayer")) == true && GetBlackboardComponent()->GetValueAsBool(TEXT("bSeePlayer")) == false))
 	{
 		float distance = FVector::Distance(lastPlayerLocation, ControlledPawn->GetActorLocation());
@@ -74,6 +78,8 @@ void ABTSniperAIController::OnTargetPerceptionUpdated(AActor* Actor, FAIStimulus
 	{
 		return;
 	}
+
+	//Spotting the player.
 	if (Stimulus.WasSuccessfullySensed())
 	{
 		//GLog->Log("See player");

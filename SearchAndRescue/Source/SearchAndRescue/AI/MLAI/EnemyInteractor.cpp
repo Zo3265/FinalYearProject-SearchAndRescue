@@ -24,12 +24,12 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	ObservationMap.Add(TEXT("Direction"), ULearningAgentsObservations::SpecifyDirectionAlongSplineObservation(InObservationSchema));
 
 	//We need a velocity observation to tell the enemy to increase its distance along the spline and reward it for doing so.
-	ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::SpecifyVelocityObservation(InObservationSchema));
-	ObservationMap.Add(TEXT("LookAhead"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("Velocity"), ULearningAgentsObservations::SpecifyVelocityObservation(InObservationSchema)); 
+	ObservationMap.Add(TEXT("LookAhead"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema)); //Useful observation to see what is coming ahead of the agent so it can anticipate turns better.
 
 	//Observations needed to see the player
-	ObservationMap.Add(TEXT("PlayerLastKnownLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema));
-	ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("PlayerLastKnownLocation"), ULearningAgentsObservations::SpecifyLocationObservation(InObservationSchema)); //Last known location of the player
+	ObservationMap.Add(TEXT("PlayerDirection"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema)); //The direction the player is going in in relation the agent
 	
 
 	//Observations to help the enemies actually shoot the player
@@ -37,8 +37,8 @@ void UEnemyInteractor::SpecifyAgentObservation_Implementation(FLearningAgentsObs
 	ObservationMap.Add(TEXT("IsAimedAtTarget"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema)); //If the gun is actually lined up with the player
 	ObservationMap.Add(TEXT("TargetRelativeDirection"), ULearningAgentsObservations::SpecifyDirectionObservation(InObservationSchema)); //The direction the player is moving in.
 	ObservationMap.Add(TEXT("TargetRelativeSpeed"), ULearningAgentsObservations::SpecifyFloatObservation(InObservationSchema)); //How fast they are moving in said direction. This and the previous observation are supposed to be one. We cant use a velocity observation here because that is made for the agents velocity.
-	ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::SpecifyFloatObservation(InObservationSchema));
-	ObservationMap.Add(TEXT("DoesNeedToReload"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema));
+	ObservationMap.Add(TEXT("AmmoPercentage"), ULearningAgentsObservations::SpecifyFloatObservation(InObservationSchema)); //How much ammo the agent has
+	ObservationMap.Add(TEXT("DoesNeedToReload"), ULearningAgentsObservations::SpecifyBoolObservation(InObservationSchema)); //If the agent needs to reload
 	
 
 	//Combine the data. This function concatenates all these sub-observations into a struct. We can do this as many times as needed.
@@ -74,6 +74,8 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
 		ACharacter* EnemyChar = Cast<ACharacter>(Enemy);
 		USkeletalMeshComponent* EnemyMesh = EnemyChar->GetMesh();
+
+		//Get the correct training actor.
 		if (bTraining == true)
 		{
 			TargetToFollow = Enemy->getTrainingTarget();
@@ -84,14 +86,14 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 			TargetToFollow = UGameplayStatics::GetPlayerPawn(GetWorld(), 0);
 		}
 
-
+		//Variables that will be needed to give the observations data.
 		FVector ActorLocation = Enemy->GetActorLocation();
 		FVector ActorForward = Enemy->GetActorForwardVector();
 		FVector ActorVelocity = Enemy->GetVelocity();
 
+		//For patrolling. The distance of an agent from the spline.
 		float InputKey = InteractorSplineComponent->FindInputKeyClosestToWorldLocation(ActorLocation);
 		float RawDistance = InteractorSplineComponent->GetDistanceAlongSplineAtSplineInputKey(InputKey);
-
 		float NormalisedDistance = RawDistance / InteractorSplineComponent->GetSplineLength();
 		FTransform ActorTransform = Enemy->GetActorTransform();
 
@@ -100,19 +102,23 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		FVector FutureDir = InteractorSplineComponent->GetDirectionAtDistanceAlongSpline(FutureDistance, ESplineCoordinateSpace::World);
 		FVector LocalFutureDir = ActorTransform.InverseTransformVectorNoScale(FutureDir);
 
+		//Variables in regards to thhe player. Needed to give the observations some data.
 		FVector PlayerLoc = TargetToFollow->GetActorLocation();
 		FVector PlayerVelocity = TargetToFollow->GetVelocity();
 		FVector PlayerDir = (PlayerLoc - ActorLocation).GetSafeNormal();
 		FVector RelativeDir = ActorTransform.InverseTransformVectorNoScale(PlayerDir);
 
+		//=========================================================================================
+		//SPOTTING LOGIC
+		//=========================================================================================
 		float DistanceToTarget = FVector::Dist(ActorLocation, PlayerLoc);
 		bool bInRange = DistanceToTarget < 1700.0f;
 
 		float VisionDot = FVector::DotProduct(ActorForward, PlayerDir);
-		bool bInVisionCone = VisionDot > 0.707f;
+		bool bInVisionCone = VisionDot > 0.707f; //I got the value of 0.707 from gemini but apparently it gives the agent a 45 degree vision.
 
 		bool bHasLineOfSight = false;
-		FColor FinalLineColor = FColor::White; // Default to white (out of range/cone)
+		FColor FinalLineColor = FColor::White; //This just for debugging.
 
 		if (bInRange && bInVisionCone)
 		{
@@ -128,24 +134,11 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 				Params.AddIgnoredComponent(Comp);
 			}
 
-			// Perform Trace
+			//Perform Trace. Checking to see if the target is belocked.
 			bool bBlocked = GetWorld()->LineTraceSingleByChannel(Hit, ActorLocation + FVector(0, 0, 60), PlayerLoc, ECC_Visibility, Params);
 
-			// Initial LOS logic
+			//LOS logic
 			bHasLineOfSight = !TargetToFollow->IsHidden() && (!bBlocked || (Hit.GetActor() == TargetToFollow));
-
-			// Height Check Override
-			/*if (PlayerLoc.Z < (ActorLocation.Z - 50.0f) && VisionDot > 0.9f)
-			{
-				GEngine->AddOnScreenDebugMessage(-1, 0.01f, FColor::Red, FString::Printf(TEXT("Height override.")));
-				bHasLineOfSight = false;
-			}*/
-
-			//DEBUG LOGIC
-			// Green = Perfect (In cone, in range, clear shot)
-			// Blue = Target is under the floor (Height Check caught it)
-			// Red  = Blocked by wall/floor
-			
 
 			
 		}
@@ -161,21 +154,27 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		}
 		else
 		{
-			// If we DON'T see them, count down
+			// If we don't see them, count down
+			//A little buffer to slow down the switching of the variables otherwise the agent can frantically switch between seeing the player and not.
 			if (Enemy->VisionTimer > 0.0f)
 			{
 				Enemy->VisionTimer -= GetWorld()->GetDeltaSeconds();
-				Enemy->setSeePlayer(true); // Still "True" because of the buffer!
+				Enemy->setSeePlayer(true); // Still True because of the buffer
 				Enemy->setCurrentState(EAgentState::SeeingPlayer);
 			}
 			else
 			{
-				Enemy->setSeePlayer(false); // Finally "False" after 0.5s
+				Enemy->setSeePlayer(false); // Finally False after 0.5s
 				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
 		}
 
-
+		//DEBUG LOGIC
+		// Green = Perfect (In cone, in range, clear shot)
+		// Blue = Target is under the floor (Height Check caught it)
+		// Red  = Blocked by wall/floor
+		// Got this debug from gemini
+		
 		//if (bHasLineOfSight) {
 		//	FinalLineColor = FColor::Green;
 		//}
@@ -224,7 +223,9 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		
 
 		
-
+		//=========================================================================================
+		//SHOOTING LOGIC
+		//=========================================================================================
 		if (EnemyMesh && Weapon)
 		{
 			//Same code as the one from my weapon base class. We are just checking to make sure the socket that spawns the bullets is aligned with the player.
@@ -245,11 +246,11 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 				bGunAligned = true;
 			}
 
-
 			bool bHasClearShot = false;
 			FHitResult AimHit;
 			FColor AimLineColour = FColor::White;
 
+			//Same logic as spotting the player.
 			if (bInRange && bGunAligned)
 			{
 				FCollisionQueryParams Params;
@@ -261,16 +262,14 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 
 				if (bHasClearShot)
 				{
-					AimLineColour = FColor::Green;
+					AimLineColour = FColor::Green; //For debugging
 					Enemy->setIsAimed(true);
 				}
 				else
 				{
-					AimLineColour = FColor::Red;
+					AimLineColour = FColor::Red; //For debugging
 					Enemy->setIsAimed(false);
 				}
-
-				// Draw the line from the MUZZLE to the TARGET to visualize the actual bullet trajectory
 				
 			}
 
@@ -279,6 +278,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 				Enemy->setIsAimed(false);
 			}
 
+			//Draw the line from the MUZZLE to the TARGET to visualize the actual bullet trajectory
 			//DrawDebugLine(GetWorld(), MuzzleLocation, TargetLocation, AimLineColour, false, 0.1f, 0, 4.0f);
 		}
 		
@@ -326,7 +326,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		{
 			ObservationDir = FVector(1.0f, 0.0f, 0.0f);
 
-			RelativeMoveDirection = FVector(0.0f, 0.0f, 0.0f); // Use zero here for movement
+			RelativeMoveDirection = FVector(0.0f, 0.0f, 0.0f); 
 			NormalizedMoveSpeed = 0.0f;
 			bNeedToReload = false;
 			Enemy->setIsAimed(false);
@@ -356,6 +356,7 @@ void UEnemyInteractor::GatherAgentObservation_Implementation(FLearningAgentsObse
 		OutObservationObjectElement = ULearningAgentsObservations::MakeStructObservation(InObservationObject, ObservationMap);
 	}
 
+	//This is for when the agent is dead. The observations still need values otherwise we get a schema mismatch.
 	else
 	{
 		ObservationMap.Add(TEXT("Location"), ULearningAgentsObservations::MakeLocationAlongSplineObservation(InObservationObject, InteractorSplineComponent, 0.0f, FTransform::Identity));
@@ -395,7 +396,7 @@ void UEnemyInteractor::SpecifyAgentAction_Implementation(FLearningAgentsActionSc
 	//Turn input is -1.0f to 1.0f; -ve is left +ve is right.
 	ActionMap.Add(TEXT("TurnInput"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
 
-	TArray<float> PriorProbabilities;
+	//Same values as the previous actions.
 	ActionMap.Add(TEXT("ShootAction"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
 	ActionMap.Add(TEXT("ReloadAction"), ULearningAgentsActions::SpecifyFloatAction(InActionSchema));
 
@@ -414,6 +415,8 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		InteractorSplineComponent = Enemy->GetSplineController()->getSpline();
 		AWeaponBase* Weapon = Enemy->getWeapon();
 		TMap<FName, FLearningAgentsActionObjectElement> ActionObjectMap;
+
+		//Variables needed to store the values the M.L gives us.
 		float ForwardValue;
 		float TurnValue;
 		float TurnSensitivity = 1024.0f;
@@ -422,7 +425,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		bool bShooting = false;
 		bool bReloading = false;
 
-		////We are retrieving the actions that we are able to do and their values.
+		//We are retrieving the actions that we are able to do and their values.
 		ULearningAgentsActions::GetStructAction(ActionObjectMap, InActionObject, InActionObjectElement);
 		ULearningAgentsActions::GetFloatAction(ForwardValue ,InActionObject, ActionObjectMap[TEXT("ForwardInput")]); //Store the value of the Forward input that we retrieved from the struct into a float.
 		ULearningAgentsActions::GetFloatAction(TurnValue, InActionObject, ActionObjectMap[TEXT("TurnInput")]);
@@ -450,8 +453,6 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		}
 
 		
-
-		
 		if (ActionObjectMap.Contains(TEXT("ReloadAction")) && ActionObjectMap.Contains(TEXT("ShootAction")))
 		{
 			if (ShootValue >= 0.45f)
@@ -471,7 +472,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 		}
 
 		float FinalTurnInput = TurnValue;
-		float FinalForwardInput = ForwardValue; // Keep the brain's forward intent
+		float FinalForwardInput = ForwardValue; 
 
 		if (Enemy->getCurrentState() == EAgentState::SeeingPlayer && Weapon)
 		{
@@ -480,8 +481,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			Enemy->GetCharacterMovement()->Velocity = FVector::ZeroVector;
 			FinalForwardInput = 0.0f;
 
-			//100% AUTO PILOT
-			// Calculate Perfect Aim
+			//Calculate the aim
 			FVector MuzzleLoc = Weapon->getMesh()->GetSocketLocation(TEXT("BulletSpawn"));
 			FVector TargetLoc; 
 			if (bTraining)
@@ -503,7 +503,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			// 0.0 = Pure Brain, 1.0 = Pure Auto-Pilot math
 			FRotator BlendedRot = FMath::Lerp(BrainTargetRot, AimRot, 0.5f);
 
-			// Apply via Interp to keep it clean, but much slower (strength reduced to 4.0f)
+			// Apply via Interp to keep it clean, but much slower
 			FRotator CurrentRotShoot = Enemy->GetActorRotation();
 			FRotator NewRot = FMath::RInterpTo(CurrentRotShoot, BlendedRot, DeltaTime, 40.0f);
 
@@ -524,7 +524,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			FVector SearchTarget = Enemy->PlayerLastKnownLocation;
 			FVector CurrentLoc = Enemy->GetActorLocation();
 
-			// 2. Proximity and Direction Calculation
+			//Proximity and Direction Calculation
 			float DistanceToTarget = FVector::Dist(CurrentLoc, SearchTarget);
 			FVector MoveDirection = (SearchTarget - CurrentLoc).GetSafeNormal();
 			FRotator FaceTargetRot = MoveDirection.Rotation();
@@ -532,11 +532,11 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			CurrentRot = Enemy->GetActorRotation();
 			FRotator NewRot = FMath::RInterpTo(CurrentRot, FaceTargetRot, GetWorld()->GetDeltaSeconds(), 25.0f);
 
-			NewRot.Pitch = 0.0f; // Keep the character capsule strictly vertical
+			NewRot.Pitch = 0.0f;
 			NewRot.Roll = 0.0f;
 			Enemy->SetActorRotation(NewRot);
 
-
+			//When we are close enough to the last known player location we can go back to patrolling.
 			if (DistanceToTarget <= 100.0f)
 			{
 				Enemy->GetMovementComponent()->StopMovementImmediately();
@@ -545,12 +545,14 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
 
+			//If we go too far away from the location we go back to patrolling.
 			else if (DistanceToTarget >= 2500.0f)
 			{
 				Enemy->FindingTrack = true;
 				Enemy->setCurrentState(EAgentState::Patrolling);
 			}
 
+			//Helping the agent out with slowing down.
 			float ArrivalBrake = FMath::Clamp(DistanceToTarget / 150.0f, 0.0f, 1.0f);
 
 			// Gas control is 100% driven by the brain, scaled only by the physical arrival brake
@@ -568,7 +570,8 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			FRotator IdealRot = PathDir.Rotation();
 			float DistanceToPath = FVector::Dist(Enemy->GetActorLocation(), ClosestSplineLocation);
 
-
+			//Auto-pilot for helping the agent find its way back to the track.
+			//I have to do it like this rather than training it to be that way because I am running out of time.
 			if (Enemy->FindingTrack == true)
 			{
 				//UE_LOG(LogTemp, Warning, TEXT("Agent %d: Returning to path"), AgentId);
@@ -595,6 +598,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 				}
 			}
 
+			//Patrolling if we are not returning to the path
 			else
 			{
 
@@ -620,7 +624,7 @@ void UEnemyInteractor::PerformAgentAction_Implementation(const ULearningAgentsAc
 			
 		}
 
-
+		//Allowing the agents to shoot.
 		if (ShootValue >= 0.45f && Enemy->getIsAimed())
 		{
 			if (ASniperRifle* Sniper = Cast<ASniperRifle>(Weapon))

@@ -20,6 +20,7 @@ AWeaponBase::AWeaponBase()
     Mesh->BodyInstance.SetInstanceNotifyRBCollision(true);
     Mesh->AttachToComponent(Root, FAttachmentTransformRules::KeepRelativeTransform);
 
+    //Deafult values for the guns. In case I forget to set them.
     iCurrentMagCount = 30;
     iCurrentAmmoReserve = 180;
     iMaxMagCount = 30;

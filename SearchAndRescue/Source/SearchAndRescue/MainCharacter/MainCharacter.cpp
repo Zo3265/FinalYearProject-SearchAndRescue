@@ -93,17 +93,13 @@ void AMainCharacter::Tick(float DeltaTime)
 			
 			if (MenuWidgetInstance)
 			{
-				// 3. Render the menu onto the player's screen
 				MenuWidgetInstance->AddToViewport();
 
-				// 4. Setup Input Mode to focus on UI elements
 				FInputModeUIOnly InputModeData;
 				InputModeData.SetWidgetToFocus(MenuWidgetInstance->TakeWidget());
 				InputModeData.SetLockMouseToViewportBehavior(EMouseLockMode::DoNotLock);
 
 				PlayerController->SetInputMode(InputModeData);
-
-				// 5. Explicitly display the hardware mouse cursor
 				PlayerController->bShowMouseCursor = true;
 			}
 		}

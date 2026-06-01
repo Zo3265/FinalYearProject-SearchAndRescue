@@ -39,6 +39,7 @@ public:
 
 	USplineComponent* getSpline();
 
+	//Hides the sphere from the agents. Useful for training the chasing behaviour
 	UPROPERTY(EditAnywhere, Category = "SplineController")
 	bool bIsSphereVisible = false;
 
